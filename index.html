@@ -1833,7 +1833,7 @@ SD 3.5: 최신 기술 적용
 
 **워크플로우 다운로드**:
 
-[[download: downloads/session2/scrib/turtle.json]]
+[[download: downloads/session2/scrib/turtle_workflow.json | 거북이 Scribble 워크플로우 다운로드]]
 
 **연습용 이미지 다운로드**:
 
@@ -1846,7 +1846,7 @@ SD 3.5: 최신 기술 적용
 ### Step 1: 워크플로우 열기 및 이미지 생성
 
 **워크플로우 불러오기**:
-1. 다운로드한 \`turtle.json\` 파일을 ComfyUI에 드래그 앤 드롭
+1. 다운로드한 \`turtle_workflow.json\` 파일을 ComfyUI에 드래그 앤 드롭
 2. 워크플로우가 자동으로 로드됩니다
 
 **이미지 업로드**:
@@ -1962,7 +1962,7 @@ OpenPose는 인체의 포즈를 스켈레톤 형태로 추출하여 AI 이미지
 
 **워크플로우 파일**:
 
-[[download: downloads/session2/openpose/openpose.json | OpenPose 워크플로우 다운로드]]
+[[download: downloads/session2/openpose/openpose_workflow.json | OpenPose 워크플로우 다운로드]]
 
 위 버튼을 클릭하여 워크플로우 파일을 다운로드한 후 실습을 진행합니다.
 
@@ -1972,20 +1972,19 @@ OpenPose는 인체의 포즈를 스켈레톤 형태로 추출하여 AI 이미지
 
 ### Step 1: OpenPose Editor 커스텀 노드 설치
 
-1. **RunDiffusion 세션 실행**
-2. **ComfyUI Manager 클릭** (우측 상단 메뉴)
-3. **Install Custom Nodes** 또는 **Add Custom Node** 클릭
-4. 검색창에 **"openpose"** 검색
-5. **huchenlei** 제작자의 **ComfyUI-OpenPose-Editor** 설치
-6. 설치 완료 후 **RunDiffusion 세션 새로고침** (브라우저 F5)
+1. **ComfyUI Manager 클릭** (우측 상단 메뉴)
+2. **Install Custom Nodes** 또는 **Add Custom Node** 클릭
+3. 검색창에 **"openpose"** 검색
+4. **huchenlei** 제작자의 **ComfyUI-OpenPose-Editor** 설치
+5. 설치 완료 후 **페이지 새로고침** (브라우저 F5)
 
 ---
 
 ### Step 2: 레퍼런스 이미지로 포즈 추출 및 생성
 
 1. **워크플로우 열기**:
-   - RunDiffusion에서 **Load** 버튼 클릭
-   - 다운로드한 \`openpose.json\` 파일 선택
+   - ComfyUI 로고 클릭 → **file → 불러오기**
+   - 다운로드한 \`openpose_workflow.json\` 파일 선택
 
 2. **레퍼런스 이미지 업로드**:
    - **Load Image** 노드 찾기
@@ -2078,32 +2077,21 @@ LeReS: 고해상도 깊이
 
 ### 1단계: 워크플로우 및 이미지 다운로드
 
-먼저 준비된 워크플로우와 실습용 이미지를 다운로드합니다.
+[[download: downloads/session2/canny/canny_girl_workflow.json | Canny 워크플로우 다운로드]]
 
-[[download: downloads/session2/canny/canny_workflow.json | Canny 워크플로우 다운로드]]
+**실습용 이미지 미리보기**:
 
-**실습용 이미지 다운로드**:
+[[image: canny_girl_sample.png | width:50%]]
 
-[[download: downloads/session2/canny/canny_girl.png | Canny Girl 이미지 다운로드]]
+### 2단계: 워크플로우 열기
 
-[[download: downloads/session2/canny/bastion.png | Bastion 건축물 이미지 다운로드]]
+1. **워크플로우 열기**: 다운로드한 \`canny_girl_workflow.json\` 파일을 ComfyUI에서 열기
+   - ComfyUI 로고 클릭 → **file → 불러오기** → 다운로드한 JSON 파일 선택
 
-**이미지 미리보기**:
-
-[[image: canny_girl.png | width:50% | row]]
-[[image: bastion.png | width:50% | row]]
-
-### 2단계: RunDiffusion 실행 및 워크플로우 열기
-
-1. **RunDiffusion 실행**
-2. **워크플로우 열기**: 다운로드한 \`canny_workflow.json\` 파일을 ComfyUI에서 열기
-   - 좌측 상단 메뉴 → "Load" 클릭
-   - 다운로드한 JSON 파일 선택
-
-### 3단계: canny_girl 이미지 실습
+### 3단계: 이미지 업로드 및 생성
 
 #### 이미지 업로드 및 기본 생성
-1. **이미지 로드 노드**에 \`canny_girl.png\` 업로드
+1. **이미지 로드 노드**에 위의 이미지(\`canny_girl_sample.png\`)를 우클릭하여 다운로드 후 업로드
 2. **이미지 생성 실행**: Queue Prompt 버튼 클릭
 
 #### Threshold 값 조정 실습
@@ -2130,12 +2118,42 @@ oil painting style, impressionist, soft brushstrokes
 cyberpunk style, neon lights, futuristic atmosphere
 \`\`\`
 
-### 4단계: bastion.png 이미지 실습
+### 4단계: 자유 실습
 
-이번에는 건축물 이미지로 다양한 스타일 변환을 시도합니다.
+다양한 레퍼런스 이미지와 프롬프트를 활용하여 자유롭게 실습해보세요!
 
-#### 이미지 업로드
-1. **이미지 로드 노드**에 \`bastion.png\` 업로드
+**실습 팁**:
+- 윤곽선이 명확한 이미지일수록 좋은 결과가 나옵니다
+- Threshold 값을 조정하며 원하는 디테일 수준을 찾아보세요
+- ControlNet Strength를 조정하여 원본 구조 유지 정도를 조절할 수 있습니다
+
+---
+
+## Depth 실습
+
+이제 Depth ControlNet을 사용하여 이미지의 깊이 정보를 유지하면서 공간감을 살린 이미지를 생성해봅시다.
+
+### 1단계: 워크플로우 및 이미지 다운로드
+
+[[download: downloads/session2/depth/depth_workflow.json | Depth 워크플로우 다운로드]]
+
+**이미지 미리보기**:
+
+[[image: building.webp | width:50% | row]]
+[[image: inner.jpg | width:50% | row]]
+
+### 2단계: 워크플로우 열기
+
+1. **워크플로우 열기**: 다운로드한 \`depth_workflow.json\` 파일을 ComfyUI에서 열기
+   - ComfyUI 로고 클릭 → **file → 불러오기** → 다운로드한 JSON 파일 선택
+
+### 3단계: building.webp 실습
+
+#### 건축물 이미지 실습
+1. **이미지 로드 노드**에 \`building.webp\` 업로드
+2. **이미지 생성 실행**: Queue Prompt 버튼 클릭
+
+건축물의 깊이 정보가 유지되면서 스타일이 변환되는 것을 확인할 수 있습니다.
 
 #### 다양한 스타일 프롬프트 적용
 
@@ -2159,92 +2177,19 @@ natural materials, rustic design, forest cabin style
 
 각 프롬프트로 생성을 실행하고 결과를 비교해보세요.
 
-### 5단계: 자유 실습
+### 4단계: inner.jpg 애니메이션 스타일 실습
 
-다양한 레퍼런스 이미지와 프롬프트를 활용하여 자유롭게 실습해보세요!
+인테리어 이미지를 애니메이션 스타일로 변환해봅시다.
 
-**실습 팁**:
-- 윤곽선이 명확한 이미지일수록 좋은 결과가 나옵니다
-- Threshold 값을 조정하며 원하는 디테일 수준을 찾아보세요
-- ControlNet Strength를 조정하여 원본 구조 유지 정도를 조절할 수 있습니다
-
----
-
-## Depth 실습
-
-이제 Depth ControlNet을 사용하여 이미지의 깊이 정보를 유지하면서 공간감을 살린 이미지를 생성해봅시다.
-
-### 1단계: 워크플로우 및 이미지 다운로드
-
-먼저 준비된 워크플로우와 실습용 이미지를 다운로드합니다.
-
-[[download: downloads/session2/depth/depth_controlnet.json | Depth 워크플로우 다운로드]]
-
-**실습용 이미지 다운로드**:
-
-[[download: downloads/session2/depth/depth_input_map.png | Depth Input Map 다운로드]]
-
-[[download: downloads/session2/depth/building.webp | Building 건축물 이미지 다운로드]]
-
-[[download: downloads/session2/depth/space.png | Space 우주 이미지 다운로드]]
-
-**이미지 미리보기**:
-
-[[image: depth_input_map.png | width:33% | row]]
-[[image: building.webp | width:33% | row]]
-[[image: space.png | width:33% | row]]
-
-### 2단계: RunDiffusion 실행 및 워크플로우 열기
-
-1. **RunDiffusion 실행**
-2. **워크플로우 열기**: 다운로드한 \`depth_controlnet.json\` 파일을 ComfyUI에서 열기
-
-### 3단계: 체크포인트 모델 다운로드
-
-Architecture 스타일에 특화된 모델을 다운로드합니다.
-
-**ArchitectureRealMix 모델**:
-- Civitai 링크: [https://civitai.com/models/84958/architecturerealmix](https://civitai.com/models/84958/architecturerealmix)
-
-#### Terminal에서 다운로드
-1. **Terminal 열기**: RunDiffusion 상단의 "Terminal" 클릭
-2. **aria2c로 다운로드**:
-\`\`\`bash
-aria2c "https://civitai.com/api/download/models/90222?type=Model&token=[발급받은 API 키]"
-\`\`\`
-3. **세션 새로고침**: 브라우저에서 \`F5\` 키를 눌러 새로고침
-
-### 4단계: depth_input_map.png 실습
-
-#### 기본 Depth Map 테스트
-1. **이미지 로드 노드**에 \`depth_input_map.png\` 업로드
-2. **Switch 노드 설정**: \`2번\` 확인
-3. **이미지 생성 실행**: Queue Prompt 버튼 클릭
-
-이 단계에서는 Depth Map이 어떻게 작동하는지 확인합니다.
-
-### 5단계: building.webp 실습
-
-#### 건축물 이미지 실습
-1. **이미지 로드 노드**에 \`building.webp\` 업로드
-2. **Switch 노드 설정**: \`1번\` 확인
-3. **이미지 생성 실행**: Queue Prompt 버튼 클릭
-
-건축물의 깊이 정보가 유지되면서 스타일이 변환되는 것을 확인할 수 있습니다.
-
-### 6단계: space.png 애니메이션 스타일 실습
-
-우주 이미지를 애니메이션 스타일로 변환해봅시다.
-
-#### 체크포인트 변경
-1. **이미지 로드 노드**에 \`space.png\` 업로드
-2. **Load Checkpoint 노드**에서 \`Astranime\` 모델로 변경
+#### 체크포인트 변경 및 이미지 업로드
+1. **이미지 로드 노드**에 \`inner.jpg\` 업로드
+2. **Load Checkpoint 노드**에서 **Illustrious-XL** 모델 선택
 
 #### 프롬프트 설정
 
 **긍정 프롬프트** (Positive Prompt):
 \`\`\`prompt
-anime style astronaut, futuristic space suit, detailed helmet reflection, floating in space, glowing stars, cinematic lighting, dynamic pose, high quality illustration
+anime style interior, cozy room, warm lighting, detailed furniture, soft colors, high quality illustration, masterpiece
 \`\`\`
 
 **부정 프롬프트** (Negative Prompt):
@@ -2254,7 +2199,11 @@ anime style astronaut, futuristic space suit, detailed helmet reflection, floati
 
 3. **이미지 생성 실행**: Queue Prompt 버튼 클릭
 
-우주 공간의 깊이감을 유지하면서 애니메이션 스타일의 우주비행사가 생성되는 것을 확인할 수 있습니다.
+공간의 깊이감을 유지하면서 애니메이션 스타일의 인테리어가 생성되는 것을 확인할 수 있습니다.
+
+### 5단계: 자유 실습
+
+다양한 이미지와 프롬프트를 활용하여 Depth ControlNet을 자유롭게 탐구해보세요!
 
 ---
 
