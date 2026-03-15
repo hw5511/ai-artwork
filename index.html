@@ -1403,7 +1403,27 @@ ComfyCloud에는 별도 다운로드 없이 바로 사용할 수 있는 LoRA 모
 
 ---section---
 
-### 실습 1: 수채화 스타일 LoRA 실습
+### 실습 1: 동양화 스타일 LoRA 실습 (MoXin)
+
+**MoXin** LoRA는 중국 전통 동양화(수묵화) 스타일을 구현하는 LoRA입니다.
+ComfyCloud 모델 라이브러리에서 바로 사용할 수 있습니다.
+
+#### 워크플로우 구성
+1. **Load Checkpoint**: SD 1.5 계열 모델 선택 (MoXin은 SD 1.5 기반 LoRA)
+2. **Load LoRA**: 모델 라이브러리에서 \`MoXin\` 선택
+3. **프롬프트 입력**:
+\`\`\`prompt
+shuimobysim, a painting of mountains and river,
+traditional chinese painting, ink wash, masterpiece
+\`\`\`
+4. 이미지 생성 → LoRA 노드를 **비활성화(bypass)** 후 재생성하여 비교
+
+#### LoRA 강도 실험
+LoRA 노드의 **strength** 값을 \`0.4\`, \`0.7\`, \`1.0\`으로 변경하며 동양화 효과의 강도 차이를 확인해봅시다.
+
+---section---
+
+### 실습 2: 수채화 스타일 LoRA 실습
 
 **Ars MidJourney Watercolor** LoRA를 사용하여 수채화 스타일 이미지를 생성해봅시다.
 
@@ -1422,7 +1442,7 @@ LoRA 노드의 **strength** 값을 \`0.4\`, \`0.7\`, \`1.0\`으로 변경하며 
 
 ---section---
 
-### 실습 2: 애니메이션 스타일 LoRA 실습
+### 실습 3: 애니메이션 스타일 LoRA 실습
 
 **Retro Sci-fi 90's anime style** LoRA를 사용하여 레트로 애니메이션 스타일을 적용해봅시다.
 
