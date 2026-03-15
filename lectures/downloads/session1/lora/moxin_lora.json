@@ -8,15 +8,15 @@
       "id": 8,
       "type": "VAEDecode",
       "pos": [
-        682.5383911132812,
-        143.21365356445312
+        821.0461628888684,
+        173.8563643399267
       ],
       "size": [
-        210,
-        46
+        251.984375,
+        71.765625
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -44,9 +44,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "VAEDecode",
         "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "VAEDecode"
+        "ver": "0.3.18"
       },
       "widgets_values": []
     },
@@ -54,15 +54,15 @@
       "id": 9,
       "type": "SaveImage",
       "pos": [
-        922.5383911132812,
-        143.21365356445312
+        1109.0462346397776,
+        173.8563643399267
       ],
       "size": [
-        210,
-        270
+        251.984375,
+        323.984375
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -86,12 +86,12 @@
       "id": 5,
       "type": "EmptyLatentImage",
       "pos": [
-        -103.87992858886719,
-        579.0239868164062
+        -122.65585825542166,
+        696.8287492092671
       ],
       "size": [
-        315,
-        106
+        377.984375,
+        143.75
       ],
       "flags": {},
       "order": 0,
@@ -109,9 +109,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "EmptyLatentImage",
         "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "EmptyLatentImage"
+        "ver": "0.3.18"
       },
       "widgets_values": [
         768,
@@ -120,41 +120,18 @@
       ]
     },
     {
-      "id": 12,
-      "type": "MarkdownNote",
-      "pos": [
-        -843.087158203125,
-        337.3919982910156
-      ],
-      "size": [
-        312,
-        136
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "### Learn more about this workflow\n\n> [LoRA - ComfyUI_examples](https://comfyanonymous.github.io/ComfyUI_examples/lora/) — Overview\n> \n> [Multiple LoRAs - docs.comfy.org](https://docs.comfy.org/tutorials/basic/multiple-loras) — Detailed guide to using multiple LoRAs"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 4,
       "type": "CheckpointLoaderSimple",
       "pos": [
-        -841.1585083007812,
-        149.66726684570312
+        -1007.3901305940442,
+        181.600701087794
       ],
       "size": [
-        315,
-        98
+        377.984375,
+        131.734375
       ],
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -187,9 +164,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple",
         "cnr_id": "comfy-core",
         "ver": "0.3.18",
-        "Node name for S&R": "CheckpointLoaderSimple",
         "models": [
           {
             "name": "dreamshaper_8.safetensors",
@@ -199,7 +176,7 @@
         ]
       },
       "widgets_values": [
-        "v1/chilloutmix_NiPrunedFp32Fix.safetensors"
+        "majicmixRealistic_v7.safetensors"
       ],
       "color": "#322",
       "bgcolor": "#533"
@@ -208,15 +185,15 @@
       "id": 6,
       "type": "CLIPTextEncode",
       "pos": [
-        -117.46131896972656,
-        143.21365356445312
+        -138.95349441697817,
+        173.8563643399267
       ],
       "size": [
-        422.84503173828125,
-        164.31304931640625
+        507.390625,
+        197.171875
       ],
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
@@ -238,9 +215,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "CLIPTextEncode",
         "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "CLIPTextEncode"
+        "ver": "0.3.18"
       },
       "widgets_values": [
         "shukezouma, negative space, , shuimobysim , portrait of a woman standing , willow branches, (masterpiece, best quality:1.2), traditional chinese ink painting,"
@@ -250,15 +227,15 @@
       "id": 7,
       "type": "CLIPTextEncode",
       "pos": [
-        -117.46131896972656,
-        343.2137145996094
+        -138.95358276367188,
+        413.85645751953126
       ],
       "size": [
-        425.27801513671875,
-        180.6060791015625
+        510.3336181640625,
+        216.727294921875
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -280,9 +257,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "CLIPTextEncode",
         "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "CLIPTextEncode"
+        "ver": "0.3.18"
       },
       "widgets_values": [
         "(worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, skin spots, acnes, skin blemishes, age spot, glans, (watermark:2),nsfw, nude, nipple"
@@ -292,16 +269,16 @@
       "id": 11,
       "type": "LoraLoader",
       "pos": [
-        -480,
-        150
+        -573.9998179882422,
+        181.99994564605493
       ],
       "size": [
-        315,
-        126
+        377.96875,
+        171.71875
       ],
       "flags": {},
-      "order": 3,
-      "mode": 4,
+      "order": 2,
+      "mode": 0,
       "inputs": [
         {
           "label": "model",
@@ -338,9 +315,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "LoraLoader",
         "cnr_id": "comfy-core",
         "ver": "0.3.18",
-        "Node name for S&R": "LoraLoader",
         "models": [
           {
             "name": "blindbox_v1_mix.safetensors",
@@ -350,7 +327,7 @@
         ]
       },
       "widgets_values": [
-        "MoXinV1.safetensors",
+        "sd15-moxin.safetensors",
         0.75,
         1
       ],
@@ -361,15 +338,15 @@
       "id": 3,
       "type": "KSampler",
       "pos": [
-        332.53900146484375,
-        143.21365356445312
+        401.0468384786525,
+        173.8563643399267
       ],
       "size": [
-        315,
-        474
+        377.984375,
+        568.78125
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -409,9 +386,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "KSampler",
         "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "KSampler"
+        "ver": "0.3.18"
       },
       "widgets_values": [
         198585124900776,
@@ -518,20 +495,21 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7692369028113819,
+      "scale": 0.7177056437363967,
       "offset": [
-        851.7694537349904,
-        -20.264892235094656
+        1525.2833520234342,
+        100.07503772318405
       ]
     },
-    "frontendVersion": "1.29.1",
+    "frontendVersion": "1.41.13",
     "node_versions": {
       "comfy-core": "v0.3.9"
     },
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
-    "VHS_KeepIntermediate": true
+    "VHS_KeepIntermediate": true,
+    "workflowRendererVersion": "Vue"
   },
   "version": 0.4
 }
