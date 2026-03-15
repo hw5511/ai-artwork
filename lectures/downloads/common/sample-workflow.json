@@ -1,0 +1,37 @@
+{
+  "workflow_name": "Basic Text2Image",
+  "version": "1.0",
+  "description": "ComfyUI 기본 텍스트-이미지 생성 워크플로우",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "CLIPTextEncode",
+      "prompt": "example prompt",
+      "description": "텍스트 프롬프트를 CLIP 임베딩으로 변환"
+    },
+    {
+      "id": 2,
+      "type": "KSampler",
+      "steps": 20,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "description": "이미지 생성을 위한 샘플링 과정"
+    },
+    {
+      "id": 3,
+      "type": "VAEDecode",
+      "description": "latent를 실제 이미지로 디코딩"
+    },
+    {
+      "id": 4,
+      "type": "SaveImage",
+      "filename_prefix": "ComfyUI",
+      "description": "생성된 이미지를 저장"
+    }
+  ],
+  "connections": [
+    {"from": 1, "to": 2, "type": "positive"},
+    {"from": 2, "to": 3, "type": "latent"},
+    {"from": 3, "to": 4, "type": "image"}
+  ]
+}
