@@ -1,22 +1,22 @@
 {
   "id": "0addff86-a894-4e0f-8399-5277e93205ca",
   "revision": 0,
-  "last_node_id": 24,
-  "last_link_id": 38,
+  "last_node_id": 34,
+  "last_link_id": 90,
   "nodes": [
     {
       "id": 20,
       "type": "SetNode",
       "pos": [
-        209.3837432861328,
-        305.24554443359375
+        454.9224603040177,
+        303.29683115545186
       ],
       "size": [
-        210,
-        60
+        225,
+        108
       ],
       "flags": {},
-      "order": 6,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -43,20 +43,18 @@
       },
       "widgets_values": [
         "basic_pipe"
-      ],
-      "color": "#af3535",
-      "bgcolor": "rgba(24,24,27,.9)"
+      ]
     },
     {
       "id": 11,
       "type": "GetNode",
       "pos": [
-        -830.3047485351562,
-        785.7033081054688
+        -805.094230858091,
+        785.2008000885571
       ],
       "size": [
-        210,
-        60
+        225,
+        106.65625
       ],
       "flags": {},
       "order": 0,
@@ -89,41 +87,41 @@
       "id": 16,
       "type": "ToBasicPipe",
       "pos": [
-        33.7837028503418,
-        299.4361877441406
+        180.76343125128346,
+        287.2388003326979
       ],
       "size": [
-        147.744140625,
-        106
+        225,
+        168
       ],
       "flags": {},
-      "order": 4,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 32
+          "link": 82
         },
         {
           "name": "clip",
           "type": "CLIP",
-          "link": 33
+          "link": 90
         },
         {
           "name": "vae",
           "type": "VAE",
-          "link": 36
+          "link": 85
         },
         {
           "name": "positive",
           "type": "CONDITIONING",
-          "link": 37
+          "link": 87
         },
         {
           "name": "negative",
           "type": "CONDITIONING",
-          "link": 38
+          "link": 89
         }
       ],
       "outputs": [
@@ -136,9 +134,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "ToBasicPipe",
         "cnr_id": "comfyui-impact-pack",
         "ver": "unknown",
-        "Node name for S&R": "ToBasicPipe",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.1",
@@ -153,12 +151,12 @@
       "id": 22,
       "type": "FromBasicPipe",
       "pos": [
-        -593.685791015625,
-        777.756591796875
+        -543.0190797960794,
+        764.115530923518
       ],
       "size": [
-        147.744140625,
-        106
+        225,
+        168
       ],
       "flags": {},
       "order": 3,
@@ -175,7 +173,7 @@
           "name": "model",
           "type": "MODEL",
           "links": [
-            26
+            75
           ]
         },
         {
@@ -187,28 +185,28 @@
           "name": "vae",
           "type": "VAE",
           "links": [
-            29
+            78
           ]
         },
         {
           "name": "positive",
           "type": "CONDITIONING",
           "links": [
-            27
+            76
           ]
         },
         {
           "name": "negative",
           "type": "CONDITIONING",
           "links": [
-            28
+            77
           ]
         }
       ],
       "properties": {
+        "Node name for S&R": "FromBasicPipe",
         "cnr_id": "comfyui-impact-pack",
         "ver": "unknown",
-        "Node name for S&R": "FromBasicPipe",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.1",
@@ -223,12 +221,12 @@
       "id": 23,
       "type": "CM_SDXLResolution",
       "pos": [
-        -821.3786010742188,
-        976.3576049804688
+        -725.0859718859231,
+        1052.8729913727368
       ],
       "size": [
         270,
-        78
+        130.65625
       ],
       "flags": {},
       "order": 1,
@@ -239,21 +237,21 @@
           "name": "width",
           "type": "INT",
           "links": [
-            30
+            73
           ]
         },
         {
           "name": "height",
           "type": "INT",
           "links": [
-            31
+            74
           ]
         }
       ],
       "properties": {
+        "Node name for S&R": "CM_SDXLResolution",
         "cnr_id": "ComfyMath",
         "ver": "unknown",
-        "Node name for S&R": "CM_SDXLResolution",
         "ue_properties": {
           "widget_ue_connectable": {
             "resolution": true
@@ -272,12 +270,12 @@
       "id": 9,
       "type": "SaveImage",
       "pos": [
-        2.00097918510437,
-        720.0645141601562
+        261.5462925794084,
+        756.0015001617992
       ],
       "size": [
-        419.3663024902344,
-        424.60894775390625
+        419.359375,
+        424.59375
       ],
       "flags": {},
       "order": 8,
@@ -286,7 +284,7 @@
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 9
+          "link": 79
         }
       ],
       "outputs": [],
@@ -305,63 +303,94 @@
       ]
     },
     {
-      "id": 8,
-      "type": "VAEDecode",
+      "id": 30,
+      "type": "d13d32cb-0198-4053-baa7-d8b9a814b4a8",
       "pos": [
-        -322.02691650390625,
-        720.95703125
+        -234.26398071942003,
+        841.5050484000805
       ],
       "size": [
-        210,
-        46
+        463.234375,
+        464
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 24
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 73
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 74
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 75
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 76
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 77
         },
         {
           "name": "vae",
           "type": "VAE",
-          "link": 29
+          "link": 78
         }
       ],
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "slot_index": 0,
           "links": [
-            9
+            79
           ]
         }
       ],
       "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.62",
-        "Node name for S&R": "VAEDecode",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.1",
-          "input_ue_unconnectable": {}
-        }
+        "proxyWidgets": [
+          [
+            "29",
+            "width"
+          ],
+          [
+            "29",
+            "height"
+          ],
+          [
+            "27",
+            "seed"
+          ]
+        ]
       },
       "widgets_values": []
     },
     {
-      "id": 24,
-      "type": "workflow>체크포인트로 로드 노드 + clip 인코딩 노드 (긍정/부정)",
+      "id": 32,
+      "type": "CheckpointLoaderSimple",
       "pos": [
-        -836.060546875,
-        142.95535278320312
+        -822.0968947374855,
+        308.54251792302995
       ],
       "size": [
-        554.3240356445312,
-        452.79998779296875
+        270,
+        132
       ],
       "flags": {},
       "order": 2,
@@ -372,148 +401,109 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            32
+            82
           ]
         },
         {
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            33
+            86,
+            88,
+            90
           ]
         },
         {
           "name": "VAE",
           "type": "VAE",
           "links": [
-            36
-          ]
-        },
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            37
-          ]
-        },
-        {
-          "name": "CLIPTextEncode CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            38
+            85
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "workflow>체크포인트로 로드 노드 + clip 인코딩 노드 (긍정/부정)"
+        "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "sdxl/zavychromaxl_v12.safetensors",
-        "image of a hand offering money to a fishmonger cat, holding fish, 8k, ultra detailed, at the market",
-        "text, watermark"
-      ],
-      "color": "#346434",
-      "bgcolor": "rgba(24,24,27,.9)"
+        "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+      ]
     },
     {
-      "id": 21,
-      "type": "workflow>KSampler+빈잠재이미지 노드 그룹화",
+      "id": 33,
+      "type": "CLIPTextEncode",
       "pos": [
-        -352.7076721191406,
-        833.748046875
+        -426.570796409849,
+        108.89251792303006
       ],
       "size": [
-        331.3238220214844,
-        314
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 86
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            87
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "image of a hand offering money to a fishmonger cat, holding fish, 8k, ultra detailed, at the market"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -427.5518239977396,
+        373.07855179754165
+      ],
+      "size": [
+        400,
+        200
       ],
       "flags": {},
       "order": 5,
       "mode": 0,
       "inputs": [
         {
-          "name": "model",
-          "type": "MODEL",
-          "link": 26
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 27
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 28
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "widget": {
-            "name": "width"
-          },
-          "link": 30
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "widget": {
-            "name": "height"
-          },
-          "link": 31
+          "name": "clip",
+          "type": "CLIP",
+          "link": 88
         }
       ],
       "outputs": [
         {
-          "name": "LATENT",
-          "type": "LATENT",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
           "links": [
-            24
+            89
           ]
         }
       ],
       "properties": {
-        "Node name for S&R": "workflow>KSampler+빈잠재이미지 노드 그룹화",
-        "ue_properties": {
-          "widget_ue_connectable": {
-            "width": true,
-            "height": true,
-            "batch_size": true,
-            "seed": true,
-            "steps": true,
-            "cfg": true,
-            "sampler_name": true,
-            "scheduler": true,
-            "denoise": true
-          },
-          "version": "7.1",
-          "input_ue_unconnectable": {}
-        }
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        768,
-        768,
-        1,
-        3912581945,
-        "fixed",
-        20,
-        4.5,
-        "dpmpp_2m",
-        "karras",
-        1
-      ],
-      "color": "#346434",
-      "bgcolor": "rgba(24,24,27,.9)"
+        "text, watermark"
+      ]
     }
   ],
   "links": [
-    [
-      9,
-      8,
-      0,
-      9,
-      0,
-      "IMAGE"
-    ],
     [
       23,
       16,
@@ -521,14 +511,6 @@
       20,
       0,
       "*"
-    ],
-    [
-      24,
-      21,
-      0,
-      8,
-      0,
-      "LATENT"
     ],
     [
       25,
@@ -539,92 +521,116 @@
       "BASIC_PIPE"
     ],
     [
-      26,
+      73,
+      23,
+      0,
+      30,
+      0,
+      "INT"
+    ],
+    [
+      74,
+      23,
+      1,
+      30,
+      1,
+      "INT"
+    ],
+    [
+      75,
       22,
       0,
-      21,
-      0,
+      30,
+      2,
       "MODEL"
     ],
     [
-      27,
+      76,
       22,
       3,
-      21,
-      1,
+      30,
+      3,
       "CONDITIONING"
     ],
     [
-      28,
+      77,
       22,
       4,
-      21,
-      2,
+      30,
+      4,
       "CONDITIONING"
     ],
     [
-      29,
+      78,
       22,
       2,
-      8,
-      1,
+      30,
+      5,
       "VAE"
     ],
     [
+      79,
       30,
-      23,
       0,
-      21,
-      3,
-      "INT"
+      9,
+      0,
+      "IMAGE"
     ],
     [
-      31,
-      23,
-      1,
-      21,
-      4,
-      "INT"
-    ],
-    [
+      82,
       32,
-      24,
       0,
       16,
       0,
       "MODEL"
     ],
     [
+      85,
+      32,
+      2,
+      16,
+      2,
+      "VAE"
+    ],
+    [
+      86,
+      32,
+      1,
       33,
-      24,
+      0,
+      "CLIP"
+    ],
+    [
+      87,
+      33,
+      0,
+      16,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      88,
+      32,
+      1,
+      34,
+      0,
+      "CLIP"
+    ],
+    [
+      89,
+      34,
+      0,
+      16,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      90,
+      32,
       1,
       16,
       1,
       "CLIP"
-    ],
-    [
-      36,
-      24,
-      2,
-      16,
-      2,
-      "VAE"
-    ],
-    [
-      37,
-      24,
-      3,
-      16,
-      3,
-      "CONDITIONING"
-    ],
-    [
-      38,
-      24,
-      4,
-      16,
-      4,
-      "CONDITIONING"
     ]
   ],
   "groups": [
@@ -634,8 +640,8 @@
       "bounding": [
         -846.060546875,
         69.35529327392578,
-        1282.00830078125,
-        548.958251953125
+        1547.03382638125,
+        556.753120353125
       ],
       "color": "#b58b2a",
       "font_size": 24,
@@ -647,21 +653,397 @@
       "bounding": [
         -840.3047485351562,
         639.3043823242188,
-        1280,
-        530
+        1536.5542429999996,
+        740.9768100000001
       ],
       "color": "#b06634",
       "font_size": 24,
       "flags": {}
     }
   ],
+  "definitions": {
+    "subgraphs": [
+      {
+        "id": "d13d32cb-0198-4053-baa7-d8b9a814b4a8",
+        "version": 1,
+        "state": {
+          "lastGroupId": 2,
+          "lastNodeId": 34,
+          "lastLinkId": 90,
+          "lastRerouteId": 0
+        },
+        "revision": 0,
+        "config": {},
+        "name": "ksampler,빈잠재이미지,vae노드서브그래프",
+        "inputNode": {
+          "id": -10,
+          "bounding": [
+            -795.0972554530698,
+            962.8849530794159,
+            120,
+            160
+          ]
+        },
+        "outputNode": {
+          "id": -20,
+          "bounding": [
+            35.902764283746365,
+            1012.8849530794159,
+            120,
+            60
+          ]
+        },
+        "inputs": [
+          {
+            "id": "9e417846-1dfb-49c0-a43e-4db59ff241f9",
+            "name": "width",
+            "type": "INT",
+            "linkIds": [
+              70
+            ],
+            "localized_name": "너비",
+            "pos": [
+              55,
+              20
+            ]
+          },
+          {
+            "id": "b288759e-e033-4464-90d6-8feecc1c9b88",
+            "name": "height",
+            "type": "INT",
+            "linkIds": [
+              71
+            ],
+            "localized_name": "높이",
+            "pos": [
+              55,
+              40
+            ]
+          },
+          {
+            "id": "671e791b-5849-4dbf-a23a-2d1df4ddcc6d",
+            "name": "model",
+            "type": "MODEL",
+            "linkIds": [
+              65
+            ],
+            "localized_name": "모델",
+            "pos": [
+              55,
+              60
+            ]
+          },
+          {
+            "id": "331b106a-0ef1-43c0-a7e4-95d3e669a971",
+            "name": "positive",
+            "type": "CONDITIONING",
+            "linkIds": [
+              66
+            ],
+            "localized_name": "긍정 조건",
+            "pos": [
+              55,
+              80
+            ]
+          },
+          {
+            "id": "9d5c469a-ff37-4c06-ab29-68d1ba56ed88",
+            "name": "negative",
+            "type": "CONDITIONING",
+            "linkIds": [
+              67
+            ],
+            "localized_name": "부정 조건",
+            "pos": [
+              55,
+              100
+            ]
+          },
+          {
+            "id": "c9c746ab-fc5f-4564-a67d-5584c2ef4c46",
+            "name": "vae",
+            "type": "VAE",
+            "linkIds": [
+              29
+            ],
+            "localized_name": "vae",
+            "pos": [
+              55,
+              120
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "e04486e6-025e-42dd-927f-7ac56ce6081d",
+            "name": "IMAGE",
+            "type": "IMAGE",
+            "linkIds": [
+              9
+            ],
+            "localized_name": "이미지",
+            "pos": [
+              20,
+              20
+            ]
+          }
+        ],
+        "widgets": [],
+        "nodes": [
+          {
+            "id": 29,
+            "type": "EmptyLatentImage",
+            "pos": [
+              -615.0972554530698,
+              1144.5702492330295
+            ],
+            "size": [
+              270,
+              144
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "너비",
+                "name": "width",
+                "type": "INT",
+                "widget": {
+                  "name": "width"
+                },
+                "link": 70
+              },
+              {
+                "localized_name": "높이",
+                "name": "height",
+                "type": "INT",
+                "widget": {
+                  "name": "height"
+                },
+                "link": 71
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "잠재 데이터",
+                "name": "LATENT",
+                "type": "LATENT",
+                "links": [
+                  72
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "EmptyLatentImage"
+            },
+            "widgets_values": [
+              512,
+              512,
+              1
+            ]
+          },
+          {
+            "id": 27,
+            "type": "KSampler",
+            "pos": [
+              -294.09723571625364,
+              829.5004758198456
+            ],
+            "size": [
+              270,
+              565.3125
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "모델",
+                "name": "model",
+                "type": "MODEL",
+                "link": 65
+              },
+              {
+                "localized_name": "긍정 조건",
+                "name": "positive",
+                "type": "CONDITIONING",
+                "link": 66
+              },
+              {
+                "localized_name": "부정 조건",
+                "name": "negative",
+                "type": "CONDITIONING",
+                "link": 67
+              },
+              {
+                "localized_name": "잠재 데이터",
+                "name": "latent_image",
+                "type": "LATENT",
+                "link": 72
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "잠재 데이터",
+                "name": "LATENT",
+                "type": "LATENT",
+                "links": [
+                  69
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "KSampler"
+            },
+            "widgets_values": [
+              1057810299143569,
+              "randomize",
+              20,
+              8,
+              "euler",
+              "simple",
+              1
+            ]
+          },
+          {
+            "id": 8,
+            "type": "VAEDecode",
+            "pos": [
+              -322.02692072894774,
+              720.9569303389864
+            ],
+            "size": [
+              225,
+              72
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "잠재 데이터",
+                "name": "samples",
+                "type": "LATENT",
+                "link": 69
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE",
+                "link": 29
+              }
+            ],
+            "outputs": [
+              {
+                "localized_name": "이미지",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "slot_index": 0,
+                "links": [
+                  9
+                ]
+              }
+            ],
+            "properties": {
+              "Node name for S&R": "VAEDecode",
+              "cnr_id": "comfy-core",
+              "ver": "0.3.62",
+              "ue_properties": {
+                "widget_ue_connectable": {},
+                "version": "7.1",
+                "input_ue_unconnectable": {}
+              }
+            },
+            "widgets_values": []
+          }
+        ],
+        "groups": [],
+        "links": [
+          {
+            "id": 72,
+            "origin_id": 29,
+            "origin_slot": 0,
+            "target_id": 27,
+            "target_slot": 3,
+            "type": "LATENT"
+          },
+          {
+            "id": 69,
+            "origin_id": 27,
+            "origin_slot": 0,
+            "target_id": 8,
+            "target_slot": 0,
+            "type": "LATENT"
+          },
+          {
+            "id": 70,
+            "origin_id": -10,
+            "origin_slot": 0,
+            "target_id": 29,
+            "target_slot": 0,
+            "type": "INT"
+          },
+          {
+            "id": 71,
+            "origin_id": -10,
+            "origin_slot": 1,
+            "target_id": 29,
+            "target_slot": 1,
+            "type": "INT"
+          },
+          {
+            "id": 65,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 27,
+            "target_slot": 0,
+            "type": "MODEL"
+          },
+          {
+            "id": 66,
+            "origin_id": -10,
+            "origin_slot": 3,
+            "target_id": 27,
+            "target_slot": 1,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 67,
+            "origin_id": -10,
+            "origin_slot": 4,
+            "target_id": 27,
+            "target_slot": 2,
+            "type": "CONDITIONING"
+          },
+          {
+            "id": 29,
+            "origin_id": -10,
+            "origin_slot": 5,
+            "target_id": 8,
+            "target_slot": 1,
+            "type": "VAE"
+          },
+          {
+            "id": 9,
+            "origin_id": 8,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "IMAGE"
+          }
+        ],
+        "extra": {}
+      }
+    ]
+  },
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6209213230591554,
+      "scale": 0.6830134553650712,
       "offset": [
-        1712.5951837315051,
-        39.71210681456423
+        1378.8817944733244,
+        -325.76250441179974
       ]
     },
     "ue_links": [],
@@ -1104,7 +1486,7 @@
       }
     },
     "links_added_by_ue": [],
-    "frontendVersion": "1.28.4",
+    "frontendVersion": "1.41.13",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
