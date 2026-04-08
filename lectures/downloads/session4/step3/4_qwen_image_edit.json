@@ -94,53 +94,7 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        "leather_sofa.png",
-        "image"
-      ]
-    },
-    {
-      "id": 83,
-      "type": "LoadImage",
-      "pos": [
-        -639.99965670756,
-        50.0000217543552
-      ],
-      "size": [
-        274.0625,
-        438.90625
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            377
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage",
-        "cnr_id": "comfy-core",
-        "ver": "0.5.1",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "texture_fur.png",
+        "composite_first_frame.png",
         "image"
       ]
     },
@@ -311,14 +265,6 @@
       0,
       170,
       0,
-      "IMAGE"
-    ],
-    [
-      377,
-      83,
-      0,
-      170,
-      1,
       "IMAGE"
     ]
   ],
@@ -879,7 +825,7 @@
               "secondTabWidth": 65
             },
             "widgets_values": [
-              "Change the time to night. Keep the advertisement design identical but add a glowing neon light effect to the advertisement text, make the background darker with city lights bokeh visible, add slight motion blur to suggest people and cars have moved slightly from their positions in image 1."
+              "Keep the building, street, and all environmental elements completely unchanged. Make the product on the billboard screen appear to physically break through the screen surface and protrude outward toward the viewer, creating a naked-eye 3D anamorphic illusion. The product should cast realistic shadows on the screen frame. Maintain photorealistic quality."
             ],
             "color": "#232",
             "bgcolor": "#353"
