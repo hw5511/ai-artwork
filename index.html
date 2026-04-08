@@ -4270,12 +4270,14 @@ Civitai 등에서 다운로드한 이미지를 ComfyUI에 **드래그 앤 드롭
 
 전광판에 삽입할 광고 이미지 (낮 버전)를 생성합니다.
 
-[[download: downloads/session4/step3/1_qwen_t2i.json | 2단계 워크플로우 다운로드 (Qwen 2512)]]
+[[download: downloads/session4/step3/2_qwen_t2i.json | 2단계 워크플로우 다운로드 (Qwen 2512)]]
 
 **설정 포인트:**
+- 광고의 한 컷, First Frame 용도 (낮 시간대, 역동적인 한 장면)
 - 16:9 가로 형식 (전광판 비율에 맞춤)
-- 스포츠 브랜드 광고 컨셉: 선명한 색상, 굵은 타이포그래피
-- 전광판에 삽입했을 때 잘 보이는 고대비 디자인
+- 고대비, 선명한 색상 → 전광판에 삽입했을 때 잘 보이는 구도
+
+**주의:** 프롬프트에 \`for LED billboard\` 같은 문구가 들어가면 광고가 걸린 전광판 이미지가 생성될 수 있습니다. **순수 광고 한 컷 이미지**가 목표이므로 배경에 전광판이 없도록 프롬프트를 조정하세요.
 
 **실습 포인트:** 해상도(1664x928)와 광고 구도가 전광판 크기에 어울리는지 확인하세요.
 
@@ -4326,7 +4328,7 @@ LoadImage B (광고이미지) ──→ ImageComposite (source)
 
 4단계에서 만든 Start/End 합성 이미지를 First 프레임과 Last 프레임으로 사용해 비디오를 생성합니다.
 
-[[download: downloads/session4/step3/5_angle_video.json | 5단계 워크플로우 다운로드 (비디오 생성)]]
+[[download: downloads/session4/step3/5_video_wan_first_last.json | 5단계 워크플로우 다운로드 (Wan 2.2 First-Last)]]
 
 **사용 방법:**
 1. First 프레임: 4단계 Start 합성 이미지
