@@ -1,0 +1,442 @@
+{
+  "id": "13390b09-7fbe-437d-adc6-7f7f2643c492",
+  "revision": 0,
+  "last_node_id": 10,
+  "last_link_id": 6,
+  "nodes": [
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        -385.9661560058594,
+        192.38003540039062
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "LoadImage",
+      "pos": [
+        -1129.2515869140625,
+        155.87640380859375
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "image": true,
+            "upload": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "model1.png",
+        "image"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ComfyUI_NanoBanana",
+      "pos": [
+        -2025.3203125,
+        221.69342041015625
+      ],
+      "size": [
+        400,
+        360
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "reference_image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "reference_image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "reference_image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "reference_image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "reference_image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated_images",
+          "type": "IMAGE",
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "operation_log",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "woohee-nanobanano-gemini25",
+        "ver": "1.0.0",
+        "Node name for S&R": "ComfyUI_NanoBanana",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "prompt": true,
+            "operation": true,
+            "api_key": true,
+            "batch_count": true,
+            "temperature": true,
+            "quality": true,
+            "aspect_ratio": true,
+            "character_consistency": true,
+            "enable_safety": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "A giant yellow balloon in the shape of the letter 'C' floating high above a bustling city street with tall skyscrapers, viewed from street level, with traffic and pedestrians below. The sky is bright blue with some clouds. The architectural style of the buildings is modern and classic New York City",
+        "generate",
+        "",
+        1,
+        0.7,
+        "high",
+        "1:1",
+        true,
+        true
+      ]
+    },
+    {
+      "id": 8,
+      "type": "LoadImage",
+      "pos": [
+        -1121.9918212890625,
+        530.9755859375
+      ],
+      "size": [
+        270,
+        314.0000305175781
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "image": true,
+            "upload": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "14615147_1.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "ComfyUI_NanoBanana",
+      "pos": [
+        -811.4404907226562,
+        176.65487670898438
+      ],
+      "size": [
+        400,
+        360
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "reference_image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "name": "reference_image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 4
+        },
+        {
+          "name": "reference_image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "reference_image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "reference_image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated_images",
+          "type": "IMAGE",
+          "links": [
+            5
+          ]
+        },
+        {
+          "name": "operation_log",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "woohee-nanobanano-gemini25",
+        "ver": "1.0.0",
+        "Node name for S&R": "ComfyUI_NanoBanana",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "prompt": true,
+            "operation": true,
+            "api_key": true,
+            "batch_count": true,
+            "temperature": true,
+            "quality": true,
+            "aspect_ratio": true,
+            "character_consistency": true,
+            "enable_safety": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "남자의 현재 이미지를 그대로 유지한 상태로, 남자의 옷에 첨부한 캐릭터이미지를 캐릭터형태를 완전히 그대로 유지하면서 옷의 중앙에 최대한 크게 자연스럽게 추가해줘",
+        "generate",
+        "",
+        1,
+        0.7,
+        "high",
+        "1:1",
+        true,
+        true
+      ]
+    },
+    {
+      "id": 5,
+      "type": "SaveImage",
+      "pos": [
+        -1544.5826416015625,
+        249.41188049316406
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 2
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.62",
+        "Node name for S&R": "SaveImage",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "filename_prefix": true
+          },
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    }
+  ],
+  "links": [
+    [
+      2,
+      4,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      7,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      4,
+      8,
+      0,
+      6,
+      1,
+      "IMAGE"
+    ],
+    [
+      5,
+      6,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "basic",
+      "bounding": [
+        -2035.3203125,
+        148.09341430664062,
+        792.619384765625,
+        443.6000061035156
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "advanced",
+      "bounding": [
+        -1139.2515869140625,
+        82.27640533447266,
+        1033.285400390625,
+        772.6991577148438
+      ],
+      "color": "#a1309b",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 0.6934334949441335,
+      "offset": [
+        2137.646573745779,
+        -44.266932713910805
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.28.4",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
