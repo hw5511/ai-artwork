@@ -1,0 +1,177 @@
+// Auto-generated from toc.json
+
+export interface Step {
+  id: string
+  title: string
+  file: string
+  hidden?: boolean
+}
+
+export interface Session {
+  id: string
+  title: string
+  steps: Step[]
+}
+
+export const TOC_DATA: Session[] = [
+  {
+    "id": "session1",
+    "title": "1회차 - ComfyUI 입문",
+    "steps": [
+      {
+        "id": "step1",
+        "title": "강의 개요",
+        "file": "session1/step1-course-overview.md"
+      },
+      {
+        "id": "step2",
+        "title": "AI 이미지 생성원리와 Stable Diffusion 개론",
+        "file": "session1/step2-ai-generation-principles.md"
+      },
+      {
+        "id": "step3",
+        "title": "ComfyCloud 시작하기",
+        "file": "session1/step3-comfycloud.md"
+      },
+      {
+        "id": "step4",
+        "title": "ComfyUI 인터페이스 이해하기",
+        "file": "session1/step4-interface.md"
+      },
+      {
+        "id": "step5",
+        "title": "첫 이미지 생성 (기본 템플릿)",
+        "file": "session1/step5-first-generation.md"
+      },
+      {
+        "id": "step6",
+        "title": "체크포인트 모델 탐험",
+        "file": "session1/step6-checkpoints.md"
+      },
+      {
+        "id": "step7",
+        "title": "CLIP 인코딩 모델",
+        "file": "session1/step8-clip-encoder.md"
+      },
+      {
+        "id": "step8",
+        "title": "VAE와 최종 출력 최적화",
+        "file": "session2/step7-vae-optimization.md"
+      },
+      {
+        "id": "step9",
+        "title": "Image to Image 입문",
+        "file": "session1/step9-image-to-image.md"
+      },
+      {
+        "id": "step10",
+        "title": "KSampler 노드 완전 정복",
+        "file": "session1/step10-ksampler.md"
+      }
+    ]
+  },
+  {
+    "id": "session2",
+    "title": "2회차 - ComfyUI 고급 기법",
+    "steps": [
+      {
+        "id": "step1",
+        "title": "LoRA 모델 탐험",
+        "file": "session1/step7-lora-models.md"
+      },
+      {
+        "id": "step2",
+        "title": "ControlNet이란?",
+        "file": "session2/step1-controlnet-intro.md"
+      },
+      {
+        "id": "step3",
+        "title": "OpenPose ControlNet 마스터",
+        "file": "session2/step2-openpose.md"
+      },
+      {
+        "id": "step4",
+        "title": "Canny와 Depth ControlNet",
+        "file": "session2/step3-canny-depth.md"
+      },
+      {
+        "id": "step5",
+        "title": "프롬프트 엔지니어링 심화",
+        "file": "session2/step6-prompt-advanced.md"
+      },
+      {
+        "id": "step6",
+        "title": "더 많은 모델 - Qwen",
+        "file": "session2/step6-more-models-qwen.md"
+      },
+      {
+        "id": "step7",
+        "title": "더 많은 모델 - Z-Image",
+        "file": "session2/step7-more-models-zimage.md"
+      }
+    ]
+  },
+  {
+    "id": "session3",
+    "title": "3회차 - 이미지 편집과 영상 생성 마스터",
+    "steps": [
+      {
+        "id": "step1",
+        "title": "Inpainting & Outpainting 실전",
+        "file": "session3/step1-inpainting.md"
+      },
+      {
+        "id": "step2",
+        "title": "비디오 생성 - Wan 2.2",
+        "file": "session3/step2-video-wan.md"
+      },
+      {
+        "id": "step3",
+        "title": "비디오 생성 - LTX-2 / LTX-2.3",
+        "file": "session3/step3-video-ltxv.md"
+      },
+      {
+        "id": "step4",
+        "title": "비디오 생성 - 기타 모델",
+        "file": "session3/step4-video-others.md"
+      },
+      {
+        "id": "step5",
+        "title": "이미지 업스케일링 전략",
+        "file": "session3/step5-upscaling-strategy.md"
+      }
+    ]
+  },
+  {
+    "id": "session4",
+    "title": "4회차 - 실전 프로젝트와 최적화",
+    "steps": [
+      {
+        "id": "step1",
+        "title": "Get/Set 노드와 워크플로우 정리 기법",
+        "file": "session4/step1-get-set-node.md"
+      },
+      {
+        "id": "step2",
+        "title": "유료노드 사용해보기",
+        "file": "session4/step2-nanobanana.md"
+      },
+      {
+        "id": "step3",
+        "title": "워크플로우 설계 실습 (따라하기)",
+        "file": "session4/step3-workflow-design.md"
+      },
+      {
+        "id": "step4",
+        "title": "워크플로우 설계 실습",
+        "file": "session4/step4-workflow-design-practice.md"
+      },
+      {
+        "id": "step5",
+        "title": "로컬 ComfyUI 설치하기",
+        "file": "session4/step3-local-comfyui-setup.md",
+        "hidden": true
+      }
+    ]
+  }
+]

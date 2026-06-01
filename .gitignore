@@ -1,0 +1,6 @@
+
+# frontend source build artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
