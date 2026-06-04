@@ -39,7 +39,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "text, watermark"
+        "low quality, blurry, realistic, deformed, extra limbs, text, watermark, sketch\n"
       ]
     },
     {
@@ -77,7 +77,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "1girl, blonde hair, flower, oil pastel style, impressionist, soft brushstrokes, 4k, detailed illustration"
+        "anime style interior, cozy room, warm lighting, detailed furniture, soft colors, high quality illustration, masterpiece\n"
       ]
     },
     {
@@ -123,7 +123,7 @@
       ],
       "size": [
         315,
-        564.90625
+        564.890625
       ],
       "flags": {},
       "order": 9,
@@ -164,7 +164,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        382207340120532,
+        952665299115308,
         "randomize",
         20,
         8,
@@ -422,7 +422,7 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "39f63fc954bd23820a3a48e338460aab577b724be6d126ea38b030671d93f999.png",
+        "dc6a915aa0b7407c4134e99b4324e6371c5b4508204f19ca6ee1aa2272579c8c.jpg",
         "image"
       ]
     },
@@ -435,7 +435,7 @@
       ],
       "size": [
         297.0625,
-        319.265625
+        319.25
       ],
       "flags": {},
       "order": 8,
@@ -489,7 +489,7 @@
       },
       "widgets_values": [
         "depth_anything_vitl14.pth",
-        512
+        1024
       ]
     }
   ],
@@ -627,13 +627,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.8264462809917354,
+      "scale": 0.5131581182307068,
       "offset": [
-        783.4075212499959,
-        817.814059709223
+        934.67276685801,
+        397.4099733122911
       ]
     },
-    "frontendVersion": "1.42.6",
+    "frontendVersion": "1.45.14",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
