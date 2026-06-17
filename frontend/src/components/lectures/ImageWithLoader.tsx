@@ -101,9 +101,11 @@ export const ImageWithLoader: React.FC<ImageWithLoaderProps> = ({ src, alt, titl
         </Box>
       )}
 
-      {/* 에러 플레이스홀더 */}
+      {/* 에러 플레이스홀더 — 깨진 이미지를 배포 링크에서 즉시 식별할 수 있도록 형광 초록으로 강조 */}
       {error && (
         <Box
+          data-broken-image="true"
+          data-broken-src={src}
           sx={{
             display: 'flex',
             flexDirection: 'column',
@@ -111,24 +113,29 @@ export const ImageWithLoader: React.FC<ImageWithLoaderProps> = ({ src, alt, titl
             justifyContent: 'center',
             width: '100%',
             minHeight: 200,
-            bgcolor: 'rgba(255, 255, 255, 0.05)',
-            border: '2px dashed rgba(255, 255, 255, 0.2)',
+            bgcolor: '#00e676',
+            border: '4px solid #00c853',
             borderRadius: 1,
-            color: 'rgba(255, 255, 255, 0.5)',
+            color: '#0a3d12',
             p: 3,
             transition: 'all 0.3s ease',
             '&:hover': {
-              borderColor: 'rgba(255, 255, 255, 0.3)',
-              bgcolor: 'rgba(255, 255, 255, 0.08)'
+              bgcolor: '#00ff84'
             }
           }}
         >
-          <BrokenImageIcon sx={{ fontSize: 48, mb: 2, opacity: 0.5 }} />
-          <Typography variant="body2" sx={{ textAlign: 'center', opacity: 0.7, mb: 2 }}>
-            이미지를 불러올 수 없습니다
+          <BrokenImageIcon sx={{ fontSize: 48, mb: 1 }} />
+          <Typography variant="body1" sx={{ textAlign: 'center', fontWeight: 700, mb: 1 }}>
+            ⚠️ 이미지 깨짐 (BROKEN IMAGE)
+          </Typography>
+          <Typography
+            variant="caption"
+            sx={{ mb: 2, textAlign: 'center', fontFamily: 'monospace', wordBreak: 'break-all', fontWeight: 600 }}
+          >
+            {src}
           </Typography>
           {alt && (
-            <Typography variant="caption" sx={{ mb: 2, opacity: 0.5, textAlign: 'center' }}>
+            <Typography variant="caption" sx={{ mb: 2, textAlign: 'center' }}>
               {alt}
             </Typography>
           )}
@@ -137,11 +144,10 @@ export const ImageWithLoader: React.FC<ImageWithLoaderProps> = ({ src, alt, titl
             onClick={retry}
             size="small"
             sx={{
-              color: 'rgba(255, 255, 255, 0.6)',
-              bgcolor: 'rgba(255, 255, 255, 0.1)',
+              color: '#0a3d12',
+              bgcolor: 'rgba(255, 255, 255, 0.4)',
               '&:hover': {
-                color: '#ffffff',
-                bgcolor: 'rgba(255, 255, 255, 0.2)',
+                bgcolor: 'rgba(255, 255, 255, 0.7)',
                 transform: 'scale(1.1)'
               },
               transition: 'all 0.3s ease'
@@ -150,7 +156,7 @@ export const ImageWithLoader: React.FC<ImageWithLoaderProps> = ({ src, alt, titl
             <RefreshIcon fontSize="small" />
           </IconButton>
           {retryCount > 0 && (
-            <Typography variant="caption" sx={{ mt: 1, opacity: 0.4 }}>
+            <Typography variant="caption" sx={{ mt: 1 }}>
               재시도 횟수: {retryCount}
             </Typography>
           )}
