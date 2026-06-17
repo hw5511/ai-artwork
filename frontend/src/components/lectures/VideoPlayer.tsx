@@ -12,7 +12,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
   width = '100%',
   caption
 }) => {
-  const videoPath = `/lectures/videos/${file}`
+  // 다운로드 자산과 동일 위치에서 서빙 (base 경로 유지 위해 상대경로 사용)
+  const videoPath = `./downloads/${file}`
 
   return (
     <Box sx={{ my: 4, width: '100%' }}>
@@ -31,7 +32,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
         }}
       >
         <source src={videoPath} type="video/mp4" />
-        <source src={videoPath.replace('.mp4', '.webm')} type="video/webm" />
         브라우저가 비디오를 지원하지 않습니다.
       </Box>
       {caption && (
