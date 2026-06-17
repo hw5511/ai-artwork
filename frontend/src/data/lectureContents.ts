@@ -274,24 +274,24 @@ worst quality, low quality, blurry
 
 ---section---
 
-[[image: 슬라이드1.PNG]]
+[[image: session1/step1/슬라이드1.PNG]]
 
-[[image: 슬라이드2.PNG]]
+[[image: session1/step1/슬라이드2.PNG]]
 
-[[image: 슬라이드3.PNG]]
+[[image: session1/step1/슬라이드3.PNG]]
 
-[[image: 슬라이드4.PNG]]
+[[image: session1/step1/슬라이드4.PNG]]
 
-[[image: 슬라이드5.PNG]]
+[[image: session1/step1/슬라이드5.PNG]]
 
-[[image: 슬라이드6.PNG]]
+[[image: session1/step1/슬라이드6.PNG]]
 
-[[image: 슬라이드7.PNG]]`,
+[[image: session1/step1/슬라이드7.PNG]]`,
   "session1/step10-ksampler.md": `# KSampler란?
 
 ---section---
 
-[[image: ksampler.PNG]]
+[[image: session1/step10/ksampler.PNG]]
 
 K-Sampler는 AI 이미지 생성의 핵심 엔진으로, 노이즈를 점진적으로 제거하며 텍스트 프롬프트에 따라 이미지를 형성하는 과정을 제어합니다.
 
@@ -338,7 +338,7 @@ Steps는 노이즈 제거 단계의 수로, 이미지의 품질과 생성 속도
 
 Steps 매개변수는 샘플러가 수행할 디노이징 반복 횟수를 지정합니다. 더 많은 스텝은 모델이 이미지를 더욱 세밀하게 수정하고 개선할 기회를 제공하여 일반적으로 더 높은 품질의 이미지를 생성하지만, 그만큼 처리 시간도 증가합니다. 이미지 품질과 생성 속도 사이에서 균형을 맞추기 위해 스텝 값을 조정하는 것이 중요합니다.
 
-[[image: consistency-models.png]]
+[[image: common/consistency-models.png]]
 
 #### 권장 설정값
 \`\`\`recommendation
@@ -437,8 +437,8 @@ cosine: 자연스러운 변화 - 코사인 함수 기반으로 자연스러운 �
   - 99개 쪽지: "5"
   - 1개 쪽지: "4" (가끔 패턴이 깨지는 경우를 학습했기 때문)
 
-[[image: human-question.PNG]]
-[[image: ai-question.PNG]]
+[[image: session1/step2/human-question.PNG]]
+[[image: session1/step2/ai-question.PNG]]
 
 ### 이어말하기 게임으로 쉽게 이해하기
 AI를 **고성능 이어말하기 기계**라고 생각해보세요:
@@ -447,7 +447,7 @@ AI를 **고성능 이어말하기 기계**라고 생각해보세요:
 
 AI는 앞의 단어들을 보고 가장 적절한 다음 단어를 선택하는 것과 같습니다.
 
-[[image: word-chain.PNG]]
+[[image: session1/step2/word-chain.PNG]]
 
 ---section---
 
@@ -472,7 +472,7 @@ AI는 앞의 단어들을 보고 가장 적절한 다음 단어를 선택하는 
 - 각 픽셀은 색깔 정보를 담은 숫자
 - AI에게 이미지는 그냥 숫자 패턴일 뿐!
 
-[[image: 2d-array.PNG]]
+[[image: session1/step2/2d-array.PNG]]
 
 ### 디노이징: 얼룩 지우기 게임
 AI 이미지 생성의 핵심 원리를 간단히 설명하면:
@@ -482,11 +482,11 @@ AI 이미지 생성의 핵심 원리를 간단히 설명하면:
 3. **비교하기**: 원본과 얼마나 유사한지 확인
 4. **반복하기**: 이 과정을 수백만 번 반복
 
-[[image: denoising1.PNG]]
-[[image: denoising2.PNG]]
-[[image: denoising3.PNG]]
-[[image: denoising4.PNG]]
-[[image: denoising5.PNG]]
+[[image: session1/step2/denoising1.PNG]]
+[[image: session1/step2/denoising2.PNG]]
+[[image: session1/step2/denoising3.PNG]]
+[[image: session1/step2/denoising4.PNG]]
+[[image: session1/step2/denoising5.PNG]]
 
 ### 학습 과정
 - 처음엔 서툴게 복원하다가 점점 실력 향상
@@ -502,7 +502,7 @@ AI 이미지 생성의 핵심 원리를 간단히 설명하면:
 
 ### 실제 디노이징 방식의 단계별 예시 이미지
 
-[[image: consistency-models.png]]`,
+[[image: common/consistency-models.png]]`,
   "session1/step3-comfycloud.md": `# ComfyCloud 시작하기
 
 ## ComfyCloud란?
@@ -619,11 +619,11 @@ ComfyUI는 노드 기반의 Stable Diffusion 인터페이스입니다.
 
 ### 상단 메뉴 (ComfyUI 로고 클릭)
 
-[[image: upper_menu.png]]
+[[image: session1/step4/upper_menu.png]]
 
 ### 좌측 패널
 
-[[image: left_pannel.png]]
+[[image: session1/step4/left_pannel.png]]
 
 좌측 패널은 다양한 도구와 라이브러리를 제공합니다:
 
@@ -651,7 +651,7 @@ JSON 형식으로 저장되며, 노드 구성과 연결 정보를 포함합니�
 
 ## 노드 시스템 이해하기
 
-[[image: nodes.png]]
+[[image: session1/step4/nodes.png]]
 
 ### 노드란?
 노드는 특정 기능을 수행하는 독립적인 모듈입니다.
@@ -688,7 +688,7 @@ JSON 형식으로 저장되며, 노드 구성과 연결 정보를 포함합니�
 
 ## 워크플로우 관리
 
-[[image: json_workflow.png]]
+[[image: session1/step4/json_workflow.png]]
 
 ### 파일 저장
 
@@ -718,7 +718,7 @@ JSON 형식으로 저장되며, 노드 구성과 연결 정보를 포함합니�
 3. 템플릿 탐색 선택`,
   "session1/step5-first-generation.md": `# 첫 이미지 생성 (기본 템플릿)
 
-[[image: stpe5.png]]
+[[image: session1/step5/stpe5.png]]
 
 ---section---
 
@@ -887,7 +887,7 @@ seed-123456789.png
 **다음 강의**: Step 5에서는 체크포인트 모델의 종류와 특성을 알아봅니다.`,
   "session1/step6-checkpoints.md": `# 체크포인트 모델 탐험
 
-[[image: checkpoint.PNG]]
+[[image: session1/step6/checkpoint.PNG]]
 
 ## 체크포인트 모델이란?
 
@@ -946,11 +946,11 @@ SD 1.5와 SDXL의 품질 차이를 비교해보세요.
     <h4 style="text-align: center; margin-bottom: 12px;">SD 1.5</h4>
     <div style="display: flex; gap: 12px;">
       <figure style="flex: 1; text-align: center; margin: 0;">
-        <img src="./lectures/images/sd15_512.png" style="width: 100%;" alt="SD 1.5 512px" />
+        <img src="./lectures/images/session1/step6/sd15_512.png" style="width: 100%;" alt="SD 1.5 512px" />
         <figcaption style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">512×512 생성</figcaption>
       </figure>
       <figure style="flex: 1; text-align: center; margin: 0;">
-        <img src="./lectures/images/sd15_1024.png" style="width: 100%;" alt="SD 1.5 1024px" />
+        <img src="./lectures/images/session1/step6/sd15_1024.png" style="width: 100%;" alt="SD 1.5 1024px" />
         <figcaption style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">1024×1024 생성 (비정상)</figcaption>
       </figure>
     </div>
@@ -959,11 +959,11 @@ SD 1.5와 SDXL의 품질 차이를 비교해보세요.
     <h4 style="text-align: center; margin-bottom: 12px;">SDXL</h4>
     <div style="display: flex; gap: 12px;">
       <figure style="flex: 1; text-align: center; margin: 0;">
-        <img src="./lectures/images/sdxl_512.png" style="width: 100%;" alt="SDXL 512px" />
+        <img src="./lectures/images/session1/step6/sdxl_512.png" style="width: 100%;" alt="SDXL 512px" />
         <figcaption style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">512×512 생성 (어색)</figcaption>
       </figure>
       <figure style="flex: 1; text-align: center; margin: 0;">
-        <img src="./lectures/images/sdxl_1024.png" style="width: 100%;" alt="SDXL 1024px" />
+        <img src="./lectures/images/session1/step6/sdxl_1024.png" style="width: 100%;" alt="SDXL 1024px" />
         <figcaption style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">1024×1024 생성</figcaption>
       </figure>
     </div>
@@ -1039,10 +1039,10 @@ detailed illustration, soft lighting, masterpiece
 아래 파일을 다운로드하여 워크플로우를 불러올 수 있습니다.
 이미지 파일에 워크플로우 정보가 내장되어 있습니다.
 
-[[image: wai_illustrous.png]]
+[[image: session1/step6/wai_illustrous.png]]
 
-[[download: downloads/session1/wai_illustrous.json | WAI-illustrious 워크플로우 다운로드 (.json)]]
-[[download: images/wai_illustrous.png | WAI-illustrious 워크플로우 이미지 다운로드 (.png)]]
+[[download: downloads/session1/step6/wai_illustrous.json | WAI-illustrious 워크플로우 다운로드 (.json)]]
+[[download: downloads/session1/step6/wai_illustrous.png | WAI-illustrious 워크플로우 이미지 다운로드 (.png)]]
 
 #### 불러오기 방법
 
@@ -1064,7 +1064,7 @@ detailed illustration, soft lighting, masterpiece
 두 모델(Illustrious-XL vs WAI-illustrious-SDXL)의 화풍과 세부 표현 방식의 차이를 관찰해봅시다.`,
   "session1/step7-lora-models.md": `# LoRA 모델 탐험
 
-[[image: lora.PNG]]
+[[image: session2/step1/lora.PNG]]
 
 ## LoRA(Low-Rank Adaptation)란?
 
@@ -1111,7 +1111,7 @@ ComfyCloud에는 별도 다운로드 없이 바로 사용할 수 있는 LoRA 모
 **MoXin** LoRA는 중국 전통 동양화(수묵화) 스타일을 구현하는 LoRA입니다.
 아래 워크플로우 파일을 받아 ComfyCloud에서 바로 불러올 수 있습니다.
 
-[[download: downloads/session1/lora/moxin_lora.json | MoXin 동양화 워크플로우 다운로드 (.json)]]
+[[download: downloads/session2/step1/moxin_lora.json | MoXin 동양화 워크플로우 다운로드 (.json)]]
 
 > 워크플로우에는 Load Checkpoint(SD 1.5 계열), Load LoRA(MoXin), 프롬프트가 이미 세팅되어 있습니다.
 > 파일을 열면 아래 상태로 준비됩니다:
@@ -1412,15 +1412,15 @@ Flux에서 자연어로 작성된 긴 프롬프트가 잘 반영되는 이유가
 `,
   "session1/step9-image-to-image.md": `# Image to Image 입문
 
-[[image: i2i_1.PNG]]
-[[image: i2i_2.PNG]]
-[[image: i2i_principle.png]]
+[[image: session1/step9/i2i_1.PNG]]
+[[image: session1/step9/i2i_2.PNG]]
+[[image: session1/step9/i2i_principle.png]]
 
 ---section---
 
 ## 그렇다면 노이즈는 어떻게 생성할까? → 노이즈는 seed값을 토대로 생성된다!
 
-[[image: denoising.gif]]
+[[image: session1/step9/denoising.gif]]
 
 ---section---
 
@@ -1442,11 +1442,11 @@ Text to Image와 유사하지만, 참조 이미지를 조건으로 추가하여 
 
 ### 실습 준비: 샘플 이미지 및 워크플로우 다운로드
 
-[[image: i2i_sample.png | width:448]]
+[[image: session1/step9/i2i_sample.png | width:448]]
 
 위 이미지를 우클릭하여 다운로드하세요.
 
-[[download: downloads/session1/i2i_workflow.json | Image to Image 워크플로우 다운로드 (.json)]]
+[[download: downloads/session1/step9/i2i_workflow.json | Image to Image 워크플로우 다운로드 (.json)]]
 
 ---section---
 
@@ -1479,7 +1479,7 @@ Text to Image와 유사하지만, 참조 이미지를 조건으로 추가하여 
 `,
   "session2/step1-controlnet-intro.md": `# ControlNet이란?
 
-[[image: controlnet.png]]
+[[image: session2/step2/controlnet.png]]
 
 ## ControlNet 개념 이해
 
@@ -1604,15 +1604,15 @@ SD 3.5: 최신 기술 적용
 
 **워크플로우 다운로드**:
 
-[[download: downloads/session2/scrib/turtle.json | 거북이 Scribble 워크플로우 다운로드]]
+[[download: downloads/session2/step2/turtle.json | 거북이 Scribble 워크플로우 다운로드]]
 
 **연습용 이미지 다운로드**:
 
-[[download: images/turtle.png | 거북이 스케치 이미지 다운로드]]
+[[download: downloads/session2/step2/turtle.png | 거북이 스케치 이미지 다운로드]]
 
 **이미지 미리보기**:
 
-[[image: turtle.png]]
+[[image: session2/step2/turtle.png]]
 
 ### Step 1: 워크플로우 열기 및 이미지 생성
 
@@ -1726,15 +1726,15 @@ OpenPose는 인체의 포즈를 스켈레톤 형태로 추출하여 AI 이미지
 
 **레퍼런스 포즈 이미지 다운로드**:
 
-[[download: downloads/session2/openpose/openpose.jpg | OpenPose 레퍼런스 이미지 다운로드]]
+[[download: downloads/session2/step3/openpose.jpg | OpenPose 레퍼런스 이미지 다운로드]]
 
 **이미지 미리보기**:
 
-[[image: openpose.jpg | width:50%]]
+[[image: session2/step3/openpose.jpg | width:50%]]
 
 **워크플로우 파일**:
 
-[[download: downloads/session2/openpose/openpose.json | OpenPose 워크플로우 다운로드]]
+[[download: downloads/session2/step3/openpose.json | OpenPose 워크플로우 다운로드]]
 
 위 버튼을 클릭하여 워크플로우 파일을 다운로드한 후 실습을 진행합니다.
 
@@ -1850,11 +1850,11 @@ LeReS: 고해상도 깊이
 
 ### 1단계: 워크플로우 및 이미지 다운로드
 
-[[download: downloads/session2/canny/canny_workflow.json | Canny 워크플로우 다운로드]]
+[[download: downloads/session2/step4/canny_workflow.json | Canny 워크플로우 다운로드]]
 
 **실습용 이미지 미리보기**:
 
-[[image: canny_girl.png | width:50%]]
+[[image: session2/step4/canny_girl.png | width:50%]]
 
 ### 2단계: 워크플로우 열기
 
@@ -1908,12 +1908,12 @@ cyberpunk style, neon lights, futuristic atmosphere
 
 ### 1단계: 워크플로우 및 이미지 다운로드
 
-[[download: downloads/session2/depth/depth_controlnet.json | Depth 워크플로우 다운로드]]
+[[download: downloads/session2/step4/depth_controlnet.json | Depth 워크플로우 다운로드]]
 
 **이미지 미리보기**:
 
-[[image: building.webp | width:50% | row]]
-[[image: inner.jpg | width:50% | row]]
+[[image: session2/step4/building.webp | width:50% | row]]
+[[image: session2/step4/inner.jpg | width:50% | row]]
 
 ### 2단계: 워크플로우 열기
 
@@ -2273,9 +2273,9 @@ ComfyCloud의 **Workflow Templates**에서 Qwen Image 템플릿을 불러오면 
 
 ## 실습 파일 다운로드
 
-[[download: downloads/session2/qwen/qwen_text_to_image.json | Qwen Image - Text to Image 워크플로우]]
+[[download: downloads/session2/step6/qwen_text_to_image.json | Qwen Image - Text to Image 워크플로우]]
 
-[[download: downloads/session2/qwen/qwen_image_canny_controlnet.json | Qwen Image - Canny ControlNet 워크플로우]]
+[[download: downloads/session2/step6/qwen_image_canny_controlnet.json | Qwen Image - Canny ControlNet 워크플로우]]
 
 ---
 
@@ -2339,7 +2339,7 @@ Wildcard: ImpactWildcardEncode → "portrait of a woman, {close-up shot|medium s
 
 ## 워크플로우 준비
 
-[[download: downloads/session2/wildcard_workflow.json | Wildcard 워크플로우 다운로드]]
+[[download: downloads/session2/step5/wildcard_workflow.json | Wildcard 워크플로우 다운로드]]
 
 **워크플로우 열기:**
 1. 다운로드한 \`wildcard_workflow.json\`을 ComfyUI에 드래그 앤 드롭
@@ -2621,11 +2621,11 @@ Z-Image는 Day-0부터 ComfyUI 공식 지원을 받습니다. ComfyCloud에서�
 
 ## 실습 파일 다운로드
 
-[[download: downloads/session2/zimage/z_image_text_to_image.json | Z-Image - Text to Image 워크플로우]]
+[[download: downloads/session2/step7/z_image_text_to_image.json | Z-Image - Text to Image 워크플로우]]
 
-[[download: downloads/session2/zimage/z_image_turbo.json | Z-Image Turbo 워크플로우]]
+[[download: downloads/session2/step7/z_image_turbo.json | Z-Image Turbo 워크플로우]]
 
-[[download: downloads/session2/zimage/z_image_canny_controlnet.json | Z-Image - Canny ControlNet 워크플로우]]
+[[download: downloads/session2/step7/z_image_canny_controlnet.json | Z-Image - Canny ControlNet 워크플로우]]
 
 ---
 
@@ -2678,7 +2678,7 @@ Z-Image         → 포토리얼/광고/실사
 `,
   "session2/step7-vae-optimization.md": `# VAE와 최종 출력 최적화
 
-[[image: vae.jpg]]
+[[image: session1/step8/vae.jpg]]
 
 ## VAE (Variational Autoencoder) 이해
 
@@ -3157,7 +3157,7 @@ LoadImage 노드에서 알파채널(투명도)이 포함된 PNG를 업로드하�
 
 ### 실습
 
-[[download: downloads/session3/inpaint/flux_inpaint.json | Flux Inpaint 워크플로우 다운로드]]
+[[download: downloads/session3/step1/flux_inpaint.json | Flux Inpaint 워크플로우 다운로드]]
 
 워크플로우를 불러온 후 LoadImage에 원하는 이미지를 업로드하고, MaskEditor에서 마스킹 영역을 지정합니다.
 Positive Prompt에 교체할 내용을 입력하고 실행하세요.
@@ -3221,16 +3221,16 @@ LoadImage 노드에서 우클릭 → **Open in MaskEditor** 로 마스크 영역
 
 ### 실습
 
-[[download: downloads/session3/inpaint/qwen_inpaint.json | Qwen Inpaint 워크플로우 다운로드]]
+[[download: downloads/session3/step1/qwen_inpaint.json | Qwen Inpaint 워크플로우 다운로드]]
 
-[[download: downloads/session3/inpaint/inpaint_upload.png | 실습용 이미지 다운로드]]
+[[download: downloads/session3/step1/inpaint_upload.png | 실습용 이미지 다운로드]]
 
 워크플로우와 이미지를 다운받은 후, LoadImage에 실습 이미지를 업로드합니다.
 MaskEditor에서 수정할 영역을 칠한 다음 Positive Prompt를 입력하고 실행하세요.
 
 ### 이미지 미리보기
 
-[[image: inpaint_upload.png | width:50%]]
+[[image: session3/step1/inpaint_upload.png | width:50%]]
 
 ---
 
@@ -3275,16 +3275,16 @@ feathering: 원본 이미지 경계의 페더링 강도 (0 = 경계 선명)
 
 ### 실습
 
-[[download: downloads/session3/inpaint/qwen_outpaint.json | Qwen Outpaint 워크플로우 다운로드]]
+[[download: downloads/session3/step1/qwen_outpaint.json | Qwen Outpaint 워크플로우 다운로드]]
 
-[[download: downloads/session3/inpaint/outpaint_coffee.png | 아웃페인팅 실습 이미지 다운로드]]
+[[download: downloads/session3/step1/outpaint_coffee.png | 아웃페인팅 실습 이미지 다운로드]]
 
 워크플로우와 커피 이미지를 다운받은 후, LoadImage에 커피 이미지를 업로드합니다.
 ImagePadForOutpaint에서 확장 방향과 픽셀 값을 조정한 다음 실행하세요.
 
 ### 이미지 미리보기
 
-[[image: outpaint_coffee.png | width:50%]]
+[[image: session3/step1/outpaint_coffee.png | width:50%]]
 `,
   "session3/step2-video-wan.md": `# 비디오 생성 - Wan 2.2
 
@@ -3321,7 +3321,7 @@ Alibaba의 오픈소스 비디오 생성 모델로, 6가지 생성 방식을 지
 
 **핵심 노드**: \`EmptyHunyuanLatentVideo\` - 빈 latent에서 시작하여 텍스트 기반으로 생성
 
-[[download: downloads/session3/video/video_wan2_2_14B_t2v.json | T2V 워크플로우 다운로드]]
+[[download: downloads/session3/step2/video_wan2_2_14B_t2v.json | T2V 워크플로우 다운로드]]
 
 **실습**: 워크플로우를 불러온 후 Positive Prompt에 원하는 장면을 입력하고 실행하세요.
 
@@ -3333,7 +3333,7 @@ Alibaba의 오픈소스 비디오 생성 모델로, 6가지 생성 방식을 지
 
 **핵심 노드**: \`WanImageToVideo\` - 입력 이미지를 기반으로 자연스러운 움직임 생성
 
-[[download: downloads/session3/video/video_wan2_2_14B_i2v.json | I2V 워크플로우 다운로드]]
+[[download: downloads/session3/step2/video_wan2_2_14B_i2v.json | I2V 워크플로우 다운로드]]
 
 **실습**: LoadImage에 원하는 이미지를 업로드하고 프롬프트로 움직임 방향을 지정하세요.
 
@@ -3350,7 +3350,7 @@ Alibaba의 오픈소스 비디오 생성 모델로, 6가지 생성 방식을 지
 VRAM 여유 있을 경우: 해상도 값을 높여 품질 향상 가능
 \`\`\`
 
-[[download: downloads/session3/video/video_wan2_2_14B_flf2v.json | FLF2V 워크플로우 다운로드]]
+[[download: downloads/session3/step2/video_wan2_2_14B_flf2v.json | FLF2V 워크플로우 다운로드]]
 
 **실습**: 시작 이미지와 끝 이미지를 각각 LoadImage 노드에 업로드하고 실행하세요.
 
@@ -3364,7 +3364,7 @@ VRAM 여유 있을 경우: 해상도 값을 높여 품질 향상 가능
 - \`WanCameraEmbedding\` - 카메라 모션 설정 (pan, tilt, zoom, roll 등)
 - \`WanCameraImageToVideo\` - 카메라 정보를 반영하여 비디오 생성
 
-[[download: downloads/session3/video/video_wan2_2_14B_camera.json | Camera Control 워크플로우 다운로드]]
+[[download: downloads/session3/step2/video_wan2_2_14B_camera.json | Camera Control 워크플로우 다운로드]]
 
 **실습**: LoadImage에 이미지를 업로드하고, WanCameraEmbedding에서 원하는 카메라 움직임을 설정하세요.
 
@@ -3382,7 +3382,7 @@ Lightning LoRA 활성화: 생성 속도 향상 (단, 영상 다이나믹 감소 
 두 모드 중 하나를 활성화하여 사용
 \`\`\`
 
-[[download: downloads/session3/video/video_wan2_2_14B_fun_inpaint.json | Fun Inpainting 워크플로우 다운로드]]
+[[download: downloads/session3/step2/video_wan2_2_14B_fun_inpaint.json | Fun Inpainting 워크플로우 다운로드]]
 
 **실습**: LoadImage에 이미지를 업로드하고 MaskEditor에서 수정할 영역을 지정한 후 실행하세요.
 
@@ -3402,7 +3402,7 @@ CausVid LoRA 사용 시: steps 2~4, cfg 1.0 (빠른 생성, LoRA 강도 0.3~0.7 
 참조 이미지: 단색 배경 이미지가 더 좋은 결과를 냄
 \`\`\`
 
-[[download: downloads/session3/video/video_wan_vace_inpainting.json | VACE Inpainting 워크플로우 다운로드]]
+[[download: downloads/session3/step2/video_wan_vace_inpainting.json | VACE Inpainting 워크플로우 다운로드]]
 
 **실습**: LoadVideo에 비디오를 업로드하고, 마스크 영역을 지정한 후 실행하세요.
 
@@ -3486,7 +3486,7 @@ LTX-2.3은 **긴 서술형 프롬프트**에서 훨씬 좋은 결과를 냅니�
 텍스트 프롬프트로 비디오를 생성합니다.
 LTX-2.3은 T2V에서도 시작 이미지 업로드가 필요합니다(레퍼런스 프레임으로 활용).
 
-[[download: downloads/session3/video/video_ltx2_3_t2v.json | LTX-2.3 T2V 워크플로우 다운로드]]
+[[download: downloads/session3/step3/video_ltx2_3_t2v.json | LTX-2.3 T2V 워크플로우 다운로드]]
 
 **실습**: 원하는 이미지를 업로드하고 프롬프트에 동작을 서술하세요.
 
@@ -3496,7 +3496,7 @@ LTX-2.3은 T2V에서도 시작 이미지 업로드가 필요합니다(레퍼런�
 
 입력 이미지를 시작 프레임으로 사용하여 자연스러운 움직임을 생성합니다.
 
-[[download: downloads/session3/video/video_ltx2_3_i2v.json | LTX-2.3 I2V 워크플로우 다운로드]]
+[[download: downloads/session3/step3/video_ltx2_3_i2v.json | LTX-2.3 I2V 워크플로우 다운로드]]
 
 **실습**: LoadImage에 원하는 이미지를 업로드하고 프롬프트에 움직임을 묘사하세요.
 
@@ -3511,7 +3511,7 @@ LTX-2.3은 T2V에서도 시작 이미지 업로드가 필요합니다(레퍼런�
 - \`LTXVAudioVAEDecode\` - 오디오 디코딩
 - \`LTXVCropGuides\` + \`LTXVAddGuide\` - 시작/끝 프레임 가이드
 
-[[download: downloads/session3/video/video_ltx2_3_flf2v.json | LTX-2.3 FLF2V 워크플로우 다운로드]]
+[[download: downloads/session3/step3/video_ltx2_3_flf2v.json | LTX-2.3 FLF2V 워크플로우 다운로드]]
 
 **실습**: 시작·끝 이미지를 각각 업로드하고 프롬프트에 장면과 소리를 함께 묘사하세요.
 
@@ -3537,7 +3537,7 @@ IC-LoRA(In-Context LoRA)는 참조 비디오나 이미지에서 구조·모션 �
 
 **모델**: \`ltx-2-19b-ic-lora-pose-control.safetensors\`
 
-[[download: downloads/session3/video/video_ltx2_pose_to_video.json | LTX-2 Pose Control 워크플로우 다운로드]]
+[[download: downloads/session3/step3/video_ltx2_pose_to_video.json | LTX-2 Pose Control 워크플로우 다운로드]]
 
 **실습**: LoadVideo에 참조 비디오를 업로드하고 원하는 장면을 프롬프트로 입력하세요.
 
@@ -3550,7 +3550,7 @@ IC-LoRA(In-Context LoRA)는 참조 비디오나 이미지에서 구조·모션 �
 
 **모델**: \`ltx-2-19b-ic-lora-canny-control.safetensors\`
 
-[[download: downloads/session3/video/video_ltx2_canny_to_video.json | LTX-2 Canny Control 워크플로우 다운로드]]
+[[download: downloads/session3/step3/video_ltx2_canny_to_video.json | LTX-2 Canny Control 워크플로우 다운로드]]
 
 **실습**: 참조 이미지/비디오를 업로드하면 Canny 엣지가 자동 추출되어 구도 제어에 활용됩니다.
 
@@ -3565,7 +3565,7 @@ Lotus 깊이 추정 모델로 장면의 원근·공간 구조를 추출하여 �
 - \`lotus-depth-d-v1-1.safetensors\` (깊이 추정)
 - \`vae-ft-mse-840000-ema-pruned.safetensors\`
 
-[[download: downloads/session3/video/video_ltx2_depth_to_video.json | LTX-2 Depth Control 워크플로우 다운로드]]
+[[download: downloads/session3/step3/video_ltx2_depth_to_video.json | LTX-2 Depth Control 워크플로우 다운로드]]
 
 **실습**: 참조 영상을 업로드하면 Lotus 모델이 깊이 맵을 자동 추출합니다.
 
@@ -3625,7 +3625,7 @@ SVD_img2vid_Conditioning → VideoLinearCFGGuidance → KSampler → 비디오
 
 ### 실습
 
-[[download: downloads/session3/video/svd_txt_to_image_to_video.json | SVD T2I-to-Video 워크플로우 다운로드]]
+[[download: downloads/session3/step4/svd_txt_to_image_to_video.json | SVD T2I-to-Video 워크플로우 다운로드]]
 
 **실습**: 프롬프트로 SDXL 이미지를 생성한 후 SVD-XT가 자동으로 비디오로 변환합니다. \`motion_bucket_id\` 값을 조정하며 움직임 강도 변화를 실험해보세요.
 
@@ -3654,13 +3654,13 @@ I2V(10초): 768x512x241 프레임, Width/Height 반드시 128의 배수
 
 ### 워크플로우 1 - T2I (Text to Image)
 
-[[download: downloads/session3/video/image_kandinsky5_t2i.json | Kandinsky 5 T2I 워크플로우 다운로드]]
+[[download: downloads/session3/step4/image_kandinsky5_t2i.json | Kandinsky 5 T2I 워크플로우 다운로드]]
 
 **실습**: 텍스트 프롬프트를 입력하고 이미지를 생성하세요. Qwen 텍스트 인코더 덕분에 자세한 묘사도 잘 반영됩니다.
 
 ### 워크플로우 2 - I2V (Image to Video)
 
-[[download: downloads/session3/video/video_kandinsky5_i2v.json | Kandinsky 5 I2V 워크플로우 다운로드]]
+[[download: downloads/session3/step4/video_kandinsky5_i2v.json | Kandinsky 5 I2V 워크플로우 다운로드]]
 
 **실습**: LoadImage에 이미지를 업로드하고 실행하세요. 5초와 10초 생성 중 선택할 수 있으며, 10초 모드에서는 해상도가 128의 배수여야 합니다.
 
@@ -3688,7 +3688,7 @@ Salesforce Research(xgen-universe)의 통합 시각 생성 모델입니다. 이�
 
 ### 워크플로우 1 - T2I (Text to Image)
 
-[[download: downloads/session3/video/Image_capybara_v0_1_text_to_image.json | Capybara T2I 워크플로우 다운로드]]
+[[download: downloads/session3/step4/Image_capybara_v0_1_text_to_image.json | Capybara T2I 워크플로우 다운로드]]
 
 **실습**: 원하는 장면을 텍스트로 입력하세요.
 
@@ -3696,13 +3696,13 @@ Salesforce Research(xgen-universe)의 통합 시각 생성 모델입니다. 이�
 
 지시사항(instruction) 기반으로 기존 이미지를 편집합니다. 프롬프트에 변경할 내용을 지시 형태로 입력합니다.
 
-[[download: downloads/session3/video/Image_capybara_v0_1_image_edit.json | Capybara 이미지 편집 워크플로우 다운로드]]
+[[download: downloads/session3/step4/Image_capybara_v0_1_image_edit.json | Capybara 이미지 편집 워크플로우 다운로드]]
 
 **실습**: LoadImage에 원본 이미지를 업로드하고, 프롬프트에 "Change the background to a forest" 같은 지시문을 입력하세요.
 
 ### 워크플로우 3 - I2V (Image to Video)
 
-[[download: downloads/session3/video/video_capybara_v0_1_image_to_video.json | Capybara I2V 워크플로우 다운로드]]
+[[download: downloads/session3/step4/video_capybara_v0_1_image_to_video.json | Capybara I2V 워크플로우 다운로드]]
 
 **실습**: LoadImage에 이미지를 업로드하고 원하는 움직임을 프롬프트로 묘사하세요.
 
@@ -3710,7 +3710,7 @@ Salesforce Research(xgen-universe)의 통합 시각 생성 모델입니다. 이�
 
 기존 비디오에 텍스트 지시사항을 적용해 내용을 수정합니다.
 
-[[download: downloads/session3/video/video_capybara_v0_1_video_edit.json | Capybara 비디오 편집 워크플로우 다운로드]]
+[[download: downloads/session3/step4/video_capybara_v0_1_video_edit.json | Capybara 비디오 편집 워크플로우 다운로드]]
 
 **실습**: LoadVideo에 원본 비디오를 업로드하고, 수정할 내용을 지시 프롬프트로 입력하세요.
 
@@ -3741,9 +3741,9 @@ Salesforce Research(xgen-universe)의 통합 시각 생성 모델입니다. 이�
 
 아래 두 가지 업스케일링 템플릿을 다운로드하세요.
 
-[[download: downloads/session3/upscale/upscale_basic_workflow.json | 기본 업스케일 워크플로우 다운로드]]
+[[download: downloads/session3/step5/upscale_basic_workflow.json | 기본 업스케일 워크플로우 다운로드]]
 
-[[download: downloads/session3/upscale/upscale_hiresfix_workflow.json | Hires Fix 업스케일 워크플로우 다운로드]]
+[[download: downloads/session3/step5/upscale_hiresfix_workflow.json | Hires Fix 업스케일 워크플로우 다운로드]]
 
 ---
 
@@ -3872,7 +3872,7 @@ VAE Encode → KSampler → VAE Decode → Save Image
 
 아래 고급 기법이 적용된 템플릿을 다운로드하세요.
 
-[[download: downloads/session4/get_set_adv.json | Get/Set 고급 기법 템플릿 다운로드]]
+[[download: downloads/session4/step1/get_set_adv.json | Get/Set 고급 기법 템플릿 다운로드]]
 
 ---section---
 
@@ -4048,7 +4048,7 @@ ComfyCloud에서는 외부 AI 서비스(OpenAI, ElevenLabs, Grok 등)를 ComfyUI
 
 OpenAI의 이미지 생성 모델입니다. 텍스트 프롬프트로 이미지를 생성합니다.
 
-[[download: downloads/session4/openai_dalle2.json | OpenAI DALL-E 2 워크플로우 다운로드]]
+[[download: downloads/session4/step2/openai_dalle2.json | OpenAI DALL-E 2 워크플로우 다운로드]]
 
 ---
 
@@ -4056,7 +4056,7 @@ OpenAI의 이미지 생성 모델입니다. 텍스트 프롬프트로 이미지�
 
 Bytedance(바이트댄스)의 이미지 생성 모델입니다. 한국어 프롬프트도 지원합니다.
 
-[[download: downloads/session4/bytedance_seedream.json | Bytedance Seedream 워크플로우 다운로드]]
+[[download: downloads/session4/step2/bytedance_seedream.json | Bytedance Seedream 워크플로우 다운로드]]
 
 ---
 
@@ -4065,7 +4065,7 @@ Bytedance(바이트댄스)의 이미지 생성 모델입니다. 한국어 프롬
 디자인 특화 이미지 생성 모델입니다. 스타일 지정과 일러스트 생성에 강점이 있습니다.
 Infinite Style Library를 활용해 다양한 아트 스타일을 적용할 수 있습니다.
 
-[[download: downloads/session4/recraft.json | Recraft 워크플로우 다운로드]]
+[[download: downloads/session4/step2/recraft.json | Recraft 워크플로우 다운로드]]
 
 ---
 
@@ -4073,7 +4073,7 @@ Infinite Style Library를 활용해 다양한 아트 스타일을 적용할 수 
 
 xAI의 Grok 이미지 생성 모델입니다.
 
-[[download: downloads/session4/grok_t2i.json | Grok T2I 워크플로우 다운로드]]
+[[download: downloads/session4/step2/grok_t2i.json | Grok T2I 워크플로우 다운로드]]
 
 ---section---
 
@@ -4084,7 +4084,7 @@ xAI의 Grok 이미지 생성 모델입니다.
 Google의 Gemini 기반 나노바나나(Nano Banana) 모델로 이미지를 변환합니다.
 입력 이미지를 참고하여 프롬프트 방향으로 재생성합니다.
 
-[[download: downloads/session4/nano_banana_i2i.json | 나노바나나 I2I 워크플로우 다운로드]]
+[[download: downloads/session4/step2/nano_banana_i2i.json | 나노바나나 I2I 워크플로우 다운로드]]
 
 ---
 
@@ -4093,7 +4093,7 @@ Google의 Gemini 기반 나노바나나(Nano Banana) 모델로 이미지를 변�
 Recraft로 배경을 제거한 뒤 Gemini로 스타일을 재적용하는 콤보 워크플로우입니다.
 스프라이트 이미지를 원하는 아트 스타일로 리스킨할 때 활용합니다.
 
-[[download: downloads/session4/recraft_gemini_restyle.json | Recraft+Gemini 리스타일 워크플로우 다운로드]]
+[[download: downloads/session4/step2/recraft_gemini_restyle.json | Recraft+Gemini 리스타일 워크플로우 다운로드]]
 
 ---section---
 
@@ -4108,7 +4108,7 @@ ElevenLabs의 고품질 TTS(텍스트-to-음성) 모델입니다.
 - **ElevenLabsVoiceSelector**: 제공되는 음성 목록에서 선택
 - **ElevenLabsInstantVoiceClone**: 샘플 오디오로 즉석 음성 클로닝
 
-[[download: downloads/session4/elevenlabs_tts.json | ElevenLabs TTS 워크플로우 다운로드]]
+[[download: downloads/session4/step2/elevenlabs_tts.json | ElevenLabs TTS 워크플로우 다운로드]]
 
 ---section---
 
@@ -4594,7 +4594,7 @@ Outpaint 기법과 First-Last 워크플로우를 결합하여 줌인 효과 영�
 
 작은 아이콘 크기입니다.
 
-[[image: vae.jpg | width:20%]]
+[[image: session1/step8/vae.jpg | width:20%]]
 
 ---
 
@@ -4610,7 +4610,7 @@ Outpaint 기법과 First-Last 워크플로우를 결합하여 줌인 효과 영�
 
 기본값과 동일한 크기입니다.
 
-[[image: controlnet.png | width:80%]]
+[[image: session2/step2/controlnet.png | width:80%]]
 
 ---
 
@@ -4626,7 +4626,7 @@ Outpaint 기법과 First-Last 워크플로우를 결합하여 줌인 효과 영�
 
 width 옵션이 없으면 기본값 80%가 적용됩니다.
 
-[[image: ksampler.PNG]]
+[[image: session1/step10/ksampler.PNG]]
 
 ---
 
@@ -4634,7 +4634,7 @@ width 옵션이 없으면 기본값 80%가 적용됩니다.
 
 5%는 너무 작으므로 10%로 자동 보정됩니다.
 
-[[image: lora.PNG | width:5%]]
+[[image: session2/step1/lora.PNG | width:5%]]
 
 ---
 
@@ -4650,7 +4650,7 @@ width 옵션이 없으면 기본값 80%가 적용됩니다.
 
 width와 align을 함께 사용할 수 있습니다.
 
-[[image: denoising1.PNG | width:60% | align:center | 중앙 정렬 60% 이미지]]
+[[image: session1/step2/denoising1.PNG | width:60% | align:center | 중앙 정렬 60% 이미지]]
 
 ---
 
@@ -4666,11 +4666,11 @@ px 단위는 무시되어 기본 마크다운으로 표시됩니다.
 
 여러 이미지를 다양한 크기로 표시합니다.
 
-[[image: checkpoint.PNG | width:30%]]
+[[image: session1/step6/checkpoint.PNG | width:30%]]
 
-[[image: i2i_sample.png | width:60%]]
+[[image: session1/step9/i2i_sample.png | width:60%]]
 
-[[image: word-chain.PNG | width:90%]]
+[[image: session1/step2/word-chain.PNG | width:90%]]
 
 ---
 
