@@ -41,7 +41,7 @@ SVD_img2vid_Conditioning → VideoLinearCFGGuidance → KSampler → 비디오
 
 ### 실습
 
-[[download: downloads/session3/video/svd_txt_to_image_to_video.json | SVD T2I-to-Video 워크플로우 다운로드]]
+[[download: downloads/session3/step4/svd_txt_to_image_to_video.json | SVD T2I-to-Video 워크플로우 다운로드]]
 
 **실습**: 프롬프트로 SDXL 이미지를 생성한 후 SVD-XT가 자동으로 비디오로 변환합니다. `motion_bucket_id` 값을 조정하며 움직임 강도 변화를 실험해보세요.
 
@@ -70,13 +70,13 @@ I2V(10초): 768x512x241 프레임, Width/Height 반드시 128의 배수
 
 ### 워크플로우 1 - T2I (Text to Image)
 
-[[download: downloads/session3/video/image_kandinsky5_t2i.json | Kandinsky 5 T2I 워크플로우 다운로드]]
+[[download: downloads/session3/step4/image_kandinsky5_t2i.json | Kandinsky 5 T2I 워크플로우 다운로드]]
 
 **실습**: 텍스트 프롬프트를 입력하고 이미지를 생성하세요. Qwen 텍스트 인코더 덕분에 자세한 묘사도 잘 반영됩니다.
 
 ### 워크플로우 2 - I2V (Image to Video)
 
-[[download: downloads/session3/video/video_kandinsky5_i2v.json | Kandinsky 5 I2V 워크플로우 다운로드]]
+[[download: downloads/session3/step4/video_kandinsky5_i2v.json | Kandinsky 5 I2V 워크플로우 다운로드]]
 
 **실습**: LoadImage에 이미지를 업로드하고 실행하세요. 5초와 10초 생성 중 선택할 수 있으며, 10초 모드에서는 해상도가 128의 배수여야 합니다.
 
@@ -104,7 +104,7 @@ Salesforce Research(xgen-universe)의 통합 시각 생성 모델입니다. 이�
 
 ### 워크플로우 1 - T2I (Text to Image)
 
-[[download: downloads/session3/video/Image_capybara_v0_1_text_to_image.json | Capybara T2I 워크플로우 다운로드]]
+[[download: downloads/session3/step4/Image_capybara_v0_1_text_to_image.json | Capybara T2I 워크플로우 다운로드]]
 
 **실습**: 원하는 장면을 텍스트로 입력하세요.
 
@@ -112,13 +112,13 @@ Salesforce Research(xgen-universe)의 통합 시각 생성 모델입니다. 이�
 
 지시사항(instruction) 기반으로 기존 이미지를 편집합니다. 프롬프트에 변경할 내용을 지시 형태로 입력합니다.
 
-[[download: downloads/session3/video/Image_capybara_v0_1_image_edit.json | Capybara 이미지 편집 워크플로우 다운로드]]
+[[download: downloads/session3/step4/Image_capybara_v0_1_image_edit.json | Capybara 이미지 편집 워크플로우 다운로드]]
 
 **실습**: LoadImage에 원본 이미지를 업로드하고, 프롬프트에 "Change the background to a forest" 같은 지시문을 입력하세요.
 
 ### 워크플로우 3 - I2V (Image to Video)
 
-[[download: downloads/session3/video/video_capybara_v0_1_image_to_video.json | Capybara I2V 워크플로우 다운로드]]
+[[download: downloads/session3/step4/video_capybara_v0_1_image_to_video.json | Capybara I2V 워크플로우 다운로드]]
 
 **실습**: LoadImage에 이미지를 업로드하고 원하는 움직임을 프롬프트로 묘사하세요.
 
@@ -126,7 +126,7 @@ Salesforce Research(xgen-universe)의 통합 시각 생성 모델입니다. 이�
 
 기존 비디오에 텍스트 지시사항을 적용해 내용을 수정합니다.
 
-[[download: downloads/session3/video/video_capybara_v0_1_video_edit.json | Capybara 비디오 편집 워크플로우 다운로드]]
+[[download: downloads/session3/step4/video_capybara_v0_1_video_edit.json | Capybara 비디오 편집 워크플로우 다운로드]]
 
 **실습**: LoadVideo에 원본 비디오를 업로드하고, 수정할 내용을 지시 프롬프트로 입력하세요.
 

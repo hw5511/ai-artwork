@@ -68,9 +68,9 @@ ComfyCloud의 **Workflow Templates**에서 Qwen Image 템플릿을 불러오면 
 
 ## 실습 파일 다운로드
 
-[[download: downloads/session2/qwen/qwen_text_to_image.json | Qwen Image - Text to Image 워크플로우]]
+[[download: downloads/session2/step6/qwen_text_to_image.json | Qwen Image - Text to Image 워크플로우]]
 
-[[download: downloads/session2/qwen/qwen_image_canny_controlnet.json | Qwen Image - Canny ControlNet 워크플로우]]
+[[download: downloads/session2/step6/qwen_image_canny_controlnet.json | Qwen Image - Canny ControlNet 워크플로우]]
 
 ---
 

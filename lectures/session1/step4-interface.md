@@ -13,11 +13,11 @@ ComfyUI는 노드 기반의 Stable Diffusion 인터페이스입니다.
 
 ### 상단 메뉴 (ComfyUI 로고 클릭)
 
-[[image: upper_menu.png]]
+[[image: session1/step4/upper_menu.png]]
 
 ### 좌측 패널
 
-[[image: left_pannel.png]]
+[[image: session1/step4/left_pannel.png]]
 
 좌측 패널은 다양한 도구와 라이브러리를 제공합니다:
 
@@ -45,7 +45,7 @@ JSON 형식으로 저장되며, 노드 구성과 연결 정보를 포함합니�
 
 ## 노드 시스템 이해하기
 
-[[image: nodes.png]]
+[[image: session1/step4/nodes.png]]
 
 ### 노드란?
 노드는 특정 기능을 수행하는 독립적인 모듈입니다.
@@ -82,7 +82,7 @@ JSON 형식으로 저장되며, 노드 구성과 연결 정보를 포함합니�
 
 ## 워크플로우 관리
 
-[[image: json_workflow.png]]
+[[image: session1/step4/json_workflow.png]]
 
 ### 파일 저장
 

@@ -16,7 +16,7 @@ ComfyCloud에서는 외부 AI 서비스(OpenAI, ElevenLabs, Grok 등)를 ComfyUI
 
 OpenAI의 이미지 생성 모델입니다. 텍스트 프롬프트로 이미지를 생성합니다.
 
-[[download: downloads/session4/openai_dalle2.json | OpenAI DALL-E 2 워크플로우 다운로드]]
+[[download: downloads/session4/step2/openai_dalle2.json | OpenAI DALL-E 2 워크플로우 다운로드]]
 
 ---
 
@@ -24,7 +24,7 @@ OpenAI의 이미지 생성 모델입니다. 텍스트 프롬프트로 이미지�
 
 Bytedance(바이트댄스)의 이미지 생성 모델입니다. 한국어 프롬프트도 지원합니다.
 
-[[download: downloads/session4/bytedance_seedream.json | Bytedance Seedream 워크플로우 다운로드]]
+[[download: downloads/session4/step2/bytedance_seedream.json | Bytedance Seedream 워크플로우 다운로드]]
 
 ---
 
@@ -33,7 +33,7 @@ Bytedance(바이트댄스)의 이미지 생성 모델입니다. 한국어 프롬
 디자인 특화 이미지 생성 모델입니다. 스타일 지정과 일러스트 생성에 강점이 있습니다.
 Infinite Style Library를 활용해 다양한 아트 스타일을 적용할 수 있습니다.
 
-[[download: downloads/session4/recraft.json | Recraft 워크플로우 다운로드]]
+[[download: downloads/session4/step2/recraft.json | Recraft 워크플로우 다운로드]]
 
 ---
 
@@ -41,7 +41,7 @@ Infinite Style Library를 활용해 다양한 아트 스타일을 적용할 수 
 
 xAI의 Grok 이미지 생성 모델입니다.
 
-[[download: downloads/session4/grok_t2i.json | Grok T2I 워크플로우 다운로드]]
+[[download: downloads/session4/step2/grok_t2i.json | Grok T2I 워크플로우 다운로드]]
 
 ---section---
 
@@ -52,7 +52,7 @@ xAI의 Grok 이미지 생성 모델입니다.
 Google의 Gemini 기반 나노바나나(Nano Banana) 모델로 이미지를 변환합니다.
 입력 이미지를 참고하여 프롬프트 방향으로 재생성합니다.
 
-[[download: downloads/session4/nano_banana_i2i.json | 나노바나나 I2I 워크플로우 다운로드]]
+[[download: downloads/session4/step2/nano_banana_i2i.json | 나노바나나 I2I 워크플로우 다운로드]]
 
 ---
 
@@ -61,7 +61,7 @@ Google의 Gemini 기반 나노바나나(Nano Banana) 모델로 이미지를 변�
 Recraft로 배경을 제거한 뒤 Gemini로 스타일을 재적용하는 콤보 워크플로우입니다.
 스프라이트 이미지를 원하는 아트 스타일로 리스킨할 때 활용합니다.
 
-[[download: downloads/session4/recraft_gemini_restyle.json | Recraft+Gemini 리스타일 워크플로우 다운로드]]
+[[download: downloads/session4/step2/recraft_gemini_restyle.json | Recraft+Gemini 리스타일 워크플로우 다운로드]]
 
 ---section---
 
@@ -76,7 +76,7 @@ ElevenLabs의 고품질 TTS(텍스트-to-음성) 모델입니다.
 - **ElevenLabsVoiceSelector**: 제공되는 음성 목록에서 선택
 - **ElevenLabsInstantVoiceClone**: 샘플 오디오로 즉석 음성 클로닝
 
-[[download: downloads/session4/elevenlabs_tts.json | ElevenLabs TTS 워크플로우 다운로드]]
+[[download: downloads/session4/step2/elevenlabs_tts.json | ElevenLabs TTS 워크플로우 다운로드]]
 
 ---section---
 

@@ -1,14 +1,14 @@
 # Image to Image 입문
 
-[[image: i2i_1.PNG]]
-[[image: i2i_2.PNG]]
-[[image: i2i_principle.png]]
+[[image: session1/step9/i2i_1.PNG]]
+[[image: session1/step9/i2i_2.PNG]]
+[[image: session1/step9/i2i_principle.png]]
 
 ---section---
 
 ## 그렇다면 노이즈는 어떻게 생성할까? → 노이즈는 seed값을 토대로 생성된다!
 
-[[image: denoising.gif]]
+[[image: session1/step9/denoising.gif]]
 
 ---section---
 
@@ -30,11 +30,11 @@ Text to Image와 유사하지만, 참조 이미지를 조건으로 추가하여 
 
 ### 실습 준비: 샘플 이미지 및 워크플로우 다운로드
 
-[[image: i2i_sample.png | width:448]]
+[[image: session1/step9/i2i_sample.png | width:448]]
 
 위 이미지를 우클릭하여 다운로드하세요.
 
-[[download: downloads/session1/i2i_workflow.json | Image to Image 워크플로우 다운로드 (.json)]]
+[[download: downloads/session1/step9/i2i_workflow.json | Image to Image 워크플로우 다운로드 (.json)]]
 
 ---section---
 

@@ -17,8 +17,8 @@
   - 99개 쪽지: "5"
   - 1개 쪽지: "4" (가끔 패턴이 깨지는 경우를 학습했기 때문)
 
-[[image: human-question.PNG]]
-[[image: ai-question.PNG]]
+[[image: session1/step2/human-question.PNG]]
+[[image: session1/step2/ai-question.PNG]]
 
 ### 이어말하기 게임으로 쉽게 이해하기
 AI를 **고성능 이어말하기 기계**라고 생각해보세요:
@@ -27,7 +27,7 @@ AI를 **고성능 이어말하기 기계**라고 생각해보세요:
 
 AI는 앞의 단어들을 보고 가장 적절한 다음 단어를 선택하는 것과 같습니다.
 
-[[image: word-chain.PNG]]
+[[image: session1/step2/word-chain.PNG]]
 
 ---section---
 
@@ -52,7 +52,7 @@ AI는 앞의 단어들을 보고 가장 적절한 다음 단어를 선택하는 
 - 각 픽셀은 색깔 정보를 담은 숫자
 - AI에게 이미지는 그냥 숫자 패턴일 뿐!
 
-[[image: 2d-array.PNG]]
+[[image: session1/step2/2d-array.PNG]]
 
 ### 디노이징: 얼룩 지우기 게임
 AI 이미지 생성의 핵심 원리를 간단히 설명하면:
@@ -62,11 +62,11 @@ AI 이미지 생성의 핵심 원리를 간단히 설명하면:
 3. **비교하기**: 원본과 얼마나 유사한지 확인
 4. **반복하기**: 이 과정을 수백만 번 반복
 
-[[image: denoising1.PNG]]
-[[image: denoising2.PNG]]
-[[image: denoising3.PNG]]
-[[image: denoising4.PNG]]
-[[image: denoising5.PNG]]
+[[image: session1/step2/denoising1.PNG]]
+[[image: session1/step2/denoising2.PNG]]
+[[image: session1/step2/denoising3.PNG]]
+[[image: session1/step2/denoising4.PNG]]
+[[image: session1/step2/denoising5.PNG]]
 
 ### 학습 과정
 - 처음엔 서툴게 복원하다가 점점 실력 향상
@@ -82,4 +82,4 @@ AI 이미지 생성의 핵심 원리를 간단히 설명하면:
 
 ### 실제 디노이징 방식의 단계별 예시 이미지
 
-[[image: consistency-models.png]]
+[[image: common/consistency-models.png]]

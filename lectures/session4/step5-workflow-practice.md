@@ -71,7 +71,7 @@ Outpaint 기법과 First-Last 워크플로우를 결합하여 줌인 효과 영�
 [[image: session4/outpaint_raw.png | width:30% | row | 2단계: Outpaint 배경 확장]]
 [[image: session4/outpaint_first.png | width:30% | row | 3단계: Hires Fix 품질 향상]]
 
-[[video: session4/outpaint/coffee.mp4 | width:50% | 최종 결과: 줌인 영상]]
+[[video: session4/step5/coffee.mp4 | width:50% | 최종 결과: 줌인 영상]]
 
 **활용 팁**
 - Outpaint를 여러 단계 반복하면 더 긴 줌인 효과를 만들 수 있습니다

@@ -2,7 +2,7 @@
 
 ---section---
 
-[[image: ksampler.PNG]]
+[[image: session1/step10/ksampler.PNG]]
 
 K-Sampler는 AI 이미지 생성의 핵심 엔진으로, 노이즈를 점진적으로 제거하며 텍스트 프롬프트에 따라 이미지를 형성하는 과정을 제어합니다.
 
@@ -49,7 +49,7 @@ Steps는 노이즈 제거 단계의 수로, 이미지의 품질과 생성 속도
 
 Steps 매개변수는 샘플러가 수행할 디노이징 반복 횟수를 지정합니다. 더 많은 스텝은 모델이 이미지를 더욱 세밀하게 수정하고 개선할 기회를 제공하여 일반적으로 더 높은 품질의 이미지를 생성하지만, 그만큼 처리 시간도 증가합니다. 이미지 품질과 생성 속도 사이에서 균형을 맞추기 위해 스텝 값을 조정하는 것이 중요합니다.
 
-[[image: consistency-models.png]]
+[[image: common/consistency-models.png]]
 
 #### 권장 설정값
 ```recommendation

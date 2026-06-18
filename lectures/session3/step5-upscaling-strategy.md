@@ -12,9 +12,9 @@
 
 아래 두 가지 업스케일링 템플릿을 다운로드하세요.
 
-[[download: downloads/session3/upscale/upscale_basic_workflow.json | 기본 업스케일 워크플로우 다운로드]]
+[[download: downloads/session3/step5/upscale_basic_workflow.json | 기본 업스케일 워크플로우 다운로드]]
 
-[[download: downloads/session3/upscale/upscale_hiresfix_workflow.json | Hires Fix 업스케일 워크플로우 다운로드]]
+[[download: downloads/session3/step5/upscale_hiresfix_workflow.json | Hires Fix 업스케일 워크플로우 다운로드]]
 
 ---
 

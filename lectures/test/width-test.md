@@ -8,7 +8,7 @@
 
 작은 아이콘 크기입니다.
 
-[[image: vae.jpg | width:20%]]
+[[image: session1/step8/vae.jpg | width:20%]]
 
 ---
 
@@ -24,7 +24,7 @@
 
 기본값과 동일한 크기입니다.
 
-[[image: controlnet.png | width:80%]]
+[[image: session2/step2/controlnet.png | width:80%]]
 
 ---
 
@@ -40,7 +40,7 @@
 
 width 옵션이 없으면 기본값 80%가 적용됩니다.
 
-[[image: ksampler.PNG]]
+[[image: session1/step10/ksampler.PNG]]
 
 ---
 
@@ -48,7 +48,7 @@ width 옵션이 없으면 기본값 80%가 적용됩니다.
 
 5%는 너무 작으므로 10%로 자동 보정됩니다.
 
-[[image: lora.PNG | width:5%]]
+[[image: session2/step1/lora.PNG | width:5%]]
 
 ---
 
@@ -64,7 +64,7 @@ width 옵션이 없으면 기본값 80%가 적용됩니다.
 
 width와 align을 함께 사용할 수 있습니다.
 
-[[image: denoising1.PNG | width:60% | align:center | 중앙 정렬 60% 이미지]]
+[[image: session1/step2/denoising1.PNG | width:60% | align:center | 중앙 정렬 60% 이미지]]
 
 ---
 
@@ -80,11 +80,11 @@ px 단위는 무시되어 기본 마크다운으로 표시됩니다.
 
 여러 이미지를 다양한 크기로 표시합니다.
 
-[[image: checkpoint.PNG | width:30%]]
+[[image: session1/step6/checkpoint.PNG | width:30%]]
 
-[[image: i2i_sample.png | width:60%]]
+[[image: session1/step9/i2i_sample.png | width:60%]]
 
-[[image: word-chain.PNG | width:90%]]
+[[image: session1/step2/word-chain.PNG | width:90%]]
 
 ---
 

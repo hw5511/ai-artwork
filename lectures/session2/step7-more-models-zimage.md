@@ -86,11 +86,11 @@ Z-Image는 Day-0부터 ComfyUI 공식 지원을 받습니다. ComfyCloud에서�
 
 ## 실습 파일 다운로드
 
-[[download: downloads/session2/zimage/z_image_text_to_image.json | Z-Image - Text to Image 워크플로우]]
+[[download: downloads/session2/step7/z_image_text_to_image.json | Z-Image - Text to Image 워크플로우]]
 
-[[download: downloads/session2/zimage/z_image_turbo.json | Z-Image Turbo 워크플로우]]
+[[download: downloads/session2/step7/z_image_turbo.json | Z-Image Turbo 워크플로우]]
 
-[[download: downloads/session2/zimage/z_image_canny_controlnet.json | Z-Image - Canny ControlNet 워크플로우]]
+[[download: downloads/session2/step7/z_image_canny_controlnet.json | Z-Image - Canny ControlNet 워크플로우]]
 
 ---
 

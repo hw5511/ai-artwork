@@ -1,6 +1,6 @@
 # LoRA 모델 탐험
 
-[[image: lora.PNG]]
+[[image: session2/step1/lora.PNG]]
 
 ## LoRA(Low-Rank Adaptation)란?
 
@@ -47,7 +47,7 @@ ComfyCloud에는 별도 다운로드 없이 바로 사용할 수 있는 LoRA 모
 **MoXin** LoRA는 중국 전통 동양화(수묵화) 스타일을 구현하는 LoRA입니다.
 아래 워크플로우 파일을 받아 ComfyCloud에서 바로 불러올 수 있습니다.
 
-[[download: downloads/session1/lora/moxin_lora.json | MoXin 동양화 워크플로우 다운로드 (.json)]]
+[[download: downloads/session2/step1/moxin_lora.json | MoXin 동양화 워크플로우 다운로드 (.json)]]
 
 > 워크플로우에는 Load Checkpoint(SD 1.5 계열), Load LoRA(MoXin), 프롬프트가 이미 세팅되어 있습니다.
 > 파일을 열면 아래 상태로 준비됩니다:
