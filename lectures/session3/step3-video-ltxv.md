@@ -65,7 +65,7 @@ LTX-2.3은 **긴 서술형 프롬프트**에서 훨씬 좋은 결과를 냅니�
 텍스트 프롬프트로 비디오를 생성합니다.
 LTX-2.3은 T2V에서도 시작 이미지 업로드가 필요합니다(레퍼런스 프레임으로 활용).
 
-[[download: downloads/session3/video/video_ltx2_3_t2v.json | LTX-2.3 T2V 워크플로우 다운로드]]
+[[download: downloads/session3/step3/video_ltx2_3_t2v.json | LTX-2.3 T2V 워크플로우 다운로드]]
 
 **실습**: 원하는 이미지를 업로드하고 프롬프트에 동작을 서술하세요.
 
@@ -75,7 +75,7 @@ LTX-2.3은 T2V에서도 시작 이미지 업로드가 필요합니다(레퍼런�
 
 입력 이미지를 시작 프레임으로 사용하여 자연스러운 움직임을 생성합니다.
 
-[[download: downloads/session3/video/video_ltx2_3_i2v.json | LTX-2.3 I2V 워크플로우 다운로드]]
+[[download: downloads/session3/step3/video_ltx2_3_i2v.json | LTX-2.3 I2V 워크플로우 다운로드]]
 
 **실습**: LoadImage에 원하는 이미지를 업로드하고 프롬프트에 움직임을 묘사하세요.
 
@@ -90,7 +90,7 @@ LTX-2.3은 T2V에서도 시작 이미지 업로드가 필요합니다(레퍼런�
 - `LTXVAudioVAEDecode` - 오디오 디코딩
 - `LTXVCropGuides` + `LTXVAddGuide` - 시작/끝 프레임 가이드
 
-[[download: downloads/session3/video/video_ltx2_3_flf2v.json | LTX-2.3 FLF2V 워크플로우 다운로드]]
+[[download: downloads/session3/step3/video_ltx2_3_flf2v.json | LTX-2.3 FLF2V 워크플로우 다운로드]]
 
 **실습**: 시작·끝 이미지를 각각 업로드하고 프롬프트에 장면과 소리를 함께 묘사하세요.
 
@@ -116,7 +116,7 @@ IC-LoRA(In-Context LoRA)는 참조 비디오나 이미지에서 구조·모션 �
 
 **모델**: `ltx-2-19b-ic-lora-pose-control.safetensors`
 
-[[download: downloads/session3/video/video_ltx2_pose_to_video.json | LTX-2 Pose Control 워크플로우 다운로드]]
+[[download: downloads/session3/step3/video_ltx2_pose_to_video.json | LTX-2 Pose Control 워크플로우 다운로드]]
 
 **실습**: LoadVideo에 참조 비디오를 업로드하고 원하는 장면을 프롬프트로 입력하세요.
 
@@ -129,7 +129,7 @@ IC-LoRA(In-Context LoRA)는 참조 비디오나 이미지에서 구조·모션 �
 
 **모델**: `ltx-2-19b-ic-lora-canny-control.safetensors`
 
-[[download: downloads/session3/video/video_ltx2_canny_to_video.json | LTX-2 Canny Control 워크플로우 다운로드]]
+[[download: downloads/session3/step3/video_ltx2_canny_to_video.json | LTX-2 Canny Control 워크플로우 다운로드]]
 
 **실습**: 참조 이미지/비디오를 업로드하면 Canny 엣지가 자동 추출되어 구도 제어에 활용됩니다.
 
@@ -144,7 +144,7 @@ Lotus 깊이 추정 모델로 장면의 원근·공간 구조를 추출하여 �
 - `lotus-depth-d-v1-1.safetensors` (깊이 추정)
 - `vae-ft-mse-840000-ema-pruned.safetensors`
 
-[[download: downloads/session3/video/video_ltx2_depth_to_video.json | LTX-2 Depth Control 워크플로우 다운로드]]
+[[download: downloads/session3/step3/video_ltx2_depth_to_video.json | LTX-2 Depth Control 워크플로우 다운로드]]
 
 **실습**: 참조 영상을 업로드하면 Lotus 모델이 깊이 맵을 자동 추출합니다.
 

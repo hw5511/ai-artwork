@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "gen": "python scripts/gen_contents.py && python scripts/gen_toc.py",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run gen && npm run build && node -e \"const fs=require('fs');for(const f of ['index.html','logo.svg'])fs.copyFileSync('dist/'+f,'../'+f)\""
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",

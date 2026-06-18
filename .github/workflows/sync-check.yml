@@ -1,0 +1,31 @@
+name: sync-check
+
+# 생성물(lectureContents.ts, tocData.ts)이 원본(lectures/*.md, toc.json)과
+# 동기화돼 있는지 검증한다. 원본만 고치고 생성기를 안 돌린 경우(#7 같은 드리프트)
+# 를 머지 전에 차단한다.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  generated-in-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Regenerate from sources
+        run: |
+          python3 frontend/scripts/gen_contents.py
+          python3 frontend/scripts/gen_toc.py
+      - name: Verify generated files are in sync
+        run: |
+          if ! git diff --quiet -- frontend/src/data/lectureContents.ts frontend/src/data/tocData.ts; then
+            echo "::error::생성물이 원본과 동기화돼 있지 않습니다. 'cd frontend && npm run gen' 후 커밋하세요."
+            git --no-pager diff --stat -- frontend/src/data/lectureContents.ts frontend/src/data/tocData.ts
+            exit 1
+          fi
+          echo "✅ 생성물이 원본과 동기화됨"

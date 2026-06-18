@@ -21,15 +21,15 @@ OpenPose는 인체의 포즈를 스켈레톤 형태로 추출하여 AI 이미지
 
 **레퍼런스 포즈 이미지 다운로드**:
 
-[[download: downloads/session2/openpose/openpose.jpg | OpenPose 레퍼런스 이미지 다운로드]]
+[[download: downloads/session2/step3/openpose.jpg | OpenPose 레퍼런스 이미지 다운로드]]
 
 **이미지 미리보기**:
 
-[[image: openpose.jpg | width:50%]]
+[[image: session2/step3/openpose.jpg | width:50%]]
 
 **워크플로우 파일**:
 
-[[download: downloads/session2/openpose/openpose.json | OpenPose 워크플로우 다운로드]]
+[[download: downloads/session2/step3/openpose.json | OpenPose 워크플로우 다운로드]]
 
 위 버튼을 클릭하여 워크플로우 파일을 다운로드한 후 실습을 진행합니다.
 

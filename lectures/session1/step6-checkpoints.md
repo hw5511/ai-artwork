@@ -1,6 +1,6 @@
 # 체크포인트 모델 탐험
 
-[[image: checkpoint.PNG]]
+[[image: session1/step6/checkpoint.PNG]]
 
 ## 체크포인트 모델이란?
 
@@ -59,11 +59,11 @@ SD 1.5와 SDXL의 품질 차이를 비교해보세요.
     <h4 style="text-align: center; margin-bottom: 12px;">SD 1.5</h4>
     <div style="display: flex; gap: 12px;">
       <figure style="flex: 1; text-align: center; margin: 0;">
-        <img src="./lectures/images/sd15_512.png" style="width: 100%;" alt="SD 1.5 512px" />
+        <img src="./lectures/images/session1/step6/sd15_512.png" style="width: 100%;" alt="SD 1.5 512px" />
         <figcaption style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">512×512 생성</figcaption>
       </figure>
       <figure style="flex: 1; text-align: center; margin: 0;">
-        <img src="./lectures/images/sd15_1024.png" style="width: 100%;" alt="SD 1.5 1024px" />
+        <img src="./lectures/images/session1/step6/sd15_1024.png" style="width: 100%;" alt="SD 1.5 1024px" />
         <figcaption style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">1024×1024 생성 (비정상)</figcaption>
       </figure>
     </div>
@@ -72,11 +72,11 @@ SD 1.5와 SDXL의 품질 차이를 비교해보세요.
     <h4 style="text-align: center; margin-bottom: 12px;">SDXL</h4>
     <div style="display: flex; gap: 12px;">
       <figure style="flex: 1; text-align: center; margin: 0;">
-        <img src="./lectures/images/sdxl_512.png" style="width: 100%;" alt="SDXL 512px" />
+        <img src="./lectures/images/session1/step6/sdxl_512.png" style="width: 100%;" alt="SDXL 512px" />
         <figcaption style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">512×512 생성 (어색)</figcaption>
       </figure>
       <figure style="flex: 1; text-align: center; margin: 0;">
-        <img src="./lectures/images/sdxl_1024.png" style="width: 100%;" alt="SDXL 1024px" />
+        <img src="./lectures/images/session1/step6/sdxl_1024.png" style="width: 100%;" alt="SDXL 1024px" />
         <figcaption style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">1024×1024 생성</figcaption>
       </figure>
     </div>
@@ -152,10 +152,10 @@ detailed illustration, soft lighting, masterpiece
 아래 파일을 다운로드하여 워크플로우를 불러올 수 있습니다.
 이미지 파일에 워크플로우 정보가 내장되어 있습니다.
 
-[[image: wai_illustrous.png]]
+[[image: session1/step6/wai_illustrous.png]]
 
-[[download: downloads/session1/wai_illustrous.json | WAI-illustrious 워크플로우 다운로드 (.json)]]
-[[download: images/wai_illustrous.png | WAI-illustrious 워크플로우 이미지 다운로드 (.png)]]
+[[download: downloads/session1/step6/wai_illustrous.json | WAI-illustrious 워크플로우 다운로드 (.json)]]
+[[download: downloads/session1/step6/wai_illustrous.png | WAI-illustrious 워크플로우 이미지 다운로드 (.png)]]
 
 #### 불러오기 방법
 

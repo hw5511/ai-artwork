@@ -46,11 +46,11 @@ LeReS: 고해상도 깊이
 
 ### 1단계: 워크플로우 및 이미지 다운로드
 
-[[download: downloads/session2/canny/canny_workflow.json | Canny 워크플로우 다운로드]]
+[[download: downloads/session2/step4/canny_workflow.json | Canny 워크플로우 다운로드]]
 
 **실습용 이미지 미리보기**:
 
-[[image: canny_girl.png | width:50%]]
+[[image: session2/step4/canny_girl.png | width:50%]]
 
 ### 2단계: 워크플로우 열기
 
@@ -104,12 +104,12 @@ cyberpunk style, neon lights, futuristic atmosphere
 
 ### 1단계: 워크플로우 및 이미지 다운로드
 
-[[download: downloads/session2/depth/depth_controlnet.json | Depth 워크플로우 다운로드]]
+[[download: downloads/session2/step4/depth_controlnet.json | Depth 워크플로우 다운로드]]
 
 **이미지 미리보기**:
 
-[[image: building.webp | width:50% | row]]
-[[image: inner.jpg | width:50% | row]]
+[[image: session2/step4/building.webp | width:50% | row]]
+[[image: session2/step4/inner.jpg | width:50% | row]]
 
 ### 2단계: 워크플로우 열기
 

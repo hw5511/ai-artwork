@@ -33,7 +33,7 @@ Alibaba의 오픈소스 비디오 생성 모델로, 6가지 생성 방식을 지
 
 **핵심 노드**: `EmptyHunyuanLatentVideo` - 빈 latent에서 시작하여 텍스트 기반으로 생성
 
-[[download: downloads/session3/video/video_wan2_2_14B_t2v.json | T2V 워크플로우 다운로드]]
+[[download: downloads/session3/step2/video_wan2_2_14B_t2v.json | T2V 워크플로우 다운로드]]
 
 **실습**: 워크플로우를 불러온 후 Positive Prompt에 원하는 장면을 입력하고 실행하세요.
 
@@ -45,7 +45,7 @@ Alibaba의 오픈소스 비디오 생성 모델로, 6가지 생성 방식을 지
 
 **핵심 노드**: `WanImageToVideo` - 입력 이미지를 기반으로 자연스러운 움직임 생성
 
-[[download: downloads/session3/video/video_wan2_2_14B_i2v.json | I2V 워크플로우 다운로드]]
+[[download: downloads/session3/step2/video_wan2_2_14B_i2v.json | I2V 워크플로우 다운로드]]
 
 **실습**: LoadImage에 원하는 이미지를 업로드하고 프롬프트로 움직임 방향을 지정하세요.
 
@@ -62,7 +62,7 @@ Alibaba의 오픈소스 비디오 생성 모델로, 6가지 생성 방식을 지
 VRAM 여유 있을 경우: 해상도 값을 높여 품질 향상 가능
 ```
 
-[[download: downloads/session3/video/video_wan2_2_14B_flf2v.json | FLF2V 워크플로우 다운로드]]
+[[download: downloads/session3/step2/video_wan2_2_14B_flf2v.json | FLF2V 워크플로우 다운로드]]
 
 **실습**: 시작 이미지와 끝 이미지를 각각 LoadImage 노드에 업로드하고 실행하세요.
 
@@ -76,7 +76,7 @@ VRAM 여유 있을 경우: 해상도 값을 높여 품질 향상 가능
 - `WanCameraEmbedding` - 카메라 모션 설정 (pan, tilt, zoom, roll 등)
 - `WanCameraImageToVideo` - 카메라 정보를 반영하여 비디오 생성
 
-[[download: downloads/session3/video/video_wan2_2_14B_camera.json | Camera Control 워크플로우 다운로드]]
+[[download: downloads/session3/step2/video_wan2_2_14B_camera.json | Camera Control 워크플로우 다운로드]]
 
 **실습**: LoadImage에 이미지를 업로드하고, WanCameraEmbedding에서 원하는 카메라 움직임을 설정하세요.
 
@@ -94,7 +94,7 @@ Lightning LoRA 활성화: 생성 속도 향상 (단, 영상 다이나믹 감소 
 두 모드 중 하나를 활성화하여 사용
 ```
 
-[[download: downloads/session3/video/video_wan2_2_14B_fun_inpaint.json | Fun Inpainting 워크플로우 다운로드]]
+[[download: downloads/session3/step2/video_wan2_2_14B_fun_inpaint.json | Fun Inpainting 워크플로우 다운로드]]
 
 **실습**: LoadImage에 이미지를 업로드하고 MaskEditor에서 수정할 영역을 지정한 후 실행하세요.
 
@@ -114,7 +114,7 @@ CausVid LoRA 사용 시: steps 2~4, cfg 1.0 (빠른 생성, LoRA 강도 0.3~0.7 
 참조 이미지: 단색 배경 이미지가 더 좋은 결과를 냄
 ```
 
-[[download: downloads/session3/video/video_wan_vace_inpainting.json | VACE Inpainting 워크플로우 다운로드]]
+[[download: downloads/session3/step2/video_wan_vace_inpainting.json | VACE Inpainting 워크플로우 다운로드]]
 
 **실습**: LoadVideo에 비디오를 업로드하고, 마스크 영역을 지정한 후 실행하세요.
 

@@ -57,7 +57,7 @@ LoadImage 노드에서 알파채널(투명도)이 포함된 PNG를 업로드하�
 
 ### 실습
 
-[[download: downloads/session3/inpaint/flux_inpaint.json | Flux Inpaint 워크플로우 다운로드]]
+[[download: downloads/session3/step1/flux_inpaint.json | Flux Inpaint 워크플로우 다운로드]]
 
 워크플로우를 불러온 후 LoadImage에 원하는 이미지를 업로드하고, MaskEditor에서 마스킹 영역을 지정합니다.
 Positive Prompt에 교체할 내용을 입력하고 실행하세요.
@@ -121,16 +121,16 @@ LoadImage 노드에서 우클릭 → **Open in MaskEditor** 로 마스크 영역
 
 ### 실습
 
-[[download: downloads/session3/inpaint/qwen_inpaint.json | Qwen Inpaint 워크플로우 다운로드]]
+[[download: downloads/session3/step1/qwen_inpaint.json | Qwen Inpaint 워크플로우 다운로드]]
 
-[[download: downloads/session3/inpaint/inpaint_upload.png | 실습용 이미지 다운로드]]
+[[download: downloads/session3/step1/inpaint_upload.png | 실습용 이미지 다운로드]]
 
 워크플로우와 이미지를 다운받은 후, LoadImage에 실습 이미지를 업로드합니다.
 MaskEditor에서 수정할 영역을 칠한 다음 Positive Prompt를 입력하고 실행하세요.
 
 ### 이미지 미리보기
 
-[[image: inpaint_upload.png | width:50%]]
+[[image: session3/step1/inpaint_upload.png | width:50%]]
 
 ---
 
@@ -175,13 +175,13 @@ feathering: 원본 이미지 경계의 페더링 강도 (0 = 경계 선명)
 
 ### 실습
 
-[[download: downloads/session3/inpaint/qwen_outpaint.json | Qwen Outpaint 워크플로우 다운로드]]
+[[download: downloads/session3/step1/qwen_outpaint.json | Qwen Outpaint 워크플로우 다운로드]]
 
-[[download: downloads/session3/inpaint/outpaint_coffee.png | 아웃페인팅 실습 이미지 다운로드]]
+[[download: downloads/session3/step1/outpaint_coffee.png | 아웃페인팅 실습 이미지 다운로드]]
 
 워크플로우와 커피 이미지를 다운받은 후, LoadImage에 커피 이미지를 업로드합니다.
 ImagePadForOutpaint에서 확장 방향과 픽셀 값을 조정한 다음 실행하세요.
 
 ### 이미지 미리보기
 
-[[image: outpaint_coffee.png | width:50%]]
+[[image: session3/step1/outpaint_coffee.png | width:50%]]

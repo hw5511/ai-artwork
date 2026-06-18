@@ -8,7 +8,7 @@
 - 기초적인 이미지 생성 워크플로우 구축
 
 ### 준비사항
-- RunDiffusion 계정 설정
+- ComfyCloud 계정 설정 (Standard 플랜, 월 $20 구독)
 - 기본 프롬프트 작성법 이해
 - 창의적인 아이디어와 실험 정신
 
@@ -22,16 +22,16 @@
 
 ---section---
 
-[[image: 슬라이드1.PNG]]
+[[image: session1/step1/슬라이드1.PNG]]
 
-[[image: 슬라이드2.PNG]]
+[[image: session1/step1/슬라이드2.PNG]]
 
-[[image: 슬라이드3.PNG]]
+[[image: session1/step1/슬라이드3.PNG]]
 
-[[image: 슬라이드4.PNG]]
+[[image: session1/step1/슬라이드4.PNG]]
 
-[[image: 슬라이드5.PNG]]
+[[image: session1/step1/슬라이드5.PNG]]
 
-[[image: 슬라이드6.PNG]]
+[[image: session1/step1/슬라이드6.PNG]]
 
-[[image: 슬라이드7.PNG]]
+[[image: session1/step1/슬라이드7.PNG]]

@@ -21,7 +21,7 @@ Wildcard: ImpactWildcardEncode → "portrait of a woman, {close-up shot|medium s
 
 ## 워크플로우 준비
 
-[[download: downloads/session2/wildcard_workflow.json | Wildcard 워크플로우 다운로드]]
+[[download: downloads/session2/step5/wildcard_workflow.json | Wildcard 워크플로우 다운로드]]
 
 **워크플로우 열기:**
 1. 다운로드한 `wildcard_workflow.json`을 ComfyUI에 드래그 앤 드롭

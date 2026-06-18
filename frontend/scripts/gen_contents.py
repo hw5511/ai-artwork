@@ -1,10 +1,14 @@
 import os, sys
 
-source_dir = r'C:/woohee_industries/30-프로젝트/37-아트웍/lectures'
-output_file = r'C:/woohee_industries/30-프로젝트/37-아트웍/frontend/src/data/lectureContents.ts'
+# 스크립트 위치(frontend/scripts) 기준 레포 상대경로
+_script_dir = os.path.dirname(os.path.abspath(__file__))
+_repo_root = os.path.abspath(os.path.join(_script_dir, '..', '..'))
+source_dir = os.path.join(_repo_root, 'lectures')
+output_file = os.path.join(_repo_root, 'frontend', 'src', 'data', 'lectureContents.ts')
 
 lecture_contents = {}
 for root, dirs, files in os.walk(source_dir):
+    dirs.sort()  # 결정적 출력 순서
     for file in sorted(files):
         if file.endswith('.md') and 'backup' not in file:
             file_path = os.path.join(root, file)

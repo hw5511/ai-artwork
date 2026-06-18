@@ -1,6 +1,6 @@
 # VAE와 최종 출력 최적화
 
-[[image: vae.jpg]]
+[[image: session1/step8/vae.jpg]]
 
 ## VAE (Variational Autoencoder) 이해
 

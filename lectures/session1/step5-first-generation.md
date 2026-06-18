@@ -1,6 +1,6 @@
 # 첫 이미지 생성 (기본 템플릿)
 
-[[image: stpe5.png]]
+[[image: session1/step5/stpe5.png]]
 
 ---section---
 

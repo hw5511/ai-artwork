@@ -1,6 +1,6 @@
 # ControlNet이란?
 
-[[image: controlnet.png]]
+[[image: session2/step2/controlnet.png]]
 
 ## ControlNet 개념 이해
 
@@ -125,15 +125,15 @@ SD 3.5: 최신 기술 적용
 
 **워크플로우 다운로드**:
 
-[[download: downloads/session2/scrib/turtle.json | 거북이 Scribble 워크플로우 다운로드]]
+[[download: downloads/session2/step2/turtle.json | 거북이 Scribble 워크플로우 다운로드]]
 
 **연습용 이미지 다운로드**:
 
-[[download: images/turtle.png | 거북이 스케치 이미지 다운로드]]
+[[download: downloads/session2/step2/turtle.png | 거북이 스케치 이미지 다운로드]]
 
 **이미지 미리보기**:
 
-[[image: turtle.png]]
+[[image: session2/step2/turtle.png]]
 
 ### Step 1: 워크플로우 열기 및 이미지 생성
 

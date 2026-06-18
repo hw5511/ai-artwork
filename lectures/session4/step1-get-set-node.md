@@ -10,7 +10,7 @@
 
 아래 고급 기법이 적용된 템플릿을 다운로드하세요.
 
-[[download: downloads/session4/get_set_adv.json | Get/Set 고급 기법 템플릿 다운로드]]
+[[download: downloads/session4/step1/get_set_adv.json | Get/Set 고급 기법 템플릿 다운로드]]
 
 ---section---
 
