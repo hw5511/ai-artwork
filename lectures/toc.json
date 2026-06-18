@@ -1,16 +1,5 @@
 [
   {
-    "id": "test",
-    "title": "테스트 - 섹션 구분자 테스트",
-    "steps": [
-      {
-        "id": "section-test",
-        "title": "섹션 구분자 렌더링 테스트",
-        "file": "test/section-test.md"
-      }
-    ]
-  },
-  {
     "id": "session1",
     "title": "1회차 - ComfyUI 입문",
     "steps": [
@@ -46,13 +35,13 @@
       },
       {
         "id": "step7",
-        "title": "LoRA 모델 탐험",
-        "file": "session1/step7-lora-models.md"
+        "title": "CLIP 인코딩 모델",
+        "file": "session1/step8-clip-encoder.md"
       },
       {
         "id": "step8",
-        "title": "임베딩 활용하기",
-        "file": "session1/step8-embeddings.md"
+        "title": "VAE와 최종 출력 최적화",
+        "file": "session2/step7-vae-optimization.md"
       },
       {
         "id": "step9",
@@ -72,38 +61,38 @@
     "steps": [
       {
         "id": "step1",
+        "title": "LoRA 모델 탐험",
+        "file": "session1/step7-lora-models.md"
+      },
+      {
+        "id": "step2",
         "title": "ControlNet이란?",
         "file": "session2/step1-controlnet-intro.md"
       },
       {
-        "id": "step2",
+        "id": "step3",
         "title": "OpenPose ControlNet 마스터",
         "file": "session2/step2-openpose.md"
       },
       {
-        "id": "step3",
+        "id": "step4",
         "title": "Canny와 Depth ControlNet",
         "file": "session2/step3-canny-depth.md"
       },
       {
-        "id": "step4",
-        "title": "복합 ControlNet 워크플로우",
-        "file": "session2/step4-multi-controlnet.md"
-      },
-      {
         "id": "step5",
-        "title": "Live Portrait로 표정 제어하기",
-        "file": "session2/step5-liveportrait.md"
-      },
-      {
-        "id": "step6",
         "title": "프롬프트 엔지니어링 심화",
         "file": "session2/step6-prompt-advanced.md"
       },
       {
+        "id": "step6",
+        "title": "더 많은 모델 - Qwen",
+        "file": "session2/step6-more-models-qwen.md"
+      },
+      {
         "id": "step7",
-        "title": "VAE와 최종 출력 최적화",
-        "file": "session2/step7-vae-optimization.md"
+        "title": "더 많은 모델 - Z-Image",
+        "file": "session2/step7-more-models-zimage.md"
       }
     ]
   },
