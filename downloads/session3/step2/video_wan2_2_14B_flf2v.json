@@ -13,7 +13,7 @@
       ],
       "size": [
         346.390625,
-        118.65625
+        144
       ],
       "flags": {},
       "order": 0,
@@ -173,7 +173,7 @@
       ],
       "size": [
         346.734375,
-        84
+        112
       ],
       "flags": {},
       "order": 1,
@@ -227,7 +227,7 @@
       ],
       "size": [
         346.734375,
-        84
+        112
       ],
       "flags": {},
       "order": 2,
@@ -479,8 +479,8 @@
         }
       },
       "widgets_values": [
-        640,
-        640,
+        720,
+        1280,
         81,
         1
       ]
@@ -549,7 +549,7 @@
       ],
       "size": [
         270,
-        104
+        136
       ],
       "flags": {},
       "order": 15,
@@ -594,7 +594,8 @@
         }
       },
       "widgets_values": [
-        16
+        16,
+        8
       ]
     },
     {
@@ -732,7 +733,7 @@
       "type": "LoadImage",
       "pos": [
         60.00002391024009,
-        520.0000836858385
+        504.0000836858385
       ],
       "size": [
         315,
@@ -776,7 +777,7 @@
         }
       },
       "widgets_values": [
-        "video_wan2_2_14B_flf2v_start_image.png",
+        "df5f7061a8e4bf20f52c2509cc57e36c0feed40f80d479a0f25090d95527681f.png",
         "image"
       ]
     },
@@ -829,7 +830,7 @@
         }
       },
       "widgets_values": [
-        "video_wan2_2_14B_flf2v_end_image.png",
+        "ff9535c2bf5dfe27d080d1e9ead322a5390c406112286512e0b39bd0bd0d79ca.png",
         "image"
       ]
     },
@@ -1165,7 +1166,6 @@
         1490
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1178,7 +1178,6 @@
         571.3974609375
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1191,7 +1190,6 @@
         410
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1204,7 +1202,6 @@
         464.2060852050781
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1217,7 +1214,6 @@
         390
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1230,20 +1226,19 @@
         410
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5131581182307068,
+      "scale": 1.1000000000000003,
       "offset": [
-        1212.9501017020596,
-        373.4530549721048
+        395.52904748656215,
+        -468.97813585233223
       ]
     },
-    "frontendVersion": "1.41.13",
+    "frontendVersion": "1.45.15",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
