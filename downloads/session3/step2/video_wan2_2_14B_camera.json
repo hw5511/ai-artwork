@@ -13,7 +13,7 @@
       ],
       "size": [
         430,
-        84
+        112
       ],
       "flags": {},
       "order": 0,
@@ -185,7 +185,7 @@
       ],
       "size": [
         430,
-        84
+        112
       ],
       "flags": {},
       "order": 1,
@@ -509,8 +509,8 @@
       "id": 82,
       "type": "VAEDecode",
       "pos": [
-        4129.999884711372,
-        3050.0001102023652
+        4117.306952515966,
+        3031.5376633726837
       ],
       "size": [
         225,
@@ -567,7 +567,7 @@
       ],
       "size": [
         270,
-        104
+        136
       ],
       "flags": {},
       "order": 16,
@@ -612,7 +612,8 @@
         }
       },
       "widgets_values": [
-        16
+        24,
+        8
       ]
     },
     {
@@ -666,8 +667,8 @@
       "id": 87,
       "type": "WanCameraEmbedding",
       "pos": [
-        3349.999866061741,
-        2840.0000228881836
+        3339.843070611191,
+        2912.9398010728314
       ],
       "size": [
         236.796875,
@@ -676,6 +677,7 @@
       "flags": {},
       "order": 2,
       "mode": 0,
+      "showAdvanced": false,
       "inputs": [],
       "outputs": [
         {
@@ -743,7 +745,7 @@
       ],
       "size": [
         430,
-        118.65625
+        144
       ],
       "flags": {},
       "order": 3,
@@ -1034,7 +1036,7 @@
         }
       },
       "widgets_values": [
-        "Two rovers race past, leaving clear tracks. Base tower antenna flashes rapidly, modules flicker with light. Ship speeds toward giant planet, engine lights brilliant."
+        "a woman drinking coffee"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -1086,7 +1088,7 @@
         }
       },
       "widgets_values": [
-        "video_wan2_2_14B_fun_camera_start_image.jpg",
+        "4cff66ab1bd7f71f8c22357ed346ce07bd236baf8a5ac8be7bcebf771c64fa64.png",
         "image"
       ]
     }
@@ -1312,7 +1314,6 @@
         1580
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1325,7 +1326,6 @@
         940
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1338,7 +1338,6 @@
         290
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1351,7 +1350,6 @@
         600
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1364,7 +1362,6 @@
         310
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1377,7 +1374,6 @@
         570
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1390,20 +1386,19 @@
         570
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.4447151543581631,
+      "scale": 0.5919158704507168,
       "offset": [
-        -1517.3665384199853,
-        -1203.6300629470707
+        -2254.266821787318,
+        -1692.4550642341023
       ]
     },
-    "frontendVersion": "1.41.13",
+    "frontendVersion": "1.45.15",
     "ue_links": [],
     "links_added_by_ue": [],
     "VHS_latentpreview": false,
