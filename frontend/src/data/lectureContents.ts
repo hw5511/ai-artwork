@@ -3343,6 +3343,9 @@ Alibaba의 오픈소스 비디오 생성 모델로, 6가지 생성 방식을 지
 
 시작 프레임과 끝 프레임을 모두 지정하면 두 이미지 사이를 자연스럽게 보간합니다.
 
+[[image: session3/step2/sunglass_first.png | row | 시작 프레임]]
+[[image: session3/step2/sunglass_end.png | row | 끝 프레임 (a woman wearing sunglasses)]]
+
 **핵심 노드**: \`WanFirstLastFrameToVideo\` - 시작/끝 이미지를 모두 받아 보간 비디오 생성
 
 \`\`\`settings
@@ -3359,6 +3362,8 @@ VRAM 여유 있을 경우: 해상도 값을 높여 품질 향상 가능
 ## 워크플로우 4 - Camera Control
 
 이미지와 함께 카메라 움직임을 직접 지정하여 영상을 생성합니다.
+
+[[image: session3/step2/coffee_video.png | width:60% | 카메라 컨트롤 입력 이미지 (a woman drinking coffee)]]
 
 **핵심 노드**:
 - \`WanCameraEmbedding\` - 카메라 모션 설정 (pan, tilt, zoom, roll 등)
