@@ -1,0 +1,311 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>리치킹 연구리포트 — 슬라이드</title><style>
+@font-face{font-family:'Suit';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Suit';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Suit';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Suit';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:'Suit';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Heavy.woff2') format('woff2');font-weight:900;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Pretendard';src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
+:root{
+  --sans:'Pretendard',ui-sans-serif,system-ui,-apple-system,"Segoe UI","Noto Sans KR",sans-serif;
+  --display:'Suit','Pretendard',ui-sans-serif,system-ui,sans-serif;
+  --bg:#0a0c08;--panel:#0f120c;--card:#13160f;--card2:#181c12;
+  --fg:#e9ede2;--fg2:#cfd6c4;--muted:#8b9382;--muted2:#69705f;
+  --border:#272c20;--border2:#333a29;
+  --neon:#cdf94a;--neon-dim:#aad63a;--neon-deep:#7ea52a;
+  --neon-soft:rgba(205,249,74,.11);--neon-border:rgba(205,249,74,.34);--neon-glow:rgba(205,249,74,.45);
+  --amber:#fbbf24;--amber-soft:rgba(251,191,36,.12);--amber-border:rgba(251,191,36,.4);
+  --red:#f87171;--red-soft:rgba(248,113,113,.1);--red-border:rgba(248,113,113,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:var(--sans);color:var(--fg);overflow:hidden;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(1200px 500px at 50% -180px, rgba(205,249,74,.10), transparent 70%), var(--bg)}
+.deck{position:fixed;inset:0}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;
+  padding:5vh 7vw;overflow-y:auto;opacity:0;transition:opacity .28s ease}
+.slide.active{display:flex;opacity:1;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.si{width:100%;max-width:1040px;margin:0 auto}
+.kick{font-family:var(--display);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--neon);text-shadow:0 0 12px var(--neon-glow);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.kick::before{content:"";width:26px;height:3px;border-radius:2px;background:var(--neon);box-shadow:0 0 10px var(--neon-glow)}
+h1{font-family:var(--display);font-weight:900;font-size:3.3rem;line-height:1.12;letter-spacing:-.035em;color:#f4f7ec}
+h2{font-family:var(--display);font-weight:800;font-size:1.95rem;line-height:1.22;letter-spacing:-.025em;color:#f1f5e8;margin-bottom:16px}
+h3{font-family:var(--display);font-weight:680;font-size:1.1rem;color:#e7ecdc;margin:.2em 0 .4em}
+p{font-size:1.05rem;line-height:1.62;color:var(--fg)}
+.lead{font-size:1.22rem;line-height:1.6;color:var(--fg2)}
+.muted{color:var(--muted)}
+strong{color:#f2f6ea;font-weight:700}
+b.n{color:var(--neon)}
+em{color:var(--neon-dim);font-style:normal}
+code{background:#1b2013;padding:.1em .4em;border-radius:5px;font-size:.85em;color:#d3e6a3;border:1px solid #262d1a;font-family:ui-monospace,Menlo,Consolas,monospace}
+ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:6px}
+ul li{position:relative;padding-left:24px;font-size:1.05rem;line-height:1.55}
+ul li::before{content:"▹";position:absolute;left:0;color:var(--neon);font-size:1rem;top:1px}
+a{color:var(--neon);text-decoration:none;border-bottom:1px solid rgba(205,249,74,.3)}
+.badge{display:inline-flex;align-items:center;gap:4px;font-size:.72rem;font-weight:700;padding:.15em .6em;border-radius:999px;vertical-align:middle;line-height:1.4}
+.b-hyp{background:var(--amber-soft);color:var(--amber);border:1px solid var(--amber-border)}
+.b-hyp::before{content:"◆";font-size:.6em}
+table{border-collapse:separate;border-spacing:0;width:100%;font-size:.96rem;margin-top:8px;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid var(--border);border-right:1px solid var(--border);padding:10px 14px;text-align:left;vertical-align:middle}
+tr td:last-child,tr th:last-child{border-right:0}
+tbody tr:last-child td{border-bottom:0}
+th{background:#191e11;font-weight:650;color:#dfe7cf;font-family:var(--display)}
+tbody tr:nth-child(odd) td{background:rgba(255,255,255,.012)}
+td img.th{width:132px;aspect-ratio:16/9;object-fit:cover;border-radius:7px;display:block}
+/* pipeline */
+.pipe{border:1px solid var(--border);border-radius:14px;padding:18px;background:var(--panel);margin-top:8px}
+.zones{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.zone{font-family:var(--display);font-size:.8rem;font-weight:700;padding:7px 12px;border-radius:8px;text-align:center}
+.z-h{background:rgba(255,255,255,.05);color:var(--fg2);border:1px solid var(--border2)}
+.z-a{background:var(--neon-soft);color:var(--neon);border:1px solid var(--neon-border);text-shadow:0 0 8px rgba(205,249,74,.35)}
+.steps{display:flex;gap:8px;align-items:stretch}
+.step{flex:1;border:1px solid var(--border);border-radius:12px;padding:15px;background:var(--card);display:flex;flex-direction:column;gap:5px}
+.step.a{background:var(--neon-soft);border-color:var(--neon-border)}
+.sn{font-family:var(--display);font-size:1.3rem;font-weight:800;color:var(--fg2)}
+.step.a .sn{color:var(--neon);text-shadow:0 0 10px var(--neon-glow)}
+.step b{font-size:.98rem}.sd{font-size:.82rem;color:var(--muted);line-height:1.4}
+.arrow{display:flex;align-items:center;color:var(--neon-deep);font-size:1.5rem}
+/* figures */
+figure{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--card);margin:0 auto}
+figure>img,figure>video{display:block;width:100%;background:#000;max-height:50vh;object-fit:contain}
+figcaption{padding:10px 15px;font-size:.84rem;color:var(--muted);line-height:1.5;border-top:1px solid var(--border);background:var(--panel)}
+figcaption b{color:var(--neon)}
+.grid{display:grid;gap:2px;background:#000}
+.grid img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/9;display:block}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+.strip{display:grid;grid-template-columns:repeat(8,1fr);gap:2px;background:#000}
+.strip img{width:100%;aspect-ratio:16/9;object-fit:cover;opacity:.9}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.note{border-left:3px solid var(--neon);background:var(--card2);padding:12px 16px;border-radius:0 10px 10px 0;color:var(--fg2);font-size:.98rem;margin-top:14px}
+/* first/middle/end */
+.fme{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+.fme3{display:flex;align-items:center;gap:10px;margin-top:6px}
+.fme3 .fmecell{flex:1;min-width:0}
+.fme-ar{flex:0 0 auto;color:var(--neon);font-size:1.7rem;text-shadow:0 0 10px var(--neon-glow)}
+.fmecell{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card)}
+.fmecell img,.fmecell video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000}
+.fmecell .t{font-family:var(--display);font-size:.76rem;font-weight:700;padding:8px 11px;color:var(--fg2);letter-spacing:.04em}
+.fmecell.new{border-color:var(--neon);box-shadow:0 0 18px -4px var(--neon-glow)}
+.fmecell.new .t{color:var(--neon);background:var(--neon-soft);text-shadow:0 0 8px rgba(205,249,74,.35)}
+/* flow source->result */
+.flow{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+.frow{display:grid;grid-template-columns:1fr 150px 1.15fr;gap:16px;align-items:center}
+.fcell{border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--card)}
+.fcell img,.fcell video{width:100%;height:17vh;max-height:128px;object-fit:cover;display:block;background:#000}
+.fcell.empty{height:20vh;max-height:150px;display:flex;align-items:center;justify-content:center;color:var(--muted2);font-size:.85rem;text-align:center;padding:8px}
+.fmid{text-align:center;display:flex;flex-direction:column;gap:3px;align-items:center}
+.fmid .m{font-family:var(--display);font-weight:700;color:var(--neon);font-size:.88rem}
+.fmid .a{color:var(--neon-deep);font-size:1.4rem;line-height:1}
+.tag{font-size:.72rem;color:var(--muted);padding:5px 9px;border-top:1px solid var(--border)}
+/* compare */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
+.side{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card)}
+.side>img,.side>video{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000}
+.side .h{font-family:var(--display);font-size:.82rem;font-weight:700;padding:9px 13px;letter-spacing:.02em}
+.side.bad{border-color:var(--red-border)}.side.bad .h{color:var(--red);background:var(--red-soft)}
+.side.good{border-color:var(--neon-border)}.side.good .h{color:var(--neon);background:var(--neon-soft)}
+.reftag{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:.85rem;color:var(--fg2);flex-wrap:wrap}
+.reftag img{height:42px;aspect-ratio:16/9;object-fit:cover;border-radius:6px;border:1px solid var(--border)}
+/* carousel */
+.carwrap{margin-top:12px}
+.carousel{display:flex;gap:12px;overflow-x:auto;padding:4px 2px 8px;scroll-snap-type:x mandatory}
+.carousel figure{flex:0 0 clamp(190px,21vw,250px);scroll-snap-align:center}
+.carousel video{aspect-ratio:16/9;max-height:none}
+.carousel::-webkit-scrollbar{height:8px}
+.carousel::-webkit-scrollbar-thumb{background:var(--neon-deep);border-radius:4px}
+.carousel::-webkit-scrollbar-track{background:var(--card)}
+.chint{font-size:.8rem;color:var(--muted);margin-top:2px;display:flex;align-items:center;gap:6px}
+.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;align-items:center;color:var(--muted);font-size:.95rem}
+.pill{border:1px solid var(--border2);border-radius:999px;padding:5px 13px;font-size:.85rem;color:var(--fg2)}
+.bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--neon),var(--neon-deep));box-shadow:0 0 10px var(--neon-glow);z-index:20;transition:width .3s}
+.nav{position:fixed;bottom:18px;right:22px;display:flex;align-items:center;gap:10px;z-index:20;font-family:var(--display);font-size:.9rem;color:var(--muted)}
+.nav button{font-family:var(--display);background:var(--card);color:var(--fg);border:1px solid var(--border2);width:38px;height:38px;border-radius:10px;cursor:pointer;font-size:1.1rem;transition:.15s}
+.nav button:hover{border-color:var(--neon);color:var(--neon);box-shadow:0 0 12px -4px var(--neon-glow)}
+.count{min-width:56px;text-align:center}.count b{color:var(--neon)}
+.brand{position:fixed;bottom:20px;left:24px;z-index:20;font-family:var(--display);font-size:.78rem;letter-spacing:.08em;color:var(--muted2);text-transform:uppercase}
+.hint{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:20;color:var(--muted2);font-size:.78rem;transition:opacity .5s;opacity:.7}
+@media(max-width:820px){h1{font-size:2.2rem}h2{font-size:1.5rem}.cols,.zones,.cmp{grid-template-columns:1fr}.steps{flex-direction:column}.strip{grid-template-columns:repeat(4,1fr)}.frow{grid-template-columns:1fr}.fmid .a{transform:rotate(90deg)}}
+</style></head><body>
+<div class="bar"></div><div class="deck"><section class="slide"><div class="si"><div class="kick">'생성형 AI' · 에이전트 활용 실험 리포트</div>
+<h1>사람이 설계하고<br><b class="n">에이전트</b>가 제작한다</h1>
+<p class="lead" style="margin-top:20px">사람은 큰 방향만 정하고, 에이전트가 스스로 '생성형 AI'를 골라<br>영상을 만들게 하면 어떻게 될까? — 리치킹 시네마틱 재현 실험</p>
+<div class="hero-meta">
+<span class="pill">사례: WoW 리치 왕의 분노 시네마틱</span>
+<span class="pill">도구: ComfyUI(ComfyCloud) API</span>
+</div></div></section>
+<section class="slide"><div class="si"><div class="kick">무엇을 실험했나</div>
+<h2>'생성형 AI'를 쓰는 두 가지 방법</h2>
+<table><thead><tr><th></th><th>① 사람이 직접 '생성형 AI'를 씀</th><th>② 에이전트가 '생성형 AI'를 씀 <span class="muted">(이 실험)</span></th></tr></thead><tbody>
+<tr><td>누가 조작하나</td><td>사람이 직접 입력</td><td><b>에이전트</b>가 대신</td></tr>
+<tr><td>사람의 역할</td><td>하나하나 다 지시</td><td><em>큰 방향만</em> 주고 맡김</td></tr>
+<tr><td>도구 선택</td><td>사람이 다 고름</td><td>에이전트가 <b class="n">스스로 판단</b>해 고름</td></tr>
+<tr><td>결과 기록</td><td>대개 본인 머릿속</td><td>모든 판단이 <b>기록으로 남음</b></td></tr>
+</tbody></table>
+<p class="note">이 실험은 <b>②번 — 에이전트에게 맡겼을 때</b> 무슨 일이 일어나는지에 대한 기록입니다.</p></div></section>
+<section class="slide"><div class="si"><div class="kick">전체 작업 흐름</div>
+<h2>이렇게 4단계로 진행했습니다</h2>
+<div class="pipe">
+<div class="zones"><div class="zone z-h">여기까지는 사람이</div><div class="zone z-a">여기부터는 에이전트가</div></div>
+<div class="steps">
+<div class="step"><span class="sn">①</span><b>자료 수집</b><span class="sd">참고 영상에서 장면이 바뀌는 지점마다 스크린샷을 뽑음</span></div>
+<div class="arrow">→</div>
+<div class="step"><span class="sn">②</span><b>정리·배치</b><span class="sd">웹 도구에 올려 순서대로 배치하고, 씬마다 설명을 달아둠</span></div>
+<div class="arrow">→</div>
+<div class="step a"><span class="sn">③</span><b>맡기기</b><span class="sd">정리한 자료를 에이전트에게 넘김</span></div>
+<div class="arrow">→</div>
+<div class="step a"><span class="sn">④</span><b>제작</b><span class="sd">에이전트가 장면마다 알맞은 '생성형 AI'를 골라 영상 생성</span></div>
+</div></div>
+<p class="note"><span class="muted" style="font-size:.9rem">※ 이 리포트에서 <b>'에이전트'</b> = 지휘하는 AI · <b>'생성형 AI'</b> = 실제로 영상을 그리는 AI 모델</span></p></div></section>
+<section class="slide"><div class="si"><div class="kick">1단계 — 자료 수집</div>
+<h2>스크린샷 추출</h2>
+<p style="margin-bottom:4px">먼저 <a href="https://www.youtube.com/watch?v=4qLTUILKleU">리치킹 영상(유튜브)</a>을 보면서, <b>장면이 바뀌는 지점마다 스크린샷</b>을 떠서 자료로 모았습니다.</p>
+<figure>
+<img src="assets/source_sample_0-16.png" alt="원본 캡처">
+<div class="strip">
+<img src="assets/strip_00_0-16.jpg"><img src="assets/strip_01_0-27.jpg"><img src="assets/strip_02_0-33.jpg"><img src="assets/strip_03_0-41.jpg">
+<img src="assets/strip_04_0-46.jpg"><img src="assets/strip_05_0-52.jpg"><img src="assets/strip_06_0-58.jpg"><img src="assets/strip_07_1-11.jpg"></div>
+<figcaption>원본 영상의 전환지점에서 뽑은 스크린샷(위: 대표컷, 아래: 시간순). 이렇게 모은 <b>54장</b>이 재료가 되었습니다.</figcaption>
+</figure></div></section>
+<section class="slide"><div class="si"><div class="kick">2단계 — 순서 배치 & 설명</div>
+<h2>순서 배치 + 장면 설명</h2>
+<p style="margin-bottom:4px">직접 만든 웹 도구에 이미지를 올려 <b class="n">시작 → 중간 → 끝</b> 순서로 배치하고, 장면을 나눈 뒤 <b>"이 장면에서 무엇을 만들어야 하는지"</b>를 말로 적어뒀습니다.</p>
+<div class="fme3">
+<div class="fmecell"><img src="assets/s5_start.jpg"><div class="t">시작</div></div>
+<div class="fme-ar">→</div>
+<div class="fmecell"><img src="assets/s5_middle.jpg"><div class="t">중간</div></div>
+<div class="fme-ar">→</div>
+<div class="fmecell"><img src="assets/s5_end.jpg"><div class="t">끝</div></div>
+</div>
+<p class="note">예) 이 장면의 설명 → <em>"무릎 꿇은 자세에서 고개를 들고 → 천천히 일어난다"</em></p></div></section>
+<section class="slide"><div class="si"><div class="kick">3~4단계 — 장면별 제작</div>
+<h2>장면별 제작 요청</h2>
+<p style="margin-bottom:2px">정리한 자료를 에이전트에게 넘기고, 장면을 하나씩 만들게 했습니다. 에이전트는 <b class="n">장면 성격에 맞는 방법을 직접 골랐습니다.</b></p>
+<table><thead><tr><th>장면</th><th>에이전트가 고른 방법</th><th>결과</th></tr></thead><tbody>
+<tr><td>검은 화면</td><td>코드로 직접 제작 <em>('생성형 AI' 안 씀)</em></td><td><img class="th" src="assets/still_scene-0001.jpg"></td></tr>
+<tr><td>앉은 리치킹</td><td>이미지 한 장으로 영상화</td><td><img class="th" src="assets/still_scene-0003.jpg"></td></tr>
+<tr><td>무릎→일어남</td><td>시작·끝 장면을 이어서 생성</td><td><img class="th" src="assets/still_scene-0017.jpg"></td></tr>
+<tr><td>칼 뽑기</td><td>참고 이미지 여러 장으로 생성</td><td><img class="th" src="assets/still_scene-0020.jpg"></td></tr>
+<tr><td>칼 들어올림</td><td>중간 장면을 만들어 이어 붙임</td><td><img class="th" src="assets/still_scene-0025.jpg"></td></tr>
+</tbody></table></div></section>
+<section class="slide"><div class="si"><div class="kick">완성된 결과</div>
+<h2>완성 영상</h2>
+<figure style="max-width:440px">
+<video style="max-height:32vh" controls preload="metadata" poster="assets/still_fullreel_30s.jpg"><source src="videos/richking_full_reel.mp4" type="video/mp4"></video>
+<figcaption><b>전체 영상 (67.7초)</b> — 15개 장면을 하나로 이어붙인 결과. <span class="muted">여러 장면을 이어붙이는 작업도 에이전트가 직접 코드로 처리했습니다.</span></figcaption>
+</figure>
+<div class="carwrap"><div class="chint">↔ 개별 장면 영상 (좌우로 넘겨보기)</div>
+<div class="carousel"><figure><video controls preload="none" poster="assets/still_scene-0001.jpg"><source src="videos/scene-0001.mp4" type="video/mp4"></video><figcaption>scene-0001</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0003.jpg"><source src="videos/scene-0003.mp4" type="video/mp4"></video><figcaption>scene-0003</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0004.jpg"><source src="videos/scene-0004.mp4" type="video/mp4"></video><figcaption>scene-0004</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0007.jpg"><source src="videos/scene-0007.mp4" type="video/mp4"></video><figcaption>scene-0007</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0009.jpg"><source src="videos/scene-0009.mp4" type="video/mp4"></video><figcaption>scene-0009</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0012.jpg"><source src="videos/scene-0012.mp4" type="video/mp4"></video><figcaption>scene-0012</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0013.jpg"><source src="videos/scene-0013.mp4" type="video/mp4"></video><figcaption>scene-0013</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0017.jpg"><source src="videos/scene-0017.mp4" type="video/mp4"></video><figcaption>scene-0017</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0020.jpg"><source src="videos/scene-0020.mp4" type="video/mp4"></video><figcaption>scene-0020</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0021.jpg"><source src="videos/scene-0021.mp4" type="video/mp4"></video><figcaption>scene-0021</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0022.jpg"><source src="videos/scene-0022.mp4" type="video/mp4"></video><figcaption>scene-0022</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0023.jpg"><source src="videos/scene-0023.mp4" type="video/mp4"></video><figcaption>scene-0023</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0024.jpg"><source src="videos/scene-0024.mp4" type="video/mp4"></video><figcaption>scene-0024</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0025.jpg"><source src="videos/scene-0025.mp4" type="video/mp4"></video><figcaption>scene-0025</figcaption></figure><figure><video controls preload="none" poster="assets/still_scene-0026.jpg"><source src="videos/scene-0026.mp4" type="video/mp4"></video><figcaption>scene-0026</figcaption></figure></div></div></div></section>
+<section class="slide"><div class="si"><div class="kick">여기서 얻은 것</div>
+<h2>배운 5가지</h2>
+<ul>
+<li><b>1.</b> 에이전트의 진짜 일은 '그리기'가 아니라 <b class="n">컷마다 방법을 고르는 것</b></li>
+<li><b>2.</b> 도구마다 오류가 많지만 → <b class="n">한 번 기록해두면 다시는 안 틀린다</b></li>
+<li><b>3.</b> 잘못 만들어지면 → 에이전트가 <b class="n">스스로 원인을 찾아 고친다</b></li>
+<li><b>4.</b> 프레임 간극이 크면 → <b class="n">중간 프레임을 직접 만들어</b> 자연스럽게 잇는다</li>
+<li><b>5.</b> 캐릭터가 흔들리면 → <b class="n">'레퍼런스' 이미지</b>로 일관성을 잡는다</li>
+</ul></div></section>
+<section class="slide"><div class="si"><div class="kick">인사이트 1</div>
+<h2>장면마다 다른 방법</h2>
+<p style="margin-bottom:2px">사람은 큰 방향만 줬는데, 에이전트는 <b>장면 성격에 따라 완전히 다른 방법</b>을 골랐습니다. 심지어 어떤 장면은 <em>'생성형 AI'를 안 쓰는 게 낫다</em>고 판단했습니다.</p>
+<div class="flow">
+<div class="frow"><div class="fcell empty">입력 이미지 없음<br>(단순 검은 화면)</div><div class="fmid"><span class="m">코드로 직접</span><span class="a">→</span></div><div class="fcell"><video controls preload="none" poster="assets/still_scene-0001.jpg"><source src="videos/scene-0001.mp4" type="video/mp4"></video><div class="tag">시작 안내 화면</div></div></div>
+<div class="frow"><div class="fcell"><img src="assets/s9_src_0003.jpg"><div class="tag">참고 이미지 1장</div></div><div class="fmid"><span class="m">이미지 한 장으로</span><span class="a">→</span></div><div class="fcell"><video controls preload="none" poster="assets/still_scene-0003.jpg"><source src="videos/scene-0003.mp4" type="video/mp4"></video><div class="tag">천천히 줌인</div></div></div>
+<div class="frow"><div class="fcell"><img src="assets/s9_src_0020.jpg"><div class="tag">참고 이미지 여러 장</div></div><div class="fmid"><span class="m">여러 장 참고</span><span class="a">→</span></div><div class="fcell"><video controls preload="none" poster="assets/still_scene-0020.jpg"><source src="videos/scene-0020.mp4" type="video/mp4"></video><div class="tag">칼 뽑는 장면</div></div></div>
+</div></div></section>
+<section class="slide"><div class="si"><div class="kick">인사이트 2</div>
+<div class="cols">
+<div>
+<h2>기록해서 재발 방지</h2>
+<p>도구마다 자잘한 규칙과 함정이 많았습니다. 한 번 부딪힐 때마다 <b class="n">문서에 기록</b>해뒀고, 이후로는 같은 실수를 반복하지 않았습니다.</p>
+<p class="note">전체 200번의 시도 중 19번이 이런 오류였는데, 기록이 쌓이면서 <b>점점 줄었습니다.</b></p>
+</div>
+<div>
+<h3>실제로 기록해둔 함정들</h3>
+<ul>
+<li>설정값을 조금만 틀려도 거부됨 <em>(예: 해상도 표기)</em></li>
+<li>영상 최소 길이 규칙 <em>(안내서가 틀리게 적혀 있기도)</em></li>
+<li>저장·다운로드 방식이 까다로움</li>
+</ul>
+</div>
+</div></div></section>
+<section class="slide"><div class="si"><div class="kick">인사이트 3</div>
+<h2>스스로 원인 찾아 해결</h2>
+<p style="margin-bottom:2px">칼을 들어올리는 장면에서 <b>'생성형 AI'</b>가 <b>칼 방향을 자꾸 반대로</b> 그렸습니다. <b>에이전트</b>가 원인을 찾아보니 — 참고 이미지가 <em>'아래에서 위로 올려다본 각도'</em>라 '생성형 AI'가 방향을 헷갈린 것이었습니다.</p>
+<div class="cmp">
+<div class="side bad"><div class="h">문제의 참고 이미지 — 올려다본 각도라 방향 혼동</div><img src="assets/lib_crop_031.jpg"></div>
+<div class="side good"><div class="h">'생성형 AI'에게 '카메라 각도'를 명확히 알려줌 → 해결</div><img src="assets/still_scene-0025.jpg"></div>
+</div>
+<p class="note">사람이 일러준 게 아니라, <b class="n">에이전트가 스스로 "각도가 문제"임을 알아내</b> 해결했습니다.</p></div></section>
+<section class="slide"><div class="si"><div class="kick">인사이트 4</div>
+<h2>없는 장면은 직접 만들어 연결</h2>
+<p style="margin-bottom:2px">칼이 빙판에 꽂히는 장면을 만들려면 <b>'아직 칼이 없는 빙판'</b>이 필요했는데, 원본 영상엔 그런 장면이 없었습니다. 그래서 <b class="n">에이전트가 그 장면을 '생성형 AI'로 직접 만들어</b>, '칼 꽂힌 원본'과 이어 붙였습니다.</p>
+<div class="fme3">
+<div class="fmecell new"><img src="assets/s12b_new.jpg"><div class="t">🆕 에이전트가 새로 만든 장면 (칼 없는 빙판)</div></div>
+<div class="fme-ar">+</div>
+<div class="fmecell"><img src="assets/s12b_end.jpg"><div class="t">원본 장면 (칼 꽂힘)</div></div>
+<div class="fme-ar">→</div>
+<div class="fmecell"><video controls preload="none" poster="assets/still_scene-0026.jpg"><source src="videos/scene-0026.mp4" type="video/mp4"></video><div class="t">이어붙인 결과 — 칼이 꽂힘</div></div>
+</div>
+<p class="note">원본에 없던 중간 장면을 에이전트가 직접 만들어 넣으니, <b>동작이 뚝 끊기지 않고 자연스럽게</b> 이어졌습니다.</p></div></section>
+<section class="slide"><div class="si"><div class="kick">인사이트 5</div>
+<h2>방식을 바꿔 '서리한'을 살림</h2>
+<p style="margin-bottom:2px">시작·끝 장면만 이어붙이는 방식으로는 <b>서리한(검)의 긴 칼날을 못 살려 칼이 짧게</b> 나왔습니다. 그래서 <b class="n">에이전트가 '서리한 형태'를 참고 이미지로 넣을 수 있는 방식으로 전환</b>해 원작 디자인을 살렸습니다.</p>
+<div class="cmp">
+<div class="side bad"><div class="h">이전 방식 — 서리한이 짧게/다르게 나옴</div><video controls preload="none" poster="assets/s13_before_poster.jpg"><source src="videos/scene-0020_before.mp4" type="video/mp4"></video></div>
+<div class="side good"><div class="h">참고 이미지 방식 — 원작 서리한 유지</div><video controls preload="none" poster="assets/s13_after_poster.jpg"><source src="videos/scene-0020_after.mp4" type="video/mp4"></video></div>
+</div>
+<div class="reftag">넣어준 참고 이미지 <img src="assets/s13_ref1.jpg"><img src="assets/s13_ref2.jpg"><img src="assets/s13_ref3.jpg"> <span class="muted">칼자루 · 칼날 · 서리한 전체 형태 &nbsp;(이때 '생성형 AI' 모델도 참고 이미지를 받을 수 있는 버전으로 함께 전환)</span></div></div></section>
+<section class="slide"><div class="si"><div class="kick">전망 — Higgsfield MCP</div>
+<h2>Higgsfield가 'MCP'를 출시했다 <span class="badge b-hyp">조사</span></h2>
+<p style="margin-bottom:2px">최근 <b>Higgsfield</b>가 <b class="n">MCP</b>를 내놨습니다 — 에이전트(LLM)가 곧바로 연결해 이미지·영상 생성을 불러 쓸 수 있는 '통로'입니다. 브라우저로 한 번 로그인하면, 에이전트가 여러 '생성형 AI'(영상·이미지)를 직접 호출합니다. <span class="muted">(공개 정보·오픈소스 기반 조사 — 실제 연결 시 확인 예정)</span></p>
+<table><thead><tr><th>이번 실험에서 우리가 손으로 하던 것</th><th>Higgsfield가 '기능'으로 제공</th></tr></thead><tbody>
+<tr><td>방법(모델)을 일일이 골라야 했다</td><td>방법 추천 기능</td></tr>
+<tr><td>설정 오류로 실패했다</td><td>사전 검증 기능</td></tr>
+<tr><td>비용이 얼마 들지 몰랐다</td><td>비용 미리보기</td></tr>
+<tr><td>캐릭터 일관성을 손으로 잡았다</td><td><b class="n">캐릭터 고정 기능 (Soul)</b></td></tr>
+</tbody></table>
+<p class="note">이번에 <b>사람·에이전트가 애써서 하던 일이, 이제 도구 안으로</b> 들어가고 있습니다.</p></div></section>
+<section class="slide"><div class="si"><div class="kick">앞으로의 방향</div>
+<h2>'에이전트에 연결하는 방식'의 대중화</h2>
+<p class="lead" style="margin-bottom:12px">'생성형 AI'도 이제 <b class="n">에이전트(LLM)에 연결</b>해서, <b>워크플로우·모델·로직·프롬프트를 LLM이 스스로 판단하고 실행</b>하는 방식이 점점 대중화되지 않을까.</p>
+<div class="cols">
+<div><h3>지금까지</h3><ul>
+<li>사람이 직접 도구를 열고</li>
+<li>모델을 고르고, 프롬프트를 씀</li>
+</ul></div>
+<div><h3>앞으로</h3><ul>
+<li>사람은 <b>목표만</b> 말하고</li>
+<li>에이전트가 <b class="n">어떤 도구·모델·설정·프롬프트로 만들지 판단해 실행</b></li>
+<li>Higgsfield MCP 같은 '연결 통로'가 이를 뒷받침</li>
+</ul></div>
+</div>
+<p class="note">단, <b class="n">'무엇이 좋은가'의 최종 판단은 계속 사람의 몫</b>입니다.</p></div></section>
+</div>
+<div class="brand">사람이 설계하고 에이전트가 제작한다</div>
+<div class="hint">← → 방향키 · 스페이스 · 스와이프 · F 전체화면</div>
+<div class="nav"><button class="prev">‹</button><span class="count"><b>1</b> / <span class="t">0</span></span><button class="next">›</button></div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let i=0;
+const bar=document.querySelector('.bar'),cur=document.querySelector('.count b'),tot=document.querySelector('.count .t');
+tot.textContent=slides.length;
+function show(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+  bar.style.width=((i+1)/slides.length*100)+'%';cur.textContent=i+1;location.hash=i+1;
+  const v=slides[i].querySelector('video');slides.forEach(s=>s.querySelectorAll('video').forEach(vv=>{if(vv!==v&&vv.pause)vv.pause()}));}
+function next(){show(i+1)}function prev(){show(i-1)}
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();next()}
+  else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();prev()}
+  else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1);
+  else if(e.key==='f'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}});
+document.querySelector('.next').onclick=next;document.querySelector('.prev').onclick=prev;
+let sx=null;addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+addEventListener('touchend',e=>{if(sx==null)return;const t=e.target;if(t.closest&&t.closest('.carousel'))return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)dx<0?next():prev();sx=null},{passive:true});
+const hint=document.querySelector('.hint');setTimeout(()=>hint&&(hint.style.opacity=0),4000);
+show((parseInt(location.hash.slice(1))||1)-1);
+</script></body></html>
