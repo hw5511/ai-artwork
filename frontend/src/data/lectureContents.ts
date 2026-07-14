@@ -727,6 +727,10 @@ JSON 형식으로 저장되며, 노드 구성과 연결 정보를 포함합니�
 ComfyUI를 처음 실행하면 기본 워크플로우(Default Template)가 이미 로드되어 있습니다.
 별도로 템플릿을 불러올 필요 없이 바로 이미지 생성을 시작할 수 있습니다.
 
+> 기본 템플릿이 다르게 보이거나 초기화된 경우, 아래 Default 워크플로우를 내려받아 ComfyUI 캔버스에 불러오세요(드래그 앤 드롭 또는 Workflow → Open).
+
+[[download: downloads/session1/step5/default_workflow.json | Default 워크플로우 다운로드 (.json)]]
+
 ### 기본 상태 그대로 실행하기
 
 1. 화면에 표시된 기본 노드 구성을 확인하세요
