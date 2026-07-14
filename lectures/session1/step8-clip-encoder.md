@@ -157,6 +157,10 @@ Set against a gentle green background, giving a fresh, spring-vibe.
 Make it look whimsical and delicate, like a sweet illustration.
 ```
 
+위 예시가 그대로 담긴 Flux 워크플로우(FLUX.1-schnell + DualCLIPLoader: clip_l + t5xxl)를 내려받아 ComfyUI에 불러오면 바로 실행해볼 수 있습니다.
+
+[[download: downloads/session1/step7/flux_schnell_t2i.json | Flux (CLIP + T5-XXL) 워크플로우 다운로드 (.json)]]
+
 | | CLIP | T5-XXL |
 |---|---|---|
 | 강점 | 스타일·분위기 키워드 | 관계·순서·문맥 이해 |
