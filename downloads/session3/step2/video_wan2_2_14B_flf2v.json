@@ -78,7 +78,7 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 159
+          "link": 180
         }
       ],
       "outputs": [
@@ -109,7 +109,7 @@
         }
       },
       "widgets_values": [
-        8.000000000000002
+        5
       ]
     },
     {
@@ -130,7 +130,7 @@
         {
           "name": "model",
           "type": "MODEL",
-          "link": 160
+          "link": 181
         }
       ],
       "outputs": [
@@ -161,7 +161,7 @@
         }
       },
       "widgets_values": [
-        8
+        5
       ]
     },
     {
@@ -900,12 +900,12 @@
         "enable",
         984937593540091,
         "randomize",
-        20,
         4,
+        1,
         "euler",
         "simple",
         0,
-        10,
+        2,
         "enable"
       ]
     },
@@ -975,13 +975,137 @@
         "disable",
         0,
         "fixed",
-        20,
         4,
+        1,
         "euler",
         "simple",
-        10,
+        2,
         10000,
         "disable"
+      ]
+    },
+    {
+      "id": 91,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        430,
+        -290
+      ],
+      "size": [
+        420,
+        116
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 159
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            180
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "models": [
+          {
+            "name": "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+            "directory": "loras"
+          }
+        ],
+        "enableTabs": false,
+        "hasSecondTab": false,
+        "secondTabOffset": 80,
+        "secondTabText": "Send Back",
+        "secondTabWidth": 65,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "ue_properties": {
+          "input_ue_unconnectable": {},
+          "version": "7.1",
+          "widget_ue_connectable": {
+            "lora_name": true,
+            "strength_model": true
+          }
+        }
+      },
+      "widgets_values": [
+        "wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+        1
+      ]
+    },
+    {
+      "id": 92,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        430,
+        -150
+      ],
+      "size": [
+        420,
+        116
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 160
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            181
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.49",
+        "models": [
+          {
+            "name": "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+            "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+            "directory": "loras"
+          }
+        ],
+        "enableTabs": false,
+        "hasSecondTab": false,
+        "secondTabOffset": 80,
+        "secondTabText": "Send Back",
+        "secondTabWidth": 65,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "ue_properties": {
+          "input_ue_unconnectable": {},
+          "version": "7.1",
+          "widget_ue_connectable": {
+            "lora_name": true,
+            "strength_model": true
+          }
+        }
+      },
+      "widgets_values": [
+        "wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+        1
       ]
     }
   ],
@@ -990,7 +1114,7 @@
       159,
       76,
       0,
-      73,
+      91,
       0,
       "MODEL"
     ],
@@ -998,7 +1122,7 @@
       160,
       77,
       0,
-      74,
+      92,
       0,
       "MODEL"
     ],
@@ -1153,6 +1277,22 @@
       90,
       0,
       "CLIP"
+    ],
+    [
+      180,
+      91,
+      0,
+      73,
+      0,
+      "MODEL"
+    ],
+    [
+      181,
+      92,
+      0,
+      74,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [
