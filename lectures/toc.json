@@ -81,16 +81,11 @@
       },
       {
         "id": "step5",
-        "title": "프롬프트 엔지니어링 심화",
-        "file": "session2/step6-prompt-advanced.md"
-      },
-      {
-        "id": "step6",
         "title": "더 많은 모델 - Qwen",
         "file": "session2/step6-more-models-qwen.md"
       },
       {
-        "id": "step7",
+        "id": "step6",
         "title": "더 많은 모델 - Z-Image",
         "file": "session2/step7-more-models-zimage.md"
       }
