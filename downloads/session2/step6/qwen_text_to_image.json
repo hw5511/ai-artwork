@@ -2,18 +2,18 @@
   "id": "91f6bbe2-ed41-4fd6-bac7-71d5b5864ecb",
   "revision": 0,
   "last_node_id": 263,
-  "last_link_id": 393,
+  "last_link_id": 394,
   "nodes": [
     {
       "id": 245,
       "type": "CLIPLoader",
       "pos": [
-        -572.2707273264662,
-        91.49476859256333
+        -1446.8353404679683,
+        84.39647880528648
       ],
       "size": [
-        275,
-        146.65364583333334
+        645.578125,
+        133.734375
       ],
       "flags": {},
       "order": 0,
@@ -59,18 +59,23 @@
         "qwen_2.5_vl_7b_fp8_scaled.safetensors",
         "qwen_image",
         "default"
-      ]
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+        "type": "qwen_image",
+        "device": "default"
+      }
     },
     {
       "id": 246,
       "type": "VAELoader",
       "pos": [
-        -572.2707273264662,
-        261.49488601314783
+        -1076.249302223124,
+        254.39659622587098
       ],
       "size": [
         275,
-        88.88020833333334
+        88.875
       ],
       "flags": {},
       "order": 1,
@@ -113,18 +118,21 @@
       },
       "widgets_values": [
         "qwen_image_vae.safetensors"
-      ]
+      ],
+      "widgets_values_named": {
+        "vae_name": "qwen_image_vae.safetensors"
+      }
     },
     {
       "id": 247,
       "type": "ModelSamplingAuraFlow",
       "pos": [
-        1063.7292062030597,
-        -88.50522251194684
+        1015.0752118751732,
+        -99.95322117733187
       ],
       "size": [
         250,
-        86.66666666666667
+        86.65625
       ],
       "flags": {},
       "order": 16,
@@ -160,18 +168,21 @@
       },
       "widgets_values": [
         3.1000000000000005
-      ]
+      ],
+      "widgets_values_named": {
+        "shift": 3.1000000000000005
+      }
     },
     {
       "id": 248,
       "type": "UNETLoader",
       "pos": [
-        -572.2707273264662,
-        -58.50522399452848
+        -1475.757276113436,
+        -65.60351378180535
       ],
       "size": [
-        275,
-        117.7734375
+        674.5,
+        109.65625
       ],
       "flags": {},
       "order": 2,
@@ -214,9 +225,13 @@
         "widget_ue_connectable": {}
       },
       "widgets_values": [
-        "qwen_image_2512_fp8_e4m3fn.safetensors",
+        "qwen_image_2512_bf16.safetensors",
         "default"
-      ]
+      ],
+      "widgets_values_named": {
+        "unet_name": "qwen_image_2512_bf16.safetensors",
+        "weight_dtype": "default"
+      }
     },
     {
       "id": 249,
@@ -266,6 +281,9 @@
       "widgets_values": [
         "Urban alleyway at dusk. Tall, statuesque high-fashion model striding elegantly, mid distant full body shot from an angular perspective, cinematic/editorial with bold contrasts and tactile materials. They wear a rose-gold metallic trench coat with deconstructed elements over a black long-sleeved turtleneck with subtle texture; paired with forest-green pleated pants with raw hems and a soft texture. Long braided dark hair, medium complexion. They carry a vibrant yellow designer handbag with geometric details and a structured silhouette. White architectural sneakers with bold geometric cutouts. Bold, high-contrast, tactile, urban-grit meets high-fashion impact, extreme clarity, extreme layering, post-processing with transparent light-transmitting ultra-smooth high-definition film effect, removing all noise and grain, removing all blur, removing all vintage feel, removing all roughness, drawn with 32K pixel precision, unparalleled fine line drawing of every single detail, the entire image like a brand new photograph, photorealistic\n"
       ],
+      "widgets_values_named": {
+        "text": "Urban alleyway at dusk. Tall, statuesque high-fashion model striding elegantly, mid distant full body shot from an angular perspective, cinematic/editorial with bold contrasts and tactile materials. They wear a rose-gold metallic trench coat with deconstructed elements over a black long-sleeved turtleneck with subtle texture; paired with forest-green pleated pants with raw hems and a soft texture. Long braided dark hair, medium complexion. They carry a vibrant yellow designer handbag with geometric details and a structured silhouette. White architectural sneakers with bold geometric cutouts. Bold, high-contrast, tactile, urban-grit meets high-fashion impact, extreme clarity, extreme layering, post-processing with transparent light-transmitting ultra-smooth high-definition film effect, removing all noise and grain, removing all blur, removing all vintage feel, removing all roughness, drawn with 32K pixel precision, unparalleled fine line drawing of every single detail, the entire image like a brand new photograph, photorealistic\n"
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -317,6 +335,9 @@
       "widgets_values": [
         "低分辨率，低画质，肢体畸形，手指畸形，画面过饱和，蜡像感，人脸无细节，过度光滑，画面具有AI感。构图混乱。文字模糊，扭曲"
       ],
+      "widgets_values_named": {
+        "text": "低分辨率，低画质，肢体畸形，手指畸形，画面过饱和，蜡像感，人脸无细节，过度光滑，画面具有AI感。构图混乱。文字模糊，扭曲"
+      },
       "color": "#322",
       "bgcolor": "#533"
     },
@@ -328,7 +349,7 @@
         -78.50518705703212
       ],
       "size": [
-        187.5,
+        225,
         80
       ],
       "flags": {
@@ -376,8 +397,8 @@
       "id": 252,
       "type": "EmptySD3LatentImage",
       "pos": [
-        -526.2707152201144,
-        471.49498348240263
+        -881.3043617222047,
+        546.4033321815373
       ],
       "size": [
         225,
@@ -413,7 +434,12 @@
         1328,
         1328,
         1
-      ]
+      ],
+      "widgets_values_named": {
+        "width": 1328,
+        "height": 1328,
+        "batch_size": 1
+      }
     },
     {
       "id": 253,
@@ -424,7 +450,7 @@
       ],
       "size": [
         250,
-        328.3203125
+        510
       ],
       "flags": {},
       "order": 17,
@@ -449,14 +475,6 @@
           "name": "latent_image",
           "type": "LATENT",
           "link": 379
-        },
-        {
-          "name": "seed",
-          "type": "INT",
-          "widget": {
-            "name": "seed"
-          },
-          "link": 384
         },
         {
           "name": "steps",
@@ -499,14 +517,23 @@
         "widget_ue_connectable": {}
       },
       "widgets_values": [
-        464857551335368,
+        71166172556018,
         "randomize",
         50,
         4,
         "euler",
         "simple",
         1
-      ]
+      ],
+      "widgets_values_named": {
+        "seed": 71166172556018,
+        "control_after_generate": "randomize",
+        "steps": 50,
+        "cfg": 4,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1
+      }
     },
     {
       "id": 254,
@@ -517,7 +544,7 @@
       ],
       "size": [
         225,
-        86.66666666666667
+        86.65625
       ],
       "flags": {},
       "order": 4,
@@ -548,7 +575,11 @@
       "widgets_values": [
         50,
         "fixed"
-      ]
+      ],
+      "widgets_values_named": {
+        "value": 50,
+        "fixed": "fixed"
+      }
     },
     {
       "id": 255,
@@ -559,7 +590,7 @@
       ],
       "size": [
         225,
-        86.66666666666667
+        86.65625
       ],
       "flags": {},
       "order": 5,
@@ -589,18 +620,21 @@
       },
       "widgets_values": [
         4
-      ]
+      ],
+      "widgets_values_named": {
+        "value": 4
+      }
     },
     {
       "id": 256,
       "type": "PrimitiveBoolean",
       "pos": [
-        273.729209295267,
-        671.4948298020904
+        269.1199302126197,
+        681.6352437839145
       ],
       "size": [
         225,
-        83.33333333333334
+        83.328125
       ],
       "flags": {},
       "order": 6,
@@ -631,8 +665,11 @@
         "ver": "0.12.3"
       },
       "widgets_values": [
-        false
-      ]
+        true
+      ],
+      "widgets_values_named": {
+        "value": true
+      }
     },
     {
       "id": 257,
@@ -654,6 +691,9 @@
       "widgets_values": [
         "An FE issue causes the switch node not to work properly with the subgraph when exporting. So, temporarily disable this setting until the fix has been backported."
       ],
+      "widgets_values_named": {
+        "text": "An FE issue causes the switch node not to work properly with the subgraph when exporting. So, temporarily disable this setting until the fix has been backported."
+      },
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -666,7 +706,7 @@
       ],
       "size": [
         225,
-        86.66666666666667
+        86.65625
       ],
       "flags": {},
       "order": 8,
@@ -677,7 +717,6 @@
           "name": "INT",
           "type": "INT",
           "links": [
-            384,
             385
           ]
         }
@@ -698,7 +737,11 @@
       "widgets_values": [
         4,
         "fixed"
-      ]
+      ],
+      "widgets_values_named": {
+        "value": 4,
+        "fixed": "fixed"
+      }
     },
     {
       "id": 259,
@@ -709,7 +752,7 @@
       ],
       "size": [
         225,
-        86.66666666666667
+        86.65625
       ],
       "flags": {},
       "order": 9,
@@ -739,7 +782,10 @@
       },
       "widgets_values": [
         1
-      ]
+      ],
+      "widgets_values_named": {
+        "value": 1
+      }
     },
     {
       "id": 260,
@@ -793,18 +839,22 @@
       "widgets_values": [
         "Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors",
         1
-      ]
+      ],
+      "widgets_values_named": {
+        "lora_name": "Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors",
+        "strength_model": 1
+      }
     },
     {
       "id": 261,
       "type": "ComfySwitchNode",
       "pos": [
-        694.9791390473256,
-        -20.50511083531751
+        709.7030201489341,
+        -79.40063524175173
       ],
       "size": [
         225,
-        103.33333333333334
+        106
       ],
       "flags": {},
       "order": 15,
@@ -853,7 +903,10 @@
       },
       "widgets_values": [
         false
-      ]
+      ],
+      "widgets_values_named": {
+        "switch": false
+      }
     },
     {
       "id": 262,
@@ -864,7 +917,7 @@
       ],
       "size": [
         225,
-        103.33333333333334
+        106
       ],
       "flags": {},
       "order": 13,
@@ -913,7 +966,10 @@
       },
       "widgets_values": [
         false
-      ]
+      ],
+      "widgets_values_named": {
+        "switch": false
+      }
     },
     {
       "id": 263,
@@ -924,7 +980,7 @@
       ],
       "size": [
         225,
-        103.33333333333334
+        106
       ],
       "flags": {},
       "order": 14,
@@ -973,7 +1029,10 @@
       },
       "widgets_values": [
         false
-      ]
+      ],
+      "widgets_values_named": {
+        "switch": false
+      }
     },
     {
       "id": 60,
@@ -996,7 +1055,13 @@
           "link": 383
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
       "properties": {
         "enableTabs": false,
         "tabWidth": 65,
@@ -1012,7 +1077,10 @@
       },
       "widgets_values": [
         "Qwen-Image-2512"
-      ]
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Qwen-Image-2512"
+      }
     }
   ],
   "links": [
@@ -1121,14 +1189,6 @@
       "IMAGE"
     ],
     [
-      384,
-      258,
-      0,
-      253,
-      4,
-      "INT"
-    ],
-    [
       385,
       258,
       0,
@@ -1189,7 +1249,7 @@
       262,
       0,
       253,
-      5,
+      4,
       "INT"
     ],
     [
@@ -1197,7 +1257,7 @@
       263,
       0,
       253,
-      6,
+      5,
       "FLOAT"
     ]
   ],
@@ -1206,26 +1266,24 @@
       "id": 1,
       "title": "Models",
       "bounding": [
-        -617.8957747059551,
-        -138.50517178866698,
+        -1121.874349602613,
+        -145.60346157594387,
         370,
         500
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
       "id": 2,
       "title": "Image size",
       "bounding": [
-        -601.2291080392883,
-        378.16149487799976,
+        -985.7555329087147,
+        480.6028976424414,
         370,
         220
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1238,7 +1296,6 @@
         740
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1251,7 +1308,6 @@
         460
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1264,7 +1320,6 @@
         280
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1277,20 +1332,19 @@
         750
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6123234457410783,
+      "scale": 1.5882093205333854,
       "offset": [
-        908.3648177231582,
-        334.7344622109353
+        1630.0497401981763,
+        212.83124100128663
       ]
     },
-    "frontendVersion": "1.41.13",
+    "frontendVersion": "1.50.7",
     "workflowRendererVersion": "LG",
     "ue_links": [],
     "links_added_by_ue": [],
