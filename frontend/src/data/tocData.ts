@@ -127,11 +127,6 @@ export const TOC_DATA: Session[] = [
       },
       {
         "id": "step4",
-        "title": "비디오 생성 - 기타 모델",
-        "file": "session3/step4-video-others.md"
-      },
-      {
-        "id": "step5",
         "title": "이미지 업스케일링 전략",
         "file": "session3/step5-upscaling-strategy.md"
       }
