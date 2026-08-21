@@ -12,6 +12,7 @@
 | [research/pricing-comparison.md](./research/pricing-comparison.md) | Comfy vs Higgsfield 가격 비교 → 플랫폼 결정 근거 |
 | [research/content-formats.md](./research/content-formats.md) | 토킹오브젝트·커뮤쇼츠·공학쇼츠 등 콘텐츠 포맷 조사 |
 | [research/lookbook-influencer.md](./research/lookbook-influencer.md) | 모델 룩북(VTON)·AI 인플루언서 릴스 제작 방식 조사 |
+| [research/mcp-tool-analysis.md](./research/mcp-tool-analysis.md) | Comfy MCP 도구 41종 실측 분석 + 커리큘럼 대조 검증 |
 
 ## 8회차 한눈에
 
