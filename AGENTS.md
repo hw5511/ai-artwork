@@ -1,33 +1,11 @@
 # AGENTS.md — ai-artwork
 
 ## 레포 목적
-AI 아트웍 강의자료.
+AI 아트웍 강의자료 — 강의 사이트 본체(`lectures/` 원본, `frontend/` 생성기, 배포본 `index.html`).
 
-## 🚧 진행 중: 에이전트-아트웍 리뉴얼 (로컬 세션에서 이어서 할 것)
-
-기존 ComfyUI 노드 강의를 **Comfy MCP + Claude 기반 8회차 실무 프로젝트 강의**로 리뉴얼 중.
-기획·리서치 정본 = `docs/agent-artwork-renewal/` (커리큘럼 확정안 + 리서치 6건).
-
-**진행 방식** (1회차에서 확립, 이대로 반복):
-1. **회차별 실제 테스트** — Comfy MCP를 연결한 세션에서 그 회차의 실습 파이프라인을
-   에이전트가 처음부터 끝까지 실제로 돌려 검증한다 (모델 선택 → 생성 → 후처리 → 산출물).
-2. **회차 내용 디테일화 논의** — 테스트 결과를 바탕으로 사용 모델·템플릿·수강생용
-   복붙 프롬프트 시퀀스·함정(트러블슈팅)을 확정하고 `docs/agent-artwork-renewal/sessions/sessionN.md` 로 기록.
-
-**1회차 현황** (2026-08-21, 원격 세션에서 검증):
-- 파이프라인 검증 완료: Seedream 4.5 t2i(`byteplus/images-generations`, params.model=`seedream-4-5-251128`)
-  → 9:16 중앙 크롭(비율 왜곡 방지 필수!) → `upload_file` → MiniMax H3 i2v
-  (`video_minimax_h3_i2v`, 오픈웨이트라 GPU 크레딧만; 오버라이드는 슬롯이 아니라
-  **평탄화 노드 id** `input_overrides {"114":{"image":..},"105:104":{"prompt":..,"width":576,"height":1024},"105:111":{"value":5}}`)
-  → SAM3 누끼(`utility_video_segment_sam3`, `{"115":{"file":..},"114:100":{"text":"woman"}}`, 마스크 124프레임 PNG)
-  → ffmpeg/Pillow 합성(배경→Anton 타이포→인물 3층, "인물 뒤 텍스트" 연출).
-- **남은 작업(1회차)**: 단색 배경이라 겹침 효과가 약함 → **자연스러운 실내 배경**(질감 있는
-  로프트/스튜디오)으로 이미지 재생성 후 전체 파이프라인 재실행. 이후 `sessions/session1.md` 작성.
-- **이후**: 2~8회차를 같은 방식으로 (회차 정의는 `docs/agent-artwork-renewal/curriculum.md`).
-
-**주의**: 원격(클라우드) 세션에서는 Comfy MCP 커넥터가 자주 끊긴다(OAuth 만료 시 자동 복귀 불가).
-→ **이 작업은 로컬 세션 + Comfy MCP 연결 상태에서 진행할 것.** 작업 산출물(스크립트·중간 결과물)
-참고: 원격 스크래치패드에 있던 것은 세션 종료 시 소실되므로, 재현은 위 파이프라인 명세로 한다.
+> **에이전트-아트웍 리뉴얼**(Comfy MCP + Claude Code 기반 8회차 개편)의 기획·리서치·검증
+> 작업은 2026-08-22부터 별도 private 레포 `hw5511/agent-artwork` 로 분리됐다.
+> 리뉴얼 관련 작업은 이 레포가 아니라 그쪽에서 진행할 것.
 
 ## 콘텐츠 파이프라인 (정본 = source of truth)
 

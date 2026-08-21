@@ -4,3 +4,8 @@ frontend/node_modules/
 frontend/dist/
 frontend/.env
 frontend/.env.*
+
+# secrets - never commit (repo is public)
+.env
+.env.*
+!.env.example
