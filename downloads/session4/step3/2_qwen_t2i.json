@@ -25,7 +25,13 @@
           "link": 383
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
       "properties": {
         "enableTabs": false,
         "tabWidth": 65,
@@ -41,7 +47,10 @@
       },
       "widgets_values": [
         "Qwen-Image-2512"
-      ]
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "Qwen-Image-2512"
+      }
     },
     {
       "id": 245,
@@ -98,7 +107,12 @@
         "qwen_2.5_vl_7b_fp8_scaled.safetensors",
         "qwen_image",
         "default"
-      ]
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+        "type": "qwen_image",
+        "device": "default"
+      }
     },
     {
       "id": 246,
@@ -152,7 +166,10 @@
       },
       "widgets_values": [
         "qwen_image_vae.safetensors"
-      ]
+      ],
+      "widgets_values_named": {
+        "vae_name": "qwen_image_vae.safetensors"
+      }
     },
     {
       "id": 247,
@@ -199,7 +216,10 @@
       },
       "widgets_values": [
         3.1000000000000005
-      ]
+      ],
+      "widgets_values_named": {
+        "shift": 3.1000000000000005
+      }
     },
     {
       "id": 248,
@@ -255,7 +275,11 @@
       "widgets_values": [
         "qwen_image_2512_fp8_e4m3fn.safetensors",
         "default"
-      ]
+      ],
+      "widgets_values_named": {
+        "unet_name": "qwen_image_2512_fp8_e4m3fn.safetensors",
+        "weight_dtype": "default"
+      }
     },
     {
       "id": 249,
@@ -305,6 +329,9 @@
       "widgets_values": [
         "Professional 3D key visual, ultra-photorealistic, cinematic, clean premium aesthetic, Behance high-end style, commercial product photography. Luxury perfume bottle as main hero object: tall elegant glass bottle with gold metallic cap, crystal clear glass with subtle amber liquid inside, crisp product label with refined serif typography. Conceptual brand installation environment, abstract deep dark architectural space, stylized 3D stage, geometric sculptural forms, monolithic planes, clean surfaces. Color palette: deep navy and gold tones. Refined low-angle perspective, elegant floating centered pose, generous negative space, minimalist clutter-free composition. Octane Render studio lighting, Unreal Engine 5 style, distinct elegant rim lighting on bottle, bright primary illumination, soft secondary background lighting, high contrast clarity, physically based rendering PBR, 8k resolution, 16:9 horizontal format"
       ],
+      "widgets_values_named": {
+        "text": "Professional 3D key visual, ultra-photorealistic, cinematic, clean premium aesthetic, Behance high-end style, commercial product photography. Luxury perfume bottle as main hero object: tall elegant glass bottle with gold metallic cap, crystal clear glass with subtle amber liquid inside, crisp product label with refined serif typography. Conceptual brand installation environment, abstract deep dark architectural space, stylized 3D stage, geometric sculptural forms, monolithic planes, clean surfaces. Color palette: deep navy and gold tones. Refined low-angle perspective, elegant floating centered pose, generous negative space, minimalist clutter-free composition. Octane Render studio lighting, Unreal Engine 5 style, distinct elegant rim lighting on bottle, bright primary illumination, soft secondary background lighting, high contrast clarity, physically based rendering PBR, 8k resolution, 16:9 horizontal format"
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -356,6 +383,9 @@
       "widgets_values": [
         "blurry, low quality, distorted, overexposed, dark, gloomy, cluttered background, text errors, ugly, bad composition"
       ],
+      "widgets_values_named": {
+        "text": "blurry, low quality, distorted, overexposed, dark, gloomy, cluttered background, text errors, ugly, bad composition"
+      },
       "color": "#322",
       "bgcolor": "#533"
     },
@@ -409,8 +439,7 @@
         "cnr_id": "comfy-core",
         "ver": "0.3.48",
         "widget_ue_connectable": {}
-      },
-      "widgets_values": []
+      }
     },
     {
       "id": 252,
@@ -453,7 +482,12 @@
         1664,
         928,
         1
-      ]
+      ],
+      "widgets_values_named": {
+        "width": 1664,
+        "height": 928,
+        "batch_size": 1
+      }
     },
     {
       "id": 253,
@@ -489,14 +523,6 @@
           "name": "latent_image",
           "type": "LATENT",
           "link": 379
-        },
-        {
-          "name": "seed",
-          "type": "INT",
-          "widget": {
-            "name": "seed"
-          },
-          "link": 384
         },
         {
           "name": "steps",
@@ -539,14 +565,23 @@
         "widget_ue_connectable": {}
       },
       "widgets_values": [
-        749663718908236,
+        40545402735130,
         "randomize",
         50,
         4,
         "euler",
         "simple",
         1
-      ]
+      ],
+      "widgets_values_named": {
+        "seed": 40545402735130,
+        "control_after_generate": "randomize",
+        "steps": 50,
+        "cfg": 4,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1
+      }
     },
     {
       "id": 254,
@@ -588,7 +623,11 @@
       "widgets_values": [
         50,
         "fixed"
-      ]
+      ],
+      "widgets_values_named": {
+        "value": 50,
+        "fixed": "fixed"
+      }
     },
     {
       "id": 255,
@@ -629,7 +668,10 @@
       },
       "widgets_values": [
         4
-      ]
+      ],
+      "widgets_values_named": {
+        "value": 4
+      }
     },
     {
       "id": 256,
@@ -671,8 +713,11 @@
         "ver": "0.12.3"
       },
       "widgets_values": [
-        false
-      ]
+        true
+      ],
+      "widgets_values_named": {
+        "value": true
+      }
     },
     {
       "id": 257,
@@ -694,6 +739,9 @@
       "widgets_values": [
         "An FE issue causes the switch node not to work properly with the subgraph when exporting. So, temporarily disable this setting until the fix has been backported."
       ],
+      "widgets_values_named": {
+        "text": "An FE issue causes the switch node not to work properly with the subgraph when exporting. So, temporarily disable this setting until the fix has been backported."
+      },
       "color": "#222",
       "bgcolor": "#000"
     },
@@ -717,7 +765,6 @@
           "name": "INT",
           "type": "INT",
           "links": [
-            384,
             385
           ]
         }
@@ -738,7 +785,11 @@
       "widgets_values": [
         4,
         "fixed"
-      ]
+      ],
+      "widgets_values_named": {
+        "value": 4,
+        "fixed": "fixed"
+      }
     },
     {
       "id": 259,
@@ -779,7 +830,10 @@
       },
       "widgets_values": [
         1
-      ]
+      ],
+      "widgets_values_named": {
+        "value": 1
+      }
     },
     {
       "id": 260,
@@ -833,7 +887,11 @@
       "widgets_values": [
         "Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors",
         1
-      ]
+      ],
+      "widgets_values_named": {
+        "lora_name": "Qwen-Image-2512-Lightning-4steps-V1.0-fp32.safetensors",
+        "strength_model": 1
+      }
     },
     {
       "id": 261,
@@ -893,7 +951,10 @@
       },
       "widgets_values": [
         false
-      ]
+      ],
+      "widgets_values_named": {
+        "switch": false
+      }
     },
     {
       "id": 262,
@@ -953,7 +1014,10 @@
       },
       "widgets_values": [
         false
-      ]
+      ],
+      "widgets_values_named": {
+        "switch": false
+      }
     },
     {
       "id": 263,
@@ -1013,7 +1077,10 @@
       },
       "widgets_values": [
         false
-      ]
+      ],
+      "widgets_values_named": {
+        "switch": false
+      }
     }
   ],
   "links": [
@@ -1122,14 +1189,6 @@
       "IMAGE"
     ],
     [
-      384,
-      258,
-      0,
-      253,
-      4,
-      "INT"
-    ],
-    [
       385,
       258,
       0,
@@ -1190,7 +1249,7 @@
       262,
       0,
       253,
-      5,
+      4,
       "INT"
     ],
     [
@@ -1198,7 +1257,7 @@
       263,
       0,
       253,
-      6,
+      5,
       "FLOAT"
     ]
   ],
@@ -1213,7 +1272,6 @@
         500
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1226,7 +1284,6 @@
         220
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1239,7 +1296,6 @@
         740
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1252,7 +1308,6 @@
         460
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1265,7 +1320,6 @@
         280
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     },
     {
@@ -1278,20 +1332,19 @@
         750
       ],
       "color": "#3f789e",
-      "font_size": 24,
       "flags": {}
     }
   ],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5308092062320156,
+      "scale": 0.6422791395407405,
       "offset": [
-        1486.862713057455,
-        367.2590307108552
+        1553.3128185057628,
+        230.2938319988392
       ]
     },
-    "frontendVersion": "1.41.13",
+    "frontendVersion": "1.52.5",
     "workflowRendererVersion": "Vue-corrected",
     "ue_links": [],
     "links_added_by_ue": [],
