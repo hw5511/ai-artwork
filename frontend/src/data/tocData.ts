@@ -147,6 +147,11 @@ export const TOC_DATA: Session[] = [
         "file": "session4/step2-nanobanana.md"
       },
       {
+        "id": "step6",
+        "title": "Qwen 이미지 편집 4가지 비교",
+        "file": "session4/step6-qwen-edit-compare.md"
+      },
+      {
         "id": "step3",
         "title": "워크플로우 설계 실습 (따라하기)",
         "file": "session4/step3-workflow-design.md"

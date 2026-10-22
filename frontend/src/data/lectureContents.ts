@@ -3694,9 +3694,23 @@ API 노드는 ComfyUI 안에서 외부 회사의 AI 모델(Nano Banana, GPT Imag
 
 같은 프롬프트와 같은 시드로 여러 모델을 한 번에 돌려 결과를 나란히 비교합니다. 끄고 싶은 모델은 그룹을 선택한 뒤 **Ctrl+B**로 건너뛸 수 있습니다.
 
-[[download: downloads/session4/step2/image_compare_sheet.json | 이미지 비교 시트 - FLUX.2, Z-Image, Qwen-Image와 Nano Banana, GPT Image, Seedream, FLUX 3, Ideogram, Kling 9개 모델]]
+[[download: downloads/session4/step2/image_compare_sheet.json | 이미지 비교 시트 - 오픈 모델 3개(FLUX.2, Z-Image, Qwen-Image)와 API 16개(Nano Banana, GPT Image, Seedream, FLUX 3, Krea 3, Bria FIBO 등) 19개 모델]]
 
-[[download: downloads/session4/step2/video_compare_5s.json | 5초 영상 비교 - LTX-2.5, Wan 2.2와 MiniMax, Kling, Veo, Seedance, Wan 2.7, Grok 8개 모델]]
+[[download: downloads/session4/step2/video_compare_5s.json | 5초 영상 비교 - LTX-2.5, Wan 2.2와 MiniMax, Kling, Veo, Seedance, Wan 2.7, Grok, FLUX 3 Max 9개 모델]]
+
+---section---
+
+## MiniMax 영상 4가지 모드 비교
+
+한 모델(MiniMax H3)로 텍스트, 첫 프레임, 첫+마지막 프레임, 레퍼런스 이미지에서 각각 영상을 만듭니다. 아래 이미지 3장을 받아 Load Image 노드에 올리세요.
+
+[[download: downloads/session4/step2/minimax_4modes.json | MiniMax 4가지 모드 - T2V, I2V, 첫+마지막 프레임, 레퍼런스 영상]]
+
+[[download: downloads/session4/step2/minimax_first.png | 예제 이미지 1 - 첫 프레임 (사과 두 개)]]
+
+[[download: downloads/session4/step2/minimax_last.png | 예제 이미지 2 - 마지막 프레임 (사과 한 개)]]
+
+[[download: downloads/session4/step2/minimax_subject.png | 예제 이미지 3 - 레퍼런스 (사과 한 개)]]
 `,
   "session4/step3-local-comfyui-setup.md": `# 로컬 ComfyUI 설치 및 Civitai 활용
 
@@ -4104,6 +4118,31 @@ Outpaint 기법과 First-Last 워크플로우를 결합하여 줌인 효과 영�
 **활용 팁**
 - Outpaint를 여러 단계 반복하면 더 긴 줌인 효과를 만들 수 있습니다
 - 프롬프트를 일관되게 유지하면 배경 스타일이 통일됩니다
+`,
+  "session4/step6-qwen-edit-compare.md": `# Qwen 이미지 편집 4가지 비교
+
+## 실습 목표
+
+Qwen-Image-Edit 2511 한 모델로 네 가지 작업을 나란히 돌려 차이를 비교합니다.
+
+- **T2I**: 글만으로 이미지 생성
+- **I2I**: 그림판으로 그린 사과 그림을 사진처럼 바꾸기 (denoise 0.92, 12스텝)
+- **Inpaint**: 마스크로 칠한 사과 하나만 초록 사과로 바꾸기
+- **Edit**: "사과 옆에 칼을 놓아 줘" 같은 명령문으로 고치기
+
+[[image: session4/qwen_edit_result.jpg | width:100% | 실행 결과 예시 - 입력 / T2I / I2I / Inpaint / Edit]]
+
+---section---
+
+## 다운로드
+
+템플릿과 예제 그림 2장을 받아, 그림은 Load Image 노드에 올립니다. 마스크 그림은 오른쪽 사과가 이미 칠해져 있어 바로 실행할 수 있고, 마스크 에디터에서 직접 다시 칠해도 됩니다.
+
+[[download: downloads/session4/step6/qwen_edit_4tasks.json | Qwen 이미지 편집 4가지 비교 템플릿 - T2I, I2I, Inpaint, Edit]]
+
+[[download: downloads/session4/step6/apples_paint.png | 예제 그림 - 그림판 사과 (I2I, Edit 입력)]]
+
+[[download: downloads/session4/step6/apples_paint_mask.png | 예제 그림 - 오른쪽 사과 마스크 (Inpaint 입력)]]
 `,
   "test/section-test.md": `# 섹션 구분자 테스트
 

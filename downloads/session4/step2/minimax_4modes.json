@@ -1,0 +1,1531 @@
+{
+ "id": "minimax-4modes-0001",
+ "revision": 0,
+ "last_node_id": 19,
+ "last_link_id": 16,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "PrimitiveStringMultiline",
+   "pos": [
+    20,
+    70
+   ],
+   "size": [
+    620,
+    260
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "값",
+     "name": "value",
+     "type": "STRING",
+     "widget": {
+      "name": "value"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "문자열",
+     "name": "STRING",
+     "type": "STRING",
+     "links": [
+      1,
+      4,
+      8,
+      13
+     ]
+    }
+   ],
+   "title": "Prompt (shared)",
+   "properties": {
+    "Node name for S&R": "PrimitiveStringMultiline"
+   },
+   "widgets_values": [
+    "Flat-colour hand-drawn animation, no outlines: an ivory background and a white oval plate with red apples on it. The apples roll gently across the plate, one rolls away to the left and out of the picture, while the camera makes a slow, gentle push-in. One continuous shot, smooth natural motion."
+   ],
+   "widgets_values_named": {
+    "value": "Flat-colour hand-drawn animation, no outlines: an ivory background and a white oval plate with red apples on it. The apples roll gently across the plate, one rolls away to the left and out of the picture, while the camera makes a slow, gentle push-in. One continuous shot, smooth natural motion."
+   }
+  },
+  {
+   "id": 2,
+   "type": "PrimitiveInt",
+   "pos": [
+    20,
+    390
+   ],
+   "size": [
+    300,
+    90
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "값",
+     "name": "value",
+     "type": "INT",
+     "widget": {
+      "name": "value"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "정수",
+     "name": "INT",
+     "type": "INT",
+     "links": [
+      2,
+      5,
+      9,
+      14
+     ]
+    }
+   ],
+   "title": "Seed (shared)",
+   "properties": {
+    "Node name for S&R": "PrimitiveInt"
+   },
+   "widgets_values": [
+    42,
+    "fixed"
+   ],
+   "widgets_values_named": {
+    "value": 42,
+    "fixed": "fixed"
+   }
+  },
+  {
+   "id": 3,
+   "type": "Note",
+   "pos": [
+    20,
+    520
+   ],
+   "size": [
+    620,
+    270
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "읽어 보세요: 공통 항목",
+   "properties": {},
+   "widgets_values": [
+    "MiniMax Hailuo H3 비교: T2V / I2V / FLF2V / R2V. 모두 Comfy Cloud 파트너 노드(MiniMax)입니다.\n공통: 프롬프트, 시드, 모델 'MiniMax H3', 768P, 5 s.\n공통이 아닌 것(노드 제한): ratio는 T2V와 R2V에만 있습니다. (1:1로 두면 1024x1024 입력과 맞습니다.) I2V와 FLF2V는 이미지를 따라갑니다. H3 노드의 시드 범위는 0-4294967295이며, 같은 시드라도 결과는 비슷할 뿐 똑같지는 않습니다.\n모드를 끄려면 그 그룹을 선택하고 Ctrl+B를 누릅니다. (나머지 모드는 계속 실행됩니다.) 유료 클립 4개가 필요한 게 아니라면 4개를 한꺼번에 큐에 올리지 마세요.\n1회 실행 비용(price_badge, H3 768P 5 s): $0.6435 = 약 136 크레딧입니다. 4개를 모두 돌리면 $2.5740 = 약 543 크레딧입니다. (1 USD당 211 크레딧 기준, https://www.comfy.org/cloud/pricing 의 종량제 요금이며 docs.comfy.org 페이지에는 요금이 나와 있지 않습니다.)\n각 노드의 모델 드롭다운에서 MiniMax H3 Max, H3 Max Turbo (480P/768P, 최소 5 s)도 고를 수 있습니다."
+   ],
+   "widgets_values_named": {
+    "text": "MiniMax Hailuo H3 comparison: T2V / I2V / FLF2V / R2V, all Comfy Cloud partner nodes (MiniMax).\nShared: prompt, seed, model 'MiniMax H3', 768P, 5 s.\nNot shared (node limits): ratio exists only on T2V and R2V (set 1:1 = the 1024x1024 inputs); I2V and FLF2V follow the image. Seed range of the H3 nodes is 0-4294967295; same seed gives similar, not identical, results.\nSwitch a mode off: select its group, Ctrl+B (the other modes still run). Do not queue all four unless you want 4 paid clips.\nCost per run (price_badge, H3 768P 5 s): $0.6435 = ~136 credits each; all four = $2.5740 = ~543 credits at 211 credits per USD (https://www.comfy.org/cloud/pricing, pay-as-you-go rate; docs.comfy.org pages do not state a rate).\nAlso selectable in each node's model dropdown: MiniMax H3 Max, H3 Max Turbo (480P/768P, min 5 s)."
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 4,
+   "type": "MinimaxHailuo03TextToVideoNode",
+   "pos": [
+    740,
+    70
+   ],
+   "size": [
+    400,
+    400
+   ],
+   "flags": {},
+   "order": 11,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "model"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "prompt",
+     "name": "model.prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "model.prompt"
+     },
+     "link": 1
+    },
+    {
+     "localized_name": "resolution",
+     "name": "model.resolution",
+     "type": "COMBO",
+     "widget": {
+      "name": "model.resolution"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "ratio",
+     "name": "model.ratio",
+     "type": "COMBO",
+     "widget": {
+      "name": "model.ratio"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "duration",
+     "name": "model.duration",
+     "type": "INT",
+     "widget": {
+      "name": "model.duration"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "seed",
+     "name": "seed",
+     "type": "INT",
+     "widget": {
+      "name": "seed"
+     },
+     "link": 2
+    },
+    {
+     "localized_name": "watermark",
+     "name": "watermark",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "watermark"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "비디오",
+     "name": "VIDEO",
+     "type": "VIDEO",
+     "links": [
+      3
+     ]
+    }
+   ],
+   "title": "H3 Text to Video",
+   "properties": {
+    "Node name for S&R": "MinimaxHailuo03TextToVideoNode"
+   },
+   "widgets_values": [
+    "MiniMax H3",
+    "Flat-colour hand-drawn animation, no outlines: an ivory background and a white oval plate with red apples on it. The apples roll gently across the plate, one rolls away to the left and out of the picture, while the camera makes a slow, gentle push-in. One continuous shot, smooth natural motion.",
+    "768P",
+    "1:1",
+    5,
+    42,
+    "fixed",
+    false
+   ],
+   "widgets_values_named": {
+    "model": "MiniMax H3",
+    "model.prompt": "Flat-colour hand-drawn animation, no outlines: an ivory background and a white oval plate with red apples on it. The apples roll gently across the plate, one rolls away to the left and out of the picture, while the camera makes a slow, gentle push-in. One continuous shot, smooth natural motion.",
+    "model.resolution": "768P",
+    "model.ratio": "1:1",
+    "model.duration": 5,
+    "seed": 42,
+    "control_after_generate": "fixed",
+    "watermark": false
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 5,
+   "type": "SaveVideo",
+   "pos": [
+    1520,
+    70
+   ],
+   "size": [
+    480,
+    420
+   ],
+   "flags": {},
+   "order": 15,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "비디오",
+     "name": "video",
+     "type": "VIDEO",
+     "link": 3
+    },
+    {
+     "localized_name": "파일명 접두사",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "포맷",
+     "name": "format",
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "코덱",
+     "name": "format.codec",
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "format.codec"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "코덱",
+     "name": "codec",
+     "shape": 7,
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "codec"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "video",
+     "name": "video",
+     "type": "VIDEO",
+     "links": null
+    }
+   ],
+   "title": "Save minimax/t2v",
+   "properties": {
+    "Node name for S&R": "SaveVideo"
+   },
+   "widgets_values": [
+    "minimax/t2v",
+    "auto",
+    "auto",
+    "auto"
+   ],
+   "widgets_values_named": {
+    "filename_prefix": "minimax/t2v",
+    "format": "auto",
+    "format.codec": "auto",
+    "codec": "auto"
+   }
+  },
+  {
+   "id": 6,
+   "type": "Note",
+   "pos": [
+    740,
+    540
+   ],
+   "size": [
+    1260,
+    220
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "T2V 입력과 비용",
+   "properties": {},
+   "widgets_values": [
+    "모드 1 - T2V. 노드 MinimaxHailuo03TextToVideoNode, 모델 MiniMax H3 (최신 Hailuo), 768P, ratio 1:1, 5 s.\n입력: 공통 프롬프트와 공통 시드만 쓰며 이미지는 없습니다. 결과는 minimax/t2v로 저장됩니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧 (1 USD당 211 크레딧).\n다른 모드와 다른 점: ratio 위젯이 있습니다. (다른 모드의 정사각형 입력과 맞추기 위해 여기서는 1:1로 두었습니다.)"
+   ],
+   "widgets_values_named": {
+    "text": "MODE 1 - T2V. Node MinimaxHailuo03TextToVideoNode, model MiniMax H3 (newest Hailuo), 768P, ratio 1:1, 5 s.\nInputs: shared prompt + shared seed only, no image. Output saved as minimax/t2v.\nEst. cost: 5 s x $0.1287/s = $0.6435 = ~136 credits (211 credits/USD).\nDiffers from the others: has a ratio widget (1:1 here so the clip matches the square inputs of the other modes)."
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 7,
+   "type": "LoadImage",
+   "pos": [
+    2120,
+    70
+   ],
+   "size": [
+    320,
+    340
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "이미지",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "업로드할 파일 선택",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "이미지",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      6
+     ]
+    },
+    {
+     "localized_name": "마스크",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "First frame",
+   "properties": {
+    "Node name for S&R": "LoadImage"
+   },
+   "widgets_values": [
+    "minimax_first.png",
+    "image"
+   ],
+   "widgets_values_named": {
+    "image": "minimax_first.png",
+    "upload": "image"
+   }
+  },
+  {
+   "id": 8,
+   "type": "MinimaxHailuo03FirstLastFrameNode",
+   "pos": [
+    2460,
+    70
+   ],
+   "size": [
+    400,
+    420
+   ],
+   "flags": {},
+   "order": 12,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "첫 프레임",
+     "name": "first_frame",
+     "type": "IMAGE",
+     "link": 6
+    },
+    {
+     "localized_name": "마지막 프레임",
+     "name": "last_frame",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "localized_name": "모델",
+     "name": "model",
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "model"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "프롬프트",
+     "name": "model.prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "model.prompt"
+     },
+     "link": 4
+    },
+    {
+     "localized_name": "해상도",
+     "name": "model.resolution",
+     "type": "COMBO",
+     "widget": {
+      "name": "model.resolution"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "지속 시간",
+     "name": "model.duration",
+     "type": "INT",
+     "widget": {
+      "name": "model.duration"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "시드",
+     "name": "seed",
+     "type": "INT",
+     "widget": {
+      "name": "seed"
+     },
+     "link": 5
+    },
+    {
+     "localized_name": "워터마크",
+     "name": "watermark",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "watermark"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "비디오",
+     "name": "VIDEO",
+     "type": "VIDEO",
+     "links": [
+      7
+     ]
+    }
+   ],
+   "title": "H3 Image to Video (last frame left empty)",
+   "properties": {
+    "Node name for S&R": "MinimaxHailuo03FirstLastFrameNode"
+   },
+   "widgets_values": [
+    "MiniMax H3",
+    "Flat-colour hand-drawn animation, no outlines: an ivory background and a white oval plate with red apples on it. The apples roll gently across the plate, one rolls away to the left and out of the picture, while the camera makes a slow, gentle push-in. One continuous shot, smooth natural motion.",
+    "768P",
+    5,
+    42,
+    "fixed",
+    false
+   ],
+   "widgets_values_named": {
+    "model": "MiniMax H3",
+    "model.prompt": "Flat-colour hand-drawn animation, no outlines: an ivory background and a white oval plate with red apples on it. The apples roll gently across the plate, one rolls away to the left and out of the picture, while the camera makes a slow, gentle push-in. One continuous shot, smooth natural motion.",
+    "model.resolution": "768P",
+    "model.duration": 5,
+    "seed": 42,
+    "control_after_generate": "fixed",
+    "watermark": false
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 9,
+   "type": "SaveVideo",
+   "pos": [
+    2900,
+    70
+   ],
+   "size": [
+    480,
+    420
+   ],
+   "flags": {},
+   "order": 16,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "비디오",
+     "name": "video",
+     "type": "VIDEO",
+     "link": 7
+    },
+    {
+     "localized_name": "파일명 접두사",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "포맷",
+     "name": "format",
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "코덱",
+     "name": "format.codec",
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "format.codec"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "코덱",
+     "name": "codec",
+     "shape": 7,
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "codec"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "video",
+     "name": "video",
+     "type": "VIDEO",
+     "links": null
+    }
+   ],
+   "title": "Save minimax/i2v",
+   "properties": {
+    "Node name for S&R": "SaveVideo"
+   },
+   "widgets_values": [
+    "minimax/i2v",
+    "auto",
+    "auto",
+    "auto"
+   ],
+   "widgets_values_named": {
+    "filename_prefix": "minimax/i2v",
+    "format": "auto",
+    "format.codec": "auto",
+    "codec": "auto"
+   }
+  },
+  {
+   "id": 10,
+   "type": "Note",
+   "pos": [
+    2460,
+    540
+   ],
+   "size": [
+    920,
+    220
+   ],
+   "flags": {},
+   "order": 5,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "I2V 입력과 비용",
+   "properties": {},
+   "widgets_values": [
+    "모드 2 - I2V. Comfy Cloud 목록에는 MiniMax의 H3 전용 image-to-video 노드가 없습니다. 이 모드는 MinimaxHailuo03FirstLastFrameNode (모델 MiniMax H3, 768P, 5 s)를 쓰고, 선택 입력인 last_frame을 비워 둡니다. 그러면 최신 모델로 첫 프레임만 쓰는 I2V가 됩니다. 다른 선택지로 MinimaxHailuoVideoNode (Hailuo 02, first_frame_image, 6/10 s, 768P/1080P)와 MinimaxImageToVideoNode (I2V-01)가 있지만 쓰지 않았습니다.\n입력: minimax_first.png (그림) + 공통 프롬프트 + 공통 시드. 결과는 minimax/i2v로 저장됩니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧 (last_frame 유무는 가격과 상관없습니다). ratio 위젯은 없으며 이미지를 따라갑니다. (1:1)"
+   ],
+   "widgets_values_named": {
+    "text": "MODE 2 - I2V. MiniMax has NO dedicated H3 image-to-video node in the Comfy Cloud catalog. This mode uses MinimaxHailuo03FirstLastFrameNode (model MiniMax H3, 768P, 5 s) with the optional last_frame input left EMPTY = first-frame-only I2V on the newest model. Older options that exist: MinimaxHailuoVideoNode (Hailuo 02, first_frame_image, 6/10 s, 768P/1080P) and MinimaxImageToVideoNode (I2V-01), not used.\nInput: minimax_first.png (the drawing) + shared prompt + shared seed. Saved as minimax/i2v.\nEst. cost: 5 s x $0.1287/s = $0.6435 = ~136 credits (price does not depend on last_frame). No ratio widget: follows the image (1:1)."
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 11,
+   "type": "LoadImage",
+   "pos": [
+    740,
+    930
+   ],
+   "size": [
+    320,
+    340
+   ],
+   "flags": {},
+   "order": 6,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "이미지",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "업로드할 파일 선택",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "이미지",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      10
+     ]
+    },
+    {
+     "localized_name": "마스크",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "First frame",
+   "properties": {
+    "Node name for S&R": "LoadImage"
+   },
+   "widgets_values": [
+    "minimax_first.png",
+    "image"
+   ],
+   "widgets_values_named": {
+    "image": "minimax_first.png",
+    "upload": "image"
+   }
+  },
+  {
+   "id": 12,
+   "type": "LoadImage",
+   "pos": [
+    740,
+    1310
+   ],
+   "size": [
+    320,
+    340
+   ],
+   "flags": {},
+   "order": 7,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "이미지",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "업로드할 파일 선택",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "이미지",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      11
+     ]
+    },
+    {
+     "localized_name": "마스크",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Last frame (left apple gone)",
+   "properties": {
+    "Node name for S&R": "LoadImage"
+   },
+   "widgets_values": [
+    "minimax_last.png",
+    "image"
+   ],
+   "widgets_values_named": {
+    "image": "minimax_last.png",
+    "upload": "image"
+   }
+  },
+  {
+   "id": 13,
+   "type": "MinimaxHailuo03FirstLastFrameNode",
+   "pos": [
+    1080,
+    930
+   ],
+   "size": [
+    400,
+    420
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "첫 프레임",
+     "name": "first_frame",
+     "type": "IMAGE",
+     "link": 10
+    },
+    {
+     "localized_name": "마지막 프레임",
+     "name": "last_frame",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 11
+    },
+    {
+     "localized_name": "모델",
+     "name": "model",
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "model"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "프롬프트",
+     "name": "model.prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "model.prompt"
+     },
+     "link": 8
+    },
+    {
+     "localized_name": "해상도",
+     "name": "model.resolution",
+     "type": "COMBO",
+     "widget": {
+      "name": "model.resolution"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "지속 시간",
+     "name": "model.duration",
+     "type": "INT",
+     "widget": {
+      "name": "model.duration"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "시드",
+     "name": "seed",
+     "type": "INT",
+     "widget": {
+      "name": "seed"
+     },
+     "link": 9
+    },
+    {
+     "localized_name": "워터마크",
+     "name": "watermark",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "watermark"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "비디오",
+     "name": "VIDEO",
+     "type": "VIDEO",
+     "links": [
+      12
+     ]
+    }
+   ],
+   "title": "H3 First-Last-Frame to Video",
+   "properties": {
+    "Node name for S&R": "MinimaxHailuo03FirstLastFrameNode"
+   },
+   "widgets_values": [
+    "MiniMax H3",
+    "Flat-colour hand-drawn animation, no outlines: an ivory background and a white oval plate with red apples on it. The apples roll gently across the plate, one rolls away to the left and out of the picture, while the camera makes a slow, gentle push-in. One continuous shot, smooth natural motion.",
+    "768P",
+    5,
+    42,
+    "fixed",
+    false
+   ],
+   "widgets_values_named": {
+    "model": "MiniMax H3",
+    "model.prompt": "Flat-colour hand-drawn animation, no outlines: an ivory background and a white oval plate with red apples on it. The apples roll gently across the plate, one rolls away to the left and out of the picture, while the camera makes a slow, gentle push-in. One continuous shot, smooth natural motion.",
+    "model.resolution": "768P",
+    "model.duration": 5,
+    "seed": 42,
+    "control_after_generate": "fixed",
+    "watermark": false
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 14,
+   "type": "SaveVideo",
+   "pos": [
+    1520,
+    930
+   ],
+   "size": [
+    480,
+    420
+   ],
+   "flags": {},
+   "order": 17,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "비디오",
+     "name": "video",
+     "type": "VIDEO",
+     "link": 12
+    },
+    {
+     "localized_name": "파일명 접두사",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "포맷",
+     "name": "format",
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "코덱",
+     "name": "format.codec",
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "format.codec"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "코덱",
+     "name": "codec",
+     "shape": 7,
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "codec"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "video",
+     "name": "video",
+     "type": "VIDEO",
+     "links": null
+    }
+   ],
+   "title": "Save minimax/flf2v",
+   "properties": {
+    "Node name for S&R": "SaveVideo"
+   },
+   "widgets_values": [
+    "minimax/flf2v",
+    "auto",
+    "auto",
+    "auto"
+   ],
+   "widgets_values_named": {
+    "filename_prefix": "minimax/flf2v",
+    "format": "auto",
+    "format.codec": "auto",
+    "codec": "auto"
+   }
+  },
+  {
+   "id": 15,
+   "type": "Note",
+   "pos": [
+    1080,
+    1400
+   ],
+   "size": [
+    920,
+    220
+   ],
+   "flags": {},
+   "order": 8,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "FLF2V 입력과 비용",
+   "properties": {},
+   "widgets_values": [
+    "모드 3 - FLF2V. 노드 MinimaxHailuo03FirstLastFrameNode, 모델 MiniMax H3, 768P, 5 s.\n입력: minimax_first.png (사과 두 개), minimax_last.png (같은 장면에서 왼쪽 사과가 사라진 모습), 공통 프롬프트, 공통 시드. 결과는 minimax/flf2v로 저장됩니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧.\nI2V 그룹과 같은 노드 클래스이며, 다른 점은 last_frame이 연결되어 있다는 것뿐입니다. ratio 위젯은 없으며 이미지를 따라갑니다. (1:1)"
+   ],
+   "widgets_values_named": {
+    "text": "MODE 3 - FLF2V. Node MinimaxHailuo03FirstLastFrameNode, model MiniMax H3, 768P, 5 s.\nInputs: minimax_first.png (two apples), minimax_last.png (same scene, left apple gone), shared prompt, shared seed. Saved as minimax/flf2v.\nEst. cost: 5 s x $0.1287/s = $0.6435 = ~136 credits.\nSame node class as the I2V group; the only difference is that last_frame is connected. No ratio widget: follows the images (1:1)."
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 16,
+   "type": "LoadImage",
+   "pos": [
+    2120,
+    930
+   ],
+   "size": [
+    320,
+    340
+   ],
+   "flags": {},
+   "order": 9,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "이미지",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "업로드할 파일 선택",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "이미지",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      15
+     ]
+    },
+    {
+     "localized_name": "마스크",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Subject reference (one apple)",
+   "properties": {
+    "Node name for S&R": "LoadImage"
+   },
+   "widgets_values": [
+    "minimax_subject.png",
+    "image"
+   ],
+   "widgets_values_named": {
+    "image": "minimax_subject.png",
+    "upload": "image"
+   }
+  },
+  {
+   "id": 17,
+   "type": "MinimaxHailuo03ReferenceNode",
+   "pos": [
+    2460,
+    930
+   ],
+   "size": [
+    400,
+    420
+   ],
+   "flags": {},
+   "order": 14,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "model"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "prompt",
+     "name": "model.prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "model.prompt"
+     },
+     "link": 13
+    },
+    {
+     "localized_name": "resolution",
+     "name": "model.resolution",
+     "type": "COMBO",
+     "widget": {
+      "name": "model.resolution"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "ratio",
+     "name": "model.ratio",
+     "type": "COMBO",
+     "widget": {
+      "name": "model.ratio"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "duration",
+     "name": "model.duration",
+     "type": "INT",
+     "widget": {
+      "name": "model.duration"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "image_1",
+     "name": "model.reference_images.image_1",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 15
+    },
+    {
+     "localized_name": "image_2",
+     "name": "model.reference_images.image_2",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "localized_name": "video_1",
+     "name": "model.reference_videos.video_1",
+     "shape": 7,
+     "type": "VIDEO",
+     "link": null
+    },
+    {
+     "localized_name": "audio_1",
+     "name": "model.reference_audios.audio_1",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "localized_name": "seed",
+     "name": "seed",
+     "type": "INT",
+     "widget": {
+      "name": "seed"
+     },
+     "link": 14
+    },
+    {
+     "localized_name": "watermark",
+     "name": "watermark",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "watermark"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "비디오",
+     "name": "VIDEO",
+     "type": "VIDEO",
+     "links": [
+      16
+     ]
+    }
+   ],
+   "title": "H3 Reference to Video",
+   "properties": {
+    "Node name for S&R": "MinimaxHailuo03ReferenceNode"
+   },
+   "widgets_values": [
+    "MiniMax H3",
+    "Flat-colour hand-drawn animation, no outlines: an ivory background and a white oval plate with red apples on it. The apples roll gently across the plate, one rolls away to the left and out of the picture, while the camera makes a slow, gentle push-in. One continuous shot, smooth natural motion.",
+    "768P",
+    "1:1",
+    5,
+    42,
+    "fixed",
+    false
+   ],
+   "widgets_values_named": {
+    "model": "MiniMax H3",
+    "model.prompt": "Flat-colour hand-drawn animation, no outlines: an ivory background and a white oval plate with red apples on it. The apples roll gently across the plate, one rolls away to the left and out of the picture, while the camera makes a slow, gentle push-in. One continuous shot, smooth natural motion.",
+    "model.resolution": "768P",
+    "model.ratio": "1:1",
+    "model.duration": 5,
+    "seed": 42,
+    "control_after_generate": "fixed",
+    "watermark": false
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 18,
+   "type": "SaveVideo",
+   "pos": [
+    2900,
+    930
+   ],
+   "size": [
+    480,
+    420
+   ],
+   "flags": {},
+   "order": 18,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "비디오",
+     "name": "video",
+     "type": "VIDEO",
+     "link": 16
+    },
+    {
+     "localized_name": "파일명 접두사",
+     "name": "filename_prefix",
+     "type": "STRING",
+     "widget": {
+      "name": "filename_prefix"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "포맷",
+     "name": "format",
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "format"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "코덱",
+     "name": "format.codec",
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "format.codec"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "코덱",
+     "name": "codec",
+     "shape": 7,
+     "type": "COMFY_DYNAMICCOMBO_V3",
+     "widget": {
+      "name": "codec"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "video",
+     "name": "video",
+     "type": "VIDEO",
+     "links": null
+    }
+   ],
+   "title": "Save minimax/r2v",
+   "properties": {
+    "Node name for S&R": "SaveVideo"
+   },
+   "widgets_values": [
+    "minimax/r2v",
+    "auto",
+    "auto",
+    "auto"
+   ],
+   "widgets_values_named": {
+    "filename_prefix": "minimax/r2v",
+    "format": "auto",
+    "format.codec": "auto",
+    "codec": "auto"
+   }
+  },
+  {
+   "id": 19,
+   "type": "Note",
+   "pos": [
+    2460,
+    1400
+   ],
+   "size": [
+    920,
+    220
+   ],
+   "flags": {},
+   "order": 10,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "R2V 입력과 비용",
+   "properties": {},
+   "widgets_values": [
+    "모드 4 - R2V. 노드 MinimaxHailuo03ReferenceNode, 모델 MiniMax H3, 768P, ratio 1:1, 5 s. H3의 reference-to-video 노드이며, 목록에는 별도의 S2V (subject-reference) 노드가 없습니다.\n입력: image_1로 minimax_subject.png (빨간 사과 하나), 공통 프롬프트, 공통 시드. 결과는 minimax/r2v로 저장됩니다. 레퍼런스는 첫 프레임이 아니라 피사체/스타일 가이드이며, 프롬프트에서 'Image 1'이라고 부를 수 있습니다. 이미지 9개, 영상 3개, 오디오 3개까지 추가할 수 있습니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧 (이미지 1개, 영상 없음: 기본 가격만 붙습니다).\n다른 점: ratio를 'adaptive'(기본값)로도 둘 수 있습니다. 여기서는 다른 모드와 맞추려고 1:1로 두었습니다."
+   ],
+   "widgets_values_named": {
+    "text": "MODE 4 - R2V. Node MinimaxHailuo03ReferenceNode, model MiniMax H3, 768P, ratio 1:1, 5 s. This is the H3 reference-to-video node; no separate S2V (subject-reference) node exists in the catalog.\nInput: minimax_subject.png as image_1 (one red apple), shared prompt, shared seed. Saved as minimax/r2v. The reference is a subject/style guide, not a first frame; the prompt may call it 'Image 1'. Up to 9 images, 3 videos, 3 audios can be added.\nEst. cost: 5 s x $0.1287/s = $0.6435 = ~136 credits (1 image, no video: base price only).\nDiffers: ratio can also be 'adaptive' (default); here 1:1 to match the others."
+   },
+   "color": "#432",
+   "bgcolor": "#653"
+  }
+ ],
+ "links": [
+  [
+   1,
+   1,
+   0,
+   4,
+   1,
+   "STRING"
+  ],
+  [
+   2,
+   2,
+   0,
+   4,
+   5,
+   "INT"
+  ],
+  [
+   3,
+   4,
+   0,
+   5,
+   0,
+   "VIDEO"
+  ],
+  [
+   6,
+   7,
+   0,
+   8,
+   0,
+   "IMAGE"
+  ],
+  [
+   4,
+   1,
+   0,
+   8,
+   3,
+   "STRING"
+  ],
+  [
+   5,
+   2,
+   0,
+   8,
+   6,
+   "INT"
+  ],
+  [
+   7,
+   8,
+   0,
+   9,
+   0,
+   "VIDEO"
+  ],
+  [
+   10,
+   11,
+   0,
+   13,
+   0,
+   "IMAGE"
+  ],
+  [
+   11,
+   12,
+   0,
+   13,
+   1,
+   "IMAGE"
+  ],
+  [
+   8,
+   1,
+   0,
+   13,
+   3,
+   "STRING"
+  ],
+  [
+   9,
+   2,
+   0,
+   13,
+   6,
+   "INT"
+  ],
+  [
+   12,
+   13,
+   0,
+   14,
+   0,
+   "VIDEO"
+  ],
+  [
+   16,
+   17,
+   0,
+   18,
+   0,
+   "VIDEO"
+  ],
+  [
+   13,
+   1,
+   0,
+   17,
+   1,
+   "STRING"
+  ],
+  [
+   15,
+   16,
+   0,
+   17,
+   5,
+   "IMAGE"
+  ],
+  [
+   14,
+   2,
+   0,
+   17,
+   9,
+   "INT"
+  ]
+ ],
+ "groups": [
+  {
+   "id": 1,
+   "title": "공통 설정 (4개 모드 공통 프롬프트 + 시드)",
+   "bounding": [
+    0,
+    0,
+    660,
+    820
+   ],
+   "color": "#3f789e",
+   "flags": {}
+  },
+  {
+   "id": 2,
+   "title": "MiniMax H3 - T2V (텍스트 -> 영상)",
+   "bounding": [
+    720,
+    0,
+    1320,
+    800
+   ],
+   "color": "#8A8",
+   "flags": {}
+  },
+  {
+   "id": 3,
+   "title": "MiniMax H3 - I2V (첫 프레임 -> 영상)",
+   "bounding": [
+    2100,
+    0,
+    1320,
+    800
+   ],
+   "color": "#88A",
+   "flags": {}
+  },
+  {
+   "id": 4,
+   "title": "MiniMax H3 - FLF2V (첫 + 마지막 프레임 -> 영상)",
+   "bounding": [
+    720,
+    860,
+    1320,
+    800
+   ],
+   "color": "#A88",
+   "flags": {}
+  },
+  {
+   "id": 5,
+   "title": "MiniMax H3 - R2V (피사체 레퍼런스 -> 영상)",
+   "bounding": [
+    2100,
+    860,
+    1320,
+    800
+   ],
+   "color": "#AA8",
+   "flags": {}
+  }
+ ],
+ "config": {},
+ "extra": {
+  "ds": {
+   "scale": 0.5,
+   "offset": [
+    100,
+    100
+   ]
+  },
+  "frontendVersion": "1.55.17"
+ },
+ "version": 0.4
+}
