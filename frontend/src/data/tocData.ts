@@ -108,27 +108,62 @@ export const TOC_DATA: Session[] = [
   },
   {
     "id": "session3",
-    "title": "3회차 - 이미지 편집과 영상 생성 마스터",
+    "title": "3회차 - Codex와 Comfy CLI · 10월 27일",
     "steps": [
       {
         "id": "step1",
-        "title": "Inpainting & Outpainting 실전",
-        "file": "session3/step1-inpainting.md"
+        "title": "지난 수업에서 만든 이미지와 영상",
+        "file": "session3/step1-recap.md"
       },
       {
         "id": "step2",
-        "title": "비디오 생성 - Wan 2.2",
-        "file": "session3/step2-video-wan.md"
+        "title": "입력 재료에 따라 달라지는 생성 방식",
+        "file": "session3/step2-modes.md"
       },
       {
         "id": "step3",
-        "title": "비디오 생성 - LTX-2 / LTX-2.3",
-        "file": "session3/step3-video-ltxv.md"
+        "title": "챗gpt와 codex의 차이점 설명 (로컬 컴퓨터에서 작업한다)",
+        "file": "session3/step3-codex.md"
       },
       {
         "id": "step4",
-        "title": "이미지 업스케일링 전략",
-        "file": "session3/step5-upscaling-strategy.md"
+        "title": "codex(gpt 데스크톱) 설치하기",
+        "file": "session3/step4-install.md"
+      },
+      {
+        "id": "step5",
+        "title": "gpt 로그인",
+        "file": "session3/step5-login.md"
+      },
+      {
+        "id": "step6",
+        "title": "codex 모델을 sol 6.1로 설정해 두고 모든 권한으로 변경",
+        "file": "session3/step6-settings.md"
+      },
+      {
+        "id": "step7",
+        "title": "작업폴더 생성하고 그 폴더로 설정",
+        "file": "session3/step7-folder.md"
+      },
+      {
+        "id": "step8",
+        "title": "Comfy CLI 설치와 로그인 요청",
+        "file": "session3/step8-comfy-cli.md"
+      },
+      {
+        "id": "step9",
+        "title": "로그인 링크 열기와 인증 완료 확인",
+        "file": "session3/step9-comfy-login.md"
+      },
+      {
+        "id": "step10",
+        "title": "Comfy 공식 CLI를 스킬로 저장",
+        "file": "session3/step10-create-skill.md"
+      },
+      {
+        "id": "step11",
+        "title": "저장한 스킬을 다음 대화에서 사용",
+        "file": "session3/step11-skill-folder.md"
       }
     ]
   },

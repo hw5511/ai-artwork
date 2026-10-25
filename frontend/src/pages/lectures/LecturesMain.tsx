@@ -20,6 +20,7 @@ import {
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
+import '../../styles/session3.css'
 
 const LecturesMain = () => {
   const { sessionId, stepId } = useParams<{ sessionId: string; stepId: string }>()
@@ -192,6 +193,7 @@ const LecturesMain = () => {
 
       {/* 콘텐츠 영역 */}
       <Box
+        className={sessionId === 'session3' ? 's3-layout' : undefined}
         sx={{
           display: 'flex',
           flexDirection: isMobile ? 'column' : 'row',
@@ -204,19 +206,29 @@ const LecturesMain = () => {
       >
 
         {/* 사이드바 컴포넌트 */}
-        <LecturesSidebar
+        {isMobile && sessionId === 'session3' ? (
+          <nav className="s3-step-select">
+            <label htmlFor="s3-step">3회차 단계</label>
+            <select id="s3-step" value={stepId} onChange={event => navigate(`/lectures/session3/${event.target.value}`)}>
+              {currentSession?.steps.filter(step => !step.hidden).map((step, index) => (
+                <option key={step.id} value={step.id}>{index + 1}. {step.title}</option>
+              ))}
+            </select>
+          </nav>
+        ) : <LecturesSidebar
           session={currentSession}
           selectedStepId={stepId || ''}
           selectedFile={selectedFile}
           sidebarCollapsed={sidebarCollapsed}
           onToggleSidebar={handleToggleSidebar}
           onStepClick={handleStepClick}
-        />
+        />}
 
         {/* 콘텐츠 영역 - 반응형 */}
         <Box
           sx={{
             flex: 1,
+            minWidth: 0,
             px: isMobile ? 2 : isTablet ? 4 : 6,
             py: isMobile ? 2 : 4,
             overflow: 'auto',

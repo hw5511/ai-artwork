@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-25",
+  "method": "Local Windows rehearsal, isolated CODEX_HOME with copied Codex authentication and system skills; no owner config used or edited",
+  "versions": {
+    "codex_cli": "0.160.0",
+    "model": "gpt-6.1-sol",
+    "python": "3.13.15",
+    "comfy_cli_installed": "1.23.0"
+  },
+  "first_prompt": "comfy 공식 cli를 설치한 다음 로그인을 백그라운드로 실행하고 로그인 링크를 알려주고 계속 wait해줘",
+  "first_result": {
+    "initial_directory": "fresh empty student folder",
+    "install": "success, project-local .venv",
+    "command": "comfy --json cloud login --no-browser",
+    "background_process": true,
+    "stdout_event_type": "login_url",
+    "https_url_printed": true,
+    "login_url_in_material": false,
+    "stop": "login child process terminated immediately after URL event; browser never opened",
+    "authenticated": false,
+    "long_wait_verified": false,
+    "comfy_state": "redirected into rehearsal folder"
+  },
+  "second_prompt": "comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재 폴더에 저장해줘",
+  "second_result": {
+    "same_thread_followup": "success",
+    "isolated_new_thread_repeat": "success",
+    "skill_creator_instructions_read": true,
+    "output": "comfy-cli/SKILL.md",
+    "format_validation": "passed",
+    "slash_command_registration_proven": false,
+    "interpretation": "The full sentence was accepted by codex exec as a skill-creation request; this does not establish an interactive slash command or desktop behavior"
+  },
+  "dollar_variant": {
+    "prompt": "comfy 공식 cli에 관한 걸 $skill-creator 로 스킬로 현재 폴더에 저장해줘",
+    "initial_directory": "separate fresh empty student-dollar folder",
+    "result": "success",
+    "output": "comfy-cli/SKILL.md",
+    "format_validation": "passed"
+  },
+  "discovery": {
+    "action": "move generated comfy-cli folder into .agents/skills/",
+    "new_cli_chat_result": "recognized name comfy-cli and .agents/skills/comfy-cli/SKILL.md path",
+    "automatic_comfy_execution_tested": false
+  },
+  "desktop": {
+    "installation_check": "No ChatGPT/Codex Appx package, local Programs entry, or running desktop window found",
+    "screens": "Simplified HTML mockups based on official documentation screenshots and documented labels, not local desktop captures",
+    "login_screen": "Detailed sign-in controls unavailable in inspected official screenshots; show documented sign-in procedure and post-login product selector instead",
+    "model_picker": "Official model name and documented model control/Advanced layout; exact installed desktop variant not verified",
+    "unverified": [
+      "desktop installation flow",
+      "desktop authentication",
+      "desktop /skill-creator parsing",
+      "student account model availability"
+    ]
+  },
+  "sources": [
+    "https://learn.chatgpt.com/docs/quickstart?setup=app",
+    "https://learn.chatgpt.com/docs/windows/windows-app",
+    "https://learn.chatgpt.com/docs/use-chatgpt",
+    "https://learn.chatgpt.com/docs/models",
+    "https://learn.chatgpt.com/docs/permission-modes",
+    "https://learn.chatgpt.com/docs/build-skills",
+    "https://docs.comfy.org/agent-tools/cli",
+    "https://github.com/Comfy-Org/comfy-cli"
+  ],
+  "review": {
+    "prose": "Manual korean-natural-prose deslop review; quoted instructor wording and prompts preserved",
+    "class_duration": "2026-10-27 18:00-20:00, 11 pages",
+    "deployment": "Not deployed; repository-root index.html unchanged",
+    "build": "npm run gen and npm run build passed",
+    "visual": "All 11 pages opened and reviewed at 1920x1080 and 390px wide",
+    "browser": "playwright-tool CLI, test profile, --member codex; released and stopped",
+    "checks": "No page errors or horizontal overflow, Pretendard loaded, images loaded, clipboard exact, mobile step selector and next navigation passed, sessions 1/2/4 smoke checked",
+    "cleanup": "Temporary Codex auth copy removed; own preview server stopped"
+  }
+}
