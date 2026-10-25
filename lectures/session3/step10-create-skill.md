@@ -3,7 +3,7 @@
 
 # Comfy 공식 CLI를 스킬로 저장
 
-<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-chat"><small>수강생 입력 · 원문</small><div class="s3-message">comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재 폴더에 저장해줘</div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 앱 레이아웃 기반 목업 · 수강생 프롬프트 원문</figcaption></figure>
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-chat"><small>수강생 입력 · 원문</small><div class="s3-message">comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재 폴더에 저장해줘</div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 앱 레이아웃 기반 목업 · 수강생 프롬프트 원문</figcaption></figure>
 <div class="s3-prompt">
 
 ```text

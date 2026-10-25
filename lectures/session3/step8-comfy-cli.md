@@ -3,7 +3,7 @@
 
 # Comfy CLI 설치와 로그인 요청
 
-<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-chat"><small>수강생 입력 · 원문</small><div class="s3-message">comfy 공식 cli를 설치한 다음 로그인을 백그라운드로 실행하고 로그인 링크를 알려주고 계속 wait해줘</div><div class="s3-running"><i></i>설치와 로그인 링크 출력 대기</div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 앱 레이아웃 기반 목업 · 메시지와 대기 설명은 수업용 예시</figcaption></figure>
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-chat"><small>수강생 입력 · 원문</small><div class="s3-message">comfy 공식 cli를 설치한 다음 로그인을 백그라운드로 실행하고 로그인 링크를 알려주고 계속 wait해줘</div><div class="s3-running"><i></i>설치와 로그인 링크 출력 대기</div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 앱 레이아웃 기반 목업 · 메시지와 대기 설명은 수업용 예시</figcaption></figure>
 <div class="s3-prompt">
 
 ```text

@@ -3,7 +3,7 @@
 
 # 작업폴더 생성하고 그 폴더로 설정
 
-<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work">
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work">
 <div class="s3-folderview"><svg viewBox="0 0 260 170" aria-hidden="true"><path d="M10 150V24Q10 12 22 12H96L122 40H238Q250 40 250 52V150Q250 162 238 162H22Q10 162 10 150" fill="#dca86a"/></svg><h2>ai-artwork</h2><p>예시 경로 · C:\Users\내이름\Documents\ai-artwork</p><div class="s3-menu"><b>Add new project</b><span>Ctrl + O</span></div></div>
 <div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 목업 · 실제 앱 화면은 버전별 차이</figcaption></figure>
 <div class="s3-captions"><div><h2>빈 폴더 하나</h2><p>파일 탐색기에서 ai-artwork 생성</p></div><div><h2>앱에서 폴더 열기</h2><p>Add new project 또는 Ctrl + O<br/>방금 만든 폴더 선택</p></div></div>

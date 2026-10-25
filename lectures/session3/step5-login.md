@@ -4,7 +4,7 @@
 # gpt 로그인
 
 <figure class="s3-screen">
-<div class="s3-app"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-productpicker"><span>ChatGPT　⌄</span><div class="s3-menu"><b>ChatGPT</b><span>Create, learn, and explore</span><b>Codex　✓</b><span>Build, debug, and ship</span></div></div></div></div></div><figcaption>공식 Quickstart의 제품 선택 화면 기반 목업 · 로그인 직후 Codex 선택 · 로그인 창의 세부 UI는 미검증</figcaption></figure>
+<div class="s3-app"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-productpicker"><span>Codex　⌄</span><div class="s3-menu"><b>ChatGPT</b><span>Create, learn, and explore</span><b>Codex　✓</b><span>Build, debug, and ship</span></div></div></div></div></div><figcaption>공식 Quickstart의 제품 선택 화면 기반 목업 · 로그인 직후 Codex 선택 · 로그인 창의 세부 UI는 미검증</figcaption></figure>
 <div class="s3-captions"><div><h2>내 ChatGPT 계정</h2><p>앱 실행 후 로그인 · 평소 쓰던 계정 선택</p></div><div><h2>로그인 뒤 Codex 선택</h2><p>ChatGPT 드롭다운의 Codex · New chat</p></div></div>
 <p class="s3-note">GPT-6.1 Sol · Plus·Pro·Business·Enterprise·Edu 출시 대상 · Free·Go 제외 · 계정별 제공 여부 확인</p>
 

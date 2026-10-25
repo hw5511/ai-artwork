@@ -3083,10 +3083,10 @@ ImagePadForOutpaint에서 확장 방향과 픽셀 값을 조정한 다음 실행
 # 지난 수업에서 만든 이미지와 영상
 
 
-<div class="s3-pair"><figure><img src="./lectures/images/session3/codex/landscape.svg" alt="햇빛과 산을 그린 복습용 일러스트"/><figcaption>이미지 생성 · Z-Image Turbo</figcaption></figure><figure><div class="s3-film"><span>▶</span><i></i><i></i><i></i></div><figcaption>영상 생성 · LTX 2.5 t2v</figcaption></figure></div>
-<div class="s3-captions"><div><h2>10월 20일 · ComfyUI 첫 사용</h2><p>Comfy 가입 · 기본 인터페이스 · 템플릿 실행</p></div><div><h2>모델 바꾸기</h2><p>Z-Image Turbo · SDXL base와 Illustrious 비교</p></div></div>
+<div class="s3-recap-grid"><figure><a href="./lectures/images/session3/recap/z-image-turbo-official.webp" target="_blank" rel="noreferrer"><img src="./lectures/images/session3/recap/z-image-turbo-official.webp" alt="Z-Image Turbo 공식 템플릿 결과 · 항구 앞 인물 사진"/></a><figcaption>Z-Image Turbo<br/>공식 템플릿 프리뷰</figcaption></figure><figure><a href="./lectures/images/session3/recap/ltx-2.5-t2v-official.webp" target="_blank" rel="noreferrer"><img src="./lectures/images/session3/recap/ltx-2.5-t2v-official.webp" alt="LTX 2.5 t2v 공식 템플릿 영상 프리뷰 · 눈밭의 인물"/></a><figcaption>LTX 2.5 · t2v<br/>공식 영상 프리뷰</figcaption></figure><figure><a href="./lectures/images/session1/step6/sdxl_1024.png" target="_blank" rel="noreferrer"><img src="./lectures/images/session1/step6/sdxl_1024.png" alt="1회차 SDXL base 1024px 수업 결과 · 정원의 고양이"/></a><figcaption>SDXL base · 1024px<br/>1회차 수업 결과</figcaption></figure><figure><a href="./lectures/images/session1/step6/wai_illustrous.png" target="_blank" rel="noreferrer"><img src="./lectures/images/session1/step6/wai_illustrous.png" alt="1회차 WAI-Illustrious 수업 결과 · 파란 머리 인물 일러스트"/></a><figcaption>WAI-Illustrious · SDXL 계열<br/>1회차 수업 결과 · 서로 다른 프롬프트</figcaption></figure></div>
+<div class="s3-recap-workflow"><figure><a href="./lectures/images/session1/step5/stpe5.png" target="_blank" rel="noreferrer"><img src="./lectures/images/session1/step5/stpe5.png" alt="1회차 기본 이미지 생성 워크플로우의 실제 ComfyUI 화면"/></a><figcaption>1회차 기본 워크플로우 · 클릭하면 원본</figcaption></figure><div><h2>10월 20일 · ComfyUI 첫 사용</h2><p>Comfy 가입 · 기본 인터페이스 · 템플릿 실행</p><h2>모델 바꾸기</h2><p>Z-Image Turbo · SDXL base와 Illustrious 비교</p></div></div>
 <p class="s3-task">내 계정의 첫 이미지와 영상 다시 열기 · 사용한 모델 이름 찾기</p>
-<p class="s3-note">위 그림은 생성 방식 복습용 일러스트</p>
+<p class="s3-note">Z-Image·LTX 수업 출력은 저장소에 없어 <a href="https://github.com/Comfy-Org/workflow_templates/tree/67984637eefcd4825dcf5c134e39034785be1682/templates" target="_blank" rel="noreferrer">Comfy-Org/workflow_templates</a>의 공식 프리뷰 사용 · 오른쪽 두 장은 저장된 수업 결과</p>
 
 <div class="s3-footer"><span>01 / 11</span><span></span></div>
 <nav class="s3-pagination"><a href="#/lectures/session3/step2">다음 · 입력 재료에 따라 달라지는 생성 방식</a></nav>
@@ -3097,7 +3097,7 @@ ImagePadForOutpaint에서 확장 방향과 픽셀 값을 조정한 다음 실행
 
 # Comfy 공식 CLI를 스킬로 저장
 
-<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-chat"><small>수강생 입력 · 원문</small><div class="s3-message">comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재 폴더에 저장해줘</div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 앱 레이아웃 기반 목업 · 수강생 프롬프트 원문</figcaption></figure>
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-chat"><small>수강생 입력 · 원문</small><div class="s3-message">comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재 폴더에 저장해줘</div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 앱 레이아웃 기반 목업 · 수강생 프롬프트 원문</figcaption></figure>
 <div class="s3-prompt">
 
 \`\`\`text
@@ -3129,13 +3129,18 @@ comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재 폴더에 저
 <nav class="s3-pagination"><a href="#/lectures/session3/step10">이전</a></nav>
 </article>
 `,
-  "session3/step2-modes.md": `<article class="s3-lesson">
+  "session3/step2-modes.md": `<article class="s3-lesson s3-recap-modes">
 <div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:05–18:10</div>
 
 # 입력 재료에 따라 달라지는 생성 방식
 
 
-<div class="s3-mode-layout"><img src="./lectures/images/session3/codex/modes.svg" alt="수정 영역이 표시된 그림과 여러 프레임의 영상 필름"/><div><h2>10월 22일 · 이미지</h2><p>t2i · 글로 새 이미지<br/>i2i · 기존 이미지 기반 변형<br/>inpaint · 마스크 영역 수정<br/>edit · 이미지에 수정 지시</p><h2>영상</h2><p>t2v · 글로 영상<br/>i2v · 시작 이미지<br/>flf2v · 첫 프레임과 끝 프레임<br/>r2v · 참조 이미지·영상</p></div></div>
+<h2>10월 22일 · 이미지 편집 비교</h2>
+<figure class="s3-qwen-results"><div class="s3-sheet-scroll"><a href="./lectures/images/session4/qwen_edit_result.jpg" target="_blank" rel="noreferrer"><img src="./lectures/images/session4/qwen_edit_result.jpg" alt="실제 Qwen 수업 비교 시트 · 입력 그림, t2i 사진, i2i 사진, 오른쪽 사과만 초록색으로 바꾼 inpaint, 칼을 추가한 edit 순서"/></a></div><figcaption>수업 실행 결과 · Qwen-Image-Edit 2511 · 왼쪽부터 입력 / t2i / i2i / inpaint / edit · 모바일은 좌우로 밀어 보기 · 클릭하면 원본</figcaption></figure>
+<div class="s3-mode-definitions"><p><b>t2i</b> · 글로 새 이미지</p><p><b>i2i</b> · 입력 그림을 사진으로</p><p><b>inpaint</b> · 오른쪽 사과만 수정</p><p><b>edit</b> · 칼 추가 지시</p></div>
+<h2>영상 · 시작 이미지와 참조 이미지의 역할</h2>
+<div class="s3-recap-grid s3-video-modes"><figure><img src="./lectures/images/session3/recap/ltx-2.5-t2v-official.webp" alt="t2v · LTX 2.5 공식 템플릿 영상 프리뷰"/><figcaption><b>t2v</b> · 글로 영상<br/>LTX 2.5 공식 출력 프리뷰</figcaption></figure><figure><img src="./downloads/session4/step2/minimax_first.png" alt="i2v 수업 입력 · 카페 창밖을 보는 여성의 첫 프레임"/><figcaption><b>i2v</b> · 시작 이미지<br/>MiniMax 수업 입력</figcaption></figure><figure><div class="s3-frame-pair"><img src="./downloads/session4/step2/minimax_first.png" alt="flf2v 첫 프레임 · 창밖을 보는 모습"/><img src="./downloads/session4/step2/minimax_last.png" alt="flf2v 끝 프레임 · 돌아보며 웃는 모습"/></div><figcaption><b>flf2v</b> · 첫 프레임 → 끝 프레임<br/>MiniMax 수업 입력 2장</figcaption></figure><figure><img src="./downloads/session4/step2/minimax_subject.png" alt="r2v 수업 입력 · 흰 스웨터를 입은 여성의 인물 참조 사진"/><figcaption><b>r2v</b> · 참조 이미지·영상<br/>MiniMax 수업 인물 참조</figcaption></figure></div>
+<p class="s3-note">수업 자료: <a href="#/lectures/session4/step6">Qwen 4가지 편집 결과</a> · <a href="#/lectures/session4/step2">MiniMax 4모드 입력 사진·워크플로우</a> · t2v 프리뷰: <a href="https://github.com/Comfy-Org/workflow_templates/blob/67984637eefcd4825dcf5c134e39034785be1682/templates/video_ltx2_5_t2v-1.webp" target="_blank" rel="noreferrer">Comfy-Org/workflow_templates</a></p>
 <div class="s3-captions"><div><h2>로컬 모델</h2><p>내 PC의 GPU로 실행 · 모델 파일 필요</p></div><div><h2>유료 API 노드</h2><p>외부 서비스 호출 · 서비스별 요금</p></div></div>
 
 <div class="s3-footer"><span>02 / 11</span><span></span></div>
@@ -3477,7 +3482,7 @@ Lotus 깊이 추정 모델로 장면의 원근·공간 구조를 추출하여 �
 # gpt 로그인
 
 <figure class="s3-screen">
-<div class="s3-app"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-productpicker"><span>ChatGPT　⌄</span><div class="s3-menu"><b>ChatGPT</b><span>Create, learn, and explore</span><b>Codex　✓</b><span>Build, debug, and ship</span></div></div></div></div></div><figcaption>공식 Quickstart의 제품 선택 화면 기반 목업 · 로그인 직후 Codex 선택 · 로그인 창의 세부 UI는 미검증</figcaption></figure>
+<div class="s3-app"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-productpicker"><span>Codex　⌄</span><div class="s3-menu"><b>ChatGPT</b><span>Create, learn, and explore</span><b>Codex　✓</b><span>Build, debug, and ship</span></div></div></div></div></div><figcaption>공식 Quickstart의 제품 선택 화면 기반 목업 · 로그인 직후 Codex 선택 · 로그인 창의 세부 UI는 미검증</figcaption></figure>
 <div class="s3-captions"><div><h2>내 ChatGPT 계정</h2><p>앱 실행 후 로그인 · 평소 쓰던 계정 선택</p></div><div><h2>로그인 뒤 Codex 선택</h2><p>ChatGPT 드롭다운의 Codex · New chat</p></div></div>
 <p class="s3-note">GPT-6.1 Sol · Plus·Pro·Business·Enterprise·Edu 출시 대상 · Free·Go 제외 · 계정별 제공 여부 확인</p>
 
@@ -3623,11 +3628,11 @@ VAE Encode → KSampler → VAE Decode → Save Image
 
 # codex 모델을 sol 6.1로 설정해 두고 모든 권한으로 변경
 
-<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work">
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work">
 <div class="s3-settings"><div><small>모델 선택 · 입력창 아래</small><div class="s3-menu"><span>Advanced</span><b>GPT-6.1 Sol　✓</b></div><p>gpt-6.1-sol</p></div><div><small>권한 선택 · 입력창 아래</small><div class="s3-menu"><span>Ask for approval</span><span>Approve for me</span><b class="s3-orange">Full access　✓</b><span>Custom (config.toml)</span></div></div></div>
-<div class="s3-composer"><span class="s3-folder"></span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 목업 · 실제 앱 화면은 버전별 차이</figcaption></figure>
+<div class="s3-composer"><span class="s3-folder"></span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>모델명·권한 라벨은 공식 문서 표기 · 메뉴 배치는 수업용 목업</figcaption></figure>
 <div class="s3-captions"><div><h2>GPT-6.1 Sol</h2><p>모델 선택 메뉴 · 필요하면 Advanced<br/>현재 대화의 선택값 확인</p></div><div><h2>Full access</h2><p>내 PC 파일 수정·명령 실행·네트워크 허용<br/>작업 폴더 밖에도 접근 가능한 권한</p></div></div>
-<p class="s3-note">메뉴에 Full access가 없을 때 · Settings의 Permissions 항목 확인 · 조직 제한 시 강사에게 알리기</p>
+<p class="s3-note">메뉴에 Full access가 없을 때 · 공식 Permissions 문서와 앱 Settings 확인 · 조직 제한 시 강사에게 알리기</p>
 
 <div class="s3-footer"><span>06 / 11</span><span><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noreferrer">모델 선택</a> · <a href="https://learn.chatgpt.com/docs/permission-modes" target="_blank" rel="noreferrer">권한 메뉴</a></span></div>
 <nav class="s3-pagination"><a href="#/lectures/session3/step5">이전</a><a href="#/lectures/session3/step7">다음 · 작업폴더 생성하고 그 폴더로 설정</a></nav>
@@ -3638,7 +3643,7 @@ VAE Encode → KSampler → VAE Decode → Save Image
 
 # 작업폴더 생성하고 그 폴더로 설정
 
-<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work">
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work">
 <div class="s3-folderview"><svg viewBox="0 0 260 170" aria-hidden="true"><path d="M10 150V24Q10 12 22 12H96L122 40H238Q250 40 250 52V150Q250 162 238 162H22Q10 162 10 150" fill="#dca86a"/></svg><h2>ai-artwork</h2><p>예시 경로 · C:\\Users\\내이름\\Documents\\ai-artwork</p><div class="s3-menu"><b>Add new project</b><span>Ctrl + O</span></div></div>
 <div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 목업 · 실제 앱 화면은 버전별 차이</figcaption></figure>
 <div class="s3-captions"><div><h2>빈 폴더 하나</h2><p>파일 탐색기에서 ai-artwork 생성</p></div><div><h2>앱에서 폴더 열기</h2><p>Add new project 또는 Ctrl + O<br/>방금 만든 폴더 선택</p></div></div>
@@ -3653,7 +3658,7 @@ VAE Encode → KSampler → VAE Decode → Save Image
 
 # Comfy CLI 설치와 로그인 요청
 
-<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-chat"><small>수강생 입력 · 원문</small><div class="s3-message">comfy 공식 cli를 설치한 다음 로그인을 백그라운드로 실행하고 로그인 링크를 알려주고 계속 wait해줘</div><div class="s3-running"><i></i>설치와 로그인 링크 출력 대기</div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 앱 레이아웃 기반 목업 · 메시지와 대기 설명은 수업용 예시</figcaption></figure>
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-chat"><small>수강생 입력 · 원문</small><div class="s3-message">comfy 공식 cli를 설치한 다음 로그인을 백그라운드로 실행하고 로그인 링크를 알려주고 계속 wait해줘</div><div class="s3-running"><i></i>설치와 로그인 링크 출력 대기</div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 앱 레이아웃 기반 목업 · 메시지와 대기 설명은 수업용 예시</figcaption></figure>
 <div class="s3-prompt">
 
 \`\`\`text
