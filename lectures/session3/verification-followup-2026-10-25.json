@@ -1,0 +1,411 @@
+{
+  "date": "2026-10-25",
+  "base_commit": "6ee8c5d0f19a458818578d000d81e9fe5ac2db80",
+  "purpose": "Reviewer Yuki follow-up: replace recap placeholder art with class media and credited official template previews",
+  "media_manifest": "lectures/images/session3/recap/SOURCES.txt",
+  "visual_review": "All 11 pages personally opened as screenshots at 1920x1080 and 390x844; mobile full-page captures; step2 rechecked after final scroll-container change",
+  "evidence_directory": "C:\\wi\\projects\\lectures\\artwork_s3_qa\\followup",
+  "docs_check": {
+    "sources": [
+      "https://learn.chatgpt.com/docs/quickstart?setup=app",
+      "https://learn.chatgpt.com/docs/windows/windows-app",
+      "https://learn.chatgpt.com/docs/models",
+      "https://learn.chatgpt.com/docs/permission-modes"
+    ],
+    "reference_images": "Existing artwork_s3_qa/official-*.png and references/s3-*.png, plus followup/official-product-dropdown.png",
+    "verified_labels": [
+      "Install the ChatGPT desktop app",
+      "Download ChatGPT",
+      "ChatGPT",
+      "Codex",
+      "Create, learn, and explore",
+      "Build, debug, and ship",
+      "New chat",
+      "Scheduled",
+      "Plugins",
+      "Chats",
+      "Advanced",
+      "GPT-6.1 Sol",
+      "Ask for approval",
+      "Approve for me",
+      "Full access",
+      "Custom (config.toml)",
+      "Add new project",
+      "Ctrl + O"
+    ],
+    "corrections": [
+      "Added Scheduled to Codex sidebar",
+      "Selected product dropdown now reads Codex",
+      "Removed unsupported claim that Permissions is a Settings item",
+      "Clarified model name comes from official text and menu arrangement is a teaching mockup"
+    ],
+    "limits": "Official interactive model screenshot demonstrates 6 Sol Light; it does not establish a literal GPT-6.1 Sol menu screenshot. Mockup uses the exact model name documented in text; no installed desktop version claimed."
+  },
+  "qa": {
+    "pages": [
+      {
+        "width": 1920,
+        "step": 1,
+        "status": 200,
+        "title": "지난 수업에서 만든 이미지와 영상",
+        "overflow": false,
+        "font": true,
+        "images": [
+          {
+            "src": "./lectures/images/session3/recap/z-image-turbo-official.webp",
+            "ok": true
+          },
+          {
+            "src": "./lectures/images/session3/recap/ltx-2.5-t2v-official.webp",
+            "ok": true
+          },
+          {
+            "src": "./lectures/images/session1/step6/sdxl_1024.png",
+            "ok": true
+          },
+          {
+            "src": "./lectures/images/session1/step6/wai_illustrous.png",
+            "ok": true
+          },
+          {
+            "src": "./lectures/images/session1/step5/stpe5.png",
+            "ok": true
+          }
+        ],
+        "articleBottom": 971.546875
+      },
+      {
+        "width": 1920,
+        "step": 2,
+        "status": "hash navigation",
+        "title": "입력 재료에 따라 달라지는 생성 방식",
+        "overflow": false,
+        "font": true,
+        "images": [
+          {
+            "src": "./lectures/images/session4/qwen_edit_result.jpg",
+            "ok": true
+          },
+          {
+            "src": "./lectures/images/session3/recap/ltx-2.5-t2v-official.webp",
+            "ok": true
+          },
+          {
+            "src": "./downloads/session4/step2/minimax_first.png",
+            "ok": true
+          },
+          {
+            "src": "./downloads/session4/step2/minimax_first.png",
+            "ok": true
+          },
+          {
+            "src": "./downloads/session4/step2/minimax_last.png",
+            "ok": true
+          },
+          {
+            "src": "./downloads/session4/step2/minimax_subject.png",
+            "ok": true
+          }
+        ],
+        "articleBottom": 1071.671875
+      },
+      {
+        "width": 1920,
+        "step": 3,
+        "status": "hash navigation",
+        "title": "챗gpt와 codex의 차이점 설명 (로컬 컴퓨터에서 작업한다)",
+        "overflow": false,
+        "font": true,
+        "images": [
+          {
+            "src": "./lectures/images/session3/codex/local-computer.svg",
+            "ok": true
+          }
+        ],
+        "articleBottom": 856.078125
+      },
+      {
+        "width": 1920,
+        "step": 4,
+        "status": "hash navigation",
+        "title": "codex(gpt 데스크톱) 설치하기",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 957.921875
+      },
+      {
+        "width": 1920,
+        "step": 5,
+        "status": "hash navigation",
+        "title": "gpt 로그인",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 980.25
+      },
+      {
+        "width": 1920,
+        "step": 6,
+        "status": "hash navigation",
+        "title": "codex 모델을 sol 6.1로 설정해 두고 모든 권한으로 변경",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1020.25
+      },
+      {
+        "width": 1920,
+        "step": 7,
+        "status": "hash navigation",
+        "title": "작업폴더 생성하고 그 폴더로 설정",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1045.71875
+      },
+      {
+        "width": 1920,
+        "step": 8,
+        "status": "hash navigation",
+        "title": "Comfy CLI 설치와 로그인 요청",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1032.21875
+      },
+      {
+        "width": 1920,
+        "step": 9,
+        "status": "hash navigation",
+        "title": "로그인 링크 열기와 인증 완료 확인",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 998.984375
+      },
+      {
+        "width": 1920,
+        "step": 10,
+        "status": "hash navigation",
+        "title": "Comfy 공식 CLI를 스킬로 저장",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1051.625
+      },
+      {
+        "width": 1920,
+        "step": 11,
+        "status": "hash navigation",
+        "title": "저장한 스킬을 다음 대화에서 사용",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1037.78125
+      },
+      {
+        "width": 390,
+        "step": 1,
+        "status": "hash navigation",
+        "title": "지난 수업에서 만든 이미지와 영상",
+        "overflow": false,
+        "font": true,
+        "images": [
+          {
+            "src": "./lectures/images/session3/recap/z-image-turbo-official.webp",
+            "ok": true
+          },
+          {
+            "src": "./lectures/images/session3/recap/ltx-2.5-t2v-official.webp",
+            "ok": true
+          },
+          {
+            "src": "./lectures/images/session1/step6/sdxl_1024.png",
+            "ok": true
+          },
+          {
+            "src": "./lectures/images/session1/step6/wai_illustrous.png",
+            "ok": true
+          },
+          {
+            "src": "./lectures/images/session1/step5/stpe5.png",
+            "ok": true
+          }
+        ],
+        "articleBottom": 1488.328125
+      },
+      {
+        "width": 390,
+        "step": 2,
+        "status": "hash navigation",
+        "title": "입력 재료에 따라 달라지는 생성 방식",
+        "overflow": false,
+        "font": true,
+        "images": [
+          {
+            "src": "./lectures/images/session4/qwen_edit_result.jpg",
+            "ok": true
+          },
+          {
+            "src": "./lectures/images/session3/recap/ltx-2.5-t2v-official.webp",
+            "ok": true
+          },
+          {
+            "src": "./downloads/session4/step2/minimax_first.png",
+            "ok": true
+          },
+          {
+            "src": "./downloads/session4/step2/minimax_first.png",
+            "ok": true
+          },
+          {
+            "src": "./downloads/session4/step2/minimax_last.png",
+            "ok": true
+          },
+          {
+            "src": "./downloads/session4/step2/minimax_subject.png",
+            "ok": true
+          }
+        ],
+        "articleBottom": 1658.03125
+      },
+      {
+        "width": 390,
+        "step": 3,
+        "status": "hash navigation",
+        "title": "챗gpt와 codex의 차이점 설명 (로컬 컴퓨터에서 작업한다)",
+        "overflow": false,
+        "font": true,
+        "images": [
+          {
+            "src": "./lectures/images/session3/codex/local-computer.svg",
+            "ok": true
+          }
+        ],
+        "articleBottom": 1023.34375
+      },
+      {
+        "width": 390,
+        "step": 4,
+        "status": "hash navigation",
+        "title": "codex(gpt 데스크톱) 설치하기",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1087.875
+      },
+      {
+        "width": 390,
+        "step": 5,
+        "status": "hash navigation",
+        "title": "gpt 로그인",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1160.8125
+      },
+      {
+        "width": 390,
+        "step": 6,
+        "status": "hash navigation",
+        "title": "codex 모델을 sol 6.1로 설정해 두고 모든 권한으로 변경",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1420.625
+      },
+      {
+        "width": 390,
+        "step": 7,
+        "status": "hash navigation",
+        "title": "작업폴더 생성하고 그 폴더로 설정",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1213.21875
+      },
+      {
+        "width": 390,
+        "step": 8,
+        "status": "hash navigation",
+        "title": "Comfy CLI 설치와 로그인 요청",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1356.25
+      },
+      {
+        "width": 390,
+        "step": 9,
+        "status": "hash navigation",
+        "title": "로그인 링크 열기와 인증 완료 확인",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1239.28125
+      },
+      {
+        "width": 390,
+        "step": 10,
+        "status": "hash navigation",
+        "title": "Comfy 공식 CLI를 스킬로 저장",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1286.6875
+      },
+      {
+        "width": 390,
+        "step": 11,
+        "status": "hash navigation",
+        "title": "저장한 스킬을 다음 대화에서 사용",
+        "overflow": false,
+        "font": true,
+        "images": [],
+        "articleBottom": 1329.625
+      }
+    ],
+    "errors": [],
+    "failedRequests": []
+  },
+  "interactions": {
+    "scroll": {
+      "left": 414,
+      "max": 414
+    },
+    "select": "Comfy CLI 설치와 로그인 요청",
+    "next": "로그인 링크 열기와 인증 완료 확인",
+    "copy": [
+      {
+        "step": 8,
+        "exact": true,
+        "text": "comfy 공식 cli를 설치한 다음 로그인을 백그라운드로 실행하고 로그인 링크를 알려주고 계속 wait해줘"
+      },
+      {
+        "step": 10,
+        "exact": true,
+        "text": "comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재 폴더에 저장해줘"
+      }
+    ],
+    "otherSessions": [
+      {
+        "session": 1,
+        "title": "강의 개요",
+        "s3Page": 0
+      },
+      {
+        "session": 2,
+        "title": "LoRA 모델 탐험",
+        "s3Page": 0
+      },
+      {
+        "session": 4,
+        "title": "Get/Set 노드와 워크플로우 정리 기법",
+        "s3Page": 0
+      }
+    ]
+  },
+  "build": "npm run deploy passed (generators, TypeScript, Vite singlefile, copy dist/index.html and logo.svg to repository root)",
+  "deployment_method": "GitHub Pages legacy build from main:/, confirmed via GitHub Pages API; merge/push and live evidence recorded in C:/wi/projects/lectures/artwork_s3_receipt.md"
+}

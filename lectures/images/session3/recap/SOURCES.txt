@@ -1,0 +1,34 @@
+# Session 3 recap media · 2026-10-25 follow-up
+
+No new artwork was drawn or generated for these recap pages.
+
+## Repository class material reused without changes
+
+| Page | Material | Existing file | Provenance / meaning |
+| --- | --- | --- | --- |
+| step1 | Actual ComfyUI workflow screenshot | `lectures/images/session1/step5/stpe5.png` | Session 1 basic workflow screen; open original for node labels |
+| step1 | SDXL base result | `lectures/images/session1/step6/sdxl_1024.png` | Session 1 checkpoint exercise, cat photo |
+| step1 | WAI-Illustrious result | `lectures/images/session1/step6/wai_illustrous.png` | Session 1 checkpoint exercise; a different prompt from the SDXL cat, not a controlled same-prompt comparison |
+| step2 | Input / T2I / I2I / Inpaint / Edit result sheet | `lectures/images/session4/qwen_edit_result.jpg` | Added by `5c7f5f3` on 2026-10-22; session4/step6-qwen-edit-compare.md and qwen_edit_4tasks.json describe this actual class experiment |
+| step2 | I2V / FLF2V first frame | `downloads/session4/step2/minimax_first.png` | 2026-10-22 MiniMax four-mode cafe exercise; input, not a generated video frame |
+| step2 | FLF2V last frame | `downloads/session4/step2/minimax_last.png` | Same exercise; input |
+| step2 | R2V subject reference | `downloads/session4/step2/minimax_subject.png` | Same exercise; input |
+
+The Qwen sheet intentionally includes the original simple apple drawing: it is the real class input and its actual model outputs, not replacement placeholder art. On mobile, swipe the original sheet horizontally or open it at full size.
+
+## Official template fallback (Comfy-Org credit)
+
+Searched current `lectures/images`, `downloads`, sessions 1/2/4 source files and all-branch media history, including commits around 2026-10-20 and 2026-10-22. No stored October class output or template screenshot was found for Z-Image Turbo or LTX **2.5 T2V**. Existing LTX downloads are 2.3 workflows, and the coffee video is a different exercise. Historical August renewal demo media belongs to the separated agent-artwork project, not the October classes. Do not label any of these as October class results.
+
+The two files below are unmodified official template previews, downloaded on 2026-10-25 and credited in both visible page copy and this manifest. The LTX WebP is an animated video preview. They are not screenshots captured from a student's account.
+
+Upstream repository: https://github.com/Comfy-Org/workflow_templates
+
+Pinned upstream commit: `67984637eefcd4825dcf5c134e39034785be1682`
+
+| Local file | Official source |
+| --- | --- |
+| `z-image-turbo-official.webp` | https://github.com/Comfy-Org/workflow_templates/blob/67984637eefcd4825dcf5c134e39034785be1682/templates/image_z_image_turbo-1.webp |
+| `ltx-2.5-t2v-official.webp` | https://github.com/Comfy-Org/workflow_templates/blob/67984637eefcd4825dcf5c134e39034785be1682/templates/video_ltx2_5_t2v-1.webp |
+
+Removed recap-only `codex/landscape.svg`, `codex/modes.svg`, and the CSS film/play-button placeholder.

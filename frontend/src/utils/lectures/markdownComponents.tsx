@@ -96,8 +96,8 @@ export const createMarkdownComponents = ({
   h3: ({ children }: any) => (
     <Typography variant="h3" sx={{ mt: 4, mb: 2, fontWeight: 500, color: 'rgba(255, 255, 255, 0.9)' }}>{children}</Typography>
   ),
-  p: ({ children }: any) => (
-    <Typography sx={{ mb: 3, lineHeight: 1.9, color: 'rgba(255, 255, 255, 0.85)' }}>{children}</Typography>
+  p: ({ children, node: _node, ...props }: any) => (
+    <Typography {...props} sx={{ mb: 3, lineHeight: 1.9, color: 'rgba(255, 255, 255, 0.85)' }}>{children}</Typography>
   ),
   hr: () => (
     <Box sx={{ my: 5, borderBottom: '1px solid rgba(255,255,255,0.1)' }} />
