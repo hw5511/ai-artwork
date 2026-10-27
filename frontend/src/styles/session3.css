@@ -88,6 +88,7 @@ main:has(.s3-lesson) .MuiTypography-root { font-family: 'Pretendard', sans-serif
   margin: 32px 0;
 }
 .lesson-example-row--square { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.lesson-example-row--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .lesson-example-row--mixed { grid-template-columns: minmax(0, 1fr) repeat(2, minmax(0, 1.7778fr)); }
 .lesson-example-row figure {
   min-width: 0;
@@ -111,6 +112,7 @@ main:has(.s3-lesson) .MuiTypography-root { font-family: 'Pretendard', sans-serif
 @media (max-width: 899.95px) {
   .lesson-example-row,
   .lesson-example-row--square,
+  .lesson-example-row--four,
   .lesson-example-row--mixed {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;

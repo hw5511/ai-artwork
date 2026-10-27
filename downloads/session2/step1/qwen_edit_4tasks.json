@@ -2637,10 +2637,10 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "In the masked area, change only the man's moss-green field jacket to a light blue denim jacket. Keep the same man, golden retriever, leash, park, pose, camera, and lighting unchanged."
+        "In the masked area, change only the man's moss-green field jacket to a light blue denim jacket. Keep the same man, his cream T-shirt, golden retriever, red leash, park, pose, camera angle, and lighting unchanged. His hands stay empty except for the red leash."
       ],
       "widgets_values_named": {
-        "value": "In the masked area, change only the man's moss-green field jacket to a light blue denim jacket. Keep the same man, golden retriever, leash, park, pose, camera, and lighting unchanged."
+        "value": "In the masked area, change only the man's moss-green field jacket to a light blue denim jacket. Keep the same man, his cream T-shirt, golden retriever, red leash, park, pose, camera angle, and lighting unchanged. His hands stay empty except for the red leash."
       }
     },
     {
@@ -3136,7 +3136,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        123456789,
+        777,
         "fixed",
         4,
         1,
@@ -3145,7 +3145,7 @@
         1
       ],
       "widgets_values_named": {
-        "seed": 123456789,
+        "seed": 777,
         "control_after_generate": "fixed",
         "steps": 4,
         "cfg": 1,
@@ -3773,10 +3773,10 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "Change only the man's moss-green field jacket to a light blue denim jacket. Keep exactly the same man, golden retriever, red leash, blue collar, park, pose, camera, lighting, and all other details unchanged. Preserve natural hands, paws, and the leash connection."
+        "Change only the golden retriever into a realistic adult orange tabby cat walking on the same red leash and wearing the same blue collar. Keep the cat the same size and in exactly the same place on the path as the dog. Keep exactly the same man, his moss-green field jacket, the park, pose, camera, lighting, and all other details unchanged. Preserve natural paws and a natural connection between the red leash and blue collar."
       ],
       "widgets_values_named": {
-        "value": "Change only the man's moss-green field jacket to a light blue denim jacket. Keep exactly the same man, golden retriever, red leash, blue collar, park, pose, camera, lighting, and all other details unchanged. Preserve natural hands, paws, and the leash connection."
+        "value": "Change only the golden retriever into a realistic adult orange tabby cat walking on the same red leash and wearing the same blue collar. Keep the cat the same size and in exactly the same place on the path as the dog. Keep exactly the same man, his moss-green field jacket, the park, pose, camera, lighting, and all other details unchanged. Preserve natural paws and a natural connection between the red leash and blue collar."
       }
     },
     {

@@ -9,20 +9,24 @@
 | T2I | 글 | 글에서 새 이미지를 만듭니다. |
 | I2I | 글 + 이미지 | 입력 이미지의 구도나 형태를 참고해 다시 만듭니다. |
 | Inpainting | 글 + 이미지 + 마스크 | 마스크로 칠한 부분만 다시 만듭니다. |
-| Image Edit | 편집 명령 + 이미지 | “재킷만 청재킷으로 바꿔 줘”처럼 바꿀 내용을 말로 지시합니다. |
+| Image Edit | 편집 명령 + 이미지 | “골든리트리버만 고양이로 바꿔 줘”처럼 바꿀 내용을 말로 지시합니다. |
 
-<div class="lesson-example-row lesson-example-row--square">
+<div class="lesson-example-row lesson-example-row--square lesson-example-row--four">
   <figure>
     <img class="lesson-example-image" src="./downloads/session2/step1/park_walk.png" alt="초록색 필드 재킷을 입고 골든리트리버를 산책하는 남성 원본" style="width:100%;max-width:100%;" />
-    <figcaption>원본 · 초록색 필드 재킷</figcaption>
+    <figcaption>원본 · 초록 재킷과 골든리트리버</figcaption>
   </figure>
   <figure>
     <img class="lesson-example-image" src="./downloads/session2/step1/park_walk_mask.png" alt="남성의 재킷 영역을 지정한 인페인팅 마스크" style="width:100%;max-width:100%;" />
     <figcaption>마스크 · 재킷 영역</figcaption>
   </figure>
   <figure>
-    <img class="lesson-example-image" src="./lectures/images/session2/step1/qwen_edit_result.png" alt="남성의 재킷을 청재킷으로 바꾼 이미지 편집 결과" style="width:100%;max-width:100%;" />
-    <figcaption>Image Edit 결과 · 청재킷</figcaption>
+    <img class="lesson-example-image" src="./lectures/images/session2/step1/qwen_inpaint_denim_result.png" alt="마스크로 지정한 남성의 재킷만 청재킷으로 바꾼 인페인팅 결과" style="width:100%;max-width:100%;" />
+    <figcaption>Inpainting · 청재킷</figcaption>
+  </figure>
+  <figure>
+    <img class="lesson-example-image" src="./lectures/images/session2/step1/qwen_edit_cat_result.png" alt="골든리트리버만 주황색 줄무늬 고양이로 바꾼 이미지 편집 결과" style="width:100%;max-width:100%;" />
+    <figcaption>Image Edit · 고양이</figcaption>
   </figure>
 </div>
 
@@ -50,25 +54,25 @@ A man in his 30s walking a golden retriever on a leash along a tree-lined path i
 ### Inpainting 프롬프트
 
 ```prompt
-In the masked area, change only the man's moss-green field jacket to a light blue denim jacket. Keep the same man, golden retriever, leash, park, pose, camera, and lighting unchanged.
+In the masked area, change only the man's moss-green field jacket to a light blue denim jacket. Keep the same man, his cream T-shirt, golden retriever, red leash, park, pose, camera angle, and lighting unchanged. His hands stay empty except for the red leash.
 ```
 
 한국어 뜻:
 
 ```text
-마스크로 칠한 영역에서 남성의 이끼색 재킷만 연한 파란색 청재킷으로 바꿉니다. 남성, 골든리트리버, 목줄, 공원, 자세, 카메라와 빛은 그대로 둡니다.
+마스크로 칠한 영역에서 남성의 이끼색 재킷만 연한 파란색 청재킷으로 바꿉니다. 남성, 크림색 티셔츠, 골든리트리버, 빨간 목줄, 공원, 자세, 카메라 각도와 빛은 그대로 둡니다. 손에는 빨간 목줄 말고 아무것도 들지 않습니다.
 ```
 
 ### Image Edit 지시문
 
 ```prompt
-Change only the man's moss-green field jacket to a light blue denim jacket. Keep exactly the same man, golden retriever, red leash, blue collar, park, pose, camera, lighting, and all other details unchanged. Preserve natural hands, paws, and the leash connection.
+Change only the golden retriever into a realistic adult orange tabby cat walking on the same red leash and wearing the same blue collar. Keep the cat the same size and in exactly the same place on the path as the dog. Keep exactly the same man, his moss-green field jacket, the park, pose, camera, lighting, and all other details unchanged. Preserve natural paws and a natural connection between the red leash and blue collar.
 ```
 
 한국어 뜻:
 
 ```text
-남성의 이끼색 재킷만 연한 파란색 청재킷으로 바꿉니다. 같은 남성, 골든리트리버, 빨간 목줄, 파란 목걸이, 공원, 자세, 카메라, 빛과 나머지 요소는 그대로 둡니다. 손과 발, 목줄 연결은 자연스럽게 유지합니다.
+골든리트리버만 같은 빨간 목줄을 매고 같은 파란 목걸이를 착용한 사실적인 성묘 주황색 줄무늬 고양이로 바꿉니다. 고양이는 개와 같은 크기로 길 위의 정확히 같은 자리에 둡니다. 같은 남성, 남성의 이끼색 필드 재킷, 공원, 자세, 카메라, 빛과 나머지 요소는 그대로 둡니다. 발과 빨간 목줄·파란 목걸이의 연결은 자연스럽게 유지합니다.
 ```
 
 ## Qwen 이미지 편집 4가지 비교
