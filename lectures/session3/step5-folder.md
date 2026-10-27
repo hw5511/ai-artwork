@@ -9,6 +9,6 @@
 <div class="s3-captions"><div><h2>빈 폴더 하나</h2><p>파일 탐색기에서 ai-artwork 생성</p></div><div><h2>앱에서 폴더 열기</h2><p>Add new project 또는 Ctrl + O<br/>방금 만든 폴더 선택</p></div></div>
 <p class="s3-task">입력창의 작업 위치 확인 · 이후 파일은 이 폴더에서 확인</p>
 
-<div class="s3-footer"><span>07 / 11</span><span><a href="https://learn.chatgpt.com/docs/windows/windows-app" target="_blank" rel="noreferrer">폴더 열기</a> · <a href="https://learn.chatgpt.com/docs/projects" target="_blank" rel="noreferrer">프로젝트와 작업 위치</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step6">이전</a><a href="#/lectures/session3/step8">다음 · Comfy CLI 설치와 로그인 요청</a></nav>
+<div class="s3-footer"><span>05 / 09</span><span><a href="https://learn.chatgpt.com/docs/windows/windows-app" target="_blank" rel="noreferrer">폴더 열기</a> · <a href="https://learn.chatgpt.com/docs/projects" target="_blank" rel="noreferrer">프로젝트와 작업 위치</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step4">이전</a><a href="#/lectures/session3/step6">다음 · Comfy CLI 설치와 로그인 요청</a></nav>
 </article>

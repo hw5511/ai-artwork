@@ -39,6 +39,7 @@ const LecturesMain = () => {
   const [copySuccess, setCopySuccess] = useState<boolean>(false)
   const [copyError, setCopyError] = useState<boolean>(false)
   const [sidebarCollapsed, setSidebarCollapsed] = useState<boolean>(false)
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState<boolean>(false)
 
   // 목차 로드
   useEffect(() => {
@@ -157,18 +158,10 @@ const LecturesMain = () => {
   }
 
   // 스텝 클릭 핸들러
-  const handleStepClick = (stepId: string, file: string) => {
+  const handleStepClick = (targetSessionId: string, targetStepId: string, file: string) => {
     loadContent(file)
-    navigate(`/lectures/${sessionId}/${stepId}`)
-  }
-
-  // 세션 변경 핸들러 (Navigation 탭 클릭 시)
-  const handleSessionChange = (newSessionId: string) => {
-    // 새로운 세션의 첫 번째 스텝으로 이동
-    const targetSession = toc.find(session => session.id === newSessionId)
-    if (targetSession && targetSession.steps.length > 0) {
-      navigate(`/lectures/${newSessionId}/${targetSession.steps[0].id}`)
-    }
+    navigate(`/lectures/${targetSessionId}/${targetStepId}`)
+    setMobileSidebarOpen(false)
   }
 
   // 마크다운 컴포넌트 생성
@@ -179,25 +172,17 @@ const LecturesMain = () => {
     VideoPlayer: VideoPlayer
   })
 
-  // 현재 세션 찾기
-  const currentSession = toc.find(session => session.id === sessionId)
-
   return (
     <>
-      {/* Navigation 컴포넌트 */}
-      <Navigation
-        currentSessionId={sessionId || 'session1'}
-        onSessionChange={handleSessionChange}
-        sessionFilter={SESSION_FILTER}
-      />
+      <Navigation onMenuClick={() => setMobileSidebarOpen(true)} />
 
       {/* 콘텐츠 영역 */}
       <Box
         className={sessionId === 'session3' ? 's3-layout' : undefined}
         sx={{
           display: 'flex',
-          flexDirection: isMobile ? 'column' : 'row',
-          minHeight: isMobile ? 'auto' : 'calc(100vh - 112px)',
+          flexDirection: 'row',
+          minHeight: 'calc(100vh - 112px)',
           bgcolor: 'transparent',
           // 모바일에서는 Container 여백 제거
           mx: isMobile ? -1 : 0,
@@ -205,33 +190,28 @@ const LecturesMain = () => {
         }}
       >
 
-        {/* 사이드바 컴포넌트 */}
-        {isMobile && sessionId === 'session3' ? (
-          <nav className="s3-step-select">
-            <label htmlFor="s3-step">3회차 단계</label>
-            <select id="s3-step" value={stepId} onChange={event => navigate(`/lectures/session3/${event.target.value}`)}>
-              {currentSession?.steps.filter(step => !step.hidden).map((step, index) => (
-                <option key={step.id} value={step.id}>{index + 1}. {step.title}</option>
-              ))}
-            </select>
-          </nav>
-        ) : <LecturesSidebar
-          session={currentSession}
+        <LecturesSidebar
+          sessions={toc}
+          currentSessionId={sessionId}
           selectedStepId={stepId || ''}
-          selectedFile={selectedFile}
           sidebarCollapsed={sidebarCollapsed}
+          mobileOpen={mobileSidebarOpen}
           onToggleSidebar={handleToggleSidebar}
+          onMobileClose={() => setMobileSidebarOpen(false)}
           onStepClick={handleStepClick}
-        />}
+        />
 
         {/* 콘텐츠 영역 - 반응형 */}
         <Box
+          className="lecture-content"
           sx={{
             flex: 1,
             minWidth: 0,
             px: isMobile ? 2 : isTablet ? 4 : 6,
             py: isMobile ? 2 : 4,
             overflow: 'auto',
+            wordBreak: 'keep-all',
+            overflowWrap: 'break-word',
             '&::-webkit-scrollbar': {
               width: 6,
               height: 6,

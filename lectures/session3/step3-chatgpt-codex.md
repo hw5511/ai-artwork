@@ -8,6 +8,6 @@
 <p class="s3-task">대화 뒤 실제로 생긴 파일과 실행 결과 확인</p>
 <p class="s3-note">같은 데스크톱 앱 안의 제품 선택 · ChatGPT Work도 파일·도구 작업 지원 · 이번 실습은 Codex와 로컬 폴더</p>
 
-<div class="s3-footer"><span>03 / 11</span><span><a href="https://learn.chatgpt.com/docs/use-chatgpt" target="_blank" rel="noreferrer">ChatGPT와 Codex 선택</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step2">이전</a><a href="#/lectures/session3/step4">다음 · codex(gpt 데스크톱) 설치하기</a></nav>
+<div class="s3-footer"><span>03 / 09</span><span><a href="https://learn.chatgpt.com/docs/use-chatgpt" target="_blank" rel="noreferrer">ChatGPT와 Codex 선택</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step2">이전</a><a href="#/lectures/session3/step4">다음 · codex 모델을 sol 6.1로 설정해 두고 모든 권한으로 변경</a></nav>
 </article>

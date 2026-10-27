@@ -38,7 +38,7 @@
       },
       "title": "Prompt (shared)",
       "widgets_values": [
-        "A Korean woman in her mid-20s with shoulder-length dark brown hair and soft side-swept bangs, wearing a cream cable-knit sweater, light-blue jeans and small silver stud earrings, sits at a window table in a sunlit city cafe holding a white coffee cup. She looks out the window, then turns toward the camera and smiles softly as she lowers the cup to the table. Slow gentle camera push-in, natural daylight, realistic, one continuous shot."
+        "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light"
       ]
     },
     {
@@ -319,7 +319,7 @@
       "properties": {},
       "title": "읽어 보세요: 공통 항목",
       "widgets_values": [
-        "MiniMax H3 오픈 웨이트 비교: T2V / I2V / FLF2V / R2V\n\n이 워크플로는 유료 API 노드가 아니라 ComfyUI 기본(core) 노드로 오픈 웨이트 모델 MiniMax H3를 직접 돌립니다. 네 모드 모두 같은 20대 여성 인물과 같은 카페 장면을 쓰고, 프롬프트·시드(42)·해상도(864x480)·길이(124프레임)가 같습니다. 결과를 나란히 놓고 방식만 비교하세요.\n\n필요한 모델 파일 (ComfyUI/models 아래 폴더)\n- diffusion_models: minimax_h3_fl2va_pruned_int8_convrot.safetensors (20.97 GB), T2V/I2V/FLF2V용\n- diffusion_models: minimax_h3_ref2va_pruned_int8_convrot.safetensors (20.97 GB), R2V용 (가중치가 따로입니다)\n- text_encoders: qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors (15.69 GB) 또는 qwen3vl_32b_minimax_h3_int8_convrot.safetensors (27.14 GB)\n- vae: minimax_h3_video_vae_fp16.safetensors (5.21 GB)\n- vae: minimax_h3_audio_vae_fp32.safetensors (0.61 GB)\n받는 곳: huggingface.co/Comfy-Org/MiniMax-H3\n\nVRAM: 공식 템플릿과 Hugging Face 모델 카드에는 필요한 VRAM 숫자가 적혀 있지 않습니다. 우리가 직접 해 본 결과는 이렇습니다. RTX 4090 24GB에서 nvfp4 인코더는 CPU로 밀려나 35분 넘게 돌려도 끝나지 않았습니다. 24GB 카드라면 위 CLIPLoader에서 int8_convrot 인코더를 고르세요. 32GB RTX 5090은 nvfp4를 그대로 돌립니다.\nComfy Cloud에는 위 파일이 이미 설치되어 있고, 실행은 API 노드 요금이 아니라 GPU 시간으로 과금됩니다. (Comfy Cloud에는 비디오 VAE가 fp16 하나만 있어서 이 파일은 fp16을 씁니다.)\n\n알아 둘 점\n- 결과 영상에는 영상과 같은 연산에서 함께 만들어진 스테레오 소리가 들어 있습니다.\n- 864x480은 가볍게 비교하려는 크기입니다. 공식 768p 크기는 1344x768이며, 더 좋은 화질이 필요하면 H3 노드 4개의 width/height를 바꾸세요.\n- 길이 124는 24fps에서 약 5초이고, H3가 요구하는 17의 배수+5 프레임 규칙에 맞는 값입니다.\n- Turbo LoRA(loras/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16, loras/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16)를 LoraLoaderModelOnly로 붙이면 스텝 수를 줄일 수 있습니다. 이 파일에는 넣지 않았습니다.\n- BasicGuider를 쓰기 때문에 CFG와 네거티브 프롬프트가 없습니다.\n\n모드를 끄려면 그 그룹을 선택하고 Ctrl+B를 누릅니다. 네 모드를 한꺼번에 큐에 올리면 GPU 시간도 네 배가 듭니다."
+        "MiniMax H3 오픈 웨이트 비교: T2V / I2V / FLF2V / R2V\n\n이 워크플로는 유료 API 노드가 아니라 ComfyUI 기본(core) 노드로 오픈 웨이트 모델 MiniMax H3를 직접 돌립니다. 네 모드 모두 같은 공원 산책 프롬프트를 쓰고, 프롬프트·시드(42)·해상도(864x480)·길이(124프레임)가 같습니다. 결과를 나란히 놓고 방식만 비교하세요.\n\n필요한 모델 파일 (ComfyUI/models 아래 폴더)\n- diffusion_models: minimax_h3_fl2va_pruned_int8_convrot.safetensors (20.97 GB), T2V/I2V/FLF2V용\n- diffusion_models: minimax_h3_ref2va_pruned_int8_convrot.safetensors (20.97 GB), R2V용 (가중치가 따로입니다)\n- text_encoders: qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors (15.69 GB) 또는 qwen3vl_32b_minimax_h3_int8_convrot.safetensors (27.14 GB)\n- vae: minimax_h3_video_vae_fp16.safetensors (5.21 GB)\n- vae: minimax_h3_audio_vae_fp32.safetensors (0.61 GB)\n받는 곳: huggingface.co/Comfy-Org/MiniMax-H3\n\nVRAM: 공식 템플릿과 Hugging Face 모델 카드에는 필요한 VRAM 숫자가 적혀 있지 않습니다. 우리가 직접 해 본 결과는 이렇습니다. RTX 4090 24GB에서 nvfp4 인코더는 CPU로 밀려나 35분 넘게 돌려도 끝나지 않았습니다. 24GB 카드라면 위 CLIPLoader에서 int8_convrot 인코더를 고르세요. 32GB RTX 5090은 nvfp4를 그대로 돌립니다.\nComfy Cloud에는 위 파일이 이미 설치되어 있고, 실행은 API 노드 요금이 아니라 GPU 시간으로 과금됩니다. (Comfy Cloud에는 비디오 VAE가 fp16 하나만 있어서 이 파일은 fp16을 씁니다.)\n\n알아 둘 점\n- 결과 영상에는 영상과 같은 연산에서 함께 만들어진 스테레오 소리가 들어 있습니다.\n- 864x480은 가볍게 비교하려는 크기입니다. 공식 768p 크기는 1344x768이며, 더 좋은 화질이 필요하면 H3 노드 4개의 width/height를 바꾸세요.\n- 길이 124는 24fps에서 약 5초이고, H3가 요구하는 17의 배수+5 프레임 규칙에 맞는 값입니다.\n- Turbo LoRA(loras/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16, loras/minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16)를 LoraLoaderModelOnly로 붙이면 스텝 수를 줄일 수 있습니다. 이 파일에는 넣지 않았습니다.\n- BasicGuider를 쓰기 때문에 CFG와 네거티브 프롬프트가 없습니다.\n\n모드를 끄려면 그 그룹을 선택하고 Ctrl+B를 누릅니다. 네 모드를 한꺼번에 큐에 올리면 GPU 시간도 네 배가 듭니다."
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -793,7 +793,7 @@
       "properties": {},
       "title": "I2V 입력과 파일",
       "widgets_values": [
-        "모드 2 - I2V (첫 프레임 -> 영상). 노드 MiniMaxH3ImageToVideo, 디퓨전 파일 minimax_h3_fl2va_pruned_int8_convrot.safetensors.\n입력: minimax_first.png (카페 창가의 여성)를 first_frame에 연결하고, last_frame은 비워 둡니다. 공통 프롬프트와 공통 시드를 씁니다. 첫 프레임은 영상의 0번 프레임에 고정되고 나머지는 프롬프트를 따라 움직입니다.\n출력: 영상과 스테레오 소리가 함께 만들어져 ComfyUI/output/minimax_h3/i2v 로 저장됩니다.\nI2V와 FLF2V는 같은 노드 클래스를 쓰고, last_frame 연결 여부만 다릅니다. 같은 fl2va 가중치를 씁니다. 첫 프레임은 캔버스(864x480) 크기로 늘려 맞춰지므로, 16:9 이미지(1280x720)는 거의 왜곡 없이 들어갑니다.\n이 노드는 유료 API 노드가 아니라 기본(core) 노드입니다."
+        "모드 2 - I2V (첫 프레임 -> 영상). 노드 MiniMaxH3ImageToVideo, 디퓨전 파일 minimax_h3_fl2va_pruned_int8_convrot.safetensors.\n입력: minimax_first.png (공원 길의 남성과 골든리트리버)를 first_frame에 연결하고, last_frame은 비워 둡니다. 공통 프롬프트와 공통 시드를 씁니다. 첫 프레임은 영상의 0번 프레임에 고정되고 나머지는 프롬프트를 따라 움직입니다.\n출력: 영상과 스테레오 소리가 함께 만들어져 ComfyUI/output/minimax_h3/i2v 로 저장됩니다.\nI2V와 FLF2V는 같은 노드 클래스를 쓰고, last_frame 연결 여부만 다릅니다. 같은 fl2va 가중치를 씁니다. 첫 프레임은 캔버스(864x480) 크기로 늘려 맞춰지므로, 16:9 이미지(1280x720)는 거의 왜곡 없이 들어갑니다.\n이 노드는 유료 API 노드가 아니라 기본(core) 노드입니다."
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -1183,7 +1183,7 @@
         "ver": "0.33.0",
         "Node name for S&R": "LoadImage"
       },
-      "title": "First frame (woman at cafe window)",
+      "title": "First frame (man and dog in park)",
       "widgets_values": [
         "minimax_first.png",
         "image"
@@ -1283,7 +1283,7 @@
       "properties": {},
       "title": "FLF2V 입력과 파일",
       "widgets_values": [
-        "모드 3 - FLF2V (첫 + 마지막 프레임 -> 영상). 노드 MiniMaxH3ImageToVideo, 디퓨전 파일 minimax_h3_fl2va_pruned_int8_convrot.safetensors.\n입력: minimax_first.png (카페 창가에 앉은 여성)를 first_frame에, minimax_last.png (같은 장면에서 카메라 쪽으로 돌아 미소 짓는 모습)를 last_frame에 연결합니다. 공통 프롬프트와 공통 시드를 씁니다. 첫 프레임은 0번 프레임, 마지막 프레임은 맨 끝 프레임에 고정되고 사이를 모델이 채웁니다.\n출력: 영상과 스테레오 소리가 함께 만들어져 ComfyUI/output/minimax_h3/flf2v 로 저장됩니다.\nI2V 그룹과 같은 노드 클래스이며, 다른 점은 last_frame이 연결되어 있다는 것뿐입니다. 마지막 프레임은 잘라 맞춰(cover-crop) 들어갑니다.\n이 노드는 유료 API 노드가 아니라 기본(core) 노드입니다."
+        "모드 3 - FLF2V (첫 + 마지막 프레임 -> 영상). 노드 MiniMaxH3ImageToVideo, 디퓨전 파일 minimax_h3_fl2va_pruned_int8_convrot.safetensors.\n입력: minimax_first.png (공원 길을 걷는 남성과 골든리트리버)를 first_frame에, minimax_last.png (같은 남성과 개가 공원 길에서 몇 걸음 앞으로 이동한 모습)를 last_frame에 연결합니다. 공통 프롬프트와 공통 시드를 씁니다. 첫 프레임은 0번 프레임, 마지막 프레임은 맨 끝 프레임에 고정되고 사이를 모델이 채웁니다.\n출력: 영상과 스테레오 소리가 함께 만들어져 ComfyUI/output/minimax_h3/flf2v 로 저장됩니다.\nI2V 그룹과 같은 노드 클래스이며, 다른 점은 last_frame이 연결되어 있다는 것뿐입니다. 마지막 프레임은 잘라 맞춰(cover-crop) 들어갑니다.\n이 노드는 유료 API 노드가 아니라 기본(core) 노드입니다."
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -1673,7 +1673,7 @@
         "ver": "0.33.0",
         "Node name for S&R": "LoadImage"
       },
-      "title": "First frame (woman at cafe window)",
+      "title": "First frame (man and dog in park)",
       "widgets_values": [
         "minimax_first.png",
         "image"
@@ -1713,7 +1713,7 @@
         "ver": "0.33.0",
         "Node name for S&R": "LoadImage"
       },
-      "title": "Last frame (she turns and smiles)",
+      "title": "Last frame (same man and dog a few steps ahead)",
       "widgets_values": [
         "minimax_last.png",
         "image"
@@ -1813,7 +1813,7 @@
       "properties": {},
       "title": "R2V 입력과 파일",
       "widgets_values": [
-        "모드 4 - R2V (피사체 레퍼런스 -> 영상). 노드 MiniMaxH3ReferenceToVideo, 디퓨전 파일 minimax_h3_ref2va_pruned_int8_convrot.safetensors.\n입력: minimax_subject.png (같은 여성의 레퍼런스 사진)를 ref_images의 첫 칸(ref_image_0)에 연결합니다. 레퍼런스는 첫 프레임이 아니라 피사체 가이드입니다. 이미지는 최대 9장까지 늘릴 수 있습니다. 프롬프트에서는 <Picture 1>처럼 연결한 순서대로 부릅니다.\n프롬프트: StringConcatenate 노드가 \"<Picture 1> is the woman in this video.\" 와 공통 프롬프트를 띄어쓰기 한 칸으로 이어 붙여 넣어 줍니다. <Picture 1> 태그가 빠지면 레퍼런스가 제대로 반영되지 않을 수 있습니다.\nI2V/FLF2V와 달리 R2V는 별도의 ref2va 가중치 파일(이 그룹의 UNETLoader)이 필요합니다. 비디오 VAE와 오디오 VAE도 이 노드에 연결되어 있고, ref_image_size는 match입니다.\n출력: 영상과 스테레오 소리가 함께 만들어져 ComfyUI/output/minimax_h3/r2v 로 저장됩니다. 이 노드도 유료 API 노드가 아니라 기본(core) 노드입니다."
+        "모드 4 - R2V (피사체 레퍼런스 -> 영상). 노드 MiniMaxH3ReferenceToVideo, 디퓨전 파일 minimax_h3_ref2va_pruned_int8_convrot.safetensors.\n입력: minimax_subject.png (같은 남성의 레퍼런스 사진)를 ref_images의 첫 칸(ref_image_0)에 연결합니다. 레퍼런스는 첫 프레임이 아니라 피사체 가이드입니다. 이미지는 최대 9장까지 늘릴 수 있습니다. 프롬프트에서는 <Picture 1>처럼 연결한 순서대로 부릅니다.\n프롬프트: StringConcatenate 노드가 \"<Picture 1> is the man walking the golden retriever in this video.\" 와 공통 프롬프트를 띄어쓰기 한 칸으로 이어 붙여 넣어 줍니다. <Picture 1> 태그가 빠지면 레퍼런스가 제대로 반영되지 않을 수 있습니다.\nI2V/FLF2V와 달리 R2V는 별도의 ref2va 가중치 파일(이 그룹의 UNETLoader)이 필요합니다. 비디오 VAE와 오디오 VAE도 이 노드에 연결되어 있고, ref_image_size는 match입니다.\n출력: 영상과 스테레오 소리가 함께 만들어져 ComfyUI/output/minimax_h3/r2v 로 저장됩니다. 이 노드도 유료 API 노드가 아니라 기본(core) 노드입니다."
       ],
       "color": "#432",
       "bgcolor": "#653"
@@ -2203,7 +2203,7 @@
         "ver": "0.33.0",
         "Node name for S&R": "LoadImage"
       },
-      "title": "Subject reference (the woman)",
+      "title": "Subject reference (the same man)",
       "widgets_values": [
         "minimax_subject.png",
         "image"
@@ -2292,7 +2292,7 @@
       },
       "title": "Add <Picture 1> tag",
       "widgets_values": [
-        "<Picture 1> is the woman in this video.",
+        "<Picture 1> is the man walking the golden retriever in this video.",
         "",
         " "
       ]

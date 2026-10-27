@@ -250,2858 +250,626 @@ worst quality, low quality, blurry
 ## 문의사항
 
 강의록 작성 관련 문의는 프로젝트 관리자에게 연락하세요.`,
-  "session1/step1-course-overview.md": `# 강의 개요
-
-## 1회차 - ComfyUI 입문
-
-### 강의 목표
-- ComfyUI의 기본 개념과 인터페이스 이해
-- Stable Diffusion 모델 활용법 학습
-- 기초적인 이미지 생성 워크플로우 구축
-
-### 준비사항
-- ComfyCloud 계정 설정 (Standard 플랜, 월 $20 구독)
-- 기본 프롬프트 작성법 이해
-- 창의적인 아이디어와 실험 정신
-
----section---
-
-### 이 강의에서 배울 수 있는 것
-- AI 이미지 생성의 기본 원리 이해
-- ComfyUI를 활용한 전문적인 워크플로우 구축
-- 다양한 모델과 기법을 활용한 창의적 작품 제작
-- 실무에 바로 활용 가능한 실전 스킬
-
----section---
-
-[[image: session1/step1/슬라이드1.PNG]]
-
-[[image: session1/step1/슬라이드2.PNG]]
-
-[[image: session1/step1/슬라이드3.PNG]]
-
-[[image: session1/step1/슬라이드4.PNG]]
-
-[[image: session1/step1/슬라이드5.PNG]]
-
-[[image: session1/step1/슬라이드6.PNG]]
-
-[[image: session1/step1/슬라이드7.PNG]]`,
-  "session1/step10-ksampler.md": `# KSampler란?
-
----section---
-
-[[image: session1/step10/ksampler.PNG]]
-
-K-Sampler는 AI 이미지 생성의 핵심 엔진으로, 노이즈를 점진적으로 제거하며 텍스트 프롬프트에 따라 이미지를 형성하는 과정을 제어합니다.
-
-### K-Sampler 기본 개념
-
-#### 이미지 생성 원리
-\`\`\`principle
-1. 랜덤 노이즈에서 시작
-2. 단계별로 노이즈 제거
-3. 프롬프트에 따라 픽셀 예측
-4. 최종 이미지 완성
-\`\`\`
-
-K-Sampler는 이 과정에서 각 단계의 세부사항을 제어하여 원하는 품질과 스타일의 이미지를 생성합니다.
-
----section---
-
-### 시드(Seed)란?
-
-시드는 이미지 생성의 시작점을 결정하는 값으로, **noise의 패턴을 seed가 결정**합니다.
-동일한 시드 값을 사용하면 재현 가능한 결과를 만들 수 있습니다.
-
-#### 시드 값의 의미
-\`\`\`seed
--1: 랜덤 (매번 다른 결과)
-0 이상: 고정값 (동일한 결과 재현)
-\`\`\`
-
-#### control_after_generate 옵션
-생성 후 시드 값의 자동 변경을 제어합니다.
-
-\`\`\`options
-randomize: 생성 후 자동으로 새 seed
-fixed: seed 값 유지 (재현 작업에 유용)
-increment: seed 값 1씩 증가 (연작 제작)
-decrement: seed 값 1씩 감소
-\`\`\`
-
----section---
-
-### Steps란?
-
-Steps는 노이즈 제거 단계의 수로, 이미지의 품질과 생성 속도에 직접적인 영향을 미칩니다.
-
-Steps 매개변수는 샘플러가 수행할 디노이징 반복 횟수를 지정합니다. 더 많은 스텝은 모델이 이미지를 더욱 세밀하게 수정하고 개선할 기회를 제공하여 일반적으로 더 높은 품질의 이미지를 생성하지만, 그만큼 처리 시간도 증가합니다. 이미지 품질과 생성 속도 사이에서 균형을 맞추기 위해 스텝 값을 조정하는 것이 중요합니다.
-
-[[image: common/consistency-models.png]]
-
-#### 권장 설정값
-\`\`\`recommendation
-권장 범위: 15~30 스텝
-\`\`\`
-
----section---
-
-### CFG란?
-
-CFG(Classifier Free Guidance)는 생성된 이미지가 프롬프트를 얼마나 충실히 따를지를 결정하는 매개변수입니다.
-
-#### CFG 값에 따른 프롬프트 준수 정도
-\`\`\`cfg
-1-4: 창의적, 프롬프트를 느슨하게 해석
-5-7: 균형잡힌 설정 (권장 범위)
-8-12: 프롬프트를 강하게 따름
-13-20: 과포화, 부자연스러운 결과
-\`\`\`
-
----section---
-
-## 샘플러(Sampler)와 스케줄러(Scheduler)란?
-
-### 샘플러와 스케줄러 기본 개념
-
-샘플러(Sampler)는 노이즈 제거 알고리즘을 선택하는 요소이고, 스케줄러(Scheduler)는 각 스텝에서 노이즈 제거량을 조절하는 방식을 결정합니다.
-
-\`\`\`concepts
-샘플러(Sampler):
-- 노이즈를 이미지로 변환하는 알고리즘
-- 생성 품질과 속도에 직접적 영향
-- 수렴형과 비수렴형으로 분류
-
-스케줄러(Scheduler):  
-- 각 단계별 노이즈 제거량 결정
-- 이미지 품질과 특성에 영향
-- 샘플러와 조합으로 최적화 가능
-\`\`\`
-
-#### 샘플러와 스케줄러의 관계
-\`\`\`relationship
-샘플러: "어떤 방식으로" 노이즈를 제거할지 결정
-스케줄러: "언제 얼마나" 노이즈를 제거할지 결정
-
-예시:
-- DPM++ 2M (샘플러) + Karras (스케줄러) = 후반부 집중 고품질 처리
-- Euler (샘플러) + Normal (스케줄러) = 균등한 빠른 처리
-\`\`\`
-
----section---
-
-### 샘플러 종류
-
-\`\`\`samplers
-dpm++ sde karras: 최고 품질 작업
-dpm++ 2m karras: 균형잡힌 고품질
-ddim: 재현성 중요 작업
-euler: 빠른 테스트
-euler_a: 창의적 생성
-dpm2 a: 실험적 작업
-\`\`\`
-
----section---
-
-### 스케줄러 종류
-
-\`\`\`schedulers
-normal: 균등한 노이즈 제거 - 모든 스텝에서 동일한 양의 노이즈를 제거하는 기본 방식
-karras: 후반부 집중 고품질 - 작은 타임스텝에 더 많은 시간을 할애하여 세밀한 디테일 향상
-simple: 선형적 안정 처리 - 단순하고 안정적인 선형 노이즈 스케줄 적용
-sgm_uniform: 매끄러운 결과 - 균일한 분포로 부드러운 그라데이션 생성
-ddim_uniform: 완전한 재현성 - DDIM 방식의 균일한 스케줄로 동일한 결과 보장
-exponential: 빠른 구조 형성 - 지수적으로 노이즈를 감소시켜 초반 구조를 빠르게 형성
-beta: 정밀한 제어 - 베타 분포 기반의 세밀한 노이즈 제어
-cosine: 자연스러운 변화 - 코사인 함수 기반으로 자연스러운 노이즈 감소 곡선 제공
-\`\`\`
-
-`,
-  "session1/step2-ai-generation-principles.md": `# AI 이미지 생성원리와 Stable Diffusion 개론
+  "session1/step1-signup.md": `# Comfy 가입
 
 ## 학습 목표
-이번 단계에서는 AI가 어떻게 이미지를 생성하는지 그 원리를 이해하고, Stable Diffusion이라는 강력한 도구에 대해 알아보겠습니다. 복잡해 보이는 AI 기술을 친근한 예시로 쉽게 이해해보세요!
 
----section---
+Comfy 계정을 만들고 Comfy Cloud 작업 화면까지 들어갑니다.
 
-## AI는 정말 "생각"하고 있을까?
+## 계정 만들기
 
-### AI의 진짜 정체
-많은 사람들이 AI가 사람처럼 생각한다고 오해하지만, 사실 AI는 **생각하지 않습니다**. 대신 AI는 엄청난 양의 학습된 데이터에서 **패턴을 찾는 천재**입니다.
+### 1. 로그인 화면 열기
 
-### 숫자 예측 게임으로 이해하기
-"1, 2, 3, 4 다음에 올 숫자는?"이라는 질문을 받았을 때:
-- 사람: "규칙을 생각해보니 5가 와야겠네!"
-- AI: 미리 준비된 상자에서 쪽지를 뽑습니다
-  - 99개 쪽지: "5"
-  - 1개 쪽지: "4" (가끔 패턴이 깨지는 경우를 학습했기 때문)
+웹 브라우저에서 [Comfy Cloud](https://cloud.comfy.org/)를 엽니다. 아래 로그인 화면이 보입니다.
 
-[[image: session1/step2/human-question.PNG]]
-[[image: session1/step2/ai-question.PNG]]
+[[image: session1/step1/comfy-cloud-login.png | width:100% | Comfy Cloud 로그인 화면. Sign up here에서 가입 화면으로 이동합니다. (공식 Comfy Cloud, 2026년 10월 27일 캡처)]]
 
-### 이어말하기 게임으로 쉽게 이해하기
-AI를 **고성능 이어말하기 기계**라고 생각해보세요:
-- "오늘 날씨가..." → "좋네요!"
-- "맛있는 음식을..." → "먹고 싶어요!"
+### 2. 가입 화면으로 이동
 
-AI는 앞의 단어들을 보고 가장 적절한 다음 단어를 선택하는 것과 같습니다.
+로그인 화면의 **Sign up here**를 누릅니다. 아래 가입 화면이 열리는지 확인합니다.
 
-[[image: session1/step2/word-chain.PNG]]
+[[image: session1/step1/comfy-cloud-signup.png | width:100% | Comfy Cloud 가입 화면. 계정 정보는 수강생이 직접 입력합니다. (공식 Comfy Cloud, 2026년 10월 27일 캡처)]]
 
----section---
+### 3. 가입 방법 선택
 
-## AI는 어떻게 학습할까?
+Google, GitHub, 이메일 중 사용할 방법을 고릅니다. 수업 중에는 본인의 계정 정보만 직접 입력합니다.
 
-### 1. 지도학습 (Supervised Learning)
-**선생님이 정답을 알려주면서 가르치는 방법**
-- 예: "이 사진은 고양이야", "이 사진은 강아지야"
-- AI: "아, 털이 부드럽고 수염이 있으면 고양이구나!"
+### 4. 작업 화면 확인
 
-### 2. 강화학습 (Reinforcement Learning)
-**업다운 게임처럼 힌트를 주면서 가르치는 방법**
-- AI가 답을 제시하면 "더 높아", "더 낮아", "정답!" 같은 피드백
-- 점진적으로 정답에 가까워지도록 학습
+로그인 뒤 ComfyUI 작업 화면이 열리는지 확인합니다.
 
----section---
+처음 들어가면 가운데에 노드를 놓는 캔버스가 보입니다. 왼쪽에는 Assets, Nodes, Models, Workflows 같은 메뉴가 있습니다.
 
-## 이미지 생성의 비밀: 디노이징
+## 왜 계정이 필요한가요?
 
-### 이미지는 사실 숫자들의 집합
-- 이미지 = **픽셀들의 2차원 수열**
-- 각 픽셀은 색깔 정보를 담은 숫자
-- AI에게 이미지는 그냥 숫자 패턴일 뿐!
+Comfy Cloud는 웹 브라우저에서 ComfyUI를 실행합니다. 내 워크플로우와 생성 결과를 계정에 연결하려면 로그인이 필요합니다.
 
-[[image: session1/step2/2d-array.PNG]]
-
-### 디노이징: 얼룩 지우기 게임
-AI 이미지 생성의 핵심 원리를 간단히 설명하면:
-
-1. **얼룩 묻히기**: 깨끗한 이미지에 의도적으로 노이즈(얼룩) 추가
-2. **복원하기**: AI가 얼룩을 제거해서 원본 복원 시도
-3. **비교하기**: 원본과 얼마나 유사한지 확인
-4. **반복하기**: 이 과정을 수백만 번 반복
-
-[[image: session1/step2/denoising1.PNG]]
-[[image: session1/step2/denoising2.PNG]]
-[[image: session1/step2/denoising3.PNG]]
-[[image: session1/step2/denoising4.PNG]]
-[[image: session1/step2/denoising5.PNG]]
-
-### 학습 과정
-- 처음엔 서툴게 복원하다가 점점 실력 향상
-- 패턴과 방향성을 파악하여 학습
-- 결국 **완전한 노이즈 이미지**도 의미 있는 이미지로 복원 가능!
-
----section---
-
-### 실제 사용할 때
-- 완전한 노이즈 이미지를 AI에게 보여주며
-- "이건 노이즈가 섞인 이미지야, 복원해줘!"라고 요청
-- AI는 열심히 "복원"하는데, 사실은 새로운 이미지를 생성하는 것!
-
-### 실제 디노이징 방식의 단계별 예시 이미지
-
-[[image: common/consistency-models.png]]`,
-  "session1/step3-comfycloud.md": `# ComfyCloud 시작하기
-
-## ComfyCloud란?
-
-ComfyCloud는 클라우드 기반 ComfyUI 플랫폼입니다.
-별도의 고사양 컴퓨터 없이도 웹 브라우저에서 ComfyUI를 바로 사용할 수 있습니다.
-
-### 주요 장점
-- 고사양 GPU 불필요 (클라우드 GPU 제공)
-- 설치 과정 없이 즉시 사용 가능
-- 다양한 모델과 템플릿 사전 내장
-- 월 구독($20~)으로 클라우드 GPU 크레딧 제공
-
----section---
-
-## 계정 생성 및 로그인
-
-### 1. ComfyCloud 접속
-웹 브라우저에서 [https://cloud.comfy.org/](https://cloud.comfy.org/) 에 접속합니다.
-
-### 2. 회원가입
-우측 상단의 로그인 버튼을 클릭하여 Google 계정으로 가입합니다.
-
-### 3. 구독 플랜 선택
-ComfyCloud는 무료 플랜이 없으며, 사용하려면 유료 구독이 필요합니다.
-본 강의는 가장 저렴한 **Standard 플랜(월 $20)** 기준으로 진행합니다.
-로그인 후 우측 상단 계정 버튼에서 현재 크레딧을 확인할 수 있습니다.
-
-\`\`\`settings
-Standard 플랜: 월 $20, 4,200 크레딧 제공
-Creator 플랜: 월 $35, 7,400 크레딧 제공 (LoRA 업로드, 동시 API 작업 3개)
-Pro 플랜: 월 $100, 21,100 크레딧 제공 (워크플로우 최대 1시간, 동시 API 작업 5개)
-크레딧 소모: 워크플로우 실행 중 GPU 사용 시간에 따라 차감 (유휴 시간은 차감 없음)
-하드웨어: Blackwell RTX 6000 Pro (96GB VRAM)
-\`\`\`
-
----section---
-
-## ComfyUI 편집기 시작하기
-
-로그인 후 자동으로 ComfyUI 편집기가 열립니다.
-
-### 기본 화면 구성
-
-\`\`\`settings
-좌측 사이드바:
-- 에셋: 생성된 이미지 갤러리
-- 노드: 사용 가능한 노드 목록
-- 모델: 내장 모델 라이브러리
-- 워크플로우: 저장된 워크플로우
-- 앱: 앱 빌더
-- 템플릿: 공개 템플릿
-
-상단 툴바:
-- 실행(Queue Prompt): 워크플로우 실행
-- 크레딧 표시: 남은 크레딧 확인
-\`\`\`
-
----section---
-
-## 모델 라이브러리
-
-ComfyCloud의 가장 큰 특징은 다양한 모델이 내장되어 있다는 점입니다.
-별도 다운로드 없이 바로 사용할 수 있습니다.
-
-### 모델 사용 방법
-
-1. 좌측 사이드바 **모델 아이콘** 클릭
-2. 원하는 카테고리 선택 (Checkpoints, Loras 등)
-3. 모델 카드의 **"사용" 버튼** 클릭
-4. 캔버스에 해당 모델 노드가 자동 추가됨
-
-### 주요 내장 모델
-
-| 카테고리 | 주요 모델 | 용도 |
-|----------|-----------|------|
-| Checkpoints | Illustrious-XL | anime/일러스트 이미지 생성 |
-| Checkpoints | WAI-illustrious-SDXL | anime/일러스트 이미지 생성 |
-| Checkpoints | RealVisXL V5.0 | 포토리얼리스틱 이미지 생성 |
-| Checkpoints | Pony Diffusion V6 XL | 다양한 스타일 이미지 생성 |
-| Loras | Ars MidJourney Watercolor | 수채화 스타일 |
-| Loras | Retro Sci-fi 90's anime style | 레트로 애니메이션 스타일 |
-
----section---
-
-## 템플릿 사용하기
-
-ComfyCloud는 다양한 공개 템플릿을 제공합니다.
-
-### 템플릿 열기
-
-1. 좌측 사이드바 **템플릿 아이콘** 클릭
-2. 원하는 템플릿 선택
-3. **"사용" 버튼** 클릭 → 워크플로우에 자동 적용
-
-### 추천 템플릿 (1회차)
-
-- **Flux.1 Dev**: 고품질 이미지 생성
-- **Flux.1 Schnell**: 빠른 이미지 생성
-- **SDXL 간단**: SDXL 기반 이미지 생성
-`,
-  "session1/step4-interface.md": `# ComfyUI 인터페이스 이해하기
-
-## ComfyUI란?
-
-ComfyUI는 노드 기반의 Stable Diffusion 인터페이스입니다.
-복잡한 이미지 생성 워크플로우를 시각적으로 구성하고 관리할 수 있습니다.
-
-**참고**: ComfyUI는 업데이트 되며 UI가 변경될 수 있습니다.
-
----section---
-
-## 메인 인터페이스 구성
-
-### 상단 메뉴 (ComfyUI 로고 클릭)
-
-[[image: session1/step4/upper_menu.png]]
-
-### 좌측 패널
-
-[[image: session1/step4/left_pannel.png]]
-
-좌측 패널은 다양한 도구와 라이브러리를 제공합니다:
-
-#### 1. Node Library (노드 라이브러리)
-사용 가능한 모든 노드들의 목록입니다.  
-카테고리별로 정리되어 있어 필요한 노드를 쉽게 찾을 수 있습니다.
-
-#### 2. Model Library (모델 라이브러리)
-설치된 체크포인트, LoRA, VAE 등의 모델 목록입니다.  
-드래그 앤 드롭으로 노드에 적용할 수 있습니다.
-
-#### 3. Workflows (워크플로우)
-저장된 워크플로우 파일들입니다.  
-JSON 형식으로 저장되며, 노드 구성과 연결 정보를 포함합니다.
-
-#### 4. Node Maps (노드 맵)
-현재 작업 공간의 노드들을 미니맵으로 표시합니다.  
-복잡한 워크플로우에서 전체 구조를 파악하는 데 유용합니다.
-
-#### 5. Queue (실행 대기열)
-이미지 생성 작업의 진행 상황을 표시합니다.  
-완료된 작업과 대기 중인 작업을 확인할 수 있습니다.
-
----section---
-
-## 노드 시스템 이해하기
-
-[[image: session1/step4/nodes.png]]
-
-### 노드란?
-노드는 특정 기능을 수행하는 독립적인 모듈입니다.
-각 노드는 입력과 출력 포트를 가지고 있습니다.
-
-### 노드 연결 규칙
-- 같은 색상/타입의 포트끼리만 연결 가능
-- 하나의 출력은 여러 입력에 연결 가능
-- 순환 연결은 불가능
-
----section---
-
-## 기본 노드 조작법
-
-### 노드 추가
-1. 작업 공간에서 우클릭
-2. 메뉴에서 원하는 노드 선택
-3. 또는 좌측 Node Library에서 드래그
-
-### 노드 연결
-1. 출력 포트를 클릭하고 드래그
-2. 대상 입력 포트에 드롭
-3. 연결선이 생성되면 완료
-
-### 노드 삭제
-- 노드 선택 후 Delete 키
-- 또는 우클릭 메뉴에서 Remove
-
-### 노드 복사
-- Ctrl+C로 복사, Ctrl+V로 붙여넣기
-- 또는 Alt 키를 누른 채 드래그
-
----section---
-
-## 워크플로우 관리
-
-[[image: session1/step4/json_workflow.png]]
-
-### 파일 저장
-
-\`\`\`settings
-저장 형식: JSON
-저장 내용: 노드 구성, 연결 정보, 파라미터 값
-이미지는 포함되지 않음
-\`\`\`
-
-저장 방법:
-1. ComfyUI 로고 클릭
-2. file → 저장 선택
-3. 파일명 입력 후 저장
-
-### 파일 불러오기
-
-불러오기 방법:
-1. ComfyUI 로고 클릭
-2. file → 불러오기 선택
-3. JSON 파일 선택
-
-### 템플릿 탐색
-
-템플릿 열기 방법:
-1. ComfyUI 왼쪽 상단 아이콘 클릭
-2. 보기 선택
-3. 템플릿 탐색 선택`,
-  "session1/step5-first-generation.md": `# 첫 이미지 생성 (기본 템플릿)
-
-[[image: session1/step5/stpe5.png]]
-
----section---
-
-## Default 템플릿으로 첫 이미지 생성하기
-
-ComfyUI를 처음 실행하면 기본 워크플로우(Default Template)가 이미 로드되어 있습니다.
-별도로 템플릿을 불러올 필요 없이 바로 이미지 생성을 시작할 수 있습니다.
-
-> 기본 템플릿이 다르게 보이거나 초기화된 경우, 아래 Default 워크플로우를 내려받아 ComfyUI 캔버스에 불러오세요(드래그 앤 드롭 또는 Workflow → Open).
-
-[[download: downloads/session1/step5/default_workflow.json | Default 워크플로우 다운로드 (.json)]]
-
-### 기본 상태 그대로 실행하기
-
-1. 화면에 표시된 기본 노드 구성을 확인하세요
-2. 프롬프트를 수정하지 않고 현재 상태 그대로 유지합니다
-3. 우측 하단의 **"Queue Prompt"** 버튼을 클릭하여 생성을 시작하세요
-
-이렇게 기본 설정만으로도 첫 이미지 생성이 가능합니다!
-
----section---
-
-## 기본 워크플로우 구조 이해
-
-### 필수 노드들
-
-기본 이미지 생성에 필요한 핵심 노드들:
-
-\`\`\`settings
-1. Load Checkpoint: 모델 로드
-2. CLIP Text Encode (긍정): 긍정 프롬프트
-3. CLIP Text Encode (부정): 부정 프롬프트  
-4. Empty Latent Image: 이미지 크기 설정
-5. KSampler: 이미지 생성 엔진
-6. VAE Decode: 디코딩
-7. Save Image: 이미지 저장
-\`\`\`
-
-### 노드 연결 흐름
-
-데이터가 흐르는 순서를 이해하는 것이 중요합니다:
-
-1. **Load Checkpoint** → 모델, CLIP, VAE 출력
-2. **CLIP** → 긍정/부정 Text Encode 노드로 연결
-3. **Text Encode** → KSampler의 조건 입력으로 연결
-4. **Empty Latent** → KSampler의 latent 입력으로 연결
-5. **KSampler** → VAE Decode로 연결
-6. **VAE Decode** → Save Image로 연결
-
----section---
-
-## 각 노드 상세 설명
-
-### Load Checkpoint 노드
-
-체크포인트 모델을 로드하는 노드입니다.
-
-\`\`\`settings
-입력: 없음
-출력: 
-  - MODEL: 생성 모델
-  - CLIP: 텍스트 인코더
-  - VAE: 이미지 디코더
-\`\`\`
-
-모델이 없다는 오류가 나타나면:
-1. 드롭다운 클릭
-2. "dreamshaper_8" 선택
-3. 또는 사용 가능한 다른 모델 선택
-
-### CLIP Text Encode 노드
-
-프롬프트를 AI가 이해할 수 있는 형태로 변환합니다.
-
-#### 긍정 프롬프트 (Positive)
-원하는 요소들을 설명합니다:
-
-\`\`\`prompt
-masterpiece, best quality, ultra-detailed,
-beautiful landscape, mountains, sunset,
-golden hour lighting, photorealistic
-\`\`\`
-
-#### 부정 프롬프트 (Negative)
-원하지 않는 요소들을 명시합니다:
-
-\`\`\`negative
-worst quality, low quality, blurry,
-bad anatomy, watermark, text
-\`\`\`
-
-### Empty Latent Image 노드
-
-생성할 이미지의 기본 설정을 정의합니다:
-
-\`\`\`settings
-Width: 512 (이미지 너비)
-Height: 512 (이미지 높이)
-Batch Size: 1 (생성할 이미지 수)
-\`\`\`
-
-**주의**: 크기가 클수록 생성 시간과 VRAM 사용량이 증가합니다.
-
-### KSampler 노드
-
-실제 이미지 생성을 담당하는 핵심 노드입니다:
-
-\`\`\`settings
-Seed: -1 (랜덤, 특정 숫자로 고정 가능)
-Control After Generate: randomize
-Steps: 20 (생성 단계)
-CFG: 7 (프롬프트 강도)
-Sampler Name: dpm++ 2m karras
-Scheduler: normal
-Denoise: 1.0
-\`\`\`
-
-### VAE Decode 노드
-
-latent 이미지를 실제 이미지로 변환합니다.  
-체크포인트에서 자동으로 VAE를 가져옵니다.
-
-### Save Image 노드
-
-생성된 이미지를 저장합니다:
-
-\`\`\`settings
-파일명 접두사: ComfyUI
-저장 위치: outputs/
-\`\`\`
-
-#### 파일명 자동 지정 설정
-
-이미지를 생성할 때마다 고유한 파일명을 자동으로 지정할 수 있습니다.
-
-**파일명 접두사 변경**:
-\`\`\`filename
-seed-%KSampler.seed%
-\`\`\`
-
-이 설정을 사용하면:
-- **seed-%KSampler.seed%**: 사용된 시드값을 파일명에 포함
-
-**결과 예시**:
-\`\`\`filename
-seed-123456789.png
-\`\`\`
-
----section---
-
-## Step 4: 생성 실행
-
-모든 설정이 완료되었다면 이제 이미지를 생성해봅시다.
-
-### 생성 시작하기
-
-1. 우측 하단의 **"Queue Prompt"** 버튼 클릭
-2. 진행 상황이 화면에 표시됩니다
-3. 완료되면 생성된 이미지가 노드에 표시됩니다
-
-### 생성 완료
-
-이미지가 성공적으로 생성되면:
-- Save Image 노드에서 이미지 확인 가능
-- outputs/ 폴더에 자동 저장
-- 설정한 파일명으로 저장됨
-
----
-
-**다음 강의**: Step 5에서는 체크포인트 모델의 종류와 특성을 알아봅니다.`,
-  "session1/step6-checkpoints.md": `# 체크포인트 모델 탐험
-
-[[image: session1/step6/checkpoint.PNG]]
-
-## 체크포인트 모델이란?
-
-체크포인트 모델은 대량의 이미지로 학습된 AI 모델 파일입니다.  
-각 모델은 특정 스타일이나 주제에 특화되어 있습니다.
-
-### 모델의 구성 요소
-- **학습 데이터**: 모델이 학습한 이미지들
-- **가중치**: 학습된 패턴과 특징들
-- **스타일**: 모델이 생성하는 이미지의 특성
-
----section---
-
-## 모델 교체 실습
-
-서로 다른 Stable Diffusion 모델을 비교하며 각 모델의 특성을 이해해봅시다.
-
-### 1. 기본 이미지 생성 템플릿
-
-먼저 SD 1.5 모델로 기본 이미지를 생성합니다.
-
-#### 단계별 실습
-1. **템플릿 선택**: "Image Generation" 선택
-2. **체크포인트 모델 선택**: \`Comfy-Org/stable-diffusion-v1-5-archive - v1-5-pruned-emaonly-fp16\` 선택
-3. **프롬프트 입력**:
-\`\`\`prompt
-a cute fluffy cat sitting in a garden, warm sunlight,
-professional photography, detailed fur texture
-\`\`\`
-4. **이미지 생성**: Queue Prompt 버튼 클릭
-
----
-
-### 2. SDXL 테스트
-
-이제 고해상도 모델인 SDXL로 동일한 이미지를 생성해봅시다.
-
-#### 단계별 실습
-1. **체크포인트 모델 변경**: Load Checkpoint 노드에서 \`stabilityai/stable-diffusion-xl-base-1.0 - sd_xl_base_1.0\` 선택
-2. **빈 잠재이미지 크기 변경**: Empty Latent Image 노드에서 Width와 Height를 모두 \`1024\`로 설정
-3. **프롬프트 입력**:
-\`\`\`prompt
-a cute fluffy cat sitting in a garden, warm sunlight,
-professional photography, detailed fur texture
-\`\`\`
-4. **이미지 생성**: Queue Prompt 버튼 클릭
-
-SD 1.5와 SDXL의 품질 차이를 비교해보세요.
-
----section---
-
-## 모델별 학습된 이미지 크기에 따른 차이
-
-<div style="display: flex; gap: 24px; margin: 16px 0;">
-  <div style="flex: 1; border-right: 2px solid #e5e7eb; padding-right: 24px;">
-    <h4 style="text-align: center; margin-bottom: 12px;">SD 1.5</h4>
-    <div style="display: flex; gap: 12px;">
-      <figure style="flex: 1; text-align: center; margin: 0;">
-        <img src="./lectures/images/session1/step6/sd15_512.png" style="width: 100%;" alt="SD 1.5 512px" />
-        <figcaption style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">512×512 생성</figcaption>
-      </figure>
-      <figure style="flex: 1; text-align: center; margin: 0;">
-        <img src="./lectures/images/session1/step6/sd15_1024.png" style="width: 100%;" alt="SD 1.5 1024px" />
-        <figcaption style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">1024×1024 생성 (비정상)</figcaption>
-      </figure>
-    </div>
-  </div>
-  <div style="flex: 1;">
-    <h4 style="text-align: center; margin-bottom: 12px;">SDXL</h4>
-    <div style="display: flex; gap: 12px;">
-      <figure style="flex: 1; text-align: center; margin: 0;">
-        <img src="./lectures/images/session1/step6/sdxl_512.png" style="width: 100%;" alt="SDXL 512px" />
-        <figcaption style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">512×512 생성 (어색)</figcaption>
-      </figure>
-      <figure style="flex: 1; text-align: center; margin: 0;">
-        <img src="./lectures/images/session1/step6/sdxl_1024.png" style="width: 100%;" alt="SDXL 1024px" />
-        <figcaption style="font-size: 0.85em; color: #6b7280; margin-top: 4px;">1024×1024 생성</figcaption>
-      </figure>
-    </div>
-  </div>
-</div>
-
-각 모델은 특정 해상도의 이미지로 학습되었기 때문에, 학습 해상도와 다른 크기로 생성 시 결과물에 차이가 나타납니다.
-
-**SD 1.5 (학습 해상도: 512x512)**
-- 512 사이즈에서 안정적인 결과물을 생성합니다.
-- SD 1.5는 512 이미지 위주로 학습되었기에, 1024 사이즈의 빈 잠재이미지에서 개체가 여러 개가 생기거나 기괴하게 연결되는 현상이 발생합니다.
-
-**SDXL (학습 해상도: 1024x1024)**
-- 1024 사이즈에서 세밀하고 풍부한 디테일의 이미지를 생성합니다.
-- 반대로 512 사이즈에서는 세부 표현이 뭉개지거나 구도가 어색해질 수 있습니다.
-
-> 모델 선택 시 해당 모델의 학습 해상도에 맞는 Empty Latent Image 크기를 설정하는 것이 중요합니다.
-
----section---
-
-## Illustrious-XL 모델 실습
-
-### 파인튜닝(Fine-tuning)이란?
-
-**Illustrious-XL**을 이해하려면 먼저 파인튜닝 개념을 알아야 합니다.
-
-파인튜닝이란 이미 학습된 대형 모델(베이스 모델)을 특정 목적에 맞게 **추가 학습**시키는 기법입니다.
-
-\`\`\`settings
-베이스 모델 (SDXL)
-  └─ 수백만 장의 이미지로 학습된 범용 모델
-     └─ 파인튜닝
-        ├─ 애니메이션 이미지 위주 추가 학습 → Illustrious-XL
-        ├─ 사진 리얼리즘 위주 추가 학습 → RealVisXL
-        └─ 특정 작가 스타일 학습 → 스타일 특화 모델
-\`\`\`
-
-베이스 모델의 방대한 지식은 그대로 유지하면서, 특정 도메인의 표현력을 강화할 수 있습니다.
-Civitai 등 커뮤니티에서 배포되는 대부분의 체크포인트가 이 파인튜닝 방식으로 제작됩니다.
-
----
-
-### Illustrious-XL 모델 정보
-
-- **베이스 모델**: SDXL (Stable Diffusion XL)
-- **파인튜닝 방향**: 애니메이션 및 일러스트레이션 특화 학습
-- **권장 해상도**: 1024x1024
-- **특징**: 선명한 선화, 풍부한 채색, 다양한 애니메이션 스타일 표현
-
-Illustrious-XL은 SDXL을 기반으로 대량의 애니메이션/일러스트 이미지로 파인튜닝된 모델입니다.
-ComfyCloud에 내장되어 있어 별도 다운로드 없이 바로 사용할 수 있습니다.
-
-#### Illustrious-XL 실습
-
-1. **모델 라이브러리 열기**: 좌측 사이드바에서 모델(책 모양) 아이콘 클릭
-2. **Checkpoints 카테고리** 선택 → **Illustrious-XL** 찾기
-3. **"사용" 버튼** 클릭 → Load Checkpoint 노드에 자동 적용
-4. **Empty Latent Image** 노드에서 Width와 Height를 \`1024\`로 설정
-5. **프롬프트 입력**:
-\`\`\`prompt
-1girl, anime style, long hair, blue eyes, school uniform,
-detailed illustration, soft lighting, masterpiece
-\`\`\`
-6. **Queue Prompt** 버튼 클릭하여 생성
-
----section---
-
-### WAI-illustrious-SDXL 워크플로우 실습
-
-**WAI-illustrious-SDXL**은 Illustrious-XL을 한 단계 더 파인튜닝한 모델입니다.
-동일한 SDXL 계열이지만 색감과 묘사 방식이 다르게 특화되어 있습니다.
-
-아래 파일을 다운로드하여 워크플로우를 불러올 수 있습니다.
-이미지 파일에 워크플로우 정보가 내장되어 있습니다.
-
-[[image: session1/step6/wai_illustrous.png]]
-
-[[download: downloads/session1/step6/wai_illustrous.json | WAI-illustrious 워크플로우 다운로드 (.json)]]
-[[download: downloads/session1/step6/wai_illustrous.png | WAI-illustrious 워크플로우 이미지 다운로드 (.png)]]
-
-#### 불러오기 방법
-
-**방법 1 - JSON 파일**:
-1. 위 \`.json\` 파일 다운로드
-2. ComfyUI 로고 클릭 → **file → 불러오기** 선택
-3. 다운로드한 JSON 파일 선택
-
-**방법 2 - PNG 이미지 (워크플로우 내장)**:
-1. 위 \`.png\` 이미지 파일 다운로드
-2. ComfyUI 작업 공간에 PNG 파일을 **드래그 앤 드롭**
-3. 워크플로우가 자동으로 로드됨
-
-\`\`\`prompt
-1girl, anime style, long hair, blue eyes, school uniform,
-detailed illustration, soft lighting, masterpiece
-\`\`\`
-
-두 모델(Illustrious-XL vs WAI-illustrious-SDXL)의 화풍과 세부 표현 방식의 차이를 관찰해봅시다.`,
-  "session1/step7-lora-models.md": `# LoRA 모델 탐험
-
-[[image: session2/step1/lora.PNG]]
-
-## LoRA(Low-Rank Adaptation)란?
-
-LoRA는 체크포인트 모델을 수정하지 않고도 새로운 스타일이나 캐릭터를 학습시킬 수 있는 기술입니다.  
-기존 모델에 '추가 레이어'를 더하는 방식으로, 원본을 건드리지 않으면서도 새로운 기능을 부여합니다.
-
-## 로라 기본 개념
-
-### 체크포인트 vs LoRA 비교
-
-\`\`\`comparison
-체크포인트 모델:
-- 기본 토대 (집의 기초 구조)
-- 전체적인 스타일 결정
-- 용량: 2~12GB
-- 교체 시: 완전히 다른 결과
-
-LoRA 모델:
-- 추가 장식 (집의 인테리어)
-- 세부적인 스타일 조정
-- 용량: 50~500MB
-- 추가 시: 기존 결과에 변화 더함
-\`\`\`
-
----section---
-
-## LoRA 적용 실습
-
-ComfyCloud에는 별도 다운로드 없이 바로 사용할 수 있는 LoRA 모델이 내장되어 있습니다.
-모델 라이브러리에서 원하는 LoRA를 선택하면 워크플로우에 바로 적용됩니다.
-
-### ComfyCloud 모델 라이브러리에서 LoRA 불러오기
-
-1. 좌측 사이드바 **모델 아이콘** 클릭
-2. **Loras** 카테고리 선택
-3. 원하는 LoRA 모델의 **"사용" 버튼** 클릭
-4. 캔버스에 **Load LoRA 노드**가 추가됨
-5. Load Checkpoint 노드와 연결하여 사용
-
----section---
-
-### 실습 1: 동양화 스타일 LoRA 실습 (MoXin)
-
-**MoXin** LoRA는 중국 전통 동양화(수묵화) 스타일을 구현하는 LoRA입니다.
-아래 워크플로우 파일을 받아 ComfyCloud에서 바로 불러올 수 있습니다.
-
-[[download: downloads/session2/step1/moxin_lora.json | MoXin 동양화 워크플로우 다운로드 (.json)]]
-
-> 워크플로우에는 Load Checkpoint(SD 1.5 계열), Load LoRA(MoXin), 프롬프트가 이미 세팅되어 있습니다.
-> 파일을 열면 아래 상태로 준비됩니다:
-> \`\`\`
-> shuimobysim, a painting of mountains and river,
-> traditional chinese painting, ink wash, masterpiece
-> \`\`\`
-
-#### 실습 순서
-
-**1단계: LoRA bypass 상태로 실행**
-- 워크플로우를 열면 Load LoRA 노드가 **bypass(비활성)** 상태입니다
-- 그대로 이미지를 생성해 LoRA 없는 원본 결과를 확인합니다
-
-**2단계: bypass 해제 후 실행**
-- Load LoRA 노드의 **bypass를 해제**합니다
-- 동일한 프롬프트로 다시 생성하여 동양화 스타일이 어떻게 적용되는지 비교합니다
-
-**3단계: 강도 실험**
-- Load LoRA 노드의 **strength** 값을 변경하며 동양화 효과의 강도 차이를 확인합니다
-
-| strength | 효과 |
-|----------|------|
-| 0.4 | 은은한 동양화 느낌 |
-| 0.7 | 뚜렷한 수묵화 스타일 |
-| 1.0 | 강한 동양화 스타일 |
-
----section---
-
-### 실습 2: 수채화 스타일 LoRA 실습
-
-**Ars MidJourney Watercolor** LoRA를 사용하여 수채화 스타일 이미지를 생성해봅시다.
-
-Illustrious-XL은 선명한 애니메이션/일러스트 스타일로 그리는 반면,
-수채화 LoRA를 추가하면 색이 번지고 경계가 흐릿한 수채화 질감으로 바뀝니다.
-피사체가 있는 정물 프롬프트를 사용하면 이 차이가 가장 뚜렷하게 드러납니다.
-
-#### 워크플로우 구성
-1. **Load Checkpoint**: \`Illustrious-XL\` 선택
-2. **Load LoRA**: 모델 라이브러리에서 \`Ars MidJourney Watercolor\` 선택
-3. **프롬프트 입력**:
-\`\`\`prompt
-a glass vase with blooming roses and wildflowers on a wooden table,
-soft morning light through window, delicate petals,
-pastel tones, botanical still life
-\`\`\`
-4. LoRA **bypass 상태**로 먼저 생성 → bypass 해제 후 재생성하여 비교
-
-#### 관찰 포인트
-- **LoRA 없음(bypass)**: Illustrious-XL 특유의 선명한 윤곽선과 채색
-- **LoRA 적용**: 수채화 특유의 색 번짐, 흐릿한 경계, 종이 질감
-
-#### LoRA 강도 실험
-LoRA 노드의 **strength** 값을 변경하며 수채화 효과의 강도 차이를 확인합니다.
-
-| strength | 효과 |
-|----------|------|
-| 0.4 | 살짝 부드러운 일러스트 느낌 |
-| 0.7 | 수채화 질감이 뚜렷하게 표현 |
-| 1.0 | 강한 수채화 번짐 효과 |
-
----section---
-
-### 실습 3: 애니메이션 스타일 LoRA 실습
-
-**Retro Sci-fi 90's anime style** LoRA를 사용하여 레트로 애니메이션 스타일을 적용해봅시다.
-
-#### 워크플로우 구성
-1. **Load Checkpoint**: \`Illustrious-XL\` 또는 \`WAI-illustrious-SDXL\` 선택
-2. **Load LoRA**: 모델 라이브러리에서 \`Retro Sci-fi 90's anime style\` 선택
-3. **프롬프트 입력**:
-\`\`\`prompt
-1girl, retro anime style, 90s aesthetic, colorful,
-vibrant colors, detailed illustration
-\`\`\`
-4. LoRA 비활성화/활성화 상태로 각각 생성하며 비교
-5. 강도를 \`0.5\`, \`0.8\`, \`1.2\`로 변경하며 스타일 반영 정도 확인
-
----section---
-
-## 추가 실습 과제
-
-ComfyCloud에서 제공하는 다양한 스타일 LoRA를 자유롭게 탐색해보세요.
-
-### ComfyCloud 제공 주요 스타일 LoRA
-
-| LoRA | 효과 |
-|------|------|
-| Ars MidJourney Watercolor | 수채화 스타일 |
-| Retro Sci-fi 90's anime style | 레트로 애니메이션 스타일 |
-| Stained Glass | 스테인드글라스 스타일 |
-| 50s Noir Movie | 흑백 누아르 영화 스타일 |
-| 50s Panavision Movie | 50년대 영화 스타일 |
-| Low-key lighting Style XL | 저조도 조명 스타일 |
-
-### 자유 실습 가이드
-
-1. **모델 라이브러리 탐색**: Loras 카테고리에서 원하는 LoRA 선택
-2. **워크플로우 구성**: Load LoRA 노드를 추가하여 체크포인트에 연결
-3. **강도 실험**: strength 값을 0.4~1.2 범위에서 조절하며 비교
-
-### 다중 LoRA 실험
-
-LoRA 노드를 2개 중첩하여 사용하면 두 스타일이 어떻게 조합되는지 테스트해보세요.
-
-**연결 예시**:
-\`\`\`connection
-Load Checkpoint → LoRA 1 → LoRA 2 → CLIP Text Encode
-                    ↓        ↓
-                          KSampler
-\`\`\`
-
-**실험 아이디어**:
-- Watercolor LoRA + Low-key lighting LoRA 조합
-- Anime style LoRA + Stained Glass LoRA 중첩
-- 같은 LoRA를 다른 강도로 2번 적용
-
-다양한 조합을 시도하며 자신만의 독특한 스타일을 만들어보세요!`,
-  "session1/step8-clip-encoder.md": `# CLIP 인코딩 모델
-
-## 텍스트 인코더란?
-
-AI 이미지 생성 모델은 텍스트 프롬프트를 직접 이해하지 못합니다.
-프롬프트를 모델이 처리할 수 있는 숫자 벡터로 변환하는 것이 **텍스트 인코더**의 역할입니다.
-
-\`\`\`settings
-프롬프트 (텍스트)
-    ↓ 텍스트 인코더
-숫자 벡터 (임베딩)
-    ↓ 디퓨전 모델
-이미지
-\`\`\`
-
-텍스트 인코더의 성능이 곧 프롬프트 이해력을 결정합니다.
-
----section---
-
-## CLIP 인코더
-
-**CLIP(Contrastive Language-Image Pre-training)**은 OpenAI가 2021년 발표한 멀티모달 모델입니다.
-이미지와 텍스트를 같은 벡터 공간에 매핑하도록 학습하여, 텍스트만으로도 이미지 특성을 표현할 수 있습니다.
-
-### CLIP의 학습 방식
-
-수억 장의 이미지-캡션 쌍으로 학습했습니다.
-
-\`\`\`settings
-"a cat sitting on a sofa" → [0.12, -0.34, 0.87, ...] (텍스트 벡터)
-고양이 소파 이미지           → [0.11, -0.35, 0.86, ...] (이미지 벡터)
-            ↑ 두 벡터를 최대한 가깝게 학습
-\`\`\`
-
-이렇게 학습된 CLIP은 텍스트를 이미지와 "유사한 언어"로 번역하는 역할을 합니다.
-
----
-
-### CLIP이 잘하는 것
-
-- 짧고 명확한 키워드 처리
-- 스타일, 색감, 분위기 표현
-- 객체 나열 및 조합
-
-\`\`\`prompt
-1girl, long hair, blue dress, sunset, soft lighting, masterpiece
-\`\`\`
-이런 키워드 나열 프롬프트에서 CLIP은 뛰어난 성능을 발휘합니다.
-
----
-
-### CLIP의 한계
-
-CLIP은 텍스트의 **순서와 관계**를 완전히 이해하지 못합니다.
-
-예를 들어, 아래 두 문장을 구분하기 어렵습니다:
-
-\`\`\`settings
-"A dog chasing a man"  (개가 사람을 쫓는 중)
-"A man chasing a dog"  (사람이 개를 쫓는 중)
-\`\`\`
-
-CLIP은 "dog", "man", "chasing"이라는 키워드를 모두 인식하지만,
-**누가 누구를 쫓는지**의 방향성을 정확히 반영하기 어렵습니다.
-
-> 이 때문에 SD 1.5 / SDXL 계열 모델에서 복잡한 관계나 긴 문장 프롬프트가 잘 반영되지 않는 경우가 생깁니다.
-
----section---
-
-## Stable Diffusion에서의 CLIP
-
-### SD 1.5 - CLIP ViT-L/14
-
-SD 1.5는 **CLIP ViT-L/14** 인코더를 사용합니다.
-
-\`\`\`settings
-CLIP ViT-L/14
-- 파라미터: 약 123M
-- 최대 토큰 수: 77 토큰 (약 60단어)
-- 학습 이미지: LAION 데이터셋 (수십억 장)
-\`\`\`
-
-77 토큰 제한으로 인해 긴 프롬프트는 잘려나가고,
-초과된 부분이 이미지에 반영되지 않는 경우가 발생합니다.
-
----
-
-### SDXL - 듀얼 CLIP (OpenCLIP-ViT-bigG + CLIP ViT-L)
-
-SDXL은 두 개의 CLIP 인코더를 **병렬로** 사용합니다.
-
-\`\`\`settings
-SDXL 텍스트 인코딩 구조
-
-프롬프트 → CLIP ViT-L/14    → 임베딩 A ─┐
-         → OpenCLIP-ViT-bigG → 임베딩 B ─┴→ 결합 → 디퓨전 모델
-\`\`\`
-
-| 인코더 | 특징 |
-|--------|------|
-| CLIP ViT-L | SD 1.5와 동일, 호환성 중심 |
-| OpenCLIP-ViT-bigG | 더 큰 모델, 세부 표현 강화 |
-
-두 인코더의 임베딩을 합쳐 더 풍부한 프롬프트 표현이 가능하지만,
-근본적인 키워드 중심 처리 방식은 동일합니다.
-
----section---
-
-## Flux - CLIP + T5-XXL
-
-Flux는 CLIP의 한계를 보완하기 위해 **T5-XXL 인코더**를 함께 사용합니다.
-
-\`\`\`settings
-Flux 텍스트 인코딩 구조
-
-프롬프트 → CLIP-L  → 임베딩 A ─┐
-         → T5-XXL  → 임베딩 B ─┴→ 결합 → 디퓨전 모델
-\`\`\`
-
-### T5-XXL이란?
-
-**T5(Text-to-Text Transfer Transformer)**는 Google이 개발한 대형 언어 모델입니다.
-
-> 쉽게 말하면 **미니 GPT**라고 생각하면 됩니다.
-> GPT나 Llama 같은 LLM처럼 문장의 의미를 이해하고 토큰화해주는 언어 모델입니다.
-> CLIP이 "단어 사전"처럼 키워드를 조회하는 방식이라면,
-> T5는 "문장을 읽고 이해하는 독자"처럼 문맥 전체를 파악합니다.
-
-\`\`\`settings
-T5-XXL
-- 파라미터: 11B (110억)
-- 설계 목적: 문장 의미 이해와 변환
-- 처리 방식: 문장 전체를 "의미 단위"로 임베딩
-\`\`\`
-
-T5는 원래 텍스트 번역, 요약, 질의응답을 위해 설계된 모델로,
-문장의 구조와 의미 관계를 CLIP보다 훨씬 정밀하게 이해합니다.
-
----
-
-### CLIP vs T5: 역할 분담
-
-Flux 템플릿의 프롬프트 예시를 보면 두 인코더의 역할 차이가 명확합니다.
-
-**CLIP 입력 (clip_l)** - 키워드 중심:
-\`\`\`prompt
-Cute retro mini car, pastel-colored 3D flowers overflowing from it,
-soft green background, minimalist and fresh style, high-precision rendering,
-spring-like vibrant atmosphere, delicate petal details, gentle color grading.
-\`\`\`
-
-**T5 입력 (t5xxl)** - 자연어 문장:
-\`\`\`prompt
-Create a 3D-styled image: A cute, retro-looking mini car with soft,
-pastel-colored flowers (like daisies, pink blooms) overflowing from it.
-Set against a gentle green background, giving a fresh, spring-vibe.
-Make it look whimsical and delicate, like a sweet illustration.
-\`\`\`
-
-위 예시가 그대로 담긴 Flux 워크플로우(FLUX.1-schnell + DualCLIPLoader: clip_l + t5xxl)를 내려받아 ComfyUI에 불러오면 바로 실행해볼 수 있습니다.
-
-[[download: downloads/session1/step7/flux_schnell_t2i.json | Flux (CLIP + T5-XXL) 워크플로우 다운로드 (.json)]]
-
-| | CLIP | T5-XXL |
-|---|---|---|
-| 강점 | 스타일·분위기 키워드 | 관계·순서·문맥 이해 |
-| 프롬프트 형태 | 쉼표로 나열된 태그 | 완성된 자연어 문장 |
-| 토큰 한계 | 77 토큰 | 수백 토큰 이상 |
-
----section---
-
-## 정리: 인코더 세대 비교
-
-| 모델 | 인코더 | 프롬프트 스타일 |
-|------|--------|----------------|
-| SD 1.5 | CLIP ViT-L (단일) | 짧은 키워드 나열 |
-| SDXL / Illustrious-XL | 듀얼 CLIP | 키워드 + 다소 긴 문장 |
-| Flux | CLIP + T5-XXL | 키워드 또는 자연어 모두 가능 |
-
-모델 세대가 올라갈수록 텍스트 이해 능력이 향상됩니다.
-Flux에서 자연어로 작성된 긴 프롬프트가 잘 반영되는 이유가 바로 T5-XXL 인코더 덕분입니다.
-
-> ComfyUI에서 Flux 워크플로우를 열면 **CLIPTextEncodeFlux** 노드에 \`clip_l\`과 \`t5xxl\` 두 입력 필드가 있습니다. 각각에 다른 스타일의 프롬프트를 입력해보세요.
-`,
-  "session1/step9-image-to-image.md": `# Image to Image 입문
-
-[[image: session1/step9/i2i_1.PNG]]
-[[image: session1/step9/i2i_2.PNG]]
-[[image: session1/step9/i2i_principle.png]]
-
----section---
-
-## 그렇다면 노이즈는 어떻게 생성할까? → 노이즈는 seed값을 토대로 생성된다!
-
-[[image: session1/step9/denoising.gif]]
-
----section---
-
-## Image to Image란?
-
-Image to Image(Img2Img)는 기존 이미지를 참조하여 새로운 이미지를 생성하는 기법입니다.
-Text to Image와 유사하지만, 참조 이미지를 조건으로 추가하여 더욱 정밀한 제어가 가능합니다.
-
-### Image to Image의 활용
-- 사진을 애니메이션 스타일로 변환
-- 스케치를 완성된 이미지로 변환
-- 이미지 복원 및 화질 개선
-- 흑백 이미지 컬러화
-- 스타일 변환 (예: 사실적 사진 → 수채화)
-
----section---
-
-## Image to Image 실습
-
-### 실습 준비: 샘플 이미지 및 워크플로우 다운로드
-
-[[image: session1/step9/i2i_sample.png | width:448]]
-
-위 이미지를 우클릭하여 다운로드하세요.
-
-[[download: downloads/session1/step9/i2i_workflow.json | Image to Image 워크플로우 다운로드 (.json)]]
-
----section---
-
-### Step 1: 워크플로우 열기
-위에서 받은 \`i2i_workflow.json\` 파일을 ComfyCloud에 불러옵니다.
-
-- ComfyUI 로고 클릭 → **file → 불러오기** → 다운로드한 JSON 파일 선택
-
-### Step 2: 이미지 투입
-**Load Image** 노드에서 위에서 다운로드한 \`i2i_sample.png\` 파일을 업로드합니다.
-
-### Step 3: 첫 실행
-**Queue Prompt** 버튼을 클릭하여 첫 결과를 확인합니다.
-
----section---
-
-### Step 4: Denoise 값 변경하며 실습
-**KSampler** 노드의 \`denoise\` 값을 변경하며 원본 이미지와의 유사도 차이를 비교해봅시다.
-
----section---
-
-### Denoise 값에 따른 차이 정리
-
-| Denoise | 결과 특징 |
-|---------|----------|
-| 0.3 | 원본과 매우 유사, 색감과 스타일만 약간 변경 |
-| 0.5 | 원본 구도 유지하며 애니메이션 스타일 적용 |
-| 0.75 | 균형잡힌 변환 (기본 권장값) |
-| 0.9 | 원본 형태는 남지만 대담한 스타일 변환 |
-`,
-  "session2/step1-controlnet-intro.md": `# ControlNet이란?
-
-[[image: session2/step2/controlnet.png]]
-
-## ControlNet 개념 이해
-
-ControlNet은 Stable Diffusion의 이미지 생성 과정에 **추가 조건을 부여**하여 정밀한 제어를 가능하게 만드는 신경망 구조입니다.
-
-### 왜 ControlNet이 필요한가?
-
-기존 Stable Diffusion은 텍스트 프롬프트만으로 이미지를 생성하기 때문에:
-- 원하는 구도를 정확히 만들기 어려움
-- 특정 포즈나 형태를 지정하기 힘듦
-- 결과물의 일관성 유지가 어려움
-
-ControlNet은 이러한 문제를 **시각적 가이드**를 통해 해결합니다.
-
----
-
-## ControlNet 작동 원리
-
-### 핵심 메커니즘
-
-\`\`\`settings
-원본 모델 가중치: 잠금 상태로 보존
-ControlNet 가중치: 학습 가능한 복사본
-Zero Convolution: 두 가중치를 연결하는 특수 레이어
-\`\`\`
-
-**Zero Convolution**은 초기값이 0으로 설정되어, 학습 과정에서 점진적으로 최적값으로 진화합니다. 이를 통해 원본 Stable Diffusion 모델은 그대로 유지되면서도 새로운 조건을 학습할 수 있습니다.
-
-### 입력 처리 방식
-
-\`\`\`settings
-텍스트 프롬프트 + 추가 조건 이미지 = 정밀한 이미지 생성
-\`\`\`
-
-추가 조건은 다양한 형태로 제공됩니다:
-- Edge maps (엣지 맵)
-- Human poses (인체 포즈)
-- Depth maps (깊이 맵)
-- Segmentation masks (세그멘테이션 마스크)
-- Hand-drawn sketches (손그림 스케치)
-
----
-
-## 주요 ControlNet 유형 비교
-
-### 1. Canny
-\`\`\`settings
-특징: 샤프한 엣지 검출
-용도: 세밀한 윤곽선 유지, 건축/제품 디자인
-강점: 디테일한 형태 보존
-\`\`\`
-
-### 2. Depth
-\`\`\`settings
-특징: 3D 공간 깊이 정보
-용도: 풍경, 인테리어, 원근감 중요한 이미지
-강점: 전경/배경 관계 유지
-\`\`\`
-
-### 3. OpenPose
-\`\`\`settings
-특징: 인체 골격 감지
-용도: 캐릭터 포즈 제어
-강점: 손, 다리, 머리 위치 정확한 재현
-\`\`\`
-
-### 4. Scribble
-\`\`\`settings
-특징: 손그림 스케치 인식
-용도: 간단한 낙서를 완성된 이미지로
-강점: 빠른 아이디어 시각화
-\`\`\`
-
----
-
-## ControlNet 선택 가이드
-
-### 전체 이미지 변환이 필요할 때
-- **Depth**: 배경 대대적 변경
-- **OpenPose**: 완전히 새로운 포즈 생성
-
-### 세부 요소만 수정할 때
-- **Canny**: 디테일 추가, 특정 요소 개선
-- **Scribble**: 부분적인 수정과 조정
-
-### 복합 사용
-여러 ControlNet을 동시에 사용하여 더 정밀한 제어가 가능합니다:
-
-\`\`\`settings
-OpenPose + Canny: 포즈 고정 + 엣지 디테일
-Depth + Scribble: 공간감 유지 + 스케치 적용
-\`\`\`
-
----
-
-## ControlNet 모델 최신 동향 (2024-2025)
-
-### Stable Diffusion 3.5 Large ControlNet
-StabilityAI가 공식 출시한 최신 ControlNet 모델:
-
-\`\`\`settings
-지원 타입: Blur, Canny, Depth
-학습 데이터: 합성 데이터 기반
-특징: 고해상도 이미지 생성 지원
-\`\`\`
-
-### 버전별 지원
-\`\`\`settings
-SD 1.5: 가장 많은 ControlNet 모델 보유
-SDXL: 고해상도 전용 모델
-SD 3.5: 최신 기술 적용
-\`\`\`
-
----
-
-## 실습: Scribble ControlNet으로 거북이 그리기
-
-### 학습 목표
-간단한 스케치 이미지를 사용하여 ControlNet의 작동 원리와 매개변수 조정 방법을 익힙니다.
-
-### 준비물
-
-**워크플로우 다운로드**:
-
-[[download: downloads/session2/step2/turtle.json | 거북이 Scribble 워크플로우 다운로드]]
-
-**연습용 이미지 다운로드**:
-
-[[download: downloads/session2/step2/turtle.png | 거북이 스케치 이미지 다운로드]]
-
-**이미지 미리보기**:
-
-[[image: session2/step2/turtle.png]]
-
-### Step 1: 워크플로우 열기 및 이미지 생성
-
-**워크플로우 불러오기**:
-1. 다운로드한 \`turtle.json\` 파일을 ComfyUI에 드래그 앤 드롭
-2. 워크플로우가 자동으로 로드됩니다
-
-**이미지 업로드**:
-1. \`Load Image\` 노드를 찾습니다
-2. 위의 거북이 이미지(turtle.png)를 다운로드합니다
-3. \`Load Image\` 노드에 거북이 이미지를 업로드합니다
-
-**첫 이미지 생성**:
-\`\`\`settings
-Queue Prompt 버튼 클릭
-기본 설정으로 이미지 생성 확인
-\`\`\`
-
-### Step 2: ControlNet 매개변수 조정하기
-
-**ControlNetApplyAdvanced 노드 찾기**:
-- 워크플로우에서 \`ControlNetApplyAdvanced\` 노드를 찾습니다
-- 이 노드에는 3개의 중요한 매개변수가 있습니다
-
-**매개변수 설명**:
-\`\`\`settings
-strength (적용 강도): ControlNet의 영향력
-- 0.0 ~ 2.0 범위
-- 높을수록 스케치에 충실
-
-start_percent (시작 퍼센트): ControlNet 적용 시작 지점
-- 0.0 ~ 1.0 범위
-- 디노이징 과정의 시작 시점
-
-end_percent (종료 퍼센트): ControlNet 적용 종료 지점
-- 0.0 ~ 1.0 범위
-- 디노이징 과정의 종료 시점
-\`\`\`
-
-**실험해보기**:
-1. **strength를 0.5 -> 0.9 -> 1.2**로 변경하며 생성
-2. **start_percent를 0.1 -> 0.0 -> 0.2**로 변경하며 생성
-3. **end_percent를 0.8 -> 0.6 -> 1.0**으로 변경하며 생성
-
-각 설정별로 결과물의 차이를 관찰합니다.
-
----
-
-### Step 3: 노드 마스크 편집기로 형태 수정하기
-
-**마스크 편집기 열기**:
-1. \`Load Image\` 노드에서 **연필 아이콘**(노드 마스크 편집기) 클릭
-2. 편집 창이 열립니다
-
-**스케치 수정**:
-\`\`\`settings
-브러시로 선 추가하기
-지우개로 불필요한 선 제거하기
-두께 조절하여 디테일 추가
-\`\`\`
-
-**수정 후 재생성**:
-1. 편집 완료 후 저장
-2. \`Queue Prompt\`로 새로운 이미지 생성
-3. 수정한 부분이 어떻게 반영되는지 확인
-
-**반복 실험**:
-\`\`\`settings
-스케치 수정 -> 생성 -> 결과 확인 -> 매개변수 조정 -> 다시 생성
-원하는 결과가 나올 때까지 반복
-\`\`\`
-
----
+로그인 화면이 반복되면 새로고침한 뒤 같은 계정으로 다시 로그인합니다. 조직 계정이라면 로그인 제한이 있는지도 확인합니다.
 
 ## 정리
 
-### ControlNet 핵심 개념
-- Stable Diffusion에 **시각적 가이드** 추가
-- 원본 모델은 보존하며 **새로운 조건 학습**
-- 다양한 타입으로 **다양한 제어 방식** 제공
-
-### Scribble ControlNet 실습 핵심
-- **간단한 스케치**로 완성도 높은 이미지 생성
-- **강도 조절**로 제어 수준 설정
-- **반복 수정**을 통한 최적화
+Comfy 계정으로 로그인하고 캔버스가 보이면 준비가 끝났습니다.
 
 ---
 
-**다음 강의**: Step 1에서는 OpenPose ControlNet으로 정확한 인체 포즈를 제어하는 방법을 배웁니다.
+**다음 강의**: 기본 인터페이스에서 자주 쓰는 위치를 확인합니다.
 `,
-  "session2/step2-openpose.md": `# OpenPose ControlNet 마스터
-
-## OpenPose ControlNet 소개
-
-OpenPose는 인체의 포즈를 스켈레톤 형태로 추출하여 AI 이미지 생성에 적용하는 강력한 ControlNet입니다.  
-정확한 포즈와 자세를 유지하면서 완전히 다른 캐릭터나 스타일로 변환할 수 있습니다.
-
-### OpenPose의 핵심 특징
-- 18개 관절점으로 인체 구조 표현
-- 얼굴, 손 디테일 추가 가능
-- 실시간 포즈 편집 지원
-- 다양한 포즈 라이브러리 활용
-
----
-
-## 워크플로우 준비
-
-이번 실습에서는 OpenPose Editor를 활용하여 포즈를 직접 편집하고, 레퍼런스 이미지의 포즈를 추출하여 AI 이미지 생성에 적용하는 방법을 배웁니다.
-
-### 실습 자료 다운로드
-
-**레퍼런스 포즈 이미지 다운로드**:
-
-[[download: downloads/session2/step3/openpose.jpg | OpenPose 레퍼런스 이미지 다운로드]]
-
-**이미지 미리보기**:
-
-[[image: session2/step3/openpose.jpg | width:50%]]
-
-**워크플로우 파일**:
-
-[[download: downloads/session2/step3/openpose.json | OpenPose 워크플로우 다운로드]]
-
-위 버튼을 클릭하여 워크플로우 파일을 다운로드한 후 실습을 진행합니다.
-
----
-
-## 워크플로우 실습
-
-### Step 1: OpenPose Editor 커스텀 노드 설치
-
-1. **ComfyUI Manager 클릭** (우측 상단 메뉴)
-2. **Install Custom Nodes** 또는 **Add Custom Node** 클릭
-3. 검색창에 **"openpose"** 검색
-4. **huchenlei** 제작자의 **ComfyUI-OpenPose-Editor** 설치
-5. 설치 완료 후 **페이지 새로고침** (브라우저 F5)
-
----
-
-### Step 2: 레퍼런스 이미지로 포즈 추출 및 생성
-
-1. **워크플로우 열기**:
-   - ComfyUI 로고 클릭 → **file → 불러오기**
-   - 다운로드한 \`openpose.json\` 파일 선택
-
-2. **레퍼런스 이미지 업로드**:
-   - **Load Image** 노드 찾기
-   - 위에서 다운로드한 \`openpose.jpg\` 이미지 업로드
-
-3. **Switch 노드 확인**:
-   - **Switch** 노드의 값이 **1**로 설정되어 있는지 확인
-   - 값이 1이면 레퍼런스 이미지에서 추출한 포즈를 사용
-
-4. **이미지 생성 실행**:
-   - **Queue Prompt** 버튼 클릭
-   - 생성된 이미지의 포즈가 레퍼런스 이미지와 일치하는지 확인
-
----
-
-### Step 3: OpenPose Editor로 포즈 직접 수정
-
-1. **OpenPose Editor 노드 찾기**:
-   - 워크플로우에 있는 **OpenPose Editor** 노드 찾기
-
-2. **에디터 열기**:
-   - OpenPose Editor 노드를 **우클릭**
-   - **Open Editor** 선택
-
-3. **포즈 수정**:
-   - 에디터 창이 열리면 관절점을 드래그하여 포즈 수정
-   - 팔, 다리, 몸통 각도 조정
-   - 원하는 포즈로 편집
-
-4. **ComfyUI에 업로드**:
-   - 포즈 수정 완료 후 **Upload to ComfyUI** 버튼 클릭
-
-5. **Switch 노드 변경**:
-   - **Switch** 노드의 값을 **2**로 변경
-   - 값이 2이면 OpenPose Editor에서 수정한 포즈를 사용
-
-6. **이미지 생성 실행**:
-   - **Queue Prompt** 버튼 클릭
-   - 수정한 포즈가 반영된 이미지 확인
-
----
-
-## 자유 실습
-
-레퍼런스 포즈 이미지를 다른 것으로 바꾸거나, OpenPose Editor에서 직접 포즈를 수정하거나, 프롬프트를 변경하면서 다양한 이미지를 만들어보세요.`,
-  "session2/step3-canny-depth.md": `# Canny와 Depth ControlNet
-
-## Canny ControlNet 이해
-
-Canny는 이미지의 엣지(윤곽선)를 검출하여 정확한 형태를 유지하는 ControlNet입니다.  
-건축물, 제품 디자인, 정밀한 형태 재현에 탁월합니다.
-
-### Canny의 특징
-- 샤프한 엣지 검출
-- 디테일한 윤곽선 보존
-- 구조적 정확성
-- 스타일 변환에 최적
-
-### Canny Edge Detection 원리
-\`\`\`settings
-1. 가우시안 블러로 노이즈 제거
-2. 그래디언트 계산으로 엣지 강도 측정
-3. Non-maximum suppression
-4. Double threshold로 엣지 확정
-\`\`\`
-
-## Depth ControlNet 이해
-
-Depth는 이미지의 깊이 정보를 활용하여 3D 공간감을 유지합니다.  
-풍경, 인테리어, 공간 구성에 강력합니다.
-
-### Depth의 특징
-- 원근감 보존
-- 공간 관계 유지
-- 전경/배경 분리
-- 3D 구조 재현
-
-### Depth Map 생성 방식
-\`\`\`settings
-MiDaS: 모노큘러 깊이 추정
-DPT: 트랜스포머 기반
-ZoeDepth: 메트릭 깊이
-LeReS: 고해상도 깊이
-\`\`\`
-
----
-
-## Canny 실습
-
-이제 Canny ControlNet을 사용하여 이미지의 윤곽선을 유지하면서 다양한 스타일로 변환해봅시다.
-
-### 1단계: 워크플로우 및 이미지 다운로드
-
-[[download: downloads/session2/step4/canny_workflow.json | Canny 워크플로우 다운로드]]
-
-**실습용 이미지 미리보기**:
-
-[[image: session2/step4/canny_girl.png | width:50%]]
-
-### 2단계: 워크플로우 열기
-
-1. **워크플로우 열기**: 다운로드한 \`canny_workflow.json\` 파일을 ComfyUI에서 열기
-   - ComfyUI 로고 클릭 → **file → 불러오기** → 다운로드한 JSON 파일 선택
-
-### 3단계: 이미지 업로드 및 생성
-
-#### 이미지 업로드 및 기본 생성
-1. **이미지 로드 노드**에 위의 이미지(\`canny_girl.png\`)를 우클릭하여 다운로드 후 업로드
-2. **이미지 생성 실행**: Queue Prompt 버튼 클릭
-
-#### Threshold 값 조정 실습
-Threshold 값을 변경하면서 엣지 검출이 어떻게 달라지는지 확인합니다:
-
-- **Low Threshold 낮게 (50-100)**: 더 많은 디테일과 세밀한 엣지 포함
-- **High Threshold 높게 (150-200)**: 주요 윤곽선만 강하게 검출
-
-각 설정으로 생성을 실행하며 결과를 비교해보세요.
-
-#### 프롬프트 변경 실습
-다양한 프롬프트로 스타일을 변경해봅니다:
-
-**예시 프롬프트**:
-\`\`\`prompt
-anime style, vibrant colors, detailed illustration
-\`\`\`
-
-\`\`\`prompt
-oil painting style, impressionist, soft brushstrokes
-\`\`\`
-
-\`\`\`prompt
-cyberpunk style, neon lights, futuristic atmosphere
-\`\`\`
-
-### 4단계: 자유 실습
-
-다양한 레퍼런스 이미지와 프롬프트를 활용하여 자유롭게 실습해보세요!
-
-**실습 팁**:
-- 윤곽선이 명확한 이미지일수록 좋은 결과가 나옵니다
-- Threshold 값을 조정하며 원하는 디테일 수준을 찾아보세요
-- ControlNet Strength를 조정하여 원본 구조 유지 정도를 조절할 수 있습니다
-
----
-
-## Depth 실습
-
-이제 Depth ControlNet을 사용하여 이미지의 깊이 정보를 유지하면서 공간감을 살린 이미지를 생성해봅시다.
-
-### 1단계: 워크플로우 및 이미지 다운로드
-
-[[download: downloads/session2/step4/depth_controlnet.json | Depth 워크플로우 다운로드]]
-
-**이미지 미리보기**:
-
-[[image: session2/step4/building.webp | width:50% | row]]
-[[image: session2/step4/inner.jpg | width:50% | row]]
-
-### 2단계: 워크플로우 열기
-
-1. **워크플로우 열기**: 다운로드한 \`depth_controlnet.json\` 파일을 ComfyUI에서 열기
-   - ComfyUI 로고 클릭 → **file → 불러오기** → 다운로드한 JSON 파일 선택
-
-### 3단계: building.webp 실습
-
-#### 건축물 이미지 실습
-1. **이미지 로드 노드**에 \`building.webp\` 업로드
-2. **이미지 생성 실행**: Queue Prompt 버튼 클릭
-
-건축물의 깊이 정보가 유지되면서 스타일이 변환되는 것을 확인할 수 있습니다.
-
-#### 다양한 스타일 프롬프트 적용
-
-**Steampunk 스타일**:
-\`\`\`prompt
-steampunk architecture, brass and copper, mechanical gears,
-Victorian era, industrial design, vintage machinery
-\`\`\`
-
-**Futuristic 스타일**:
-\`\`\`prompt
-futuristic building, glass and metal, holographic elements,
-sci-fi architecture, neon lights, cyberpunk city
-\`\`\`
-
-**Wood 스타일**:
-\`\`\`prompt
-wooden structure, traditional timber architecture,
-natural materials, rustic design, forest cabin style
-\`\`\`
-
-각 프롬프트로 생성을 실행하고 결과를 비교해보세요.
-
-### 4단계: inner.jpg 애니메이션 스타일 실습
-
-인테리어 이미지를 애니메이션 스타일로 변환해봅시다.
-
-#### 이미지 업로드
-1. **이미지 로드 노드**에 \`inner.jpg\` 업로드
-2. 워크플로우에 **SD3.5 Large** 모델(\`sd3.5_large_fp8_scaled.safetensors\`)이 이미 설정되어 있습니다
-
-#### 프롬프트 설정
-
-**긍정 프롬프트** (Positive Prompt):
-\`\`\`prompt
-anime style interior, cozy room, warm lighting, detailed furniture, soft colors, high quality illustration, masterpiece
-\`\`\`
-
-**부정 프롬프트** (Negative Prompt):
-\`\`\`prompt
-(low quality, blurry, realistic, deformed, extra limbs, text, watermark, sketch)
-\`\`\`
-
-3. **이미지 생성 실행**: Queue Prompt 버튼 클릭
-
-공간의 깊이감을 유지하면서 애니메이션 스타일의 인테리어가 생성되는 것을 확인할 수 있습니다.
-
-### 5단계: 자유 실습
-
-다양한 이미지와 프롬프트를 활용하여 Depth ControlNet을 자유롭게 탐구해보세요!
-
----
-
-## Canny vs Depth 비교
-
-### 언제 Canny를 사용할까?
-\`\`\`settings
-✓ 정확한 윤곽선 필요
-✓ 건축물, 기계 디자인
-✓ 선화 스타일 변환
-✓ 텍스트나 로고 보존
-\`\`\`
-
-### 언제 Depth를 사용할까?
-\`\`\`settings
-✓ 공간감 중요
-✓ 풍경, 인테리어
-✓ 전경/배경 분리
-✓ 3D 느낌 유지
-\`\`\`
-
----
-
-## 고급 Canny 테크닉
-
-### Soft Edge 효과
-부드러운 엣지를 위한 설정:
-\`\`\`settings
-low_threshold: 30
-high_threshold: 100
-blur_radius: 2
-\`\`\`
-
-### Multi-Scale Canny
-다양한 스케일의 엣지 조합:
-1. 저해상도 엣지 (큰 구조)
-2. 고해상도 엣지 (세부사항)
-3. 두 결과 병합
-
-### Selective Edge
-특정 영역만 엣지 적용:
-\`\`\`settings
-mask_area: true
-edge_region: foreground_only
-preserve_background: true
-\`\`\`
-
-## 고급 Depth 테크닉
-
-### Depth 편집
-깊이맵 수동 조정:
-1. Depth Editor 노드 사용
-2. 브러시로 깊이값 수정
-3. 전경/배경 관계 조정
-
-### Depth 강조
-\`\`\`settings
-depth_multiplier: 1.5 (깊이 과장)
-near_clip: 0.1 (가까운 객체)
-far_clip: 100 (먼 객체)
-\`\`\`
-
-### Atmospheric Perspective
-거리에 따른 대기 효과:
-\`\`\`prompt
-distant mountains with fog,
-atmospheric haze, depth layers
-\`\`\`
-
----
-
-## Canny + Depth 조합
-
-### 듀얼 ControlNet 설정
-두 ControlNet 동시 사용:
-\`\`\`settings
-Canny strength: 0.6
-Depth strength: 0.4
-Total influence: 1.0
-\`\`\`
-
-### 조합 장점
-- Canny: 정확한 형태
-- Depth: 올바른 공간감
-- 결과: 완벽한 구조 재현
-
-### 실습 예제
-건물 내부 변환:
-1. Canny로 구조 유지
-2. Depth로 공간감 보존
-3. 스타일만 변경
-
----
-
-## 실전 프로젝트
-
-### 프로젝트 1: 도시 재구성
-현대 도시 → SF 도시:
-
-\`\`\`settings
-Canny: 건물 윤곽 유지
-Depth: 거리감 보존
-Prompt: futuristic cityscape, flying cars
-\`\`\`
-
-### 프로젝트 2: 캐릭터 의상 변경
-인물 사진 → 판타지 캐릭터:
-
-\`\`\`settings
-Canny: 포즈와 형태 유지
-Prompt: medieval armor, fantasy warrior
-Strength: 0.7
-\`\`\`
-
-### 프로젝트 3: 자연 풍경 변환
-숲 → 외계 정글:
-
-\`\`\`settings
-Depth: 나무들의 깊이 유지
-Prompt: alien jungle, bioluminescent flora
-\`\`\`
-
----
-
-## 전처리 최적화
-
-### Canny 전처리 팁
-\`\`\`python
-# 이미지 선명도 증가
-sharpen_kernel = np.array([[0,-1,0],
-                           [-1,5,-1],
-                           [0,-1,0]])
-\`\`\`
-
-### Depth 전처리 팁
-- 고대비 이미지 사용
-- 명확한 전경/배경 분리
-- 균일한 조명 선호
-
----
-
-## 문제 해결
-
-### Canny 엣지가 너무 복잡할 때
-- Threshold 값 증가
-- 가우시안 블러 적용
-- Simplify edges 옵션
-
-### Depth가 부정확할 때
-- 다른 depth 모델 시도
-- Manual depth painting
-- Multiple depth maps 평균
-
-### 결과가 원본과 너무 다를 때
-- ControlNet strength 증가
-- 프롬프트 조정
-- Denoising 감소
-
----
-
-## 스타일별 설정 가이드
-
-### 애니메이션 스타일
-\`\`\`settings
-Canny: low_threshold: 100
-Depth: 사용 안 함
-Prompt: anime style, cel shading
-\`\`\`
-
-### 포토리얼리스틱
-\`\`\`settings
-Canny: 사용 안 함
-Depth: strength: 0.8
-Prompt: photorealistic, 8k detail
-\`\`\`
-
-### 아트 스타일
-\`\`\`settings
-Canny: strength: 0.5
-Depth: strength: 0.5
-Prompt: oil painting, impressionist
-\`\`\`
-
----
-
-## 실습 과제
-
-### 기초 실습
-1. 건물 사진으로 Canny 엣지 추출
-2. 풍경 사진으로 Depth map 생성
-3. 각각 3가지 다른 스타일 적용
-
-### 응용 실습
-1. Canny + Depth 동시 사용
-2. Threshold 값 비교 (50, 100, 200)
-3. Depth 모델 비교 (MiDaS vs DPT)
-
-### 창작 프로젝트
-포토 시리즈 제작:
-1. 하나의 원본 사진
-2. Canny로 5가지 스타일 변환
-3. Depth로 5가지 공간 변환
-4. 최고 조합 선정
-
----
-
-## 전문가 팁
-
-### 엣지 품질 향상
-\`\`\`settings
-Pre-process: denoise → sharpen
-Canny: adaptive threshold
-Post-process: edge smoothing
-\`\`\`
-
-### 깊이 정확도 향상
-\`\`\`settings
-Multi-model ensemble
-Depth refinement network
-Manual correction layer
-\`\`\`
-
-### 렌더링 최적화
-- Batch processing
-- Resolution stepping
-- Cache preprocessed data`,
-  "session2/step6-more-models-qwen.md": `# 더 많은 모델 - Qwen Image
-
----
-
-## Qwen Image란?
-
-알리바바(Alibaba) Qwen 팀이 개발한 오픈소스 이미지 생성 모델입니다.
-**Apache 2.0 라이선스**로 완전 공개되어 상업적 이용도 가능하며, ComfyCloud에서 기본 제공됩니다.
-
-### 핵심 특징
-
-| 항목 | 내용 |
-|------|------|
-| 개발사 | 알리바바 Qwen 팀 |
-| 아키텍처 | MMDiT (Multimodal Diffusion Transformer), 20B 파라미터 |
-| 라이선스 | Apache 2.0 (상업적 이용 가능) |
-| 최대 해상도 | 최대 3584×3584px |
-| ComfyCloud | 기본 내장 모델로 제공 |
-
----
-
-## Illustrious XL과의 차이
-
-지금까지 강의에서 주로 쓴 Illustrious XL과 비교했을 때, Qwen Image는 완전히 다른 용도에서 강점을 보입니다.
-
-| 비교 항목 | Illustrious XL | Qwen Image |
-|-----------|---------------|------------|
-| 아키텍처 | UNet 기반 | MMDiT Transformer |
-| 강점 | 애니메이션/일러스트, 스타일 표현 | 실사, 텍스트 렌더링, 고해상도 |
-| 이미지 내 텍스트 | 매우 취약 | 한국어/영어/중국어 정확 렌더링 |
-| LoRA 생태계 | 방대 | 초기 단계 |
-| 적합한 용도 | 캐릭터, 일러스트, 팬아트 | 포스터, 배너, 광고, 실사 |
-
-> **Qwen Image가 빛나는 순간**: 이미지 안에 글자를 넣어야 할 때. 포스터, 앨범 커버, 배너 등에서 기존 SD 모델들이 흐릿하거나 깨진 텍스트를 출력하는 것과 달리, Qwen Image는 다국어 텍스트를 정확하게 렌더링합니다.
-
----
-
-## 버전별 특징
-
-| 버전 | 특징 |
-|------|------|
-| Qwen-Image | 기본 텍스트→이미지 생성 |
-| Qwen-Image-2512 | 2025년 12월 개선판, 현재 권장 버전 |
-| Qwen-Image-Edit-2511 | 이미지 편집 특화 (텍스트 지시로 부분 수정) |
-| Qwen-Image-Layered | RGBA 레이어 분리 편집 (고급) |
-
----
-
-## ComfyCloud에서 사용하기
-
-Qwen Image는 ComfyCloud 내장 모델로 추가 설치 없이 바로 사용할 수 있습니다.
-
-### 워크플로우 구조
-
-기존 워크플로우와 핵심 흐름은 동일하지만, 체크포인트 로드 방식이 다릅니다.
-
-\`\`\`settings
-[UNETLoader]          — Qwen-Image-2512 모델 로드
-[DualCLIPLoader]      — 텍스트 인코더 로드
-[VAELoader]           — VAE 로드
-        ↓
-[CLIPTextEncode]      — 프롬프트 입력
-[KSampler]            — 이미지 생성
-[VAEDecode] → [SaveImage]
-\`\`\`
-
-ComfyCloud의 **Workflow Templates**에서 Qwen Image 템플릿을 불러오면 바로 시작할 수 있습니다.
-
-## 실습 파일 다운로드
-
-[[download: downloads/session2/step6/qwen_text_to_image.json | Qwen Image - Text to Image 워크플로우]]
-
-[[download: downloads/session2/step6/qwen_image_canny_controlnet.json | Qwen Image - Canny ControlNet 워크플로우]]
-
----
-
-## 프롬프트 실습
-
-### 실습 1: 텍스트 렌더링 (Qwen의 핵심 강점)
-
-\`\`\`prompt
-a modern music album cover, the text "MIDNIGHT" in bold white letters centered at the top, dark blue gradient background with stars, cinematic lighting, high quality
-\`\`\`
-
-기존 Illustrious XL에서 같은 프롬프트를 실행하면 텍스트가 깨지거나 왜곡되지만, Qwen Image는 정확하게 출력합니다.
-
-### 실습 2: 고해상도 실사 인물
-
-\`\`\`prompt
-portrait of a woman, studio lighting, photorealistic, detailed skin texture, high quality, 4k
-\`\`\`
-
-### 실습 3: 포스터/배너 제작
-
-\`\`\`prompt
-a promotional poster for a coffee shop, text "MORNING BREW" at the top, text "Open 7AM - 10PM" at the bottom, warm colors, coffee cup illustration, elegant typography
-\`\`\`
-
----
-
-## 어떤 프로젝트에 활용할까?
-
-| 프로젝트 유형 | 추천 |
-|-------------|------|
-| 캐릭터 일러스트, 팬아트 | Illustrious XL |
-| 광고 배너, 포스터 | **Qwen Image** |
-| 이미지 내 텍스트가 필요한 작업 | **Qwen Image** |
-| 고해상도 실사 이미지 | **Qwen Image** |
-| 애니메이션 스타일 | Illustrious XL |
-
-용도에 맞는 모델을 선택하는 것이 좋은 결과의 첫 번째 조건입니다.
-
-`,
-  "session2/step7-more-models-zimage.md": `# 더 많은 모델 - Z-Image
-
----
-
-## Z-Image란?
-
-알리바바 Tongyi Lab이 개발한 오픈소스 이미지 생성 모델입니다.
-2025년 출시 후 **오픈소스 포토리얼리즘 최강** 모델로 평가받으며, AI 아트 리더보드에서 오픈소스 1위를 달성했습니다.
-**Apache 2.0 라이선스**로 상업적 이용이 자유롭습니다.
-
-### 핵심 특징
-
-| 항목 | 내용 |
-|------|------|
-| 개발사 | 알리바바 Tongyi Lab (Tongyi-MAI 팀) |
-| 아키텍처 | S3-DiT (Scalable Single-Stream Diffusion Transformer), 6B 파라미터 |
-| 라이선스 | Apache 2.0 (상업적 이용 가능) |
-| 추론 속도 | RTX 4090 기준 약 2.3초/장 (Turbo 버전) |
-| 오픈소스 평가 | Artificial Analysis 리더보드 오픈소스 1위 |
-
----
-
-## 버전별 특징
-
-| 버전 | 스텝 | 특징 |
-|------|------|------|
-| Z-Image-Turbo | 8 스텝 | 고속 추론, 빠른 프리뷰에 적합 |
-| Z-Image-Base | 30~50 스텝 | 최고 품질, 세밀한 디테일 |
-
-**실습 권장**: Turbo로 빠르게 방향을 잡고, Base로 최종 출력하는 2단계 방식이 효율적입니다.
-
----
-
-## 기존 모델들과의 비교
-
-| 비교 항목 | Illustrious XL | Qwen Image | Z-Image |
-|-----------|---------------|------------|---------|
-| 아키텍처 | UNet | MMDiT (20B) | S3-DiT (6B) |
-| 강점 | 애니/일러스트 | 텍스트 렌더링 | 포토리얼리즘 |
-| 추론 속도 | 보통 | 보통 | 매우 빠름 |
-| 텍스트 렌더링 | 취약 | 우수 | 우수 |
-| 포토리얼리즘 | 중간 | 우수 | 최상 |
-| 추천 용도 | 캐릭터/팬아트 | 포스터/배너 | 실사/광고 |
-
----
-
-## S3-DiT 아키텍처란?
-
-기존 UNet 기반 모델(SDXL 등)과 달리, Z-Image는 텍스트와 이미지 정보를 하나의 통합 스트림으로 처리합니다.
-
-\`\`\`settings
-기존 UNet 방식:
-  텍스트 인코더 → [조건 주입] → UNet → 이미지
-
-S3-DiT 방식:
-  텍스트 토큰 + 이미지 토큰 → [하나의 Transformer] → 이미지
-\`\`\`
-
-이 구조 덕분에 텍스트 지시를 이미지에 더 정확하게 반영하고, 포토리얼한 디테일을 잘 살릴 수 있습니다.
-
----
-
-## ComfyCloud에서 사용하기
-
-Z-Image는 Day-0부터 ComfyUI 공식 지원을 받습니다. ComfyCloud에서도 사용 가능합니다.
-
-### 워크플로우 구조
-
-\`\`\`settings
-[CheckpointLoaderSimple]   — Z-Image-Turbo 또는 Z-Image 모델 로드
-        ↓
-[CLIPTextEncode]           — 프롬프트 입력
-[KSampler]                 — Turbo: 8스텝, Base: 30~50스텝
-                             CFG: 3~5 권장
-[VAEDecode] → [SaveImage]
-\`\`\`
-
-### 권장 KSampler 설정
-
-| 설정 | Turbo | Base |
-|------|-------|------|
-| steps | 8 | 30~50 |
-| cfg | 3~5 | 3~5 |
-| sampler | euler | euler |
-| scheduler | normal | normal |
-
-## 실습 파일 다운로드
-
-[[download: downloads/session2/step7/z_image_text_to_image.json | Z-Image - Text to Image 워크플로우]]
-
-[[download: downloads/session2/step7/z_image_turbo.json | Z-Image Turbo 워크플로우]]
-
-[[download: downloads/session2/step7/z_image_canny_controlnet.json | Z-Image - Canny ControlNet 워크플로우]]
-
----
-
-## 프롬프트 실습
-
-### 실습 1: 포토리얼 인물 (Z-Image의 핵심 강점)
-
-\`\`\`prompt
-portrait of a woman, natural sunlight, shallow depth of field, bokeh background, detailed skin texture, photorealistic, high quality
-\`\`\`
-
-### 실습 2: 건축/인테리어 실사
-
-\`\`\`prompt
-modern minimalist living room, large windows with city view, afternoon sunlight, photorealistic, architectural photography, high quality
-\`\`\`
-
-### 실습 3: 제품 광고 이미지
-
-\`\`\`prompt
-perfume bottle on marble surface, studio lighting, elegant, commercial product photography, white background, photorealistic
-\`\`\`
-
----
-
-## 어떤 프로젝트에 활용할까?
-
-| 프로젝트 유형 | 추천 모델 |
-|-------------|---------|
-| 캐릭터 일러스트, 팬아트 | Illustrious XL |
-| 이미지 내 텍스트, 포스터 | Qwen Image |
-| 실사 인물/광고 이미지 | Z-Image |
-| 건축/인테리어/제품 사진 | Z-Image |
-| 빠른 프리뷰가 필요할 때 | Z-Image Turbo |
-
----
-
-## 모델 선택 가이드
-
-지금까지 배운 3가지 유형의 모델을 정리하면:
-
-\`\`\`settings
-Illustrious XL  → 애니/일러스트/캐릭터
-Qwen Image      → 텍스트 포함 이미지/포스터/배너
-Z-Image         → 포토리얼/광고/실사
-\`\`\`
-
-작업 목적에 맞게 모델을 선택하는 것이 프롬프트 공력보다 중요할 때가 많습니다. 같은 프롬프트도 모델에 따라 결과가 전혀 달라집니다.
-
-`,
-  "session2/step7-vae-optimization.md": `# VAE와 최종 출력 최적화
-
-[[image: session1/step8/vae.jpg]]
-
-## VAE (Variational Autoencoder) 이해
-
-VAE는 잠재 공간(latent space)의 데이터를 실제 이미지로 변환하는 핵심 컴포넌트입니다.  
-최종 이미지 품질에 결정적인 영향을 미칩니다.
-
-### VAE의 역할
-\`\`\`settings
-Encoder: 이미지 → 잠재 공간 압축
-Decoder: 잠재 공간 → 이미지 복원
-품질 결정: 색상, 선명도, 디테일
-\`\`\`
-
-### VAE 처리 과정
-\`\`\`settings
-1. K-Sampler가 잠재 공간에서 작업
-2. VAE Decoder가 픽셀 이미지로 변환
-3. 색상 및 디테일 복원
-4. 최종 이미지 출력
-\`\`\`
-
----
-
-## VAE 인코딩 (Encoding)
-
-### 인코딩이란?
-
-VAE 인코더는 **픽셀 이미지를 잠재 공간으로 압축**하는 역할을 합니다.
-Image-to-Image나 Inpainting처럼 입력 이미지가 필요한 작업에서 반드시 거치는 단계입니다.
-
-\`\`\`settings
-원본 이미지 (512x512 픽셀)
-      ↓  VAE Encode
-잠재 표현 (64x64 latent)  ← 8배 압축
-      ↓  K-Sampler (노이즈 제거)
-수정된 잠재 표현
-      ↓  VAE Decode
-최종 이미지 (512x512 픽셀)
-\`\`\`
-
-### 인코딩 압축 비율
-
-SD의 VAE는 **8배 공간 압축**을 사용합니다:
-
-| 이미지 크기 | Latent 크기 | 채널 |
-|------------|------------|------|
-| 512 × 512 | 64 × 64 | 4채널 |
-| 768 × 768 | 96 × 96 | 4채널 |
-| 1024 × 1024 | 128 × 128 | 4채널 |
-
-이 압축 덕분에 K-Sampler가 훨씬 작은 공간에서 효율적으로 작업할 수 있습니다.
-
-### 인코딩이 사용되는 상황
-
-- **Image-to-Image**: 입력 이미지를 잠재 공간으로 인코딩 후 노이즈 추가 → 재생성
-- **Inpainting**: 마스크 영역만 수정하기 위해 원본 이미지 인코딩
-- **VAE 테스트**: Encode → Decode 직통으로 VAE 품질 확인
-
-### VAE Encode 노드 (ComfyUI)
-
-ComfyUI에서 **VAE Encode** 노드는 다음 입력을 받습니다:
-\`\`\`settings
-pixels: 입력 이미지 (Load Image 노드 연결)
-vae: 사용할 VAE 모델
-\`\`\`
-출력은 \`LATENT\` 타입으로, K-Sampler의 \`latent_image\` 입력에 연결합니다.
-
-### 인코딩 품질과 VAE 선택
-
-인코딩 품질은 VAE에 따라 달라집니다. 잘못된 VAE를 사용하면 색이 바래거나 채도가 낮게 인코딩됩니다:
-\`\`\`settings
-색상 채도 낮음 → vae-ft-mse → 색상 정확
-회색빛 출력  → kl-f8-anime2 → 선명한 애니 색상
-디테일 손실  → clearvae → 깨끗한 디테일 유지
-\`\`\`
-
----
-
-## VAE 모델 종류
-
-### 기본 VAE
-\`\`\`filename
-vae-ft-mse-840000-ema-pruned.safetensors
-표준 VAE, 균형잡힌 성능
-\`\`\`
-
-### 특화 VAE
-\`\`\`filename
-kl-f8-anime2.vae.pt - 애니메이션 최적화
-orangemix.vae.pt - 선명한 색상
-blessed2.vae.pt - 부드러운 톤
-clearvae.safetensors - 깨끗한 출력
-\`\`\`
-
-### VAE 선택 가이드
-\`\`\`settings
-사실적 이미지: vae-ft-mse
-애니메이션: kl-f8-anime2
-아트워크: orangemix
-인물 사진: blessed2
-\`\`\`
-
----
-
-## VAE 설정 최적화
-
-### VAE Decode 노드
-\`\`\`settings
-samples: K-Sampler 출력
-vae: VAE 모델 선택
-tile_size: 타일 크기 (VRAM 절약)
-\`\`\`
-
-### 타일링 설정
-VRAM 부족 시:
-\`\`\`settings
-tile_size: 512 (낮은 VRAM)
-tile_size: 768 (중간)
-tile_size: 1024 (높은 VRAM)
-overlap: 32 (타일 경계 블렌딩)
-\`\`\`
-
----
-
-## 업스케일링 기법
-
-### 기본 업스케일
-Upscale Image 노드:
-\`\`\`settings
-upscale_method: bicubic (부드러움)
-upscale_method: lanczos (선명함)
-scale_by: 2.0 (2배 확대)
-\`\`\`
-
-### AI 업스케일러
-\`\`\`filename
-ESRGAN 모델:
-4x-UltraSharp.pth - 매우 선명
-4x-AnimeSharp.pth - 애니메이션
-RealESRGAN_x4plus.pth - 사실적
-\`\`\`
-
-### 업스케일 워크플로우
-\`\`\`settings
-1. 기본 생성 (512x512)
-2. Latent Upscale (1024x1024)
-3. K-Sampler로 디테일 추가
-4. VAE Decode
-5. Image Upscale (2048x2048)
-\`\`\`
-
-## Latent Upscale 테크닉
-
-### 고품질 업스케일
-\`\`\`settings
-원본 → Latent Upscale → K-Sampler → VAE
-장점: 새로운 디테일 생성
-단점: 원본과 차이 발생 가능
-\`\`\`
-
-### 설정 예시
-\`\`\`settings
-upscale_method: bilinear
-scale: 2.0
-denoise: 0.5 (원본 50% 유지)
-steps: 20
-cfg: 7
-\`\`\`
-
-### 다단계 업스케일
-\`\`\`settings
-512 → 768 (denoise 0.4)
-768 → 1024 (denoise 0.3)
-1024 → 2048 (denoise 0.2)
-\`\`\`
-
----
-
-## 후처리 최적화
-
-### 색상 보정
-Color Correct 노드:
-\`\`\`settings
-brightness: 1.0
-contrast: 1.1
-saturation: 1.05
-gamma: 1.0
-\`\`\`
-
-### 선명도 향상
-Sharpen 노드:
-\`\`\`settings
-radius: 1
-sigma: 0.5
-amount: 0.8
-\`\`\`
-
-### 노이즈 제거
-Denoise 노드:
-\`\`\`settings
-strength: 0.1-0.3
-preserve_details: true
-\`\`\`
-
----
-
-## 출력 포맷 설정
-
-### 이미지 포맷
-Save Image 노드:
-\`\`\`settings
-PNG: 무손실, 투명도 지원
-JPEG: 손실 압축, 작은 파일
-WebP: 효율적 압축, 웹 최적화
-\`\`\`
-
-### 압축 설정
-\`\`\`settings
-PNG: compression_level: 6
-JPEG: quality: 95
-WebP: quality: 90, lossless: false
-\`\`\`
-
-### 메타데이터 저장
-\`\`\`settings
-embed_workflow: true (워크플로우 포함)
-embed_prompt: true (프롬프트 포함)
-save_metadata: true (생성 정보)
-\`\`\`
-
----
-
-## 배치 처리 최적화
-
-### 배치 생성 설정
-\`\`\`settings
-batch_size: 4 (동시 생성)
-batch_count: 5 (반복 횟수)
-total: 20장 생성
-\`\`\`
-
-### VRAM 관리
-\`\`\`settings
-낮은 VRAM (4-6GB):
-- batch_size: 1
-- tile_size: 512
-- fp16 모드 사용
-
-중간 VRAM (8-12GB):
-- batch_size: 2-4
-- tile_size: 768
-- 표준 설정
-
-높은 VRAM (16GB+):
-- batch_size: 4-8
-- tile_size: 1024+
-- 고품질 설정
-\`\`\`
-
----
-
-## 품질 체크리스트
-
-### 기술적 품질
-\`\`\`settings
-✓ 해상도: 목적에 적합한가?
-✓ 선명도: 흐릿하지 않은가?
-✓ 색상: 자연스럽고 균형적인가?
-✓ 노이즈: 불필요한 노이즈 없는가?
-✓ 아티팩트: 이상한 패턴 없는가?
-\`\`\`
-
-### 예술적 품질
-\`\`\`settings
-✓ 구도: 균형잡혔는가?
-✓ 조명: 적절한가?
-✓ 디테일: 충분한가?
-✓ 일관성: 스타일 일관적인가?
-\`\`\`
-
----
-
-## 실전 최적화 워크플로우
-
-### 프로젝트 1: 고품질 인물 사진
-\`\`\`settings
-1. 생성: 512x768 (세로)
-2. VAE: blessed2.vae
-3. Latent Upscale: 1024x1536
-4. Denoise: 0.4
-5. Face Restore 적용
-6. Final Upscale: 2048x3072
-\`\`\`
-
-### 프로젝트 2: 풍경 아트
-\`\`\`settings
-1. 생성: 768x512 (가로)
-2. VAE: clearvae
-3. Latent Upscale: 1536x1024
-4. Denoise: 0.3
-5. Color Enhance
-6. ESRGAN 4x
-\`\`\`
-
-### 프로젝트 3: 애니메이션
-\`\`\`settings
-1. 생성: 512x512
-2. VAE: kl-f8-anime2
-3. Latent Upscale: 1024x1024
-4. Denoise: 0.5
-5. AnimeSharp 4x
-6. Line Art 강화
-\`\`\`
-
----
-
-## 특수 효과
-
-### HDR 효과
-\`\`\`settings
-Tone Mapping:
-- exposure: 1.2
-- gamma: 0.9
-- highlight_compression: 0.8
-\`\`\`
-
-### 필름 그레인
-\`\`\`settings
-Grain 추가:
-- amount: 0.05
-- size: 1.5
-- luminance_only: true
-\`\`\`
-
-### 빈티지 효과
-\`\`\`settings
-Color Grading:
-- warm_tint: 1.1
-- desaturate: 0.9
-- vignette: 0.3
-\`\`\`
-
----
-
-## 문제 해결
-
-### VAE 오류
-증상: 색상 이상, 아티팩트
-\`\`\`settings
-해결:
-1. 다른 VAE 모델 시도
-2. fp16/fp32 전환
-3. 타일 크기 조정
-4. VAE 재다운로드
-\`\`\`
-
-### 업스케일 품질 저하
-증상: 흐릿함, 디테일 손실
-\`\`\`settings
-해결:
-1. Denoise 값 낮춤
-2. 다른 업스케일 방법
-3. 다단계 업스케일
-4. Sharpen 적용
-\`\`\`
-
-### 메모리 부족
-\`\`\`settings
-해결:
-1. 배치 크기 감소
-2. 타일링 사용
-3. 해상도 단계적 증가
-4. VRAM 정리
-\`\`\`
-
----
-
-## 출력 파이프라인
-
-### 프로덕션 파이프라인
-\`\`\`settings
-1. 컨셉 생성 (낮은 해상도)
-2. 선택 및 개선
-3. 고해상도 재생성
-4. 후처리 및 보정
-5. 최종 출력
-\`\`\`
-
-### 품질 관리
-\`\`\`settings
-A/B 테스트: VAE 모델 비교
-일관성 체크: 시리즈 작품
-컬러 매칭: 브랜드 가이드
-해상도 체크: 용도별 최적화
-\`\`\`
-
----
-
-## 실습 과제
-
-### 기초 실습
-1. 3가지 VAE 모델 비교
-2. Latent vs Image 업스케일 비교
-3. Denoise 0.2, 0.5, 0.8 비교
-
-### 응용 실습
-1. 512 → 4K 업스케일 파이프라인
-2. 5가지 후처리 효과 적용
-3. 배치로 20장 변형 생성
-
-### 최종 프로젝트
-포트폴리오 이미지 제작:
-1. 컨셉 정의
-2. 최적 VAE 선택
-3. 다단계 업스케일
-4. 후처리 완성
-5. 다양한 포맷 출력
-
-`,
-  "session3/step1-inpainting.md": `# Inpainting & Outpainting 실전
-
----
+  "session1/step2-interface.md": `# 기본 인터페이스 설명
 
 ## 학습 목표
 
-세 가지 워크플로우를 통해 Inpainting과 Outpainting을 실전에서 활용하는 방법을 습득합니다.
+워크플로우를 열고 실행할 때 쓰는 화면 위치를 익힙니다.
 
-- **Flux Inpaint**: Flux Fill Dev 모델로 마스킹 영역을 프롬프트로 수정
-- **Qwen Inpaint**: Qwen 모델 + ControlNet + 마스크 블러 처리로 자연스러운 인페인팅
-- **Qwen Outpaint**: 이미지 캔버스를 확장하여 주변 영역을 새롭게 생성
+> ComfyUI는 업데이트에 따라 아이콘 위치나 이름이 조금 달라질 수 있습니다.
 
----
+## 화면의 네 부분
 
-## 실습 1 - Flux Inpaint
+### 1. 왼쪽 사이드바
 
-Flux Fill Dev 모델을 사용하여 이미지의 특정 영역을 마스킹하고 프롬프트로 내용을 교체합니다.
+[[image: session1/step4/left_pannel.png | width:80% | 왼쪽 사이드바 예시]]
 
-### 워크플로우 구조
+- **Assets**: 생성하거나 불러온 이미지와 영상을 확인합니다.
+- **Nodes**: 워크플로우에 넣을 노드를 찾습니다.
+- **Models**: 현재 사용할 수 있는 모델을 확인합니다.
+- **Workflows**: 저장한 워크플로우와 최근 파일을 엽니다.
 
-\`\`\`
-LoadImage (이미지 + 마스크)
-    ├── IMAGE → InpaintModelConditioning
-    └── MASK  → InpaintModelConditioning
+### 2. 캔버스와 노드
 
-DualCLIPLoader → CLIPTextEncode (Positive Prompt)
-    └── FluxGuidance → InpaintModelConditioning
-    └── ConditioningZeroOut → InpaintModelConditioning
+[[image: session1/step4/nodes.png | width:80% | 입력과 출력이 연결된 노드 예시]]
 
-UNETLoader → DifferentialDiffusion → KSampler
-VAELoader → InpaintModelConditioning
-           → VAEDecode → SaveImage
-\`\`\`
+캔버스는 작업 공간입니다. 각 노드는 한 가지 일을 합니다. 출력 점에서 입력 점으로 선을 이어 데이터가 흐르는 순서를 만듭니다.
 
-### 핵심 노드 설명
+1. 빈 곳을 드래그해 화면을 이동합니다.
+2. 마우스 휠로 확대하거나 축소합니다.
+3. 노드를 클릭해 선택합니다.
+4. 같은 데이터 종류의 출력과 입력을 연결합니다.
 
-**DifferentialDiffusion**
-마스크 경계부를 그라데이션으로 처리하여 원본 이미지와 생성 결과 사이의 경계를 부드럽게 만듭니다.
+### 3. 위쪽 실행 영역
 
-**InpaintModelConditioning**
-Flux Fill 전용 컨디셔닝 노드. 이미지, 마스크, VAE, 프롬프트를 하나로 묶어 인페인팅에 최적화된 latent를 생성합니다.
+[[image: session1/step4/upper_menu.png | width:80% | 상단 메뉴 예시]]
 
-**ConditioningZeroOut**
-네거티브 프롬프트를 0으로 만들어 제거하는 노드입니다. Flux 모델은 네거티브 프롬프트 없이도 고품질 결과를 냅니다.
+**Run** 또는 **Queue** 버튼을 누르면 워크플로우가 실행됩니다. 실행 중인 작업과 대기 중인 작업도 이 영역에서 확인합니다.
 
-### 마스크 입력 방법
+### 4. 워크플로우 파일
 
-LoadImage 노드에서 알파채널(투명도)이 포함된 PNG를 업로드하면 투명 영역이 자동으로 마스크로 처리됩니다.
+[[image: session1/step4/json_workflow.png | width:80% | JSON 워크플로우를 연 화면]]
 
-\`\`\`settings
-업로드 방식: 알파채널 포함 PNG
-투명 영역: 마스크 (교체 대상)
-불투명 영역: 원본 유지
-\`\`\`
+워크플로우 JSON 파일을 캔버스에 끌어 놓으면 노드와 연결이 한 번에 열립니다. 저장할 때도 JSON 형식을 사용합니다.
 
-또는 LoadImage 노드에서 우클릭 → **Open in MaskEditor** 를 선택하면 브러시로 직접 마스크 영역을 그릴 수 있습니다.
+## 짧은 확인
 
-### 실습
+왼쪽에서 **Workflows**를 열고 다시 닫아 봅니다. 캔버스의 노드 하나를 선택한 뒤 빈 곳을 클릭해 선택을 해제합니다.
 
-[[download: downloads/session3/step1/flux_inpaint.json | Flux Inpaint 워크플로우 다운로드]]
+## 정리
 
-워크플로우를 불러온 후 LoadImage에 원하는 이미지를 업로드하고, MaskEditor에서 마스킹 영역을 지정합니다.
-Positive Prompt에 교체할 내용을 입력하고 실행하세요.
+왼쪽에서 파일과 재료를 찾고, 가운데 캔버스에서 노드를 연결하고, 위쪽에서 실행합니다.
 
 ---
 
-## 실습 2 - Qwen Inpaint
-
-Qwen 이미지 모델과 ControlNet(AliMama Inpainting)을 조합한 인페인팅입니다.
-마스크 블러 처리 로직이 포함되어 있어 경계 합성이 더욱 자연스럽습니다.
-
-### 워크플로우 구조
-
-\`\`\`
-LoadImage → [마스크 블러 노드] → 블러된 MASK
-                ├── SetLatentNoiseMask (latent에 마스크 적용)
-                ├── ControlNetInpaintingAliMamaApply
-                └── ImageCompositeMasked (원본 픽셀 복원)
-
-UNETLoader → ModelSamplingAuraFlow → LoraLoaderModelOnly → KSampler
-CLIPLoader → CLIPTextEncode (Positive / Negative)
-VAELoader → VAEEncode → SetLatentNoiseMask → KSampler
-           → VAEDecode → SaveImage
-\`\`\`
-
-### 핵심 노드 설명
-
-**마스크 블러 노드 (expand + blur_radius)**
-LoadImage에서 추출한 마스크를 받아 두 가지 처리를 합니다.
-
-\`\`\`settings
-expand: 마스크 영역을 바깥으로 n픽셀 확장 (경계 여유 확보)
-blur_radius: 마스크 경계를 가우시안 블러로 부드럽게 처리
-\`\`\`
-
-블러 처리된 마스크는 3곳에 동시 사용됩니다.
-1. **SetLatentNoiseMask** - 노이즈 주입 범위를 부드럽게 제어
-2. **ControlNetInpaintingAliMamaApply** - ControlNet이 마스크 경계를 부드럽게 인식
-3. **ImageCompositeMasked** - 생성 결과와 원본을 자연스럽게 합성
-
-**ModelSamplingAuraFlow**
-Qwen 모델에 맞는 시그마 스케일(shift)을 조정하는 노드입니다. 값이 높을수록 디테일보다 전체 구조를 우선합니다.
-
-**ControlNetInpaintingAliMamaApply**
-AliMama 방식의 ControlNet 인페인팅 적용 노드. strength, start_percent, end_percent로 ControlNet 적용 강도와 구간을 제어합니다.
-
-**ImageScaleToMaxDimension**
-입력 이미지를 최대 1536px 이하로 리사이즈합니다. 너무 큰 이미지는 품질 저하의 원인이 되므로 활성화를 권장합니다.
-
-### 마스크 입력 방법
-
-LoadImage 노드에서 우클릭 → **Open in MaskEditor** 로 마스크 영역을 직접 그립니다.
-
-### KSampler 권장 설정
-
-| 파라미터 | Qwen 공식 | 일반 권장 | 4steps LoRA |
-|---------|-----------|---------|-------------|
-| Steps | 50 | 20 | 4 |
-| CFG | 4.0 | 2.5 | 1.0 |
-| Sampler | euler | euler | euler |
-
-### 실습
-
-[[download: downloads/session3/step1/qwen_inpaint.json | Qwen Inpaint 워크플로우 다운로드]]
-
-[[download: downloads/session3/step1/inpaint_upload.png | 실습용 이미지 다운로드]]
-
-워크플로우와 이미지를 다운받은 후, LoadImage에 실습 이미지를 업로드합니다.
-MaskEditor에서 수정할 영역을 칠한 다음 Positive Prompt를 입력하고 실행하세요.
-
-### 이미지 미리보기
-
-[[image: session3/step1/inpaint_upload.png | width:50%]]
-
----
-
-## 실습 3 - Qwen Outpaint
-
-아웃페인팅은 인페인팅의 반대 방향입니다. 이미지의 캔버스를 확장하고, 빈 영역에 새로운 내용을 자연스럽게 생성합니다.
-
-### Inpainting vs Outpainting
-
-| 구분 | Inpainting | Outpainting |
-|------|-----------|------------|
-| 방향 | 이미지 내부 수정 | 이미지 외부 확장 |
-| 마스크 위치 | 이미지 안쪽 | 이미지 바깥쪽 (패딩 영역) |
-| 핵심 노드 | InpaintModelConditioning | ImagePadForOutpaint |
-
-### 워크플로우 구조
-
-\`\`\`
-LoadImage → ImagePadForOutpaint (캔버스 확장)
-    ├── 확장된 IMAGE → VAEEncode
-    └── 자동 생성된 MASK → [마스크 블러 노드]
-                              ├── ControlNetInpaintingAliMamaApply
-                              └── SetLatentNoiseMask
-
-UNETLoader → ModelSamplingAuraFlow → LoraLoaderModelOnly → KSampler
-CLIPLoader → CLIPTextEncode (Positive / Negative)
-VAELoader → VAEDecode → SaveImage
-\`\`\`
-
-### 핵심 노드 설명
-
-**ImagePadForOutpaint**
-이미지 사방에 빈 영역(패딩)을 추가하고, 추가된 영역에 대한 마스크를 자동 생성합니다.
-
-\`\`\`settings
-left / right / top / bottom: 각 방향으로 확장할 픽셀 수
-feathering: 원본 이미지 경계의 페더링 강도 (0 = 경계 선명)
-\`\`\`
-
-이 워크플로우는 상하좌우 각 400px씩 확장하도록 설정되어 있습니다.
-원하는 방향만 값을 넣고, 나머지는 0으로 설정하면 한쪽 방향만 확장할 수 있습니다.
-
-### 실습
-
-[[download: downloads/session3/step1/qwen_outpaint.json | Qwen Outpaint 워크플로우 다운로드]]
-
-[[download: downloads/session3/step1/outpaint_coffee.png | 아웃페인팅 실습 이미지 다운로드]]
-
-워크플로우와 커피 이미지를 다운받은 후, LoadImage에 커피 이미지를 업로드합니다.
-ImagePadForOutpaint에서 확장 방향과 픽셀 값을 조정한 다음 실행하세요.
-
-### 이미지 미리보기
-
-[[image: session3/step1/outpaint_coffee.png | width:50%]]
+**다음 강의**: 공식 Z-Image Turbo 템플릿으로 이미지를 생성합니다.
 `,
-  "session3/step1-recap.md": `<article class="s3-lesson">
-<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:00–18:05</div>
+  "session1/step3-z-image-turbo.md": `# 이미지 생성하기 - Z-Image Turbo 템플릿
 
-# 지난 수업에서 만든 이미지와 영상
+## 학습 목표
 
+공식 템플릿을 열고 프롬프트를 바꿔 첫 이미지를 생성합니다.
 
-<div class="s3-recap-grid"><figure><a href="./lectures/images/session3/recap/z-image-turbo-official.webp" target="_blank" rel="noreferrer"><img src="./lectures/images/session3/recap/z-image-turbo-official.webp" alt="Z-Image Turbo 공식 템플릿 결과 · 항구 앞 인물 사진"/></a><figcaption>Z-Image Turbo<br/>공식 템플릿 프리뷰</figcaption></figure><figure><a href="./lectures/images/session3/recap/ltx-2.5-t2v-official.webp" target="_blank" rel="noreferrer"><img src="./lectures/images/session3/recap/ltx-2.5-t2v-official.webp" alt="LTX 2.5 t2v 공식 템플릿 영상 프리뷰 · 눈밭의 인물"/></a><figcaption>LTX 2.5 · t2v<br/>공식 영상 프리뷰</figcaption></figure><figure><a href="./lectures/images/session1/step6/sdxl_1024.png" target="_blank" rel="noreferrer"><img src="./lectures/images/session1/step6/sdxl_1024.png" alt="1회차 SDXL base 1024px 수업 결과 · 정원의 고양이"/></a><figcaption>SDXL base · 1024px<br/>1회차 수업 결과</figcaption></figure><figure><a href="./lectures/images/session1/step6/wai_illustrous.png" target="_blank" rel="noreferrer"><img src="./lectures/images/session1/step6/wai_illustrous.png" alt="1회차 WAI-Illustrious 수업 결과 · 파란 머리 인물 일러스트"/></a><figcaption>WAI-Illustrious · SDXL 계열<br/>1회차 수업 결과 · 서로 다른 프롬프트</figcaption></figure></div>
-<div class="s3-recap-workflow"><figure><a href="./lectures/images/session1/step5/stpe5.png" target="_blank" rel="noreferrer"><img src="./lectures/images/session1/step5/stpe5.png" alt="1회차 기본 이미지 생성 워크플로우의 실제 ComfyUI 화면"/></a><figcaption>1회차 기본 워크플로우 · 클릭하면 원본</figcaption></figure><div><h2>10월 20일 · ComfyUI 첫 사용</h2><p>Comfy 가입 · 기본 인터페이스 · 템플릿 실행</p><h2>모델 바꾸기</h2><p>Z-Image Turbo · SDXL base와 Illustrious 비교</p></div></div>
-<p class="s3-task">내 계정의 첫 이미지와 영상 다시 열기 · 사용한 모델 이름 찾기</p>
-<p class="s3-note">Z-Image·LTX 수업 출력은 저장소에 없어 <a href="https://github.com/Comfy-Org/workflow_templates/tree/67984637eefcd4825dcf5c134e39034785be1682/templates" target="_blank" rel="noreferrer">Comfy-Org/workflow_templates</a>의 공식 프리뷰 사용 · 오른쪽 두 장은 저장된 수업 결과</p>
+[[image: session3/recap/z-image-turbo-official.webp | width:100% | Comfy-Org 공식 Z-Image Turbo 템플릿 미리보기]]
 
-<div class="s3-footer"><span>01 / 11</span><span></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step2">다음 · 입력 재료에 따라 달라지는 생성 방식</a></nav>
+*출처: Comfy-Org \`workflow_templates\`, 커밋 \`67984637eefcd4825dcf5c134e39034785be1682\`.*
+
+## 템플릿 열기
+
+### ComfyUI 안에서 열기
+
+1. 상단 **Workflow** 메뉴에서 **Browse Templates**를 엽니다.
+2. 검색창에 \`Z-Image Turbo\`를 입력합니다.
+3. **Z-Image Turbo** 템플릿을 선택합니다.
+4. 필요한 모델 다운로드 안내가 나오면 내용을 확인한 뒤 진행합니다.
+
+메뉴 위치가 다르면 템플릿 검색 화면에서 이름으로 찾습니다.
+
+### JSON 파일로 열기
+
+[[download: downloads/session1/step3/image_z_image_turbo.json | 공식 Z-Image Turbo 워크플로우 다운로드 (.json)]]
+
+다운로드한 JSON 파일을 ComfyUI 캔버스에 끌어 놓습니다. 공식 템플릿과 같은 노드 구성이 보이면 정상입니다.
+
+## 이미지 생성하기
+
+1. 프롬프트 입력 노드에서 만들 장면을 적습니다.
+2. 이미지 크기와 시드는 먼저 그대로 둡니다.
+3. **Run** 또는 **Queue**를 누릅니다.
+4. 실행이 끝나면 **Save Image** 노드에서 결과를 확인합니다.
+
+\`\`\`prompt
+A man in his 30s walking a golden retriever on a leash along a tree-lined path in a city park, sunny afternoon, natural light, photo
+\`\`\`
+
+한국어 뜻:
+
+\`\`\`text
+30대 남성이 화창한 오후, 나무가 늘어선 도심 공원 길에서 골든리트리버의 목줄을 잡고 산책하는 모습. 자연광의 사진.
+\`\`\`
+
+처음에는 한 항목만 바꿔야 결과가 왜 달라졌는지 알기 쉽습니다. 먼저 프롬프트만 바꿔 비교합니다.
+
+## 정리
+
+공식 템플릿은 필요한 노드와 연결을 이미 담고 있습니다. 템플릿을 열고 프롬프트를 바꾼 뒤 실행하면 됩니다.
+
+---
+
+**다음 강의**: 같은 조건에서 SDXL base와 Illustrious를 비교합니다.
+`,
+  "session1/step4-sdxl-illustrious.md": `# 모델 바꾸기 - SDXL base와 Illustrious 비교
+
+## 학습 목표
+
+같은 프롬프트와 생성 설정을 두 모델에 연결하고 결과의 차이를 봅니다.
+
+[[download: downloads/session1/step4/sdxl_vs_illustrious.json | SDXL base와 Illustrious 비교 워크플로우 다운로드 (.json)]]
+
+## 두 모델
+
+- **SDXL base**는 범용 베이스 모델입니다.
+- **Illustrious**는 SDXL 계열에서 일러스트 표현에 맞게 추가 학습된 모델입니다.
+
+워크플로우에는 \`sd_xl_base_1.0.safetensors\`와 수업에서 사용한 \`wai-illustrious-sdxl.safetensors\`가 지정되어 있습니다.
+
+## 실습 프롬프트
+
+두 모델에 아래 문장을 그대로 함께 보냅니다. Illustrious에도 같은 문장을 써야 모델 자체의 표현 차이를 볼 수 있습니다.
+
+\`\`\`prompt
+A man in his 30s walking a golden retriever on a leash along a tree-lined path in a city park, sunny afternoon, natural light, photo
+\`\`\`
+
+한국어 뜻:
+
+\`\`\`text
+30대 남성이 화창한 오후, 나무가 늘어선 도심 공원 길에서 골든리트리버의 목줄을 잡고 산책하는 모습. 자연광의 사진.
+\`\`\`
+
+## 비교 실습
+
+1. JSON 파일을 ComfyUI 캔버스에 끌어 놓습니다.
+2. 왼쪽의 긍정 프롬프트와 부정 프롬프트를 확인합니다. 두 모델이 같은 글을 함께 사용합니다.
+3. 두 **KSampler**의 seed, steps, cfg, sampler, scheduler가 같은지 확인합니다.
+4. 두 **Empty Latent Image**가 모두 1024×1024인지 확인합니다.
+5. **Run** 또는 **Queue**를 누릅니다.
+6. 두 **Save Image** 결과에서 구도, 질감, 선 표현, 색감을 비교합니다.
+
+같은 입력과 설정을 써야 모델 차이에 집중할 수 있습니다.
+
+## 기존 예시 보기
+
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;">
+  <figure style="margin:0;"><img src="./lectures/images/session1/step6/sdxl_1024.png" alt="SDXL base로 만든 고양이 사진 예시" style="width:100%;"/><figcaption>SDXL base 예시</figcaption></figure>
+  <figure style="margin:0;"><img src="./lectures/images/session1/step6/wai_illustrous.png" alt="WAI Illustrious로 만든 일러스트 예시" style="width:100%;"/><figcaption>WAI Illustrious 예시</figcaption></figure>
+</div>
+
+> 이 두 이미지는 프롬프트와 시드가 서로 다릅니다. 모델의 공정한 비교 결과가 아니라 각 모델의 기존 수업 예시입니다. 같은 프롬프트·같은 시드 비교 이미지는 추후 교체합니다.
+
+## 정리
+
+모델을 비교할 때는 프롬프트, 시드, 샘플러와 이미지 크기를 같게 맞춥니다.
+
+---
+
+**다음 강의**: LTX 2.5 T2V 공식 템플릿으로 영상을 만듭니다.
+`,
+  "session1/step5-ltx25-t2v.md": `# 영상 생성하기 - LTX 2.5 T2V
+
+## 학습 목표
+
+글로 장면과 움직임을 설명해 짧은 영상을 생성합니다.
+
+[[image: session3/recap/ltx-2.5-t2v-official.webp | width:100% | Comfy-Org 공식 LTX 2.5 T2V 템플릿 미리보기]]
+
+*출처: Comfy-Org \`workflow_templates\`, 커밋 \`67984637eefcd4825dcf5c134e39034785be1682\`.*
+
+## T2V란?
+
+T2V는 Text to Video입니다. 시작 이미지 없이 글만으로 장면과 움직임을 만듭니다.
+
+## 템플릿 열기
+
+1. 상단 **Workflow** 메뉴에서 **Browse Templates**를 엽니다.
+2. \`LTX 2.5 T2V\`를 검색해 템플릿을 선택합니다.
+3. 또는 아래 JSON 파일을 캔버스에 끌어 놓습니다.
+
+[[download: downloads/session1/step5/video_ltx2_5_t2v.json | 공식 LTX 2.5 T2V 워크플로우 다운로드 (.json)]]
+
+이 공식 템플릿은 로컬 모델 노드를 사용합니다. 필요한 모델 파일이 없으면 ComfyUI가 모델 안내를 표시합니다. Comfy Cloud에서는 실행한 GPU 사용량에 따라 크레딧이 차감될 수 있습니다. 이 파일에는 외부 회사의 Partner API 노드가 없습니다.
+
+## 영상 생성하기
+
+1. 프롬프트에 **장면**, **피사체의 움직임**, **카메라 움직임**을 적습니다.
+2. 처음에는 템플릿의 길이와 해상도를 그대로 둡니다.
+3. **Run** 또는 **Queue**를 누릅니다.
+4. 실행이 끝나면 저장 노드에서 영상과 소리를 확인합니다.
+
+\`\`\`prompt
+A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light
+\`\`\`
+
+한국어 뜻:
+
+\`\`\`text
+남성이 햇빛 드는 공원 길에서 골든리트리버를 산책시킵니다. 개는 꼬리를 흔들며 앞서 종종걸음으로 걷고, 카메라는 옆에서 천천히 따라갑니다. 자연광입니다.
+\`\`\`
+
+이미지보다 계산할 프레임이 많아 영상 생성은 더 오래 걸릴 수 있습니다. 실행 중에는 같은 작업을 여러 번 누르지 않습니다.
+
+## 정리
+
+T2V는 글만으로 영상을 시작합니다. 장면과 움직임을 나누어 적으면 확인하기 쉽습니다.
+`,
+  "session2/step1-image-modes.md": `# 이미지 생성 방식 4가지 - T2I, I2I, Inpainting, Image Edit
+
+## 학습 목표
+
+입력 재료에 따라 이미지 생성 방식을 구분하고 한 워크플로우에서 결과를 비교합니다.
+
+| 방식 | 입력 | 하는 일 |
+|---|---|---|
+| T2I | 글 | 글에서 새 이미지를 만듭니다. |
+| I2I | 글 + 이미지 | 입력 이미지의 구도나 형태를 참고해 다시 만듭니다. |
+| Inpainting | 글 + 이미지 + 마스크 | 마스크로 칠한 부분만 다시 만듭니다. |
+| Image Edit | 편집 명령 + 이미지 | “재킷만 청재킷으로 바꿔 줘”처럼 바꿀 내용을 말로 지시합니다. |
+
+<div class="lesson-example-row lesson-example-row--square">
+  <figure>
+    <img class="lesson-example-image" src="./downloads/session2/step1/park_walk.png" alt="초록색 필드 재킷을 입고 골든리트리버를 산책하는 남성 원본" style="width:100%;max-width:100%;" />
+    <figcaption>원본 · 초록색 필드 재킷</figcaption>
+  </figure>
+  <figure>
+    <img class="lesson-example-image" src="./downloads/session2/step1/park_walk_mask.png" alt="남성의 재킷 영역을 지정한 인페인팅 마스크" style="width:100%;max-width:100%;" />
+    <figcaption>마스크 · 재킷 영역</figcaption>
+  </figure>
+  <figure>
+    <img class="lesson-example-image" src="./lectures/images/session2/step1/qwen_edit_result.png" alt="남성의 재킷을 청재킷으로 바꾼 이미지 편집 결과" style="width:100%;max-width:100%;" />
+    <figcaption>Image Edit 결과 · 청재킷</figcaption>
+  </figure>
+</div>
+
+## 어떤 방식을 고를까요?
+
+- 처음부터 만들면 **T2I**를 씁니다.
+- 원본의 전체 구도를 참고하면 **I2I**를 씁니다.
+- 바꿀 위치가 분명하면 **Inpainting**을 씁니다.
+- 바꿀 내용을 문장으로 말하고 싶으면 **Image Edit**를 씁니다.
+
+## 실습 프롬프트
+
+### T2I와 I2I 공통 프롬프트
+
+\`\`\`prompt
+A man in his 30s walking a golden retriever on a leash along a tree-lined path in a city park, sunny afternoon, natural light, photo
+\`\`\`
+
+한국어 뜻:
+
+\`\`\`text
+30대 남성이 화창한 오후, 나무가 늘어선 도심 공원 길에서 골든리트리버의 목줄을 잡고 산책하는 모습. 자연광의 사진.
+\`\`\`
+
+### Inpainting 프롬프트
+
+\`\`\`prompt
+In the masked area, change only the man's moss-green field jacket to a light blue denim jacket. Keep the same man, golden retriever, leash, park, pose, camera, and lighting unchanged.
+\`\`\`
+
+한국어 뜻:
+
+\`\`\`text
+마스크로 칠한 영역에서 남성의 이끼색 재킷만 연한 파란색 청재킷으로 바꿉니다. 남성, 골든리트리버, 목줄, 공원, 자세, 카메라와 빛은 그대로 둡니다.
+\`\`\`
+
+### Image Edit 지시문
+
+\`\`\`prompt
+Change only the man's moss-green field jacket to a light blue denim jacket. Keep exactly the same man, golden retriever, red leash, blue collar, park, pose, camera, lighting, and all other details unchanged. Preserve natural hands, paws, and the leash connection.
+\`\`\`
+
+한국어 뜻:
+
+\`\`\`text
+남성의 이끼색 재킷만 연한 파란색 청재킷으로 바꿉니다. 같은 남성, 골든리트리버, 빨간 목줄, 파란 목걸이, 공원, 자세, 카메라, 빛과 나머지 요소는 그대로 둡니다. 손과 발, 목줄 연결은 자연스럽게 유지합니다.
+\`\`\`
+
+## Qwen 이미지 편집 4가지 비교
+
+1. 워크플로우 JSON과 예제 이미지 두 장을 내려받습니다.
+2. JSON 파일을 ComfyUI 캔버스에 끌어 놓습니다.
+3. \`park_walk.png\`와 \`park_walk_mask.png\`를 해당 **Load Image** 노드에 올립니다.
+4. 네 그룹의 프롬프트와 입력을 확인합니다.
+5. **Run** 또는 **Queue**를 누릅니다.
+6. 아래쪽 비교 시트에서 네 결과를 나란히 봅니다.
+
+[[download: downloads/session2/step1/qwen_edit_4tasks.json | Qwen 이미지 편집 4가지 비교 템플릿 (.json)]]
+
+[[download: downloads/session2/step1/park_walk.png | 예제 원본 - 공원 산책 장면 (.png)]]
+
+[[download: downloads/session2/step1/park_walk_mask.png | 예제 마스크 - 남성 재킷 영역 (.png)]]
+
+마스크는 고칠 위치를 알려 줍니다. 편집 명령은 무엇을 바꿀지 알려 줍니다. 두 입력의 역할이 다릅니다.
+
+## 정리
+
+같은 이미지 작업도 입력 재료에 따라 T2I, I2I, Inpainting, Image Edit로 나뉩니다.
+
+---
+
+**다음 강의**: 영상 생성 방식 네 가지를 비교합니다.
+`,
+  "session2/step2-video-modes.md": `# 영상 생성 방식 4가지 - T2V, I2V, FLF2V, R2V
+
+## 학습 목표
+
+영상의 시작 조건에 따라 네 가지 생성 방식을 구분합니다.
+
+| 방식 | 입력 | 하는 일 |
+|---|---|---|
+| T2V | 글 | 글에서 새 영상을 만듭니다. |
+| I2V | 글 + 첫 이미지 | 첫 장면에서 움직임을 이어 만듭니다. |
+| FLF2V | 글 + 첫 이미지 + 마지막 이미지 | 시작과 끝 사이의 움직임을 만듭니다. |
+| R2V | 글 + 레퍼런스 이미지 | 인물이나 대상의 특징을 참고해 영상을 만듭니다. |
+
+## 예제 입력
+
+<div class="lesson-example-row lesson-example-row--mixed">
+  <figure><img class="lesson-example-image" src="./downloads/session2/step2/minimax_subject.png" alt="R2V 남성 인물 레퍼런스" style="width:100%;max-width:100%;" /><figcaption>R2V 인물 레퍼런스</figcaption></figure>
+  <figure><img class="lesson-example-image" src="./downloads/session2/step2/minimax_first.png" alt="I2V와 FLF2V 첫 프레임" style="width:100%;max-width:100%;" /><figcaption>첫 프레임</figcaption></figure>
+  <figure><img class="lesson-example-image" src="./downloads/session2/step2/minimax_last.png" alt="FLF2V 마지막 프레임" style="width:100%;max-width:100%;" /><figcaption>마지막 프레임</figcaption></figure>
+</div>
+
+## 실습 프롬프트
+
+네 모드가 아래 문장을 함께 사용합니다.
+
+\`\`\`prompt
+A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light
+\`\`\`
+
+한국어 뜻:
+
+\`\`\`text
+남성이 햇빛 드는 공원 길에서 골든리트리버를 산책시킵니다. 개는 꼬리를 흔들며 앞서 종종걸음으로 걷고, 카메라는 옆에서 천천히 따라갑니다. 자연광입니다.
+\`\`\`
+
+로컬 모델 버전의 R2V 그룹은 레퍼런스 순서를 알려 주려고 아래 문장을 공통 프롬프트 앞에 자동으로 붙입니다.
+
+\`\`\`prompt
+<Picture 1> is the man walking the golden retriever in this video.
+\`\`\`
+
+한국어 뜻:
+
+\`\`\`text
+<Picture 1>은 이 영상에서 골든리트리버와 걷는 남성입니다.
+\`\`\`
+
+## MiniMax 네 가지 모드 실습
+
+### 로컬 모델 버전
+
+공개된 모델 파일을 ComfyUI에서 직접 실행합니다. API 호출 비용은 없지만, 내 PC 자원이나 Comfy Cloud의 GPU 시간을 사용합니다. 필요한 모델이 모두 있어야 실행할 수 있습니다.
+
+[[download: downloads/session2/step2/minimax_4modes.json | MiniMax H3 로컬 모델 4가지 모드 템플릿 (.json)]]
+
+### 유료 API 노드 버전
+
+외부 서버의 MiniMax 모델을 API 노드로 실행합니다. 실행 전에 노드에 표시되는 크레딧을 확인합니다.
+
+[[download: downloads/session2/step2/minimax_4modes_api.json | MiniMax H3 유료 API 노드 4가지 모드 템플릿 (.json)]]
+
+### 예제 이미지
+
+[[download: downloads/session2/step2/minimax_subject.png | 인물 레퍼런스 이미지 (.png)]]
+
+[[download: downloads/session2/step2/minimax_first.png | 첫 프레임 이미지 (.png)]]
+
+[[download: downloads/session2/step2/minimax_last.png | 마지막 프레임 이미지 (.png)]]
+
+1. 먼저 로컬 모델 버전과 API 버전 중 하나를 고릅니다.
+2. JSON 파일을 캔버스에 끌어 놓습니다.
+3. 세 예제 이미지를 이름이 맞는 **Load Image** 노드에 올립니다.
+4. 한 번에 비교하려면 네 그룹을 켭니다. 필요한 방식만 볼 때는 나머지 그룹을 선택하고 **Ctrl+B**로 건너뜁니다.
+5. 실행 뒤 시작 조건이 결과에 어떻게 남는지 비교합니다.
+
+## 정리
+
+첫 장면, 마지막 장면, 대상 레퍼런스 중 무엇을 넣는지에 따라 영상의 제어 방법이 달라집니다.
+
+---
+
+**다음 강의**: 로컬 모델과 유료 API 노드의 차이를 비교합니다.
+`,
+  "session2/step3-local-api.md": `# 로컬 모델과 유료 API 노드
+
+## 학습 목표
+
+모델을 어디에서 실행하는지 확인하고 작업에 맞는 방식을 고릅니다.
+
+| 구분 | 로컬 모델 노드 | 유료 API 노드 |
+|---|---|---|
+| 실행 위치 | 내 PC 또는 Comfy Cloud의 ComfyUI 환경 | 외부 회사의 서버 |
+| 준비 | 모델 파일과 실행 가능한 하드웨어 | Comfy 계정 로그인과 API 크레딧 |
+| 비용 확인 | 내 장비 사용 또는 Cloud GPU 사용량 | 노드에 표시되는 실행 크레딧 |
+| 장점 | 모델과 설정을 직접 다룰 수 있음 | 큰 모델도 파일 설치 없이 사용할 수 있음 |
+| 확인할 점 | 모델 파일 크기와 메모리 | 실행 전 크레딧과 전송할 입력 자료 |
+
+노드 이름만 보지 말고 모델 파일을 불러오는지, 회사 이름이 붙은 API 노드인지 확인합니다.
+
+## 공통 실습 주제
+
+### 이미지 비교 프롬프트
+
+\`\`\`prompt
+A man in his 30s walking a golden retriever on a leash along a tree-lined path in a city park, sunny afternoon, natural light, photo
+\`\`\`
+
+한국어 뜻:
+
+\`\`\`text
+30대 남성이 화창한 오후, 나무가 늘어선 도심 공원 길에서 골든리트리버의 목줄을 잡고 산책하는 모습. 자연광의 사진.
+\`\`\`
+
+### 5초 영상 비교 프롬프트
+
+\`\`\`prompt
+A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light
+\`\`\`
+
+한국어 뜻:
+
+\`\`\`text
+남성이 햇빛 드는 공원 길에서 골든리트리버를 산책시킵니다. 개는 꼬리를 흔들며 앞서 종종걸음으로 걷고, 카메라는 옆에서 천천히 따라갑니다. 자연광입니다.
+\`\`\`
+
+## 이미지 비교 시트
+
+같은 프롬프트를 여러 로컬 모델과 API 모델에 보내 결과를 한 장으로 모읍니다. 현재 ComfyUI에 없는 노드가 보이면 그 그룹은 실행하지 말고 먼저 ComfyUI 업데이트 여부를 확인합니다.
+
+[[download: downloads/session2/step3/image_compare_sheet.json | 로컬 모델과 API 이미지 비교 시트 (.json)]]
+
+## 5초 영상 비교
+
+로컬 영상 모델과 여러 API 영상 모델의 결과를 나란히 확인하는 템플릿입니다. API 그룹을 실행하면 크레딧이 차감될 수 있습니다.
+
+[[download: downloads/session2/step3/video_compare_5s.json | 로컬 모델과 API 5초 영상 비교 템플릿 (.json)]]
+
+## 실행 전에 확인하기
+
+1. JSON 파일을 캔버스에 끌어 놓습니다.
+2. 빨간색 오류나 **Missing Node** 표시가 있는지 확인합니다.
+3. 실행할 그룹만 남기고 나머지는 선택한 뒤 **Ctrl+B**로 건너뜁니다.
+4. API 노드는 표시된 크레딧을 확인합니다.
+5. 먼저 한 모델만 실행해 입력과 출력이 맞는지 봅니다.
+
+## 정리
+
+로컬 모델은 파일과 하드웨어를 준비하고, API 노드는 로그인과 크레딧을 확인합니다. 비교할 때는 같은 프롬프트와 같은 조건을 사용합니다.
+`,
+  "session3/step1-install.md": `<article class="s3-lesson">
+<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:20–18:30</div>
+
+# codex(gpt 데스크톱) 설치하기
+
+<figure class="s3-screen">
+<div class="s3-download"><div class="s3-browserbar">learn.chatgpt.com/docs/quickstart?setup=app</div><div class="s3-downloadbody"><small>Setup　　Desktop</small><h2>Install the ChatGPT desktop app</h2><div class="s3-downloadbutton">Download ChatGPT</div><p>Windows</p></div></div><figcaption>공식 OpenAI 문서 기반 목업 · 실제 앱 화면은 버전별 차이</figcaption></figure>
+<div class="s3-captions"><div><h2>Windows용 앱 설치</h2><p>공식 다운로드 열기 · 운영체제에 맞는 설치 파일</p></div><div><h2>설치 완료 기준</h2><p>ChatGPT 데스크톱 앱 실행</p></div></div>
+<p class="s3-task"><a href="https://learn.chatgpt.com/docs/quickstart?setup=app" target="_blank" rel="noreferrer">공식 설치 페이지 열기</a></p>
+
+<div class="s3-footer"><span>01 / 09</span><span><a href="https://learn.chatgpt.com/docs/windows/windows-app" target="_blank" rel="noreferrer">Windows 설치 안내</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step2">다음 · gpt 로그인</a></nav>
 </article>
 `,
-  "session3/step10-create-skill.md": `<article class="s3-lesson">
+  "session3/step2-login.md": `<article class="s3-lesson">
+<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:30–18:40</div>
+
+# gpt 로그인
+
+<figure class="s3-screen">
+<div class="s3-app"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-productpicker"><span>Codex　⌄</span><div class="s3-menu"><b>ChatGPT</b><span>Create, learn, and explore</span><b>Codex　✓</b><span>Build, debug, and ship</span></div></div></div></div></div><figcaption>공식 Quickstart의 제품 선택 화면 기반 목업 · 로그인 직후 Codex 선택 · 로그인 창의 세부 UI는 미검증</figcaption></figure>
+<div class="s3-captions"><div><h2>내 ChatGPT 계정</h2><p>앱 실행 후 로그인 · 평소 쓰던 계정 선택</p></div><div><h2>로그인 뒤 Codex 선택</h2><p>ChatGPT 드롭다운의 Codex · New chat</p></div></div>
+<p class="s3-note">GPT-6.1 Sol · Plus·Pro·Business·Enterprise·Edu 출시 대상 · Free·Go 제외 · 계정별 제공 여부 확인</p>
+
+<div class="s3-footer"><span>02 / 09</span><span><a href="https://learn.chatgpt.com/docs/quickstart?setup=app" target="_blank" rel="noreferrer">로그인과 제품 선택</a> · <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noreferrer">모델 제공 범위</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step1">이전</a><a href="#/lectures/session3/step3">다음 · 챗gpt와 codex의 차이점 설명</a></nav>
+</article>
+`,
+  "session3/step3-chatgpt-codex.md": `<article class="s3-lesson">
+<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:10–18:20</div>
+
+# 챗gpt와 codex의 차이점 설명 (로컬 컴퓨터에서 작업한다)
+
+
+<div class="s3-mode-layout"><img src="./lectures/images/session3/codex/local-computer.svg" alt="대화 창과 이미지·지침 파일을 담은 작업 폴더가 열린 노트북"/><div><h2>ChatGPT · Chat</h2><p>질문 · 설명 · 아이디어</p><h2>이 수업의 Codex</h2><p>내 컴퓨터의 작업 폴더<br/>파일 읽기·저장 · 명령 실행<br/>Comfy CLI 설치와 실행</p></div></div>
+<p class="s3-task">대화 뒤 실제로 생긴 파일과 실행 결과 확인</p>
+<p class="s3-note">같은 데스크톱 앱 안의 제품 선택 · ChatGPT Work도 파일·도구 작업 지원 · 이번 실습은 Codex와 로컬 폴더</p>
+
+<div class="s3-footer"><span>03 / 09</span><span><a href="https://learn.chatgpt.com/docs/use-chatgpt" target="_blank" rel="noreferrer">ChatGPT와 Codex 선택</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step2">이전</a><a href="#/lectures/session3/step4">다음 · codex 모델을 sol 6.1로 설정해 두고 모든 권한으로 변경</a></nav>
+</article>
+`,
+  "session3/step4-settings.md": `<article class="s3-lesson">
+<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:40–18:55</div>
+
+# codex 모델을 sol 6.1로 설정해 두고 모든 권한으로 변경
+
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work">
+<div class="s3-settings"><div><small>모델 선택 · 입력창 아래</small><div class="s3-menu"><span>Advanced</span><b>GPT-6.1 Sol　✓</b></div><p>gpt-6.1-sol</p></div><div><small>권한 선택 · 입력창 아래</small><div class="s3-menu"><span>Ask for approval</span><span>Approve for me</span><b class="s3-orange">Full access　✓</b><span>Custom (config.toml)</span></div></div></div>
+<div class="s3-composer"><span class="s3-folder"></span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>모델명·권한 라벨은 공식 문서 표기 · 메뉴 배치는 수업용 목업</figcaption></figure>
+<div class="s3-captions"><div><h2>GPT-6.1 Sol</h2><p>모델 선택 메뉴 · 필요하면 Advanced<br/>현재 대화의 선택값 확인</p></div><div><h2>Full access</h2><p>내 PC 파일 수정·명령 실행·네트워크 허용<br/>작업 폴더 밖에도 접근 가능한 권한</p></div></div>
+<p class="s3-note">메뉴에 Full access가 없을 때 · 공식 Permissions 문서와 앱 Settings 확인 · 조직 제한 시 강사에게 알리기</p>
+
+<div class="s3-footer"><span>04 / 09</span><span><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noreferrer">모델 선택</a> · <a href="https://learn.chatgpt.com/docs/permission-modes" target="_blank" rel="noreferrer">권한 메뉴</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step3">이전</a><a href="#/lectures/session3/step5">다음 · 작업폴더 생성하고 그 폴더로 설정</a></nav>
+</article>
+`,
+  "session3/step5-folder.md": `<article class="s3-lesson">
+<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:55–19:05</div>
+
+# 작업폴더 생성하고 그 폴더로 설정
+
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work">
+<div class="s3-folderview"><svg viewBox="0 0 260 170" aria-hidden="true"><path d="M10 150V24Q10 12 22 12H96L122 40H238Q250 40 250 52V150Q250 162 238 162H22Q10 162 10 150" fill="#dca86a"/></svg><h2>ai-artwork</h2><p>예시 경로 · C:\\Users\\내이름\\Documents\\ai-artwork</p><div class="s3-menu"><b>Add new project</b><span>Ctrl + O</span></div></div>
+<div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 목업 · 실제 앱 화면은 버전별 차이</figcaption></figure>
+<div class="s3-captions"><div><h2>빈 폴더 하나</h2><p>파일 탐색기에서 ai-artwork 생성</p></div><div><h2>앱에서 폴더 열기</h2><p>Add new project 또는 Ctrl + O<br/>방금 만든 폴더 선택</p></div></div>
+<p class="s3-task">입력창의 작업 위치 확인 · 이후 파일은 이 폴더에서 확인</p>
+
+<div class="s3-footer"><span>05 / 09</span><span><a href="https://learn.chatgpt.com/docs/windows/windows-app" target="_blank" rel="noreferrer">폴더 열기</a> · <a href="https://learn.chatgpt.com/docs/projects" target="_blank" rel="noreferrer">프로젝트와 작업 위치</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step4">이전</a><a href="#/lectures/session3/step6">다음 · Comfy CLI 설치와 로그인 요청</a></nav>
+</article>
+`,
+  "session3/step6-comfy-cli.md": `<article class="s3-lesson">
+<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 19:05–19:25</div>
+
+# Comfy CLI 설치와 로그인 요청
+
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-chat"><small>수강생 입력 · 원문</small><div class="s3-message">comfy 공식 cli를 설치한다음 로그인을 백그라운드로 실행하고 로그인 링크를 알려주고 계속 wait해줘</div><div class="s3-running"><i></i>설치와 로그인 링크 출력 대기</div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 앱 레이아웃 기반 목업 · 메시지와 대기 설명은 수업용 예시</figcaption></figure>
+<div class="s3-prompt">
+
+\`\`\`text
+comfy 공식 cli를 설치한다음 로그인을 백그라운드로 실행하고 로그인 링크를 알려주고 계속 wait해줘
+\`\`\`
+
+</div>
+<p class="s3-note">2026-10-25 PC 실측 · Codex CLI 0.160.0 / gpt-6.1-sol / Python 3.13.15 / comfy-cli 1.23.0 · 빈 폴더의 가상환경 설치와 login_url 출력 확인</p>
+<p class="s3-task">진행이 멈췄을 때 · 오류 메시지와 Python 설치 여부를 강사와 함께 확인</p>
+
+<div class="s3-footer"><span>06 / 09</span><span><a href="https://docs.comfy.org/agent-tools/cli" target="_blank" rel="noreferrer">Comfy 공식 CLI</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step5">이전</a><a href="#/lectures/session3/step7">다음 · 로그인 링크 열기와 인증 완료 확인</a></nav>
+</article>
+`,
+  "session3/step7-comfy-login.md": `<article class="s3-lesson">
+<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 19:25–19:40</div>
+
+# 로그인 링크 열기와 인증 완료 확인
+
+<figure class="s3-screen">
+<div class="s3-terminal"><div class="s3-appbar">Comfy CLI · 검증 로그의 출력 항목</div><div class="s3-terminalbody"><span>comfy --json cloud login --no-browser</span><br/><br/><b>login_url</b><br/><span>https://…</span><br/><br/><em>링크 생성 확인 · 인증 완료 전</em></div></div><figcaption>실제 실행에서 확인한 명령·출력 키 재현 · 일회성 로그인 URL 비공개</figcaption></figure>
+<p class="s3-original">강사 원문 · 이걸로 링크 나오면 로그인 성공, 그다음</p>
+<div class="s3-captions"><div><h2>링크 출력</h2><p>로그인 절차 시작 · 내 브라우저에서 링크 열기<br/>내 Comfy 계정으로 인증</p></div><div><h2>성공 확인</h2><p>Codex의 로그인 완료 응답 확인<br/>comfy cloud whoami로 내 계정 확인</p></div></div>
+<p class="s3-note">이번 사전 검증은 링크 출력 직후 중단 · Comfy 계정 로그인·인증 성공·장시간 wait 미검증 · 링크 만료 시 로그인 재시작</p>
+
+<div class="s3-footer"><span>07 / 09</span><span><a href="https://github.com/Comfy-Org/comfy-cli" target="_blank" rel="noreferrer">Comfy CLI 소스와 도움말</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step6">이전</a><a href="#/lectures/session3/step8">다음 · Comfy 공식 CLI를 스킬로 저장</a></nav>
+</article>
+`,
+  "session3/step8-create-skill.md": `<article class="s3-lesson">
 <div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 19:40–19:50</div>
 
 # Comfy 공식 CLI를 스킬로 저장
 
-<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-chat"><small>수강생 입력 · 원문</small><div class="s3-message">comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재 폴더에 저장해줘</div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 앱 레이아웃 기반 목업 · 수강생 프롬프트 원문</figcaption></figure>
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-chat"><small>수강생 입력 · 원문</small><div class="s3-message">comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재폴더에 저장해줘</div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 앱 레이아웃 기반 목업 · 수강생 프롬프트 원문</figcaption></figure>
 <div class="s3-prompt">
 
 \`\`\`text
-comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재 폴더에 저장해줘
+comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재폴더에 저장해줘
 \`\`\`
 
 </div>
@@ -3109,11 +877,11 @@ comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재 폴더에 저
 <p class="s3-note">CLI 실측 · /skill-creator 문장도 스킬 작성으로 처리 · $skill-creator도 작성 성공 · 두 경우 모두 comfy-cli/SKILL.md에 저장 · 데스크톱 앱의 / 호출 해석은 미검증</p>
 <p class="s3-task">저장 완료 응답의 SKILL.md 경로 확인</p>
 
-<div class="s3-footer"><span>10 / 11</span><span><a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noreferrer">스킬 호출과 저장 위치</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step9">이전</a><a href="#/lectures/session3/step11">다음 · 저장한 스킬을 다음 대화에서 사용</a></nav>
+<div class="s3-footer"><span>08 / 09</span><span><a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noreferrer">스킬 호출과 저장 위치</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step7">이전</a><a href="#/lectures/session3/step9">다음 · 저장한 스킬을 다음 대화에서 사용</a></nav>
 </article>
 `,
-  "session3/step11-skill-folder.md": `<article class="s3-lesson">
+  "session3/step9-skill-folder.md": `<article class="s3-lesson">
 <div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 19:50–20:00</div>
 
 # 저장한 스킬을 다음 대화에서 사용
@@ -3125,1209 +893,9 @@ comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재 폴더에 저
 <p class="s3-note">스킬 파일 저장과 자동 발견은 별개 · 이름·설명·본문이 있는 SKILL.md 확인 · 다음 대화의 스킬 목록에서 재확인</p>
 <p class="s3-note">PC 실측 · comfy-cli/ 폴더를 .agents/skills/ 아래로 이동한 뒤 새 Codex CLI 대화에서 스킬 이름과 경로 인식 확인</p>
 
-<div class="s3-footer"><span>11 / 11</span><span><a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noreferrer">프로젝트 스킬과 명시적 호출</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step10">이전</a></nav>
+<div class="s3-footer"><span>09 / 09</span><span><a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noreferrer">프로젝트 스킬과 명시적 호출</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step8">이전</a></nav>
 </article>
-`,
-  "session3/step2-modes.md": `<article class="s3-lesson s3-recap-modes">
-<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:05–18:10</div>
-
-# 입력 재료에 따라 달라지는 생성 방식
-
-
-<h2>10월 22일 · 이미지 편집 비교</h2>
-<figure class="s3-qwen-results"><div class="s3-sheet-scroll"><a href="./lectures/images/session4/qwen_edit_result.jpg" target="_blank" rel="noreferrer"><img src="./lectures/images/session4/qwen_edit_result.jpg" alt="실제 Qwen 수업 비교 시트 · 입력 그림, t2i 사진, i2i 사진, 오른쪽 사과만 초록색으로 바꾼 inpaint, 칼을 추가한 edit 순서"/></a></div><figcaption>수업 실행 결과 · Qwen-Image-Edit 2511 · 왼쪽부터 입력 / t2i / i2i / inpaint / edit · 모바일은 좌우로 밀어 보기 · 클릭하면 원본</figcaption></figure>
-<div class="s3-mode-definitions"><p><b>t2i</b> · 글로 새 이미지</p><p><b>i2i</b> · 입력 그림을 사진으로</p><p><b>inpaint</b> · 오른쪽 사과만 수정</p><p><b>edit</b> · 칼 추가 지시</p></div>
-<h2>영상 · 시작 이미지와 참조 이미지의 역할</h2>
-<div class="s3-recap-grid s3-video-modes"><figure><img src="./lectures/images/session3/recap/ltx-2.5-t2v-official.webp" alt="t2v · LTX 2.5 공식 템플릿 영상 프리뷰"/><figcaption><b>t2v</b> · 글로 영상<br/>LTX 2.5 공식 출력 프리뷰</figcaption></figure><figure><img src="./downloads/session4/step2/minimax_first.png" alt="i2v 수업 입력 · 카페 창밖을 보는 여성의 첫 프레임"/><figcaption><b>i2v</b> · 시작 이미지<br/>MiniMax 수업 입력</figcaption></figure><figure><div class="s3-frame-pair"><img src="./downloads/session4/step2/minimax_first.png" alt="flf2v 첫 프레임 · 창밖을 보는 모습"/><img src="./downloads/session4/step2/minimax_last.png" alt="flf2v 끝 프레임 · 돌아보며 웃는 모습"/></div><figcaption><b>flf2v</b> · 첫 프레임 → 끝 프레임<br/>MiniMax 수업 입력 2장</figcaption></figure><figure><img src="./downloads/session4/step2/minimax_subject.png" alt="r2v 수업 입력 · 흰 스웨터를 입은 여성의 인물 참조 사진"/><figcaption><b>r2v</b> · 참조 이미지·영상<br/>MiniMax 수업 인물 참조</figcaption></figure></div>
-<p class="s3-note">수업 자료: <a href="#/lectures/session4/step6">Qwen 4가지 편집 결과</a> · <a href="#/lectures/session4/step2">MiniMax 4모드 입력 사진·워크플로우</a> · t2v 프리뷰: <a href="https://github.com/Comfy-Org/workflow_templates/blob/67984637eefcd4825dcf5c134e39034785be1682/templates/video_ltx2_5_t2v-1.webp" target="_blank" rel="noreferrer">Comfy-Org/workflow_templates</a></p>
-<div class="s3-captions"><div><h2>로컬 모델</h2><p>내 PC의 GPU로 실행 · 모델 파일 필요</p></div><div><h2>유료 API 노드</h2><p>외부 서비스 호출 · 서비스별 요금</p></div></div>
-
-<div class="s3-footer"><span>02 / 11</span><span></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step1">이전</a><a href="#/lectures/session3/step3">다음 · 챗gpt와 codex의 차이점 설명 (로컬 컴퓨터에서 작업한다)</a></nav>
-</article>
-`,
-  "session3/step2-video-wan.md": `# 비디오 생성 - Wan 2.2
-
----
-
-## 학습 목표
-
-- Wan 2.2 14B 모델의 다양한 비디오 생성 방식 이해
-- T2V, I2V, FLF2V, Camera Control, Inpainting 6가지 워크플로우 실습
-- 각 방식의 특징과 적합한 사용 상황 파악
-
----
-
-## 비디오 생성의 원리
-
-비디오 생성은 **프레임별 이미지들을 생성하고 연결하여 동영상을 구현**하는 방식입니다.
-
-\`\`\`
-프레임 수 ÷ FPS = 영상 길이(초)
-예시: 81프레임 ÷ 24fps ≈ 3.4초
-\`\`\`
-
----
-
-## Wan 2.2 14B 모델
-
-Alibaba의 오픈소스 비디오 생성 모델로, 6가지 생성 방식을 지원합니다.
-
----
-
-## 워크플로우 1 - T2V (Text to Video)
-
-텍스트 프롬프트만으로 비디오를 생성하는 가장 기본적인 방식입니다.
-
-**핵심 노드**: \`EmptyHunyuanLatentVideo\` - 빈 latent에서 시작하여 텍스트 기반으로 생성
-
-[[download: downloads/session3/step2/video_wan2_2_14B_t2v.json | T2V 워크플로우 다운로드]]
-
-**실습**: 워크플로우를 불러온 후 Positive Prompt에 원하는 장면을 입력하고 실행하세요.
-
----
-
-## 워크플로우 2 - I2V (Image to Video)
-
-이미지를 시작 프레임으로 사용하여 비디오를 생성합니다.
-
-**핵심 노드**: \`WanImageToVideo\` - 입력 이미지를 기반으로 자연스러운 움직임 생성
-
-[[download: downloads/session3/step2/video_wan2_2_14B_i2v.json | I2V 워크플로우 다운로드]]
-
-**실습**: LoadImage에 원하는 이미지를 업로드하고 프롬프트로 움직임 방향을 지정하세요.
-
----
-
-## 워크플로우 3 - FLF2V (First Last Frame to Video)
-
-시작 프레임과 끝 프레임을 모두 지정하면 두 이미지 사이를 자연스럽게 보간합니다.
-
-[[image: session3/step2/sunglass_first.png | row | 시작 프레임]]
-[[image: session3/step2/sunglass_end.png | row | 끝 프레임 (a woman wearing sunglasses)]]
-
-**핵심 노드**: \`WanFirstLastFrameToVideo\` - 시작/끝 이미지를 모두 받아 보간 비디오 생성
-
-\`\`\`settings
-기본 설정: 저 VRAM 환경을 위해 작은 해상도로 설정됨
-VRAM 여유 있을 경우: 해상도 값을 높여 품질 향상 가능
-\`\`\`
-
-[[download: downloads/session3/step2/video_wan2_2_14B_flf2v.json | FLF2V 워크플로우 다운로드]]
-
-**실습**: 시작 이미지와 끝 이미지를 각각 LoadImage 노드에 업로드하고 실행하세요.
-
----
-
-## 워크플로우 4 - Camera Control
-
-이미지와 함께 카메라 움직임을 직접 지정하여 영상을 생성합니다.
-
-[[image: session3/step2/coffee_video.png | width:60% | 카메라 컨트롤 입력 이미지 (a woman drinking coffee)]]
-
-**핵심 노드**:
-- \`WanCameraEmbedding\` - 카메라 모션 설정 (pan, tilt, zoom, roll 등)
-- \`WanCameraImageToVideo\` - 카메라 정보를 반영하여 비디오 생성
-
-[[download: downloads/session3/step2/video_wan2_2_14B_camera.json | Camera Control 워크플로우 다운로드]]
-
-**실습**: LoadImage에 이미지를 업로드하고, WanCameraEmbedding에서 원하는 카메라 움직임을 설정하세요.
-
----
-
-## 워크플로우 5 - Fun Inpainting
-
-비디오의 특정 영역을 마스크로 지정하여 해당 부분만 새롭게 생성합니다.
-
-**핵심 노드**: \`WanFunInpaintToVideo\` - 이미지 + 마스크를 받아 마스킹 영역을 비디오로 생성
-
-\`\`\`settings
-기본: 일반 모드 (품질 우선)
-Lightning LoRA 활성화: 생성 속도 향상 (단, 영상 다이나믹 감소 가능)
-두 모드 중 하나를 활성화하여 사용
-\`\`\`
-
-[[download: downloads/session3/step2/video_wan2_2_14B_fun_inpaint.json | Fun Inpainting 워크플로우 다운로드]]
-
-**실습**: LoadImage에 이미지를 업로드하고 MaskEditor에서 수정할 영역을 지정한 후 실행하세요.
-
----
-
-## 워크플로우 6 - VACE Inpainting
-
-기존 비디오를 불러와 특정 영역을 프레임별로 재생성하는 고급 인페인팅 방식입니다.
-
-**핵심 노드**:
-- \`LoadVideo\` - 기존 비디오 파일 로드
-- \`WanVaceToVideo\` - VACE 방식으로 비디오 인페인팅 처리
-
-\`\`\`settings
-기본: steps 20, cfg 6.0
-CausVid LoRA 사용 시: steps 2~4, cfg 1.0 (빠른 생성, LoRA 강도 0.3~0.7 권장)
-참조 이미지: 단색 배경 이미지가 더 좋은 결과를 냄
-\`\`\`
-
-[[download: downloads/session3/step2/video_wan_vace_inpainting.json | VACE Inpainting 워크플로우 다운로드]]
-
-**실습**: LoadVideo에 비디오를 업로드하고, 마스크 영역을 지정한 후 실행하세요.
-
----
-
-## 6가지 방식 요약
-
-| 워크플로우 | 입력 | 특징 |
-|-----------|------|------|
-| T2V | 텍스트 | 가장 기본, 자유로운 생성 |
-| I2V | 이미지 1장 | 이미지에서 움직임 시작 |
-| FLF2V | 이미지 2장 | 시작·끝 프레임 보간 |
-| Camera | 이미지 + 카메라 설정 | 카메라 움직임 직접 제어 |
-| Fun Inpaint | 이미지 + 마스크 | 특정 영역만 비디오로 변환 |
-| VACE Inpaint | 비디오 + 마스크 | 기존 비디오 영역 재생성 |
-`,
-  "session3/step3-codex.md": `<article class="s3-lesson">
-<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:10–18:20</div>
-
-# 챗gpt와 codex의 차이점 설명 (로컬 컴퓨터에서 작업한다)
-
-
-<div class="s3-mode-layout"><img src="./lectures/images/session3/codex/local-computer.svg" alt="대화 창과 이미지·지침 파일을 담은 작업 폴더가 열린 노트북"/><div><h2>ChatGPT · Chat</h2><p>질문 · 설명 · 아이디어</p><h2>이 수업의 Codex</h2><p>내 컴퓨터의 작업 폴더<br/>파일 읽기·저장 · 명령 실행<br/>Comfy CLI 설치와 실행</p></div></div>
-<p class="s3-task">대화 뒤 실제로 생긴 파일과 실행 결과 확인</p>
-<p class="s3-note">같은 데스크톱 앱 안의 제품 선택 · ChatGPT Work도 파일·도구 작업 지원 · 이번 실습은 Codex와 로컬 폴더</p>
-
-<div class="s3-footer"><span>03 / 11</span><span><a href="https://learn.chatgpt.com/docs/use-chatgpt" target="_blank" rel="noreferrer">ChatGPT와 Codex 선택</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step2">이전</a><a href="#/lectures/session3/step4">다음 · codex(gpt 데스크톱) 설치하기</a></nav>
-</article>
-`,
-  "session3/step3-video-ltxv.md": `# 비디오 생성 - LTX-2 / LTX-2.3
-
----
-
-## 학습 목표
-
-- LTX-2 / LTX-2.3 모델의 특징과 버전별 차이 이해
-- T2V, I2V, FLF2V, IC-LoRA 제어(Pose/Canny/Depth) 6가지 워크플로우 실습
-- IC-LoRA 기반 영상 제어 방식 이해
-
----
-
-## LTX-2 / LTX-2.3 모델 소개
-
-Lightricks가 개발한 DiT(Diffusion Transformer) 기반 비디오 생성 모델 시리즈입니다.
-텍스트 인코더로 **Gemma-3**를 사용하여 긴 문장 프롬프트를 잘 이해합니다.
-
-### LTX-2 vs LTX-2.3 비교
-
-| 항목 | LTX-2 | LTX-2.3 |
-|------|-------|---------|
-| 파라미터 | 19B | 22B |
-| 텍스트 인코더 | Gemma-3 12B | Gemma-3 12B |
-| 오디오 지원 | 없음 | 동기화된 오디오 생성 |
-| IC-LoRA 제어 | Pose / Canny / Depth | - |
-| 특징 | 제어 가능성 강화 | 품질 및 디테일 향상 |
-
-### 기존 LTXV(v0.9)와의 차이
-
-| 항목 | LTXV v0.9 | LTX-2/2.3 |
-|------|-----------|-----------|
-| 모델 구조 | 2B | 19B / 22B |
-| 텍스트 인코더 | T5 | Gemma-3 (자연어 이해 우수) |
-| 오디오 | 없음 | LTX-2.3에서 동기화 지원 |
-| 제어 방식 | 기본 | IC-LoRA (Pose/Canny/Depth) |
-
----
-
-## 프롬프트 작성 팁 (LTX-2.3)
-
-LTX-2.3은 **긴 서술형 프롬프트**에서 훨씬 좋은 결과를 냅니다.
-
-\`\`\`
-1. Core Actions: 시간 순서대로 동작과 사건을 묘사
-2. Visual Details: 화면에 나타나길 원하는 시각적 세부 사항 묘사
-3. Audio: 필요한 소리와 대화 묘사 (LTX-2.3 오디오 생성 시)
-\`\`\`
-
----
-
-## 해상도 및 프레임 수 규칙
-
-\`\`\`settings
-해상도: 반드시 64의 배수 (예: 768x512, 1024x576)
-프레임 수: 반드시 8+1 배수 (9, 17, 25, 33, 41, 49 ...)
-잘못된 값 입력 시 오류 없이 실행되나 품질 저하 발생
-\`\`\`
-
----
-
-## LTX-2.3 워크플로우
-
-### 워크플로우 1 - T2V (Text to Video)
-
-텍스트 프롬프트로 비디오를 생성합니다.
-LTX-2.3은 T2V에서도 시작 이미지 업로드가 필요합니다(레퍼런스 프레임으로 활용).
-
-[[download: downloads/session3/step3/video_ltx2_3_t2v.json | LTX-2.3 T2V 워크플로우 다운로드]]
-
-**실습**: 원하는 이미지를 업로드하고 프롬프트에 동작을 서술하세요.
-
----
-
-### 워크플로우 2 - I2V (Image to Video)
-
-입력 이미지를 시작 프레임으로 사용하여 자연스러운 움직임을 생성합니다.
-
-[[download: downloads/session3/step3/video_ltx2_3_i2v.json | LTX-2.3 I2V 워크플로우 다운로드]]
-
-**실습**: LoadImage에 원하는 이미지를 업로드하고 프롬프트에 움직임을 묘사하세요.
-
----
-
-### 워크플로우 3 - FLF2V (First-Last Frame to Video) + 오디오
-
-시작 프레임과 끝 프레임을 지정해 보간하며, LTX-2.3의 오디오 동기화 기능이 포함됩니다.
-
-**핵심 노드**:
-- \`LTXVEmptyLatentAudio\` - 오디오 latent 생성
-- \`LTXVAudioVAEDecode\` - 오디오 디코딩
-- \`LTXVCropGuides\` + \`LTXVAddGuide\` - 시작/끝 프레임 가이드
-
-[[download: downloads/session3/step3/video_ltx2_3_flf2v.json | LTX-2.3 FLF2V 워크플로우 다운로드]]
-
-**실습**: 시작·끝 이미지를 각각 업로드하고 프롬프트에 장면과 소리를 함께 묘사하세요.
-
----
-
-## LTX-2 IC-LoRA 제어 워크플로우
-
-IC-LoRA(In-Context LoRA)는 참조 비디오나 이미지에서 구조·모션 정보를 추출하여
-새로운 영상 생성에 적용하는 제어 방식입니다.
-
-\`\`\`
-참조 영상/이미지에서 제어 신호 추출 → IC-LoRA 적용 → 프롬프트 기반 새 영상 생성
-\`\`\`
-
-**주의**: Pose/Canny/Depth IC-LoRA는 동시에 하나만 활성화 권장 (VRAM 충돌 가능)
-
----
-
-### 워크플로우 4 - Pose Control
-
-참조 비디오의 포즈(관절 위치)를 추출해 새로운 영상에 동일한 동작을 입힙니다.
-비주얼 스타일은 바꾸면서 움직임 패턴은 유지하는 데 활용합니다.
-
-**모델**: \`ltx-2-19b-ic-lora-pose-control.safetensors\`
-
-[[download: downloads/session3/step3/video_ltx2_pose_to_video.json | LTX-2 Pose Control 워크플로우 다운로드]]
-
-**실습**: LoadVideo에 참조 비디오를 업로드하고 원하는 장면을 프롬프트로 입력하세요.
-
----
-
-### 워크플로우 5 - Canny Control
-
-이미지 또는 비디오의 엣지(윤곽선)를 추출하여 구도와 형태를 제어합니다.
-구성과 실루엣을 유지하면서 다른 스타일의 영상을 생성할 때 활용합니다.
-
-**모델**: \`ltx-2-19b-ic-lora-canny-control.safetensors\`
-
-[[download: downloads/session3/step3/video_ltx2_canny_to_video.json | LTX-2 Canny Control 워크플로우 다운로드]]
-
-**실습**: 참조 이미지/비디오를 업로드하면 Canny 엣지가 자동 추출되어 구도 제어에 활용됩니다.
-
----
-
-### 워크플로우 6 - Depth Control
-
-Lotus 깊이 추정 모델로 장면의 원근·공간 구조를 추출하여 동일한 3D 구성을 유지합니다.
-
-**사용 모델**:
-- \`ltx-2-19b-ic-lora-depth-control.safetensors\`
-- \`lotus-depth-d-v1-1.safetensors\` (깊이 추정)
-- \`vae-ft-mse-840000-ema-pruned.safetensors\`
-
-[[download: downloads/session3/step3/video_ltx2_depth_to_video.json | LTX-2 Depth Control 워크플로우 다운로드]]
-
-**실습**: 참조 영상을 업로드하면 Lotus 모델이 깊이 맵을 자동 추출합니다.
-
----
-
-## 6가지 방식 요약
-
-| 워크플로우 | 모델 | 입력 | 특징 |
-|-----------|------|------|------|
-| T2V | LTX-2.3 (22B) | 텍스트 + 이미지 | 고품질 생성, 서술형 프롬프트 |
-| I2V | LTX-2.3 (22B) | 이미지 | 이미지에서 자연스러운 모션 생성 |
-| FLF2V | LTX-2.3 (22B) | 이미지 2장 | 보간 + 오디오 동기화 |
-| Pose Control | LTX-2 (19B) | 비디오 | 동작 패턴 그대로 스타일 변환 |
-| Canny Control | LTX-2 (19B) | 이미지/비디오 | 윤곽선 기반 구도 제어 |
-| Depth Control | LTX-2 (19B) | 이미지/비디오 | 공간 구조(원근) 제어 |
-`,
-  "session3/step4-install.md": `<article class="s3-lesson">
-<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:20–18:30</div>
-
-# codex(gpt 데스크톱) 설치하기
-
-<figure class="s3-screen">
-<div class="s3-download"><div class="s3-browserbar">learn.chatgpt.com/docs/quickstart?setup=app</div><div class="s3-downloadbody"><small>Setup　　Desktop</small><h2>Install the ChatGPT desktop app</h2><div class="s3-downloadbutton">Download ChatGPT</div><p>Windows</p></div></div><figcaption>공식 OpenAI 문서 기반 목업 · 실제 앱 화면은 버전별 차이</figcaption></figure>
-<div class="s3-captions"><div><h2>Windows용 앱 설치</h2><p>공식 다운로드 열기 · 운영체제에 맞는 설치 파일</p></div><div><h2>설치 완료 기준</h2><p>ChatGPT 데스크톱 앱 실행</p></div></div>
-<p class="s3-task"><a href="https://learn.chatgpt.com/docs/quickstart?setup=app" target="_blank" rel="noreferrer">공식 설치 페이지 열기</a></p>
-
-<div class="s3-footer"><span>04 / 11</span><span><a href="https://learn.chatgpt.com/docs/windows/windows-app" target="_blank" rel="noreferrer">Windows 설치 안내</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step3">이전</a><a href="#/lectures/session3/step5">다음 · gpt 로그인</a></nav>
-</article>
-`,
-  "session3/step5-login.md": `<article class="s3-lesson">
-<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:30–18:40</div>
-
-# gpt 로그인
-
-<figure class="s3-screen">
-<div class="s3-app"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-productpicker"><span>Codex　⌄</span><div class="s3-menu"><b>ChatGPT</b><span>Create, learn, and explore</span><b>Codex　✓</b><span>Build, debug, and ship</span></div></div></div></div></div><figcaption>공식 Quickstart의 제품 선택 화면 기반 목업 · 로그인 직후 Codex 선택 · 로그인 창의 세부 UI는 미검증</figcaption></figure>
-<div class="s3-captions"><div><h2>내 ChatGPT 계정</h2><p>앱 실행 후 로그인 · 평소 쓰던 계정 선택</p></div><div><h2>로그인 뒤 Codex 선택</h2><p>ChatGPT 드롭다운의 Codex · New chat</p></div></div>
-<p class="s3-note">GPT-6.1 Sol · Plus·Pro·Business·Enterprise·Edu 출시 대상 · Free·Go 제외 · 계정별 제공 여부 확인</p>
-
-<div class="s3-footer"><span>05 / 11</span><span><a href="https://learn.chatgpt.com/docs/quickstart?setup=app" target="_blank" rel="noreferrer">로그인과 제품 선택</a> · <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noreferrer">모델 제공 범위</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step4">이전</a><a href="#/lectures/session3/step6">다음 · codex 모델을 sol 6.1로 설정해 두고 모든 권한으로 변경</a></nav>
-</article>
-`,
-  "session3/step5-upscaling-strategy.md": `# 이미지 업스케일링 전략
-
----
-
-## 학습 목표
-
-이미지를 고해상도로 업스케일하는 두 가지 방법을 실습하고, 각각의 차이점과 원리를 이해합니다.
-
----
-
-## 1단계: 템플릿 다운로드 받기
-
-아래 두 가지 업스케일링 템플릿을 다운로드하세요.
-
-[[download: downloads/session3/step5/upscale_basic_workflow.json | 기본 업스케일 워크플로우 다운로드]]
-
-[[download: downloads/session3/step5/upscale_hiresfix_workflow.json | Hires Fix 업스케일 워크플로우 다운로드]]
-
----
-
-## 2단계: Basic 업스케일 실습
-
-### upscale_basic.json 열기
-
-다운로드한 \`upscale_basic_workflow.json\` 파일을 ComfyUI에 드래그 앤 드롭하여 엽니다.
-
----
-
-### 템플릿으로 실습해봅시다
-
-1. 워크플로우 구조 확인
-2. 프롬프트를 원하는 내용으로 수정
-3. Queue Prompt 클릭하여 생성
-4. 결과 이미지 확인
-
----
-
-## 3단계: Hires Fix 업스케일 실습
-
-### upscale_hiresfix.json 열기
-
-다운로드한 \`upscale_hiresfix_workflow.json\` 파일을 ComfyUI에 드래그 앤 드롭하여 엽니다.
-
----
-
-### 템플릿으로 실습해봅시다
-
-1. 워크플로우 구조 확인
-2. Basic 방식과의 노드 차이 비교
-3. Queue Prompt 클릭하여 생성
-4. Basic 방식과 결과 비교
-
----
-
-## 4단계: 두 방식의 차이점 이해하기
-
----
-
-### Basic 업스케일 방식
-
-**작동 원리:**
-- RealESRGAN 업스케일러 모델 사용
-- 이미지 확대 노드로 생성된 이미지를 **그대로 확대**
-- 단순하고 빠른 처리
-
-**워크플로우 구조:**
-\`\`\`
-KSampler → VAE Decode → Upscale Image → Save Image
-\`\`\`
-
-**특징:**
-- 빠른 처리 속도
-- 기존 이미지의 디테일 보존
-- 추가 생성 과정 없음
-
----
-
-### Hires Fix 업스케일 방식
-
-**작동 원리:**
-1. RealESRGAN 업스케일러로 이미지 확대
-2. **VAE Encode** 노드로 이미지를 다시 **데이터(Latent) 형태로 변환**
-3. 변환된 Latent를 **KSampler에 투입하여 다시 생성**
-
-**워크플로우 구조:**
-\`\`\`
-KSampler → VAE Decode → Upscale Image →
-VAE Encode → KSampler → VAE Decode → Save Image
-\`\`\`
-
-**특징:**
-- 디테일 추가 생성
-- 더 선명한 결과물
-- 처리 시간이 더 소요됨
-
----
-
-### VAE Encode와 Decode의 관계
-
-**복습: VAE Decode**
-- KSampler의 산출물 (Latent 데이터)을 **이미지로 변환**
-- Latent → Image
-
-**VAE Encode**
-- VAE Decode의 **반대 방향**으로 작동
-- 이미지를 다시 **Latent 데이터로 변환**
-- Image → Latent
-
-**Hires Fix에서의 활용:**
-- 업스케일된 이미지를 다시 Latent로 변환
-- KSampler가 이 Latent를 받아서 디테일을 추가 생성
-- 결과적으로 더 선명하고 디테일한 이미지 획득
-
----
-
-## 정리
-
----
-
-**Basic 방식**
-- 장점: 빠른 처리, 원본 이미지 유지
-- 단점: 디테일 추가 없음
-- 추천: 빠르게 확대만 필요한 경우
-
----
-
-**Hires Fix 방식**
-- 장점: 디테일 추가 생성, 더 선명한 결과
-- 단점: 처리 시간 소요
-- 추천: 최종 결과물, 고품질 필요 시
-
-목적에 따라 적절한 방식을 선택하여 사용하세요!
-`,
-  "session3/step6-settings.md": `<article class="s3-lesson">
-<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:40–18:55</div>
-
-# codex 모델을 sol 6.1로 설정해 두고 모든 권한으로 변경
-
-<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work">
-<div class="s3-settings"><div><small>모델 선택 · 입력창 아래</small><div class="s3-menu"><span>Advanced</span><b>GPT-6.1 Sol　✓</b></div><p>gpt-6.1-sol</p></div><div><small>권한 선택 · 입력창 아래</small><div class="s3-menu"><span>Ask for approval</span><span>Approve for me</span><b class="s3-orange">Full access　✓</b><span>Custom (config.toml)</span></div></div></div>
-<div class="s3-composer"><span class="s3-folder"></span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>모델명·권한 라벨은 공식 문서 표기 · 메뉴 배치는 수업용 목업</figcaption></figure>
-<div class="s3-captions"><div><h2>GPT-6.1 Sol</h2><p>모델 선택 메뉴 · 필요하면 Advanced<br/>현재 대화의 선택값 확인</p></div><div><h2>Full access</h2><p>내 PC 파일 수정·명령 실행·네트워크 허용<br/>작업 폴더 밖에도 접근 가능한 권한</p></div></div>
-<p class="s3-note">메뉴에 Full access가 없을 때 · 공식 Permissions 문서와 앱 Settings 확인 · 조직 제한 시 강사에게 알리기</p>
-
-<div class="s3-footer"><span>06 / 11</span><span><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noreferrer">모델 선택</a> · <a href="https://learn.chatgpt.com/docs/permission-modes" target="_blank" rel="noreferrer">권한 메뉴</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step5">이전</a><a href="#/lectures/session3/step7">다음 · 작업폴더 생성하고 그 폴더로 설정</a></nav>
-</article>
-`,
-  "session3/step7-folder.md": `<article class="s3-lesson">
-<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 18:55–19:05</div>
-
-# 작업폴더 생성하고 그 폴더로 설정
-
-<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work">
-<div class="s3-folderview"><svg viewBox="0 0 260 170" aria-hidden="true"><path d="M10 150V24Q10 12 22 12H96L122 40H238Q250 40 250 52V150Q250 162 238 162H22Q10 162 10 150" fill="#dca86a"/></svg><h2>ai-artwork</h2><p>예시 경로 · C:\\Users\\내이름\\Documents\\ai-artwork</p><div class="s3-menu"><b>Add new project</b><span>Ctrl + O</span></div></div>
-<div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 목업 · 실제 앱 화면은 버전별 차이</figcaption></figure>
-<div class="s3-captions"><div><h2>빈 폴더 하나</h2><p>파일 탐색기에서 ai-artwork 생성</p></div><div><h2>앱에서 폴더 열기</h2><p>Add new project 또는 Ctrl + O<br/>방금 만든 폴더 선택</p></div></div>
-<p class="s3-task">입력창의 작업 위치 확인 · 이후 파일은 이 폴더에서 확인</p>
-
-<div class="s3-footer"><span>07 / 11</span><span><a href="https://learn.chatgpt.com/docs/windows/windows-app" target="_blank" rel="noreferrer">폴더 열기</a> · <a href="https://learn.chatgpt.com/docs/projects" target="_blank" rel="noreferrer">프로젝트와 작업 위치</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step6">이전</a><a href="#/lectures/session3/step8">다음 · Comfy CLI 설치와 로그인 요청</a></nav>
-</article>
-`,
-  "session3/step8-comfy-cli.md": `<article class="s3-lesson">
-<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 19:05–19:25</div>
-
-# Comfy CLI 설치와 로그인 요청
-
-<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT <span>−　□　×</span></div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span><small>Chats</small></aside><div class="s3-work"><div class="s3-chat"><small>수강생 입력 · 원문</small><div class="s3-message">comfy 공식 cli를 설치한 다음 로그인을 백그라운드로 실행하고 로그인 링크를 알려주고 계속 wait해줘</div><div class="s3-running"><i></i>설치와 로그인 링크 출력 대기</div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 앱 레이아웃 기반 목업 · 메시지와 대기 설명은 수업용 예시</figcaption></figure>
-<div class="s3-prompt">
-
-\`\`\`text
-comfy 공식 cli를 설치한 다음 로그인을 백그라운드로 실행하고 로그인 링크를 알려주고 계속 wait해줘
-\`\`\`
-
-</div>
-<p class="s3-note">2026-10-25 PC 실측 · Codex CLI 0.160.0 / gpt-6.1-sol / Python 3.13.15 / comfy-cli 1.23.0 · 빈 폴더의 가상환경 설치와 login_url 출력 확인</p>
-<p class="s3-task">진행이 멈췄을 때 · 오류 메시지와 Python 설치 여부를 강사와 함께 확인</p>
-
-<div class="s3-footer"><span>08 / 11</span><span><a href="https://docs.comfy.org/agent-tools/cli" target="_blank" rel="noreferrer">Comfy 공식 CLI</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step7">이전</a><a href="#/lectures/session3/step9">다음 · 로그인 링크 열기와 인증 완료 확인</a></nav>
-</article>
-`,
-  "session3/step9-comfy-login.md": `<article class="s3-lesson">
-<div class="s3-meta">AI 아트웍 · 3회차 · 2026.10.27 화 · 19:25–19:40</div>
-
-# 로그인 링크 열기와 인증 완료 확인
-
-<figure class="s3-screen">
-<div class="s3-terminal"><div class="s3-appbar">Comfy CLI · 검증 로그의 출력 항목</div><div class="s3-terminalbody"><span>comfy --json cloud login --no-browser</span><br/><br/><b>login_url</b><br/><span>https://…</span><br/><br/><em>링크 생성 확인 · 인증 완료 전</em></div></div><figcaption>실제 실행에서 확인한 명령·출력 키 재현 · 일회성 로그인 URL 비공개</figcaption></figure>
-<p class="s3-original">강사 원문 · 이걸로 링크 나오면 로그인 성공, 그다음</p>
-<div class="s3-captions"><div><h2>링크 출력</h2><p>로그인 절차 시작 · 내 브라우저에서 링크 열기<br/>내 Comfy 계정으로 인증</p></div><div><h2>성공 확인</h2><p>Codex의 로그인 완료 응답 확인<br/>comfy cloud whoami로 내 계정 확인</p></div></div>
-<p class="s3-note">이번 사전 검증은 링크 출력 직후 중단 · Comfy 계정 로그인·인증 성공·장시간 wait 미검증 · 링크 만료 시 로그인 재시작</p>
-
-<div class="s3-footer"><span>09 / 11</span><span><a href="https://github.com/Comfy-Org/comfy-cli" target="_blank" rel="noreferrer">Comfy CLI 소스와 도움말</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step8">이전</a><a href="#/lectures/session3/step10">다음 · Comfy 공식 CLI를 스킬로 저장</a></nav>
-</article>
-`,
-  "session4/step1-get-set-node.md": `# Get/Set 노드와 워크플로우 정리 기법
-
-## 학습 목표
-
-복잡한 워크플로우를 깔끔하게 정리하는 고급 기법을 익힙니다.
-
----
-
-## 템플릿 다운로드
-
-아래 고급 기법이 적용된 템플릿을 다운로드하세요.
-
-[[download: downloads/session4/step1/get_set_adv.json | Get/Set 고급 기법 템플릿 다운로드]]
-
----section---
-
-## 1. Get/Set 노드란?
-
-복잡한 워크플로우에서 노드들을 연결하다 보면 화면이 연결선으로 가득 차서 보기 어려워집니다. **Get/Set 노드**는 이런 문제를 해결해주는 KJNodes의 기능으로, 연결선 없이 데이터를 전달할 수 있게 해줍니다.
-
-**ComfyCloud에서는 KJNodes가 기본으로 포함**되어 있습니다.
-
-### 기본 개념
-
-- **Set 노드**: 데이터를 전역 변수에 저장
-- **Get 노드**: 저장된 데이터를 가져와서 사용
-- **변수명**: Set과 Get을 연결하는 이름
-
-### 왜 사용하나요?
-
-**기존 방식의 문제:**
-\`\`\`
-[노드 A] ────────────────────────────> [노드 B]
-           (긴 연결선이 화면 가로지름)
-\`\`\`
-
-**Get/Set 방식:**
-\`\`\`
-[노드 A] → [Set: output_image]
-
-[Get: output_image] → [노드 B]
-        (연결선 없이 깔끔)
-\`\`\`
-
-### 사용 방법
-
-1. 우클릭 → 노드 추가 → KJNodes → \`SetNode\` 추가
-2. Set 노드의 **변수명** 필드에 이름 입력 (예: \`base_pipe\`)
-3. 같은 이름으로 \`GetNode\` 추가
-4. Set 노드에 데이터 연결 → Get 노드에서 꺼내어 사용
-
----section---
-
-## 2. ToBasicPipe / FromBasicPipe 노드
-
-**ComfyCloud에서는 Impact-Pack 커스텀 노드가 기본으로 포함**되어 있습니다.
-
-### 역할
-
-여러 매개변수를 하나의 파이프로 묶어서 전달하는 노드입니다.
-
-**ToBasicPipe 입력:**
-- model
-- clip
-- vae
-- positive (conditioning)
-- negative (conditioning)
-
-**ToBasicPipe 출력:**
-- basic_pipe (하나로 묶인 데이터)
-
-### 사용 예시
-
-**복잡한 방식:**
-\`\`\`
-[Checkpoint Loader] → model → [KSampler]
-                    → clip → [CLIP Text Encode]
-                    → vae → [VAE Decode]
-\`\`\`
-
-**파이프 + Get/Set 방식:**
-\`\`\`
-[Checkpoint Loader] + [CLIP Text Encode]
-  → [ToBasicPipe]
-  → [Set: base_pipe]
-
-[Get: base_pipe]
-  → [FromBasicPipe]
-  → model → [KSampler]
-  → vae → [VAE Decode]
-\`\`\`
-
-연결선이 대폭 줄어들고, 워크플로우의 흐름이 명확해집니다.
-
----section---
-
-## 3. SDXLResolution 노드
-
-**ComfyCloud에서는 ComfyMath 커스텀 노드가 기본으로 포함**되어 있습니다.
-
-### 역할 및 기능
-
-SDXL 모델은 권장 해상도(가로세로 픽셀 비율)가 정해져 있습니다. 이 값들을 외우기 어렵기 때문에, SDXLResolution 노드는 9가지 권장 해상도 중 선택하여 width와 height로 출력해줍니다.
-
-### 권장 해상도 목록
-
-| 비율 | Width | Height |
-|------|-------|--------|
-| 1:1  | 1024  | 1024   |
-| 4:3  | 1152  | 896    |
-| 3:4  | 896   | 1152   |
-| 16:9 | 1344  | 768    |
-| 9:16 | 768   | 1344   |
-| 21:9 | 1536  | 640    |
-| 3:2  | 1216  | 832    |
-| 2:3  | 832   | 1216   |
-
-### 사용 방법
-
-1. SDXLResolution 노드 추가
-2. 드롭다운에서 원하는 비율 선택
-3. width, height 출력을 Empty Latent Image 노드에 연결
-
----section---
-
-## 4. 서브그래프(Group Node) 생성 및 진입
-
-ComfyUI에서 여러 노드를 하나의 그룹 노드로 변환하면, 그 안으로 직접 들어가서 편집할 수 있습니다. 이를 **서브그래프**라고 합니다.
-
-### 서브그래프 생성 방법
-
-**1단계: 노드 선택**
-- **Ctrl** 키를 누른 채로 드래그하여 묶을 노드들을 선택
-- 또는 여러 노드를 Ctrl + 클릭으로 개별 선택
-
-**2단계: 그룹 노드로 변환**
-- 선택된 노드 위에 뜨는 토글의 오른쪽 **...** 클릭
-- **"그룹 노드로 변환"** 클릭
-
-**결과:**
-- 여러 노드가 하나의 그룹 노드(서브그래프)로 합쳐짐
-- 외부에서는 input/output 핀만 노출
-- 내부 구조는 숨겨져 워크플로우가 깔끔해짐
-
-### 서브그래프 진입 방법
-
-생성된 그룹 노드를 **더블클릭**하면 서브그래프 내부로 진입합니다.
-
-- 내부에서 각 노드를 자유롭게 편집 가능
-- 상단의 **뒤로가기(← 화살표)** 또는 **Escape** 키로 상위 워크플로우로 복귀
-
-### 주의사항
-
-- input/output/매개변수 이름이 겹치면 에러 발생 가능
-- 기능이 혼합될 경우 문제가 생길 수 있음
-- **복잡한 노드끼리는 그룹화하지 않는 것을 권장**
-- 자주 함께 사용되는 단순한 노드 조합에 활용
-
-### 활용 예시
-
-**KSampler + 빈 잠재 이미지 묶기:**
-\`\`\`
-[서브그래프: Sampling]
-  ├── Empty Latent Image
-  └── KSampler
-      → (latent 출력)
-\`\`\`
-
-외부에서는 해상도/스텝/cfg 값만 입력하면 되므로 메인 워크플로우가 훨씬 간결해집니다.
-`,
-  "session4/step2-nanobanana.md": `# 유료노드 사용해보기
-
-## 유료 API 노드란?
-
-API 노드는 ComfyUI 안에서 외부 회사의 AI 모델(Nano Banana, GPT Image, Kling, Veo 등)을 바로 불러 쓰는 노드입니다.
-실행할 때마다 **노드 위에 표시된 만큼 크레딧이 추가로 차감**되니, 실행 전에 꼭 확인하세요.
-
----section---
-
-## 비교 템플릿 다운로드
-
-같은 프롬프트와 같은 시드로 여러 모델을 한 번에 돌려 결과를 나란히 비교합니다. 끄고 싶은 모델은 그룹을 선택한 뒤 **Ctrl+B**로 건너뛸 수 있습니다.
-
-[[download: downloads/session4/step2/image_compare_sheet.json | 이미지 비교 시트 - 오픈 모델 3개(FLUX.2, Z-Image, Qwen-Image)와 API 16개(Nano Banana, GPT Image, Seedream, FLUX 3, Krea 3, Bria FIBO 등) 19개 모델]]
-
-[[download: downloads/session4/step2/video_compare_5s.json | 5초 영상 비교 - LTX-2.5, Wan 2.2와 MiniMax, Kling, Veo, Seedance, Wan 2.7, Grok, FLUX 3 Max 9개 모델]]
-
----section---
-
-## MiniMax H3 오픈 모델 4가지 모드 비교
-
-이 워크플로는 유료 API 노드가 아니라 **MiniMax H3 오픈 모델**(가중치 공개판)을 ComfyUI 기본 노드로 직접 돌립니다. 같은 20대 여성 인물과 같은 카페 장면으로 네 가지 방식(텍스트, 첫 프레임, 첫+마지막 프레임, 레퍼런스)을 비교하고, 영상과 함께 스테레오 소리도 한 번에 만들어집니다.
-
-- Comfy Cloud에는 필요한 모델 파일이 이미 올라가 있어 따로 받을 필요가 없습니다. API 노드 요금은 없고 GPU 사용 시간만큼 크레딧이 차감됩니다.
-- 내 PC에서 네 모드를 모두 돌리려면 모델 파일이 약 63GB 필요하고(확산 모델 2개 포함), 24GB 그래픽카드(RTX 4090)는 int8 텍스트 인코더를, 32GB(RTX 5090)는 nvfp4 인코더를 씁니다. 자세한 파일 목록은 워크플로 안의 메모(Note)에 있습니다.
-- 아래 이미지 3장을 받아 Load Image 노드에 올리세요.
-
-[[download: downloads/session4/step2/minimax_4modes.json | MiniMax H3 오픈 모델 4가지 모드 - T2V, I2V, 첫+마지막 프레임, 레퍼런스 영상 (기본 노드)]]
-
-[[download: downloads/session4/step2/minimax_subject.png | 예제 이미지 1 - 인물 레퍼런스 (R2V 입력)]]
-
-[[download: downloads/session4/step2/minimax_first.png | 예제 이미지 2 - 첫 프레임, 창밖을 보는 장면 (I2V, 첫+마지막 프레임 입력)]]
-
-[[download: downloads/session4/step2/minimax_last.png | 예제 이미지 3 - 마지막 프레임, 돌아보며 웃는 장면 (첫+마지막 프레임 입력)]]
-
-같은 비교를 MiniMax 유료 API 노드로 해 보고 싶다면 아래 파일을 쓰세요. 실행할 때마다 API 크레딧이 차감됩니다(4가지 모드 한 번에 약 2.6달러).
-
-[[download: downloads/session4/step2/minimax_4modes_api.json | (선택) 유료 API 노드 버전 - MiniMax H3 API 4가지 모드]]
-`,
-  "session4/step3-local-comfyui-setup.md": `# 로컬 ComfyUI 설치 및 Civitai 활용
-
----section---
-
-## 1. 로컬 ComfyUI 설치하기
-
-클라우드 서비스 없이 내 PC에 ComfyUI를 직접 설치하면 모델 제한 없이 자유롭게 사용할 수 있습니다.
-
-### 권장 사양
-
-| 모델 | 최소 VRAM | 권장 VRAM |
-|------|-----------|-----------|
-| SD 1.5 | 8GB | 12GB |
-| SDXL | 8GB | 12-16GB |
-| Flux (양자화) | 6-8GB | 12-16GB |
-| Flux (Full) | 16GB | 24GB |
-
-> **GPU 확인 방법**: Windows 키 → \`dxdiag\` 실행 → 디스플레이 1 탭에서 그래픽 카드 모델 확인
-
-### Stability Matrix로 설치하기
-
-ComfyUI를 원클릭으로 설치하고 관리할 수 있는 패키지 매니저입니다.
-
-**다운로드**: https://github.com/LykosAI/StabilityMatrix/releases
-
-1. \`StabilityMatrix-win-x64.zip\` 다운로드 후 압축 해제 (한글 경로 피하기)
-2. \`StabilityMatrix.exe\` 실행
-3. **Portable Mode** 체크 → Continue
-4. Packages → Add Package → **ComfyUI** 선택 → Install
-5. Launch → http://127.0.0.1:8188 접속
-
-> **ComfyUI Manager 설치**: 우측 퍼즐 아이콘 → Install Extensions → "manager" 검색 → Dr.Lt.data의 ComfyUI-Manager 설치
-
-### 모델 저장 경로
-
-\`\`\`
-[설치 위치]\\Data\\Models\\
-├── StableDiffusion    # 체크포인트
-├── Lora               # LoRA
-├── ControlNet         # ControlNet
-├── VAE                # VAE
-└── Embeddings         # 임베딩
-\`\`\`
-
----section---
-
-## 2. Civitai 활용하기
-
-**Civitai** (https://civitai.com) 는 AI 이미지 생성 커뮤니티 플랫폼입니다.
-모델을 다운로드하고 다른 사람의 작업물을 참고하는 가장 대표적인 사이트입니다.
-
-### 주요 섹션
-
-**Models** (https://civitai.com/models)
-- 체크포인트, LoRA, ControlNet 등 모델 다운로드
-- 각 모델 페이지에서 예시 이미지와 사용 프롬프트 확인 가능
-- Base Model 필터로 SD 1.5 / SDXL / Flux 구분하여 검색
-
-**Images** (https://civitai.com/images)
-- 커뮤니티가 생성한 이미지 탐색
-- 이미지 클릭 시 사용된 체크포인트, LoRA, 프롬프트, CFG, Seed 등 전체 정보 확인 가능
-- 마음에 드는 이미지의 생성 조건을 그대로 재현하거나 응용 가능
-
-### PNG 메타데이터 활용하기
-
-ComfyUI로 생성된 PNG 이미지에는 워크플로우 정보가 내장되어 있습니다.
-Civitai 등에서 다운로드한 이미지를 ComfyUI에 **드래그 앤 드롭**하면 워크플로우가 자동으로 불러와집니다.
-
-**활용 예시**: https://civitai.com/images/103956588
-
-### 탐색 시 유의사항
-
-- Base Model 필터에서 **SD 1.5 또는 SDXL** 기반 이미지 선택 (Flux는 요구 사양이 높음)
-- 체크포인트 + LoRA 파일 총합이 로컬 저장 공간에 여유가 있는지 확인
-- 이미지 메타데이터에 프롬프트, Seed, CFG 정보가 공개되어 있는지 확인
-`,
-  "session4/step3-workflow-design.md": `# 워크플로우 설계 실습 - 서울 옥외 전광판 광고 영상 만들기
-
-## 실습 목표
-
-여러 워크플로우를 단계별로 연결하여 하나의 완성된 광고 영상을 제작합니다.
-
-**완성 결과물**: ㄱ자형(wrap-around) 서울 옥외 LED 전광판에서 제품이 화면 밖으로 돌출되는 아나모픽 광고 영상
-
----section---
-
-## 전체 워크플로우 흐름
-
-\`\`\`
-[1단계] 전광판 배경 생성
-    → ㄱ자 전광판 + 그린스크린(#00FF00) 이미지
-
-[2단계] 제품 광고 이미지 생성 (First Frame용)
-    → 전광판에 표시될 평면적인 제품 광고 이미지
-
-[3단계] 그린스크린 합성
-    → 1번 전광판 + 2번 광고 이미지 합성 = First Frame 완성
-
-[4단계] Qwen Image Edit으로 Last Frame 생성
-    → First Frame에서 제품이 화면 밖으로 돌출되는 효과 추가
-
-[5단계] First-Last 비디오 생성
-    → 평면(First) → 돌출(Last) 애니메이션 완성
-\`\`\`
-
----section---
-
-## 1단계: 서울 옥외 전광판 배경 생성
-
-ㄱ자형(wrap-around) 전광판에 그린스크린(\`#00FF00\`)이 채워진 서울 거리 이미지를 생성합니다.
-
-[[download: downloads/session4/step3/1_zimageturbo_t2i.json | 1단계 워크플로우 다운로드 (Z-Image Turbo)]]
-
-**설정 포인트:**
-- \`wrap-around screen\`, \`chroma key green screen, #00FF00\` 명시
-- 저앙각(Low angle) 촬영 구도 → 전광판이 위에서 압도하는 구도
-- 서울 거리 배경 포함 (버스, 보행자, 아스팔트)
-
-**실습 포인트:** 그린 영역이 ㄱ자(L자) 형태로 균일하게 나왔는지 확인하세요.
-
----section---
-
-## 2단계: 제품 광고 이미지 생성 (First Frame용)
-
-전광판 화면에 표시될 제품 광고 이미지를 생성합니다.
-제품이 화면 **안쪽 깊숙이**, **평면적**으로 배치된 느낌으로 생성합니다.
-
-[[download: downloads/session4/step3/2_qwen_t2i.json | 2단계 워크플로우 다운로드 (Qwen 2512)]]
-
-**설정 포인트 (스튜디오 제품 광고컷 스타일):**
-- **오브젝트**: 럭셔리 향수병 (골드 캡, 크리스탈 유리, 앰버 액체)
-- **배경**: 어두운 추상 3D 스테이지 (딥 네이비 + 골드 컬러)
-- **조명**: Octane Render / UE5 스타일 림 라이팅
-- **구도**: 저앙각, 중앙 플로팅 배치, 여백 충분
-- 16:9 가로 포맷 (전광판 비율)
-
-**주의:** \`billboard\`, \`outdoor\` 같은 단어를 넣으면 전광판 이미지가 생성됩니다. 제품 단독 이미지로 생성하세요.
-
----section---
-
-## 3단계: AI 합성 → First Frame 완성
-
-1단계(전광판 배경)와 2단계(제품 이미지)를 Qwen Image Edit에 reference로 넣어 AI가 자연스럽게 합성합니다.
-단순 붙여넣기가 아닌 AI가 ㄱ자 전광판의 원근감, 조명, 코너 왜곡을 맞춰서 처리합니다.
-
-[[download: downloads/session4/step3/3_qwen_billboard_composite.json | 3단계 워크플로우 다운로드 (Qwen Billboard Composite)]]
-
-**워크플로우 구조:**
-
-\`\`\`
-LoadImage 1 (전광판 배경) ──→ Qwen Image Edit → First Frame (합성 결과)
-LoadImage 2 (제품 이미지) ──↗
-프롬프트: 그린 영역을 제품 이미지로 교체, 원근감/조명 자동 적용
-\`\`\`
-
-**사용 방법:**
-1. \`LoadImage 1\`: 1단계에서 생성한 전광판 이미지 (그린스크린 포함)
-2. \`LoadImage 2\`: 2단계에서 생성한 향수 제품 이미지
-3. AI가 그린 영역을 감지하고 제품 이미지를 ㄱ자 화면 원근감에 맞춰 합성
-4. 결과 이미지 저장 → **First Frame**으로 사용
-
----section---
-
-## 4단계: Qwen Image Edit → Last Frame 생성
-
-3단계에서 완성된 First Frame을 입력 이미지로 넣어, 제품이 전광판 화면 밖으로 돌출되는 **아나모픽 3D 효과**를 추가합니다.
-
-[[download: downloads/session4/step3/4_qwen_image_edit.json | 4단계 워크플로우 다운로드 (Qwen Image Edit)]]
-
-**사용 방법:**
-1. \`LoadImage\`: 3단계에서 저장한 **First Frame 합성 이미지** 연결
-2. 프롬프트: 제품이 화면 밖으로 돌출되는 효과 지시
-3. 건물, 거리, 배경 환경은 그대로 유지하도록 명시
-4. 결과 이미지 저장 → **Last Frame**으로 사용
-
-**실습 포인트:** 돌출 강도를 프롬프트로 조절해보세요. (subtle → dramatic)
-
----section---
-
-## 5단계: First-Last 비디오 생성
-
-First Frame과 Last Frame을 이어 제품이 화면에서 돌출되는 애니메이션을 생성합니다.
-
-[[download: downloads/session4/step3/5_video_wan_first_last.json | 5단계 워크플로우 다운로드 (Wan 2.2 First-Last)]]
-
-**사용 방법:**
-1. First 프레임: 3단계 합성 이미지 (제품 평면 배치)
-2. Last 프레임: 4단계 편집 이미지 (제품 돌출)
-3. 프레임 수: 49 (기본값, 8의 배수 + 1)
-4. 해상도: 1280x720
-
-**결과물**: 정적인 전광판에서 제품이 서서히 화면 밖으로 돌출되는 아나모픽 광고 영상
-
----section---
-
-## 서브그래프화 도전 과제
-
-각 단계를 하나의 워크플로우 파일로 연결해봅시다.
-
-**목표**: 5개 워크플로우를 각각 **Node Group(서브그래프)**으로 묶고, 단일 파이프라인으로 구성
-
-**방법:**
-1. 각 워크플로우의 핵심 노드 선택 → 우클릭 → **Convert to Group**
-2. 그룹의 입력/출력 포트 정의 (이미지, 마스크, 비디오)
-3. 그룹끼리 연결하여 자동화 파이프라인 완성
-
-이 과정이 바로 **워크플로우 설계**의 핵심입니다.
-`,
-  "session4/step4-workflow-basics.md": `# 워크플로우 기초 실습
-
-## 학습 목표
-
-ComfyCloud 내장 모델로 워크플로우를 직접 구성하고, 다양한 기법을 응용하여 이미지를 발전시키는 방법을 익힙니다.
-
----section---
-
-## 1단계: Civitai에서 참고 이미지 찾기
-
-**Civitai** (https://civitai.com/images)에서 마음에 드는 이미지를 탐색합니다.
-
-- Base Model 필터에서 **SDXL** 기반 이미지 선택 (ComfyCloud 내장 모델과 호환)
-- 이미지 클릭 시 사용된 체크포인트, LoRA, 프롬프트, CFG, Seed 등 확인
-- 시연용 예시: https://civitai.com/images/105765701
-
-> **PNG 메타데이터 활용**: Civitai에서 다운로드한 PNG 이미지를 ComfyUI에 **드래그 앤 드롭**하면 워크플로우가 자동으로 불러와집니다.
-
----section---
-
-## 2단계: ComfyCloud 모델로 워크플로우 구성하기
-
-### 내장 모델 확인
-
-ComfyCloud에서는 별도 다운로드 없이 내장 체크포인트와 LoRA를 바로 사용할 수 있습니다.
-
-- **체크포인트**: WAI-illustrious-SDXL, Illustrious-XL, Pony Diffusion 등
-- **LoRA**: MoXin, 수채화 스타일 등 다양한 내장 LoRA 포함
-
-### 기본 노드 구성
-
-1. **Load Checkpoint** → 내장 체크포인트 선택
-2. **CLIP Text Encode** → 프롬프트 입력
-3. **SDXLResolution** (ComfyMath) → 권장 해상도 선택
-4. **Empty Latent Image** → 해상도 연결
-5. **KSampler** → 매개변수 설정
-6. **VAE Decode** → 이미지 디코딩
-7. **Save Image** → 결과 저장
-
-### LoRA 추가하기
-
-참고 이미지에서 LoRA 정보를 확인한 뒤, 내장 LoRA 중 유사한 것을 선택합니다.
-
-- **Load LoRA** 노드 추가
-- Weight 값 설정 (0.5~1.0 사이 권장)
-
----section---
-
-## 3단계: 생성 결과 확인 및 디벨롭하기
-
-### 시드 고정으로 비교하기
-
-- 참고 이미지의 **Seed 값**을 동일하게 설정하여 결과 비교
-- 만족스러운 결과가 나오면 Seed 값 기록
-
-### 워크플로우 발전시키기
-
-**포즈 제어 추가**
-- OpenPose ControlNet 노드 추가
-- 원하는 포즈로 변경 실험
-
-**LoRA 조합**
-- 여러 LoRA를 동시에 적용하여 스타일 혼합
-- 각 LoRA의 Weight를 조절하며 비율 실험
-
-**Image-to-Image 적용**
-- 생성된 이미지를 입력으로 사용
-- Denoise 강도를 낮추면 원본을 유지하며 세부 수정 가능
-
-**형태 유지가 필요할 때**
-- **Depth ControlNet**: 깊이 정보로 구조 유지
-- **Canny ControlNet**: 윤곽선 정보로 형태 유지
-
----section---
-
-## 4단계: 자유 실습
-
-지금까지 배운 내용을 바탕으로 자유롭게 이미지를 만들어보세요!
-
-**실습 아이디어**
-- Civitai에서 마음에 드는 이미지를 골라 ComfyCloud 내장 모델로 재현해보기
-- PNG 드래그앤드롭으로 외부 워크플로우 불러와서 실행해보기
-- LoRA 조합을 바꿔가며 나만의 스타일 찾기
-`,
-  "session4/step4-workflow-design-practice.md": `# 워크플로우 설계 실습
-
-## 개요
-
-Step3에서 함께 따라하며 완성한 전광판 광고 영상 워크플로우를 토대로, 이번에는 **자신만의 주제와 아이디어로 직접 워크플로우를 계획하고 설계**해보는 시간입니다.
-
-어떤 이미지/영상을 만들고 싶은지 스스로 기획하고, 필요한 노드 흐름을 설계한 뒤 ComfyCloud에서 직접 구현해 보세요.
-
----section---
-
-## 설계 가이드
-
-### 1단계: 아이디어 기획
-- 어떤 결과물을 만들 것인지 정하기 (이미지? 영상? 합성? 편집?)
-- 레퍼런스 이미지/영상 수집하기
-- 필요한 입력값(텍스트, 이미지)과 최종 출력물 정의하기
-
-### 2단계: 워크플로우 흐름 설계
-- 어떤 모델/노드를 사용할지 결정하기
-- Step3의 5단계 흐름을 참고하여 자신의 흐름도 직접 그려보기
-- 각 단계의 입출력 연결 관계 정리하기
-
-### 3단계: ComfyCloud에서 구현
-- 설계한 흐름을 ComfyUI에서 노드로 구성하기
-- 프롬프트 작성 및 파라미터 조정하기
-- 결과 확인 후 반복 개선하기
-
----section---
-
-## 예시 워크플로우
-
-Step3의 전광판 광고 영상과 다른 방향의 비디오 워크플로우 예시입니다.
-참고하여 자신만의 워크플로우 설계에 활용해 보세요.
-
-[[download: downloads/session4/step4/angle_video.json | 예시 워크플로우 다운로드]]
-`,
-  "session4/step5-workflow-practice.md": `# 고급 워크플로우 실습
-
-## 개요
-
-실전에서 활용할 수 있는 다양한 분야별 워크플로우를 실습합니다.
-아래 템플릿들은 ComfyCloud 환경에 맞게 구성되어 있습니다.
-
----section---
-
-## 1. 아트웍: 라인/음영 조절
-
-캐릭터 일러스트에서 라인의 굵기와 음영을 슬라이더로 자유롭게 조절하는 워크플로우입니다.
-
-[[download: downloads/session4/line_depth_slider.json | 라인/음영 조절 워크플로우 다운로드]]
-
-[[image: session4/line weight.webp | width:30% | row | 라인 굵기 예시]]
-[[image: session4/shading.png | width:30% | row | 음영 예시]]
-
----section---
-
-## 2. 시각편집: Image to Illustration
-
-실사 이미지를 일러스트 스타일로 변환하는 워크플로우입니다.
-
-[[download: downloads/session4/image2illust.json | Image to Illustration 워크플로우 다운로드]]
-[[download: downloads/session4/dress.jpg | 샘플 이미지 다운로드]]
-
-[[image: session4/dress.jpg | width:30% | 샘플 이미지]]
-
----section---
-
-## 3. 3D/건축: 렌더링 효과
-
-ZBrush, SketchUp 등의 3D 모델링 화면을 실사 렌더링으로 변환하는 워크플로우입니다.
-
-MIX LAB 커스텀 노드를 활용하면 화면 공유 기능으로 더욱 편리하게 작업할 수 있습니다.
-
-[[download: downloads/session4/mix_lab.json | MIX LAB 템플릿 다운로드]]
-[[download: downloads/session4/zbrush.jpg | ZBrush 샘플 이미지 다운로드]]
-
-[[image: session4/zbrush.jpg | width:50% | ZBrush 모델링 화면]]
-
-**활용 분야**
-- 3D 그래픽: ZBrush, Blender 모델링 렌더링
-- 건축: SketchUp 외관/실내 시각화
-- 인테리어: 공간 디자인 프리뷰
-
----section---
-
-## 4. 스톡 이미지 만들기
-
-다양한 바리에이션의 스톡 이미지를 한 번에 생성하는 워크플로우입니다.
-
-[[download: downloads/session4/aloe_stock.json | 스톡 이미지 템플릿 다운로드]]
-
-**활용 팁**
-- X축에 색상, 각도, 스타일 등 변수 설정
-- Y축에 Seed를 설정하여 같은 조건의 다양한 결과 생성
-- 마음에 드는 결과를 선택하여 상업적으로 활용
-
----section---
-
-## 5. 줌인 영상 만들기
-
-Outpaint 기법과 First-Last 워크플로우를 결합하여 줌인 효과 영상을 제작합니다.
-
-[[download: downloads/session4/outpaint/outpaint.json | Outpaint 워크플로우 다운로드]]
-[[download: downloads/session4/coffee.png | 커피 샘플 이미지 다운로드]]
-
-[[image: session4/coffee.png | width:30% | row | 1단계: 원본]]
-[[image: session4/outpaint_raw.png | width:30% | row | 2단계: Outpaint 배경 확장]]
-[[image: session4/outpaint_first.png | width:30% | row | 3단계: Hires Fix 품질 향상]]
-
-[[video: session4/step5/coffee.mp4 | width:50% | 최종 결과: 줌인 영상]]
-
-**활용 팁**
-- Outpaint를 여러 단계 반복하면 더 긴 줌인 효과를 만들 수 있습니다
-- 프롬프트를 일관되게 유지하면 배경 스타일이 통일됩니다
-`,
-  "session4/step6-qwen-edit-compare.md": `# Qwen 이미지 편집 4가지 비교
-
-## 실습 목표
-
-Qwen-Image-Edit 2511 한 모델로 네 가지 작업을 나란히 돌려 차이를 비교합니다.
-
-- **T2I**: 글만으로 이미지 생성
-- **I2I**: 그림판으로 그린 사과 그림을 사진처럼 바꾸기 (denoise 0.92, 12스텝)
-- **Inpaint**: 마스크로 칠한 사과 하나만 초록 사과로 바꾸기
-- **Edit**: "사과 옆에 칼을 놓아 줘" 같은 명령문으로 고치기
-
-[[image: session4/qwen_edit_result.jpg | width:100% | 실행 결과 예시 - 입력 / T2I / I2I / Inpaint / Edit]]
-
----section---
-
-## 다운로드
-
-템플릿과 예제 그림 2장을 받아, 그림은 Load Image 노드에 올립니다. 마스크 그림은 오른쪽 사과가 이미 칠해져 있어 바로 실행할 수 있고, 마스크 에디터에서 직접 다시 칠해도 됩니다.
-
-[[download: downloads/session4/step6/qwen_edit_4tasks.json | Qwen 이미지 편집 4가지 비교 템플릿 - T2I, I2I, Inpaint, Edit]]
-
-[[download: downloads/session4/step6/apples_paint.png | 예제 그림 - 그림판 사과 (I2I, Edit 입력)]]
-
-[[download: downloads/session4/step6/apples_paint_mask.png | 예제 그림 - 오른쪽 사과 마스크 (Inpaint 입력)]]
 `,
   "test/section-test.md": `# 섹션 구분자 테스트
 

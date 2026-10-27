@@ -16,192 +16,130 @@ export interface Session {
 export const TOC_DATA: Session[] = [
   {
     "id": "session1",
-    "title": "1회차 - ComfyUI 입문",
+    "title": "1회차 ComfyUI란?",
     "steps": [
       {
         "id": "step1",
-        "title": "강의 개요",
-        "file": "session1/step1-course-overview.md"
+        "title": "Comfy 가입",
+        "file": "session1/step1-signup.md"
       },
       {
         "id": "step2",
-        "title": "AI 이미지 생성원리와 Stable Diffusion 개론",
-        "file": "session1/step2-ai-generation-principles.md"
+        "title": "기본 인터페이스 설명",
+        "file": "session1/step2-interface.md"
       },
       {
         "id": "step3",
-        "title": "ComfyCloud 시작하기",
-        "file": "session1/step3-comfycloud.md"
+        "title": "이미지 생성하기 - Z-Image Turbo 템플릿",
+        "file": "session1/step3-z-image-turbo.md"
       },
       {
         "id": "step4",
-        "title": "ComfyUI 인터페이스 이해하기",
-        "file": "session1/step4-interface.md"
+        "title": "모델 바꾸기 - SDXL base와 Illustrious 비교",
+        "file": "session1/step4-sdxl-illustrious.md"
       },
       {
         "id": "step5",
-        "title": "첫 이미지 생성 (기본 템플릿)",
-        "file": "session1/step5-first-generation.md"
-      },
-      {
-        "id": "step6",
-        "title": "체크포인트 모델 탐험",
-        "file": "session1/step6-checkpoints.md"
-      },
-      {
-        "id": "step7",
-        "title": "CLIP 인코딩 모델",
-        "file": "session1/step8-clip-encoder.md"
-      },
-      {
-        "id": "step8",
-        "title": "VAE와 최종 출력 최적화",
-        "file": "session2/step7-vae-optimization.md"
-      },
-      {
-        "id": "step9",
-        "title": "Image to Image 입문",
-        "file": "session1/step9-image-to-image.md"
-      },
-      {
-        "id": "step10",
-        "title": "KSampler 노드 완전 정복",
-        "file": "session1/step10-ksampler.md"
+        "title": "영상 생성하기 - LTX 2.5 T2V",
+        "file": "session1/step5-ltx25-t2v.md"
       }
     ]
   },
   {
     "id": "session2",
-    "title": "2회차 - ComfyUI 고급 기법",
+    "title": "2회차 생성 방식 이해하기",
     "steps": [
       {
         "id": "step1",
-        "title": "LoRA 모델 탐험",
-        "file": "session1/step7-lora-models.md"
+        "title": "이미지 생성 방식 4가지 - T2I, I2I, Inpainting, Image Edit",
+        "file": "session2/step1-image-modes.md"
       },
       {
         "id": "step2",
-        "title": "ControlNet이란?",
-        "file": "session2/step1-controlnet-intro.md"
+        "title": "영상 생성 방식 4가지 - T2V, I2V, FLF2V, R2V",
+        "file": "session2/step2-video-modes.md"
       },
       {
         "id": "step3",
-        "title": "OpenPose ControlNet 마스터",
-        "file": "session2/step2-openpose.md"
-      },
-      {
-        "id": "step4",
-        "title": "Canny와 Depth ControlNet",
-        "file": "session2/step3-canny-depth.md"
-      },
-      {
-        "id": "step5",
-        "title": "더 많은 모델 - Qwen",
-        "file": "session2/step6-more-models-qwen.md"
-      },
-      {
-        "id": "step6",
-        "title": "더 많은 모델 - Z-Image",
-        "file": "session2/step7-more-models-zimage.md"
+        "title": "로컬 모델과 유료 API 노드",
+        "file": "session2/step3-local-api.md"
       }
     ]
   },
   {
     "id": "session3",
-    "title": "3회차 - Codex와 Comfy CLI · 10월 27일",
+    "title": "3회차 Codex와 Comfy CLI",
     "steps": [
       {
         "id": "step1",
-        "title": "지난 수업에서 만든 이미지와 영상",
-        "file": "session3/step1-recap.md"
+        "title": "codex(gpt 데스크톱) 설치하기",
+        "file": "session3/step1-install.md"
       },
       {
         "id": "step2",
-        "title": "입력 재료에 따라 달라지는 생성 방식",
-        "file": "session3/step2-modes.md"
+        "title": "gpt 로그인",
+        "file": "session3/step2-login.md"
       },
       {
         "id": "step3",
         "title": "챗gpt와 codex의 차이점 설명 (로컬 컴퓨터에서 작업한다)",
-        "file": "session3/step3-codex.md"
+        "file": "session3/step3-chatgpt-codex.md"
       },
       {
         "id": "step4",
-        "title": "codex(gpt 데스크톱) 설치하기",
-        "file": "session3/step4-install.md"
+        "title": "codex 모델을 sol 6.1로 설정해 두고 모든 권한으로 변경",
+        "file": "session3/step4-settings.md"
       },
       {
         "id": "step5",
-        "title": "gpt 로그인",
-        "file": "session3/step5-login.md"
+        "title": "작업폴더 생성하고 그 폴더로 설정",
+        "file": "session3/step5-folder.md"
       },
       {
         "id": "step6",
-        "title": "codex 모델을 sol 6.1로 설정해 두고 모든 권한으로 변경",
-        "file": "session3/step6-settings.md"
+        "title": "Comfy CLI 설치와 로그인 요청",
+        "file": "session3/step6-comfy-cli.md"
       },
       {
         "id": "step7",
-        "title": "작업폴더 생성하고 그 폴더로 설정",
-        "file": "session3/step7-folder.md"
+        "title": "로그인 링크 열기와 인증 완료 확인",
+        "file": "session3/step7-comfy-login.md"
       },
       {
         "id": "step8",
-        "title": "Comfy CLI 설치와 로그인 요청",
-        "file": "session3/step8-comfy-cli.md"
+        "title": "Comfy 공식 CLI를 스킬로 저장",
+        "file": "session3/step8-create-skill.md"
       },
       {
         "id": "step9",
-        "title": "로그인 링크 열기와 인증 완료 확인",
-        "file": "session3/step9-comfy-login.md"
-      },
-      {
-        "id": "step10",
-        "title": "Comfy 공식 CLI를 스킬로 저장",
-        "file": "session3/step10-create-skill.md"
-      },
-      {
-        "id": "step11",
         "title": "저장한 스킬을 다음 대화에서 사용",
-        "file": "session3/step11-skill-folder.md"
+        "file": "session3/step9-skill-folder.md"
       }
     ]
   },
   {
     "id": "session4",
-    "title": "4회차 - 실전 프로젝트와 최적화",
-    "steps": [
-      {
-        "id": "step1",
-        "title": "Get/Set 노드와 워크플로우 정리 기법",
-        "file": "session4/step1-get-set-node.md"
-      },
-      {
-        "id": "step2",
-        "title": "유료노드 사용해보기",
-        "file": "session4/step2-nanobanana.md"
-      },
-      {
-        "id": "step6",
-        "title": "Qwen 이미지 편집 4가지 비교",
-        "file": "session4/step6-qwen-edit-compare.md"
-      },
-      {
-        "id": "step3",
-        "title": "워크플로우 설계 실습 (따라하기)",
-        "file": "session4/step3-workflow-design.md"
-      },
-      {
-        "id": "step4",
-        "title": "워크플로우 설계 실습",
-        "file": "session4/step4-workflow-design-practice.md"
-      },
-      {
-        "id": "step5",
-        "title": "로컬 ComfyUI 설치하기",
-        "file": "session4/step3-local-comfyui-setup.md",
-        "hidden": true
-      }
-    ]
+    "title": "4회차",
+    "steps": []
+  },
+  {
+    "id": "session5",
+    "title": "5회차",
+    "steps": []
+  },
+  {
+    "id": "session6",
+    "title": "6회차",
+    "steps": []
+  },
+  {
+    "id": "session7",
+    "title": "7회차",
+    "steps": []
+  },
+  {
+    "id": "session8",
+    "title": "8회차",
+    "steps": []
   }
 ]

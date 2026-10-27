@@ -3,22 +3,23 @@
 ## 레포 목적
 AI 아트웍 강의자료 — 강의 사이트 본체(`lectures/` 원본, `frontend/` 생성기, 배포본 `index.html`).
 
-> **에이전트-아트웍 리뉴얼**(Comfy MCP + Claude Code 기반 8회차 개편)의 기획·리서치·검증
-> 작업은 2026-08-22부터 별도 private 레포 `hw5511/agent-artwork` 로 분리됐다.
-> 리뉴얼 관련 작업은 이 레포가 아니라 그쪽에서 진행할 것.
+현재 과정은 **Codex + Comfy CLI 기반 8회차 과정**이다. 1~3회차 강의가 공개되어 있고,
+4~8회차는 `준비 중` 자리만 표시한다.
 
 ## 레포 구조
 
 | 경로 | 역할 |
 |---|---|
-| `lectures/` | **강의 원본 md** (session1~4) + `toc.json` 목차 + `images/` 삽화 |
+| `lectures/` | **강의 원본 md** (session1~3) + `toc.json` 목차 + `images/` 삽화 |
+| `lectures/_archive/` | 사이트에서 숨긴 이전 강의 md. 생성기와 목차에서 제외하며 참고용으로만 보관 |
 | `frontend/` | React 18 + MUI + Vite 강의 뷰어. `scripts/` 에 생성기 2종 |
 | `downloads/` | 수강생 배포용 ComfyUI 워크플로우 JSON·예제 이미지 (회차/스텝별) |
 | `index.html` | **배포본** — vite-plugin-singlefile 단일 번들 (직접 편집 금지) |
 | `ai-artwork-report/` | 리치킹 시네마틱 재현 실험 슬라이드 덱 (독립 정적 페이지) |
 
-강의 구성: 1회차 ComfyUI 입문(10) / 2회차 고급 기법(6) / 3회차 이미지 편집·영상 생성(4) /
-4회차 실전 프로젝트·최적화(5). 각 회차의 스텝 순서와 제목은 `lectures/toc.json` 이 정본이다.
+강의 구성: 1회차 ComfyUI란?(5) / 2회차 생성 방식 이해하기(3) /
+3회차 Codex와 Comfy CLI(9) / 4~8회차 준비 중. 각 회차의 스텝 순서와 제목은
+`lectures/toc.json` 이 정본이다.
 
 ## 콘텐츠 파이프라인 (정본 = source of truth)
 

@@ -36,6 +36,7 @@ export const ImageWithLoader: React.FC<ImageWithLoaderProps> = ({ src, alt, titl
   return (
     <Box
       ref={imgRef}
+      className={className}
       sx={{
         position: 'relative',
         // grid-image: 고정 프레임 (300px)
@@ -130,7 +131,14 @@ export const ImageWithLoader: React.FC<ImageWithLoaderProps> = ({ src, alt, titl
           </Typography>
           <Typography
             variant="caption"
-            sx={{ mb: 2, textAlign: 'center', fontFamily: 'monospace', wordBreak: 'break-all', fontWeight: 600 }}
+            sx={{
+              mb: 2,
+              textAlign: 'center',
+              fontFamily: 'monospace',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              fontWeight: 600,
+            }}
           >
             {src}
           </Typography>

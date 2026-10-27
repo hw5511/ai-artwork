@@ -14,6 +14,8 @@ export const createMarkdownComponents = ({
   DownloadButton,
   VideoPlayer
 }: MarkdownComponentsProps) => ({
+  // react-markdown의 기본 pre 래퍼를 제거해 아래 커스텀 코드 박스와 중첩되지 않게 한다.
+  pre: ({ children }: any) => <>{children}</>,
   // 코드블록 커스텀 렌더링
   code({ inline, className, children, ...props }: any) {
     // children이 undefined나 null일 수 있으므로 안전하게 처리
@@ -30,9 +32,22 @@ export const createMarkdownComponents = ({
             sx={{
               bgcolor: 'rgba(0,0,0,0.5)',
               border: '1px solid rgba(255,255,255,0.1)',
-              p: 2,
-              overflow: 'auto',
+              py: 2,
+              pl: 2,
+              pr: 7,
+              m: 0,
+              maxWidth: '100%',
+              boxSizing: 'border-box',
+              whiteSpace: 'pre-wrap',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              overflowX: 'hidden',
               borderRadius: 0,
+              '& code': {
+                whiteSpace: 'inherit',
+                wordBreak: 'inherit',
+                overflowWrap: 'inherit'
+              },
               '&:hover': {
                 borderColor: 'rgba(255,255,255,0.2)'
               }
@@ -41,6 +56,7 @@ export const createMarkdownComponents = ({
             <IconButton
               size="small"
               onClick={() => onCopy(codeString)}
+              aria-label="코드 복사"
               sx={{
                 position: 'absolute',
                 top: 8,

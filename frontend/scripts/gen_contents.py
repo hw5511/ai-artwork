@@ -8,6 +8,8 @@ output_file = os.path.join(_repo_root, 'frontend', 'src', 'data', 'lectureConten
 
 lecture_contents = {}
 for root, dirs, files in os.walk(source_dir):
+    # 보관된 이전 강의는 배포 번들에 포함하지 않는다.
+    dirs[:] = [directory for directory in dirs if directory != '_archive']
     dirs.sort()  # 결정적 출력 순서
     for file in sorted(files):
         if file.endswith('.md') and 'backup' not in file:

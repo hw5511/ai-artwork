@@ -8,6 +8,6 @@
 <div class="s3-captions"><div><h2>내 ChatGPT 계정</h2><p>앱 실행 후 로그인 · 평소 쓰던 계정 선택</p></div><div><h2>로그인 뒤 Codex 선택</h2><p>ChatGPT 드롭다운의 Codex · New chat</p></div></div>
 <p class="s3-note">GPT-6.1 Sol · Plus·Pro·Business·Enterprise·Edu 출시 대상 · Free·Go 제외 · 계정별 제공 여부 확인</p>
 
-<div class="s3-footer"><span>05 / 11</span><span><a href="https://learn.chatgpt.com/docs/quickstart?setup=app" target="_blank" rel="noreferrer">로그인과 제품 선택</a> · <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noreferrer">모델 제공 범위</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step4">이전</a><a href="#/lectures/session3/step6">다음 · codex 모델을 sol 6.1로 설정해 두고 모든 권한으로 변경</a></nav>
+<div class="s3-footer"><span>02 / 09</span><span><a href="https://learn.chatgpt.com/docs/quickstart?setup=app" target="_blank" rel="noreferrer">로그인과 제품 선택</a> · <a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noreferrer">모델 제공 범위</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step1">이전</a><a href="#/lectures/session3/step3">다음 · 챗gpt와 codex의 차이점 설명</a></nav>
 </article>

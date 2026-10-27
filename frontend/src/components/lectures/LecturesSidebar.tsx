@@ -1,17 +1,20 @@
 import React from 'react'
 import {
   Box,
+  Chip,
+  Drawer,
+  IconButton,
   List,
   ListItemButton,
   ListItemText,
-  Typography,
-  IconButton,
   Tooltip,
+  Typography,
+  useMediaQuery,
   useTheme,
-  useMediaQuery
 } from '@mui/material'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+import CloseIcon from '@mui/icons-material/Close'
 
 interface Step {
   id: string
@@ -27,151 +30,171 @@ interface Session {
 }
 
 interface LecturesSidebarProps {
-  session: Session | undefined
+  sessions: Session[]
+  currentSessionId?: string
   selectedStepId: string
-  selectedFile: string
   sidebarCollapsed: boolean
+  mobileOpen: boolean
   onToggleSidebar: () => void
-  onStepClick: (stepId: string, file: string) => void
+  onMobileClose: () => void
+  onStepClick: (sessionId: string, stepId: string, file: string) => void
 }
 
-export const LecturesSidebar: React.FC<LecturesSidebarProps> = ({
-  session,
+const SidebarContents = ({
+  sessions,
+  currentSessionId,
   selectedStepId,
-  selectedFile: _selectedFile,
-  sidebarCollapsed,
-  onToggleSidebar,
-  onStepClick
-}) => {
+  onStepClick,
+  onMobileClose,
+  isMobile,
+}: Pick<LecturesSidebarProps, 'sessions' | 'currentSessionId' | 'selectedStepId' | 'onStepClick' | 'onMobileClose'> & { isMobile: boolean }) => (
+  <Box sx={{ py: 1.5, wordBreak: 'keep-all', overflowWrap: 'break-word' }}>
+    {isMobile && (
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: 2, pb: 1 }}>
+        <Typography variant="subtitle1" fontWeight={600}>강의 목차</Typography>
+        <IconButton color="inherit" aria-label="강의 목차 닫기" onClick={onMobileClose}>
+          <CloseIcon />
+        </IconButton>
+      </Box>
+    )}
+    <List disablePadding>
+      {sessions.map((session) => {
+        const availableSteps = session.steps.filter(step => !step.hidden)
+        const pending = availableSteps.length === 0
+        return (
+          <Box key={session.id} sx={{ mb: 1 }}>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: 1,
+                px: 2.5,
+                py: 1,
+                color: currentSessionId === session.id ? '#fff' : 'rgba(255,255,255,0.78)',
+                wordBreak: 'keep-all',
+                overflowWrap: 'break-word',
+              }}
+            >
+              <Typography
+                variant="body1"
+                fontWeight={currentSessionId === session.id ? 700 : 600}
+                sx={{ minWidth: 0, wordBreak: 'keep-all', overflowWrap: 'break-word' }}
+              >
+                {session.title}
+              </Typography>
+              {pending && (
+                <Chip
+                  label="준비 중"
+                  size="small"
+                  sx={{
+                    height: 22,
+                    flexShrink: 0,
+                    color: 'rgba(255,255,255,0.55)',
+                    bgcolor: 'rgba(255,255,255,0.06)',
+                    fontSize: '0.72rem',
+                  }}
+                />
+              )}
+            </Box>
+            {availableSteps.length > 0 && (
+              <List disablePadding>
+                {availableSteps.map((step, index) => {
+                  const selected = currentSessionId === session.id && selectedStepId === step.id
+                  return (
+                    <ListItemButton
+                      key={`${session.id}-${step.id}`}
+                      selected={selected}
+                      onClick={() => onStepClick(session.id, step.id, step.file)}
+                      sx={{
+                        mx: 1.5,
+                        mb: 0.25,
+                        pl: 3,
+                        pr: 2,
+                        py: 0.85,
+                        borderRadius: 1,
+                        color: 'rgba(255,255,255,0.66)',
+                        alignItems: 'flex-start',
+                        '&.Mui-selected': {
+                          bgcolor: 'rgba(255,255,255,0.14)',
+                          color: '#fff',
+                        },
+                        '&.Mui-selected:hover': { bgcolor: 'rgba(255,255,255,0.17)' },
+                        '&:hover': { bgcolor: 'rgba(255,255,255,0.07)' },
+                      }}
+                    >
+                      <ListItemText
+                        primary={`${index + 1}. ${step.title}`}
+                        primaryTypographyProps={{
+                          variant: 'body2',
+                          lineHeight: 1.45,
+                          sx: { wordBreak: 'keep-all', overflowWrap: 'break-word' },
+                        }}
+                      />
+                    </ListItemButton>
+                  )
+                })}
+              </List>
+            )}
+          </Box>
+        )
+      })}
+    </List>
+  </Box>
+)
+
+export const LecturesSidebar: React.FC<LecturesSidebarProps> = (props) => {
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
-  const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
-  return (
-    <>
-      {/* 접기/펼치기 버튼 - 데스크톱에서만 표시 */}
-      {!isMobile && (
-        <Box
-          sx={{
-            position: 'relative',
-            display: 'flex',
-            justifyContent: 'center',
-            py: 1,
-            mb: sidebarCollapsed ? 0 : 1,
-            width: sidebarCollapsed ? 60 : 'auto',
-            transition: 'width 0.3s ease',
-          }}
-        >
-          <Tooltip title={sidebarCollapsed ? "펼치기" : "접기"} placement={sidebarCollapsed ? "right" : "bottom"}>
-            <IconButton
-              onClick={onToggleSidebar}
-              sx={{
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                color: 'rgba(255, 255, 255, 0.9)',
-                width: 36,
-                height: 36,
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(255,255,255,0.1)',
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                  color: '#ffffff',
-                  transform: 'scale(1.1)',
-                  boxShadow: '0 0 20px rgba(255, 255, 255, 0.3)',
-                },
-                transition: 'all 0.3s ease',
-              }}
-            >
-              {sidebarCollapsed ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-            </IconButton>
-          </Tooltip>
-        </Box>
-      )}
-
-      {/* 사이드바 - 반응형 */}
-      <Box
-        sx={{
-          width: isMobile ? '100%' : (sidebarCollapsed ? 60 : (isTablet ? 280 : 300)),
-          display: 'flex',
-          flexDirection: 'column',
-          overflow: 'hidden',
-          maxHeight: isMobile ? '50vh' : 'none',
-          borderBottom: isMobile ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
-          borderRight: !isMobile ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
-          position: 'relative',
-          transition: 'width 0.3s ease',
+  if (isMobile) {
+    return (
+      <Drawer
+        anchor="left"
+        open={props.mobileOpen}
+        onClose={props.onMobileClose}
+        ModalProps={{ keepMounted: true }}
+        PaperProps={{
+          sx: {
+            width: 'min(354px, calc(100vw - 36px))',
+            bgcolor: '#0a0a0a',
+            color: '#fff',
+            overflowX: 'hidden',
+            wordBreak: 'keep-all',
+            overflowWrap: 'break-word',
+          },
         }}
       >
-        <Box
-          sx={{
-            flex: 1,
-            overflow: sidebarCollapsed ? 'hidden' : 'auto',
-            p: sidebarCollapsed ? 0 : (isMobile ? 1 : 2),
-            '&::-webkit-scrollbar': { width: 4 },
-            '&::-webkit-scrollbar-track': { background: 'transparent' },
-            '&::-webkit-scrollbar-thumb': {
-              background: 'rgba(255, 255, 255, 0.2)',
-              '&:hover': { background: 'rgba(255, 255, 255, 0.3)' }
-            }
-          }}
-        >
-        {!sidebarCollapsed && session && (
-          <Box>
-            <Typography
-              variant={isMobile ? 'body1' : 'h6'}
-              sx={{
-                color: 'rgba(255,255,255,0.95)',
-                fontWeight: 600,
-                px: isMobile ? 2 : 3,
-                py: isMobile ? 1.5 : 2,
-                borderBottom: '1px solid rgba(255,255,255,0.1)',
-                mb: 1,
-                backgroundColor: 'rgba(255,255,255,0.03)',
-              }}
-            >
-              {session.title}
-            </Typography>
-            <List dense={isMobile}>
-              {session.steps.filter(step => !step.hidden).map((step) => (
-                <ListItemButton
-                  key={step.id}
-                  selected={selectedStepId === step.id}
-                  onClick={() => onStepClick(step.id, step.file)}
-                  sx={{
-                    pl: isMobile ? 3 : 4,
-                    pr: isMobile ? 2 : 3,
-                    py: isMobile ? 1 : 1.25,
-                    color: 'rgba(255,255,255,0.7)',
-                    borderRadius: '4px',
-                    mx: isMobile ? 1 : 1.5,
-                    mb: 0.5,
-                    transition: 'all 0.2s ease',
-                    '&.Mui-selected': {
-                      bgcolor: 'rgba(255,255,255,0.12)',
-                      color: '#ffffff',
-                      borderLeft: '3px solid #ffffff',
-                      '&:hover': {
-                        bgcolor: 'rgba(255,255,255,0.15)',
-                      }
-                    },
-                    '&:hover': {
-                      bgcolor: 'rgba(255,255,255,0.06)',
-                      transform: 'translateX(4px)',
-                    }
-                  }}
-                >
-                  <ListItemText
-                    primary={step.title}
-                    primaryTypographyProps={{
-                      variant: isMobile ? 'body2' : 'body1'
-                    }}
-                  />
-                </ListItemButton>
-              ))}
-            </List>
-          </Box>
-        )}
-        </Box>
+        <SidebarContents {...props} isMobile />
+      </Drawer>
+    )
+  }
+
+  return (
+    <Box
+      component="aside"
+      sx={{
+        width: props.sidebarCollapsed ? 64 : 330,
+        flexShrink: 0,
+        borderRight: '1px solid rgba(255,255,255,0.1)',
+        transition: 'width 0.2s ease',
+        overflow: 'hidden',
+        wordBreak: 'keep-all',
+        overflowWrap: 'break-word',
+      }}
+    >
+      <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
+        <Tooltip title={props.sidebarCollapsed ? '목차 펼치기' : '목차 접기'}>
+          <IconButton color="inherit" onClick={props.onToggleSidebar} size="small">
+            {props.sidebarCollapsed ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+          </IconButton>
+        </Tooltip>
       </Box>
-    </>
+      {!props.sidebarCollapsed && (
+        <Box sx={{ height: 'calc(100vh - 112px)', overflowY: 'auto' }}>
+          <SidebarContents {...props} isMobile={false} />
+        </Box>
+      )}
+    </Box>
   )
 }

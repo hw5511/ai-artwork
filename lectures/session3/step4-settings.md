@@ -9,6 +9,6 @@
 <div class="s3-captions"><div><h2>GPT-6.1 Sol</h2><p>모델 선택 메뉴 · 필요하면 Advanced<br/>현재 대화의 선택값 확인</p></div><div><h2>Full access</h2><p>내 PC 파일 수정·명령 실행·네트워크 허용<br/>작업 폴더 밖에도 접근 가능한 권한</p></div></div>
 <p class="s3-note">메뉴에 Full access가 없을 때 · 공식 Permissions 문서와 앱 Settings 확인 · 조직 제한 시 강사에게 알리기</p>
 
-<div class="s3-footer"><span>06 / 11</span><span><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noreferrer">모델 선택</a> · <a href="https://learn.chatgpt.com/docs/permission-modes" target="_blank" rel="noreferrer">권한 메뉴</a></span></div>
-<nav class="s3-pagination"><a href="#/lectures/session3/step5">이전</a><a href="#/lectures/session3/step7">다음 · 작업폴더 생성하고 그 폴더로 설정</a></nav>
+<div class="s3-footer"><span>04 / 09</span><span><a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noreferrer">모델 선택</a> · <a href="https://learn.chatgpt.com/docs/permission-modes" target="_blank" rel="noreferrer">권한 메뉴</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session3/step3">이전</a><a href="#/lectures/session3/step5">다음 · 작업폴더 생성하고 그 폴더로 설정</a></nav>
 </article>

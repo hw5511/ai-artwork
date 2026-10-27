@@ -46,10 +46,10 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "a realistic photo of exactly two red apples side by side on a round white table, ivory wall behind, soft daylight, DSLR photo"
+        "A man in his 30s walking a golden retriever on a leash along a tree-lined path in a city park, sunny afternoon, natural light, photo"
       ],
       "widgets_values_named": {
-        "value": "a photo of two apples on a table"
+        "value": "A man in his 30s walking a golden retriever on a leash along a tree-lined path in a city park, sunny afternoon, natural light, photo"
       }
     },
     {
@@ -320,10 +320,10 @@
       "title": "How to use",
       "properties": {},
       "widgets_values": [
-        "4개 작업(T2I / I2I / Inpaint / Edit)을 같은 조건으로 비교하는 템플릿입니다. Run 한 번이면 맨 아래 'Comparison sheet'에 한 장으로 모입니다.\n- 공유: 프롬프트, 시드, 가로/세로, 입력 그림, denoise. 각 그룹은 Ctrl+B(바이패스)로 끌 수 있습니다.\n- Lightning 4-step LoRA(CFG 1)라 빠릅니다. T2I/Inpaint/Edit 는 steps 4, I2I 만 denoise 를 촘촘히 조절하려고 steps 12 입니다. CFG 1 에서는 Negative prompt 가 무시됩니다.\n- 입력 그림: apples_paint.png(공유 입력)와 apples_paint_mask.png(Inpaint 전용)를 각 Load Image 노드의 upload 로 올려야 합니다.\n- 모델은 1개: 4개 작업 모두 Qwen-Image-Edit 2511 (fp8mixed) + Lightning 4-step LoRA 하나로 돕니다. 로컬 PC 에 모델을 두 개 받을 필요가 없습니다.\n- Comfy Cloud 는 GPU 사용 시간이 크레딧으로 과금됩니다(금액은 문서화된 값이 없어 적지 않습니다)."
+        "4개 작업(T2I / I2I / Inpaint / Edit)을 같은 조건으로 비교하는 템플릿입니다. Run 한 번이면 맨 아래 'Comparison sheet'에 한 장으로 모입니다.\n- 공유: 프롬프트, 시드, 가로/세로, 입력 그림, denoise. 각 그룹은 Ctrl+B(바이패스)로 끌 수 있습니다.\n- Lightning 4-step LoRA(CFG 1)라 빠릅니다. T2I/Inpaint/Edit 는 steps 4, I2I 만 denoise 를 촘촘히 조절하려고 steps 12 입니다. CFG 1 에서는 Negative prompt 가 무시됩니다.\n- 입력 그림: park_walk.png(공원 산책 원본)와 park_walk_mask.png(남성 재킷 영역 마스크)를 각 Load Image 노드의 upload 로 올려야 합니다.\n- 모델은 1개: 4개 작업 모두 Qwen-Image-Edit 2511 (fp8mixed) + Lightning 4-step LoRA 하나로 돕니다. 로컬 PC 에 모델을 두 개 받을 필요가 없습니다.\n- Comfy Cloud 는 GPU 사용 시간이 크레딧으로 과금됩니다(금액은 문서화된 값이 없어 적지 않습니다)."
       ],
       "widgets_values_named": {
-        "text": "4개 작업(T2I / I2I / Inpaint / Edit)을 같은 조건으로 비교하는 템플릿입니다. Run 한 번이면 맨 아래 'Comparison sheet'에 한 장으로 모입니다.\n- 공유: 프롬프트, 시드, 가로/세로, 입력 그림, denoise. 각 그룹은 Ctrl+B(바이패스)로 끌 수 있습니다.\n- 모든 모델에 Lightning 4-step LoRA(steps 4, CFG 1)라 빠릅니다. CFG 1 에서는 Negative prompt 가 무시됩니다.\n- 입력 그림: apples_paint.png(공유 입력)와 apples_paint_mask.png(Inpaint 전용)를 각 Load Image 노드의 upload 로 올려야 합니다.\n- 모델은 1개: 4개 작업 모두 Qwen-Image-Edit 2511 (fp8mixed) + Lightning 4-step LoRA 하나로 돕니다. 로컬 PC 에 모델을 두 개 받을 필요가 없습니다.\n- Comfy Cloud 는 GPU 사용 시간이 크레딧으로 과금됩니다(금액은 문서화된 값이 없어 적지 않습니다)."
+        "text": "4개 작업(T2I / I2I / Inpaint / Edit)을 같은 조건으로 비교하는 템플릿입니다. Run 한 번이면 맨 아래 'Comparison sheet'에 한 장으로 모입니다.\n- 공유: 프롬프트, 시드, 가로/세로, 입력 그림, denoise. 각 그룹은 Ctrl+B(바이패스)로 끌 수 있습니다.\n- 모든 모델에 Lightning 4-step LoRA(steps 4, CFG 1)라 빠릅니다. CFG 1 에서는 Negative prompt 가 무시됩니다.\n- 입력 그림: park_walk.png(공원 산책 원본)와 park_walk_mask.png(남성 재킷 영역 마스크)를 각 Load Image 노드의 upload 로 올려야 합니다.\n- 모델은 1개: 4개 작업 모두 Qwen-Image-Edit 2511 (fp8mixed) + Lightning 4-step LoRA 하나로 돕니다. 로컬 PC 에 모델을 두 개 받을 필요가 없습니다.\n- Comfy Cloud 는 GPU 사용 시간이 크레딧으로 과금됩니다(금액은 문서화된 값이 없어 적지 않습니다)."
       },
       "color": "#432",
       "bgcolor": "#653"
@@ -798,11 +798,11 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "apples_paint.png",
+        "park_walk.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "apples_paint.png",
+        "image": "park_walk.png",
         "upload": "image"
       }
     },
@@ -1764,10 +1764,10 @@
       "title": "I2I: denoise",
       "properties": {},
       "widgets_values": [
-        "I2I = 입력 그림을 latent 로 바꾼 뒤, denoise 만큼만 지우고 다시 그립니다. 같은 모델(Qwen-Image-Edit 2511), 같은 프롬프트(공유). 참조 그림은 넣지 않습니다(순수 img2img: 그림은 latent 로만 들어갑니다).\n기본값은 steps 12, denoise 0.92 (공유 Denoise 노드 + 이 그룹 KSampler) 입니다. 로컬 RTX 5070 Ti 에서 같은 시드로 steps 12 에 denoise 0.8/0.85/0.9 와 steps 8 에 0.85/0.9 를 돌려 고른 값입니다. 낮을수록(0.8) 사과 두 개와 식탁 구도는 그대로지만 평면 일러스트 느낌이 남고, 높을수록(0.9 이상) 실제 사진처럼 바뀌며 사과 두 개가 좌우에 놓인 구도는 유지됩니다.\nsteps 가 적으면 denoise 는 거친 단계로만 움직입니다(실제 총 단계가 int(steps/denoise) 로 정해지기 때문입니다). 그래서 4 step 에서는 0.7 과 0.8 이 같은 결과였고, I2I 는 더 촘촘하게 조절하려고 12 step 을 씁니다. 12 step 에서도 0.88/0.9/0.92 는 같은 결과이고, 0.93 이상은 전체 재생성(입력 무시)이 됩니다."
+        "I2I = 입력 그림을 latent 로 바꾼 뒤, denoise 만큼만 지우고 다시 그립니다. 같은 모델(Qwen-Image-Edit 2511), 같은 프롬프트(공유). 참조 그림은 넣지 않습니다(순수 img2img: 그림은 latent 로만 들어갑니다).\n기본값은 steps 12, denoise 0.92 (공유 Denoise 노드 + 이 그룹 KSampler) 입니다. 로컬 RTX 5070 Ti 에서 같은 시드로 steps 12 에 denoise 0.8/0.85/0.9 와 steps 8 에 0.85/0.9 를 돌려 고른 값입니다. 낮을수록(0.8) 남성과 골든리트리버의 위치와 공원 구도는 더 많이 남고, 높을수록(0.9 이상) 입력에서 멀어지며 새로 그리는 범위가 커집니다.\nsteps 가 적으면 denoise 는 거친 단계로만 움직입니다(실제 총 단계가 int(steps/denoise) 로 정해지기 때문입니다). 그래서 4 step 에서는 0.7 과 0.8 이 같은 결과였고, I2I 는 더 촘촘하게 조절하려고 12 step 을 씁니다. 12 step 에서도 0.88/0.9/0.92 는 같은 결과이고, 0.93 이상은 전체 재생성(입력 무시)이 됩니다."
       ],
       "widgets_values_named": {
-        "text": "I2I = 입력 그림을 latent 로 바꾼 뒤, denoise 만큼만 지우고 다시 그립니다. 같은 모델(Qwen-Image-Edit 2511), 같은 프롬프트(공유). 참조 그림은 넣지 않습니다(순수 img2img: 그림은 latent 로만 들어갑니다).\n시작값 denoise 0.75 (공유 Denoise 노드) - 구도(왼쪽/오른쪽 사과, 식탁)는 남기고 색칠한 그림을 사진처럼 바꾸려는 값입니다. 낮추면(0.5~0.6) 그림 느낌이 남고, 높이면(0.9 이상) 구도가 흐트러집니다. Lightning 4-step 이라 0.75 는 실제로 약 3 step 만 돕니다.\nto be tuned in the local test (로컬에서 돌려 보고 값을 확정)."
+        "text": "I2I = 입력 그림을 latent 로 바꾼 뒤, denoise 만큼만 지우고 다시 그립니다. 같은 모델(Qwen-Image-Edit 2511), 같은 프롬프트(공유). 참조 그림은 넣지 않습니다(순수 img2img: 그림은 latent 로만 들어갑니다).\n시작값 denoise 0.75 (공유 Denoise 노드) - 구도(남성, 골든리트리버, 공원 길)는 남기고 색칠한 그림을 사진처럼 바꾸려는 값입니다. 낮추면(0.5~0.6) 그림 느낌이 남고, 높이면(0.9 이상) 구도가 흐트러집니다. Lightning 4-step 이라 0.75 는 실제로 약 3 step 만 돕니다.\nto be tuned in the local test (로컬에서 돌려 보고 값을 확정)."
       },
       "color": "#432",
       "bgcolor": "#653"
@@ -2588,10 +2588,10 @@
       "title": "Inpaint: how",
       "properties": {},
       "widgets_values": [
-        "Inpaint = 마스크로 칠한 부분만 새로 그립니다. Load Image 의 MASK 출력(알파 0 인 곳 = 마스크)을 씁니다.\n기본 이미지 apples_paint_mask.png 는 오른쪽 사과 위치의 알파가 0 이라 칠하지 않아도 바로 돌아갑니다. 직접 칠하려면 Load Image 노드에서 우클릭 > Open in MaskEditor 로 칠하면 됩니다(마스크 에디터 저장값 = 칠한 곳 알파 0).\n이 그룹만 프롬프트가 다릅니다: 공유 프롬프트는 장면 전체('두 개의 사과')라서, 칠한 부분에 무엇을 그릴지 따로 적습니다(아래 Inpaint prompt). 모델은 같은 Qwen-Image-Edit 2511 + latent noise mask(참조 그림 없음), 결과는 마스크 밖을 원본 픽셀로 되붙입니다(ImageCompositeMasked)."
+        "Inpaint = 마스크로 칠한 부분만 새로 그립니다. Load Image 의 MASK 출력(알파 0 인 곳 = 마스크)을 씁니다.\n기본 이미지 park_walk_mask.png 는 남성의 이끼색 재킷 영역의 알파가 0 이라 칠하지 않아도 바로 돌아갑니다. 직접 칠하려면 Load Image 노드에서 우클릭 > Open in MaskEditor 로 칠하면 됩니다(마스크 에디터 저장값 = 칠한 곳 알파 0).\n이 그룹만 프롬프트가 다릅니다: 공유 프롬프트는 공원에서 강아지를 산책하는 남성 장면 전체를 설명하므로, 칠한 부분에 무엇을 그릴지 따로 적습니다(아래 Inpaint prompt). 모델은 같은 Qwen-Image-Edit 2511 + latent noise mask(참조 그림 없음), 결과는 마스크 밖을 원본 픽셀로 되붙입니다(ImageCompositeMasked)."
       ],
       "widgets_values_named": {
-        "text": "Inpaint = 마스크로 칠한 부분만 새로 그립니다. Load Image 의 MASK 출력(알파 0 인 곳 = 마스크)을 씁니다.\n기본 이미지 apples_paint_mask.png 는 오른쪽 사과 위치의 알파가 0 이라 칠하지 않아도 바로 돌아갑니다. 직접 칠하려면 Load Image 노드에서 우클릭 > Open in MaskEditor 로 칠하면 됩니다(마스크 에디터 저장값 = 칠한 곳 알파 0).\n이 그룹만 프롬프트가 다릅니다: 공유 프롬프트는 장면 전체('두 개의 사과')라서, 칠한 부분에 무엇을 그릴지 따로 적습니다(아래 Inpaint prompt). 모델은 같은 Qwen-Image-Edit 2511 + latent noise mask(참조 그림 없음), 결과는 마스크 밖을 원본 픽셀로 되붙입니다(ImageCompositeMasked)."
+        "text": "Inpaint = 마스크로 칠한 부분만 새로 그립니다. Load Image 의 MASK 출력(알파 0 인 곳 = 마스크)을 씁니다.\n기본 이미지 park_walk_mask.png 는 남성의 이끼색 재킷 영역의 알파가 0 이라 칠하지 않아도 바로 돌아갑니다. 직접 칠하려면 Load Image 노드에서 우클릭 > Open in MaskEditor 로 칠하면 됩니다(마스크 에디터 저장값 = 칠한 곳 알파 0).\n이 그룹만 프롬프트가 다릅니다: 공유 프롬프트는 공원에서 강아지를 산책하는 남성 장면 전체를 설명하므로, 칠한 부분에 무엇을 그릴지 따로 적습니다(아래 Inpaint prompt). 모델은 같은 Qwen-Image-Edit 2511 + latent noise mask(참조 그림 없음), 결과는 마스크 밖을 원본 픽셀로 되붙입니다(ImageCompositeMasked)."
       },
       "color": "#432",
       "bgcolor": "#653"
@@ -2637,10 +2637,10 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "a photo of a green apple on a table"
+        "In the masked area, change only the man's moss-green field jacket to a light blue denim jacket. Keep the same man, golden retriever, leash, park, pose, camera, and lighting unchanged."
       ],
       "widgets_values_named": {
-        "value": "a photo of a green apple on a table"
+        "value": "In the masked area, change only the man's moss-green field jacket to a light blue denim jacket. Keep the same man, golden retriever, leash, park, pose, camera, and lighting unchanged."
       }
     },
     {
@@ -2865,11 +2865,11 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "apples_paint_mask.png",
+        "park_walk_mask.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "apples_paint_mask.png",
+        "image": "park_walk_mask.png",
         "upload": "image"
       }
     },
@@ -3724,10 +3724,10 @@
       "title": "Edit: why its own instruction",
       "properties": {},
       "widgets_values": [
-        "Instruction edit = Qwen-Image-Edit 2511 이 입력 그림을 보고 '무엇을 바꿀지' 명령문을 따라 고칩니다. 모델: 공유 그룹의 Edit 2511 (fp8mixed) + Lightning 4-step (다른 작업과 같은 모델).\n왜 공유 프롬프트를 안 쓰나: 공유 프롬프트는 '장면 묘사'(a realistic photo of exactly two red apples ...)입니다. Edit 모델에 그걸 넣으면 변경 지시가 아니라 장면 설명으로 읽혀 그림이 거의 안 바뀝니다. 그래서 이 그룹에는 'change X to Y / add X' 형태의 지시문을 따로 적습니다(Edit instruction).\n시드와 입력 그림은 공유, Negative 는 CFG 1 이라 무시됩니다."
+        "Instruction edit = Qwen-Image-Edit 2511 이 입력 그림을 보고 '무엇을 바꿀지' 명령문을 따라 고칩니다. 모델: 공유 그룹의 Edit 2511 (fp8mixed) + Lightning 4-step (다른 작업과 같은 모델).\n왜 공유 프롬프트를 안 쓰나: 공유 프롬프트는 공원에서 강아지를 산책하는 남성 장면을 묘사합니다. Edit 모델에 그걸 넣으면 변경 지시가 아니라 장면 설명으로 읽혀 그림이 거의 안 바뀝니다. 그래서 이 그룹에는 'change X to Y / add X' 형태의 지시문을 따로 적습니다(Edit instruction).\n시드와 입력 그림은 공유, Negative 는 CFG 1 이라 무시됩니다."
       ],
       "widgets_values_named": {
-        "text": "Instruction edit = Qwen-Image-Edit 2511 이 입력 그림을 보고 '무엇을 바꿀지' 명령문을 따라 고칩니다. 모델: 공유 그룹의 Edit 2511 (fp8mixed) + Lightning 4-step (다른 작업과 같은 모델).\n왜 공유 프롬프트를 안 쓰나: 공유 프롬프트는 '장면 묘사'(a photo of two apples on a table)입니다. Edit 모델에 그걸 넣으면 변경 지시가 아니라 장면 설명으로 읽혀 그림이 거의 안 바뀝니다. 그래서 이 그룹에는 'change X to Y / add X' 형태의 지시문을 따로 적습니다(Edit instruction).\n시드와 입력 그림은 공유, Negative 는 CFG 1 이라 무시됩니다."
+        "text": "Instruction edit = Qwen-Image-Edit 2511 이 입력 그림을 보고 '무엇을 바꿀지' 명령문을 따라 고칩니다. 모델: 공유 그룹의 Edit 2511 (fp8mixed) + Lightning 4-step (다른 작업과 같은 모델).\n왜 공유 프롬프트를 안 쓰나: 공유 프롬프트는 공원 산책 장면 전체를 묘사합니다. Edit 모델에 그걸 넣으면 변경 지시가 아니라 장면 설명으로 읽혀 그림이 거의 안 바뀝니다. 그래서 이 그룹에는 'change X to Y / add X' 형태의 지시문을 따로 적습니다(Edit instruction).\n시드와 입력 그림은 공유, Negative 는 CFG 1 이라 무시됩니다."
       },
       "color": "#432",
       "bgcolor": "#653"
@@ -3773,10 +3773,10 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "Add a silver knife on the table next to the apples. Keep everything else unchanged."
+        "Change only the man's moss-green field jacket to a light blue denim jacket. Keep exactly the same man, golden retriever, red leash, blue collar, park, pose, camera, lighting, and all other details unchanged. Preserve natural hands, paws, and the leash connection."
       ],
       "widgets_values_named": {
-        "value": "Add a silver knife on the table next to the apples. Keep everything else unchanged."
+        "value": "Change only the man's moss-green field jacket to a light blue denim jacket. Keep exactly the same man, golden retriever, red leash, blue collar, park, pose, camera, lighting, and all other details unchanged. Preserve natural hands, paws, and the leash connection."
       }
     },
     {

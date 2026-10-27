@@ -47,10 +47,10 @@
         "Node name for S&R": "PrimitiveStringMultiline"
       },
       "widgets_values": [
-        "A Korean woman in her mid-20s with shoulder-length dark brown hair and soft side-swept bangs, wearing a cream cable-knit sweater, light-blue jeans and small silver stud earrings, sits at a window table in a sunlit city cafe holding a white coffee cup. She looks out the window, then turns toward the camera and smiles softly as she lowers the cup to the table. Slow gentle camera push-in, natural daylight, realistic, one continuous shot."
+        "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light"
       ],
       "widgets_values_named": {
-        "value": "A Korean woman in her mid-20s with shoulder-length dark brown hair and soft side-swept bangs, wearing a cream cable-knit sweater, light-blue jeans and small silver stud earrings, sits at a window table in a sunlit city cafe holding a white coffee cup. She looks out the window, then turns toward the camera and smiles softly as she lowers the cup to the table. Slow gentle camera push-in, natural daylight, realistic, one continuous shot."
+        "value": "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light"
       }
     },
     {
@@ -123,10 +123,10 @@
       "title": "읽어 보세요: 공통 항목",
       "properties": {},
       "widgets_values": [
-        "MiniMax Hailuo H3 비교: T2V / I2V / FLF2V / R2V. 모두 Comfy Cloud 파트너 노드(MiniMax)입니다. 네 모드 모두 같은 20대 여성 인물과 같은 카페 장면을 씁니다. 결과를 나란히 놓고 방식만 비교합니다.\n공통: 프롬프트, 시드, 모델 'MiniMax H3', 768P, 5 s.\n공통이 아닌 것(노드 제한): ratio는 T2V와 R2V에만 있습니다. (16:9로 두면 1280x720 첫/마지막 프레임과 맞습니다.) I2V와 FLF2V는 이미지를 따라갑니다. H3 노드의 시드 범위는 0-4294967295이며, 같은 시드라도 결과는 비슷할 뿐 똑같지는 않습니다.\n모드를 끄려면 그 그룹을 선택하고 Ctrl+B를 누릅니다. (나머지 모드는 계속 실행됩니다.) 유료 클립 4개가 필요한 게 아니라면 4개를 한꺼번에 큐에 올리지 마세요.\n1회 실행 비용(price_badge, H3 768P 5 s): $0.6435 = 약 136 크레딧입니다. 4개를 모두 돌리면 $2.5740 = 약 543 크레딧입니다. (1 USD당 211 크레딧 기준, https://www.comfy.org/cloud/pricing 의 종량제 요금이며 docs.comfy.org 페이지에는 요금이 나와 있지 않습니다.)\n각 노드의 모델 드롭다운에서 MiniMax H3 Max, H3 Max Turbo (480P/768P, 최소 5 s)도 고를 수 있습니다."
+        "MiniMax Hailuo H3 비교: T2V / I2V / FLF2V / R2V. 모두 Comfy Cloud 파트너 노드(MiniMax)입니다. 네 모드 모두 같은 공원 산책 프롬프트를 씁니다. 결과를 나란히 놓고 방식만 비교합니다.\n공통: 프롬프트, 시드, 모델 'MiniMax H3', 768P, 5 s.\n공통이 아닌 것(노드 제한): ratio는 T2V와 R2V에만 있습니다. (16:9로 두면 1280x720 첫/마지막 프레임과 맞습니다.) I2V와 FLF2V는 이미지를 따라갑니다. H3 노드의 시드 범위는 0-4294967295이며, 같은 시드라도 결과는 비슷할 뿐 똑같지는 않습니다.\n모드를 끄려면 그 그룹을 선택하고 Ctrl+B를 누릅니다. (나머지 모드는 계속 실행됩니다.) 유료 클립 4개가 필요한 게 아니라면 4개를 한꺼번에 큐에 올리지 마세요.\n1회 실행 비용(price_badge, H3 768P 5 s): $0.6435 = 약 136 크레딧입니다. 4개를 모두 돌리면 $2.5740 = 약 543 크레딧입니다. (1 USD당 211 크레딧 기준, https://www.comfy.org/cloud/pricing 의 종량제 요금이며 docs.comfy.org 페이지에는 요금이 나와 있지 않습니다.)\n각 노드의 모델 드롭다운에서 MiniMax H3 Max, H3 Max Turbo (480P/768P, 최소 5 s)도 고를 수 있습니다."
       ],
       "widgets_values_named": {
-        "text": "MiniMax Hailuo H3 비교: T2V / I2V / FLF2V / R2V. 모두 Comfy Cloud 파트너 노드(MiniMax)입니다. 네 모드 모두 같은 20대 여성 인물과 같은 카페 장면을 씁니다. 결과를 나란히 놓고 방식만 비교합니다.\n공통: 프롬프트, 시드, 모델 'MiniMax H3', 768P, 5 s.\n공통이 아닌 것(노드 제한): ratio는 T2V와 R2V에만 있습니다. (16:9로 두면 1280x720 첫/마지막 프레임과 맞습니다.) I2V와 FLF2V는 이미지를 따라갑니다. H3 노드의 시드 범위는 0-4294967295이며, 같은 시드라도 결과는 비슷할 뿐 똑같지는 않습니다.\n모드를 끄려면 그 그룹을 선택하고 Ctrl+B를 누릅니다. (나머지 모드는 계속 실행됩니다.) 유료 클립 4개가 필요한 게 아니라면 4개를 한꺼번에 큐에 올리지 마세요.\n1회 실행 비용(price_badge, H3 768P 5 s): $0.6435 = 약 136 크레딧입니다. 4개를 모두 돌리면 $2.5740 = 약 543 크레딧입니다. (1 USD당 211 크레딧 기준, https://www.comfy.org/cloud/pricing 의 종량제 요금이며 docs.comfy.org 페이지에는 요금이 나와 있지 않습니다.)\n각 노드의 모델 드롭다운에서 MiniMax H3 Max, H3 Max Turbo (480P/768P, 최소 5 s)도 고를 수 있습니다."
+        "text": "MiniMax Hailuo H3 비교: T2V / I2V / FLF2V / R2V. 모두 Comfy Cloud 파트너 노드(MiniMax)입니다. 네 모드 모두 같은 공원 산책 프롬프트를 씁니다. 결과를 나란히 놓고 방식만 비교합니다.\n공통: 프롬프트, 시드, 모델 'MiniMax H3', 768P, 5 s.\n공통이 아닌 것(노드 제한): ratio는 T2V와 R2V에만 있습니다. (16:9로 두면 1280x720 첫/마지막 프레임과 맞습니다.) I2V와 FLF2V는 이미지를 따라갑니다. H3 노드의 시드 범위는 0-4294967295이며, 같은 시드라도 결과는 비슷할 뿐 똑같지는 않습니다.\n모드를 끄려면 그 그룹을 선택하고 Ctrl+B를 누릅니다. (나머지 모드는 계속 실행됩니다.) 유료 클립 4개가 필요한 게 아니라면 4개를 한꺼번에 큐에 올리지 마세요.\n1회 실행 비용(price_badge, H3 768P 5 s): $0.6435 = 약 136 크레딧입니다. 4개를 모두 돌리면 $2.5740 = 약 543 크레딧입니다. (1 USD당 211 크레딧 기준, https://www.comfy.org/cloud/pricing 의 종량제 요금이며 docs.comfy.org 페이지에는 요금이 나와 있지 않습니다.)\n각 노드의 모델 드롭다운에서 MiniMax H3 Max, H3 Max Turbo (480P/768P, 최소 5 s)도 고를 수 있습니다."
       },
       "color": "#432",
       "bgcolor": "#653"
@@ -226,7 +226,7 @@
       },
       "widgets_values": [
         "MiniMax H3",
-        "A Korean woman in her mid-20s with shoulder-length dark brown hair and soft side-swept bangs, wearing a cream cable-knit sweater, light-blue jeans and small silver stud earrings, sits at a window table in a sunlit city cafe holding a white coffee cup. She looks out the window, then turns toward the camera and smiles softly as she lowers the cup to the table. Slow gentle camera push-in, natural daylight, realistic, one continuous shot.",
+        "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light",
         "768P",
         "16:9",
         5,
@@ -236,7 +236,7 @@
       ],
       "widgets_values_named": {
         "model": "MiniMax H3",
-        "model.prompt": "A Korean woman in her mid-20s with shoulder-length dark brown hair and soft side-swept bangs, wearing a cream cable-knit sweater, light-blue jeans and small silver stud earrings, sits at a window table in a sunlit city cafe holding a white coffee cup. She looks out the window, then turns toward the camera and smiles softly as she lowers the cup to the table. Slow gentle camera push-in, natural daylight, realistic, one continuous shot.",
+        "model.prompt": "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light",
         "model.resolution": "768P",
         "model.ratio": "16:9",
         "model.duration": 5,
@@ -408,7 +408,7 @@
           "links": null
         }
       ],
-      "title": "First frame (woman at cafe window)",
+      "title": "First frame (man and dog in park)",
       "properties": {
         "Node name for S&R": "LoadImage"
       },
@@ -520,7 +520,7 @@
       },
       "widgets_values": [
         "MiniMax H3",
-        "A Korean woman in her mid-20s with shoulder-length dark brown hair and soft side-swept bangs, wearing a cream cable-knit sweater, light-blue jeans and small silver stud earrings, sits at a window table in a sunlit city cafe holding a white coffee cup. She looks out the window, then turns toward the camera and smiles softly as she lowers the cup to the table. Slow gentle camera push-in, natural daylight, realistic, one continuous shot.",
+        "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light",
         "768P",
         5,
         42,
@@ -529,7 +529,7 @@
       ],
       "widgets_values_named": {
         "model": "MiniMax H3",
-        "model.prompt": "A Korean woman in her mid-20s with shoulder-length dark brown hair and soft side-swept bangs, wearing a cream cable-knit sweater, light-blue jeans and small silver stud earrings, sits at a window table in a sunlit city cafe holding a white coffee cup. She looks out the window, then turns toward the camera and smiles softly as she lowers the cup to the table. Slow gentle camera push-in, natural daylight, realistic, one continuous shot.",
+        "model.prompt": "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light",
         "model.resolution": "768P",
         "model.duration": 5,
         "seed": 42,
@@ -642,10 +642,10 @@
       "title": "I2V 입력과 비용",
       "properties": {},
       "widgets_values": [
-        "모드 2 - I2V. Comfy Cloud 목록에는 MiniMax의 H3 전용 image-to-video 노드가 없습니다. 이 모드는 MinimaxHailuo03FirstLastFrameNode (모델 MiniMax H3, 768P, 5 s)를 쓰고, 선택 입력인 last_frame을 비워 둡니다. 그러면 최신 모델로 첫 프레임만 쓰는 I2V가 됩니다. 다른 선택지로 MinimaxHailuoVideoNode (Hailuo 02, first_frame_image, 6/10 s, 768P/1080P)와 MinimaxImageToVideoNode (I2V-01)가 있지만 쓰지 않았습니다.\n입력: minimax_first.png (카페 창가의 여성) + 공통 프롬프트 + 공통 시드. 결과는 minimax/i2v로 저장됩니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧 (last_frame 유무는 가격과 상관없습니다). ratio 위젯은 없으며 이미지를 따라갑니다. (16:9, 1280x720)"
+        "모드 2 - I2V. Comfy Cloud 목록에는 MiniMax의 H3 전용 image-to-video 노드가 없습니다. 이 모드는 MinimaxHailuo03FirstLastFrameNode (모델 MiniMax H3, 768P, 5 s)를 쓰고, 선택 입력인 last_frame을 비워 둡니다. 그러면 최신 모델로 첫 프레임만 쓰는 I2V가 됩니다. 다른 선택지로 MinimaxHailuoVideoNode (Hailuo 02, first_frame_image, 6/10 s, 768P/1080P)와 MinimaxImageToVideoNode (I2V-01)가 있지만 쓰지 않았습니다.\n입력: minimax_first.png (공원 길의 남성과 골든리트리버) + 공통 프롬프트 + 공통 시드. 결과는 minimax/i2v로 저장됩니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧 (last_frame 유무는 가격과 상관없습니다). ratio 위젯은 없으며 이미지를 따라갑니다. (16:9, 1280x720)"
       ],
       "widgets_values_named": {
-        "text": "모드 2 - I2V. Comfy Cloud 목록에는 MiniMax의 H3 전용 image-to-video 노드가 없습니다. 이 모드는 MinimaxHailuo03FirstLastFrameNode (모델 MiniMax H3, 768P, 5 s)를 쓰고, 선택 입력인 last_frame을 비워 둡니다. 그러면 최신 모델로 첫 프레임만 쓰는 I2V가 됩니다. 다른 선택지로 MinimaxHailuoVideoNode (Hailuo 02, first_frame_image, 6/10 s, 768P/1080P)와 MinimaxImageToVideoNode (I2V-01)가 있지만 쓰지 않았습니다.\n입력: minimax_first.png (카페 창가의 여성) + 공통 프롬프트 + 공통 시드. 결과는 minimax/i2v로 저장됩니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧 (last_frame 유무는 가격과 상관없습니다). ratio 위젯은 없으며 이미지를 따라갑니다. (16:9, 1280x720)"
+        "text": "모드 2 - I2V. Comfy Cloud 목록에는 MiniMax의 H3 전용 image-to-video 노드가 없습니다. 이 모드는 MinimaxHailuo03FirstLastFrameNode (모델 MiniMax H3, 768P, 5 s)를 쓰고, 선택 입력인 last_frame을 비워 둡니다. 그러면 최신 모델로 첫 프레임만 쓰는 I2V가 됩니다. 다른 선택지로 MinimaxHailuoVideoNode (Hailuo 02, first_frame_image, 6/10 s, 768P/1080P)와 MinimaxImageToVideoNode (I2V-01)가 있지만 쓰지 않았습니다.\n입력: minimax_first.png (공원 길의 남성과 골든리트리버) + 공통 프롬프트 + 공통 시드. 결과는 minimax/i2v로 저장됩니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧 (last_frame 유무는 가격과 상관없습니다). ratio 위젯은 없으며 이미지를 따라갑니다. (16:9, 1280x720)"
       },
       "color": "#432",
       "bgcolor": "#653"
@@ -700,7 +700,7 @@
           "links": null
         }
       ],
-      "title": "First frame (woman at cafe window)",
+      "title": "First frame (man and dog in park)",
       "properties": {
         "Node name for S&R": "LoadImage"
       },
@@ -763,7 +763,7 @@
           "links": null
         }
       ],
-      "title": "Last frame (she turns and smiles)",
+      "title": "Last frame (same man and dog a few steps ahead)",
       "properties": {
         "Node name for S&R": "LoadImage"
       },
@@ -875,7 +875,7 @@
       },
       "widgets_values": [
         "MiniMax H3",
-        "A Korean woman in her mid-20s with shoulder-length dark brown hair and soft side-swept bangs, wearing a cream cable-knit sweater, light-blue jeans and small silver stud earrings, sits at a window table in a sunlit city cafe holding a white coffee cup. She looks out the window, then turns toward the camera and smiles softly as she lowers the cup to the table. Slow gentle camera push-in, natural daylight, realistic, one continuous shot.",
+        "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light",
         "768P",
         5,
         42,
@@ -884,7 +884,7 @@
       ],
       "widgets_values_named": {
         "model": "MiniMax H3",
-        "model.prompt": "A Korean woman in her mid-20s with shoulder-length dark brown hair and soft side-swept bangs, wearing a cream cable-knit sweater, light-blue jeans and small silver stud earrings, sits at a window table in a sunlit city cafe holding a white coffee cup. She looks out the window, then turns toward the camera and smiles softly as she lowers the cup to the table. Slow gentle camera push-in, natural daylight, realistic, one continuous shot.",
+        "model.prompt": "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light",
         "model.resolution": "768P",
         "model.duration": 5,
         "seed": 42,
@@ -997,10 +997,10 @@
       "title": "FLF2V 입력과 비용",
       "properties": {},
       "widgets_values": [
-        "모드 3 - FLF2V. 노드 MinimaxHailuo03FirstLastFrameNode, 모델 MiniMax H3, 768P, 5 s.\n입력: minimax_first.png (카페 창가에 앉은 여성), minimax_last.png (같은 장면에서 여성이 카메라 쪽으로 돌아 미소 짓는 모습), 공통 프롬프트, 공통 시드. 결과는 minimax/flf2v로 저장됩니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧.\nI2V 그룹과 같은 노드 클래스이며, 다른 점은 last_frame이 연결되어 있다는 것뿐입니다. ratio 위젯은 없으며 이미지를 따라갑니다. (16:9, 1280x720)"
+        "모드 3 - FLF2V. 노드 MinimaxHailuo03FirstLastFrameNode, 모델 MiniMax H3, 768P, 5 s.\n입력: minimax_first.png (공원 길을 걷는 남성과 골든리트리버), minimax_last.png (같은 남성과 개가 공원 길에서 몇 걸음 앞으로 이동한 모습), 공통 프롬프트, 공통 시드. 결과는 minimax/flf2v로 저장됩니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧.\nI2V 그룹과 같은 노드 클래스이며, 다른 점은 last_frame이 연결되어 있다는 것뿐입니다. ratio 위젯은 없으며 이미지를 따라갑니다. (16:9, 1280x720)"
       ],
       "widgets_values_named": {
-        "text": "모드 3 - FLF2V. 노드 MinimaxHailuo03FirstLastFrameNode, 모델 MiniMax H3, 768P, 5 s.\n입력: minimax_first.png (카페 창가에 앉은 여성), minimax_last.png (같은 장면에서 여성이 카메라 쪽으로 돌아 미소 짓는 모습), 공통 프롬프트, 공통 시드. 결과는 minimax/flf2v로 저장됩니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧.\nI2V 그룹과 같은 노드 클래스이며, 다른 점은 last_frame이 연결되어 있다는 것뿐입니다. ratio 위젯은 없으며 이미지를 따라갑니다. (16:9, 1280x720)"
+        "text": "모드 3 - FLF2V. 노드 MinimaxHailuo03FirstLastFrameNode, 모델 MiniMax H3, 768P, 5 s.\n입력: minimax_first.png (공원 길을 걷는 남성과 골든리트리버), minimax_last.png (같은 남성과 개가 공원 길에서 몇 걸음 앞으로 이동한 모습), 공통 프롬프트, 공통 시드. 결과는 minimax/flf2v로 저장됩니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧.\nI2V 그룹과 같은 노드 클래스이며, 다른 점은 last_frame이 연결되어 있다는 것뿐입니다. ratio 위젯은 없으며 이미지를 따라갑니다. (16:9, 1280x720)"
       },
       "color": "#432",
       "bgcolor": "#653"
@@ -1055,7 +1055,7 @@
           "links": null
         }
       ],
-      "title": "Subject reference (the woman)",
+      "title": "Subject reference (the same man)",
       "properties": {
         "Node name for S&R": "LoadImage"
       },
@@ -1191,7 +1191,7 @@
       },
       "widgets_values": [
         "MiniMax H3",
-        "A Korean woman in her mid-20s with shoulder-length dark brown hair and soft side-swept bangs, wearing a cream cable-knit sweater, light-blue jeans and small silver stud earrings, sits at a window table in a sunlit city cafe holding a white coffee cup. She looks out the window, then turns toward the camera and smiles softly as she lowers the cup to the table. Slow gentle camera push-in, natural daylight, realistic, one continuous shot.",
+        "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light",
         "768P",
         "16:9",
         5,
@@ -1201,7 +1201,7 @@
       ],
       "widgets_values_named": {
         "model": "MiniMax H3",
-        "model.prompt": "A Korean woman in her mid-20s with shoulder-length dark brown hair and soft side-swept bangs, wearing a cream cable-knit sweater, light-blue jeans and small silver stud earrings, sits at a window table in a sunlit city cafe holding a white coffee cup. She looks out the window, then turns toward the camera and smiles softly as she lowers the cup to the table. Slow gentle camera push-in, natural daylight, realistic, one continuous shot.",
+        "model.prompt": "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light",
         "model.resolution": "768P",
         "model.ratio": "16:9",
         "model.duration": 5,
@@ -1315,10 +1315,10 @@
       "title": "R2V 입력과 비용",
       "properties": {},
       "widgets_values": [
-        "모드 4 - R2V. 노드 MinimaxHailuo03ReferenceNode, 모델 MiniMax H3, 768P, ratio 16:9, 5 s. H3의 reference-to-video 노드이며, 목록에는 별도의 S2V (subject-reference) 노드가 없습니다.\n입력: image_1로 minimax_subject.png (같은 여성의 레퍼런스 사진), 공통 프롬프트, 공통 시드. 결과는 minimax/r2v로 저장됩니다. 레퍼런스는 첫 프레임이 아니라 피사체/스타일 가이드이며, 프롬프트에서 'Image 1'이라고 부를 수 있습니다. 이 모드에서 레퍼런스 이미지는 image_1이며, 프롬프트는 그 이미지와 같은 여성을 설명합니다. 이미지 9개, 영상 3개, 오디오 3개까지 추가할 수 있습니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧 (이미지 1개, 영상 없음: 기본 가격만 붙습니다).\n다른 점: ratio를 'adaptive'(기본값)로도 둘 수 있습니다. 여기서는 다른 모드와 맞추려고 16:9로 두었습니다."
+        "모드 4 - R2V. 노드 MinimaxHailuo03ReferenceNode, 모델 MiniMax H3, 768P, ratio 16:9, 5 s. H3의 reference-to-video 노드이며, 목록에는 별도의 S2V (subject-reference) 노드가 없습니다.\n입력: image_1로 minimax_subject.png (같은 남성의 레퍼런스 사진), 공통 프롬프트, 공통 시드. 결과는 minimax/r2v로 저장됩니다. 레퍼런스는 첫 프레임이 아니라 피사체/스타일 가이드이며, 프롬프트에서 'Image 1'이라고 부를 수 있습니다. 이 모드에서 레퍼런스 이미지는 image_1이며, 공통 프롬프트와 같은 남성을 보여 줍니다. 이미지 9개, 영상 3개, 오디오 3개까지 추가할 수 있습니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧 (이미지 1개, 영상 없음: 기본 가격만 붙습니다).\n다른 점: ratio를 'adaptive'(기본값)로도 둘 수 있습니다. 여기서는 다른 모드와 맞추려고 16:9로 두었습니다."
       ],
       "widgets_values_named": {
-        "text": "모드 4 - R2V. 노드 MinimaxHailuo03ReferenceNode, 모델 MiniMax H3, 768P, ratio 16:9, 5 s. H3의 reference-to-video 노드이며, 목록에는 별도의 S2V (subject-reference) 노드가 없습니다.\n입력: image_1로 minimax_subject.png (같은 여성의 레퍼런스 사진), 공통 프롬프트, 공통 시드. 결과는 minimax/r2v로 저장됩니다. 레퍼런스는 첫 프레임이 아니라 피사체/스타일 가이드이며, 프롬프트에서 'Image 1'이라고 부를 수 있습니다. 이 모드에서 레퍼런스 이미지는 image_1이며, 프롬프트는 그 이미지와 같은 여성을 설명합니다. 이미지 9개, 영상 3개, 오디오 3개까지 추가할 수 있습니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧 (이미지 1개, 영상 없음: 기본 가격만 붙습니다).\n다른 점: ratio를 'adaptive'(기본값)로도 둘 수 있습니다. 여기서는 다른 모드와 맞추려고 16:9로 두었습니다."
+        "text": "모드 4 - R2V. 노드 MinimaxHailuo03ReferenceNode, 모델 MiniMax H3, 768P, ratio 16:9, 5 s. H3의 reference-to-video 노드이며, 목록에는 별도의 S2V (subject-reference) 노드가 없습니다.\n입력: image_1로 minimax_subject.png (같은 남성의 레퍼런스 사진), 공통 프롬프트, 공통 시드. 결과는 minimax/r2v로 저장됩니다. 레퍼런스는 첫 프레임이 아니라 피사체/스타일 가이드이며, 프롬프트에서 'Image 1'이라고 부를 수 있습니다. 이 모드에서 레퍼런스 이미지는 image_1이며, 공통 프롬프트와 같은 남성을 보여 줍니다. 이미지 9개, 영상 3개, 오디오 3개까지 추가할 수 있습니다.\n예상 비용: 5 s x $0.1287/s = $0.6435 = 약 136 크레딧 (이미지 1개, 영상 없음: 기본 가격만 붙습니다).\n다른 점: ratio를 'adaptive'(기본값)로도 둘 수 있습니다. 여기서는 다른 모드와 맞추려고 16:9로 두었습니다."
       },
       "color": "#432",
       "bgcolor": "#653"
