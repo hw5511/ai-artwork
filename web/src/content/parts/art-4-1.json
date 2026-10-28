@@ -1,0 +1,53 @@
+{
+  "id": "art-4-1",
+  "title": "3회차 작업 폴더 다시 열기",
+  "summary": "같은 작업 폴더와 Comfy 스킬 확인",
+  "slides": [
+    {
+      "title": "3회차 작업 폴더",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session4/sheets/park-source.png"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "같은 폴더",
+          "body": "3회차 Comfy 스킬 · GPT-6.1 Sol · Full access"
+        },
+        {
+          "n": 2,
+          "head": "파일 확인",
+          "body": "대화 뒤 실제 작업 폴더의 결과 확인"
+        },
+        {
+          "n": 3,
+          "head": "스킬 경로",
+          "body": ".agents/skills 안의 저장한 스킬 · 없으면 3회차 경로 확인"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "3회차에서 쓰던 작업 폴더를 다시 열었어. 현재 작업 폴더 경로와 .agents/skills 안의 Comfy 스킬 이름·SKILL.md 경로를 확인해줘. Comfy CLI 버전과 cloud 명령 도움말까지만 확인하고, 로그인·계정 조회·업로드·생성·크레딧 사용은 하지 마. 오늘 만든 파일은 session4 아래에 저장할 거야.",
+            "desc": "실습 프롬프트"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session2/step1/park_walk.png",
+            "text": "2회차 원본 저장 · park_walk.png"
+          },
+          {
+            "kind": "link",
+            "href": "https://learn.chatgpt.com/docs/build-skills",
+            "text": "프로젝트 스킬"
+          }
+        ]
+      },
+      "id": "art-4-1-1"
+    }
+  ]
+}

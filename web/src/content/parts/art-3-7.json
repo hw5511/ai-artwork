@@ -1,0 +1,78 @@
+{
+  "id": "art-3-7",
+  "title": "로그인 링크 열기와 인증 완료 확인",
+  "slides": [
+    {
+      "title": "링크 출력과 인증 완료",
+      "template": "table",
+      "columns": [
+        "단계",
+        "확인 항목"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "로그인 시작",
+            "comfy --json cloud login --no-browser"
+          ]
+        },
+        {
+          "cells": [
+            "링크 출력",
+            "login_url"
+          ]
+        },
+        {
+          "cells": [
+            "인증 완료",
+            "comfy cloud whoami"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "링크 열기",
+          "body": "내 브라우저 · 내 Comfy 계정으로 인증"
+        },
+        {
+          "n": 2,
+          "head": "완료 확인",
+          "body": "Codex의 완료 응답 · whoami 계정 확인"
+        },
+        {
+          "n": 3,
+          "head": "사전 검증 범위",
+          "body": "링크 출력까지만 · 인증 성공·장시간 대기 미검증"
+        },
+        {
+          "n": 4,
+          "head": "링크 만료",
+          "body": "로그인 재시작"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://github.com/Comfy-Org/comfy-cli",
+            "text": "Comfy CLI 소스와 도움말"
+          },
+          {
+            "kind": "copy",
+            "value": "comfy --json cloud login --no-browser",
+            "desc": "로그인 시작"
+          },
+          {
+            "kind": "copy",
+            "value": "comfy cloud whoami",
+            "desc": "내 계정 확인"
+          }
+        ]
+      },
+      "id": "art-3-7-1"
+    }
+  ],
+  "summary": "링크 출력과 인증 완료 구분"
+}

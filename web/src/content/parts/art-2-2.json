@@ -1,0 +1,221 @@
+{
+  "id": "art-2-2",
+  "title": "영상 생성 방식 4가지 - T2V, I2V, FLF2V, R2V",
+  "slides": [
+    {
+      "title": "영상 생성 방식",
+      "template": "table",
+      "columns": [
+        "방식",
+        "입력",
+        "기준"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "T2V",
+            "글",
+            "새 영상"
+          ]
+        },
+        {
+          "cells": [
+            "I2V",
+            "글 + 첫 이미지",
+            "첫 장면"
+          ]
+        },
+        {
+          "cells": [
+            "FLF2V",
+            "글 + 첫·마지막 이미지",
+            "시작과 끝"
+          ]
+        },
+        {
+          "cells": [
+            "R2V",
+            "글 + 레퍼런스",
+            "등장 대상의 특징"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "시작 조건",
+          "body": "첫 장면 · 마지막 장면 · 대상 레퍼런스"
+        },
+        {
+          "n": 2,
+          "head": "결과 비교",
+          "body": "넣은 입력이 영상에 남는 방식"
+        }
+      ],
+      "id": "art-2-2-1",
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light",
+            "desc": "영상 공통 프롬프트"
+          },
+          {
+            "kind": "copy",
+            "value": "남성이 햇빛 드는 공원 길에서 골든리트리버를 산책시킵니다. 개는 꼬리를 흔들며 앞서 종종걸음으로 걷고, 카메라는 옆에서 천천히 따라갑니다. 자연광입니다.",
+            "desc": "한국어 뜻"
+          }
+        ]
+      }
+    },
+    {
+      "title": "R2V 인물 레퍼런스",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/downloads/session2/step2/minimax_subject.png"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Picture 1",
+          "body": "골든리트리버와 걷는 남성"
+        },
+        {
+          "n": 2,
+          "head": "공통 프롬프트",
+          "body": "네 모드에 같은 장면·움직임 적용"
+        }
+      ],
+      "id": "art-2-2-2",
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "<Picture 1> is the man walking the golden retriever in this video.",
+            "desc": "로컬 R2V의 앞 문장"
+          },
+          {
+            "kind": "copy",
+            "value": "<Picture 1>은 이 영상에서 골든리트리버와 걷는 남성입니다.",
+            "desc": "한국어 뜻"
+          }
+        ]
+      }
+    },
+    {
+      "title": "첫 프레임과 마지막 프레임",
+      "template": "compare",
+      "left": {
+        "label": "첫 프레임",
+        "screen": {
+          "kind": "shot",
+          "src": "/downloads/session2/step2/minimax_first.png"
+        }
+      },
+      "right": {
+        "label": "마지막 프레임",
+        "screen": {
+          "kind": "shot",
+          "src": "/downloads/session2/step2/minimax_last.png"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "I2V · FLF2V",
+          "body": "첫 이미지에서 움직임 시작"
+        },
+        {
+          "n": 2,
+          "head": "FLF2V",
+          "body": "마지막 이미지까지 연결"
+        }
+      ],
+      "id": "art-2-2-3"
+    },
+    {
+      "title": "MiniMax 실행 경로",
+      "template": "table",
+      "columns": [
+        "구분",
+        "로컬 모델",
+        "유료 API 노드"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "준비",
+            "모델 파일 · 하드웨어",
+            "API 크레딧"
+          ]
+        },
+        {
+          "cells": [
+            "자원",
+            "내 PC · Cloud GPU 시간",
+            "외부 서버"
+          ]
+        },
+        {
+          "cells": [
+            "선택",
+            "minimax_4modes.json",
+            "minimax_4modes_api.json"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "입력 준비",
+          "body": "JSON 열기 · 세 이미지의 Load Image 확인"
+        },
+        {
+          "n": 2,
+          "head": "실행 그룹",
+          "body": "네 그룹 비교 또는 나머지 그룹 Ctrl+B"
+        },
+        {
+          "n": 3,
+          "head": "실행 전 확인",
+          "body": "로컬 모델 파일 · API 노드 크레딧"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "download",
+            "href": "/downloads/session2/step2/minimax_4modes.json",
+            "text": "MiniMax H3 로컬 모델 4가지 모드 템플릿 (.json)"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session2/step2/minimax_4modes_api.json",
+            "text": "MiniMax H3 유료 API 노드 4가지 모드 템플릿 (.json)"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session2/step2/minimax_subject.png",
+            "text": "인물 레퍼런스 이미지 (.png)"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session2/step2/minimax_first.png",
+            "text": "첫 프레임 이미지 (.png)"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session2/step2/minimax_last.png",
+            "text": "마지막 프레임 이미지 (.png)"
+          }
+        ]
+      },
+      "id": "art-2-2-4"
+    }
+  ],
+  "summary": "첫 장면·마지막 장면·대상 레퍼런스의 역할"
+}

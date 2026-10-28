@@ -1,0 +1,45 @@
+{
+  "id": "art-3-2",
+  "title": "gpt 로그인",
+  "slides": [
+    {
+      "title": "ChatGPT 계정 로그인",
+      "template": "illustration",
+      "illustration": "/illustrations/local-computer.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "내 계정",
+          "body": "앱에서 평소 쓰던 ChatGPT 계정으로 로그인"
+        },
+        {
+          "n": 2,
+          "head": "Codex 선택",
+          "body": "제품 드롭다운의 Codex · New chat"
+        },
+        {
+          "n": 3,
+          "head": "모델 제공 범위",
+          "body": "GPT-6.1 Sol · Plus·Pro·Business·Enterprise·Edu · 계정별 확인"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://learn.chatgpt.com/docs/quickstart?setup=app",
+            "text": "로그인과 제품 선택"
+          },
+          {
+            "kind": "link",
+            "href": "https://learn.chatgpt.com/docs/models",
+            "text": "모델 제공 범위"
+          }
+        ]
+      },
+      "id": "art-3-2-1"
+    }
+  ],
+  "summary": "내 계정 로그인과 Codex 선택"
+}

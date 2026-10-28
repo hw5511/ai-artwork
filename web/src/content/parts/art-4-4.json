@@ -1,0 +1,63 @@
+{
+  "id": "art-4-4",
+  "title": "인물 시트 만들기",
+  "summary": "남성과 반려견의 별도 시트",
+  "slides": [
+    {
+      "title": "남성과 반려견 시트",
+      "template": "compare",
+      "left": {
+        "label": "남성",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session4/sheets/man-sheet.png"
+        }
+      },
+      "right": {
+        "label": "반려견",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session4/sheets/dog-sheet.png"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "남성 시트",
+          "body": "정면 · 앞 3/4 · 측면 · 얼굴 근접 · 같은 의상"
+        },
+        {
+          "n": 2,
+          "head": "반려견 시트",
+          "body": "같은 금빛 털과 파란 목걸이 · 남성과 별도"
+        },
+        {
+          "n": 3,
+          "head": "실측 결과",
+          "body": "각 시트 1254×1254 · 반려견 컷은 코드로 재조립"
+        },
+        {
+          "n": 4,
+          "head": "사용 한도",
+          "body": "Codex 내장 이미지 생성 · Comfy 크레딧 없음 · Codex 사용 한도 차감"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "session4/script.md와 rules.md, park_walk.png를 읽고 Codex 내장 이미지 생성으로 인물 시트를 만들어줘. Comfy나 유료 이미지 API는 쓰지 마.\n남성은 session4/sheets/man.png, 반려견은 session4/sheets/dog.png로 따로 저장. 한 시트에 한 얼굴의 주체만. 남성 시트에 개를, 개 시트에 남성을 넣지 마.\n각 시트는 같은 대상의 2행 2열 네 컷: 좌상 정면 전신, 우상 앞 3/4 전신, 좌하 측면 전신, 우하 얼굴 근접. 회색 무배경·균일 조명·동일한 외형과 의상. 남성은 초록 필드 재킷·크림색 티셔츠·진청바지·흰 운동화. 개는 금빛 털과 파란 목걸이. 리드줄과 글자는 제외.\n네 컷의 배치와 크기가 안 맞으면 단독 컷을 만든 뒤 코드로 조립해줘. 생성 이미지를 열어서 얼굴·의상·목걸이의 일치 여부를 확인하고 경로를 알려줘.",
+            "desc": "실습 프롬프트"
+          },
+          {
+            "kind": "link",
+            "href": "https://learn.chatgpt.com/docs/image-generation",
+            "text": "Codex 이미지 생성과 사용 한도"
+          }
+        ]
+      },
+      "id": "art-4-4-1"
+    }
+  ]
+}

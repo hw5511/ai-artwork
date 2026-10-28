@@ -1,0 +1,158 @@
+{
+  "id": "art-2-3",
+  "title": "로컬 모델과 유료 API 노드",
+  "slides": [
+    {
+      "title": "로컬 모델과 유료 API",
+      "template": "table",
+      "columns": [
+        "구분",
+        "로컬 모델 노드",
+        "유료 API 노드"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "실행 위치",
+            "내 PC · Cloud ComfyUI",
+            "외부 회사 서버"
+          ]
+        },
+        {
+          "cells": [
+            "준비",
+            "모델 파일 · 하드웨어",
+            "Comfy 로그인 · API 크레딧"
+          ]
+        },
+        {
+          "cells": [
+            "비용",
+            "내 장비 · Cloud GPU 사용량",
+            "노드의 실행 크레딧"
+          ]
+        },
+        {
+          "cells": [
+            "장점",
+            "모델·설정 직접 조정",
+            "큰 모델의 파일 설치 생략"
+          ]
+        },
+        {
+          "cells": [
+            "확인",
+            "모델 크기 · 메모리",
+            "실행 전 비용 · 전송 입력"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "노드 구분",
+          "body": "모델 파일 로더 · 회사 이름의 API 노드"
+        },
+        {
+          "n": 2,
+          "head": "같은 조건",
+          "body": "같은 프롬프트와 생성 조건"
+        }
+      ],
+      "id": "art-2-3-1"
+    },
+    {
+      "title": "이미지 비교 실습",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/downloads/session2/step1/park_walk.png"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "비교 시트",
+          "body": "같은 프롬프트로 모델별 실행 · 화면은 실습 주제 예시"
+        },
+        {
+          "n": 2,
+          "head": "Missing Node",
+          "body": "빨간 오류 확인 · 없는 노드는 실행 전 업데이트 확인"
+        },
+        {
+          "n": 3,
+          "head": "실행 그룹",
+          "body": "필요한 그룹만 남기기 · 나머지 Ctrl+B"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "A man in his 30s walking a golden retriever on a leash along a tree-lined path in a city park, sunny afternoon, natural light, photo",
+            "desc": "이미지 비교 프롬프트"
+          },
+          {
+            "kind": "copy",
+            "value": "30대 남성이 화창한 오후, 나무가 늘어선 도심 공원 길에서 골든리트리버의 목줄을 잡고 산책하는 모습. 자연광의 사진.",
+            "desc": "한국어 뜻"
+          }
+        ]
+      },
+      "id": "art-2-3-2"
+    },
+    {
+      "title": "5초 영상 비교 실습",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/downloads/session2/step2/minimax_first.png"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "5초 비교 템플릿",
+          "body": "같은 프롬프트의 로컬·API 모델 비교 · 화면은 첫 프레임 예시"
+        },
+        {
+          "n": 2,
+          "head": "API 비용",
+          "body": "실행 전 크레딧 확인"
+        },
+        {
+          "n": 3,
+          "head": "첫 실행",
+          "body": "한 모델만 실행 · 입력과 출력 확인"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "A man walks his golden retriever along a sunny park path, the dog trots ahead wagging its tail, slow side tracking shot, natural light",
+            "desc": "5초 영상 비교 프롬프트"
+          },
+          {
+            "kind": "copy",
+            "value": "남성이 햇빛 드는 공원 길에서 골든리트리버를 산책시킵니다. 개는 꼬리를 흔들며 앞서 종종걸음으로 걷고, 카메라는 옆에서 천천히 따라갑니다. 자연광입니다.",
+            "desc": "한국어 뜻"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session2/step3/image_compare_sheet.json",
+            "text": "로컬 모델과 API 이미지 비교 시트 (.json)"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session2/step3/video_compare_5s.json",
+            "text": "로컬 모델과 API 5초 영상 비교 템플릿 (.json)"
+          }
+        ]
+      },
+      "id": "art-2-3-3"
+    }
+  ],
+  "summary": "실행 위치·준비물·비용의 차이"
+}

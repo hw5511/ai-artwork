@@ -1,0 +1,45 @@
+{
+  "id": "art-3-9",
+  "title": "저장한 스킬을 다음 대화에서 사용",
+  "slides": [
+    {
+      "title": "프로젝트 스킬과 새 대화",
+      "template": "illustration",
+      "illustration": "/illustrations/project-skill.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "파일 탐색기",
+          "body": "현재 폴더의 .agents/skills/스킬이름/SKILL.md"
+        },
+        {
+          "n": 2,
+          "head": "새 대화",
+          "body": "같은 작업 폴더 · $ 입력 · 스킬 이름 선택"
+        },
+        {
+          "n": 3,
+          "head": "발견 조건",
+          "body": "이름·설명·본문을 갖춘 SKILL.md · 목록 재확인"
+        },
+        {
+          "n": 4,
+          "head": "PC 실측",
+          "body": "폴더 이동 뒤 새 Codex CLI 대화의 이름·경로 인식"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://learn.chatgpt.com/docs/build-skills",
+            "text": "프로젝트 스킬과 명시적 호출"
+          }
+        ]
+      },
+      "id": "art-3-9-1"
+    }
+  ],
+  "summary": "프로젝트 스킬 파일 · 새 대화의 스킬 목록"
+}

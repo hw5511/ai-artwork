@@ -1,0 +1,50 @@
+{
+  "id": "art-3-5",
+  "title": "작업 폴더 생성과 연결",
+  "slides": [
+    {
+      "title": "작업 폴더",
+      "template": "illustration",
+      "illustration": "/illustrations/project-folder.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "빈 폴더",
+          "body": "파일 탐색기에서 ai-artwork 생성"
+        },
+        {
+          "n": 2,
+          "head": "프로젝트 열기",
+          "body": "Add new project 또는 Ctrl + O · 만든 폴더 선택"
+        },
+        {
+          "n": 3,
+          "head": "작업 위치",
+          "body": "입력창 위치 확인 · 이후 결과 파일 확인"
+        },
+        {
+          "n": 4,
+          "head": "예시 경로",
+          "body": "C:\\Users\\내이름\\Documents\\ai-artwork"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://learn.chatgpt.com/docs/windows/windows-app",
+            "text": "폴더 열기"
+          },
+          {
+            "kind": "link",
+            "href": "https://learn.chatgpt.com/docs/projects",
+            "text": "프로젝트와 작업 위치"
+          }
+        ]
+      },
+      "id": "art-3-5-1"
+    }
+  ],
+  "summary": "ai-artwork 폴더 생성과 프로젝트 연결"
+}

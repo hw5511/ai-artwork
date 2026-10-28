@@ -1,0 +1,89 @@
+{
+  "id": "art-1-3",
+  "title": "이미지 생성하기 - Z-Image Turbo 템플릿",
+  "slides": [
+    {
+      "title": "Z-Image Turbo 공식 미리보기",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session3/recap/z-image-turbo-official.webp"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Browse Templates",
+          "body": "Workflow 메뉴 · Z-Image Turbo 검색"
+        },
+        {
+          "n": 2,
+          "head": "모델 안내",
+          "body": "필요한 모델 다운로드 내용 확인"
+        },
+        {
+          "n": 3,
+          "head": "JSON 열기",
+          "body": "다운로드한 파일을 캔버스에 끌어 놓기"
+        },
+        {
+          "n": 4,
+          "head": "화면 출처",
+          "body": "Comfy-Org 공식 미리보기 · 공원 실습 결과와 별개"
+        }
+      ],
+      "id": "art-1-3-1"
+    },
+    {
+      "title": "Z-Image Turbo 실습",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session3/recap/z-image-turbo-official.webp"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "프롬프트",
+          "body": "입력 노드의 장면만 변경"
+        },
+        {
+          "n": 2,
+          "head": "생성 설정",
+          "body": "크기·시드 유지 · Run 또는 Queue"
+        },
+        {
+          "n": 3,
+          "head": "Save Image",
+          "body": "실행 뒤 결과 확인 · 한 항목씩 변경"
+        },
+        {
+          "n": 4,
+          "head": "화면 출처",
+          "body": "Comfy-Org 공식 미리보기 · 공원 실습 결과와 별개"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "A man in his 30s walking a golden retriever on a leash along a tree-lined path in a city park, sunny afternoon, natural light, photo",
+            "desc": "이미지 프롬프트"
+          },
+          {
+            "kind": "copy",
+            "value": "30대 남성이 화창한 오후, 나무가 늘어선 도심 공원 길에서 골든리트리버의 목줄을 잡고 산책하는 모습. 자연광의 사진.",
+            "desc": "한국어 뜻"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session1/step3/image_z_image_turbo.json",
+            "text": "공식 Z-Image Turbo 워크플로우 다운로드 (.json)"
+          }
+        ]
+      },
+      "id": "art-1-3-2"
+    }
+  ],
+  "summary": "공식 템플릿 열기 · 프롬프트 변경 · 첫 이미지"
+}

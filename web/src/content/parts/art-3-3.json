@@ -1,0 +1,45 @@
+{
+  "id": "art-3-3",
+  "title": "ChatGPT와 Codex · 로컬 작업",
+  "slides": [
+    {
+      "title": "ChatGPT와 Codex",
+      "template": "illustration",
+      "illustration": "/illustrations/local-computer.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "ChatGPT · Chat",
+          "body": "질문 · 설명 · 아이디어"
+        },
+        {
+          "n": 2,
+          "head": "이 수업의 Codex",
+          "body": "내 작업 폴더 · 파일 읽기·저장 · 명령 실행"
+        },
+        {
+          "n": 3,
+          "head": "Comfy CLI",
+          "body": "설치·실행 뒤 실제 파일과 결과 확인"
+        },
+        {
+          "n": 4,
+          "head": "제품 선택",
+          "body": "같은 앱 안의 선택 · ChatGPT Work도 파일·도구 작업 지원"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://learn.chatgpt.com/docs/use-chatgpt",
+            "text": "ChatGPT와 Codex 선택"
+          }
+        ]
+      },
+      "id": "art-3-3-1"
+    }
+  ],
+  "summary": "대화 작업과 내 폴더의 파일·명령 작업"
+}

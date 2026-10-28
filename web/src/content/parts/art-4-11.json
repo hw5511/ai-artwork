@@ -1,0 +1,105 @@
+{
+  "id": "art-4-11",
+  "title": "30초로 이어 보고 비교하기",
+  "summary": "30초 연결과 실제 결과 검수",
+  "slides": [
+    {
+      "title": "30초 데모 영상",
+      "template": "screen",
+      "screen": {
+        "kind": "video",
+        "src": "/downloads/session4/sheets/demo/park-30s.mp4",
+        "poster": "/lectures/images/session4/sheets/demo-poster.jpg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "강사 데모",
+          "body": "PC MiniMax H3 Ref2VA 터보 · 수강생 경로는 Comfy Cloud 파트너 H3"
+        },
+        {
+          "n": 2,
+          "head": "같은 외형",
+          "body": "남성 얼굴·초록 재킷 · 금빛 털·파란 목걸이"
+        },
+        {
+          "n": 3,
+          "head": "확인 지점",
+          "body": "리드줄 색·연결 · 공원·빛 방향 · 10초·20초 경계"
+        },
+        {
+          "n": 4,
+          "head": "데모 사용",
+          "body": "압축을 풀어 session4/clips/clip1.mp4~clip3.mp4 · 본인 Cloud 결과와 구분"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "session4/clips/clip1.mp4, clip2.mp4, clip3.mp4를 ffprobe로 검사하고 ffmpeg로 이어줘. 각 파일의 앞 10초씩, 순서는 1·2·3, 합계 정확히 30초. 자막·전환 효과·음악·배속 없이 원래 공원 소리 유지.\n길이가 10초보다 짧거나 파일이 없으면 대체 영상이나 정지 화면으로 채우지 말고 멈춰줘. CPU 인코더 libx264로 1280×720, 24fps, H.264와 AAC를 맞추고 session4/final/park-30s.mp4에 저장해줘. GPU 인코더는 쓰지 마. 입력 원본은 보관.\n완성본의 전체 길이·해상도·프레임 수를 검사해서 알려줘. 2초 간격 검수 이미지와 각 5초 샷의 가운데 프레임을 만들어 보여줘. 남성의 얼굴·초록 재킷, 개의 금빛 털·파란 목걸이, 빨간 리드줄, 공원과 빛 방향의 유지 여부를 함께 확인해줘.",
+            "desc": "실습 프롬프트"
+          }
+        ]
+      },
+      "id": "art-4-11-1"
+    },
+    {
+      "title": "실제 데모의 검수 지점",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session4/sheets/demo-poster.jpg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "샷 전환",
+          "body": "클립1 약 6.54초 · 원래 5초 지시와 차이"
+        },
+        {
+          "n": 2,
+          "head": "의도 밖의 요소",
+          "body": "클립2 가장자리의 손 · 클립3 리드줄 끝의 파란 부분"
+        },
+        {
+          "n": 3,
+          "head": "연속성 한계",
+          "body": "샷마다 배경·빛 차이 · 완전한 연결·연속성 미확인"
+        },
+        {
+          "n": 4,
+          "head": "완성 파일",
+          "body": "정확히 30초 · 1280×720 · 24fps · H.264와 AAC"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "download",
+            "href": "/downloads/session4/sheets/demo/park-30s.mp4",
+            "text": "30초 데모 영상"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session4/sheets/demo/instructor-clips.zip",
+            "text": "강사 데모 클립 3개"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session4/sheets/practice-materials.zip",
+            "text": "시트·단독 컷·대본·프롬프트 실습 파일"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session4/sheets/demo/production.txt",
+            "text": "제작 기록 받기"
+          }
+        ]
+      },
+      "id": "art-4-11-2"
+    }
+  ]
+}

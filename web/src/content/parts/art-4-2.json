@@ -1,0 +1,45 @@
+{
+  "id": "art-4-2",
+  "title": "시트로 같은 모습 유지하기",
+  "summary": "시트 분리와 단독 컷의 역할",
+  "slides": [
+    {
+      "title": "시트와 단독 컷",
+      "template": "illustration",
+      "illustration": "/lectures/images/session4/sheets/sheet-method.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "외형 기준",
+          "body": "인물 · 소품 · 로케이션을 별도 시트로 보관"
+        },
+        {
+          "n": 2,
+          "head": "한 시트의 주체",
+          "body": "남성과 반려견 각각 별도 시트"
+        },
+        {
+          "n": 3,
+          "head": "영상 입력",
+          "body": "시트 전체 대신 잘라 낸 단독 컷"
+        },
+        {
+          "n": 4,
+          "head": "참조 역할",
+          "body": "인물은 외형 · 소품은 형태 · 공원은 지형·배치·빛"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/h3-prompt-writing/references/ref-en.txt",
+            "text": "공식 참조 지침"
+          }
+        ]
+      },
+      "id": "art-4-2-1"
+    }
+  ]
+}

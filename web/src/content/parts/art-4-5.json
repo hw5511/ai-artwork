@@ -1,0 +1,48 @@
+{
+  "id": "art-4-5",
+  "title": "소품 시트 만들기",
+  "summary": "같은 리드줄의 전체와 디테일",
+  "slides": [
+    {
+      "title": "빨간 리드줄 시트",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session4/sheets/leash-sheet.png"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "같은 소품",
+          "body": "빨간 나일론 · 손잡이 고리 · 은색 클립"
+        },
+        {
+          "n": 2,
+          "head": "네 컷",
+          "body": "전체 · 손잡이 · 클립 · 나일론 질감"
+        },
+        {
+          "n": 3,
+          "head": "프롬프트의 위치",
+          "body": "소품의 위치와 멈춰 있는 구간 명시"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "session4/rules.md와 park_walk.png를 읽고 Codex 내장 이미지 생성으로 빨간 리드줄 소품 시트를 session4/sheets/leash.png에 만들어줘. Comfy나 유료 이미지 API는 쓰지 마.\n하나의 빨간 납작한 나일론 리드줄, 한쪽 손잡이 고리와 반대쪽 은색 금속 클립. 2행 2열: 좌상 전체를 느슨한 곡선으로 펼친 모습, 우상 손잡이 근접, 좌하 금속 클립 근접, 우하 나일론 질감 근접. 흰 배경·균일 조명. 사람·개·목걸이·글자 제외.\n배치가 안 맞으면 단독 컷을 만든 뒤 코드로 조립해줘. 이미지를 열어서 같은 리드줄인지 확인하고 경로를 알려줘.",
+            "desc": "실습 프롬프트"
+          },
+          {
+            "kind": "link",
+            "href": "https://learn.chatgpt.com/docs/image-generation",
+            "text": "Codex 내장 이미지 생성"
+          }
+        ]
+      },
+      "id": "art-4-5-1"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "art-3-8",
+  "title": "Comfy 공식 CLI를 스킬로 저장",
+  "slides": [
+    {
+      "title": "Comfy 공식 CLI 스킬 저장",
+      "template": "illustration",
+      "illustration": "/illustrations/comfy-cli-skill.svg",
+      "notes": [
+        {
+          "n": 1,
+          "head": "스킬 작성",
+          "body": "실습 원문 입력 · 현재 폴더에 저장"
+        },
+        {
+          "n": 2,
+          "head": "호출 대안",
+          "body": "$skill-creator로 교체 · 나머지 문장 유지"
+        },
+        {
+          "n": 3,
+          "head": "저장 확인",
+          "body": "완료 응답의 SKILL.md 경로"
+        },
+        {
+          "n": 4,
+          "head": "PC 실측",
+          "body": "두 호출 모두 comfy-cli/SKILL.md 작성 · 앱의 / 호출 해석 미검증"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재폴더에 저장해줘",
+            "desc": "실습 프롬프트"
+          },
+          {
+            "kind": "link",
+            "href": "https://learn.chatgpt.com/docs/build-skills",
+            "text": "스킬 호출과 저장 위치"
+          }
+        ]
+      },
+      "id": "art-3-8-1"
+    }
+  ],
+  "summary": "Comfy 공식 CLI 지침을 현재 폴더에 저장"
+}

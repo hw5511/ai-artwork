@@ -1,0 +1,88 @@
+{
+  "id": "art-1-1",
+  "title": "Comfy 가입",
+  "slides": [
+    {
+      "title": "Comfy Cloud 로그인",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session1/step1/comfy-cloud-login.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 24,
+            "y": 8
+          },
+          {
+            "n": 2,
+            "x": 60,
+            "y": 39
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Comfy Cloud",
+          "body": "브라우저의 ComfyUI · 계정에 워크플로우·결과 연결"
+        },
+        {
+          "n": 2,
+          "head": "Sign up here",
+          "body": "가입 화면으로 이동"
+        }
+      ],
+      "id": "art-1-1-1"
+    },
+    {
+      "title": "Comfy 계정",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session1/step1/comfy-cloud-signup.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 15,
+            "y": 58
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "가입 방법",
+          "body": "Google · GitHub · 이메일 중 선택"
+        },
+        {
+          "n": 2,
+          "head": "내 계정",
+          "body": "본인의 계정 정보 직접 입력"
+        },
+        {
+          "n": 3,
+          "head": "캔버스",
+          "body": "로그인 뒤 ComfyUI 작업 화면 확인"
+        },
+        {
+          "n": 4,
+          "head": "로그인 반복",
+          "body": "새로고침 · 같은 계정 재로그인 · 조직 계정 제한 확인"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://cloud.comfy.org/",
+            "text": "Comfy Cloud"
+          }
+        ]
+      },
+      "id": "art-1-1-2"
+    }
+  ],
+  "summary": "Comfy 계정 생성과 Cloud 작업 화면 진입"
+}

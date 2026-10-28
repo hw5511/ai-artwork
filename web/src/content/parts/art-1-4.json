@@ -1,0 +1,113 @@
+{
+  "id": "art-1-4",
+  "title": "모델 바꾸기 - SDXL base와 Illustrious 비교",
+  "slides": [
+    {
+      "title": "SDXL base · Illustrious",
+      "template": "table",
+      "columns": [
+        "항목",
+        "SDXL base",
+        "Illustrious"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "종류",
+            "범용 베이스",
+            "SDXL 계열 일러스트"
+          ]
+        },
+        {
+          "cells": [
+            "모델 파일",
+            "sd_xl_base_1.0.safetensors",
+            "wai-illustrious-sdxl.safetensors"
+          ]
+        },
+        {
+          "cells": [
+            "이미지 크기",
+            "1024×1024",
+            "1024×1024"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "모델 차이",
+          "body": "같은 입력과 설정으로 비교"
+        },
+        {
+          "n": 2,
+          "head": "설정 확인",
+          "body": "seed · steps · cfg · sampler · scheduler"
+        },
+        {
+          "n": 3,
+          "head": "실행 순서",
+          "body": "JSON 열기 · Run 또는 Queue · Save Image 비교"
+        }
+      ],
+      "id": "art-1-4-1",
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "A man in his 30s walking a golden retriever on a leash along a tree-lined path in a city park, sunny afternoon, natural light, photo",
+            "desc": "모델 비교 공통 프롬프트"
+          },
+          {
+            "kind": "copy",
+            "value": "30대 남성이 화창한 오후, 나무가 늘어선 도심 공원 길에서 골든리트리버의 목줄을 잡고 산책하는 모습. 자연광의 사진.",
+            "desc": "한국어 뜻"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session1/step4/sdxl_vs_illustrious.json",
+            "text": "SDXL base와 Illustrious 비교 워크플로우 다운로드 (.json)"
+          }
+        ]
+      }
+    },
+    {
+      "title": "기존 수업 예시",
+      "template": "compare",
+      "left": {
+        "label": "SDXL base",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session1/step6/sdxl_1024.png"
+        }
+      },
+      "right": {
+        "label": "WAI Illustrious",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session1/step6/wai_illustrous.png"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "서로 다른 조건",
+          "body": "프롬프트·시드가 다른 기존 예시"
+        },
+        {
+          "n": 2,
+          "head": "비교 기준",
+          "body": "구도 · 질감 · 선 표현 · 색감"
+        },
+        {
+          "n": 3,
+          "head": "동일 조건 실습",
+          "body": "다운로드 워크플로우에서 같은 프롬프트·시드 적용"
+        }
+      ],
+      "id": "art-1-4-2"
+    }
+  ],
+  "summary": "같은 프롬프트·설정에서 모델 표현 비교"
+}

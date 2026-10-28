@@ -1,0 +1,16 @@
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+*.tsbuildinfo
+*.local
+*.log
+
+# Copies staged by prepare-assets.mjs; edit repository originals
+public/lectures/
+public/downloads/
+
+# Local editor files
+.vscode/
+.idea/
+.DS_Store

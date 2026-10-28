@@ -1,11 +1,12 @@
+# Build output and local review artifacts
+web/node_modules/
+web/dist/
+web/public/lectures/
+web/public/downloads/
+.review/
+*.tsbuildinfo
 
-# frontend source build artifacts
-frontend/node_modules/
-frontend/dist/
-frontend/.env
-frontend/.env.*
-
-# secrets - never commit (repo is public)
+# Secrets
 .env
 .env.*
 !.env.example
