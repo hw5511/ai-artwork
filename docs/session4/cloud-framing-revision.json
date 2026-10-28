@@ -1,0 +1,59 @@
+{
+  "status": "clip1_reframed_preview_passed_awaiting_explicit_generation_approval",
+  "skills": [
+    "h3-prompt-writing",
+    "comfy-cli"
+  ],
+  "checks": {
+    "six_sections_and_shot_notation": "passed",
+    "forbidden_terms_absent_in_entire_clip1_english_prompt": true,
+    "detailed_description_word_count": 386,
+    "prompt_exact_match_in_api_and_preview": true,
+    "api_graph_changes_limited_to_prompt": true,
+    "references_in_picture_order": [
+      "session4/views/man.png",
+      "session4/views/leash.png",
+      "session4/views/park.png"
+    ],
+    "clip2_clip3_prompts_and_reference_files_unchanged": true,
+    "clip2_clip3_shot_entries_and_script_rows_unchanged": true,
+    "protected_files_sha256_checked": 35
+  },
+  "prompt_sha256": "3f4ab330e1fcd72925b132d7bbf0f15c33835f97f7cf9a22ad9ada6c884fc1e6",
+  "workflow_sha256": "754034fe614bbf60572a8f37c13b36e203ea7e942415418e01c5d41b8b9236d3",
+  "cli_preview_command": "comfy --json run --workflow session4/cloud/clip1.api.json --where cloud --print-prompt",
+  "cli_preview_status": "preview",
+  "pricing": {
+    "checked_date": "2026-10-29",
+    "source": "https://docs.comfy.org/tutorials/partner-nodes/pricing",
+    "node": "MiniMax H3 Reference to Video",
+    "model": "MiniMax H3",
+    "resolution": "768P",
+    "duration_sec": 10,
+    "requests": 1,
+    "credits_per_second": 27.16,
+    "image_count": 3,
+    "extra_image_credits": 0,
+    "new_estimated_credits": 271.6,
+    "basis": "Official published unit rate calculation; not a CLI numeric quote."
+  },
+  "this_revision": {
+    "login_performed": false,
+    "upload_performed": false,
+    "jobs_submitted": false,
+    "credits_spent": 0,
+    "generation_approval_received": false
+  },
+  "changed_existing_files": [
+    "session4/cloud/blueprints/clip1.yaml",
+    "session4/cloud/clip1.api.json",
+    "session4/cloud/clip1.preview.json",
+    "session4/cloud/manifest.json",
+    "session4/cloud/verification.json",
+    "session4/prompts/clip1.txt",
+    "session4/script.md",
+    "session4/shots.json"
+  ],
+  "backup_directory": "session4/revisions/clip1-framing-20261029/original",
+  "limitations": "Input graph preview only; no cloud asset-access, execution or regenerated-video quality check."
+}

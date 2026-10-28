@@ -21,6 +21,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import '../../styles/session3.css'
+import '../../styles/session4.css'
 
 const LecturesMain = () => {
   const { sessionId, stepId } = useParams<{ sessionId: string; stepId: string }>()
@@ -178,7 +179,7 @@ const LecturesMain = () => {
 
       {/* 콘텐츠 영역 */}
       <Box
-        className={sessionId === 'session3' ? 's3-layout' : undefined}
+        className={sessionId === 'session3' || sessionId === 'session4' ? 's3-layout' : undefined}
         sx={{
           display: 'flex',
           flexDirection: 'row',

@@ -119,8 +119,64 @@ export const TOC_DATA: Session[] = [
   },
   {
     "id": "session4",
-    "title": "4회차",
-    "steps": []
+    "title": "4회차 시트로 일관성 있는 30초 영상 만들기",
+    "steps": [
+      {
+        "id": "step1",
+        "title": "3회차 작업 폴더 다시 열기",
+        "file": "session4/step1-recap.md"
+      },
+      {
+        "id": "step2",
+        "title": "시트로 같은 모습 유지하기",
+        "file": "session4/step2-sheet-method.md"
+      },
+      {
+        "id": "step3",
+        "title": "Codex와 30초 대본 쓰기",
+        "file": "session4/step3-script.md"
+      },
+      {
+        "id": "step4",
+        "title": "인물 시트 만들기",
+        "file": "session4/step4-characters.md"
+      },
+      {
+        "id": "step5",
+        "title": "소품 시트 만들기",
+        "file": "session4/step5-prop.md"
+      },
+      {
+        "id": "step6",
+        "title": "로케이션 시트 만들기",
+        "file": "session4/step6-location.md"
+      },
+      {
+        "id": "step7",
+        "title": "단독 컷으로 잘라 쓰기",
+        "file": "session4/step7-single-views.md"
+      },
+      {
+        "id": "step8",
+        "title": "MiniMax 공식 스킬 설치하기",
+        "file": "session4/step8-minimax-skill.md"
+      },
+      {
+        "id": "step9",
+        "title": "타임스탬프 프롬프트 쓰기",
+        "file": "session4/step9-timestamps.md"
+      },
+      {
+        "id": "step10",
+        "title": "비용 확인 후 Comfy Cloud에서 생성하기",
+        "file": "session4/step10-cloud.md"
+      },
+      {
+        "id": "step11",
+        "title": "30초로 이어 보고 비교하기",
+        "file": "session4/step11-join.md"
+      }
+    ]
   },
   {
     "id": "session5",

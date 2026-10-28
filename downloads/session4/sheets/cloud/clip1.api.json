@@ -1,0 +1,73 @@
+{
+  "151": {
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "load man.png"
+    },
+    "inputs": {
+      "image": "session4/views/man.png"
+    }
+  },
+  "202": {
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "load leash.png"
+    },
+    "inputs": {
+      "image": "session4/views/leash.png"
+    }
+  },
+  "253": {
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "load park.png"
+    },
+    "inputs": {
+      "image": "session4/views/park.png"
+    }
+  },
+  "104": {
+    "inputs": {
+      "model": "MiniMax H3",
+      "seed": 42,
+      "watermark": false,
+      "model.prompt": "subject_definitions:\n<Subject 1> is the man whose appearance comes from <Picture 1> (session4/views/man.png): the same face, skin tone, short parted black hair, clean-shaven features, open green field jacket with flap pockets and cream crew-neck T-shirt. Transfer his appearance into the close compositions below rather than copying the reference pose, sheet layout or white background.\n<Subject 2> is the red flat-strap leash whose shape comes from <Picture 2> (session4/views/leash.png), shown only as one loop handle held in the anatomical left hand and a slack red flat strip exiting the bottom edge. Transfer the loop shape, strap width, red colour and material into [Shot 2].\n<Subject 3> is the park from <Picture 3> (session4/views/park.png), supplying terrain, spatial layout and afternoon light: grey paved path, roadside grass and soil, flanking trees, dark lamps, stone bench on the left and distant city background. Preserve these spatial relationships, horizon direction, light direction and leaf shadows within the close crops. These pictures supply reference attributes rather than literal first frames or keyframes.\n\nsummary:\n[reference generation] A 10-second reference-to-video clip with two five-second shots shows <Subject 1> stopping, lowering his gaze and waiting in <Subject 3>. [Shot 1] is a fixed close-up containing only his face, shoulders and chest; [Shot 2] shows his waist, left hand and <Subject 2> on the same frontal axis. <Picture 1> supplies his appearance, <Picture 2> the visible loop and strip shape, and <Picture 3> the park terrain, layout and light. The only internal cut is at 00:05.000; the clip ends with a hard boundary at 00:10.000. Only natural park sounds are audible.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1], [Shot 2]): fully_preserved - retain the appearance defined by <Picture 1> in the visible face, clothing and hand; use the requested close crops and new performance.\n<Subject 2> (appears in [Shot 2]): fully_preserved - retain the loop shape, red flat strip, width and material defined by <Picture 2>; the anatomical left hand holds the single loop, and the slack strip exits the bottom edge.\n<Subject 3> (appears in [Shot 1], [Shot 2]): fully_preserved - retain the terrain, landmark relationships, horizon direction and afternoon light defined by <Picture 3>; reveal only the background portions within each tight crop on the same camera axis.\n\ndetailed_description:\nUse a naturalistic observational style with warm afternoon daylight and soft leaf shadows, retaining the references' rendering and material appearance. The clip lasts exactly 10 seconds. Both shots use fixed framing, fixed focus and a stationary camera. The single internal hard cut takes place at 00:05.000, with no transition time, subtitles or visible text.\n[Shot 1] Start immediately in a tight frontal close-up of <Subject 1> from <Picture 1>, with only his face, shoulders and chest visible. His face sits slightly left of centre, with narrow space beside his shoulders; the lower edge crosses his chest. Match his short parted black hair, clean-shaven features, green field jacket and cream shirt. Hold this crop from the first frame through 00:05.000. The small background areas contain softly blurred tree colour and afternoon light from <Subject 3>, preserving <Picture 3>'s spatial orientation and light direction. From 00:00.000 to 00:03.000, a small residual shoulder sway gradually settles to express the completion of his stop. His face stays at the same position and scale. From 00:03.000 to 00:04.000, his eyes shift gently toward the lower right and his chin dips slightly, expressing looking down. From 00:04.000 to 00:05.000, he is stationary: lowered gaze, chin, shoulders and chest hold their settled positions. Keep the camera locked throughout, with the face and chest filling the composition. The final natural footfall fades during the stopping beat; wind, leaf rustle and distant birds remain.\n[Shot 2] At 00:05.000, hard cut to a fixed close-up centred on <Subject 1>'s waist and anatomical left hand at his screen-right hip, using the same frontal axis. Only his jacket hem, cream shirt, dark denim at the waist, left hand and the visible portion of <Subject 2> occupy the foreground. The hand holds one red loop handle matching <Picture 2>; a single slack red flat strip descends from it and exits the bottom edge near the right side. Its visible curve stays loose. From 00:05.000 through 00:10.000, he remains stationary, waiting: the waist, hand, held loop and red strip are motionless. Keep their positions and scale fixed through the last frame. Soft background colour and light remain consistent with <Subject 3> from <Picture 3>, with the same spatial orientation and afternoon illumination. Wind, leaves and distant birds continue seamlessly across the cut and through the hard boundary at exactly 00:10.000.\n\noverall_soundscape:\nOnly natural park wind, leaf rustle, distant birds and the final on-location footfall during the stopping beat in [Shot 1]. Keep the park ambience continuous across the cut and adjoining clip boundary, without an audio fade or restart. No dialogue, narration, human voices, prop foley or added effects.\n\nnon_diegetic_music:\nN/A\n",
+      "model.resolution": "768P",
+      "model.ratio": "16:9",
+      "model.duration": 10,
+      "model.reference_images.image_1": [
+        "151",
+        0
+      ],
+      "model.reference_images.image_2": [
+        "202",
+        0
+      ],
+      "model.reference_images.image_3": [
+        "253",
+        0
+      ]
+    },
+    "class_type": "MinimaxHailuo03ReferenceNode",
+    "_meta": {
+      "title": "MiniMax H3 Reference to Video"
+    }
+  },
+  "305": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "filename_prefix": "clip1",
+      "format": "mp4",
+      "format.codec": "h264",
+      "format.codec.encoding": "auto",
+      "video": [
+        "104",
+        0
+      ]
+    }
+  },
+  "_meta": {
+    "schema": "compose/1",
+    "blueprint": "C:\\Users\\woohee\\AppData\\Local\\Temp\\artwork-s4-rehearsal-20261028\\work\\session4\\cloud\\blueprints\\clip1.yaml"
+  }
+}

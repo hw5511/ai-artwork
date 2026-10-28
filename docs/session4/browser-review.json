@@ -1,0 +1,513 @@
+{
+  "profile": "test",
+  "member": "codex",
+  "desktop": [
+    {
+      "step": 1,
+      "title": "3회차 작업 폴더 다시 열기",
+      "viewport": 1920,
+      "bodyWidth": 1920,
+      "height": 1228,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [
+        {
+          "src": "./lectures/images/session4/sheets/park-source.png",
+          "loaded": true
+        }
+      ],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 2,
+      "title": "시트로 같은 모습 유지하기",
+      "viewport": 1920,
+      "bodyWidth": 1920,
+      "height": 1131,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [
+        {
+          "src": "./lectures/images/session4/sheets/sheet-method.svg",
+          "loaded": true
+        }
+      ],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 3,
+      "title": "Codex와 30초 대본 쓰기",
+      "viewport": 1920,
+      "bodyWidth": 1920,
+      "height": 1271,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 4,
+      "title": "인물 시트 만들기",
+      "viewport": 1920,
+      "bodyWidth": 1920,
+      "height": 1223,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [
+        {
+          "src": "./lectures/images/session4/sheets/man-sheet.png",
+          "loaded": true
+        },
+        {
+          "src": "./lectures/images/session4/sheets/dog-sheet.png",
+          "loaded": true
+        }
+      ],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 5,
+      "title": "소품 시트 만들기",
+      "viewport": 1920,
+      "bodyWidth": 1920,
+      "height": 1197,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [
+        {
+          "src": "./lectures/images/session4/sheets/leash-sheet.png",
+          "loaded": true
+        }
+      ],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 6,
+      "title": "로케이션 시트 만들기",
+      "viewport": 1920,
+      "bodyWidth": 1920,
+      "height": 1241,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [
+        {
+          "src": "./lectures/images/session4/sheets/park-sheet.png",
+          "loaded": true
+        }
+      ],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 7,
+      "title": "단독 컷으로 잘라 쓰기",
+      "viewport": 1920,
+      "bodyWidth": 1920,
+      "height": 1191,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [
+        {
+          "src": "./lectures/images/session4/sheets/man.png",
+          "loaded": true
+        },
+        {
+          "src": "./lectures/images/session4/sheets/dog.png",
+          "loaded": true
+        },
+        {
+          "src": "./lectures/images/session4/sheets/leash.png",
+          "loaded": true
+        },
+        {
+          "src": "./lectures/images/session4/sheets/park.png",
+          "loaded": true
+        }
+      ],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 8,
+      "title": "MiniMax 공식 스킬 설치하기",
+      "viewport": 1920,
+      "bodyWidth": 1920,
+      "height": 1131,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 9,
+      "title": "타임스탬프 프롬프트 쓰기",
+      "viewport": 1920,
+      "bodyWidth": 1920,
+      "height": 1380,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 10,
+      "title": "비용 확인 후 Comfy Cloud에서 생성하기",
+      "viewport": 1920,
+      "bodyWidth": 1920,
+      "height": 1535,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 11,
+      "title": "30초로 이어 보고 비교하기",
+      "viewport": 1920,
+      "bodyWidth": 1920,
+      "height": 1671,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [],
+      "broken": 0,
+      "clipped": []
+    }
+  ],
+  "mobile": [
+    {
+      "step": 1,
+      "title": "3회차 작업 폴더 다시 열기",
+      "viewport": 390,
+      "bodyWidth": 390,
+      "height": 1465,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [
+        {
+          "src": "./lectures/images/session4/sheets/park-source.png",
+          "loaded": true
+        }
+      ],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 2,
+      "title": "시트로 같은 모습 유지하기",
+      "viewport": 390,
+      "bodyWidth": 390,
+      "height": 844,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [
+        {
+          "src": "./lectures/images/session4/sheets/sheet-method.svg",
+          "loaded": true
+        }
+      ],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 3,
+      "title": "Codex와 30초 대본 쓰기",
+      "viewport": 390,
+      "bodyWidth": 390,
+      "height": 1816,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 4,
+      "title": "인물 시트 만들기",
+      "viewport": 390,
+      "bodyWidth": 390,
+      "height": 1772,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [
+        {
+          "src": "./lectures/images/session4/sheets/man-sheet.png",
+          "loaded": true
+        },
+        {
+          "src": "./lectures/images/session4/sheets/dog-sheet.png",
+          "loaded": true
+        }
+      ],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 5,
+      "title": "소품 시트 만들기",
+      "viewport": 390,
+      "bodyWidth": 390,
+      "height": 1529,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [
+        {
+          "src": "./lectures/images/session4/sheets/leash-sheet.png",
+          "loaded": true
+        }
+      ],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 6,
+      "title": "로케이션 시트 만들기",
+      "viewport": 390,
+      "bodyWidth": 390,
+      "height": 1647,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [
+        {
+          "src": "./lectures/images/session4/sheets/park-sheet.png",
+          "loaded": true
+        }
+      ],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 7,
+      "title": "단독 컷으로 잘라 쓰기",
+      "viewport": 390,
+      "bodyWidth": 390,
+      "height": 1751,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [
+        {
+          "src": "./lectures/images/session4/sheets/man.png",
+          "loaded": true
+        },
+        {
+          "src": "./lectures/images/session4/sheets/dog.png",
+          "loaded": true
+        },
+        {
+          "src": "./lectures/images/session4/sheets/leash.png",
+          "loaded": true
+        },
+        {
+          "src": "./lectures/images/session4/sheets/park.png",
+          "loaded": true
+        }
+      ],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 8,
+      "title": "MiniMax 공식 스킬 설치하기",
+      "viewport": 390,
+      "bodyWidth": 390,
+      "height": 1451,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 9,
+      "title": "타임스탬프 프롬프트 쓰기",
+      "viewport": 390,
+      "bodyWidth": 390,
+      "height": 2024,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 10,
+      "title": "비용 확인 후 Comfy Cloud에서 생성하기",
+      "viewport": 390,
+      "bodyWidth": 390,
+      "height": 2349,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [],
+      "broken": 0,
+      "clipped": []
+    },
+    {
+      "step": 11,
+      "title": "30초로 이어 보고 비교하기",
+      "viewport": 390,
+      "bodyWidth": 390,
+      "height": 1556,
+      "font": "Pretendard, sans-serif",
+      "fontReady": true,
+      "images": [],
+      "broken": 0,
+      "clipped": []
+    }
+  ],
+  "visual_review": "All 11 pages opened and screenshots inspected at 1920×1080 and 390px; final video and shot center frames inspected separately.",
+  "interactions": {
+    "copy": {
+      "matches": true,
+      "characters": 593,
+      "expectedCharacters": 591
+    },
+    "pendingSessions": 4,
+    "sidebarRoute": "30초로 이어 보고 비교하기",
+    "recoveryVisible": true,
+    "recoveryOverflow": false,
+    "commands": 4,
+    "commandsOverflow": false,
+    "framingVisible": true,
+    "framingOverflow": false
+  },
+  "rendered_prompts": [
+    {
+      "step": 1,
+      "name": "00-recap",
+      "matches": true,
+      "characters": 183
+    },
+    {
+      "step": 3,
+      "name": "01-script",
+      "matches": true,
+      "characters": 590
+    },
+    {
+      "step": 4,
+      "name": "02-characters",
+      "matches": true,
+      "characters": 452
+    },
+    {
+      "step": 5,
+      "name": "03-prop",
+      "matches": true,
+      "characters": 330
+    },
+    {
+      "step": 6,
+      "name": "04-location",
+      "matches": true,
+      "characters": 389
+    },
+    {
+      "step": 7,
+      "name": "05-crop",
+      "matches": true,
+      "characters": 326
+    },
+    {
+      "step": 7,
+      "name": "05b-face",
+      "matches": true,
+      "characters": 454
+    },
+    {
+      "step": 8,
+      "name": "06-install",
+      "matches": true,
+      "characters": 373
+    },
+    {
+      "step": 9,
+      "name": "07-timestamps",
+      "matches": true,
+      "characters": 658
+    },
+    {
+      "step": 10,
+      "name": "08-cloud",
+      "matches": true,
+      "characters": 864
+    },
+    {
+      "step": 10,
+      "name": "08b-framing",
+      "matches": true,
+      "characters": 773
+    },
+    {
+      "step": 11,
+      "name": "09-join",
+      "matches": true,
+      "characters": 439
+    }
+  ],
+  "media_and_downloads": {
+    "media": {
+      "duration": 30,
+      "width": 1280,
+      "height": 720,
+      "currentTime": 1.547808,
+      "error": null,
+      "readyState": 4,
+      "seekTime": 27.5
+    },
+    "errors": [],
+    "assets": [
+      {
+        "path": "/ai-artwork/downloads/session2/step1/park_walk.png",
+        "status": 200,
+        "bytes": 2481561
+      },
+      {
+        "path": "/ai-artwork/downloads/session4/sheets/reference/clip1.txt",
+        "status": 200,
+        "bytes": 5257
+      },
+      {
+        "path": "/ai-artwork/downloads/session4/sheets/reference/clip2.txt",
+        "status": 200,
+        "bytes": 5490
+      },
+      {
+        "path": "/ai-artwork/downloads/session4/sheets/reference/clip3.txt",
+        "status": 200,
+        "bytes": 5586
+      },
+      {
+        "path": "/ai-artwork/downloads/session4/sheets/reference/clip1-before-framing.txt",
+        "status": 200,
+        "bytes": 5302
+      },
+      {
+        "path": "/ai-artwork/downloads/session4/sheets/demo/park-30s.mp4",
+        "status": 200,
+        "bytes": 19372210
+      },
+      {
+        "path": "/ai-artwork/downloads/session4/sheets/demo/instructor-clips.zip",
+        "status": 200,
+        "bytes": 23090552
+      },
+      {
+        "path": "/ai-artwork/downloads/session4/sheets/practice-materials.zip",
+        "status": 200,
+        "bytes": 17378852
+      },
+      {
+        "path": "/ai-artwork/downloads/session4/sheets/demo/production.txt",
+        "status": 200,
+        "bytes": 2035
+      }
+    ]
+  }
+}

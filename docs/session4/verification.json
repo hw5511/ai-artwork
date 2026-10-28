@@ -1,0 +1,115 @@
+{
+  "checked_at_utc": "2026-10-28T18:48:28.460870+00:00",
+  "source": "Instructor PC via render-hub, not Comfy Cloud generation",
+  "hub_jobs": [
+    2492,
+    2437,
+    2438
+  ],
+  "rejected_visual_review_jobs": [
+    2436,
+    2453
+  ],
+  "local_model": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+  "text_encoder": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+  "vaes": [
+    "minimax_h3_video_vae_fp16.safetensors",
+    "minimax_h3_audio_vae_fp32.safetensors"
+  ],
+  "lora": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+  "steps": 8,
+  "lora_strength": 0.85,
+  "requested_frames": 245,
+  "fps": 24,
+  "clips": [
+    {
+      "id": 1,
+      "hub_job": 2492,
+      "seed": 4101,
+      "workflow": "clip1-framing.hub.json",
+      "prompt_sha256_utf8_lf": "5a318ea18b9b080246a9adbd22feff13088af075fa73a0dd56cfb951b00b4140",
+      "video_sha256": "156595a8cdc06f4a00ce46f6f63b8d42eea751fd8b3231f57696d6e9842ce9f7",
+      "raw_duration_seconds": 10.833333,
+      "raw_frames": 260,
+      "references": [
+        "man.png",
+        "leash.png",
+        "park.png"
+      ]
+    },
+    {
+      "id": 2,
+      "hub_job": 2437,
+      "seed": 4102,
+      "workflow": "clip2.hub.json",
+      "prompt_sha256_utf8_lf": "10e5e557d666c6ddee4e1bc4f3ee9b100f2116cd06330f547562a12b9abf98d6",
+      "video_sha256": "3d0407dc76944d47725eb66d57652c8fcb1f5cf52eebcc055d0154f6575834d6",
+      "raw_duration_seconds": 10.833333,
+      "raw_frames": 260,
+      "references": [
+        "dog.png",
+        "leash.png",
+        "park.png"
+      ]
+    },
+    {
+      "id": 3,
+      "hub_job": 2438,
+      "seed": 4103,
+      "workflow": "clip3.hub.json",
+      "prompt_sha256_utf8_lf": "08551b8fd030ba8238e8759b914afbda8b791e0ada1f0c5fafcb06275b7dc56a",
+      "video_sha256": "5a2a0d4a483e34621a6d93a546fa7721130fc7266dd6e8eab10609904787e7a9",
+      "raw_duration_seconds": 10.833333,
+      "raw_frames": 260,
+      "references": [
+        "man.png",
+        "leash.png",
+        "park.png"
+      ]
+    }
+  ],
+  "visual_review": {
+    "clip1_unreferenced_dog_removed_by_framing_revision": true,
+    "clip1_requested_cut_seconds": 5,
+    "clip1_observed_cut_seconds": 6.541667,
+    "remaining_checks": [
+      "clip2 partial hand at left edge",
+      "clip3 blue portion at leash end around 27.5–28s",
+      "background and light differences between shots; complete continuity not established"
+    ]
+  },
+  "final": {
+    "file": "downloads/session4/sheets/demo/park-30s.mp4",
+    "sha256": "6f1a4af45980736e79613260567c84dd029f531c89e3fd5cbacb51a44850e057",
+    "duration_seconds": 30.0,
+    "frames": 720,
+    "width": 1280,
+    "height": 720,
+    "video_codec": "h264",
+    "audio_codec": "aac"
+  },
+  "cloud": {
+    "cli_version": "1.22.0",
+    "template": "api_minimax_h3_r2v",
+    "node": "MinimaxHailuo03ReferenceNode",
+    "model": "MiniMax H3",
+    "resolution": "768P",
+    "duration_per_clip": 10,
+    "references_per_clip": 3,
+    "preview_passed": 3,
+    "offline_validation_passed": 3,
+    "credits_per_second": 27.16,
+    "total_estimate": 814.8,
+    "credits_spent": 0,
+    "login_performed": false,
+    "upload_performed": false,
+    "submission_performed": false,
+    "framing_revision": {
+      "preview_passed": true,
+      "offline_validation_passed": true,
+      "additional_request_estimate": 271.6,
+      "credits_spent": 0,
+      "protected_files_sha256_checked": 35
+    }
+  }
+}

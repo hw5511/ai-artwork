@@ -901,6 +901,262 @@ comfy 공식 cli에 관한 걸 /skill-creator 로 스킬로 현재폴더에 저�
 <nav class="s3-pagination"><a href="#/lectures/session3/step8">이전</a></nav>
 </article>
 `,
+  "session4/step1-recap.md": `<article class="s3-lesson s4-lesson">
+<div class="s3-meta">AI 아트웍 · 4회차 · 2026.10.29 목 · 18:00–18:05</div>
+
+# 3회차 작업 폴더 다시 열기
+
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span></aside><div class="s3-work"><div class="s4-response"><div class="s4-recap"><div><img class="" src="./lectures/images/session4/sheets/park-source.png" alt="2회차의 초록 재킷 남성과 골든리트리버"/></div><div><h2>ai-artwork</h2><p>.agents/skills/comfy-cli/SKILL.md</p><p>comfy-cli 1.22.0</p><p>session4/</p></div></div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 앱 목업 · 본문은 PC 실측 결과 재현 · 데스크톱 앱 직접 조작 미검증</figcaption></figure><div class="s3-captions"><div><h2>같은 작업 폴더</h2><p>3회차 Comfy 스킬 · GPT-6.1 Sol · Full access</p></div><div><h2>실제 파일 확인</h2><p>대화 뒤 작업 폴더에서 결과 확인</p></div></div><p class="s3-task"><a href="./downloads/session2/step1/park_walk.png" download>2회차 원본 저장 · park_walk.png</a> · 기존 작업 폴더 바로 아래</p>
+<div class="s3-prompt">
+
+\`\`\`text
+3회차에서 쓰던 작업 폴더를 다시 열었어. 현재 작업 폴더 경로와 .agents/skills 안의 Comfy 스킬 이름·SKILL.md 경로를 확인해줘. Comfy CLI 버전과 cloud 명령 도움말까지만 확인하고, 로그인·계정 조회·업로드·생성·크레딧 사용은 하지 마. 오늘 만든 파일은 session4 아래에 저장할 거야.
+\`\`\`
+
+</div>
+<p class="s3-note">스킬 이름은 저장한 이름 기준 · 없으면 3회차 Step 9의 .agents/skills 경로 확인</p>
+
+<div class="s3-footer"><span>01 / 11</span><span><a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noreferrer">프로젝트 스킬</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session4/step2">다음 · 시트로 같은 모습 유지하기</a></nav>
+</article>
+`,
+  "session4/step10-cloud.md": `<article class="s3-lesson s4-lesson">
+<div class="s3-meta">AI 아트웍 · 4회차 · 2026.10.29 목 · 19:25–19:45</div>
+
+# 비용 확인 후 Comfy Cloud에서 생성하기
+
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span></aside><div class="s3-work"><div class="s4-response"><div class="s4-cost"><div><h2>예상 크레딧</h2><strong>814.8</strong><p>27.16 × 10초 × 3클립</p></div><div><p>클립당 271.6 · 768P · 참조 3장<br/>가격표로 계산한 추정값<br/>미리보기: status = preview<br/>업로드·제출·크레딧 사용 없음</p></div></div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 앱 목업 · 본문은 PC 실측 결과 재현 · 데스크톱 앱 직접 조작 미검증</figcaption></figure>
+<div class="s3-prompt">
+
+\`\`\`text
+작업 폴더에 저장한 Comfy 스킬과 session4/prompts/references.json을 읽고 Comfy Cloud의 MiniMax H3 R2V 클립 3개를 준비해줘. 지금은 견적과 제출 전 미리보기까지만. 로그인·인증·업로드·영상 제출·크레딧 사용은 하지 마.
+공식 템플릿 api_minimax_h3_r2v를 Comfy CLI로 받아 API 워크플로 3개를 session4/cloud에 저장해줘. MinimaxHailuo03ReferenceNode, MiniMax H3, 768P, 16:9, 10초, 클립당 참조 3장. H3 Max나 로컬 모델 템플릿으로 바꾸지 마. 프롬프트와 참조 순서는 references.json 그대로. SaveVideo의 format.codec도 확인해줘.
+공식 파트너 가격표 https://docs.comfy.org/tutorials/partner-nodes/pricing 에서 단가를 확인하고 클립당·총 예상 크레딧을 먼저 보여줘. 참고값은 초당 27.16크레딧, 30초 약 815크레딧. 재생성은 별도 비용. CLI 미리보기에 숫자 견적이 없으면 가격표로 계산한 값임을 표시해줘.
+comfy run의 --where cloud --print-prompt로 세 워크플로의 입력만 검증하고 멈춰줘. 비용 확인 뒤 내가 생성 승인을 주면, 단독 컷 업로드 응답의 cloud_name을 LoadImage에 반영하고 미리보기를 다시 확인한 후 --allow-spend로 제출할 계획까지 알려줘. 완료 후에는 jobs wait와 download로 session4/clips/clip1.mp4, clip2.mp4, clip3.mp4를 받을 예정이야. 오류 1026이면 원문 오류를 보여주고 자동 재시도는 하지 마.
+\`\`\`
+
+</div>
+
+<details class="s4-details"><summary>견적 확인 뒤 · 실제 제출·회수 명령</summary><div class="s4-command-list"><p>1. 단독 컷 업로드 · 반환된 cloud_name을 LoadImage에 반영</p><pre><code class="language-powershell">comfy --json upload session4/views/man.png session4/views/leash.png session4/views/park.png --where cloud --no-overwrite</code></pre><p>2. 클립별 미리보기 · 프롬프트·참조 순서·10초 재확인</p><pre><code class="language-powershell">comfy --json run --workflow session4/cloud/clip1.api.json --where cloud --print-prompt</code></pre><p>3. 수강생 비용 확인과 생성 승인 뒤 제출</p><pre><code class="language-powershell">comfy --json run --workflow session4/cloud/clip1.api.json --where cloud --allow-spend</code></pre><p>4. 응답의 실제 prompt_id로 대기·회수 · 클립 2·3도 같은 순서</p><pre><code class="language-powershell">comfy --json jobs wait &lt;prompt_id&gt; --where cloud
+comfy --json download &lt;prompt_id&gt; --where cloud --out-dir session4/clips</code></pre></div></details>
+<p class="s3-note">2026-10-28 기준 · 공식 템플릿 api_minimax_h3_r2v · MinimaxHailuo03ReferenceNode · MiniMax H3 768P · Standard 월 4,200크레딧 · 재생성 비용 별도</p><p class="s3-note">사전 검증은 제출 전 preview까지 · Comfy 계정 로그인·업로드·유료 생성·회수 미실행 · CLI 자체 숫자 견적 없음</p><div class="s3-captions"><div><h2>오류 1026 · 문구 차단</h2><p>원문 오류 확인 후 중단 · 거친 감정·폭력 묘사는 실제 의도에 맞는 일상 동작으로 수정 · 예: 격하게 날뛰기 대신 고개 들고 꼬리 흔들기</p></div><div><h2>배경이 바뀐 클립</h2><p>같은 park.png 연결 여부 · 참조 순서와 공원 묘사 확인 · 재생성 전 새 비용 확인</p></div></div><p class="s3-task">생성 대기 중이면 강사 데모 클립으로 이어붙이기 실습 · 내 작업 ID 보관</p>
+<details class="s4-details s4-framing-recovery"><summary>참조 없는 대상이 나타날 때 · 구도 보완</summary>
+<p class="s3-note">강사 실측 · 시드 변경만으로 남은 첫 프레임의 다른 개 외형 · 보이는 요소 중심으로 클립1 구도 보완 · Cloud 10초 재생성 예상 271.6크레딧 추가 · 새 비용 확인 뒤 생성 승인</p>
+<div class="s3-prompt">
+
+\`\`\`text
+클립1 첫 프레임 가장자리에 참조에 없는 개가 나타났어. $h3-prompt-writing 공식 스킬로 session4/prompts/clip1.txt의 구도만 보완해줘. 대본의 멈추고 내려다보기, 10초와 5초 지점 전환, 같은 남성·빨간 리드줄·공원은 유지. 클립2·3 프롬프트와 참조 파일은 바꾸지 마.
+첫 샷은 남성의 얼굴·어깨·가슴만 보이는 고정 근접, 둘째 샷은 같은 축에서 허리·손·리드줄 근접. 시선·어깨의 작은 움직임으로 멈춤을 표현. 화면 밖 대상의 외형 설명은 빼고 보이는 요소만 써줘. 사람 클립의 영어 프롬프트에는 dog, animal, collar 같은 단어를 부정문에도 쓰지 마. 리드줄은 손에 든 고리와 화면 아래로 나가는 빨간 띠로만 묘사하고, 멈춘 구간은 정지 상태 명시.
+공식 6섹션과 Subject 표기, [Shot 1] 및 [Shot 2] At 00:05.000 형식 유지. Picture 1은 man.png의 외형, Picture 2는 leash.png의 형태, Picture 3은 park.png의 지형·배치·빛. 참조 순서 유지. 보완 전 원문은 별도 보관하고 샷 목록의 클립1 구도도 맞춰줘.
+Comfy 스킬을 읽고 clip1.api.json에도 같은 새 프롬프트를 CLI로 반영한 뒤 --where cloud --print-prompt까지만 확인해줘. 로그인·업로드·영상 제출·크레딧 사용은 하지 마. 768P 10초 한 편 재생성의 새 예상 비용을 공식 단가로 계산해 먼저 보여줘. 견적 확인 뒤 내가 생성 승인을 줄 때까지 멈춰줘.
+\`\`\`
+
+</div>
+
+</details>
+
+
+<div class="s3-footer"><span>10 / 11</span><span><a href="https://docs.comfy.org/tutorials/partner-nodes/pricing" target="_blank" rel="noreferrer">파트너 단가</a> · <a href="https://comfy.org/pricing" target="_blank" rel="noreferrer">Comfy 플랜</a> · <a href="https://docs.comfy.org/agent-tools/cli" target="_blank" rel="noreferrer">공식 CLI</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session4/step9">이전</a><a href="#/lectures/session4/step11">다음 · 30초로 이어 보고 비교하기</a></nav>
+</article>
+`,
+  "session4/step11-join.md": `<article class="s3-lesson s4-lesson">
+<div class="s3-meta">AI 아트웍 · 4회차 · 2026.10.29 목 · 19:45–20:00</div>
+
+# 30초로 이어 보고 비교하기
+
+<figure class="s4-demo"><video controls preload="metadata" playsinline poster="./lectures/images/session4/sheets/demo-poster.jpg" src="./downloads/session4/sheets/demo/park-30s.mp4"></video><figcaption>강사 PC의 MiniMax H3 Ref2VA 터보 · 수업과 같은 프롬프트 · 수강생 생성 경로는 Comfy Cloud 파트너 H3</figcaption></figure>
+<div class="s3-prompt">
+
+\`\`\`text
+session4/clips/clip1.mp4, clip2.mp4, clip3.mp4를 ffprobe로 검사하고 ffmpeg로 이어줘. 각 파일의 앞 10초씩, 순서는 1·2·3, 합계 정확히 30초. 자막·전환 효과·음악·배속 없이 원래 공원 소리 유지.
+길이가 10초보다 짧거나 파일이 없으면 대체 영상이나 정지 화면으로 채우지 말고 멈춰줘. CPU 인코더 libx264로 1280×720, 24fps, H.264와 AAC를 맞추고 session4/final/park-30s.mp4에 저장해줘. GPU 인코더는 쓰지 마. 입력 원본은 보관.
+완성본의 전체 길이·해상도·프레임 수를 검사해서 알려줘. 2초 간격 검수 이미지와 각 5초 샷의 가운데 프레임을 만들어 보여줘. 남성의 얼굴·초록 재킷, 개의 금빛 털·파란 목걸이, 빨간 리드줄, 공원과 빛 방향의 유지 여부를 함께 확인해줘.
+\`\`\`
+
+</div>
+<div class="s3-captions"><div><h2>30초 완성본 함께 보기</h2><p>클립1·3의 얼굴·재킷 · 클립2의 털·파란 목걸이</p></div><div><h2>같은 소품·장소 확인</h2><p>리드줄의 색·연결 · 길·벤치·빛 방향 · 10초·20초 경계</p></div></div><p class="s3-task"><a href="./downloads/session4/sheets/demo/park-30s.mp4" download>30초 데모 영상</a> · <a href="./downloads/session4/sheets/demo/instructor-clips.zip" download>강사 데모 클립 3개</a> · <a href="./downloads/session4/sheets/practice-materials.zip" download>시트·단독 컷·대본·프롬프트 실습 파일</a></p><p class="s3-note">강사 데모 클립 사용 시 · 압축을 풀어 session4/clips/clip1.mp4, clip2.mp4, clip3.mp4에 저장 · 본인 Cloud 결과와 구분</p><p class="s3-note">데모의 실제 관찰 결과와 제작 기록 · <a href="./downloads/session4/sheets/demo/production.txt" download>제작 기록 받기</a></p>
+
+<p class="s3-note">실제 데모 검수 · 클립1 전환 약 6.54초(5초 지시) · 클립2 가장자리의 손 · 클립3 리드줄 끝의 파란 부분 · 배경·빛 차이 · 완전한 연결·연속성 미확인</p>
+<div class="s3-footer"><span>11 / 11</span><span>2026-10-29 목 · 18:00–20:00 · 오프라인 AI 아트웍</span></div>
+<nav class="s3-pagination"><a href="#/lectures/session4/step10">이전</a></nav>
+</article>
+`,
+  "session4/step2-sheet-method.md": `<article class="s3-lesson s4-lesson">
+<div class="s3-meta">AI 아트웍 · 4회차 · 2026.10.29 목 · 18:05–18:15</div>
+
+# 시트로 같은 모습 유지하기
+
+<figure class="s4-concept"><img class="" src="./lectures/images/session4/sheets/sheet-method.svg" alt="인물 여러 뷰, 빨간 리드줄 디테일, 공원 두 시점을 담은 세 종류 시트와 가위"/><figcaption>시트와 단독 컷의 개념 일러스트</figcaption></figure><div class="s3-captions"><div><h2>클립마다 새 생성</h2><p>앞 클립의 외형 정보 자동 전달 없음</p></div><div><h2>시트 · 재사용할 정체성 저장고</h2><p>인물 시트 / 소품 시트 / 로케이션 시트</p></div></div><p class="s3-task">한 시트에 한 얼굴 · 남성과 반려견도 각각 별도 시트</p><p class="s3-note">영상 참조는 시트에서 자른 단독 컷 · 인물은 외형, 소품은 형태, 로케이션은 지형·배치·빛 · 시트 전체 투입 제외</p>
+
+<div class="s3-footer"><span>02 / 11</span><span><a href="https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/h3-prompt-writing/references/ref-en.txt" target="_blank" rel="noreferrer">공식 참조 지침</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session4/step1">이전</a><a href="#/lectures/session4/step3">다음 · Codex와 30초 대본 쓰기</a></nav>
+</article>
+`,
+  "session4/step3-script.md": `<article class="s3-lesson s4-lesson">
+<div class="s3-meta">AI 아트웍 · 4회차 · 2026.10.29 목 · 18:15–18:25</div>
+
+# Codex와 30초 대본 쓰기
+
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span></aside><div class="s3-work"><div class="s4-response"><h2>문서 3개 생성</h2><div class="s4-files"><span>session4/script.md</span><span>session4/shots.json</span><span>session4/rules.md</span></div><div class="s4-three"><div><b>00–10초</b><p>남성 · 멈춰서 내려다보기</p></div><div><b>10–20초</b><p>반려견 · 냄새 맡고 고개 들기</p></div><div><b>20–30초</b><p>남성 · 미소 짓고 다시 걷기</p></div></div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 앱 목업 · 본문은 PC 실측 결과 재현 · 데스크톱 앱 직접 조작 미검증</figcaption></figure>
+<div class="s3-prompt">
+
+\`\`\`text
+4회차 실습 대본을 session4/script.md와 session4/shots.json으로 만들어줘. 영상 생성은 아직 하지 마.
+주제는 park_walk.png의 남성과 골든리트리버가 오후 공원에서 잠깐 쉬었다가 다시 걷는 30초 이야기야. 초록 필드 재킷·크림색 티셔츠의 남성, 파란 목걸이의 골든리트리버, 빨간 리드줄을 유지해.
+정확히 10초 클립 3개, 클립마다 5초 샷 2개. 클립1은 남성만, 클립2는 반려견만, 클립3은 남성만 화면에 등장. 상대는 화면 밖. 클립1 남성이 걸음을 멈추고 반려견을 내려다봄, 클립2 반려견이 길가 냄새를 맡고 고개를 듦, 클립3 남성이 미소 짓고 다시 걸음. 대사·자막·음악 없이 공원 소리만.
+샷 목록에 시간, 구도, 행동, 리드줄의 위치·움직임, 필요한 시트와 단독 컷 경로를 넣어줘. 참조는 클립마다 3장: 인물 또는 반려견 1장 + 소품 1장 + 로케이션 1장. 파일명은 session4/views/man.png, dog.png, leash.png, park.png. 모든 샷에 같은 공원 단독 컷을 대응시켜줘. 바뀌면 안 될 외형은 session4/rules.md에 기록하고 생성한 파일을 보여줘.
+\`\`\`
+
+</div>
+<div class="s3-captions"><div><h2>클립 3개 × 10초</h2><p>각 클립 안에 5초 샷 2개</p></div><div><h2>참조 매칭</h2><p>등장 주체 1장 + 리드줄 1장 + 같은 공원 1장</p></div></div><p class="s3-note">이번 대본은 남성·반려견을 번갈아 촬영 · 한 샷의 등장 주체 한 명 · 상대는 화면 밖</p>
+
+<div class="s3-footer"><span>03 / 11</span><span>PC 실측 · Codex CLI 0.160.0 · gpt-6.1-sol</span></div>
+<nav class="s3-pagination"><a href="#/lectures/session4/step2">이전</a><a href="#/lectures/session4/step4">다음 · 인물 시트 만들기</a></nav>
+</article>
+`,
+  "session4/step4-characters.md": `<article class="s3-lesson s4-lesson">
+<div class="s3-meta">AI 아트웍 · 4회차 · 2026.10.29 목 · 18:25–18:40</div>
+
+# 인물 시트 만들기
+
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span></aside><div class="s3-work"><div class="s4-response"><div class="s4-sheet-pair"><figure><img class="" src="./lectures/images/session4/sheets/man-sheet.png" alt="남성만 담은 정면, 앞 3/4, 측면, 얼굴 근접 네 컷 시트"/><figcaption>man.png</figcaption></figure><figure><img class="" src="./lectures/images/session4/sheets/dog-sheet.png" alt="골든리트리버만 담은 네 컷 시트"/><figcaption>dog.png</figcaption></figure></div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 앱 목업 · 본문은 PC 실측 결과 재현 · 데스크톱 앱 직접 조작 미검증</figcaption></figure>
+<div class="s3-prompt">
+
+\`\`\`text
+session4/script.md와 rules.md, park_walk.png를 읽고 Codex 내장 이미지 생성으로 인물 시트를 만들어줘. Comfy나 유료 이미지 API는 쓰지 마.
+남성은 session4/sheets/man.png, 반려견은 session4/sheets/dog.png로 따로 저장. 한 시트에 한 얼굴의 주체만. 남성 시트에 개를, 개 시트에 남성을 넣지 마.
+각 시트는 같은 대상의 2행 2열 네 컷: 좌상 정면 전신, 우상 앞 3/4 전신, 좌하 측면 전신, 우하 얼굴 근접. 회색 무배경·균일 조명·동일한 외형과 의상. 남성은 초록 필드 재킷·크림색 티셔츠·진청바지·흰 운동화. 개는 금빛 털과 파란 목걸이. 리드줄과 글자는 제외.
+네 컷의 배치와 크기가 안 맞으면 단독 컷을 만든 뒤 코드로 조립해줘. 생성 이미지를 열어서 얼굴·의상·목걸이의 일치 여부를 확인하고 경로를 알려줘.
+\`\`\`
+
+</div>
+<p class="s3-note">PC 실측 · 두 시트 각각 1254×1254 · 반려견 시트는 생성 컷을 코드로 재조립 · 얼굴·옷·파란 목걸이 확인</p><p class="s3-note">Codex 내장 이미지 생성 · Comfy 크레딧 사용 없음 · ChatGPT 계정의 Codex 사용 한도 차감</p>
+
+<div class="s3-footer"><span>04 / 11</span><span><a href="https://learn.chatgpt.com/docs/image-generation" target="_blank" rel="noreferrer">Codex 이미지 생성과 사용 한도</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session4/step3">이전</a><a href="#/lectures/session4/step5">다음 · 소품 시트 만들기</a></nav>
+</article>
+`,
+  "session4/step5-prop.md": `<article class="s3-lesson s4-lesson">
+<div class="s3-meta">AI 아트웍 · 4회차 · 2026.10.29 목 · 18:40–18:50</div>
+
+# 소품 시트 만들기
+
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span></aside><div class="s3-work"><div class="s4-response"><div class="s4-result-pair"><img class="" src="./lectures/images/session4/sheets/leash-sheet.png" alt="빨간 리드줄 전체, 손잡이, 금속 클립, 나일론 질감 네 컷 시트"/><div><h2>빨간 리드줄 한 개</h2><p>손잡이 고리 · 은색 클립<br/>전체 모습과 디테일<br/>session4/sheets/leash.png</p></div></div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 앱 목업 · 본문은 PC 실측 결과 재현 · 데스크톱 앱 직접 조작 미검증</figcaption></figure>
+<div class="s3-prompt">
+
+\`\`\`text
+session4/rules.md와 park_walk.png를 읽고 Codex 내장 이미지 생성으로 빨간 리드줄 소품 시트를 session4/sheets/leash.png에 만들어줘. Comfy나 유료 이미지 API는 쓰지 마.
+하나의 빨간 납작한 나일론 리드줄, 한쪽 손잡이 고리와 반대쪽 은색 금속 클립. 2행 2열: 좌상 전체를 느슨한 곡선으로 펼친 모습, 우상 손잡이 근접, 좌하 금속 클립 근접, 우하 나일론 질감 근접. 흰 배경·균일 조명. 사람·개·목걸이·글자 제외.
+배치가 안 맞으면 단독 컷을 만든 뒤 코드로 조립해줘. 이미지를 열어서 같은 리드줄인지 확인하고 경로를 알려줘.
+\`\`\`
+
+</div>
+<div class="s3-captions"><div><h2>시트에 담을 것</h2><p>같은 색·재질·부품 형태</p></div><div><h2>영상 프롬프트에 쓸 것</h2><p>어디에 있는지 · 어느 구간에서 멈춰 있는지</p></div></div>
+
+<div class="s3-footer"><span>05 / 11</span><span><a href="https://learn.chatgpt.com/docs/image-generation" target="_blank" rel="noreferrer">Codex 내장 이미지 생성</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session4/step4">이전</a><a href="#/lectures/session4/step6">다음 · 로케이션 시트 만들기</a></nav>
+</article>
+`,
+  "session4/step6-location.md": `<article class="s3-lesson s4-lesson">
+<div class="s3-meta">AI 아트웍 · 4회차 · 2026.10.29 목 · 18:50–19:00</div>
+
+# 로케이션 시트 만들기
+
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span></aside><div class="s3-work"><div class="s4-response"><div class="s4-result-pair s4-result-pair--location"><img class="" src="./lectures/images/session4/sheets/park-sheet.png" alt="같은 공원의 정면 수평 시점과 오른쪽 회전 시점을 담은 두 컷 로케이션 시트"/><div><h2>같은 길 · 같은 오후</h2><p>회색 포장 산책로<br/>왼쪽 돌 벤치 · 어두운 가로등<br/>session4/location.md</p></div></div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 앱 목업 · 본문은 PC 실측 결과 재현 · 데스크톱 앱 직접 조작 미검증</figcaption></figure>
+<div class="s3-prompt">
+
+\`\`\`text
+session4/script.md와 rules.md, park_walk.png를 읽고 Codex 내장 이미지 생성으로 로케이션 시트를 session4/sheets/park.png에 만들어줘. Comfy나 유료 이미지 API는 쓰지 마.
+2행 1열, 같은 공원의 가로 16:9 사진 두 컷. 위는 사람 눈높이 정면, 아래는 같은 자리에서 오른쪽으로 조금 돌린 시점. 오후 자연광, 나무가 늘어선 회색 포장 산책로, 양옆 잔디, 왼쪽 돌 벤치와 어두운 가로등. 사람·동물·리드줄·글자 제외. 하늘과 지면이 보이는 수평 시점. 부감 지도 제외.
+배치가 안 맞으면 단독 컷을 만든 뒤 코드로 조립해줘. 두 컷의 길·벤치·빛 방향을 확인하고 고정할 특징을 session4/location.md에 기록해줘.
+\`\`\`
+
+</div>
+<div class="s3-captions"><div><h2>수평 촬영용 가로 컷</h2><p>사람 눈높이 · 하늘과 지면</p></div><div><h2>등장 주체·소품 분리</h2><p>남성·개·리드줄 없는 공원</p></div></div><p class="s3-note">클립이 바뀌어도 같은 park.png 참조 · 참조 없는 역방향 배경은 새로 만들어질 가능성</p>
+
+<div class="s3-footer"><span>06 / 11</span><span>PC 실측 · park_walk.png 기반</span></div>
+<nav class="s3-pagination"><a href="#/lectures/session4/step5">이전</a><a href="#/lectures/session4/step7">다음 · 단독 컷으로 잘라 쓰기</a></nav>
+</article>
+`,
+  "session4/step7-single-views.md": `<article class="s3-lesson s4-lesson">
+<div class="s3-meta">AI 아트웍 · 4회차 · 2026.10.29 목 · 19:00–19:05</div>
+
+# 단독 컷으로 잘라 쓰기
+
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span></aside><div class="s3-work"><div class="s4-response"><div class="s4-view-row"><figure><img class="" src="./lectures/images/session4/sheets/man.png" alt="얼굴을 크게 확인할 수 있는 남성 반신 단독 컷"/><figcaption>man.png · 반신 보완본</figcaption></figure><figure><img class="" src="./lectures/images/session4/sheets/dog.png" alt="골든리트리버 앞 3/4 전신 단독 컷"/><figcaption>dog.png</figcaption></figure><figure><img class="" src="./lectures/images/session4/sheets/leash.png" alt="빨간 리드줄 전체 단독 컷"/><figcaption>leash.png</figcaption></figure><figure><img class="" src="./lectures/images/session4/sheets/park.png" alt="같은 공원의 가로 단독 컷"/><figcaption>park.png</figcaption></figure></div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 앱 목업 · 본문은 PC 실측 결과 재현 · 데스크톱 앱 직접 조작 미검증</figcaption></figure>
+<div class="s3-prompt">
+
+\`\`\`text
+session4/sheets의 원본 시트를 코드로 잘라 영상 참조용 단독 컷을 만들어줘. 재생성·Comfy 호출 없이 원본 픽셀을 잘라 저장.
+man.png와 dog.png는 우상 앞 3/4 전신, leash.png는 좌상 전체 모습, park.png는 위쪽 수평 가로 컷. session4/views/man.png, dog.png, leash.png, park.png에 저장해줘.
+각 파일을 열어 다른 칸·글자·잘린 신체가 섞이지 않았는지 확인하고 크기를 알려줘. 얼굴이 작거나 흐리면 그 사실을 알려주고 멈춰줘. 시트 원본은 보관하고 영상 참조에는 views의 단독 컷만 사용해.
+\`\`\`
+
+</div>
+<p class="s3-task">시트 보관 · 영상 입력은 session4/views의 단독 컷</p><p class="s3-note">PC 실측 · 남성 전신 크롭 627×627, 얼굴 폭 약 60px · 얼굴 판독 한계로 중단 후 아래 보완 실행</p>
+<details class="s4-details"><summary>얼굴이 작을 때 · 남성 반신 한 장만 보완</summary>
+
+<div class="s3-prompt">
+
+\`\`\`text
+방금 자른 남성 전신 컷은 얼굴이 작아. session4/sheets/man.png의 우하 얼굴 근접 컷을 코드로 잘라 man-face.png에 보관하고, 그 얼굴과 rules.md를 기준으로 Codex 내장 이미지 생성에서 남성 앞 3/4 반신 단독 컷 한 장만 만들어줘. Comfy나 유료 이미지 API는 쓰지 마.
+같은 얼굴·검은 머리·초록 필드 재킷·크림색 티셔츠, 회색 무배경·균일 조명. 머리부터 골반까지, 양 어깨와 양손을 화면 안에 넣고 얼굴 높이는 화면 세로의 약 1/4. 소품·개·글자 제외. 시트 전체를 다시 만들지 마.
+기존 session4/views/man.png는 man-full.png로 보관하고 새 단독 컷을 session4/views/man.png에 저장해줘. 열어서 얼굴이 읽히는지 확인하고 크기를 알려줘. 나머지 dog.png·leash.png·park.png는 그대로 사용해.
+\`\`\`
+
+</div>
+
+</details>
+
+
+<div class="s3-footer"><span>07 / 11</span><span>PC 실측 · 원본 픽셀 크롭과 얼굴 보완</span></div>
+<nav class="s3-pagination"><a href="#/lectures/session4/step6">이전</a><a href="#/lectures/session4/step8">다음 · MiniMax 공식 스킬 설치하기</a></nav>
+</article>
+`,
+  "session4/step8-minimax-skill.md": `<article class="s3-lesson s4-lesson">
+<div class="s3-meta">AI 아트웍 · 4회차 · 2026.10.29 목 · 19:05–19:15</div>
+
+# MiniMax 공식 스킬 설치하기
+
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span></aside><div class="s3-work"><div class="s4-response"><div class="s4-install"><div class="s4-files"><span>.agents/skills/</span><b>　h3-prompt-writing/</b><span>　　SKILL.md</span><span>　　references/ref-en.txt</span></div><div><h2>공식 스킬 9개 · 프로젝트 설치</h2><p>다음 새 대화에서<br/>h3-prompt-writing 이름·경로 인식</p></div></div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 앱 목업 · 본문은 PC 실측 결과 재현 · 데스크톱 앱 직접 조작 미검증</figcaption></figure>
+<div class="s3-prompt">
+
+\`\`\`text
+MiniMax 공식 저장소 https://github.com/MiniMax-AI/MiniMax-H3 의 skills 폴더를 확인하고 공식 H3 스킬을 현재 작업 폴더에 설치해줘.
+공식 안내의 npx skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill '*'를 기준으로, Codex가 찾는 프로젝트 경로 .agents/skills에 설치. 전역 설치는 하지 말고 소유자 설정도 바꾸지 마. 비대화형 실행이 필요하면 실제 도움말을 확인해 에이전트 codex와 확인 옵션을 지정해줘.
+실행한 정확한 명령, 설치한 스킬 이름, SKILL.md의 실제 경로를 알려줘. 영상 생성·Comfy 로그인·크레딧 사용은 하지 마.
+\`\`\`
+
+</div>
+<p class="s3-note">실측 명령 · <code>npx --yes skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill '*' --agent codex --yes</code></p><p class="s3-task">설치 후 같은 작업 폴더에서 New chat · 다음 페이지 프롬프트 입력</p><p class="s3-note">이번 실습에 쓰는 스킬은 h3-prompt-writing · 프롬프트 작성 지침 · 영상 실행은 Comfy CLI</p>
+
+<div class="s3-footer"><span>08 / 11</span><span><a href="https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/README.md" target="_blank" rel="noreferrer">MiniMax 공식 설치 안내</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session4/step7">이전</a><a href="#/lectures/session4/step9">다음 · 타임스탬프 프롬프트 쓰기</a></nav>
+</article>
+`,
+  "session4/step9-timestamps.md": `<article class="s3-lesson s4-lesson">
+<div class="s3-meta">AI 아트웍 · 4회차 · 2026.10.29 목 · 19:15–19:25</div>
+
+# 타임스탬프 프롬프트 쓰기
+
+<figure class="s3-screen"><div class="s3-app" aria-label="공식 문서 기반 Codex 화면 목업"><div class="s3-appbar">ChatGPT</div><div class="s3-appbody"><aside><b>Codex</b><span>New chat</span><span>Scheduled</span><span>Plugins</span></aside><div class="s3-work"><div class="s4-response"><div class="s4-prompt-preview"><p>subject_definitions · 구도 보완 전 초안</p><p>&lt;Subject 1&gt; is the man whose appearance alone comes from &lt;Picture 1&gt; ...<br/>&lt;Subject 2&gt; is the single red flat-strap leash ...<br/>&lt;Subject 3&gt; is the park from &lt;Picture 3&gt; ...</p><p>[Shot 1] A locked frontal medium shot, ...<br/>[Shot 2] At 00:05.000, hard cut to ...</p></div></div><div class="s3-composer"><span class="s3-folder">ai-artwork</span><div class="s3-input">&nbsp;</div><div class="s3-controls"><span>＋　Full access</span><span>GPT-6.1 Sol　⌄</span></div></div></div></div></div><figcaption>공식 OpenAI 문서 기반 앱 목업 · 본문은 실제 프롬프트 발췌 · 데스크톱 앱 직접 조작 미검증</figcaption></figure>
+<div class="s3-prompt">
+
+\`\`\`text
+$h3-prompt-writing 스킬이 이번 새 대화에서 보이는지 이름과 경로부터 알려줘. 스킬과 reference 모드 지침을 읽고 session4/shots.json을 MiniMax H3 reference-to-video 영어 프롬프트 3개로 작성해 session4/prompts/clip1.txt, clip2.txt, clip3.txt에 저장해줘. 영상 생성은 하지 마.
+공식 6개 섹션 순서와 Subject 표기를 따르고, 참조 3장의 역할을 각각 정의해줘. Picture 1은 클립1·3에서 man.png, 클립2에서 dog.png. Picture 2는 leash.png, Picture 3은 park.png. 인물·소품은 외형만 참고, 공원은 지형·배치·빛을 참고하고 시트의 배치나 흰 배경은 복제하지 마.
+각 클립은 10초. 첫 샷은 공식 첫 샷 표기, 두 번째 샷은 [Shot 2] At 00:05.000, 으로 시작. 타임스탬프는 각 클립에서 다시 시작. 매 샷에 해당 주체·리드줄·같은 공원을 대응시키고 리드줄의 위치와 움직이지 않는 구간도 명시. 모든 샷에서 지평선 방향 유지. 대사·자막·음악 없이 공원 소리만.
+프롬프트별 참조 파일 순서와 총 길이를 session4/prompts/references.json에 기록하고 clip1의 샷 표기를 보여줘.
+\`\`\`
+
+</div>
+<div class="s3-captions"><div><h2>10초 클립 안의 샷 시각</h2><p>첫 샷 [Shot 1] · 두 번째 샷 00:05.000</p></div><div><h2>클립마다 00:00부터</h2><p>최종 영상의 10·20초를 프롬프트에 누적하지 않기</p></div></div><p class="s3-note">공식 6섹션 · subject_definitions / summary / retention_analysis / detailed_description / overall_soundscape / non_diegetic_music</p><p class="s3-task"><a href="./downloads/session4/sheets/reference/clip1.txt" download>구도 보완 반영 프롬프트 1</a> · <a href="./downloads/session4/sheets/reference/clip2.txt" download>프롬프트 2</a> · <a href="./downloads/session4/sheets/reference/clip3.txt" download>프롬프트 3</a></p><p class="s3-note"><a href="./downloads/session4/sheets/reference/clip1-before-framing.txt" download>구도 보완 전 클립1 원문</a> · Step 10의 보완 프롬프트 실제 실행 후 갱신</p><p class="s3-note">타임스탬프는 생성 지시 · 생성 후 실제 컷 시점 검수 · 강사 클립1은 5초 지시에 약 6.54초 전환</p>
+
+<div class="s3-footer"><span>09 / 11</span><span><a href="https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/h3-prompt-writing/SKILL.md" target="_blank" rel="noreferrer">공식 H3 프롬프트 스킬</a></span></div>
+<nav class="s3-pagination"><a href="#/lectures/session4/step8">이전</a><a href="#/lectures/session4/step10">다음 · 비용 확인 후 Comfy Cloud에서 생성하기</a></nav>
+</article>
+`,
   "test/section-test.md": `# 섹션 구분자 테스트
 
 이것은 테스트 강의록입니다. 섹션 구분자가 제대로 렌더링되는지 확인합니다.

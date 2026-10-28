@@ -1,0 +1,90 @@
+{
+  "schedule_minutes": 120,
+  "steps": 11,
+  "unchanged_sessions": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8
+  ],
+  "root_deployment_bundle_unchanged": true,
+  "prompts": [
+    {
+      "name": "00-recap",
+      "sha256": "202a82f913f1e1a923771eb0a44065eed0096a9f05e303326d3e732cf990a28d",
+      "slide_input_matches_rehearsal": true,
+      "successful_run": true
+    },
+    {
+      "name": "01-script",
+      "sha256": "d2151e2c5a97e6978909de81b95db29aa5a11a4eb78ef8d2728235a4d835c011",
+      "slide_input_matches_rehearsal": true,
+      "successful_run": true
+    },
+    {
+      "name": "02-characters",
+      "sha256": "f6dadb2ac93a4036c34d536e3722da15afc6ced964fb7f9be957a9c05bf4234d",
+      "slide_input_matches_rehearsal": true,
+      "successful_run": true
+    },
+    {
+      "name": "03-prop",
+      "sha256": "b7999cc80b569c9bbe808419a4c9088dd66c142e8424dce975eda7a9ea03402a",
+      "slide_input_matches_rehearsal": true,
+      "successful_run": true
+    },
+    {
+      "name": "04-location",
+      "sha256": "236a3d2259c014747bfe4408f88e74ab0104b7ecaeeac5bf48dbbce027bc63b6",
+      "slide_input_matches_rehearsal": true,
+      "successful_run": true
+    },
+    {
+      "name": "05-crop",
+      "sha256": "0977bd73134ed690aa4deb0a9bd0fc4a29a805ebf46c6cc7036dc67ad505a6dc",
+      "slide_input_matches_rehearsal": true,
+      "successful_run": true
+    },
+    {
+      "name": "05b-face",
+      "sha256": "a239260adfda53dc79bfe8112c2954b5be6609798dea2102b5a3ee7cd1c385c6",
+      "slide_input_matches_rehearsal": true,
+      "successful_run": true
+    },
+    {
+      "name": "06-install",
+      "sha256": "47ec8b68b253785d0028140da0edb565d8ddea0609848599ed23c691ecaf5d70",
+      "slide_input_matches_rehearsal": true,
+      "successful_run": true
+    },
+    {
+      "name": "07-timestamps",
+      "sha256": "9421fbbcc91dda7cda76b65ef49de317b079d1f049b93041fd89d4417d969c28",
+      "slide_input_matches_rehearsal": true,
+      "successful_run": true
+    },
+    {
+      "name": "08-cloud",
+      "sha256": "9c1a226e94984b5c64c49afbc11e3d955913fc65300b7986a2da8aa18e979c07",
+      "slide_input_matches_rehearsal": true,
+      "successful_run": true
+    },
+    {
+      "name": "08b-framing",
+      "sha256": "4290629a07fcb204ede93ffd13b934bbcae843e4b070d49706a92e79067e464e",
+      "slide_input_matches_rehearsal": true,
+      "successful_run": true
+    },
+    {
+      "name": "09-join",
+      "sha256": "79057a163761f1393be22aebdaf8648de53c67593e43169ad855305d7948e7d8",
+      "slide_input_matches_rehearsal": true,
+      "successful_run": true
+    }
+  ],
+  "cloud_graphs_and_hub_prompts_match": true,
+  "missing_assets": []
+}
