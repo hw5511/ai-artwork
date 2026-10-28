@@ -1,0 +1,9 @@
+comfy-cloud-login.png
+Source: https://cloud.comfy.org/cloud/login
+Captured with Playwright on 2026-10-27. No account data was entered.
+Crop: official login panel only.
+
+comfy-cloud-signup.png
+Source: https://cloud.comfy.org/cloud/signup
+Captured with Playwright on 2026-10-27. No account data was entered.
+Crop: official sign-up panel only.
