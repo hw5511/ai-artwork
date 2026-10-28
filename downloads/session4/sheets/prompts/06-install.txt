@@ -1,0 +1,3 @@
+MiniMax 공식 저장소 https://github.com/MiniMax-AI/MiniMax-H3 의 skills 폴더를 확인하고 공식 H3 스킬을 현재 작업 폴더에 설치해줘.
+공식 안내의 npx skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill '*'를 기준으로, Codex가 찾는 프로젝트 경로 .agents/skills에 설치. 전역 설치는 하지 말고 소유자 설정도 바꾸지 마. 비대화형 실행이 필요하면 실제 도움말을 확인해 에이전트 codex와 확인 옵션을 지정해줘.
+실행한 정확한 명령, 설치한 스킬 이름, SKILL.md의 실제 경로를 알려줘. 영상 생성·Comfy 로그인·크레딧 사용은 하지 마.

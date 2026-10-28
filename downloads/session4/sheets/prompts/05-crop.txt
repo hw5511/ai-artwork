@@ -1,0 +1,3 @@
+session4/sheets의 원본 시트를 코드로 잘라 영상 참조용 단독 컷을 만들어줘. 재생성·Comfy 호출 없이 원본 픽셀을 잘라 저장.
+man.png와 dog.png는 우상 앞 3/4 전신, leash.png는 좌상 전체 모습, park.png는 위쪽 수평 가로 컷. session4/views/man.png, dog.png, leash.png, park.png에 저장해줘.
+각 파일을 열어 다른 칸·글자·잘린 신체가 섞이지 않았는지 확인하고 크기를 알려줘. 얼굴이 작거나 흐리면 그 사실을 알려주고 멈춰줘. 시트 원본은 보관하고 영상 참조에는 views의 단독 컷만 사용해.

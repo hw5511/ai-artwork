@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "mode": "MiniMax H3 Ref2VA",
+  "path_base": "project_root",
+  "source_shots": "session4/shots.json",
+  "total_duration_sec": 30,
+  "extra_transition_duration_sec": 0,
+  "video_generation_requested": false,
+  "video_generated": false,
+  "subject_label_scope": "per_prompt",
+  "reference_asset_status": "cropped_quality_hold",
+  "video_generation_ready": false,
+  "quality_hold_reason": "The man full-body view has a small face (approximately 60 px wide by visual estimate). Stop before video generation as requested.",
+  "reference_review": "session4/views/review.md",
+  "reference_order": "Array order defines Picture 1, Picture 2, Picture 3 for each prompt.",
+  "reference_policy": "Exactly three standalone views per prompt. No sheets or park_walk.png as additional inputs. Character and prop appearance only; park terrain, spatial layout, horizon direction and lighting. No copied sheet layout or white background.",
+  "clips": [
+    {
+      "id": "clip1",
+      "prompt_file": "session4/prompts/clip1.txt",
+      "duration_sec": 10,
+      "timeline_origin_sec": 0,
+      "shot_start_sec": [
+        0,
+        5
+      ],
+      "reference_count": 3,
+      "references": [
+        {
+          "label": "<Picture 1>",
+          "subject_label": "<Subject 1>",
+          "file": "session4/views/man.png",
+          "role": "appearance_only",
+          "exists_at_write_time": false
+        },
+        {
+          "label": "<Picture 2>",
+          "subject_label": "<Subject 2>",
+          "file": "session4/views/leash.png",
+          "role": "prop_appearance_only",
+          "exists_at_write_time": false
+        },
+        {
+          "label": "<Picture 3>",
+          "subject_label": "<Subject 3>",
+          "file": "session4/views/park.png",
+          "role": "terrain_spatial_layout_and_lighting",
+          "exists_at_write_time": false
+        }
+      ]
+    },
+    {
+      "id": "clip2",
+      "prompt_file": "session4/prompts/clip2.txt",
+      "duration_sec": 10,
+      "timeline_origin_sec": 0,
+      "shot_start_sec": [
+        0,
+        5
+      ],
+      "reference_count": 3,
+      "references": [
+        {
+          "label": "<Picture 1>",
+          "subject_label": "<Subject 1>",
+          "file": "session4/views/dog.png",
+          "role": "appearance_only",
+          "exists_at_write_time": false
+        },
+        {
+          "label": "<Picture 2>",
+          "subject_label": "<Subject 2>",
+          "file": "session4/views/leash.png",
+          "role": "prop_appearance_only",
+          "exists_at_write_time": false
+        },
+        {
+          "label": "<Picture 3>",
+          "subject_label": "<Subject 3>",
+          "file": "session4/views/park.png",
+          "role": "terrain_spatial_layout_and_lighting",
+          "exists_at_write_time": false
+        }
+      ]
+    },
+    {
+      "id": "clip3",
+      "prompt_file": "session4/prompts/clip3.txt",
+      "duration_sec": 10,
+      "timeline_origin_sec": 0,
+      "shot_start_sec": [
+        0,
+        5
+      ],
+      "reference_count": 3,
+      "references": [
+        {
+          "label": "<Picture 1>",
+          "subject_label": "<Subject 1>",
+          "file": "session4/views/man.png",
+          "role": "appearance_only",
+          "exists_at_write_time": false
+        },
+        {
+          "label": "<Picture 2>",
+          "subject_label": "<Subject 2>",
+          "file": "session4/views/leash.png",
+          "role": "prop_appearance_only",
+          "exists_at_write_time": false
+        },
+        {
+          "label": "<Picture 3>",
+          "subject_label": "<Subject 3>",
+          "file": "session4/views/park.png",
+          "role": "terrain_spatial_layout_and_lighting",
+          "exists_at_write_time": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+작업 폴더에 저장한 Comfy 스킬과 session4/prompts/references.json을 읽고 Comfy Cloud의 MiniMax H3 R2V 클립 3개를 준비해줘. 지금은 견적과 제출 전 미리보기까지만. 로그인·인증·업로드·영상 제출·크레딧 사용은 하지 마.
+공식 템플릿 api_minimax_h3_r2v를 Comfy CLI로 받아 API 워크플로 3개를 session4/cloud에 저장해줘. MinimaxHailuo03ReferenceNode, MiniMax H3, 768P, 16:9, 10초, 클립당 참조 3장. H3 Max나 로컬 모델 템플릿으로 바꾸지 마. 프롬프트와 참조 순서는 references.json 그대로. SaveVideo의 format.codec도 확인해줘.
+공식 파트너 가격표 https://docs.comfy.org/tutorials/partner-nodes/pricing 에서 단가를 확인하고 클립당·총 예상 크레딧을 먼저 보여줘. 참고값은 초당 27.16크레딧, 30초 약 815크레딧. 재생성은 별도 비용. CLI 미리보기에 숫자 견적이 없으면 가격표로 계산한 값임을 표시해줘.
+comfy run의 --where cloud --print-prompt로 세 워크플로의 입력만 검증하고 멈춰줘. 비용 확인 뒤 내가 생성 승인을 주면, 단독 컷 업로드 응답의 cloud_name을 LoadImage에 반영하고 미리보기를 다시 확인한 후 --allow-spend로 제출할 계획까지 알려줘. 완료 후에는 jobs wait와 download로 session4/clips/clip1.mp4, clip2.mp4, clip3.mp4를 받을 예정이야. 오류 1026이면 원문 오류를 보여주고 자동 재시도는 하지 마.

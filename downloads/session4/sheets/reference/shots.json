@@ -1,0 +1,391 @@
+{
+  "schema_version": "1.0",
+  "title": "4회차 실습 — 오후 공원의 작은 쉼",
+  "language": "ko",
+  "source_image": "park_walk.png",
+  "path_base": "project_root",
+  "rules_file": "session4/rules.md",
+  "script_file": "session4/script.md",
+  "status": "planning_only",
+  "video_generation_requested": false,
+  "video_generated": false,
+  "total_duration_sec": 30,
+  "clip_count": 3,
+  "clip_duration_sec": 10,
+  "shots_per_clip": 2,
+  "shot_duration_sec": 5,
+  "timing": {
+    "unit": "seconds",
+    "ranges": "start_inclusive_end_exclusive",
+    "shot_cut_points_sec": [
+      5,
+      10,
+      15,
+      20,
+      25
+    ],
+    "clip_cut_points_sec": [
+      10,
+      20
+    ],
+    "extra_transition_duration_sec": 0
+  },
+  "audio": {
+    "dialogue": false,
+    "narration": false,
+    "music": false,
+    "subtitles": false,
+    "on_screen_text": false,
+    "allowed": [
+      "나뭇잎을 스치는 공원 바람",
+      "먼 새소리",
+      "현장의 자연스러운 발소리"
+    ],
+    "excluded": [
+      "사람 목소리",
+      "짖는 소리",
+      "추가 효과음"
+    ],
+    "continuity": "공원 환경음은 모든 컷과 클립 경계에서 연속 유지"
+  },
+  "continuity": {
+    "leash_hand": "man_anatomical_left_hand",
+    "man_wardrobe": [
+      "초록색 필드 재킷",
+      "크림색 라운드넥 티셔츠",
+      "짙은 청바지",
+      "흰색 낮은 운동화"
+    ],
+    "dog": "원본의 황금빛 털 골든리트리버, 파란 목걸이",
+    "leash": "빨간 평평한 띠형 리드줄 하나, 고리형 손잡이와 금속 연결부",
+    "relative_position": "반려견은 남성의 왼편. 정면 기준 화면 오른쪽.",
+    "screen_directions": {
+      "man_shots": "시선·리드줄은 오른쪽 아래 화면 밖 반려견으로 연결",
+      "dog_shots": "시선·리드줄은 왼쪽 위 화면 밖 남성으로 연결"
+    },
+    "camera_axis": "산책 동선 정면 쪽의 같은 축 유지. 좌우 반전 금지.",
+    "location_view": "session4/views/park.png",
+    "lighting": "원본과 같은 따뜻한 오후 자연광과 나뭇잎 그림자",
+    "exclude_from_frame": [
+      "상대의 신체 일부",
+      "상대의 그림자와 반사",
+      "배경의 다른 사람과 동물"
+    ],
+    "reference_policy": "클립당 등장 주체 단독 컷 1장 + 소품 단독 컷 1장 + 로케이션 단독 컷 1장 = 정확히 3장. 시트와 원본은 영상 입력 참조에 추가하지 않는다."
+  },
+  "assets": [
+    {
+      "id": "man",
+      "type": "character",
+      "sheet_path": "session4/sheets/man_sheet.png",
+      "view_path": "session4/views/man.png",
+      "status": "planned_not_created",
+      "content": "원본 남성의 외형·복장·전신 비율. 단독 컷에는 남성만, 반려견·리드줄·공원 제외."
+    },
+    {
+      "id": "dog",
+      "type": "character",
+      "sheet_path": "session4/sheets/dog_sheet.png",
+      "view_path": "session4/views/dog.png",
+      "status": "planned_not_created",
+      "content": "원본 골든리트리버와 파란 목걸이. 단독 컷에는 반려견과 목걸이만, 남성·리드줄·공원 제외."
+    },
+    {
+      "id": "leash",
+      "type": "prop",
+      "sheet_path": "session4/sheets/leash_sheet.png",
+      "view_path": "session4/views/leash.png",
+      "status": "planned_not_created",
+      "content": "빨간 띠형 줄·고리형 손잡이·금속 연결부만. 사람과 반려견 제외."
+    },
+    {
+      "id": "park",
+      "type": "location",
+      "sheet_path": "session4/sheets/park_sheet.png",
+      "view_path": "session4/views/park.png",
+      "status": "planned_not_created",
+      "content": "원본의 회색 산책로·가로수·가로등·돌 벤치·오후 빛. 사람·동물·리드줄 제외. 모든 샷에서 동일 파일 재사용."
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip1",
+      "start_sec": 0,
+      "end_sec": 10,
+      "duration_sec": 10,
+      "visible_subjects": [
+        "man"
+      ],
+      "offscreen_subjects": [
+        "dog"
+      ],
+      "references": [
+        "session4/views/man.png",
+        "session4/views/leash.png",
+        "session4/views/park.png"
+      ],
+      "shots": [
+        {
+          "id": "C1-S1",
+          "start_sec": 0,
+          "end_sec": 5,
+          "duration_sec": 5,
+          "clip_start_sec": 0,
+          "clip_end_sec": 5,
+          "visible_subjects": [
+            "man"
+          ],
+          "offscreen_subjects": [
+            "dog"
+          ],
+          "framing": "고정 정면 근접. 첫 프레임부터 얼굴·어깨·가슴만 보이며 하단은 가슴에서 자른다. 어깨 양옆 여백을 좁게 유지한다.",
+          "camera": "같은 산책 동선 정면 축의 고정 카메라. 구도·초점·크기 유지.",
+          "action": "0–3초: 어깨의 작은 잔흔들림이 가라앉으며 멈춤을 표현한다. 3–4초: 시선을 오른쪽 아래로 내리고 턱을 조금 숙인다. 4–5초: 시선·턱·어깨·가슴 모두 정지 상태로 유지한다.",
+          "leash": {
+            "color": "red",
+            "held_by": "man_anatomical_left_hand",
+            "position": "가슴에서 자른 구도이므로 손과 리드줄은 보이지 않는다.",
+            "movement": "화면에 보이는 리드줄 움직임 없음.",
+            "tension": "slack"
+          },
+          "required_sheets": [
+            "session4/sheets/man_sheet.png",
+            "session4/sheets/leash_sheet.png",
+            "session4/sheets/park_sheet.png"
+          ],
+          "standalone_views": [
+            "session4/views/man.png",
+            "session4/views/leash.png",
+            "session4/views/park.png"
+          ],
+          "location_view": "session4/views/park.png",
+          "sound": "공원 바람·나뭇잎·먼 새소리. 멈추는 구간에서 마지막 자연스러운 발소리가 잦아든다.",
+          "transition_out": "hard_cut"
+        },
+        {
+          "id": "C1-S2",
+          "start_sec": 5,
+          "end_sec": 10,
+          "duration_sec": 5,
+          "clip_start_sec": 5,
+          "clip_end_sec": 10,
+          "visible_subjects": [
+            "man"
+          ],
+          "offscreen_subjects": [
+            "dog"
+          ],
+          "framing": "같은 정면 축의 고정 허리·손·리드줄 근접. 재킷 밑단·크림색 셔츠·허리의 데님·왼손·빨간 고리와 띠만 전경에 보인다.",
+          "camera": "C1-S1과 같은 정면 축. 카메라·구도·초점·크기 고정.",
+          "action": "5초에 하드 컷. 5–10초: 서서 기다리는 정지 상태. 허리·손·손에 든 고리·빨간 띠는 마지막 프레임까지 움직이지 않는다.",
+          "leash": {
+            "color": "red",
+            "held_by": "man_anatomical_left_hand",
+            "position": "해부학적 왼손이 화면 오른쪽 허리 옆에서 빨간 고리 하나를 잡는다. 느슨한 빨간 평평한 띠 하나가 화면 아래 오른쪽 가장자리로 나간다.",
+            "movement": "5–10초 내내 손·고리·빨간 띠는 느슨한 곡선의 정지 상태를 유지한다.",
+            "tension": "slack"
+          },
+          "required_sheets": [
+            "session4/sheets/man_sheet.png",
+            "session4/sheets/leash_sheet.png",
+            "session4/sheets/park_sheet.png"
+          ],
+          "standalone_views": [
+            "session4/views/man.png",
+            "session4/views/leash.png",
+            "session4/views/park.png"
+          ],
+          "location_view": "session4/views/park.png",
+          "sound": "공원 바람·나뭇잎·먼 새소리를 연속 유지한다.",
+          "transition_out": "hard_cut"
+        }
+      ]
+    },
+    {
+      "id": "clip2",
+      "start_sec": 10,
+      "end_sec": 20,
+      "duration_sec": 10,
+      "visible_subjects": [
+        "dog"
+      ],
+      "offscreen_subjects": [
+        "man"
+      ],
+      "references": [
+        "session4/views/dog.png",
+        "session4/views/leash.png",
+        "session4/views/park.png"
+      ],
+      "shots": [
+        {
+          "id": "C2-S1",
+          "start_sec": 10,
+          "end_sec": 15,
+          "duration_sec": 5,
+          "clip_start_sec": 0,
+          "clip_end_sec": 5,
+          "visible_subjects": [
+            "dog"
+          ],
+          "offscreen_subjects": [
+            "man"
+          ],
+          "framing": "반려견 눈높이의 낮은 미디엄. 반려견만 중앙~오른쪽. 코·길가 풀과 흙·파란 목걸이가 보인다.",
+          "camera": "고정. 기존 동선 축을 넘지 않고 남성은 왼쪽 위 프레임 밖에 둔다.",
+          "action": "10–15초: 제자리에 서서 길가 풀과 흙 가까이 코를 대고 천천히 냄새를 맡는다.",
+          "leash": {
+            "color": "red",
+            "held_by": "man_anatomical_left_hand",
+            "position": "빨간 줄은 왼쪽 위 프레임 밖에서 들어와 파란 목걸이의 금속 연결부에 닿는다. 사람의 손·팔과 손잡이는 보이지 않는다.",
+            "movement": "고개가 움직일 때 느슨한 줄이 작게 흔들린다.",
+            "tension": "slack"
+          },
+          "required_sheets": [
+            "session4/sheets/dog_sheet.png",
+            "session4/sheets/leash_sheet.png",
+            "session4/sheets/park_sheet.png"
+          ],
+          "standalone_views": [
+            "session4/views/dog.png",
+            "session4/views/leash.png",
+            "session4/views/park.png"
+          ],
+          "location_view": "session4/views/park.png",
+          "sound": "공원 바람·나뭇잎·먼 새소리만 이어진다.",
+          "transition_out": "hard_cut"
+        },
+        {
+          "id": "C2-S2",
+          "start_sec": 15,
+          "end_sec": 20,
+          "duration_sec": 5,
+          "clip_start_sec": 5,
+          "clip_end_sec": 10,
+          "visible_subjects": [
+            "dog"
+          ],
+          "offscreen_subjects": [
+            "man"
+          ],
+          "framing": "같은 축의 머리·가슴 클로즈업. 반려견만. 고개를 들어도 귀와 코가 잘리지 않는 위 여백.",
+          "camera": "고정. 남성은 왼쪽 위 프레임 밖.",
+          "action": "15–18초: 냄새 맡기를 멈추고 고개를 든다. 18–20초: 화면 밖 왼쪽 위 남성을 올려다본다. 몸과 앞발은 제자리.",
+          "leash": {
+            "color": "red",
+            "held_by": "man_anatomical_left_hand",
+            "position": "왼쪽 위에서 들어온 빨간 줄이 같은 목걸이 연결부로 이어진다. 남성의 신체와 손잡이는 보이지 않는다.",
+            "movement": "고개를 들며 목걸이 쪽 줄 각도가 조금 바뀌고 곡선이 완만해진다. 팽팽해지지 않는다.",
+            "tension": "slack"
+          },
+          "required_sheets": [
+            "session4/sheets/dog_sheet.png",
+            "session4/sheets/leash_sheet.png",
+            "session4/sheets/park_sheet.png"
+          ],
+          "standalone_views": [
+            "session4/views/dog.png",
+            "session4/views/leash.png",
+            "session4/views/park.png"
+          ],
+          "location_view": "session4/views/park.png",
+          "sound": "공원 바람·나뭇잎·먼 새소리만 이어진다.",
+          "transition_out": "hard_cut"
+        }
+      ]
+    },
+    {
+      "id": "clip3",
+      "start_sec": 20,
+      "end_sec": 30,
+      "duration_sec": 10,
+      "visible_subjects": [
+        "man"
+      ],
+      "offscreen_subjects": [
+        "dog"
+      ],
+      "references": [
+        "session4/views/man.png",
+        "session4/views/leash.png",
+        "session4/views/park.png"
+      ],
+      "shots": [
+        {
+          "id": "C3-S1",
+          "start_sec": 20,
+          "end_sec": 25,
+          "duration_sec": 5,
+          "clip_start_sec": 0,
+          "clip_end_sec": 5,
+          "visible_subjects": [
+            "man"
+          ],
+          "offscreen_subjects": [
+            "dog"
+          ],
+          "framing": "C1-S2와 같은 축·크기의 허리 위 미디엄 클로즈업. 남성만, 얼굴과 왼손 포함.",
+          "camera": "고정. 반려견은 오른쪽 아래 프레임 밖.",
+          "action": "20–23초: 오른쪽 아래 반려견을 보며 부드럽게 미소 짓는다. 23–25초: 미소를 유지하다가 진행 방향인 정면으로 시선을 옮긴다.",
+          "leash": {
+            "color": "red",
+            "held_by": "man_anatomical_left_hand",
+            "position": "왼손이 화면 오른쪽 허리 옆에서 같은 빨간 손잡이를 잡는다. 줄은 오른쪽 아래 프레임 밖으로 이어진다.",
+            "movement": "정지 상태의 느슨한 곡선을 유지한다. 출발 신호로 잡아당기지 않는다.",
+            "tension": "slack"
+          },
+          "required_sheets": [
+            "session4/sheets/man_sheet.png",
+            "session4/sheets/leash_sheet.png",
+            "session4/sheets/park_sheet.png"
+          ],
+          "standalone_views": [
+            "session4/views/man.png",
+            "session4/views/leash.png",
+            "session4/views/park.png"
+          ],
+          "location_view": "session4/views/park.png",
+          "sound": "공원 바람·나뭇잎·먼 새소리만 이어진다.",
+          "transition_out": "hard_cut"
+        },
+        {
+          "id": "C3-S2",
+          "start_sec": 25,
+          "end_sec": 30,
+          "duration_sec": 5,
+          "clip_start_sec": 5,
+          "clip_end_sec": 10,
+          "visible_subjects": [
+            "man"
+          ],
+          "offscreen_subjects": [
+            "dog"
+          ],
+          "framing": "정면 허벅지 위 미디엄. 남성만 화면 왼쪽~중앙. 얼굴과 왼손 포함. 반려견은 오른쪽 프레임 밖.",
+          "camera": "천천히 후진 트래킹. 남성과의 거리와 오른쪽 프레임 경계를 유지해 반려견이 들어오지 않게 한다.",
+          "action": "25–30초: 카메라 쪽 산책로를 따라 두세 걸음 편안히 걷는다. 반려견은 오른쪽 화면 밖에서 같은 속도로 동행하는 설정. 걷는 중 30초에 끝난다.",
+          "leash": {
+            "color": "red",
+            "held_by": "man_anatomical_left_hand",
+            "position": "왼손의 빨간 손잡이는 화면 오른쪽 허리 옆. 연결 줄은 계속 오른쪽 아래 프레임 밖으로 나간다.",
+            "movement": "걸음에 맞춰 앞뒤로 작게 흔들리며 느슨한 곡선을 유지한다.",
+            "tension": "slack"
+          },
+          "required_sheets": [
+            "session4/sheets/man_sheet.png",
+            "session4/sheets/leash_sheet.png",
+            "session4/sheets/park_sheet.png"
+          ],
+          "standalone_views": [
+            "session4/views/man.png",
+            "session4/views/leash.png",
+            "session4/views/park.png"
+          ],
+          "location_view": "session4/views/park.png",
+          "sound": "공원 바람·나뭇잎·먼 새소리에 자연스러운 보행 발소리가 더해진다.",
+          "transition_out": "정확히 30초에 종료. 걷는 중 끝내며 추가 화면이나 페이드 없음."
+        }
+      ]
+    }
+  ]
+}

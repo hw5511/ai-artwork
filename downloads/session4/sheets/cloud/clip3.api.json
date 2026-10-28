@@ -1,0 +1,73 @@
+{
+  "151": {
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "load man.png"
+    },
+    "inputs": {
+      "image": "session4/views/man.png"
+    }
+  },
+  "202": {
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "load leash.png"
+    },
+    "inputs": {
+      "image": "session4/views/leash.png"
+    }
+  },
+  "253": {
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "load park.png"
+    },
+    "inputs": {
+      "image": "session4/views/park.png"
+    }
+  },
+  "104": {
+    "inputs": {
+      "model": "MiniMax H3",
+      "seed": 42,
+      "watermark": false,
+      "model.prompt": "subject_definitions:\n<Subject 1> is the man whose appearance alone comes from <Picture 1> (session4/views/man.png): the same face, skin tone, short parted black hair, clean-shaven features and body proportions, open green field jacket with flap pockets, cream crew-neck T-shirt, dark jeans and white low-top sneakers. Do not copy the reference pose, sheet layout or white background.\n<Subject 2> is the single red flat-strap leash whose appearance alone comes from <Picture 2> (session4/views/leash.png), including its loop handle and metal collar clasp. Its reference display arrangement and white background are excluded; its placement and motion follow the shots below.\n<Subject 3> is the park from <Picture 3> (session4/views/park.png), supplying terrain, spatial layout and afternoon light: grey paved path, roadside grass and soil, flanking trees, dark lamps, stone bench on the left and distant city background. Preserve these spatial relationships, horizon direction, light direction and leaf shadows. Do not reproduce a sheet layout or white background. These pictures define subjects, not literal first frames or keyframes.\n\nsummary:\n[reference generation] A 10-second reference-to-video clip with two five-second shots shows <Subject 1> smiling toward his off-screen dog, looking forward and resuming a relaxed walk while holding <Subject 2> in the same <Subject 3>. <Picture 1> supplies character appearance, <Picture 2> supplies prop appearance, and <Picture 3> supplies the shared park terrain, layout and lighting. The local timeline restarts at zero; the only cut is at five seconds. End while walking, with only natural park sounds.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1], [Shot 2]): fully_preserved - retain the appearance defined by <Picture 1>, matching clip1, with the newly directed smile and walk; exclude the reference pose, sheet arrangement and white background.\n<Subject 2> (appears in [Shot 1], [Shot 2]): fully_preserved - retain the single red strap, loop handle and metal clasp defined by <Picture 2>; maintain anatomical-left-hand ownership and slack continuity, with the collar connection outside the frame.\n<Subject 3> (appears in [Shot 1], [Shot 2]): fully_preserved - retain the terrain, landmark relationships, horizon direction and light defined by <Picture 3>, matching both preceding clips throughout the backward tracking movement.\n\ndetailed_description:\nUse a naturalistic observational style with warm afternoon daylight and soft leaf shadows, retaining the same rendering and material appearance as the references. This final clip lasts exactly 10 seconds on its local clock, with one hard cut, no added transition time, subtitles or visible text.\n[Shot 1] A locked frontal waist-up medium close-up matches the axis and framing of clip1's second shot. <Subject 1> from <Picture 1> stands left of centre with his face and anatomical left hand visible; retain his short parted black hair, clean-shaven face, open green field jacket and cream shirt. His left hand holds <Subject 2> from <Picture 2> beside the screen-right hip. Show the red loop handle and its hanging loop as parts of one leash, with the single slack strap extending out of the lower-right edge toward the unseen dog's blue collar. <Subject 3> from <Picture 3> remains the same park: grey paved path, grassy and earthy verge, trees, dark lamps, left-side stone bench and distant city maintain their established relationships. Keep the horizon level and its reference direction unchanged even where cropped; stay on the frontal side of the walking axis without mirroring. From local 00:00.000 to 00:03.000, he gently smiles while looking down-right at the off-screen dog. From 00:03.000 to 00:05.000, he keeps the smile and shifts his gaze forward along the path toward the camera. His hand stays still; the leash remains motionless in its loose curve throughout 00:00.000 to 00:05.000. Give no tug as a departure cue. Keep every part of the dog, its shadow and reflection, and all other people and animals outside the frame. Wind, rustling leaves and distant birds continue seamlessly from the preceding clip.\n[Shot 2] At 00:05.000, hard cut to a frontal medium shot from the thighs upward of <Subject 1> from <Picture 1>, still left of centre. <Subject 2> from <Picture 2> remains in his anatomical left hand beside the screen-right hip, and its slack red strap continues out of the lower-right edge. <Subject 3> from <Picture 3> retains the same path, landmark arrangement and afternoon light. Keep the horizon level and its direction unchanged; do not cross or reverse the axis. From local 00:05.000 to 00:10.000, he takes two or three relaxed steps toward the camera. Track backward slowly at his pace, preserving subject distance and the right frame boundary so the accompanying dog stays entirely off-screen. The leash now sways gently forward and back with each step, always slack; it never tightens or changes length. Its stationary interval ended at the cut; do not insert a new stop in this walking shot. Natural footfalls join the continuous park ambience. End at exactly 00:10.000 during the walk, completing the 30-second sequence without a fade, extra frame sequence or end card.\n\noverall_soundscape:\nOnly natural park wind, leaf rustle and distant birds, joined by on-location walking footfalls in [Shot 2]. Keep the same park ambience continuous from the preceding clip and across the cut, without an audio fade or restart. No dialogue, narration, human voices, barking, amplified sniffing, leash foley or added effects.\n\nnon_diegetic_music:\nN/A\n",
+      "model.resolution": "768P",
+      "model.ratio": "16:9",
+      "model.duration": 10,
+      "model.reference_images.image_1": [
+        "151",
+        0
+      ],
+      "model.reference_images.image_2": [
+        "202",
+        0
+      ],
+      "model.reference_images.image_3": [
+        "253",
+        0
+      ]
+    },
+    "class_type": "MinimaxHailuo03ReferenceNode",
+    "_meta": {
+      "title": "MiniMax H3 Reference to Video"
+    }
+  },
+  "305": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "filename_prefix": "clip3",
+      "format": "mp4",
+      "format.codec": "h264",
+      "format.codec.encoding": "auto",
+      "video": [
+        "104",
+        0
+      ]
+    }
+  },
+  "_meta": {
+    "schema": "compose/1",
+    "blueprint": "C:\\Users\\woohee\\AppData\\Local\\Temp\\artwork-s4-rehearsal-20261028\\work\\session4\\cloud\\blueprints\\clip3.yaml"
+  }
+}
