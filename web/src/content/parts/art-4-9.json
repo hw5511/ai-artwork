@@ -1,49 +1,45 @@
 {
   "id": "art-4-9",
-  "title": "타임스탬프 프롬프트 쓰기",
-  "summary": "참조 순서와 클립 안의 샷 시각",
+  "title": "참조 묶음",
+  "summary": "18:35~19:15 · 단독 컷과 클립별 스토리보드",
   "slides": [
     {
-      "title": "클립별 참조 순서",
-      "template": "table",
-      "columns": [
-        "참조",
-        "클립 1·3",
-        "클립 2"
-      ],
-      "rows": [
-        {
-          "cells": [
-            "Picture 1",
-            "man.png",
-            "dog.png"
-          ]
-        },
-        {
-          "cells": [
-            "Picture 2",
-            "leash.png",
-            "leash.png"
-          ]
-        },
-        {
-          "cells": [
-            "Picture 3",
-            "park.png",
-            "park.png"
-          ]
+      "title": "시트에서 자른 단독 컷",
+      "template": "compare",
+      "left": {
+        "label": "인물",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session4/own-story/person.png"
         }
-      ],
+      },
+      "right": {
+        "label": "장소",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session4/own-story/location.png"
+        }
+      },
       "notes": [
         {
           "n": 1,
-          "head": "참조 역할",
-          "body": "주체·소품은 외형 · 공원은 지형·배치·빛"
+          "head": "인물 단독 컷",
+          "body": "전신에서 얼굴이 작으면 얼굴 근접 컷 선택 · 예제는 person_face.png"
         },
         {
           "n": 2,
-          "head": "개별 클립 시각",
-          "body": "매 클립 00:00부터 · 최종 영상의 10·20초 누적 금지"
+          "head": "장소 단독 컷",
+          "body": "촬영 방향에 맞는 한 시점 · 같은 창과 책상"
+        },
+        {
+          "n": 3,
+          "head": "원본 보관",
+          "body": "sheets는 원본 · views는 영상용 단독 컷"
+        },
+        {
+          "n": 4,
+          "head": "참조 목록",
+          "body": "session4/references.json · 파일 순서와 역할 기록"
         }
       ],
       "action": {
@@ -51,7 +47,7 @@
         "items": [
           {
             "kind": "copy",
-            "value": "$h3-prompt-writing 스킬이 이번 새 대화에서 보이는지 이름과 경로부터 알려줘. 스킬과 reference 모드 지침을 읽고 session4/shots.json을 MiniMax H3 reference-to-video 영어 프롬프트 3개로 작성해 session4/prompts/clip1.txt, clip2.txt, clip3.txt에 저장해줘. 영상 생성은 하지 마.\n공식 6개 섹션 순서와 Subject 표기를 따르고, 참조 3장의 역할을 각각 정의해줘. Picture 1은 클립1·3에서 man.png, 클립2에서 dog.png. Picture 2는 leash.png, Picture 3은 park.png. 인물·소품은 외형만 참고, 공원은 지형·배치·빛을 참고하고 시트의 배치나 흰 배경은 복제하지 마.\n각 클립은 10초. 첫 샷은 공식 첫 샷 표기, 두 번째 샷은 [Shot 2] At 00:05.000, 으로 시작. 타임스탬프는 각 클립에서 다시 시작. 매 샷에 해당 주체·리드줄·같은 공원을 대응시키고 리드줄의 위치와 움직이지 않는 구간도 명시. 모든 샷에서 지평선 방향 유지. 대사·자막·음악 없이 공원 소리만.\n프롬프트별 참조 파일 순서와 총 길이를 session4/prompts/references.json에 기록하고 clip1의 샷 표기를 보여줘.",
+            "value": "session4/sheets의 원본을 코드로 크롭해 session4/views에 인물·제품 전체·제품 디테일·장소의 단독 컷을 저장해줘. 원본은 보관하고 다른 칸이나 잘린 대상이 섞이지 않았는지 열어 확인해줘.\n각 클립의 참조 순서를 session4/references.json에 기록해줘. 인물·제품 전체·디테일·장소·해당 스토리보드, 최대 5장. 스토리보드는 구도와 순서용이고 외형은 시트용 단독 컷 기준. 재생성·업로드·영상 생성은 하지 마.",
             "desc": "실습 프롬프트"
           }
         ]
@@ -59,128 +55,77 @@
       "id": "art-4-9-1"
     },
     {
-      "title": "샷 타임스탬프",
-      "template": "table",
-      "columns": [
-        "샷",
-        "표기"
-      ],
-      "rows": [
-        {
-          "cells": [
-            "첫 샷",
-            "[Shot 1]"
-          ]
-        },
-        {
-          "cells": [
-            "두 번째 샷",
-            "[Shot 2] At 00:05.000,"
-          ]
-        }
-      ],
-      "notes": [
-        {
-          "n": 1,
-          "head": "10초 안의 두 샷",
-          "body": "5초 지점의 샷 전환 지시"
-        },
-        {
-          "n": 2,
-          "head": "실제 컷 검수",
-          "body": "생성 지시와 편집 시각의 차이 · 강사 클립1 전환 약 6.54초"
-        }
-      ],
-      "id": "art-4-9-2"
-    },
-    {
-      "title": "공식 프롬프트 6섹션",
+      "title": "클립별 참조 5장",
       "template": "table",
       "columns": [
         "순서",
-        "섹션"
+        "파일 역할"
       ],
       "rows": [
         {
           "cells": [
-            "1",
-            "subject_definitions"
+            "Picture 1",
+            "인물 단독 컷"
           ]
         },
         {
           "cells": [
-            "2",
-            "summary"
+            "Picture 2",
+            "제품 전체"
           ]
         },
         {
           "cells": [
-            "3",
-            "retention_analysis"
+            "Picture 3",
+            "제품 디테일"
           ]
         },
         {
           "cells": [
-            "4",
-            "detailed_description"
+            "Picture 4",
+            "장소 단독 컷"
           ]
         },
         {
           "cells": [
-            "5",
-            "overall_soundscape"
-          ]
-        },
-        {
-          "cells": [
-            "6",
-            "non_diegetic_music"
+            "Picture 5",
+            "해당 클립 스토리보드"
           ]
         }
       ],
       "notes": [
         {
           "n": 1,
-          "head": "작성 기준",
-          "body": "공식 스킬과 reference 모드 지침"
+          "head": "외형 기준",
+          "body": "인물·제품·장소는 각 Subject 정의에서 출처 지정"
         },
         {
           "n": 2,
-          "head": "구도 보완",
-          "body": "Step 10의 실제 보완 입력 후 clip1 갱신 · 이전 원문 별도 보관"
+          "head": "스토리보드",
+          "body": "Picture 5를 해당 Shot 번호에 대응 · 구도·순서 참조"
+        },
+        {
+          "n": 3,
+          "head": "파트너 H3 한도",
+          "body": "호출당 5장까지 참조 이미지 추가료 없음 · 6장째부터 장당 12.07크레딧"
+        },
+        {
+          "n": 4,
+          "head": "오픈 모델",
+          "body": "최대 9장 지원 · 오늘 5장 · GPU 시간에 따른 과금"
         }
       ],
       "action": {
         "label": "실습",
         "items": [
           {
-            "kind": "download",
-            "href": "/downloads/session4/sheets/reference/clip1.txt",
-            "text": "구도 보완 반영 프롬프트 1"
-          },
-          {
-            "kind": "download",
-            "href": "/downloads/session4/sheets/reference/clip2.txt",
-            "text": "프롬프트 2"
-          },
-          {
-            "kind": "download",
-            "href": "/downloads/session4/sheets/reference/clip3.txt",
-            "text": "프롬프트 3"
-          },
-          {
-            "kind": "download",
-            "href": "/downloads/session4/sheets/reference/clip1-before-framing.txt",
-            "text": "구도 보완 전 클립1 원문"
-          },
-          {
             "kind": "link",
-            "href": "https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/h3-prompt-writing/SKILL.md",
-            "text": "공식 H3 프롬프트 스킬"
+            "href": "https://docs.comfy.org/tutorials/partner-nodes/pricing",
+            "text": "참조 이미지 비용 근거"
           }
         ]
       },
-      "id": "art-4-9-3"
+      "id": "art-4-9-2"
     }
   ]
 }

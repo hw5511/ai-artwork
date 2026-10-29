@@ -1,0 +1,192 @@
+{
+  "id": "art-4-12",
+  "title": "업스케일·연결",
+  "summary": "19:30~19:55 · 업스케일 후 30초 연결 · 19:55~20:00 업로드 월",
+  "slides": [
+    {
+      "title": "SeedVR2 영상 업스케일",
+      "template": "table",
+      "columns": [
+        "항목",
+        "설정·비용"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "템플릿",
+            "utility_seedvr2_3b_int8_upscale_video"
+          ]
+        },
+        {
+          "cells": [
+            "입력 → 출력",
+            "1280×720 → 2560×1440 · 2배"
+          ]
+        },
+        {
+          "cells": [
+            "메모리·소리",
+            "split_latent 켜기 · 원본 소리 유지"
+          ]
+        },
+        {
+          "cells": [
+            "추가 비용",
+            "GPU 초 × 약 0.2732크레딧"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "실제 영상 템플릿",
+          "body": "SeedVR2 3B Int8 · Comfy CLI로 API 변환·스키마 검사"
+        },
+        {
+          "n": 2,
+          "head": "비용 출처",
+          "body": "cloud.md·credits.md의 GPU 실측 단가 · 총액 미확정"
+        },
+        {
+          "n": 3,
+          "head": "파트너 대안",
+          "body": "H3 Regenerate는 768P→2K · 15.09크레딧/초 · 30초 452.7크레딧 · 공식 가격표"
+        },
+        {
+          "n": 4,
+          "head": "오늘 검증 범위",
+          "body": "오프라인 입력 검사 완료 · 유료 업스케일 실행·화질 미검증"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "Comfy 스킬을 읽고 Comfy CLI 갤러리 utility_seedvr2_3b_int8_upscale_video로 클립 3개의 업스케일을 준비해줘. session4/clips/clip1-720.mp4~clip3-720.mp4가 입력, 2배 확대, split_latent 켜기, 원본 소리 유지. API 파일은 session4/cloud/upscale1.api.json~upscale3.api.json에 저장해줘.\n지금은 스키마 검증과 --where cloud --print-prompt까지만. 파일이 아직 없으면 입력 경로를 남기고 실행은 멈춰줘. 로그인·계정 조회·업로드·제출·크레딧 사용은 하지 마. GPU 초×약 0.2732크레딧의 추가 비용과 총액 미확정을 표시하고, 예산 확인 뒤 업로드·생성·회수 순서를 알려줘.",
+            "desc": "업스케일 준비"
+          },
+          {
+            "kind": "link",
+            "href": "https://docs.comfy.org/tutorials/partner-nodes/pricing",
+            "text": "파트너 업스케일 단가"
+          }
+        ]
+      },
+      "id": "art-4-12-1"
+    },
+    {
+      "title": "30초 연결과 비교",
+      "template": "table",
+      "columns": [
+        "검사",
+        "기준"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "입력",
+            "업스케일 클립 3개 · 각각 10초 이상"
+          ]
+        },
+        {
+          "cells": [
+            "연결",
+            "앞 10초씩 · 1 → 2 → 3"
+          ]
+        },
+        {
+          "cells": [
+            "최종 파일",
+            "30초 · 2560×1440 · 24fps · 720프레임"
+          ]
+        },
+        {
+          "cells": [
+            "같은 시각 비교",
+            "얼굴 · 로고·버튼 · 빛 · 하드컷"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "연결 도구",
+          "body": "ffprobe 검사 · ffmpeg CPU libx264 · H.264/AAC"
+        },
+        {
+          "n": 2,
+          "head": "원본 소리",
+          "body": "기존 소리 유지 · 클립 경계의 음량 차이 확인"
+        },
+        {
+          "n": 3,
+          "head": "디테일 검수",
+          "body": "해상도 증가와 실제 부품 보존을 따로 확인"
+        },
+        {
+          "n": 4,
+          "head": "누락 입력",
+          "body": "10초 미만·없는 파일이면 중단 · 임시 영상으로 대체 제외"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "session4/upscaled/clip1.mp4~clip3.mp4를 ffprobe로 검사하고 ffmpeg로 순서대로 이어줘. 각 파일 앞 10초, 합계 정확히 30초. 2560×1440·24fps·H.264/AAC, CPU libx264로 session4/final/my-30s.mp4에 저장해줘. 원본 소리는 유지하고 자막·전환·음악·배속은 추가하지 마.\n입력이 없거나 10초보다 짧으면 대체 영상으로 채우지 말고 멈춰줘. 입력이 없을 때는 실행하지 않는 연결 스크립트만 준비해줘. 완성 후 길이·해상도·720프레임을 검사하고, 원본과 확대본의 같은 시각에서 얼굴·제품 디테일·빛·하드컷을 비교할 프레임도 저장해줘.",
+            "desc": "30초 연결"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session4/own-story/workflow-kit.zip",
+            "text": "연결 준비 파일"
+          }
+        ]
+      },
+      "id": "art-4-12-2"
+    },
+    {
+      "title": "수업 업로드 월",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session4/own-story/storyboard3.png"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "입장",
+          "body": "19:55~20:00 · 강사가 보여 주는 QR 또는 짧은 링크"
+        },
+        {
+          "n": 2,
+          "head": "올릴 자료",
+          "body": "본인의 30초 영상 · 작품 제목 · 한 줄 이야기"
+        },
+        {
+          "n": 3,
+          "head": "함께 보기",
+          "body": "의도한 하드컷과 확대 디테일 한 곳 소개"
+        },
+        {
+          "n": 4,
+          "head": "생성 대기",
+          "body": "파일·작업 ID 보관 · 완료 뒤 같은 수업 월에 업로드"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://wall.woohee.me",
+            "text": "업로드 월 입구"
+          }
+        ]
+      },
+      "id": "art-4-12-3"
+    }
+  ]
+}

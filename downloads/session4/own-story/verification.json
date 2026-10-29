@@ -1,0 +1,308 @@
+{
+  "rehearsal": {
+    "separate_codex_home": true,
+    "initially_empty_work_folder": true,
+    "comfy_skill_seeded_from_previous_verified_exercise": true,
+    "prompts": [
+      {
+        "prompt": "02",
+        "sha256": "50438f22df543edcf0c24102c4eb4f7d462f3aabef1f628744a53a4f0e069e06",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "03",
+        "sha256": "5621262dae700a036f50c3092b37f1bc03fee48a7fd29773c51828d482a9ba2d",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "04",
+        "sha256": "b86ed1a52e0815ef0e76ec6f7fe14f4a66bb6393ce633f8ee0565aef2cf25f5c",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "05",
+        "sha256": "1b8cabf8796af63d640b75747ff36fac94e7a1e510e7a37862b7077457be5df6",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "06",
+        "sha256": "7a6c6dd7fd2d7fcb956bc3e3c58d02f9563d6eb88b9d91f2f21bef05aaee3d8d",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "07",
+        "sha256": "415879188d9058776b39ef47b4f6457a87e57582de4d1e23629e5c3d62969b95",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "08",
+        "sha256": "88d1458b2c7612e466658d5ef526bf9789923e683a00ba507f770686220c765a",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "09",
+        "sha256": "5f466a66b0b4abe135a7170056cc0dd410663f3242df4f61798ae4d816b6ee0e",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "10-install",
+        "sha256": "b35fa35c478cc5c398dee7226590db818b60eeff94924a6b4ed88a9f5b7b4e90",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "10",
+        "sha256": "b6520d9ceb5d6b0d138253b7afac1eaf5e8b746f5a92e6f25981e4416fa9d249",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "11",
+        "sha256": "8656f819eab8b3ad3d588a45578589c718122028de4f880e8cd7b9bc365ee72d",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "12-upscale",
+        "sha256": "26711b1393e6ee728c88a082aa06c4319b688913453b737f072a96fc758ed41c",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "12-join",
+        "sha256": "eacff8926d92645a77e7ced8b85989afaa83a78e42792d43d433f2e618bc66b0",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      },
+      {
+        "prompt": "04-zoom",
+        "sha256": "4ec8520cf12f61ca26ab45184b171424d2511bfcb1b6f8ff599fd73f80ecf6c8",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true
+      }
+    ]
+  },
+  "parts": [
+    {
+      "id": "art-4-1",
+      "title": "오늘 만들 것",
+      "slides": 2
+    },
+    {
+      "id": "art-4-2",
+      "title": "작업 폴더",
+      "slides": 1
+    },
+    {
+      "id": "art-4-3",
+      "title": "내 30초 이야기",
+      "slides": 1
+    },
+    {
+      "id": "art-4-4",
+      "title": "멀티샷 대본",
+      "slides": 2
+    },
+    {
+      "id": "art-4-5",
+      "title": "스토리보드",
+      "slides": 3
+    },
+    {
+      "id": "art-4-6",
+      "title": "인물 시트",
+      "slides": 1
+    },
+    {
+      "id": "art-4-7",
+      "title": "의상·소품",
+      "slides": 2
+    },
+    {
+      "id": "art-4-8",
+      "title": "로케이션 시트",
+      "slides": 1
+    },
+    {
+      "id": "art-4-9",
+      "title": "참조 묶음",
+      "slides": 2
+    },
+    {
+      "id": "art-4-10",
+      "title": "H3 하드컷",
+      "slides": 3
+    },
+    {
+      "id": "art-4-11",
+      "title": "720 생성",
+      "slides": 3
+    },
+    {
+      "id": "art-4-12",
+      "title": "업스케일·연결",
+      "slides": 3
+    }
+  ],
+  "workflows": [
+    {
+      "file": "clip1.api.json",
+      "sha256": "6fbdc91287a6db4162902c4991a0db84e1c778509ffb2b26b235311b4010cb91",
+      "valid": true,
+      "errors": 0,
+      "warnings": 0,
+      "submitted": false
+    },
+    {
+      "file": "upscale1.api.json",
+      "sha256": "89ff93f2b342099257a54bc52fff7877b6a9743ad21bee6d367997a34690f963",
+      "valid": true,
+      "errors": 0,
+      "warnings": 0,
+      "submitted": false
+    },
+    {
+      "file": "clip2.api.json",
+      "sha256": "c4d78c5aaa7c6763070179e0e632968964e744b5b466225a4bb00d3e8a8ce3ab",
+      "valid": true,
+      "errors": 0,
+      "warnings": 0,
+      "submitted": false
+    },
+    {
+      "file": "upscale2.api.json",
+      "sha256": "50a785dcf70c0800be254d5d4c510c139c095fd9ee1517a5b89653bc0ea971a0",
+      "valid": true,
+      "errors": 0,
+      "warnings": 0,
+      "submitted": false
+    },
+    {
+      "file": "clip3.api.json",
+      "sha256": "4ae6e8cb4605eadc0a200c09d005e0acc8bfa46d46843ae11c82adc610a32850",
+      "valid": true,
+      "errors": 0,
+      "warnings": 0,
+      "submitted": false
+    },
+    {
+      "file": "upscale3.api.json",
+      "sha256": "00edb5520868956d1667a25c612752f38f32d7c950befe7ad1574afbcc9e0acb",
+      "valid": true,
+      "errors": 0,
+      "warnings": 0,
+      "submitted": false
+    }
+  ],
+  "unchanged_sessions": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8
+  ],
+  "cloud_login_upload_submit_and_paid_upscale": false,
+  "gpu_rate_source": "comfy-cli references/cloud.md 2026-08-26 invoice-derived 0.2732 credits/GPU second; credits.md distinguishes GPU vs partner billing",
+  "partner_price_source": "https://docs.comfy.org/tutorials/partner-nodes/pricing",
+  "codex_images": "built-in image generation, original sheets and storyboards; crops from original pixels",
+  "korean_review": {
+    "method": "manual korean-natural-prose/deslop review",
+    "score_out_of_50": 46,
+    "student_prompt_text_unchanged": true
+  },
+  "limits": [
+    "Cloud runtime, uploads, cloud_name binding, actual GPU cost and upscale quality untested; offline schema and print-prompt only",
+    "Storyboard appearance differs from final sheets; storyboard is composition/order only",
+    "No guaranteed generated cut timings or perfect logo/identity continuity"
+  ],
+  "browser_qa": {
+    "tool": "playwright-tool CLI test --member codex",
+    "base": "/ai-artwork/",
+    "desktop": [
+      1920,
+      1080
+    ],
+    "mobile": [
+      390,
+      844
+    ],
+    "slides_each": 36,
+    "screenshots_visually_reviewed": true,
+    "mobile_scrolled_notes_visually_reviewed": true,
+    "clipboard_exact_matches": 28,
+    "part_and_legacy_hashes": 24,
+    "downloads_http_200": 9,
+    "arrows": true,
+    "pending_5_through_8": true,
+    "browsers_and_preview_stopped": true
+  },
+  "cpu_join_runtime_test": {
+    "synthetic_private_fixture_only": true,
+    "checks": {
+      "container_30_seconds": true,
+      "video_30_seconds": true,
+      "video_2560x1440": true,
+      "video_24fps": true,
+      "decoded_720_frames": true,
+      "h264": true,
+      "aac": true,
+      "audio_30_seconds": true
+    },
+    "comparison_frame_counts": {
+      "original": 37,
+      "upscaled": 37,
+      "final": 37
+    },
+    "rgb_order_pixels": [
+      [
+        255,
+        0,
+        0
+      ],
+      [
+        1,
+        128,
+        2
+      ],
+      [
+        2,
+        0,
+        255
+      ]
+    ],
+    "public_example_video": false
+  },
+  "optional_local_video": {
+    "submitted": false,
+    "reason": "Current HQ GPU job and unverified 4-step/5-reference runtime could overrun the 17:00 cutoff; past 8-step/3-reference 10-second clips took about 19–20 minutes each. No render jobs were submitted."
+  },
+  "checks": {
+    "content_errors": 0,
+    "npm_build": "passed",
+    "git_diff_check": "passed"
+  }
+}

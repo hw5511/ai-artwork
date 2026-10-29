@@ -1,35 +1,35 @@
 {
   "id": "art-4-7",
-  "title": "단독 컷으로 잘라 쓰기",
-  "summary": "원본 크롭과 작은 얼굴 보완",
+  "title": "의상·소품",
+  "summary": "18:35~19:15 · 의상·소품 시트의 전체와 확대 샷용 디테일",
   "slides": [
     {
-      "title": "시트에서 자른 단독 컷",
-      "template": "compare",
-      "left": {
-        "label": "반려견",
-        "screen": {
-          "kind": "shot",
-          "src": "/lectures/images/session4/sheets/dog.png"
-        }
-      },
-      "right": {
-        "label": "리드줄",
-        "screen": {
-          "kind": "shot",
-          "src": "/lectures/images/session4/sheets/leash.png"
-        }
+      "title": "제품 전체와 작은 디테일",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session4/own-story/prop-sheet.png"
       },
       "notes": [
         {
           "n": 1,
-          "head": "원본 픽셀",
-          "body": "재생성 없이 코드로 크롭 · 시트 원본 보관"
+          "head": "GPT와 논의",
+          "body": "이야기에 필요한 의상·소품·광고 제품 선택"
         },
         {
           "n": 2,
-          "head": "영상 참조",
-          "body": "session4/views 안의 단독 컷만 사용"
+          "head": "전체 모습",
+          "body": "제품 모양·색상·크기 · 부품의 상대 위치"
+        },
+        {
+          "n": 3,
+          "head": "디테일 패널",
+          "body": "로고·버튼·금속 톱니·재질 · 대본의 확대 샷 대응"
+        },
+        {
+          "n": 4,
+          "head": "예제 확인",
+          "body": "흰 점 세 개의 개수 · 주황 버튼 · 은색 다이얼"
         }
       ],
       "action": {
@@ -37,74 +37,48 @@
         "items": [
           {
             "kind": "copy",
-            "value": "session4/sheets의 원본 시트를 코드로 잘라 영상 참조용 단독 컷을 만들어줘. 재생성·Comfy 호출 없이 원본 픽셀을 잘라 저장.\nman.png와 dog.png는 우상 앞 3/4 전신, leash.png는 좌상 전체 모습, park.png는 위쪽 수평 가로 컷. session4/views/man.png, dog.png, leash.png, park.png에 저장해줘.\n각 파일을 열어 다른 칸·글자·잘린 신체가 섞이지 않았는지 확인하고 크기를 알려줘. 얼굴이 작거나 흐리면 그 사실을 알려주고 멈춰줘. 시트 원본은 보관하고 영상 참조에는 views의 단독 컷만 사용해.",
-            "desc": "시트 크롭 원문"
+            "value": "session4/idea.md와 shots.json을 읽고 확대 샷에 필요한 의상·소품 또는 광고 제품의 특징을 session4/prop.md에 기록해줘.\nCodex 내장 이미지 생성으로 전체 모습과 로고·버튼·질감 같은 디테일이 보이는 네 칸 시트를 session4/sheets/prop.png에 만들어줘. 같은 물건의 모양과 재질을 유지하고 결과를 열어 확인해줘. Comfy와 유료 API는 쓰지 마.",
+            "desc": "실습 프롬프트"
           }
         ]
       },
       "id": "art-4-7-1"
     },
     {
-      "title": "공원 단독 컷",
-      "template": "screen",
-      "screen": {
-        "kind": "shot",
-        "src": "/lectures/images/session4/sheets/park.png"
-      },
-      "notes": [
-        {
-          "n": 1,
-          "head": "위쪽 가로 컷",
-          "body": "같은 공원의 수평 시점"
-        },
-        {
-          "n": 2,
-          "head": "크롭 확인",
-          "body": "다른 칸·글자·잘린 신체 혼입 확인"
+      "title": "전체 컷과 디테일 컷",
+      "template": "compare",
+      "left": {
+        "label": "제품 전체",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session4/own-story/prop.png"
         }
-      ],
-      "id": "art-4-7-2"
-    },
-    {
-      "title": "남성 얼굴 보완",
-      "template": "screen",
-      "screen": {
-        "kind": "shot",
-        "src": "/lectures/images/session4/sheets/man.png"
+      },
+      "right": {
+        "label": "디테일",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session4/own-story/detail.png"
+        }
       },
       "notes": [
         {
           "n": 1,
-          "head": "작은 얼굴",
-          "body": "전신 크롭 627×627 · 얼굴 폭 약 60px에서 중단"
+          "head": "전체 기준",
+          "body": "민트색 몸체와 렌즈 · 버튼·다이얼 위치"
         },
         {
           "n": 2,
-          "head": "반신 보완",
-          "body": "같은 얼굴·머리·재킷 · Codex 내장 이미지 생성"
+          "head": "근접 기준",
+          "body": "확대 대상의 형태·질감 · 손으로 가려지는 부분 확인"
         },
         {
           "n": 3,
-          "head": "원본 보관",
-          "body": "기존 컷은 man-full.png · 새 컷은 views/man.png"
-        },
-        {
-          "n": 4,
-          "head": "나머지 참조",
-          "body": "dog.png · leash.png · park.png 유지"
+          "head": "연속성",
+          "body": "다른 각도에서도 같은 부품 · 로고의 다른 면 복제 확인"
         }
       ],
-      "action": {
-        "label": "실습",
-        "items": [
-          {
-            "kind": "copy",
-            "value": "방금 자른 남성 전신 컷은 얼굴이 작아. session4/sheets/man.png의 우하 얼굴 근접 컷을 코드로 잘라 man-face.png에 보관하고, 그 얼굴과 rules.md를 기준으로 Codex 내장 이미지 생성에서 남성 앞 3/4 반신 단독 컷 한 장만 만들어줘. Comfy나 유료 이미지 API는 쓰지 마.\n같은 얼굴·검은 머리·초록 필드 재킷·크림색 티셔츠, 회색 무배경·균일 조명. 머리부터 골반까지, 양 어깨와 양손을 화면 안에 넣고 얼굴 높이는 화면 세로의 약 1/4. 소품·개·글자 제외. 시트 전체를 다시 만들지 마.\n기존 session4/views/man.png는 man-full.png로 보관하고 새 단독 컷을 session4/views/man.png에 저장해줘. 열어서 얼굴이 읽히는지 확인하고 크기를 알려줘. 나머지 dog.png·leash.png·park.png는 그대로 사용해.",
-            "desc": "작은 얼굴 보완 원문"
-          }
-        ]
-      },
-      "id": "art-4-7-3"
+      "id": "art-4-7-2"
     }
   ]
 }

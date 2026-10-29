@@ -1,0 +1,2 @@
+session4/idea.md와 shots.json을 읽고 확대 샷에 필요한 의상·소품 또는 광고 제품의 특징을 session4/prop.md에 기록해줘.
+Codex 내장 이미지 생성으로 전체 모습과 로고·버튼·질감 같은 디테일이 보이는 네 칸 시트를 session4/sheets/prop.png에 만들어줘. 같은 물건의 모양과 재질을 유지하고 결과를 열어 확인해줘. Comfy와 유료 API는 쓰지 마.

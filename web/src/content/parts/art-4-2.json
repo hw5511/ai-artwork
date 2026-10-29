@@ -1,41 +1,36 @@
 {
   "id": "art-4-2",
-  "title": "시트로 같은 모습 유지하기",
-  "summary": "시트 분리와 단독 컷의 역할",
+  "title": "작업 폴더",
+  "summary": "18:00~18:10 · 3회차 작업 폴더와 Comfy 스킬 확인",
   "slides": [
     {
-      "title": "시트와 단독 컷",
+      "title": "같은 작업 폴더",
       "template": "illustration",
-      "illustration": "/lectures/images/session4/sheets/sheet-method.svg",
+      "illustration": "/illustrations/project-folder.svg",
       "notes": [
         {
           "n": 1,
-          "head": "외형 기준",
-          "body": "인물 · 소품 · 로케이션을 별도 시트로 보관"
+          "head": "폴더 선택",
+          "body": "Codex 데스크톱에서 3회차 작업 폴더 열기"
         },
         {
           "n": 2,
-          "head": "한 시트의 주체",
-          "body": "남성과 반려견 각각 별도 시트"
+          "head": "실행 환경",
+          "body": "GPT-6.1 Sol · 전체 권한 · 저장한 Comfy 스킬"
         },
         {
           "n": 3,
-          "head": "영상 입력",
-          "body": "시트 전체 대신 잘라 낸 단독 컷"
-        },
-        {
-          "n": 4,
-          "head": "참조 역할",
-          "body": "인물은 외형 · 소품은 형태 · 공원은 지형·배치·빛"
+          "head": "파일 확인",
+          "body": "프로젝트 스킬 경로 확인 · 오늘 파일은 session4 아래"
         }
       ],
       "action": {
         "label": "실습",
         "items": [
           {
-            "kind": "link",
-            "href": "https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/h3-prompt-writing/references/ref-en.txt",
-            "text": "공식 참조 지침"
+            "kind": "copy",
+            "value": "3회차 작업 폴더를 다시 열었어. 현재 폴더와 저장한 Comfy 스킬 경로, Comfy CLI 버전을 확인해줘. 오늘 파일은 session4 아래에 저장해. 로그인·계정 조회·업로드·유료 생성은 하지 마.",
+            "desc": "실습 프롬프트"
           }
         ]
       },

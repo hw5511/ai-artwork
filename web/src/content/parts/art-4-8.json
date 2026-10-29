@@ -1,32 +1,35 @@
 {
   "id": "art-4-8",
-  "title": "MiniMax 공식 스킬 설치하기",
-  "summary": "공식 H3 스킬의 프로젝트 설치",
+  "title": "로케이션 시트",
+  "summary": "18:35~19:15 · 같은 장소의 배치와 빛",
   "slides": [
     {
-      "title": "MiniMax 프로젝트 스킬",
-      "template": "illustration",
-      "illustration": "/illustrations/project-folder.svg",
+      "title": "와이드와 역방향",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session4/own-story/location-sheet.png"
+      },
       "notes": [
         {
           "n": 1,
-          "head": "프로젝트 설치",
-          "body": ".agents/skills 아래 공식 스킬 9개 · 전역 설치 없음"
+          "head": "GPT와 논의",
+          "body": "창·가구·주체의 위치 · 시간대·빛 방향 선택"
         },
         {
           "n": 2,
-          "head": "작성 스킬",
-          "body": "h3-prompt-writing · SKILL.md · references/ref-en.txt"
+          "head": "와이드",
+          "body": "장소 전체의 배치 확인"
         },
         {
           "n": 3,
-          "head": "새 대화",
-          "body": "같은 작업 폴더의 New chat · 스킬 이름·경로 확인"
+          "head": "역방향",
+          "body": "카메라 반대편 시점 · 창이 화면 반대로 보이는 관계"
         },
         {
           "n": 4,
-          "head": "역할 구분",
-          "body": "H3 스킬은 프롬프트 작성 · 영상 실행은 Comfy CLI"
+          "head": "예제 장소",
+          "body": "나무 책상·뒤 선반 · 왼쪽 창에서 오는 오후 빛"
         }
       ],
       "action": {
@@ -34,18 +37,8 @@
         "items": [
           {
             "kind": "copy",
-            "value": "MiniMax 공식 저장소 https://github.com/MiniMax-AI/MiniMax-H3 의 skills 폴더를 확인하고 공식 H3 스킬을 현재 작업 폴더에 설치해줘.\n공식 안내의 npx skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill '*'를 기준으로, Codex가 찾는 프로젝트 경로 .agents/skills에 설치. 전역 설치는 하지 말고 소유자 설정도 바꾸지 마. 비대화형 실행이 필요하면 실제 도움말을 확인해 에이전트 codex와 확인 옵션을 지정해줘.\n실행한 정확한 명령, 설치한 스킬 이름, SKILL.md의 실제 경로를 알려줘. 영상 생성·Comfy 로그인·크레딧 사용은 하지 마.",
+            "value": "session4/idea.md와 shots.json을 읽고 장소의 배치·빛 방향·시간대를 session4/location.md에 기록해줘.\nCodex 내장 이미지 생성으로 같은 장소의 와이드와 역방향 두 컷 시트를 session4/sheets/location.png에 만들어줘. 인물과 제품은 빼고, 카메라가 돌아가도 같은 창·가구·빛인지 결과를 열어 확인해줘. Comfy와 유료 API는 쓰지 마.",
             "desc": "실습 프롬프트"
-          },
-          {
-            "kind": "copy",
-            "value": "npx --yes skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill '*' --agent codex --yes",
-            "desc": "실측 설치 명령"
-          },
-          {
-            "kind": "link",
-            "href": "https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/README.md",
-            "text": "MiniMax 공식 설치 안내"
           }
         ]
       },

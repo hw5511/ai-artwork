@@ -1,0 +1,3 @@
+저장한 Comfy 스킬과 session4/references.json을 읽고 Comfy CLI로 클립 3개의 생성 준비를 해줘. 지금은 견적·오프라인 검증·--where cloud --print-prompt까지만. 로그인·계정 조회·업로드·제출·크레딧 사용은 하지 마.
+갤러리 video_minimax_h3_r2v 기반, MiniMaxH3ReferenceToVideo의 width=1280, height=720, length=243, 24fps, 템플릿의 4스텝 turbo 사용. Cloud 목록의 minimax_h3_video_vae_fp16.safetensors를 사용하고 프롬프트·참조 순서를 그대로 반영해 session4/cloud/clip1.api.json~clip3.api.json으로 저장해줘.
+생성과 업스케일은 GPU 사용 초×약 0.2732크레딧의 시간 과금이야(수업 비용 근거 파일의 실측 단가). CLI가 숫자 견적을 주지 않으면 총액 미확정으로 표시하고 예산 확인 뒤 제출할 계획만 써줘. 파트너 견적 0을 무료로 설명하지 마. 생성 후 앞 10초를 쓸 거야. 오류 1026이면 원문을 보여주고 자동 재시도는 멈춰줘.

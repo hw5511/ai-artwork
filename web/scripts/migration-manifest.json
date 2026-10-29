@@ -178,122 +178,128 @@
     ]
   },
   {
-    "source": "session4/step1-recap.md",
+    "source": "session4v2/rehearsed-student-prompts",
     "part": "art-4-1",
-    "copyHashes": [
-      "202a82f913f1e1a923771eb0a44065eed0096a9f05e303326d3e732cf990a28d"
-    ],
+    "copyHashes": [],
     "hrefs": [
-      "/downloads/session2/step1/park_walk.png",
-      "https://learn.chatgpt.com/docs/build-skills"
+      "https://wall.woohee.me",
+      "/downloads/session4/own-story/example.zip"
     ]
   },
   {
-    "source": "session4/step2-sheet-method.md",
+    "source": "session4v2/rehearsed-student-prompts",
     "part": "art-4-2",
-    "copyHashes": [],
+    "copyHashes": [
+      "50438f22df543edcf0c24102c4eb4f7d462f3aabef1f628744a53a4f0e069e06"
+    ],
+    "hrefs": []
+  },
+  {
+    "source": "session4v2/rehearsed-student-prompts",
+    "part": "art-4-3",
+    "copyHashes": [
+      "5621262dae700a036f50c3092b37f1bc03fee48a7fd29773c51828d482a9ba2d"
+    ],
     "hrefs": [
+      "/downloads/session4/own-story/example/idea.md"
+    ]
+  },
+  {
+    "source": "session4v2/rehearsed-student-prompts",
+    "part": "art-4-4",
+    "copyHashes": [
+      "b86ed1a52e0815ef0e76ec6f7fe14f4a66bb6393ce633f8ee0565aef2cf25f5c",
+      "4ec8520cf12f61ca26ab45184b171424d2511bfcb1b6f8ff599fd73f80ecf6c8"
+    ],
+    "hrefs": [
+      "/downloads/session4/own-story/example/shots.json"
+    ]
+  },
+  {
+    "source": "session4v2/rehearsed-student-prompts",
+    "part": "art-4-5",
+    "copyHashes": [
+      "1b8cabf8796af63d640b75747ff36fac94e7a1e510e7a37862b7077457be5df6"
+    ],
+    "hrefs": [
+      "/downloads/session4/own-story/example/storyboards/clip3.png"
+    ]
+  },
+  {
+    "source": "session4v2/rehearsed-student-prompts",
+    "part": "art-4-6",
+    "copyHashes": [
+      "7a6c6dd7fd2d7fcb956bc3e3c58d02f9563d6eb88b9d91f2f21bef05aaee3d8d"
+    ],
+    "hrefs": [
+      "https://learn.chatgpt.com/docs/image-generation"
+    ]
+  },
+  {
+    "source": "session4v2/rehearsed-student-prompts",
+    "part": "art-4-7",
+    "copyHashes": [
+      "415879188d9058776b39ef47b4f6457a87e57582de4d1e23629e5c3d62969b95"
+    ],
+    "hrefs": []
+  },
+  {
+    "source": "session4v2/rehearsed-student-prompts",
+    "part": "art-4-8",
+    "copyHashes": [
+      "88d1458b2c7612e466658d5ef526bf9789923e683a00ba507f770686220c765a"
+    ],
+    "hrefs": []
+  },
+  {
+    "source": "session4v2/rehearsed-student-prompts",
+    "part": "art-4-9",
+    "copyHashes": [
+      "5f466a66b0b4abe135a7170056cc0dd410663f3242df4f61798ae4d816b6ee0e"
+    ],
+    "hrefs": [
+      "https://docs.comfy.org/tutorials/partner-nodes/pricing"
+    ]
+  },
+  {
+    "source": "session4v2/rehearsed-student-prompts",
+    "part": "art-4-10",
+    "copyHashes": [
+      "b35fa35c478cc5c398dee7226590db818b60eeff94924a6b4ed88a9f5b7b4e90",
+      "b6520d9ceb5d6b0d138253b7afac1eaf5e8b746f5a92e6f25981e4416fa9d249"
+    ],
+    "hrefs": [
+      "https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/README.md",
+      "/downloads/session4/own-story/example/prompts/clip1.txt",
+      "/downloads/session4/own-story/example/prompts/clip2.txt",
+      "/downloads/session4/own-story/example/prompts/clip3.txt",
       "https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/h3-prompt-writing/references/ref-en.txt"
     ]
   },
   {
-    "source": "session4/step3-script.md",
-    "part": "art-4-3",
+    "source": "session4v2/rehearsed-student-prompts",
+    "part": "art-4-11",
     "copyHashes": [
-      "d2151e2c5a97e6978909de81b95db29aa5a11a4eb78ef8d2728235a4d835c011"
-    ],
-    "hrefs": []
-  },
-  {
-    "source": "session4/step4-characters.md",
-    "part": "art-4-4",
-    "copyHashes": [
-      "f6dadb2ac93a4036c34d536e3722da15afc6ced964fb7f9be957a9c05bf4234d"
+      "8656f819eab8b3ad3d588a45578589c718122028de4f880e8cd7b9bc365ee72d"
     ],
     "hrefs": [
-      "https://learn.chatgpt.com/docs/image-generation"
+      "/downloads/session4/own-story/workflow-kit.zip",
+      "/downloads/session4/own-story/cost-sources.txt",
+      "https://docs.comfy.org/tutorials/partner-nodes/pricing",
+      "https://comfy.org/pricing"
     ]
   },
   {
-    "source": "session4/step5-prop.md",
-    "part": "art-4-5",
+    "source": "session4v2/rehearsed-student-prompts",
+    "part": "art-4-12",
     "copyHashes": [
-      "b7999cc80b569c9bbe808419a4c9088dd66c142e8424dce975eda7a9ea03402a"
-    ],
-    "hrefs": [
-      "https://learn.chatgpt.com/docs/image-generation"
-    ]
-  },
-  {
-    "source": "session4/step6-location.md",
-    "part": "art-4-6",
-    "copyHashes": [
-      "236a3d2259c014747bfe4408f88e74ab0104b7ecaeeac5bf48dbbce027bc63b6"
-    ],
-    "hrefs": []
-  },
-  {
-    "source": "session4/step7-single-views.md",
-    "part": "art-4-7",
-    "copyHashes": [
-      "0977bd73134ed690aa4deb0a9bd0fc4a29a805ebf46c6cc7036dc67ad505a6dc",
-      "a239260adfda53dc79bfe8112c2954b5be6609798dea2102b5a3ee7cd1c385c6"
-    ],
-    "hrefs": []
-  },
-  {
-    "source": "session4/step8-minimax-skill.md",
-    "part": "art-4-8",
-    "copyHashes": [
-      "47ec8b68b253785d0028140da0edb565d8ddea0609848599ed23c691ecaf5d70",
-      "5240a6a297a9dc4907e84ef15d82aed3eb54d5f854e09d9e0df7361a183f7eee"
-    ],
-    "hrefs": [
-      "https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/README.md"
-    ]
-  },
-  {
-    "source": "session4/step9-timestamps.md",
-    "part": "art-4-9",
-    "copyHashes": [
-      "9421fbbcc91dda7cda76b65ef49de317b079d1f049b93041fd89d4417d969c28"
-    ],
-    "hrefs": [
-      "/downloads/session4/sheets/reference/clip1.txt",
-      "/downloads/session4/sheets/reference/clip2.txt",
-      "/downloads/session4/sheets/reference/clip3.txt",
-      "/downloads/session4/sheets/reference/clip1-before-framing.txt",
-      "https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/h3-prompt-writing/SKILL.md"
-    ]
-  },
-  {
-    "source": "session4/step10-cloud.md",
-    "part": "art-4-10",
-    "copyHashes": [
-      "9c1a226e94984b5c64c49afbc11e3d955913fc65300b7986a2da8aa18e979c07",
-      "4290629a07fcb204ede93ffd13b934bbcae843e4b070d49706a92e79067e464e",
-      "f2526fa58ca402d7edbc429091067c4edf5a193e54209da9135f4ef8df086600",
-      "545fe707c7bd9ec81df86e10c58e52484e43a1e2925a36c79afb34346f09de7e",
-      "f63acd82cbb4b3df0467441bedcbb1c95643719409cf6b65a10946f2ae9b71ea",
-      "b44a0ba9a31258453fa45e20fe254c492c0d9176d14932beccf9fcad227a7346"
+      "26711b1393e6ee728c88a082aa06c4319b688913453b737f072a96fc758ed41c",
+      "eacff8926d92645a77e7ced8b85989afaa83a78e42792d43d433f2e618bc66b0"
     ],
     "hrefs": [
       "https://docs.comfy.org/tutorials/partner-nodes/pricing",
-      "https://comfy.org/pricing",
-      "https://docs.comfy.org/agent-tools/cli"
-    ]
-  },
-  {
-    "source": "session4/step11-join.md",
-    "part": "art-4-11",
-    "copyHashes": [
-      "79057a163761f1393be22aebdaf8648de53c67593e43169ad855305d7948e7d8"
-    ],
-    "hrefs": [
-      "/downloads/session4/sheets/demo/park-30s.mp4",
-      "/downloads/session4/sheets/demo/instructor-clips.zip",
-      "/downloads/session4/sheets/practice-materials.zip",
-      "/downloads/session4/sheets/demo/production.txt"
+      "/downloads/session4/own-story/workflow-kit.zip",
+      "https://wall.woohee.me"
     ]
   }
 ]
