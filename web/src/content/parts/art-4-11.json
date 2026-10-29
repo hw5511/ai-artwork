@@ -92,8 +92,14 @@
         },
         {
           "cells": [
-            "720p 3클립 합계",
-            "GPU 시간 미정 · 총액 미확정"
+            "참고 실측",
+            "768p 10초·참조 4장 1편 = GPU 720초 · 약 200크레딧"
+          ]
+        },
+        {
+          "cells": [
+            "오늘 720p turbo",
+            "실측 없음 · 첫 클립 뒤 사용량 확인"
           ]
         },
         {
@@ -213,6 +219,16 @@
           "body": "원문 확인 후 중단 · 자동 재시도 제외 · 새 비용 확인"
         }
       ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "비용과 예산을 확인했어. 저장한 Comfy 스킬을 읽고 클립1부터 Comfy Cloud에서 생성해줘.\nsession4/references.json의 참조 이미지를 Comfy CLI로 업로드하고, 응답의 cloud_name을 session4/cloud/clip1.api.json의 LoadImage에 반영한 뒤 --where cloud --print-prompt로 다시 확인해줘. 이상이 없으면 --allow-spend로 제출하고 작업 ID를 알려줘.\njobs wait와 download로 결과를 받아 앞 10초를 ffmpeg CPU로 잘라 session4/clips/clip1-720.mp4에 저장해줘. 결과를 열어 확인한 다음 클립2·3도 같은 순서로 진행해줘. 오류 1026이면 원문을 보여주고 자동 재시도는 하지 마.",
+            "desc": "생성 실행"
+          }
+        ]
+      },
       "id": "art-4-11-3"
     }
   ]
