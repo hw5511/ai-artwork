@@ -197,9 +197,7 @@
   {
     "source": "session4v2/rehearsed-student-prompts",
     "part": "art-4-3",
-    "copyHashes": [
-      "5621262dae700a036f50c3092b37f1bc03fee48a7fd29773c51828d482a9ba2d"
-    ],
+    "copyHashes": [],
     "hrefs": [
       "/downloads/session4/own-story/example/idea.md"
     ]
@@ -207,10 +205,7 @@
   {
     "source": "session4v2/rehearsed-student-prompts",
     "part": "art-4-4",
-    "copyHashes": [
-      "b86ed1a52e0815ef0e76ec6f7fe14f4a66bb6393ce633f8ee0565aef2cf25f5c",
-      "4ec8520cf12f61ca26ab45184b171424d2511bfcb1b6f8ff599fd73f80ecf6c8"
-    ],
+    "copyHashes": [],
     "hrefs": [
       "/downloads/session4/own-story/example/shots.json"
     ]
@@ -228,9 +223,7 @@
   {
     "source": "session4v2/rehearsed-student-prompts",
     "part": "art-4-6",
-    "copyHashes": [
-      "7a6c6dd7fd2d7fcb956bc3e3c58d02f9563d6eb88b9d91f2f21bef05aaee3d8d"
-    ],
+    "copyHashes": [],
     "hrefs": [
       "https://learn.chatgpt.com/docs/image-generation"
     ]
@@ -238,17 +231,13 @@
   {
     "source": "session4v2/rehearsed-student-prompts",
     "part": "art-4-7",
-    "copyHashes": [
-      "415879188d9058776b39ef47b4f6457a87e57582de4d1e23629e5c3d62969b95"
-    ],
+    "copyHashes": [],
     "hrefs": []
   },
   {
     "source": "session4v2/rehearsed-student-prompts",
     "part": "art-4-8",
-    "copyHashes": [
-      "88d1458b2c7612e466658d5ef526bf9789923e683a00ba507f770686220c765a"
-    ],
+    "copyHashes": [],
     "hrefs": []
   },
   {
