@@ -1,0 +1,9 @@
+{
+  "command": "comfy --json cloud login --no-browser",
+  "version": "{\"schema\": \"envelope/1\", \"type\": \"envelope\", \"ok\": true, \"command\": \"version\", \"version\": \"1.23.0\", \"where\": null, \"data\": {\"version\": \"1.23.0\"}, \"error\": null}",
+  "lines": [
+    "{\"schema\": \"event/1\", \"type\": \"login_url\", \"url\": \"https://cloud.comfy.org/oauth/authorize?[인증 코드 가림]\", \"timeout_s\": 300}"
+  ],
+  "stoppedAfter": "login_url",
+  "authenticationCompleted": false
+}
