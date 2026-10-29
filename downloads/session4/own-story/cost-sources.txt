@@ -1,6 +1,7 @@
 확인일: 2026-10-29 KST
 Comfy Cloud GPU (오픈 모델 H3, SeedVR2): GPU 사용 초 × 약 0.2732크레딧.
 출처: C:/wi/yuki/.claude/skills/comfy-cli/references/cloud.md 「Comfy Cloud GPU(OSS 워크플로) 단가」.
+같은 파일의 참고 실측: H3 OSS 768p 10초·참조 4장 = GPU 720초, 약 200크레딧. 오늘 720p turbo 4스텝의 실측 견적이 아님.
 2026-08-26 인보이스 역산 기록. GPU 17,754.7초 / $22.99, $0.001295/GPU초, 크레딧 환산 ×211.
 credits.md: 파트너 노드는 호출·출력 기준, OSS 워크플로는 GPU 시간으로 별도 과금.
 실행 전 GPU 시간은 확정되지 않으므로 생성·업스케일 총액 미확정. CLI의 partner 견적 0 또는 spends_credits:false는 GPU 무료 의미가 아님.
