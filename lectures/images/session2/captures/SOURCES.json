@@ -1,0 +1,183 @@
+{
+  "captured": "2026-10-29",
+  "purpose": "Real work screens for AI artwork sessions 1-3",
+  "limits": [
+    "No generation, paid API calls, credits, GPU work or settings changes",
+    "Cloud subscription inactive: local Run control labeled honestly",
+    "OAuth Continue not pressed; login processes stopped after login_url",
+    "No private chat titles, profile details, tokens or query codes retained"
+  ],
+  "files": [
+    {
+      "file": "qwen-input.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "qwen_edit_4tasks.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "84517b16089aac874b0291b6343ea3aba69d8994701caab82ad5552ee50df2e9"
+    },
+    {
+      "file": "qwen-mask.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "qwen_edit_4tasks.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "bcdd1fc619b0bf950d3ec8771e5bc2bfeff9bc2efcc0ac3ff1da1378d0826428"
+    },
+    {
+      "file": "qwen-inpaint.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "qwen_edit_4tasks.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "8964bab11591f13518504bb57af5ccdac17726e7e2a00d5dddd4ee8d7af97520"
+    },
+    {
+      "file": "qwen-edit.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "qwen_edit_4tasks.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "f3bab1753a95398973abfbcf5e3a3fef44497952a5ec604644f3e02f72e780db"
+    },
+    {
+      "file": "qwen-prompt.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "qwen_edit_4tasks.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "674a55e9dad3bc19ae36f02356ccdf693cd65286784421a5d5b8d3842883ea68"
+    },
+    {
+      "file": "qwen-sheet.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "qwen_edit_4tasks.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "f6162c7de737e54cacd63a5fcc4d4f7cce6b5488adae18f89f11ed308247475a"
+    },
+    {
+      "file": "minimax-first.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "minimax_4modes.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "2dfce204f01745dec922df6e94e2015aab68ada2e2a680709bbf2895d081e72a"
+    },
+    {
+      "file": "minimax-last.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "minimax_4modes.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "39af9e869342f8c803229044933319d86083099a3b1909cecfe66a6d62da0386"
+    },
+    {
+      "file": "minimax-subject.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "minimax_4modes.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "31e6fc478585e54669d8b9f23cbc2b5fd1e2928ced7e52f69e55a3406a61cf30"
+    },
+    {
+      "file": "minimax-prompt.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "minimax_4modes.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "99b613754f06dd31e7d047663fb1d4d12fc49e646671fdcea429fd30f24b92d0"
+    },
+    {
+      "file": "minimax-local-loader.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "minimax_4modes.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "138e5c6fc0ba445cf0ae8675d63ff5155b16713123b1e6dfd27cfb4d7bbb6375"
+    },
+    {
+      "file": "minimax-t2v.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "minimax_4modes.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "1cbd728d138074df8a04c351fe1d92586583893322a2cf5005019f5327ce794f"
+    },
+    {
+      "file": "minimax-api.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "minimax_4modes_api.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "5f750fc53294dbb2e68a1de1f67b4e4aa8304db9aa2e7085969dea25f72edba1"
+    },
+    {
+      "file": "image-compare-local-loader.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "image_compare_sheet.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "c5781b669471e7d19eb3eaf87c91955777225fc233d45afbdad0c427ffaf08b7"
+    },
+    {
+      "file": "image-compare-api-node.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "image_compare_sheet.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "baaa932b9bad31ea9b89aa28cec7debab04cf2b8ed7dcfad28bd07fc8b891fbe"
+    },
+    {
+      "file": "image-compare-shared-prompt.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "image_compare_sheet.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "a419490cc8d268b949b85474a89a3a2c56d8305636d764752016d5cdeb25e9c8"
+    },
+    {
+      "file": "video-compare-prompt.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "video_compare_5s.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "3119f6e4e9bb4131125eb777df75595f985035b50f400b8f45820b24693bd353"
+    },
+    {
+      "file": "video-compare-api-node.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "video_compare_5s.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "ee4fc627bd5c92c11dcb4a53f25422c692da2f5c78920abd4d0fb354ec379d74"
+    },
+    {
+      "file": "video-compare-save.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "video_compare_5s.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "f7f184f096f558a69b9b7c0d4ceb7ca96edecb8933de92317ea54da788222179"
+    }
+  ]
+}

@@ -52,7 +52,30 @@
           "body": "넣은 입력이 영상에 남는 방식"
         }
       ],
-      "id": "art-2-2-1",
+      "id": "art-2-2-1"
+    },
+    {
+      "id": "art-2-2-prompt",
+      "title": "영상 공통 프롬프트",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session2/captures/minimax-prompt.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 0,
+            "y": 42
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Prompt (shared)",
+          "body": "네 모드에 같은 장면·움직임 적용"
+        }
+      ],
       "action": {
         "label": "실습",
         "items": [
@@ -70,22 +93,67 @@
       }
     },
     {
-      "title": "R2V 인물 레퍼런스",
+      "id": "art-2-2-t2v",
+      "title": "T2V 입력과 크기",
       "template": "screen",
       "screen": {
         "kind": "shot",
-        "src": "/downloads/session2/step2/minimax_subject.png"
+        "src": "/lectures/images/session2/captures/minimax-t2v.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 20,
+            "y": 26
+          },
+          {
+            "n": 2,
+            "x": 59,
+            "y": 55
+          }
+        ]
       },
       "notes": [
         {
           "n": 1,
-          "head": "Picture 1",
-          "body": "골든리트리버와 걷는 남성"
+          "head": "첫·마지막 이미지 없음",
+          "body": "T2V의 first_frame·last_frame 연결 없음"
         },
         {
           "n": 2,
-          "head": "공통 프롬프트",
-          "body": "네 모드에 같은 장면·움직임 적용"
+          "head": "생성 설정",
+          "body": "width 864 · height 480 · length 124"
+        }
+      ]
+    },
+    {
+      "title": "R2V 인물 레퍼런스 업로드",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session2/captures/minimax-subject.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 92,
+            "y": 25
+          },
+          {
+            "n": 2,
+            "x": 87,
+            "y": 68
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Subject reference",
+          "body": "minimax_subject.png 업로드"
+        },
+        {
+          "n": 2,
+          "head": "Picture 1",
+          "body": "공원에서 개와 걷는 같은 남성의 참조 이미지"
         }
       ],
       "id": "art-2-2-2",
@@ -106,35 +174,35 @@
       }
     },
     {
-      "title": "첫 프레임과 마지막 프레임",
+      "id": "art-2-2-3",
+      "title": "첫 프레임과 마지막 프레임 업로드",
       "template": "compare",
       "left": {
-        "label": "첫 프레임",
+        "label": "First frame",
         "screen": {
           "kind": "shot",
-          "src": "/downloads/session2/step2/minimax_first.png"
+          "src": "/lectures/images/session2/captures/minimax-first.png"
         }
       },
       "right": {
-        "label": "마지막 프레임",
+        "label": "Last frame",
         "screen": {
           "kind": "shot",
-          "src": "/downloads/session2/step2/minimax_last.png"
+          "src": "/lectures/images/session2/captures/minimax-last.png"
         }
       },
       "notes": [
         {
           "n": 1,
-          "head": "I2V · FLF2V",
-          "body": "첫 이미지에서 움직임 시작"
+          "head": "첫 프레임",
+          "body": "minimax_first.png · I2V·FLF2V의 시작"
         },
         {
           "n": 2,
-          "head": "FLF2V",
-          "body": "마지막 이미지까지 연결"
+          "head": "마지막 프레임",
+          "body": "minimax_last.png · FLF2V의 끝 장면"
         }
-      ],
-      "id": "art-2-2-3"
+      ]
     },
     {
       "title": "MiniMax 실행 경로",
@@ -184,6 +252,43 @@
           "body": "로컬 모델 파일 · API 노드 크레딧"
         }
       ],
+      "id": "art-2-2-4"
+    },
+    {
+      "id": "art-2-2-nodes",
+      "title": "MiniMax 로컬·API 노드",
+      "template": "compare",
+      "left": {
+        "label": "로컬 모델 로더",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session2/captures/minimax-local-loader.png"
+        }
+      },
+      "right": {
+        "label": "유료 API 노드",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session2/captures/minimax-api.png"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Diffusion model",
+          "body": "모델 파일 선택 · 내 PC 또는 Cloud GPU"
+        },
+        {
+          "n": 2,
+          "head": "H3 Text to Video",
+          "body": "외부 API의 실행 크레딧 표시 · 실행 전 비용 확인"
+        },
+        {
+          "n": "!",
+          "head": "화면 출처",
+          "body": "두 다운로드 JSON을 Cloud에 열어 캡처 · 실행 없음"
+        }
+      ],
       "action": {
         "label": "실습",
         "items": [
@@ -213,8 +318,7 @@
             "text": "마지막 프레임 이미지 (.png)"
           }
         ]
-      },
-      "id": "art-2-2-4"
+      }
     }
   ],
   "summary": "첫 장면·마지막 장면·대상 레퍼런스의 역할"

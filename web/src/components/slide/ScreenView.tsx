@@ -2,9 +2,13 @@ import { useLayoutEffect, useRef, useState } from "react"
 import type { Screen } from "@/content/schema"
 import { NumberBadge } from "./NumberBadge"
 import { asset } from "@/lib/utils"
+import { BrowserEvidence, DesktopEvidence, TerminalEvidence } from "./EvidenceScreens"
 
 // One switch from screen data to mockup. New screen kinds are added here and in the schema only.
 export function ScreenView({ screen }: { screen: Screen }) {
+  if (screen.kind === "desktop") return <DesktopEvidence screen={screen}/>
+  if (screen.kind === "terminal") return <TerminalEvidence screen={screen}/>
+  if (screen.kind === "browser") return <BrowserEvidence screen={screen}><BadgedShot src={screen.src} badges={screen.badges ?? []}/></BrowserEvidence>
   if (screen.kind === "video")
     return (
       <div className="flex h-full min-h-0 items-center justify-center">
@@ -55,7 +59,7 @@ function BadgedShot({ src, badges }: { src: string; badges: { n: number; x: numb
         <img src={asset(src)} alt="" onLoad={(e) => setNat([e.currentTarget.naturalWidth, e.currentTarget.naturalHeight])} className={nat ? "size-full drop-shadow-[0_12px_28px_rgba(16,17,19,0.14)]" : "max-h-full max-w-full"} />
         {nat &&
           badges.map((b, i) => (
-            <span key={i} className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full ring-4 ring-white" style={{ left: `${b.x}%`, top: `${b.y}%` }}>
+            <span key={i} className="absolute z-10 -translate-x-1/2 -translate-y-1/2 rounded-full ring-4 ring-white" style={{ left: `${b.x}%`, top: `${b.y}%` }}>
               <NumberBadge n={b.n} />
             </span>
           ))}

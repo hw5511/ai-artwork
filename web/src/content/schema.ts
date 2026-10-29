@@ -25,9 +25,28 @@ export interface PartCoverSlide extends SlideBase {
   slideTitles: string[]; sections?: {title: string; count: number}[]; art?: string
 }
 export interface Note { n: number | "!"; head: string; body?: string }
-export type Screen = ShotScreen | VideoScreen
+export type Screen = ShotScreen | VideoScreen | BrowserScreen | DesktopScreen | TerminalScreen
 export interface ShotScreen { kind: "shot"; src: string; badges?: {n: number; x: number; y: number}[] }
 export interface VideoScreen { kind: "video"; src: string; poster?: string; loop?: boolean }
+export interface ScreenPin { n: number; x: number; y: number }
+// Capture paths are provenance, not optional decoration. These are read-only redraws of observed UI.
+export interface BrowserScreen {
+  kind: "browser"; capture: string; url: string; src: string; badges?: ScreenPin[]
+  page?: { kind: "comfy-auth"; workspace: string; permissions: string[]; callback: string; logo: string; workspaceBadge?: number; continueBadge?: number }
+}
+export interface DesktopScreen {
+  kind: "desktop"; capture: string; project: string;
+  dialog?: { title: string; path: string; selected: string; emptyText: string };
+  menu?: {
+    placement: "product" | "model" | "permissions"; title?: string;
+    items: { label: string; detail?: string; selected?: boolean; badge?: number }[]
+  };
+  badges?: ScreenPin[]
+}
+export interface TerminalScreen {
+  kind: "terminal"; capture: string; transcript: string; title: string;
+  command: string; lines: { text: string; badge?: number }[]
+}
 export interface ActionBox { label: string; items: ActionItem[] }
 export type ActionItem =
   | {kind: "copy"; value: string; desc?: string}

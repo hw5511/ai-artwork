@@ -1,21 +1,44 @@
 {
   "id": "art-3-1",
-  "title": "codex(gpt 데스크톱) 설치하기",
+  "title": "ChatGPT 데스크톱 설치",
   "slides": [
     {
-      "title": "ChatGPT 데스크톱 설치",
-      "template": "illustration",
-      "illustration": "/illustrations/desktop-install.svg",
+      "id": "art-3-1-1",
+      "title": "ChatGPT 데스크톱 다운로드",
+      "template": "screen",
+      "screen": {
+        "kind": "browser",
+        "capture": "/lectures/images/session3/captures/chatgpt-download.png",
+        "url": "https://learn.chatgpt.com/docs/quickstart?setup=app",
+        "src": "/lectures/images/session3/captures/chatgpt-download.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 0,
+            "y": 12
+          },
+          {
+            "n": 2,
+            "x": 27,
+            "y": 63
+          }
+        ]
+      },
       "notes": [
         {
           "n": 1,
-          "head": "Windows용 앱",
-          "body": "공식 다운로드 · 운영체제에 맞는 설치 파일"
+          "head": "Desktop",
+          "body": "데스크톱 앱 설치 안내 선택"
         },
         {
           "n": 2,
-          "head": "설치 확인",
-          "body": "ChatGPT 데스크톱 앱 실행"
+          "head": "Download ChatGPT",
+          "body": "Windows용 다운로드 선택"
+        },
+        {
+          "n": "!",
+          "head": "설치 상태",
+          "body": "이 PC는 설치된 앱 사용 · 재설치 생략"
         }
       ],
       "action": {
@@ -32,8 +55,7 @@
             "text": "Windows 설치 안내"
           }
         ]
-      },
-      "id": "art-3-1-1"
+      }
     }
   ],
   "summary": "공식 Windows 앱 설치와 실행"

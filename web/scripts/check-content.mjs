@@ -30,8 +30,40 @@ function keyword(where, text) {
   if (/[—–]/.test(text)) err(where, 'dash chain')
 }
 function checkScreen(where, screen, badges) {
-  if (!screen || !['shot', 'video'].includes(screen.kind)) return err(where, `unsupported screen ${screen?.kind}`)
-  if (!localAsset(screen.src)) err(where, `missing media ${screen.src}`)
+  if (!screen || !['shot', 'video', 'browser', 'desktop', 'terminal'].includes(screen.kind)) return err(where, `unsupported screen ${screen?.kind}`)
+  if (['shot', 'video', 'browser'].includes(screen.kind) && !localAsset(screen.src)) err(where, `missing media ${screen.src}`)
+  if (['browser', 'desktop', 'terminal'].includes(screen.kind) && !localAsset(screen.capture)) err(where, `missing capture provenance ${screen.capture}`)
+  if (screen.kind === 'browser') {
+    if (!/^https?:\/\//.test(screen.url ?? '')) err(where, 'browser requires observed URL')
+    if (/[?&](code|token|state|client_id)=/i.test(screen.url ?? '')) err(where, 'authentication parameter in browser URL')
+    if (screen.page) {
+      if (screen.page.kind !== 'comfy-auth' || !localAsset(screen.page.logo)) err(where, 'unsupported or unsourced browser page')
+      if (!screen.page.workspace || !screen.page.permissions?.length || !screen.page.callback) err(where, 'authorization page requires captured fields')
+      for (const n of [screen.page.workspaceBadge, screen.page.continueBadge]) if (n) badges.push(n)
+    }
+  }
+  if (screen.kind === 'desktop') {
+    if (!screen.project) err(where, 'desktop requires captured project label')
+    if (screen.menu && !['product', 'model', 'permissions'].includes(screen.menu.placement)) err(where, 'unsupported desktop menu')
+    for (const item of screen.menu?.items ?? []) {
+      if (!item.label) err(where, 'empty desktop menu label')
+      if (item.badge) badges.push(item.badge)
+    }
+  }
+  if (screen.kind === 'terminal') {
+    if (!localAsset(screen.transcript)) err(where, 'missing terminal transcript')
+    if (!screen.command || !screen.lines?.length) err(where, 'terminal requires recorded command and output')
+    if (localAsset(screen.transcript)) {
+      try {
+        const transcript = read(join(root, '..', screen.transcript.slice(1)))
+        if (screen.command !== transcript.command) err(where, 'terminal command differs from transcript')
+        const displayed = JSON.parse(screen.lines.map(line => line.text).join('\n'))
+        const recorded = JSON.parse(transcript.lines.join('\n'))
+        if (JSON.stringify(displayed) !== JSON.stringify(recorded)) err(where, 'terminal output differs from transcript')
+      } catch { err(where, 'terminal requires a readable recorded JSON event') }
+    }
+    for (const line of screen.lines ?? []) if (line.badge) badges.push(line.badge)
+  }
   if (screen.poster && !localAsset(screen.poster)) err(where, `missing poster ${screen.poster}`)
   for (const b of screen.badges ?? []) {
     if (![b.x, b.y].every(v => Number.isFinite(v) && v >= 0 && v <= 100)) err(where, 'badge coordinates outside image')

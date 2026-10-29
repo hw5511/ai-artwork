@@ -11,12 +11,12 @@
         "badges": [
           {
             "n": 1,
-            "x": 24,
+            "x": 8,
             "y": 8
           },
           {
             "n": 2,
-            "x": 60,
+            "x": 8,
             "y": 39
           }
         ]
@@ -45,30 +45,35 @@
           {
             "n": 1,
             "x": 15,
-            "y": 58
+            "y": 50
+          },
+          {
+            "n": 2,
+            "x": 15,
+            "y": 59
+          },
+          {
+            "n": 3,
+            "x": 32,
+            "y": 66
           }
         ]
       },
       "notes": [
         {
           "n": 1,
-          "head": "가입 방법",
-          "body": "Google · GitHub · 이메일 중 선택"
+          "head": "Google 가입",
+          "body": "SIGN UP WITH GOOGLE 선택"
         },
         {
           "n": 2,
-          "head": "내 계정",
-          "body": "본인의 계정 정보 직접 입력"
+          "head": "GitHub 가입",
+          "body": "SIGN UP WITH GITHUB 선택"
         },
         {
           "n": 3,
-          "head": "캔버스",
-          "body": "로그인 뒤 ComfyUI 작업 화면 확인"
-        },
-        {
-          "n": 4,
-          "head": "로그인 반복",
-          "body": "새로고침 · 같은 계정 재로그인 · 조직 계정 제한 확인"
+          "head": "이메일 가입",
+          "body": "Use email instead 선택"
         }
       ],
       "action": {

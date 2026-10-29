@@ -1,0 +1,229 @@
+{
+  "captured": "2026-10-29",
+  "purpose": "Real work screens for AI artwork sessions 1-3",
+  "limits": [
+    "No generation, paid API calls, credits, GPU work or settings changes",
+    "Cloud subscription inactive: local Run control labeled honestly",
+    "OAuth Continue not pressed; login processes stopped after login_url",
+    "No private chat titles, profile details, tokens or query codes retained"
+  ],
+  "files": [
+    {
+      "file": "codex-mode-menu.png",
+      "captured": "2026-10-29 KST",
+      "surface": "ChatGPT desktop app; capture project C:/tmp/s3-capture; private sidebar/profile cropped out",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        59,
+        45,
+        305,
+        208
+      ],
+      "sha256": "1eb190a9fd918c55b1a607fb9c75134b55148338a94431f3b6963912fafc91bb"
+    },
+    {
+      "file": "codex-workspace.png",
+      "captured": "2026-10-29 KST",
+      "surface": "ChatGPT desktop app; capture project C:/tmp/s3-capture; private sidebar/profile cropped out",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        60,
+        42,
+        1135,
+        810
+      ],
+      "sha256": "169655c41e719e9d0c6f949d761690d1620b9eb43db39f405c7586ae173b1482"
+    },
+    {
+      "file": "codex-model.png",
+      "captured": "2026-10-29 KST",
+      "surface": "ChatGPT desktop app; capture project C:/tmp/s3-capture; private sidebar/profile cropped out",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        60,
+        42,
+        1135,
+        810
+      ],
+      "sha256": "f1236c64d4acdf69b5afea3582c671aa87424c0dbcc7fd76cde3aac6c58e696e"
+    },
+    {
+      "file": "codex-permissions.png",
+      "captured": "2026-10-29 KST",
+      "surface": "ChatGPT desktop app; capture project C:/tmp/s3-capture; private sidebar/profile cropped out",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        60,
+        42,
+        1135,
+        810
+      ],
+      "sha256": "a99113f98485b1bcb6b75db46000f9039317edcecbe9e3b3d5b042ff57975e9f"
+    },
+    {
+      "file": "project-picker.png",
+      "captured": "2026-10-29 KST",
+      "surface": "ChatGPT desktop app; capture project C:/tmp/s3-capture; private sidebar/profile cropped out",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        165,
+        32,
+        1180,
+        890
+      ],
+      "sha256": "cf4f255c8b1da0aef9b15b25ab39530ad8519e9018dd82fadb304693df447933"
+    },
+    {
+      "file": "project-trust.png",
+      "captured": "2026-10-29 KST",
+      "surface": "ChatGPT desktop app; capture project C:/tmp/s3-capture; private sidebar/profile cropped out",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        371,
+        271,
+        770,
+        550
+      ],
+      "sha256": "9e767bab17ab951f33d68d16f7c780d31682ea3b338662723779502bdfa96bc4"
+    },
+    {
+      "file": "cli-request.png",
+      "captured": "2026-10-29 KST",
+      "surface": "ChatGPT desktop app; capture project C:/tmp/s3-capture; private sidebar/profile cropped out",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        225,
+        628,
+        964,
+        803
+      ],
+      "sha256": "4f542d84b77e47e7710ab72fd6453a1c516d855743e6c5cc247b10542acf50b9"
+    },
+    {
+      "file": "cli-installed.png",
+      "captured": "2026-10-29 KST",
+      "surface": "ChatGPT desktop app; capture project C:/tmp/s3-capture; private sidebar/profile cropped out",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        215,
+        326,
+        983,
+        670
+      ],
+      "sha256": "5294d06cf09540e68fd0bf523a70628b63443628ac19e43c069c81ed01f6eee6"
+    },
+    {
+      "file": "skill-request.png",
+      "captured": "2026-10-29 KST",
+      "surface": "ChatGPT desktop app; capture project C:/tmp/s3-capture; private sidebar/profile cropped out",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        225,
+        642,
+        964,
+        803
+      ],
+      "sha256": "dd0d50ba008f93ab5eaef1162f27ece1983bfcb5e33972f69e58f05bfe3f0fc3"
+    },
+    {
+      "file": "skill-saved.png",
+      "captured": "2026-10-29 KST",
+      "surface": "ChatGPT desktop app; capture project C:/tmp/s3-capture; private sidebar/profile cropped out",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        65,
+        44,
+        1135,
+        698
+      ],
+      "sha256": "6a628deb48dcf86e5771f8289a91be21466a9bc438f4c1a61b15d935caf55ab8"
+    },
+    {
+      "file": "project-skill-menu.png",
+      "captured": "2026-10-29 KST",
+      "surface": "ChatGPT desktop app; capture project C:/tmp/s3-capture; private sidebar/profile cropped out",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        225,
+        540,
+        964,
+        803
+      ],
+      "sha256": "f99b8772df755c39da0bd693e149737f223f99f0f76080fb65c49ab0d2b8680c"
+    },
+    {
+      "file": "project-skill-selected.png",
+      "captured": "2026-10-29 KST",
+      "surface": "ChatGPT desktop app; capture project C:/tmp/s3-capture; private sidebar/profile cropped out",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        225,
+        600,
+        964,
+        803
+      ],
+      "sha256": "00e073e308c77f0165c0dfe8015bd8543fcfa7f87fa52142f20f12f766e9e3b1"
+    },
+    {
+      "file": "chatgpt-download.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Official learn.chatgpt.com quickstart download entry; no installation repeated",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        350,
+        408,
+        1223,
+        802
+      ],
+      "sha256": "53192add363180e72c92cddf2eec56750b878a5a8502690ed3a04d09d9b4efff"
+    },
+    {
+      "file": "comfy-auth.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud OAuth authorization request; no Continue click; no authentication completion",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        1670,
+        565,
+        2170,
+        1460
+      ],
+      "sha256": "f033dfba229fb1e661910dcb8991f2d5317d1d9d5b6fc94b47bd57a2977c2595"
+    },
+    {
+      "file": "comfy-auth-icons.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy authorization request",
+      "operation": "icon crop from comfy-auth.png; unchanged pixels",
+      "crop": [
+        160,
+        18,
+        337,
+        80
+      ],
+      "sha256": "dd31485a7dd7df78680329509bab3f4dbc3373b9444b1dd322430d10c49a3eb8"
+    },
+    {
+      "file": "comfy-login-output.json",
+      "captured": "2026-10-29 KST",
+      "surface": "Actual comfy-cli 1.23.0 stdout in isolated C:/tmp/s3-capture/.venv",
+      "operation": "Recorded stdout; authentication URL query masked; process terminated immediately after login_url",
+      "command": "comfy --json cloud login --no-browser",
+      "sha256": "e7eb175e58d092d016a9f916d5f2063e985ee0494ef2b77b030b9d7c3dfd445d"
+    }
+  ]
+}

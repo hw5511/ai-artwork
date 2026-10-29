@@ -3,29 +3,25 @@
   "title": "Comfy 공식 CLI를 스킬로 저장",
   "slides": [
     {
-      "title": "Comfy 공식 CLI 스킬 저장",
-      "template": "illustration",
-      "illustration": "/illustrations/comfy-cli-skill.svg",
+      "id": "art-3-8-1",
+      "title": "Comfy 공식 CLI 스킬 요청",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session3/captures/skill-request.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 91,
+            "y": 18
+          }
+        ]
+      },
       "notes": [
         {
           "n": 1,
-          "head": "스킬 작성",
-          "body": "실습 원문 입력 · 현재 폴더에 저장"
-        },
-        {
-          "n": 2,
-          "head": "호출 대안",
-          "body": "$skill-creator로 교체 · 나머지 문장 유지"
-        },
-        {
-          "n": 3,
-          "head": "저장 확인",
-          "body": "완료 응답의 SKILL.md 경로"
-        },
-        {
-          "n": 4,
-          "head": "PC 실측",
-          "body": "두 호출 모두 comfy-cli/SKILL.md 작성 · 앱의 / 호출 해석 미검증"
+          "head": "/skill-creator",
+          "body": "실습 원문 입력 · 현재 프로젝트에 저장 요청"
         }
       ],
       "action": {
@@ -42,8 +38,45 @@
             "text": "스킬 호출과 저장 위치"
           }
         ]
+      }
+    },
+    {
+      "id": "art-3-8-saved",
+      "title": "프로젝트 스킬 저장 파일",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session3/captures/skill-saved.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 24,
+            "y": 74
+          },
+          {
+            "n": 2,
+            "x": 95,
+            "y": 45
+          }
+        ]
       },
-      "id": "art-3-8-1"
+      "notes": [
+        {
+          "n": 1,
+          "head": "저장 응답",
+          "body": "실제 .agents/skills/comfy-cli/SKILL.md 생성"
+        },
+        {
+          "n": 2,
+          "head": "파일 보기",
+          "body": "파일 트리의 SKILL.md와 이름·설명 확인"
+        },
+        {
+          "n": "!",
+          "head": "저장 확인",
+          "body": "2026-10-29 · 원문의 /skill-creator 요청으로 저장 확인"
+        }
+      ]
     }
   ],
   "summary": "Comfy 공식 CLI 지침을 현재 폴더에 저장"

@@ -3,29 +3,35 @@
   "title": "Comfy CLI 설치와 로그인 요청",
   "slides": [
     {
-      "title": "Comfy CLI 설치와 로그인 요청",
-      "template": "illustration",
-      "illustration": "/illustrations/local-computer.svg",
+      "id": "art-3-6-1",
+      "title": "Comfy CLI 설치 요청",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session3/captures/cli-request.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 94,
+            "y": 37
+          },
+          {
+            "n": 2,
+            "x": 3,
+            "y": 10
+          }
+        ]
+      },
       "notes": [
         {
           "n": 1,
-          "head": "설치 요청",
-          "body": "오른쪽 실습 원문 복사 · Codex에 입력"
+          "head": "실습 원문",
+          "body": "오른쪽 프롬프트 복사 후 Codex에 입력"
         },
         {
           "n": 2,
-          "head": "PC 실측",
-          "body": "2026-10-25 · CLI 0.160.0 · Python 3.13.15 · comfy-cli 1.23.0"
-        },
-        {
-          "n": 3,
-          "head": "검증 범위",
-          "body": "빈 폴더의 가상환경 설치 · login_url 출력"
-        },
-        {
-          "n": 4,
-          "head": "진행 중단",
-          "body": "오류 메시지·Python 설치 여부를 강사와 확인"
+          "head": "작업 위치",
+          "body": "현재 프로젝트 s3-capture · .venv 설치 요청"
         }
       ],
       "action": {
@@ -42,8 +48,45 @@
             "text": "Comfy 공식 CLI"
           }
         ]
+      }
+    },
+    {
+      "id": "art-3-6-installed",
+      "title": "Comfy CLI 설치와 로그인 링크",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session3/captures/cli-installed.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 28,
+            "y": 30
+          },
+          {
+            "n": 2,
+            "x": 18,
+            "y": 65
+          }
+        ]
       },
-      "id": "art-3-6-1"
+      "notes": [
+        {
+          "n": 1,
+          "head": "설치 응답",
+          "body": "comfy-cli 1.23.0 · 프로젝트 안 .venv"
+        },
+        {
+          "n": 2,
+          "head": "Comfy 로그인 열기",
+          "body": "Codex가 전달한 브라우저 로그인 링크"
+        },
+        {
+          "n": "!",
+          "head": "검증 범위",
+          "body": "설치·링크 출력 확인 · 링크 출력 뒤 로그인 프로세스 종료"
+        }
+      ]
     }
   ],
   "summary": "공식 CLI 설치와 로그인 링크 요청"

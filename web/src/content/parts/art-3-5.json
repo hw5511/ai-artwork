@@ -3,29 +3,42 @@
   "title": "작업 폴더 생성과 연결",
   "slides": [
     {
-      "title": "작업 폴더",
-      "template": "illustration",
-      "illustration": "/illustrations/project-folder.svg",
+      "id": "art-3-5-1",
+      "title": "작업 폴더 선택",
+      "template": "screen",
+      "screen": {
+        "kind": "desktop",
+        "capture": "/lectures/images/session3/captures/project-picker.png",
+        "project": "s3-capture",
+        "badges": [
+          {
+            "n": 1,
+            "x": 37,
+            "y": 12
+          },
+          {
+            "n": 2,
+            "x": 81,
+            "y": 94
+          }
+        ],
+        "dialog": {
+          "title": "Select Project Root",
+          "path": "내 PC  ›  로컬 디스크 (C:)  ›  tmp  ›  s3-capture",
+          "selected": "s3-capture",
+          "emptyText": "일치하는 항목이 없습니다."
+        }
+      },
       "notes": [
         {
           "n": 1,
-          "head": "빈 폴더",
-          "body": "파일 탐색기에서 ai-artwork 생성"
+          "head": "빈 작업 폴더",
+          "body": "Add new project 또는 Ctrl + O로 폴더 선택"
         },
         {
           "n": 2,
-          "head": "프로젝트 열기",
-          "body": "Add new project 또는 Ctrl + O · 만든 폴더 선택"
-        },
-        {
-          "n": 3,
-          "head": "작업 위치",
-          "body": "입력창 위치 확인 · 이후 결과 파일 확인"
-        },
-        {
-          "n": 4,
-          "head": "예시 경로",
-          "body": "C:\\Users\\내이름\\Documents\\ai-artwork"
+          "head": "폴더 선택",
+          "body": "만든 ai-artwork 폴더 연결 · 캡처는 s3-capture 사용"
         }
       ],
       "action": {
@@ -42,8 +55,40 @@
             "text": "프로젝트와 작업 위치"
           }
         ]
+      }
+    },
+    {
+      "id": "art-3-5-trust",
+      "title": "작업 폴더 신뢰",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session3/captures/project-trust.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 85,
+            "y": 26
+          },
+          {
+            "n": 2,
+            "x": 12,
+            "y": 69
+          }
+        ]
       },
-      "id": "art-3-5-1"
+      "notes": [
+        {
+          "n": 1,
+          "head": "폴더 경로",
+          "body": "연결할 작업 폴더 확인"
+        },
+        {
+          "n": 2,
+          "head": "Trust folder",
+          "body": "해당 폴더의 파일 읽기·수정·명령 실행 허용"
+        }
+      ]
     }
   ],
   "summary": "ai-artwork 폴더 생성과 프로젝트 연결"

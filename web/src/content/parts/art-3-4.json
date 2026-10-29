@@ -3,47 +3,60 @@
   "title": "Codex 모델과 모든 권한 설정",
   "slides": [
     {
-      "title": "모델과 권한",
-      "template": "table",
-      "columns": [
-        "설정",
-        "선택값"
-      ],
-      "rows": [
-        {
-          "cells": [
-            "모델",
-            "GPT-6.1 Sol"
-          ]
-        },
-        {
-          "cells": [
-            "모델 ID",
-            "gpt-6.1-sol"
-          ]
-        },
-        {
-          "cells": [
-            "권한",
-            "Full access"
+      "id": "art-3-4-1",
+      "title": "Codex 모델 선택",
+      "template": "screen",
+      "screen": {
+        "kind": "desktop",
+        "capture": "/lectures/images/session3/captures/codex-model.png",
+        "project": "s3-capture",
+        "menu": {
+          "placement": "model",
+          "title": "Select model",
+          "items": [
+            {
+              "label": "Default",
+              "detail": "Recommended set of models"
+            },
+            {
+              "label": "GPT-6.1 Sol",
+              "selected": true,
+              "badge": 1
+            },
+            {
+              "label": "GPT-6 Astra"
+            },
+            {
+              "label": "GPT-6.1 Terra"
+            },
+            {
+              "label": "GPT-6 Sol"
+            },
+            {
+              "label": "GPT-6 Luna"
+            },
+            {
+              "label": "GPT-5.6 Sol"
+            },
+            {
+              "label": "GPT-5.6 Terra"
+            },
+            {
+              "label": "GPT-5.6 Luna"
+            }
           ]
         }
-      ],
+      },
       "notes": [
         {
           "n": 1,
-          "head": "모델 메뉴",
-          "body": "입력창 아래 · 필요하면 Advanced"
+          "head": "GPT-6.1 Sol",
+          "body": "입력창 아래 모델 메뉴의 선택 표시"
         },
         {
-          "n": 2,
-          "head": "권한 범위",
-          "body": "PC 파일 수정 · 명령 실행 · 네트워크 · 작업 폴더 밖 접근"
-        },
-        {
-          "n": 3,
-          "head": "메뉴가 없을 때",
-          "body": "Permissions 문서 · 앱 Settings · 조직 제한은 강사 확인"
+          "n": "!",
+          "head": "화면 기준",
+          "body": "2026-10-29 앱 메뉴 · 계정별 제공 모델 확인"
         }
       ],
       "action": {
@@ -60,8 +73,56 @@
             "text": "권한 메뉴"
           }
         ]
+      }
+    },
+    {
+      "id": "art-3-4-permissions",
+      "title": "Codex 권한 메뉴",
+      "template": "screen",
+      "screen": {
+        "kind": "desktop",
+        "capture": "/lectures/images/session3/captures/codex-permissions.png",
+        "project": "s3-capture",
+        "menu": {
+          "placement": "permissions",
+          "title": "How should ChatGPT actions be approved?",
+          "items": [
+            {
+              "label": "Ask for approval",
+              "detail": "Always ask to edit external files and use the internet",
+              "badge": 1
+            },
+            {
+              "label": "Approve for me",
+              "detail": "Only ask for actions detected as potentially unsafe",
+              "badge": 2
+            },
+            {
+              "label": "Full access",
+              "detail": "Unrestricted access to the internet and any file on your computer",
+              "selected": true,
+              "badge": 3
+            }
+          ]
+        }
       },
-      "id": "art-3-4-1"
+      "notes": [
+        {
+          "n": 1,
+          "head": "Ask for approval",
+          "body": "외부 파일 수정·인터넷 사용 전 확인"
+        },
+        {
+          "n": 2,
+          "head": "Approve for me",
+          "body": "위험 가능성이 감지된 작업만 확인"
+        },
+        {
+          "n": 3,
+          "head": "Full access",
+          "body": "이 수업의 선택값 · PC 파일·명령·네트워크 접근"
+        }
+      ]
     }
   ],
   "summary": "GPT-6.1 Sol과 Full access 선택"

@@ -225,7 +225,7 @@ export default function App() {
             {cur && <SlideStage slide={cur.slide} eyebrow={`${cur.part.title.toUpperCase()} · ${String(posInPart).padStart(2, "0")}/${String(inPart.length).padStart(2, "0")}`} />}
           </div>
           <aside className="flex min-h-0 w-full flex-1 flex-col border-t bg-background md:w-[280px] md:shrink-0 md:flex-none md:border-t-0 md:border-l">
-            <div className="flex min-h-0 flex-1 flex-col gap-6 overflow-y-auto px-4 py-5">
+            <div key={cur?.slide.id} className="flex min-h-0 flex-1 flex-col gap-6 overflow-y-auto px-4 py-5">
               <ActionPanel key={cur?.slide.id} action={cur?.slide.action} />
               {/* Slide explanation only; the session goal/practice blocks were dropped (CEO 2026-09-22). */}
               <NotesPanel notes={cur?.slide.notes} />

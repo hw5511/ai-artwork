@@ -3,24 +3,41 @@
   "title": "gpt 로그인",
   "slides": [
     {
-      "title": "ChatGPT 계정 로그인",
-      "template": "illustration",
-      "illustration": "/illustrations/local-computer.svg",
+      "id": "art-3-2-1",
+      "title": "로그인 뒤 Codex 작업 화면",
+      "template": "screen",
+      "screen": {
+        "kind": "desktop",
+        "capture": "/lectures/images/session3/captures/codex-workspace.png",
+        "project": "s3-capture",
+        "badges": [
+          {
+            "n": 1,
+            "x": 10,
+            "y": 76
+          },
+          {
+            "n": 2,
+            "x": 20,
+            "y": 76
+          }
+        ]
+      },
       "notes": [
         {
           "n": 1,
-          "head": "내 계정",
-          "body": "앱에서 평소 쓰던 ChatGPT 계정으로 로그인"
+          "head": "작업 폴더",
+          "body": "현재 프로젝트 s3-capture 표시"
         },
         {
           "n": 2,
-          "head": "Codex 선택",
-          "body": "제품 드롭다운의 Codex · New chat"
+          "head": "This computer",
+          "body": "내 PC의 파일·명령 작업"
         },
         {
-          "n": 3,
-          "head": "모델 제공 범위",
-          "body": "GPT-6.1 Sol · Plus·Pro·Business·Enterprise·Edu · 계정별 확인"
+          "n": "!",
+          "head": "로그인 화면",
+          "body": "이 PC는 기존 로그인 유지 · 로그인 폼 캡처 없음"
         }
       ],
       "action": {
@@ -37,8 +54,7 @@
             "text": "모델 제공 범위"
           }
         ]
-      },
-      "id": "art-3-2-1"
+      }
     }
   ],
   "summary": "내 계정 로그인과 Codex 선택"

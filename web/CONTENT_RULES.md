@@ -24,13 +24,29 @@ A note describes what the student sees or does, with facts matching the visual.
 ## Real visuals
 
 Supported templates: `screen`, `compare`, `table`, `illustration`; `part-cover` is generated.
-Supported screen kinds: `shot` and `video`. Unused Claude, phone, Office and browser mocks
-are removed. Do not invent an app state or sample output. Use the real captures and images
+Supported screen kinds: `shot`, `video`, `desktop`, `browser` and `terminal`.
+`desktop` redraws the captured ChatGPT project composer, product/model/permission menus and native folder picker;
+private sidebar titles become neutral titles. `browser` frames a real cropped page image
+or redraws the captured Comfy CLI authorization request with the same fields, permission
+scroll pane and Continue/Cancel controls, with an observed URL that omits authentication
+parameters. `terminal` redraws a recorded
+command and its output, with authentication codes masked. All three require a local
+`capture` path (a screenshot or recorded terminal stdout); a terminal also requires its sanitized `transcript`. The content gate checks
+these sources and their badge numbers. Unused Claude, phone and Office mocks stay removed.
+Do not invent an app state or sample output. Use the real captures and images
 under `lectures/images/` and `downloads/`. An official template preview must be labelled
 as a preview, distinct from the park exercise's output. Keep provenance and limitations.
 Concept illustrations use physical objects and plenty of space, consistent with the template.
 SVGs containing Korean text embed a Pretendard subset; an SVG image cannot inherit page fonts.
 No animation in illustrations. Videos keep ordinary playback controls.
+
+Action steps show the actual work screen, not a template preview or a finished image in its
+place. Capture provenance for sessions 1-3 is under `lectures/images/sessionN/captures/`;
+`SOURCES.json` records the UI, workflow, crop and limitations. Save no private sidebar titles,
+account details or authentication codes. Keep an unexecuted output node visibly empty.
+The 2026-10-29 captures do not demonstrate authentication completion or generation: the CLI
+login was stopped after its link, Cloud Run was subscription-locked, and local Run was only
+hovered. Notes distinguish these states; never redraw them as a successful run or login.
 
 ## Colour and decoration
 

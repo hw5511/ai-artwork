@@ -3,52 +3,53 @@
   "title": "로그인 링크 열기와 인증 완료 확인",
   "slides": [
     {
-      "title": "링크 출력과 인증 완료",
-      "template": "table",
-      "columns": [
-        "단계",
-        "확인 항목"
-      ],
-      "rows": [
-        {
-          "cells": [
-            "로그인 시작",
-            "comfy --json cloud login --no-browser"
-          ]
-        },
-        {
-          "cells": [
-            "링크 출력",
-            "login_url"
-          ]
-        },
-        {
-          "cells": [
-            "인증 완료",
-            "comfy cloud whoami"
-          ]
-        }
-      ],
+      "id": "art-3-7-1",
+      "title": "Comfy CLI 로그인 링크 출력",
+      "template": "screen",
+      "screen": {
+        "kind": "terminal",
+        "capture": "/lectures/images/session3/captures/comfy-login-output.json",
+        "transcript": "/lectures/images/session3/captures/comfy-login-output.json",
+        "title": "Comfy CLI 1.23.0 · C:\\tmp\\s3-capture",
+        "command": "comfy --json cloud login --no-browser",
+        "lines": [
+          {
+            "text": "{"
+          },
+          {
+            "text": "  \"schema\": \"event/1\","
+          },
+          {
+            "text": "  \"type\": \"login_url\",",
+            "badge": 1
+          },
+          {
+            "text": "  \"url\": \"https://cloud.comfy.org/oauth/authorize?[인증 코드 가림]\",",
+            "badge": 2
+          },
+          {
+            "text": "  \"timeout_s\": 300"
+          },
+          {
+            "text": "}"
+          }
+        ]
+      },
       "notes": [
         {
           "n": 1,
-          "head": "링크 열기",
-          "body": "내 브라우저 · 내 Comfy 계정으로 인증"
+          "head": "login_url 이벤트",
+          "body": "브라우저 인증 링크 출력 확인"
         },
         {
           "n": 2,
-          "head": "완료 확인",
-          "body": "Codex의 완료 응답 · whoami 계정 확인"
+          "head": "인증 링크",
+          "body": "주소의 인증 매개변수 가림"
         },
         {
-          "n": 3,
-          "head": "사전 검증 범위",
-          "body": "링크 출력까지만 · 인증 성공·장시간 대기 미검증"
-        },
-        {
-          "n": 4,
-          "head": "링크 만료",
-          "body": "로그인 재시작"
+          "n": "!",
+          "head": "캡처 상태",
+          "body": "링크 출력 직후 종료 · 인증 완료 응답 없음"
         }
       ],
       "action": {
@@ -70,8 +71,56 @@
             "desc": "내 계정 확인"
           }
         ]
+      }
+    },
+    {
+      "id": "art-3-7-auth",
+      "title": "Comfy CLI 브라우저 접근 요청",
+      "template": "screen",
+      "screen": {
+        "kind": "browser",
+        "capture": "/lectures/images/session3/captures/comfy-auth.png",
+        "url": "https://cloud.comfy.org/oauth/authorize",
+        "src": "/lectures/images/session3/captures/comfy-auth.png",
+        "page": {
+          "kind": "comfy-auth",
+          "workspace": "Personal Workspace",
+          "permissions": [
+            "comfy-cloud:workflows:read",
+            "comfy-cloud:workflows:write",
+            "comfy-cloud:jobs:read",
+            "comfy-cloud:jobs:write",
+            "comfy-cloud:files:read",
+            "comfy-cloud:files:write",
+            "comfy-cloud:assets:read",
+            "comfy-cloud:assets:write",
+            "comfy-cloud:hub:read",
+            "comfy-cloud:hub:write",
+            "comfy-cloud:user:read"
+          ],
+          "callback": "http://127.0.0.1:62829/callback",
+          "logo": "/lectures/images/session3/captures/comfy-auth-icons.png",
+          "workspaceBadge": 1,
+          "continueBadge": 2
+        }
       },
-      "id": "art-3-7-1"
+      "notes": [
+        {
+          "n": 1,
+          "head": "워크스페이스",
+          "body": "내 Comfy 계정의 작업 공간 확인"
+        },
+        {
+          "n": 2,
+          "head": "Continue",
+          "body": "접근 권한 확인 뒤 진행하는 버튼"
+        },
+        {
+          "n": "!",
+          "head": "인증 완료 확인",
+          "body": "승인 뒤 CLI 완료 응답·whoami 확인 · 이번 캡처는 승인 전"
+        }
+      ]
     }
   ],
   "summary": "링크 출력과 인증 완료 구분"

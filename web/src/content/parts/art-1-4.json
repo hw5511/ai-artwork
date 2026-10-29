@@ -1,6 +1,6 @@
 {
   "id": "art-1-4",
-  "title": "모델 바꾸기 - SDXL base와 Illustrious 비교",
+  "title": "SDXL base · Illustrious 비교",
   "slides": [
     {
       "title": "SDXL base · Illustrious",
@@ -35,22 +35,48 @@
       ],
       "notes": [
         {
+          "n": "!",
+          "head": "비교 조건",
+          "body": "다운로드 JSON의 같은 프롬프트·시드 사용"
+        }
+      ],
+      "id": "art-1-4-settings"
+    },
+    {
+      "id": "art-1-4-1",
+      "title": "체크포인트 선택",
+      "template": "compare",
+      "left": {
+        "label": "SDXL base",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session1/captures/sdxl-loader.png"
+        }
+      },
+      "right": {
+        "label": "WAI Illustrious",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session1/captures/illustrious-loader.png"
+        }
+      },
+      "notes": [
+        {
           "n": 1,
-          "head": "모델 차이",
-          "body": "같은 입력과 설정으로 비교"
+          "head": "SDXL base",
+          "body": "체크포인트 파일명에서 모델 선택"
         },
         {
           "n": 2,
-          "head": "설정 확인",
-          "body": "seed · steps · cfg · sampler · scheduler"
+          "head": "WAI Illustrious",
+          "body": "같은 입력·크기로 모델 표현 비교"
         },
         {
-          "n": 3,
-          "head": "실행 순서",
-          "body": "JSON 열기 · Run 또는 Queue · Save Image 비교"
+          "n": "!",
+          "head": "Cloud 모델명",
+          "body": "모델 목록의 별칭·말줄임 표시 확인"
         }
       ],
-      "id": "art-1-4-1",
       "action": {
         "label": "실습",
         "items": [
@@ -73,6 +99,29 @@
       }
     },
     {
+      "id": "art-1-4-prompt",
+      "title": "모델 비교 공통 프롬프트",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session1/captures/model-shared-prompt.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 0,
+            "y": 42
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "공유 긍정 프롬프트",
+          "body": "두 체크포인트에 같은 공원 산책 문장 적용"
+        }
+      ]
+    },
+    {
       "title": "기존 수업 예시",
       "template": "compare",
       "left": {
@@ -92,18 +141,18 @@
       "notes": [
         {
           "n": 1,
-          "head": "서로 다른 조건",
-          "body": "프롬프트·시드가 다른 기존 예시"
+          "head": "SDXL base 예시",
+          "body": "기존 수업의 사진 결과"
         },
         {
           "n": 2,
-          "head": "비교 기준",
-          "body": "구도 · 질감 · 선 표현 · 색감"
+          "head": "WAI Illustrious 예시",
+          "body": "기존 수업의 일러스트 결과"
         },
         {
-          "n": 3,
-          "head": "동일 조건 실습",
-          "body": "다운로드 워크플로우에서 같은 프롬프트·시드 적용"
+          "n": "!",
+          "head": "서로 다른 조건",
+          "body": "프롬프트·시드가 다른 예시 · 동일 조건 비교와 구분"
         }
       ],
       "id": "art-1-4-2"

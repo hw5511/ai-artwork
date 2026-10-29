@@ -62,27 +62,30 @@
       "id": "art-2-3-1"
     },
     {
-      "title": "이미지 비교 실습",
+      "id": "art-2-3-2",
+      "title": "이미지 비교 공통 프롬프트",
       "template": "screen",
       "screen": {
         "kind": "shot",
-        "src": "/downloads/session2/step1/park_walk.png"
+        "src": "/lectures/images/session2/captures/image-compare-shared-prompt.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 0,
+            "y": 42
+          }
+        ]
       },
       "notes": [
         {
           "n": 1,
-          "head": "비교 시트",
-          "body": "같은 프롬프트로 모델별 실행 · 화면은 실습 주제 예시"
+          "head": "Prompt (shared)",
+          "body": "비교 모델에 같은 공원 산책 문장 적용"
         },
         {
-          "n": 2,
-          "head": "Missing Node",
-          "body": "빨간 오류 확인 · 없는 노드는 실행 전 업데이트 확인"
-        },
-        {
-          "n": 3,
+          "n": "!",
           "head": "실행 그룹",
-          "body": "필요한 그룹만 남기기 · 나머지 Ctrl+B"
+          "body": "필요한 그룹만 활성화 · 실행 전 모델·노드 확인"
         }
       ],
       "action": {
@@ -99,31 +102,101 @@
             "desc": "한국어 뜻"
           }
         ]
+      }
+    },
+    {
+      "id": "art-2-3-image-nodes",
+      "title": "이미지 모델과 API 비용",
+      "template": "compare",
+      "left": {
+        "label": "Z-Image Turbo 로더",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session2/captures/image-compare-local-loader.png"
+        }
       },
-      "id": "art-2-3-2"
+      "right": {
+        "label": "GPT Image API",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session2/captures/image-compare-api-node.png"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "모델 파일",
+          "body": "UNet 모델 파일명 확인"
+        },
+        {
+          "n": 2,
+          "head": "credits/Run",
+          "body": "API 노드의 실행 비용 · 크기·품질 설정 확인"
+        },
+        {
+          "n": "!",
+          "head": "캡처 상태",
+          "body": "2026-10-29 표시값 · API 실행 없음"
+        }
+      ]
+    },
+    {
+      "id": "art-2-3-video-prompt",
+      "title": "5초 영상 공통 프롬프트",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session2/captures/video-compare-prompt.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 0,
+            "y": 42
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Prompt (shared)",
+          "body": "영상 비교 모델에 같은 장면·움직임 적용"
+        }
+      ]
     },
     {
       "title": "5초 영상 비교 실습",
       "template": "screen",
       "screen": {
         "kind": "shot",
-        "src": "/downloads/session2/step2/minimax_first.png"
+        "src": "/lectures/images/session2/captures/video-compare-api-node.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 73,
+            "y": 4
+          },
+          {
+            "n": 2,
+            "x": 93,
+            "y": 47
+          }
+        ]
       },
       "notes": [
         {
           "n": 1,
-          "head": "5초 비교 템플릿",
-          "body": "같은 프롬프트의 로컬·API 모델 비교 · 화면은 첫 프레임 예시"
+          "head": "실행 비용",
+          "body": "노드 오른쪽 위 credits/Run 표시"
         },
         {
           "n": 2,
-          "head": "API 비용",
-          "body": "실행 전 크레딧 확인"
+          "head": "duration",
+          "body": "5초 설정 · 한 모델씩 비교"
         },
         {
-          "n": 3,
-          "head": "첫 실행",
-          "body": "한 모델만 실행 · 입력과 출력 확인"
+          "n": "!",
+          "head": "캡처 상태",
+          "body": "API 노드 설정 화면 · 영상 생성 없음"
         }
       ],
       "action": {

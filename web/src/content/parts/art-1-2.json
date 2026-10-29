@@ -3,201 +3,225 @@
   "title": "기본 인터페이스 설명",
   "slides": [
     {
+      "id": "art-1-2-1",
       "title": "왼쪽 사이드바",
       "template": "screen",
       "screen": {
         "kind": "shot",
-        "src": "/lectures/images/session1/step5/stpe5.png",
+        "src": "/lectures/images/session1/captures/sidebar-nodes.png",
         "badges": [
           {
             "n": 1,
-            "x": 3.5,
-            "y": 13.7
+            "x": 7,
+            "y": 19
           },
           {
             "n": 2,
-            "x": 3.5,
-            "y": 23.5
+            "x": 20,
+            "y": 29
           },
           {
             "n": 3,
-            "x": 3.5,
-            "y": 33
+            "x": 7,
+            "y": 57
           }
         ]
       },
       "notes": [
         {
           "n": 1,
-          "head": "Assets",
+          "head": "에셋",
           "body": "생성하거나 불러온 이미지·영상"
         },
         {
           "n": 2,
-          "head": "Nodes · Models",
-          "body": "노드 검색 · 사용 가능한 모델"
+          "head": "노드 검색",
+          "body": "노드 검색창과 종류별 목록"
         },
         {
           "n": 3,
-          "head": "Workflows",
-          "body": "저장한 워크플로우 · 최근 파일"
-        }
-      ],
-      "id": "art-1-2-1"
-    },
-    {
-      "id": "art-1-2-models",
-      "title": "Models 라이브러리",
-      "template": "screen",
-      "screen": {
-        "kind": "shot",
-        "src": "/lectures/images/session1/step4/left_pannel.png",
-        "badges": [
-          {
-            "n": 1,
-            "x": 13,
-            "y": 45
-          },
-          {
-            "n": 2,
-            "x": 80,
-            "y": 22
-          }
-        ]
-      },
-      "notes": [
-        {
-          "n": 1,
-          "head": "모델 목록",
-          "body": "사용 가능한 모델과 종류별 폴더"
-        },
-        {
-          "n": 2,
-          "head": "모델 검색",
-          "body": "이름으로 모델 찾기"
+          "head": "워크플로",
+          "body": "저장한 워크플로 파일"
         }
       ]
     },
     {
+      "id": "art-1-2-models",
+      "title": "모델 라이브러리",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session1/captures/models-library.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 3,
+            "y": 52
+          },
+          {
+            "n": 2,
+            "x": 64,
+            "y": 7
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "모델 종류",
+          "body": "유형별 폴더와 모델 목록"
+        },
+        {
+          "n": 2,
+          "head": "검색",
+          "body": "모델 이름으로 검색"
+        }
+      ]
+    },
+    {
+      "id": "art-1-2-2",
       "title": "캔버스와 노드",
       "template": "screen",
       "screen": {
         "kind": "shot",
-        "src": "/lectures/images/session1/step4/nodes.png"
-      },
-      "notes": [
-        {
-          "n": 1,
-          "head": "화면 이동",
-          "body": "빈 곳 드래그 · 마우스 휠 확대·축소"
-        },
-        {
-          "n": 2,
-          "head": "노드 선택",
-          "body": "노드 클릭 · 빈 곳 클릭으로 선택 해제"
-        },
-        {
-          "n": 3,
-          "head": "노드 연결",
-          "body": "같은 데이터 종류의 출력과 입력 연결"
-        }
-      ],
-      "id": "art-1-2-2"
-    },
-    {
-      "title": "실행 영역",
-      "template": "screen",
-      "screen": {
-        "kind": "shot",
-        "src": "/lectures/images/session1/step5/stpe5.png",
+        "src": "/lectures/images/session1/captures/canvas-nodes.png",
         "badges": [
           {
             "n": 1,
-            "x": 82,
-            "y": 8
+            "x": 20,
+            "y": 2
           },
           {
             "n": 2,
-            "x": 89,
-            "y": 8
+            "x": 35,
+            "y": 7.2
           }
         ]
       },
       "notes": [
         {
           "n": 1,
-          "head": "Run · Queue",
-          "body": "워크플로우 실행"
+          "head": "입력 노드",
+          "body": "프롬프트·크기·시드 입력"
         },
         {
           "n": 2,
-          "head": "작업 상태",
-          "body": "실행 중인 작업 · 대기 중인 작업"
-        },
-        {
-          "n": 3,
-          "head": "버전 차이",
-          "body": "업데이트에 따른 아이콘 위치·이름 차이"
+          "head": "노드 연결",
+          "body": "이미지 출력과 이미지 저장 입력 연결"
         }
-      ],
-      "id": "art-1-2-3"
+      ]
     },
     {
-      "title": "워크플로우 JSON",
+      "id": "art-1-2-3",
+      "title": "실행 영역 · 로컬 ComfyUI",
       "template": "screen",
       "screen": {
         "kind": "shot",
-        "src": "/lectures/images/session1/step4/json_workflow.png"
+        "src": "/lectures/images/session1/captures/run-queue-local.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 31,
+            "y": 18
+          },
+          {
+            "n": 2,
+            "x": 66,
+            "y": 18
+          },
+          {
+            "n": 3,
+            "x": 18,
+            "y": 83
+          }
+        ]
       },
       "notes": [
         {
           "n": 1,
-          "head": "JSON 열기",
-          "body": "파일을 캔버스에 끌어 놓기"
+          "head": "실행",
+          "body": "설정한 횟수만큼 워크플로 실행"
         },
         {
           "n": 2,
-          "head": "JSON 저장",
-          "body": "노드와 연결을 한 파일로 보관"
+          "head": "작업 대기열",
+          "body": "활성 작업 수와 대기열 열기"
         },
         {
           "n": 3,
-          "head": "화면 확인",
-          "body": "Workflows 열고 닫기 · 노드 선택 해제"
+          "head": "기록 필터",
+          "body": "모두·완료됨 등 작업 기록 구분"
+        },
+        {
+          "n": "!",
+          "head": "화면 출처",
+          "body": "Cloud 구독 만료로 로컬 버튼 캡처 · 실행 클릭 없음"
         }
-      ],
-      "id": "art-1-2-4"
+      ]
+    },
+    {
+      "id": "art-1-2-4",
+      "title": "워크플로 JSON 열기",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session1/captures/json-menu-open.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 42,
+            "y": 28
+          },
+          {
+            "n": 2,
+            "x": 92,
+            "y": 29
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "파일 메뉴",
+          "body": "왼쪽 Comfy 메뉴의 파일"
+        },
+        {
+          "n": 2,
+          "head": "열기",
+          "body": "JSON 파일 선택 · 캔버스 드래그도 가능"
+        }
+      ]
     },
     {
       "id": "art-1-2-workflow-menu",
-      "title": "Workflow 파일 메뉴",
+      "title": "워크플로 JSON 내보내기",
       "template": "screen",
       "screen": {
         "kind": "shot",
-        "src": "/lectures/images/session1/step4/upper_menu.png",
+        "src": "/lectures/images/session1/captures/json-menu-export.png",
         "badges": [
           {
             "n": 1,
-            "x": 53,
-            "y": 25
+            "x": 91,
+            "y": 55
           },
           {
             "n": 2,
-            "x": 53,
-            "y": 36
+            "x": 91,
+            "y": 64
           }
         ]
       },
       "notes": [
         {
           "n": 1,
-          "head": "열기",
-          "body": "저장한 워크플로우 선택 · JSON 캔버스 드래그도 가능"
+          "head": "내보내기",
+          "body": "노드와 연결을 워크플로 JSON으로 다운로드"
         },
         {
           "n": 2,
-          "head": "저장",
-          "body": "노드와 연결을 JSON 파일로 보관"
+          "head": "내보내기 (API)",
+          "body": "API 실행용 형식 · 수업용 JSON과 구분"
         }
       ]
     }

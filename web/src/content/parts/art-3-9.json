@@ -3,29 +3,30 @@
   "title": "저장한 스킬을 다음 대화에서 사용",
   "slides": [
     {
-      "title": "프로젝트 스킬과 새 대화",
-      "template": "illustration",
-      "illustration": "/illustrations/project-skill.svg",
+      "id": "art-3-9-1",
+      "title": "새 대화의 프로젝트 스킬",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session3/captures/project-skill-menu.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 80,
+            "y": 51
+          }
+        ]
+      },
       "notes": [
         {
           "n": 1,
-          "head": "파일 탐색기",
-          "body": "현재 폴더의 .agents/skills/스킬이름/SKILL.md"
+          "head": "$comfy 검색",
+          "body": "같은 폴더의 새 대화에서 Comfy 공식 CLI 표시"
         },
         {
-          "n": 2,
-          "head": "새 대화",
-          "body": "같은 작업 폴더 · $ 입력 · 스킬 이름 선택"
-        },
-        {
-          "n": 3,
-          "head": "발견 조건",
-          "body": "이름·설명·본문을 갖춘 SKILL.md · 목록 재확인"
-        },
-        {
-          "n": 4,
-          "head": "PC 실측",
-          "body": "폴더 이동 뒤 새 Codex CLI 대화의 이름·경로 인식"
+          "n": "!",
+          "head": "Project 표시",
+          "body": "현재 프로젝트에서 찾은 스킬"
         }
       ],
       "action": {
@@ -37,8 +38,35 @@
             "text": "프로젝트 스킬과 명시적 호출"
           }
         ]
+      }
+    },
+    {
+      "id": "art-3-9-selected",
+      "title": "프로젝트 스킬 선택",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session3/captures/project-skill-selected.png",
+        "badges": [
+          {
+            "n": 1,
+            "x": 25,
+            "y": 64
+          }
+        ]
       },
-      "id": "art-3-9-1"
+      "notes": [
+        {
+          "n": 1,
+          "head": "Comfy 공식 CLI",
+          "body": "입력창에 선택한 스킬 표시 · 이어서 작업 요청 입력"
+        },
+        {
+          "n": "!",
+          "head": "캡처 상태",
+          "body": "스킬 선택까지만 · 새 작업 메시지 전송 없음"
+        }
+      ]
     }
   ],
   "summary": "프로젝트 스킬 파일 · 새 대화의 스킬 목록"

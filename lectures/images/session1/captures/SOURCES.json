@@ -1,0 +1,224 @@
+{
+  "captured": "2026-10-29",
+  "purpose": "Real work screens for AI artwork sessions 1-3",
+  "limits": [
+    "No generation, paid API calls, credits, GPU work or settings changes",
+    "Cloud subscription inactive: local Run control labeled honestly",
+    "OAuth Continue not pressed; login processes stopped after login_url",
+    "No private chat titles, profile details, tokens or query codes retained"
+  ],
+  "files": [
+    {
+      "file": "sidebar-nodes.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        0,
+        40,
+        370,
+        470
+      ],
+      "sha256": "069af031ee865f1b60fa19e41d01c1ec02c0955513d6f81779b1bc7a34bcc302"
+    },
+    {
+      "file": "models-library.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        80,
+        100,
+        795,
+        595
+      ],
+      "sha256": "9109f5ecf56ddf0a9ceb1e27924626619b07cda40e5bd74cfd0c7a8ec1cd7ac2"
+    },
+    {
+      "file": "canvas-nodes.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "image_z_image_turbo.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        248,
+        220,
+        1488,
+        925
+      ],
+      "sha256": "6709432145dc4caec20ed509dde861f267b78bac2712bf44ede62299187148bc"
+    },
+    {
+      "file": "run-queue-local.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Local ComfyUI http://127.0.0.1:8188; Run hovered only, queue opened; cropped before any job history",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        1232,
+        40,
+        1595,
+        208
+      ],
+      "sha256": "0829d3b660c20c4a61b816dda65f4a40010158f69f5b6a579aafa100dd63d09d"
+    },
+    {
+      "file": "json-menu-open.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        0,
+        40,
+        388,
+        475
+      ],
+      "sha256": "8a0414323f8f7db82b7f629c952fdb6eefabdea6fcf9a8dfed8ac2f82ad5c9d5"
+    },
+    {
+      "file": "json-menu-export.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": null,
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "ffb9c102f59cb48187109aaf282aa654db67bc2270f421f580346e2d7ef22edb"
+    },
+    {
+      "file": "z-gallery.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "image_z_image_turbo.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        100,
+        100,
+        1500,
+        900
+      ],
+      "sha256": "f436ce0252737ef14d22dcd61224616ccd517b8db7e96c0ba61eeb9b62540075"
+    },
+    {
+      "file": "z-prompt.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "image_z_image_turbo.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "8afefd8c2e0ec1d01a710e681042cde6c34869c8b01113cb13126b9d281eaa79"
+    },
+    {
+      "file": "z-output.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "image_z_image_turbo.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "28c09146873ac84eeb2cbd03d8c13f1a2b3af2311a230837af974aba647d1767"
+    },
+    {
+      "file": "sdxl-loader.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "sdxl_vs_illustrious.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "838f7e461b1b0ff5dedcf632498c9e5a7b4f1934f75df9fca58ed6495418563a"
+    },
+    {
+      "file": "illustrious-loader.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "sdxl_vs_illustrious.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "97b97ae8930072e1edff14347f0672e416656ceb0ed73a17f18aafcadd318ab0"
+    },
+    {
+      "file": "model-shared-prompt.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "sdxl_vs_illustrious.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "69749274705086fd7cce229be99994b52490e4c9714ddd01643828aff9643cfb"
+    },
+    {
+      "file": "ltx-gallery.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "video_ltx2_5_t2v.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": [
+        100,
+        100,
+        1500,
+        900
+      ],
+      "sha256": "92dd884bdc175df7e1ed95ebe0c54e7a4ae4244d6b839f13312c956663d6d676"
+    },
+    {
+      "file": "ltx-prompt.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "video_ltx2_5_t2v.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "3ae93522bb9867287008463219108fef3782723d61e35341c27f8dca15c05bd8"
+    },
+    {
+      "file": "ltx-output.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "video_ltx2_5_t2v.json",
+      "operation": "screenshot crop; no UI redrawing in this file",
+      "crop": null,
+      "sha256": "a7d2dbe609b039ac239644d4c3dd716f59999b7b3cffc8a7f78f674dc5921128"
+    },
+    {
+      "file": "z-prompt-focus.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "image_z_image_turbo.json",
+      "operation": "Unchanged pixel crop from z-prompt.png",
+      "crop": [
+        0,
+        0,
+        578,
+        522
+      ],
+      "sha256": "295a8b7408e6a7f2bbffbb0be78557dab2ab68e701d59a84b12ba49368069140"
+    },
+    {
+      "file": "ltx-prompt-focus.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "video_ltx2_5_t2v.json",
+      "operation": "Unchanged pixel crop from ltx-prompt.png",
+      "crop": [
+        0,
+        0,
+        546,
+        432
+      ],
+      "sha256": "19c3c5b308c818e19550630255907ff50e6724a824022ac2f7a2e6c4323a5424"
+    },
+    {
+      "file": "z-gallery-focus.png",
+      "captured": "2026-10-29 KST",
+      "surface": "Comfy Cloud / Chromium, google profile",
+      "workflow": "image_z_image_turbo.json",
+      "operation": "Unchanged pixel crop from z-gallery.png; first row only",
+      "crop": [
+        0,
+        0,
+        1400,
+        490
+      ],
+      "sha256": "a96f1edb9ca7744855b81c874ef2113233810b720e22f143d715a46ad545415b"
+    }
+  ]
+}
