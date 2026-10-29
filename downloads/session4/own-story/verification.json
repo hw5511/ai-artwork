@@ -9,98 +9,128 @@
         "sha256": "50438f22df543edcf0c24102c4eb4f7d462f3aabef1f628744a53a4f0e069e06",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "03",
         "sha256": "5621262dae700a036f50c3092b37f1bc03fee48a7fd29773c51828d482a9ba2d",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "04",
         "sha256": "b86ed1a52e0815ef0e76ec6f7fe14f4a66bb6393ce633f8ee0565aef2cf25f5c",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "05",
         "sha256": "1b8cabf8796af63d640b75747ff36fac94e7a1e510e7a37862b7077457be5df6",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "06",
         "sha256": "7a6c6dd7fd2d7fcb956bc3e3c58d02f9563d6eb88b9d91f2f21bef05aaee3d8d",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "07",
         "sha256": "415879188d9058776b39ef47b4f6457a87e57582de4d1e23629e5c3d62969b95",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "08",
         "sha256": "88d1458b2c7612e466658d5ef526bf9789923e683a00ba507f770686220c765a",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "09",
         "sha256": "5f466a66b0b4abe135a7170056cc0dd410663f3242df4f61798ae4d816b6ee0e",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "10-install",
         "sha256": "b35fa35c478cc5c398dee7226590db818b60eeff94924a6b4ed88a9f5b7b4e90",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "10",
         "sha256": "b6520d9ceb5d6b0d138253b7afac1eaf5e8b746f5a92e6f25981e4416fa9d249",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "11",
         "sha256": "8656f819eab8b3ad3d588a45578589c718122028de4f880e8cd7b9bc365ee72d",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "12-upscale",
         "sha256": "26711b1393e6ee728c88a082aa06c4319b688913453b737f072a96fc758ed41c",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "12-join",
         "sha256": "eacff8926d92645a77e7ced8b85989afaa83a78e42792d43d433f2e618bc66b0",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
       },
       {
         "prompt": "04-zoom",
         "sha256": "4ec8520cf12f61ca26ab45184b171424d2511bfcb1b6f8ff599fd73f80ecf6c8",
         "model": "gpt-6.1-sol",
         "full_access": true,
-        "completed": true
+        "completed": true,
+        "mode": "class rehearsal; cloud steps stop at offline preview"
+      },
+      {
+        "prompt": "11-run",
+        "sha256": "6736ded59c0b9c584391d244152426b0f11d7c5f646864e95174d1644611e0f4",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true,
+        "mode": "offline validation and unexecuted run plan, developer guard forbids live mutations"
+      },
+      {
+        "prompt": "12-run",
+        "sha256": "516f6386162dea28ec91d273555128468d2e7879c0a6a90da1f7fb184242d6ab",
+        "model": "gpt-6.1-sol",
+        "full_access": true,
+        "completed": true,
+        "mode": "offline validation and unexecuted run plan, developer guard forbids live mutations"
       }
     ]
   },
@@ -253,7 +283,13 @@
     "slides_each": 36,
     "screenshots_visually_reviewed": true,
     "mobile_scrolled_notes_visually_reviewed": true,
-    "clipboard_exact_matches": 28,
+    "review_commit_changed_slides_rechecked": [
+      31,
+      32,
+      34,
+      36
+    ],
+    "clipboard_exact_matches": 32,
     "part_and_legacy_hashes": 24,
     "downloads_http_200": 9,
     "arrows": true,
@@ -304,5 +340,24 @@
     "content_errors": 0,
     "npm_build": "passed",
     "git_diff_check": "passed"
+  },
+  "reviewed_additions": {
+    "source_commits": [
+      "feadb9e",
+      "b368b1a"
+    ],
+    "wall_asset_sha256": "dc7c91c3f336eca99eda4e6c5f5807d4426a25472632612ac00bf771cc073cd2",
+    "latest_card_wall_screenshots_reviewed": [
+      1920,
+      390
+    ],
+    "student_prompts": [
+      "11-run",
+      "12-run"
+    ],
+    "scope": "Exact copy inputs rehearsed with a developer-level offline guard; no auth, account lookup, upload, submit, wait or download allowed. Saved-catalog validation and unexecuted plans only.",
+    "generation_review_preview": "cloud_unauthorized / Comfy Cloud session has expired; preserved without login or retry. This is a protected-rehearsal error, not a verified account-health diagnosis.",
+    "cloud_name_and_job_ids": "not fabricated or bound",
+    "actual_paid_execution": "not tested"
   }
 }

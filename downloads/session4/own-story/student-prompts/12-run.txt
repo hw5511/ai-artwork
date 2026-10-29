@@ -1,0 +1,2 @@
+예산을 확인했어. Comfy 스킬을 읽고 session4/clips/clip1-720.mp4를 Comfy CLI로 업로드한 뒤 응답의 cloud_name을 session4/cloud/upscale1.api.json에 반영하고 --where cloud --print-prompt로 다시 확인해줘.
+이상이 없으면 --allow-spend로 제출하고, jobs wait와 download로 session4/upscaled/clip1.mp4에 저장해줘. 결과를 열어 확인한 다음 클립2·3도 같은 순서로 진행해줘. 오류가 나면 원문을 보여주고 자동 재시도는 하지 마.

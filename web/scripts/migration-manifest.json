@@ -280,7 +280,8 @@
     "source": "session4v2/rehearsed-student-prompts",
     "part": "art-4-11",
     "copyHashes": [
-      "8656f819eab8b3ad3d588a45578589c718122028de4f880e8cd7b9bc365ee72d"
+      "8656f819eab8b3ad3d588a45578589c718122028de4f880e8cd7b9bc365ee72d",
+      "6736ded59c0b9c584391d244152426b0f11d7c5f646864e95174d1644611e0f4"
     ],
     "hrefs": [
       "/downloads/session4/own-story/workflow-kit.zip",
@@ -294,6 +295,7 @@
     "part": "art-4-12",
     "copyHashes": [
       "26711b1393e6ee728c88a082aa06c4319b688913453b737f072a96fc758ed41c",
+      "516f6386162dea28ec91d273555128468d2e7879c0a6a90da1f7fb184242d6ab",
       "eacff8926d92645a77e7ced8b85989afaa83a78e42792d43d433f2e618bc66b0"
     ],
     "hrefs": [
