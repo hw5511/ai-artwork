@@ -4,21 +4,23 @@
   "slides": [
     {
       "id": "art-3-6-1",
-      "title": "Comfy CLI 설치 요청",
+      "title": "Comfy CLI 설치·로그인 요청",
       "template": "screen",
       "screen": {
-        "kind": "shot",
-        "src": "/lectures/images/session3/captures/cli-request.png",
+        "kind": "desktop",
+        "capture": "/lectures/images/session3/captures/cli-request.png",
+        "project": "s3-capture",
+        "prompt": "comfy 공식 cli를 설치한다음 백그라운드로 로그인을 실행해서 로그인 링크를 브라우저로 열어줘 그다음 내가 로그인할때 까지 wait해줘. 그래서 로그인에 성공하면 이 comfy cli의 설치상태와 인증여부를 AGENTS.md로 현재폴더에 저장해줘.",
         "badges": [
           {
             "n": 1,
-            "x": 94,
-            "y": 37
+            "x": 96,
+            "y": 80
           },
           {
             "n": 2,
-            "x": 3,
-            "y": 10
+            "x": 7.5,
+            "y": 71
           }
         ]
       },
@@ -31,7 +33,12 @@
         {
           "n": 2,
           "head": "작업 위치",
-          "body": "현재 프로젝트 s3-capture · .venv 설치 요청"
+          "body": "현재 프로젝트 폴더 · .venv 설치와 AGENTS.md 저장 위치"
+        },
+        {
+          "n": "!",
+          "head": "요청 순서",
+          "body": "설치 → 브라우저 로그인 → 로그인 대기 → 설치·인증 상태 기록"
         }
       ],
       "action": {
@@ -39,7 +46,7 @@
         "items": [
           {
             "kind": "copy",
-            "value": "comfy 공식 cli를 설치한다음 로그인을 백그라운드로 실행하고 로그인 링크를 알려주고 계속 wait해줘",
+            "value": "comfy 공식 cli를 설치한다음 백그라운드로 로그인을 실행해서 로그인 링크를 브라우저로 열어줘 그다음 내가 로그인할때 까지 wait해줘. 그래서 로그인에 성공하면 이 comfy cli의 설치상태와 인증여부를 AGENTS.md로 현재폴더에 저장해줘.",
             "desc": "실습 프롬프트"
           },
           {
@@ -89,5 +96,5 @@
       ]
     }
   ],
-  "summary": "공식 CLI 설치와 로그인 링크 요청"
+  "summary": "공식 CLI 설치·로그인 후 AGENTS.md 기록"
 }

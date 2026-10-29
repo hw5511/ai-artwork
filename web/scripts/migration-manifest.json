@@ -141,9 +141,7 @@
   {
     "source": "session3/step6-comfy-cli.md",
     "part": "art-3-6",
-    "copyHashes": [
-      "ffdcf84345fc82669f54e20904896e745683c6026aa7b08679ed560836fbb5a7"
-    ],
+    "copyHashes": [],
     "hrefs": [
       "https://docs.comfy.org/agent-tools/cli"
     ]

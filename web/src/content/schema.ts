@@ -35,7 +35,7 @@ export interface BrowserScreen {
   page?: { kind: "comfy-auth"; workspace: string; permissions: string[]; callback: string; logo: string; workspaceBadge?: number; continueBadge?: number }
 }
 export interface DesktopScreen {
-  kind: "desktop"; capture: string; project: string;
+  kind: "desktop"; capture: string; project: string; prompt?: string;
   dialog?: { title: string; path: string; selected: string; emptyText: string };
   menu?: {
     placement: "product" | "model" | "permissions"; title?: string;

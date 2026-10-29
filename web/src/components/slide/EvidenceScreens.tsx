@@ -70,7 +70,7 @@ export function DesktopEvidence({ screen: s }: { screen: DesktopScreen }) {
         <div className="shrink-0">
           <div className="mx-4 flex h-12 items-center gap-4 rounded-t-2xl bg-[#242424] px-6 text-[21px]"><Folder size={22}/>{s.project}<Laptop className="ml-3" size={22}/>This computer</div>
           <div className="rounded-3xl bg-[#303030] px-6 pt-5 pb-4">
-            <div className="mb-8 text-[24px] text-[#999999]">Do anything</div>
+            {s.prompt ? <div className="mb-8 whitespace-pre-wrap break-words text-[25px] leading-relaxed">{s.prompt}</div> : <div className="mb-8 text-[24px] text-[#999999]">Do anything</div>}
             <div className="flex items-center gap-4 text-[21px]">
               <Plus size={25}/><span className="text-[#e99b58]">Full access</span><ChevronDown size={18}/>
               <span className="ml-auto">GPT-6.1 Sol High</span><ChevronDown size={18}/><ArrowUp className="ml-3 rounded-full bg-[#3e6cb4] p-1.5" size={36}/>

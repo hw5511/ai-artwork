@@ -25,7 +25,7 @@ A note describes what the student sees or does, with facts matching the visual.
 
 Supported templates: `screen`, `compare`, `table`, `illustration`; `part-cover` is generated.
 Supported screen kinds: `shot`, `video`, `desktop`, `browser` and `terminal`.
-`desktop` redraws the captured ChatGPT project composer, product/model/permission menus and native folder picker;
+`desktop` redraws the captured ChatGPT project composer (optionally with the exercise prompt typed in), product/model/permission menus and native folder picker;
 private sidebar titles become neutral titles. `browser` frames a real cropped page image
 or redraws the captured Comfy CLI authorization request with the same fields, permission
 scroll pane and Continue/Cancel controls, with an observed URL that omits authentication
