@@ -1,0 +1,24 @@
+확인일: 2026-10-29 KST
+Comfy Cloud GPU (오픈 모델 H3, SeedVR2): GPU 사용 초 × 약 0.2732크레딧.
+출처: C:/wi/yuki/.claude/skills/comfy-cli/references/cloud.md 「Comfy Cloud GPU(OSS 워크플로) 단가」.
+2026-08-26 인보이스 역산 기록. GPU 17,754.7초 / $22.99, $0.001295/GPU초, 크레딧 환산 ×211.
+credits.md: 파트너 노드는 호출·출력 기준, OSS 워크플로는 GPU 시간으로 별도 과금.
+실행 전 GPU 시간은 확정되지 않으므로 생성·업스케일 총액 미확정. CLI의 partner 견적 0 또는 spends_credits:false는 GPU 무료 의미가 아님.
+
+파트너 MiniMax H3 768P R2V: 27.16크레딧/출력초.
+10초 271.6, 3클립 814.8(약 815). 5장까지 이미지 참조 추가료 없음. 6장째부터 12.07/장/호출.
+파트너 H3 Regenerate 768P→2K: 15.09크레딧/초. 30초 452.7.
+공식 단가: https://docs.comfy.org/tutorials/partner-nodes/pricing
+파트너 옵션: MiniMax H3는 768P, 2K. 720P 없음. H3 Max와 과금 방식·옵션 구분.
+Standard: 연간 포함 50,400크레딧 / 12 = 월 4,200크레딧 환산.
+공식 플랜: https://comfy.org/pricing
+
+오늘 사용 경로:
+video_minimax_h3_r2v → MiniMaxH3ReferenceToVideo (1280×720, 243프레임, 24fps, turbo 4스텝).
+갤러리 기본 비디오 VAE 대신 Cloud 카탈로그의 minimax_h3_video_vae_fp16.safetensors 사용.
+1280×720은 API에 직접 지정. ResolutionSelector의 기본 프리셋은 사용하지 않음.
+노드 UI step=32이나 서버 API에는 step 격자 제한이 없고 H3 latent는 16배 격자. 720=16×45.
+243=17×14+5 프레임, 약 10.125초. CPU ffmpeg로 앞 10초를 잘라 업스케일 입력.
+utility_seedvr2_3b_int8_upscale_video → SeedVR2Preprocess/Conditioning/PostProcessing, x2, split_latent.
+720p→1440p. 원본 오디오 연결 유지. 제출 전 schema validate 및 API print-prompt만 검사.
+업로드 cloud_name·유료 제출·Cloud 결과 회수·실제 화질/처리시간은 미검증.

@@ -1,0 +1,256 @@
+{
+  "title": "민트색 포켓 카메라 — 조용한 오후의 발견",
+  "source": "session4/idea.md",
+  "language": "ko",
+  "format": "30초 제품 광고 / 10초 클립 3개",
+  "total_duration_seconds": 30,
+  "generation_status": "대본 작성만 완료. 이미지·영상 생성 미실행.",
+  "timing_rules": {
+    "time_unit": "seconds",
+    "clip_time_origin": "각 클립은 독립적으로 0초부터 시작한다.",
+    "shot_interval": "start_seconds 이상, end_seconds 미만. 마지막 샷은 10초에서 종료한다.",
+    "editing": "각 샷 시작 시각에 하드컷. 0초는 클립 진입점이며, 클립 사이도 하드컷으로 연결한다. 디졸브·속도 변화 없음.",
+    "action_duration": "샷마다 주행동 하나를 2~4초 동안 보여준다.",
+    "scale_progression": "각 클립에서 와이드 → 미디엄 → 디테일 순서로 컷을 전환한다. 연속 디지털 줌 없음."
+  },
+  "reference_sheet": {
+    "status": "별도 시트 파일이 없어 이 대본에 고정 사양을 정의함. 아래 ID는 향후 시트 제작 및 샷 대조에 사용하는 항목 ID이며, 기존 시트 이미지가 있다는 뜻은 아님.",
+    "production_assumptions": [
+      "원안에 없는 렌즈와 버튼·다이얼·로고의 정확한 위치를 아래 사양으로 정한다.",
+      "원안에 없는 정물 구성은 크림색 도자기 컵과 갈색 솔방울로 정한다.",
+      "카메라의 좌우는 제품 정면에서 보았을 때를 기준으로 하며, 제품을 돌려도 실제 부착 위치는 바뀌지 않는다."
+    ],
+    "items": [
+      {
+        "id": "CHAR-01",
+        "name": "여성 외형",
+        "fixed_features": "성인 여성 한 명, 턱선 길이의 검은 단발머리, 무늬 없는 남색 긴팔 셔츠. 같은 얼굴·헤어·의상 유지. 손에 장신구 없음.",
+        "sheet_view": "정면과 3/4 상반신, 양손"
+      },
+      {
+        "id": "PROD-01",
+        "name": "카메라 전체 형태",
+        "fixed_features": "손바닥 크기의 민트색 무광 직사각형 포켓 카메라, 둥근 모서리, 정면 중앙의 검은 원형 렌즈. 크기·두께·색상·렌즈 위치 고정.",
+        "sheet_view": "제품 정면·윗면·3/4, 모든 세부 요소의 상대 위치 표시"
+      },
+      {
+        "id": "PROD-02",
+        "name": "주황색 셔터 버튼",
+        "fixed_features": "정면 기준 윗면 오른쪽의 주황색 원형 셔터 버튼 한 개. 크기·색상·위치 고정.",
+        "sheet_view": "윗면 오른쪽 확대, 눌리기 전과 눌린 상태"
+      },
+      {
+        "id": "PROD-03",
+        "name": "은색 톱니 다이얼",
+        "fixed_features": "정면 기준 윗면 왼쪽의 은색 원형 다이얼 한 개, 둘레의 촘촘한 톱니. 지름·높이·톱니 간격·위치 고정.",
+        "sheet_view": "윗면 왼쪽 사선 확대, 톱니 단면이 보이는 각도"
+      },
+      {
+        "id": "PROD-04",
+        "name": "흰색 점 세 개 로고",
+        "fixed_features": "정면 렌즈 오른쪽 위의 흰색 원형 점 세 개, 같은 크기와 간격의 가로 배열. 개수·위치·배열 고정. 문자 없음.",
+        "sheet_view": "정면 로고 확대, 주변 민트색 면과 렌즈 일부 포함"
+      },
+      {
+        "id": "SET-01",
+        "name": "작업실과 빛",
+        "fixed_features": "같은 작업실 한 곳. 화면 왼쪽 창, 중앙 나무 책상, 뒤쪽 선반. 왼쪽에서 오는 부드러운 오후 자연광과 오른쪽으로 드리우는 그림자 유지. 와이드의 시선 축을 유지하고 좌우 반전 금지.",
+        "sheet_view": "창·책상·선반 배치가 보이는 와이드와 책상 평면 배치"
+      },
+      {
+        "id": "PROP-01",
+        "name": "촬영할 작은 정물",
+        "fixed_features": "책상 뒤쪽 중앙에 크림색 도자기 컵 하나, 손잡이는 화면 오른쪽. 작은 갈색 솔방울 하나를 컵 앞 오른쪽에 둔다. 두 물건의 거리·방향·크기·배치를 전 클립에서 유지.",
+        "sheet_view": "정물 정면과 책상 위 배치, 컵 손잡이와 솔방울 위치 표시"
+      }
+    ]
+  },
+  "continuity": {
+    "location": "전 클립 같은 작업실의 같은 나무 책상",
+    "cast": ["CHAR-01"],
+    "lighting": "SET-01의 오후 자연광 유지",
+    "blocking": "여성은 책상 앞 왼쪽에 앉아 있다. 카메라는 처음 책상 앞쪽 중앙에 정면이 관객 쪽을 향하도록 놓여 있다. 정물은 책상 뒤쪽 중앙에 고정되어 있다.",
+    "product_handling": "클립 1에서 왼손으로 카메라를 들어 받친다. 클립 2에서는 같은 높이에서 확인한다. 클립 3에서 양손으로 들어 렌즈를 정물 쪽으로 향한다. 제품을 돌릴 때 각 부품은 제품에 붙어 함께 회전한다.",
+    "visibility": "확대 대상은 손으로 가리지 않는다. 뒷면이나 윗면 샷에서 보이지 않는 정면 로고를 다른 면에 복제하지 않는다.",
+    "sound": "낮은 작업실 룸톤을 30초 동안 연속 유지. 나레이션·대사·음악 없음. 손길·다이얼·셔터 소리만 필요한 시점에 추가.",
+    "clip_handoffs": [
+      "클립 1 종료 → 클립 2 시작: 카메라는 왼손에 받쳐진 채 같은 위치와 정면 방향을 유지한다.",
+      "클립 2 종료 → 클립 3 시작: 오른손 검지는 셔터에서 떨어져 있고 카메라는 왼손에 받쳐져 있다. 아직 촬영하지 않았다."
+    ]
+  },
+  "clips": [
+    {
+      "id": "CLIP-01",
+      "title": "책상 위의 발견",
+      "duration_seconds": 10,
+      "location_ref": "SET-01",
+      "cast_refs": ["CHAR-01"],
+      "hard_cut_times_seconds": [0, 3, 6],
+      "shots": [
+        {
+          "id": "C1-S1",
+          "start_seconds": 0,
+          "end_seconds": 3,
+          "duration_seconds": 3,
+          "transition_in": "hard_cut",
+          "shot_size": "와이드",
+          "framing": "고정 카메라. 왼쪽 창, 책상, 뒤 선반과 앉아 있는 여성을 함께 담는다. 민트색 카메라는 책상 앞쪽 중앙, 정물은 뒤쪽 중앙에 보인다.",
+          "action": "여성이 책상 위 민트색 카메라를 발견하고 시선을 옮긴다.",
+          "action_duration_seconds": 3,
+          "appearance_lock_refs": ["CHAR-01", "PROD-01", "PROD-02", "PROD-03", "PROD-04", "SET-01", "PROP-01"],
+          "sound": [{"at_seconds": 0, "description": "조용한 작업실 룸톤 시작, 이후 연속 유지"}]
+        },
+        {
+          "id": "C1-S2",
+          "start_seconds": 3,
+          "end_seconds": 6,
+          "duration_seconds": 3,
+          "transition_in": "hard_cut",
+          "shot_size": "미디엄",
+          "framing": "같은 축에서 여성 상반신과 책상 앞부분. 카메라 정면이 관객에게 보이고 왼손은 바닥을 받친다.",
+          "action": "여성이 왼손으로 카메라를 천천히 들어 책상 바로 위에 받친다.",
+          "action_duration_seconds": 3,
+          "appearance_lock_refs": ["CHAR-01", "PROD-01", "PROD-02", "PROD-03", "PROD-04", "SET-01", "PROP-01"],
+          "sound": [{"at_seconds": 3, "description": "룸톤 위로 셔츠 소매와 손이 제품에 닿는 작은 마찰음"}]
+        },
+        {
+          "id": "C1-S3",
+          "start_seconds": 6,
+          "end_seconds": 10,
+          "duration_seconds": 4,
+          "transition_in": "hard_cut",
+          "shot_size": "디테일 / 익스트림 클로즈업",
+          "framing": "손에 들린 제품 정면의 흰색 점 세 개가 선명하게 보이도록 확대. 민트색 면과 검은 렌즈 가장자리를 함께 담아 로고 위치를 확인한다.",
+          "camera_movement": "클립 시각 6~10초의 같은 샷 안에서 촬영 카메라 위치와 시선 축을 고정하고, 시트 항목 PROD-04의 흰색 점 세 개 로고를 중심으로 4초 동안 일정한 속도의 느린 광학 줌인을 한다. 화면 속 로고 크기는 시작 대비 끝에서 약 1.15배로 서서히 커진다. 로고 전체와 주변 민트색 면, 검은 렌즈 가장자리를 끝까지 프레임에 남기며 초점을 유지한다. 제품 자체의 크기·형태·부품 위치는 바꾸지 않으며 디지털 줌은 사용하지 않는다.",
+          "action": "왼손에 받친 카메라가 아주 조금 기울며 로고 위로 부드러운 빛이 지나간다.",
+          "action_duration_seconds": 4,
+          "detail_sheet_refs": ["PROD-04", "PROD-01"],
+          "detail_match": "흰색 점 세 개의 개수·가로 간격과 렌즈 오른쪽 위 위치를 시트 항목 PROD-04에 맞춘다.",
+          "appearance_lock_refs": ["CHAR-01", "PROD-01", "PROD-04", "SET-01"],
+          "sound": [{"at_seconds": 6, "description": "룸톤과 미세한 손 마찰음, 강조 효과음 없음"}]
+        }
+      ]
+    },
+    {
+      "id": "CLIP-02",
+      "title": "손끝으로 확인하는 디자인",
+      "duration_seconds": 10,
+      "location_ref": "SET-01",
+      "cast_refs": ["CHAR-01"],
+      "hard_cut_times_seconds": [0, 2, 4, 7],
+      "shots": [
+        {
+          "id": "C2-S1",
+          "start_seconds": 0,
+          "end_seconds": 2,
+          "duration_seconds": 2,
+          "transition_in": "hard_cut",
+          "shot_size": "와이드",
+          "framing": "클립 1과 같은 작업실 축. 여성은 카메라를 같은 위치에 받쳐 들고 정물은 뒤쪽 중앙에 그대로 놓여 있다.",
+          "action": "여성이 손에 든 카메라 윗면으로 시선을 내린다.",
+          "action_duration_seconds": 2,
+          "appearance_lock_refs": ["CHAR-01", "PROD-01", "PROD-02", "PROD-03", "PROD-04", "SET-01", "PROP-01"],
+          "sound": [{"at_seconds": 0, "description": "이전 클립의 작업실 룸톤 연속"}]
+        },
+        {
+          "id": "C2-S2",
+          "start_seconds": 2,
+          "end_seconds": 4,
+          "duration_seconds": 2,
+          "transition_in": "hard_cut",
+          "shot_size": "미디엄",
+          "framing": "상반신과 양손. 왼손이 제품을 받치고 제품 윗면은 약간 카메라 쪽으로 기울어져 두 조작부가 보인다.",
+          "action": "여성이 오른손을 은색 다이얼 쪽으로 가져간다.",
+          "action_duration_seconds": 2,
+          "appearance_lock_refs": ["CHAR-01", "PROD-01", "PROD-02", "PROD-03", "PROD-04", "SET-01", "PROP-01"],
+          "sound": [{"at_seconds": 2, "description": "룸톤과 옷소매가 움직이는 작은 소리"}]
+        },
+        {
+          "id": "C2-S3",
+          "start_seconds": 4,
+          "end_seconds": 7,
+          "duration_seconds": 3,
+          "transition_in": "hard_cut",
+          "shot_size": "디테일 / 매크로",
+          "framing": "제품 윗면 왼쪽 은색 다이얼을 사선에서 확대. 오른손 엄지와 검지가 가장자리 일부만 잡아 앞쪽 톱니와 민트색 본체 경계가 보인다.",
+          "action": "오른손 손끝으로 은색 톱니 다이얼을 천천히 조금 돌린다.",
+          "action_duration_seconds": 3,
+          "detail_sheet_refs": ["PROD-03", "PROD-01"],
+          "detail_match": "은색, 일정한 톱니 간격, 윗면 왼쪽 부착 위치를 시트 항목 PROD-03에 맞춘다.",
+          "appearance_lock_refs": ["CHAR-01", "PROD-01", "PROD-03", "SET-01"],
+          "sound": [{"at_seconds": 4, "description": "룸톤 위에 회전과 맞물리는 작고 건조한 다이얼 클릭음"}]
+        },
+        {
+          "id": "C2-S4",
+          "start_seconds": 7,
+          "end_seconds": 10,
+          "duration_seconds": 3,
+          "transition_in": "hard_cut",
+          "shot_size": "디테일 / 매크로",
+          "framing": "제품 윗면 오른쪽 주황색 버튼 확대. 버튼 전체와 민트색 테두리가 보이고 오른손 검지는 버튼 옆에 있다.",
+          "action": "오른손 검지가 주황색 셔터 버튼 옆 가장자리를 천천히 따라가며 확인한다. 버튼은 누르지 않고 종료 때 검지를 뗀다.",
+          "action_duration_seconds": 3,
+          "detail_sheet_refs": ["PROD-02", "PROD-01"],
+          "detail_match": "주황색 원형 버튼의 크기와 윗면 오른쪽 위치를 시트 항목 PROD-02에 맞추고 손끝으로 가리지 않는다.",
+          "appearance_lock_refs": ["CHAR-01", "PROD-01", "PROD-02", "SET-01"],
+          "sound": [{"at_seconds": 7, "description": "룸톤과 손끝의 가벼운 마찰음. 셔터음 없음"}]
+        }
+      ]
+    },
+    {
+      "id": "CLIP-03",
+      "title": "작은 정물을 담는 순간",
+      "duration_seconds": 10,
+      "location_ref": "SET-01",
+      "cast_refs": ["CHAR-01"],
+      "hard_cut_times_seconds": [0, 3, 6],
+      "shots": [
+        {
+          "id": "C3-S1",
+          "start_seconds": 0,
+          "end_seconds": 3,
+          "duration_seconds": 3,
+          "transition_in": "hard_cut",
+          "shot_size": "와이드",
+          "framing": "같은 축의 책상 전경. 카메라를 든 여성과 뒤쪽 중앙의 컵·솔방울을 한 화면에 담아 촬영 방향을 읽게 한다.",
+          "action": "여성이 카메라 렌즈를 책상 뒤쪽의 작은 정물 쪽으로 돌린다.",
+          "action_duration_seconds": 3,
+          "appearance_lock_refs": ["CHAR-01", "PROD-01", "PROD-02", "PROD-03", "PROD-04", "SET-01", "PROP-01"],
+          "sound": [{"at_seconds": 0, "description": "이전 클립의 룸톤 연속, 제품을 돌리는 손 마찰음"}]
+        },
+        {
+          "id": "C3-S2",
+          "start_seconds": 3,
+          "end_seconds": 6,
+          "duration_seconds": 3,
+          "transition_in": "hard_cut",
+          "shot_size": "미디엄",
+          "framing": "같은 축의 여성 상반신과 양손. 카메라는 가슴 아래 높이, 렌즈는 정물을 향한다. 컵과 솔방울을 프레임 뒤쪽에 함께 둔다.",
+          "action": "여성이 양손으로 카메라를 천천히 들어 정물을 향한 촬영 구도를 잡는다.",
+          "action_duration_seconds": 3,
+          "appearance_lock_refs": ["CHAR-01", "PROD-01", "PROD-02", "PROD-03", "PROD-04", "SET-01", "PROP-01"],
+          "sound": [{"at_seconds": 3, "description": "룸톤과 옷소매 소리, 아직 셔터음 없음"}]
+        },
+        {
+          "id": "C3-S3",
+          "start_seconds": 6,
+          "end_seconds": 10,
+          "duration_seconds": 4,
+          "transition_in": "hard_cut",
+          "shot_size": "디테일 / 익스트림 클로즈업",
+          "framing": "같은 축에서 카메라 윗면의 주황색 셔터 버튼과 오른손 검지를 확대. 은색 다이얼 일부를 함께 보여 상대 위치를 확인한다. 정물은 뒤에 흐릿하게 남는다.",
+          "action": "오른손 검지가 셔터에 천천히 내려와 한 번 누르고 다시 올라가는 동작을 4초에 걸쳐 보여준다. 접점은 클립 시각 8초이며 카메라 방향은 정물에 고정한다.",
+          "action_duration_seconds": 4,
+          "detail_sheet_refs": ["PROD-02", "PROD-03"],
+          "detail_match": "시트 항목 PROD-02의 같은 주황색 버튼을 실제로 누르는 순간을 보여준다. 제품이 돌아간 각도를 반영해 PROD-03과의 부착 관계를 유지한다.",
+          "appearance_lock_refs": ["CHAR-01", "PROD-01", "PROD-02", "PROD-03", "SET-01", "PROP-01"],
+          "sound": [
+            {"at_seconds": 6, "description": "연속된 작업실 룸톤"},
+            {"at_seconds": 8, "description": "버튼 접점과 정확히 맞물리는 선명하고 짧은 셔터음 한 번"}
+          ],
+          "ending": "10초에서 제품 디테일 화면을 그대로 종료. 추가 장면·사진 결과 화면·자막 없음."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,541 @@
+{
+  "schema_version": 1,
+  "path_base": "session4/ (이 JSON 파일이 있는 디렉터리 기준 상대 경로)",
+  "source_shot_list": "shots.json",
+  "max_references_per_clip": 5,
+  "reference_order": [
+    "person",
+    "product_full",
+    "product_detail",
+    "location",
+    "storyboard"
+  ],
+  "appearance_policy": {
+    "authority": "외형은 sheets 원본에서 크롭한 views의 단독 컷을 기준으로 한다.",
+    "storyboard_scope": "스토리보드는 구도·행동 방향·샷 순서용이다. 얼굴·헤어·칼라 없는 상의·가구·소품·제품의 외형을 복사하지 않는다.",
+    "conflict_resolution": "인물·의상·제품·공간·빛의 외형 충돌은 views를 우선한다. 시간·동작·정물 배치는 shots.json과 character.md·prop.md·location.md의 사양을 적용한다.",
+    "orientation": "제품 좌우는 정면에서 본 기준. 장소 기본 와이드 A의 시선 축과 화면 좌우 유지. 수평 반전 금지.",
+    "still_life": "장소 시트에는 컵·솔방울이 없다. 실제 정물은 shots.json의 PROP-01과 location.md를 따르며 스토리보드의 추가 장식은 가져오지 않는다."
+  },
+  "crop_policy": {
+    "method": "Python Pillow Image.crop; PNG 무손실 저장",
+    "script": "crop_views.py",
+    "coordinate_convention": "원본 픽셀 [left, top, right, bottom); right와 bottom은 미포함",
+    "changes": "크롭만 수행. 리사이즈·색 보정·합성·재생성 없음.",
+    "detail_context": "매크로는 해당 부품 전체를 보존한다. 같은 제품의 주변 몸체나 로고 컷의 렌즈 가장자리는 위치 기준이며 다른 칸의 침범이 아니다."
+  },
+  "excluded_source_panels": [
+    {
+      "source": "sheets/location.png",
+      "panel": "오른쪽 역방향 B",
+      "reason": "원본부터 가까운 왼쪽 선반이 프레임에 잘려 있음. 실제 광고는 기본 와이드 A 축이므로 단독 컷과 클립 참조에서 제외."
+    }
+  ],
+  "originals": [
+    {
+      "path": "sheets/location.png",
+      "sha256_before": "d6aa7a13b032ba22bbd7605f8e43f445421670c6e2b90b2f749706e607d1d7fb",
+      "sha256_after": "d6aa7a13b032ba22bbd7605f8e43f445421670c6e2b90b2f749706e607d1d7fb",
+      "unchanged": true
+    },
+    {
+      "path": "sheets/person.png",
+      "sha256_before": "39cfa1cfec3222ddb1639487cd20329c16448919de0efef4bba1c6c8d4ea5df8",
+      "sha256_after": "39cfa1cfec3222ddb1639487cd20329c16448919de0efef4bba1c6c8d4ea5df8",
+      "unchanged": true
+    },
+    {
+      "path": "sheets/prop.png",
+      "sha256_before": "ab2a9ece694eae9dbbdd28f0287f0016ceeda53ff4c4b264d61a8b34db724703",
+      "sha256_after": "ab2a9ece694eae9dbbdd28f0287f0016ceeda53ff4c4b264d61a8b34db724703",
+      "unchanged": true
+    },
+    {
+      "path": "storyboards/clip1.png",
+      "sha256_before": "868847be7bb612bf31055d6e38eaa1f8fb24a95d2521fcb160387619cb1dd82c",
+      "sha256_after": "868847be7bb612bf31055d6e38eaa1f8fb24a95d2521fcb160387619cb1dd82c",
+      "unchanged": true
+    },
+    {
+      "path": "storyboards/clip2.png",
+      "sha256_before": "56e9f8861179d2f0e0d4528e2d8f7d2a0902791d00d4692a44fa6059dfc84836",
+      "sha256_after": "56e9f8861179d2f0e0d4528e2d8f7d2a0902791d00d4692a44fa6059dfc84836",
+      "unchanged": true
+    },
+    {
+      "path": "storyboards/clip3.png",
+      "sha256_before": "bbdb95285e5975fe11b4ed526b2dbe5effae6f5428c012445dca21bf07c76263",
+      "sha256_after": "bbdb95285e5975fe11b4ed526b2dbe5effae6f5428c012445dca21bf07c76263",
+      "unchanged": true
+    }
+  ],
+  "assets": {
+    "person_front": {
+      "path": "views/person_front.png",
+      "role": "person",
+      "item_ids": [
+        "CHAR-01"
+      ],
+      "source": "sheets/person.png",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "crop_box_px": [
+        3,
+        0,
+        625,
+        590
+      ],
+      "size_px": [
+        622,
+        590
+      ],
+      "sha256": "3311592d9e19881cfb734877e5424e0bcad541206c93dcc2f55130ffd81ee979",
+      "note": "정면 전신. 머리·양손·신발 전체 포함.",
+      "pixel_match_to_source_crop": true,
+      "visual_review": {
+        "status": "passed",
+        "method": "저장된 PNG 파일을 view_image로 개별 열어 직접 육안 확인",
+        "date": "2026-10-29",
+        "neighbor_panel_or_gutter_present": false,
+        "featured_subject_unintentionally_cut": false,
+        "finding": "정면 전신. 머리·양손·신발 전체 포함."
+      }
+    },
+    "person_profile": {
+      "path": "views/person_profile.png",
+      "role": "person",
+      "item_ids": [
+        "CHAR-01"
+      ],
+      "source": "sheets/person.png",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "crop_box_px": [
+        631,
+        0,
+        1254,
+        590
+      ],
+      "size_px": [
+        623,
+        590
+      ],
+      "sha256": "0adfa1a3126288dbf22f9b98edda54956698d331f39fb56d970bff0fd77f72fe",
+      "note": "화면 왼쪽을 보는 측면 전신. 머리·손·신발 포함.",
+      "pixel_match_to_source_crop": true,
+      "visual_review": {
+        "status": "passed",
+        "method": "저장된 PNG 파일을 view_image로 개별 열어 직접 육안 확인",
+        "date": "2026-10-29",
+        "neighbor_panel_or_gutter_present": false,
+        "featured_subject_unintentionally_cut": false,
+        "finding": "화면 왼쪽을 보는 측면 전신. 머리·손·신발 포함."
+      }
+    },
+    "person_back": {
+      "path": "views/person_back.png",
+      "role": "person",
+      "item_ids": [
+        "CHAR-01"
+      ],
+      "source": "sheets/person.png",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "crop_box_px": [
+        3,
+        597,
+        625,
+        1254
+      ],
+      "size_px": [
+        622,
+        657
+      ],
+      "sha256": "d0cb9121753ee2ffe0a02b48a3b3fd3cb4bf3ac30cfd3e3d71c1e1dbaebcc302",
+      "note": "후면 전신. 머리·손·신발 포함.",
+      "pixel_match_to_source_crop": true,
+      "visual_review": {
+        "status": "passed",
+        "method": "저장된 PNG 파일을 view_image로 개별 열어 직접 육안 확인",
+        "date": "2026-10-29",
+        "neighbor_panel_or_gutter_present": false,
+        "featured_subject_unintentionally_cut": false,
+        "finding": "후면 전신. 머리·손·신발 포함."
+      }
+    },
+    "person_face": {
+      "path": "views/person_face.png",
+      "role": "person",
+      "item_ids": [
+        "CHAR-01"
+      ],
+      "source": "sheets/person.png",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "crop_box_px": [
+        631,
+        597,
+        1254,
+        1254
+      ],
+      "size_px": [
+        623,
+        657
+      ],
+      "sha256": "07fc33db2f007da3f3f22d0087c2a22f7d7f81c05a69b9bf4425039be226ddb6",
+      "note": "원본의 얼굴·어깨 클로즈업. 머리와 얼굴 전체 포함; 어깨 아래는 원래 프레이밍.",
+      "pixel_match_to_source_crop": true,
+      "visual_review": {
+        "status": "passed",
+        "method": "저장된 PNG 파일을 view_image로 개별 열어 직접 육안 확인",
+        "date": "2026-10-29",
+        "neighbor_panel_or_gutter_present": false,
+        "featured_subject_unintentionally_cut": false,
+        "finding": "원본의 얼굴·어깨 클로즈업. 머리와 얼굴 전체 포함; 어깨 아래는 원래 프레이밍."
+      }
+    },
+    "product_full": {
+      "path": "views/product_full.png",
+      "role": "product_full",
+      "item_ids": [
+        "PROD-01",
+        "PROD-02",
+        "PROD-03",
+        "PROD-04"
+      ],
+      "source": "sheets/prop.png",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "crop_box_px": [
+        0,
+        0,
+        622,
+        621
+      ],
+      "size_px": [
+        622,
+        621
+      ],
+      "sha256": "9b05a8f0f7e41684aefdcb55c3c0a8415ef9d8a72eb0bf5df7b515899af6fe23",
+      "note": "제품 전체 3/4. 본체·렌즈·다이얼·셔터·점 세 개 로고 전체 포함.",
+      "pixel_match_to_source_crop": true,
+      "visual_review": {
+        "status": "passed",
+        "method": "저장된 PNG 파일을 view_image로 개별 열어 직접 육안 확인",
+        "date": "2026-10-29",
+        "neighbor_panel_or_gutter_present": false,
+        "featured_subject_unintentionally_cut": false,
+        "finding": "제품 전체 3/4. 본체·렌즈·다이얼·셔터·점 세 개 로고 전체 포함."
+      }
+    },
+    "product_detail_logo": {
+      "path": "views/product_detail_logo.png",
+      "role": "product_detail",
+      "item_ids": [
+        "PROD-04"
+      ],
+      "source": "sheets/prop.png",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "crop_box_px": [
+        632,
+        0,
+        1254,
+        622
+      ],
+      "size_px": [
+        622,
+        622
+      ],
+      "sha256": "1035a5bf9b2fb1849f44e5781406d67058391f86aeff2dad5b8ae5f67df4e8c3",
+      "note": "로고 점 세 개 전체와 주변 민트색 면. 왼쪽 아래 렌즈 일부는 같은 제품의 위치 기준.",
+      "pixel_match_to_source_crop": true,
+      "visual_review": {
+        "status": "passed",
+        "method": "저장된 PNG 파일을 view_image로 개별 열어 직접 육안 확인",
+        "date": "2026-10-29",
+        "neighbor_panel_or_gutter_present": false,
+        "featured_subject_unintentionally_cut": false,
+        "finding": "로고 점 세 개 전체와 주변 민트색 면. 왼쪽 아래 렌즈 일부는 같은 제품의 위치 기준."
+      }
+    },
+    "product_detail_dial": {
+      "path": "views/product_detail_dial.png",
+      "role": "product_detail",
+      "item_ids": [
+        "PROD-03"
+      ],
+      "source": "sheets/prop.png",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "crop_box_px": [
+        0,
+        630,
+        623,
+        1020
+      ],
+      "size_px": [
+        623,
+        390
+      ],
+      "sha256": "93e9d2a73d74b2a8da46825ae1ea7d89e5153a927111465e679a4cb159994b32",
+      "note": "은색 다이얼 전체·톱니·몸체 접합부. 하단 렌즈 조각이 들어오지 않도록 제한.",
+      "pixel_match_to_source_crop": true,
+      "visual_review": {
+        "status": "passed",
+        "method": "저장된 PNG 파일을 view_image로 개별 열어 직접 육안 확인",
+        "date": "2026-10-29",
+        "neighbor_panel_or_gutter_present": false,
+        "featured_subject_unintentionally_cut": false,
+        "finding": "은색 다이얼 전체·톱니·몸체 접합부. 하단 렌즈 조각이 들어오지 않도록 제한."
+      }
+    },
+    "product_detail_shutter": {
+      "path": "views/product_detail_shutter.png",
+      "role": "product_detail",
+      "item_ids": [
+        "PROD-02"
+      ],
+      "source": "sheets/prop.png",
+      "source_size_px": [
+        1254,
+        1254
+      ],
+      "crop_box_px": [
+        632,
+        630,
+        1254,
+        1100
+      ],
+      "size_px": [
+        622,
+        470
+      ],
+      "sha256": "6e621391d221b7898adbadfe4a414889a95f4d4c892fdfae70ad4136512d8f00",
+      "note": "주황색 셔터 전체와 민트색 테두리. 원본 하단의 부분 로고는 제외. 버튼은 누르기 전 상태.",
+      "pixel_match_to_source_crop": true,
+      "visual_review": {
+        "status": "passed",
+        "method": "저장된 PNG 파일을 view_image로 개별 열어 직접 육안 확인",
+        "date": "2026-10-29",
+        "neighbor_panel_or_gutter_present": false,
+        "featured_subject_unintentionally_cut": false,
+        "finding": "주황색 셔터 전체와 민트색 테두리. 원본 하단의 부분 로고는 제외. 버튼은 누르기 전 상태."
+      }
+    },
+    "location_main": {
+      "path": "views/location_main.png",
+      "role": "location",
+      "item_ids": [
+        "SET-01"
+      ],
+      "source": "sheets/location.png",
+      "source_size_px": [
+        2055,
+        765
+      ],
+      "crop_box_px": [
+        0,
+        0,
+        1017,
+        765
+      ],
+      "size_px": [
+        1017,
+        765
+      ],
+      "sha256": "0bbd88b664c26d420ba12393e8f78ce78a348eedc1b5a19705cb39f63349d3fe",
+      "note": "기본 와이드 A. 왼쪽 창·중앙 책상·앞 왼쪽 의자·뒤 오른쪽 선반과 왼쪽 자연광. 책상은 비어 있음.",
+      "pixel_match_to_source_crop": true,
+      "visual_review": {
+        "status": "passed",
+        "method": "저장된 PNG 파일을 view_image로 개별 열어 직접 육안 확인",
+        "date": "2026-10-29",
+        "neighbor_panel_or_gutter_present": false,
+        "featured_subject_unintentionally_cut": false,
+        "finding": "기본 와이드 A. 왼쪽 창·중앙 책상·앞 왼쪽 의자·뒤 오른쪽 선반과 왼쪽 자연광. 책상은 비어 있음."
+      }
+    }
+  },
+  "clips": [
+    {
+      "id": "CLIP-01",
+      "title": "책상 위의 발견",
+      "shot_order": [
+        "C1-S1",
+        "C1-S2",
+        "C1-S3"
+      ],
+      "reference_count": 5,
+      "references": [
+        {
+          "order": 1,
+          "role": "person",
+          "asset_id": "person_face",
+          "path": "views/person_face.png",
+          "use": "같은 원본 sheets/person.png의 얼굴·단발·남색 셔츠 칼라는 이 얼굴 컷을 기준으로 한다. 체형·의상 전체·맨손은 character.md의 CHAR-01 사양을 유지한다."
+        },
+        {
+          "order": 2,
+          "role": "product_full",
+          "asset_id": "product_full",
+          "path": "views/product_full.png",
+          "use": "제품 전체 형태·색·재질 및 렌즈·로고·두 조작부의 상대 위치 기준"
+        },
+        {
+          "order": 3,
+          "role": "product_detail",
+          "asset_id": "product_detail_logo",
+          "path": "views/product_detail_logo.png",
+          "use": "로고 점 세 개 전체와 주변 민트색 면. 왼쪽 아래 렌즈 일부는 같은 제품의 위치 기준."
+        },
+        {
+          "order": 4,
+          "role": "location",
+          "asset_id": "location_main",
+          "path": "views/location_main.png",
+          "use": "장소·가구·창·빛의 외형과 기본 시선 축 기준; 원본처럼 빈 책상"
+        },
+        {
+          "order": 5,
+          "role": "storyboard",
+          "path": "storyboards/clip1.png",
+          "use": "해당 클립의 샷 구도·행동 방향·좌→우 순서만 참조. 외형 기준으로 사용하지 않음"
+        }
+      ]
+    },
+    {
+      "id": "CLIP-02",
+      "title": "손끝으로 확인하는 디자인",
+      "shot_order": [
+        "C2-S1",
+        "C2-S2",
+        "C2-S3",
+        "C2-S4"
+      ],
+      "reference_count": 5,
+      "references": [
+        {
+          "order": 1,
+          "role": "person",
+          "asset_id": "person_face",
+          "path": "views/person_face.png",
+          "use": "같은 원본 sheets/person.png의 얼굴·단발·남색 셔츠 칼라는 이 얼굴 컷을 기준으로 한다. 체형·의상 전체·맨손은 character.md의 CHAR-01 사양을 유지한다."
+        },
+        {
+          "order": 2,
+          "role": "product_full",
+          "asset_id": "product_full",
+          "path": "views/product_full.png",
+          "use": "제품 전체 형태·색·재질 및 렌즈·로고·두 조작부의 상대 위치 기준"
+        },
+        {
+          "order": 3,
+          "role": "product_detail",
+          "asset_id": "product_detail_dial",
+          "path": "views/product_detail_dial.png",
+          "use": "은색 다이얼 전체·톱니·몸체 접합부. 하단 렌즈 조각이 들어오지 않도록 제한."
+        },
+        {
+          "order": 4,
+          "role": "location",
+          "asset_id": "location_main",
+          "path": "views/location_main.png",
+          "use": "장소·가구·창·빛의 외형과 기본 시선 축 기준; 원본처럼 빈 책상"
+        },
+        {
+          "order": 5,
+          "role": "storyboard",
+          "path": "storyboards/clip2.png",
+          "use": "해당 클립의 샷 구도·행동 방향·좌→우 순서만 참조. 외형 기준으로 사용하지 않음"
+        }
+      ],
+      "detail_selection_note": "5장 제한으로 디테일 슬롯은 C2-S3의 다이얼을 우선한다. C2-S4 셔터의 원형·주황색·위치는 2번 제품 전체 컷을 기준으로 한다. views/product_detail_shutter.png도 별도로 보관하지만 이 클립의 참조 목록에는 추가하지 않는다."
+    },
+    {
+      "id": "CLIP-03",
+      "title": "작은 정물을 담는 순간",
+      "shot_order": [
+        "C3-S1",
+        "C3-S2",
+        "C3-S3"
+      ],
+      "reference_count": 5,
+      "references": [
+        {
+          "order": 1,
+          "role": "person",
+          "asset_id": "person_face",
+          "path": "views/person_face.png",
+          "use": "같은 원본 sheets/person.png의 얼굴·단발·남색 셔츠 칼라는 이 얼굴 컷을 기준으로 한다. 체형·의상 전체·맨손은 character.md의 CHAR-01 사양을 유지한다."
+        },
+        {
+          "order": 2,
+          "role": "product_full",
+          "asset_id": "product_full",
+          "path": "views/product_full.png",
+          "use": "제품 전체 형태·색·재질 및 렌즈·로고·두 조작부의 상대 위치 기준"
+        },
+        {
+          "order": 3,
+          "role": "product_detail",
+          "asset_id": "product_detail_shutter",
+          "path": "views/product_detail_shutter.png",
+          "use": "주황색 셔터 전체와 민트색 테두리. 원본 하단의 부분 로고는 제외. 버튼은 누르기 전 상태."
+        },
+        {
+          "order": 4,
+          "role": "location",
+          "asset_id": "location_main",
+          "path": "views/location_main.png",
+          "use": "장소·가구·창·빛의 외형과 기본 시선 축 기준; 원본처럼 빈 책상"
+        },
+        {
+          "order": 5,
+          "role": "storyboard",
+          "path": "storyboards/clip3.png",
+          "use": "해당 클립의 샷 구도·행동 방향·좌→우 순서만 참조. 외형 기준으로 사용하지 않음"
+        }
+      ],
+      "detail_selection_note": "셔터 단독 컷은 누르기 전 외형 기준. 8초 한 번 누름·복귀는 shots.json의 동작 규칙을 따른다. 회전 후 셔터와 다이얼의 부착 관계는 2번 제품 전체 컷 기준."
+    }
+  ],
+  "verification": {
+    "originals_unchanged": true,
+    "saved_pngs_match_source_crop_pixels": true,
+    "visual_review": {
+      "status": "passed",
+      "date": "2026-10-29",
+      "saved_views_opened_individually": 9,
+      "original_sheets_opened": 3,
+      "storyboards_opened": 3,
+      "neighbor_panel_or_gutter_present": false,
+      "featured_subject_unintentionally_cut": false,
+      "notes": [
+        "전신 3컷은 머리·손·신발 전체를 포함한다. 얼굴 컷은 원래 얼굴·어깨 구도를 보존한다.",
+        "제품 전체 컷은 본체·렌즈·조작부 모두 여백 안에 있다.",
+        "로고 점 세 개, 은색 다이얼, 주황색 셔터 각각 전체가 보인다.",
+        "로고 컷의 부분 렌즈와 디테일 컷의 몸체 경계는 동일 제품의 위치 기준이다.",
+        "기본 장소 컷은 창·책상·의자·선반을 포함하며 다른 칸이 없다. 원본부터 선반이 잘린 역방향 B는 제외했다.",
+        "각 클립 참조는 지정 순서대로 5장이다. 스토리보드는 구도·행동 방향·순서에만 적용하고 외형은 views를 우선한다."
+      ]
+    },
+    "regeneration_performed": false,
+    "upload_performed": false,
+    "video_generation_performed": false
+  }
+}

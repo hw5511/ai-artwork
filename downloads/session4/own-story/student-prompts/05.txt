@@ -1,0 +1,2 @@
+session4/shots.json을 읽고 Codex 내장 이미지 생성으로 클립별 스토리보드 이미지 3장을 만들어줘.
+각 이미지에 해당 클립의 샷을 왼쪽부터 순서대로 배치해. 구도·행동·디테일 확대가 구별되게 하고 session4/storyboards/clip1.png~clip3.png에 저장해줘. 나중에 영상의 구도·순서 참조로 쓸 거야. Comfy와 유료 API는 쓰지 말고 결과를 열어 확인해줘.

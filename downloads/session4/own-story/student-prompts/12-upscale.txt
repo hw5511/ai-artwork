@@ -1,0 +1,2 @@
+Comfy 스킬을 읽고 Comfy CLI 갤러리 utility_seedvr2_3b_int8_upscale_video로 클립 3개의 업스케일을 준비해줘. session4/clips/clip1-720.mp4~clip3-720.mp4가 입력, 2배 확대, split_latent 켜기, 원본 소리 유지. API 파일은 session4/cloud/upscale1.api.json~upscale3.api.json에 저장해줘.
+지금은 스키마 검증과 --where cloud --print-prompt까지만. 파일이 아직 없으면 입력 경로를 남기고 실행은 멈춰줘. 로그인·계정 조회·업로드·제출·크레딧 사용은 하지 마. GPU 초×약 0.2732크레딧의 추가 비용과 총액 미확정을 표시하고, 예산 확인 뒤 업로드·생성·회수 순서를 알려줘.

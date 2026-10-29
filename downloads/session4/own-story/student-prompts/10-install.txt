@@ -1,0 +1,2 @@
+MiniMax 공식 H3 스킬을 이 작업 폴더에 설치해줘. 다음 명령을 실행하고 h3-prompt-writing의 실제 경로를 알려줘. 전역 설정은 바꾸지 마.
+npx --yes skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill '*' --agent codex --yes
