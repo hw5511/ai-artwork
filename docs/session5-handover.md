@@ -1,9 +1,41 @@
-# 5회차 새 흐름 완료 (2026-11-03 03:30)
+# 5회차 인수인계 (2026-11-03 새 흐름 완료 시점)
 
-아래 인수인계는 옛 상태다. 새 흐름(Remotion 스킬, 소스 가공, 시각 자료, earshot, Remotion 편집)은 리허설과 슬라이드까지 끝났다. 결과와 실측은 docs/session5-review.md를 본다. 최종 영상: 리허설 폴더 work/session5/final/my-short.mp4와 downloads/session5/demo/my-short.mp4.
+수업: 2026-11-03 화 18:00 KST. 워크트리 `C:/wi/projects/lectures/ai-artwork-s5`, 브랜치 `session5-2026-11`, 마지막 커밋 6ff7f3c. push, merge, 배포 금지(CEO가 「배포해」라고 해야 함).
 
----
+## 끝난 것
+- 새 흐름 전체를 Codex CLI 리허설로 실행: 업스케일(허브 로컬) -> 03 Remotion 스킬 설치 -> 04 소스 가공 -> 05 시각 자료 -> 06 earshot 설치 -> 07 소리 고르기 -> 08 Remotion 편집 -> 09 최종 확인. 프롬프트 `RC/prompts/`, 슬라이드용 사본 `RC/_pm/student-prompts/`, 시간 `RC/logs/timings.jsonl`. RC = `C:/Users/woohee/AppData/Local/Temp/artwork-s5/rehearsal-class`
+- 최종 영상 `RC/work/session5/final/my-short.mp4` = `downloads/session5/demo/my-short.mp4`: 30.000초, 1080x1920, 24fps, -14.04 LUFS, -2.1 dBTP. 2초 격자를 원본 크기로 직접 확인함
+- 슬라이드 파트 1~9, `step05.json`, `web/scripts/migration-manifest.json`, 다운로드 폴더, `docs/session5-review.md` 갱신. `node web/scripts/check-content.mjs` 오류 0, `cd web && npm run build` 통과
+- 첫 시도 결함 3개를 프롬프트에 반영해 단계 재실행: 04(제품 샷 단색 띠 -> 훑기), 08(이미지 미사용, 음량 -29 LUFS)
+- 옛 흐름(나레이션, 소리 믹스, 자막, 세로 개별 프롬프트)은 `RC/history/old-flow-1102/`에 보관. 레포에는 없음
 
+## CEO가 볼 문제: 화면 속 음악 크레딧
+- 영상 마지막 6초(24~30초) 아래쪽에 크레딧 원문이 어두운 상자로 길게 뜬다(AcidJazz, Kevin MacLeod, CC BY 3.0 문구 4줄). 제품 아래쪽을 일부 가린다
+- 문구 출처: `RC/work/session5/remotion/public/sound/credits.md`. 화면 코드: `RC/work/session5/remotion/src/MusicCredit.tsx`
+- 지시하는 프롬프트: `RC/prompts/08-edit.txt`의 「음악 크레딧은 영상의 마지막 부분에 작은 글자로 넣어줘. credits.md의 문구 그대로.」 슬라이드는 파트 9의 첫 슬라이드 `art-5-9-1`(복사 항목 「Remotion 편집」). 같은 문구를 설명 글에도 넣으라는 지시는 `09-final.txt`(슬라이드 `art-5-9-4`)
+- CC BY라 크레딧은 필수다. 줄이려면 08 프롬프트를 「제목, 작성자, 라이선스 이름만 한 줄」로 바꾸고 설명 글에 전체 문구를 두면 된다. 바꾸면 08, 09를 다시 돌리고 슬라이드의 복사 문구, 다운로드 `student-prompts/08-edit.txt`, migration manifest 해시를 같이 바꾼다(patch_c, patch_d 다시 실행 후 manifest 재계산)
+- 음악을 CC0 곡으로 바꾸면 크레딧이 필요 없다. 이 경우 07 프롬프트를 고친다
+
+## 남은 일 / 미확인
+- 사람이 소리를 들은 적 없음. 음악(AcidJazz)이 영상 분위기에 맞는지 사람 판단 전. 안 맞으면 07, 08, 09 재실행
+- 02d(Comfy Cloud 업스케일 제출)는 돌리지 않음. 슬라이드에 미리허설로 표시. Cloud 시간·비용 미측정
+- 슬라이드 12~16, 18, 21, 22, 24, 25, 27, 28, 30, 32, 33번은 화면으로 안 봤다(20, 26, 29, 31, 모바일 27은 봄). 한국어 문구 korean-natural-prose 전체 검사 안 함
+- S01, S07 확대 샷 흐림, S03 머리 윗부분 원본 잘림, S08 작은 선글라스 모양 변형 가능
+- 수강생 PC 동시 earshot 모델 다운로드(1.126GB) 강의장 네트워크 미시험
+- 08, 09의 재실행 시간(8.4분, 3.1분)은 앞 실행 결과 위에서 돌린 값. 처음부터 하면 08은 약 14분
+
+## 슬라이드 상태 (파트 -> 파일)
+1 오늘 만들 것 art-5-1(2장) / 2 재료 확인 art-5-2(1) / 3 컷 편집 art-5-3(4) / 4 업스케일 art-5-4(5) / 5 Remotion 스킬 art-5-5(1) / 6 영상 소스 가공 art-5-6(2) / 7 시각 자료 art-5-7(1) / 8 earshot 소리 art-5-8(3) / 9 Remotion 편집과 완성 art-5-9(5). 모두 `web/src/content/parts/`. 시간표 18:05, 18:15, 18:35, 18:55, 19:00, 19:15, 19:25, 19:40, 19:55
+
+## 슬라이드를 다시 만드는 도구 (RC/_pm)
+`patch_a.py`(파트 2, 3), `patch_b.py`(파트 4), `patch_c.py`(파트 5~8), `patch_d.py`(파트 1, 3 메모, 파트 9), `facts.json`(실측 값), `slidelib.py`. 프롬프트는 `_pm/student-prompts/*.txt`에서 읽는다. 프롬프트를 바꾸면 `RC/prompts`에서 복사 -> patch 4개 실행 -> `downloads/session5/student-prompts` 복사 -> manifest copyHashes 재계산 -> check-content, build
+
+## 주의
+- 이 PC는 램이 부족하면 하네스가 백그라운드 작업을 끈다. 실행 전 여유 램 10GB 이상 확인(ComfyUI가 40GB 이상 쓸 때가 있음)
+- Codex가 Remotion Studio를 켜 둔 채 끝나면 codex.exe가 남는다. 내가 만든 PID만 종료할 것
+- 계정은 `scripts/codex_accounts.py --pick`. run.py는 gangnam 고정
+
+## 옛 인수인계 (참고)
 # 5회차 수업 클립 교체 인수인계 (2026-11-02 20:06 KST)
 
 새 PM은 이 파일 다음에 `docs/session5-review.md`를 읽는다. 수업: 2026-11-03 화 18:00 KST.
