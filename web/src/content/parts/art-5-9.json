@@ -26,12 +26,12 @@
         {
           "n": 3,
           "head": "크레딧",
-          "body": "음악 크레딧을 영상 마지막 6초에 표기 · 설명 글에도 같은 문구"
+          "body": "영상 마지막 6초에 제목·작성자·라이선스 한 줄만 · 전체 문구는 설명 글"
         },
         {
           "n": 4,
           "head": "Codex 실측",
-          "body": "8.4분 · 첫 실행 14.2분"
+          "body": "11.8분 · 첫 실행 14.2분"
         }
       ],
       "action": {
@@ -39,7 +39,7 @@
         "items": [
           {
             "kind": "copy",
-            "value": "[목표] Remotion으로 영상 편집 전체를 해서 session5/final/my-short.mp4를 만들어줘. 세로 9:16, 1080×1920, 30초, 소리 포함이야.\n[입력] session5/remotion(shots.json, public의 영상 소스, assets 이미지, sound의 음악과 효과음과 credits.md), session5/edit/edit.json\n[규칙]\n- remotion-best-practices 스킬을 읽고 그대로 따라줘.\n- 샷 순서와 길이는 edit.json과 같게 하고, 샷마다 shots.json의 핵심이 화면 가운데 오게 해줘.\n- session5/remotion/public/assets의 시각 자료 이미지는 asset-manifest.json의 권장 위치에 모두 써줘. 영상 속 인물이 하지 않은 말이나 없는 제품 성능을 글자로 넣지 마.\n- 배경음악과 효과음은 화면의 동작에 맞춰 넣고, 원본 클립의 소리도 낮게 살려줘. 음악이 소리보다 크지 않게 해줘.\n- 음악 크레딧은 영상의 마지막 부분에 작은 글자로 넣어줘. credits.md의 문구 그대로.\n[마무리] 끝나면 Remotion Studio 같은 서버는 꺼줘.\n[확인] 렌더하고 ffprobe로 길이, 해상도, fps, 소리가 있는지 재줘. 2초 간격 격자를 session5/final/review에 저장해서 직접 열어 보고, 잘린 핵심이나 겹친 글자가 있으면 고쳐서 다시 렌더해줘.\n[출력] 측정값과 샷별로 쓴 소스와 소리 표를 보여줘.",
+            "value": "[목표] Remotion으로 영상 편집 전체를 해서 session5/final/my-short.mp4를 만들어줘. 세로 9:16, 1080×1920, 30초, 소리 포함이야.\n[입력] session5/remotion(shots.json, public의 영상 소스, assets 이미지, sound의 음악과 효과음과 credits.md), session5/edit/edit.json\n[규칙]\n- remotion-best-practices 스킬을 읽고 그대로 따라줘.\n- 샷 순서와 길이는 edit.json과 같게 하고, 샷마다 shots.json의 핵심이 화면 가운데 오게 해줘.\n- session5/remotion/public/assets의 시각 자료 이미지는 asset-manifest.json의 권장 위치에 모두 써줘. 영상 속 인물이 하지 않은 말이나 없는 제품 성능을 글자로 넣지 마.\n- 배경음악과 효과음은 화면의 동작에 맞춰 넣고, 원본 클립의 소리도 낮게 살려줘. 음악은 효과음과 원본 소리보다 크지 않게 해줘. 완성본 전체 음량은 약 −14 LUFS로, 트루피크는 −1.5 dBTP 이하로 맞춰줘.\n- 음악 크레딧은 영상의 마지막 6초 동안 화면 아래쪽에 작은 글자 한 줄로만 넣어줘. credits.md에서 곡 제목, 작성자, 라이선스 이름만 가져와(긴 문구·주소는 넣지 마). 어두운 상자는 쓰지 말고, 제품과 인물을 가리지 않는 위치와 크기로 해줘. 전체 크레딧은 영상 설명에 넣을 거야.\n[마무리] 끝나면 Remotion Studio 같은 서버는 꺼줘.\n[확인] 렌더하고 ffprobe로 길이, 해상도, fps, 소리가 있는지 재줘. 2초 간격 격자를 session5/final/review에 저장해서 직접 열어 보고, 잘린 핵심이나 겹친 글자가 있으면 고쳐서 다시 렌더해줘. 마지막 6초 프레임은 크레딧 줄이 제품을 가리지 않는지도 봐줘.\n[출력] 측정값과 샷별로 쓴 소스와 소리 표를 보여줘.",
             "desc": "Remotion 편집"
           },
           {
@@ -110,7 +110,7 @@
         {
           "n": 1,
           "head": "격자",
-          "body": "2초 간격 15장 · 크레딧 글자와 제품이 겹치는 곳 없는지 확인"
+          "body": "2초 간격 15장 · 크레딧 한 줄이 제품·인물과 겹치는 곳 없는지 확인"
         },
         {
           "n": 2,
@@ -159,7 +159,7 @@
         {
           "cells": [
             "음량",
-            "−14.04 LUFS · −2.08 dBTP"
+            "−14.13 LUFS · −2.02 dBTP"
           ]
         },
         {
@@ -188,7 +188,7 @@
         {
           "n": 4,
           "head": "Codex 실측",
-          "body": "3.1분"
+          "body": "2.5분"
         }
       ],
       "action": {

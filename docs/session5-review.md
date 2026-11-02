@@ -16,10 +16,10 @@
 | 영상 소스 가공 | 19:00-19:15 | 프로젝트, 샷별 소스, 세로 구도 | 12.0 (첫 시도 9.1) |
 | 시각 자료 | 19:15-19:25 | 이미지 도구로 보강 컷 | 5.1 |
 | earshot 소리 | 19:25-19:40 | 설치, 소리 고르기 | 5.2, 9.2 |
-| Remotion 편집 | 19:40-19:55 | 전체 편집, 최종 확인 | 8.4 (첫 실행 14.2), 3.1 |
+| Remotion 편집 | 19:40-19:55 | 전체 편집, 최종 확인 | 11.8 (첫 실행 14.2), 2.5 |
 | 업로드 | 19:55-20:00 | 업로드 월 | |
 
-Codex 실행 합계 약 66분(3,980초). 업스케일 로컬 실행 약 27분과 재실행 시간은 제외. 시간은 `%TEMP%/artwork-s5/rehearsal-class/logs/timings.jsonl`
+Codex 실행 합계 약 69분. 업스케일 로컬 실행 약 27분과 재실행 시간은 제외. 시간은 `%TEMP%/artwork-s5/rehearsal-class/logs/timings.jsonl`
 
 ## 실제 리허설
 
@@ -51,11 +51,11 @@ Codex 실행 합계 약 66분(3,980초). 업스케일 로컬 실행 약 27분과
   - 안경 접촉음, SpliceSound, Freesound: CC0. 크레딧 불필요
   - 옷 마찰음, trettfilms, Freesound: CC0. 크레딧 불필요
 - 효과음 2개는 Freesound HQ MP3 미리듣기에서 추출했다. 원본 무손실이 아니다
-- 크레딧: 영상 마지막 6초와 `final/description.txt`에 같은 원문
+- 크레딧: 영상 마지막 6초에는 작은 글자 한 줄(곡 제목, 작성자, 라이선스 이름)만, 전체 원문은 `final/description.txt`. 처음 판은 4줄 원문을 어두운 상자로 띄워 제품 아래쪽을 가렸다(`history/credit-box-1103/`)
 
 ## 최종 데모
 
-`downloads/session5/demo/my-short.mp4`: 30.000초, 1080×1920, 24fps, 720프레임, H.264, AAC 48kHz 스테레오, 27.8MB. ffmpeg 측정 −14.04 LUFS(ebur128 재측정 −13.8), 트루피크 −2.1 dBTP. 효과음 3곳은 화면 동작 큐와 1프레임 이내(earshot 타임라인). 2초 간격 격자를 원본 크기로 직접 확인
+`downloads/session5/demo/my-short.mp4`: 30.000초, 1080×1920, 24fps, 720프레임, H.264, AAC 48kHz 스테레오, 27.9MB. ffmpeg 측정 −14.13 LUFS(earshot −14.0), 트루피크 −2.02 dBTP. 효과음 3곳은 화면 동작 큐와 1프레임 이내(earshot 타임라인). 2초 간격 격자를 원본 크기로 직접 확인
 
 ## 아직 확인하지 못한 것
 
