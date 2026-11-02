@@ -1,0 +1,5 @@
+[목표] 영상 편집을 Remotion으로 할 거야. Remotion을 잘 쓰는 법을 담은 스킬 remotion-best-practices를 GitHub에서 찾아서 설치해줘.
+[조건]
+- 공식 Remotion 저장소(remotion-dev/skills)가 맞는지 README와 스킬 폴더를 읽고 확인한 다음 설치해줘.
+- 이 프로젝트에서만 쓰게 .agents/skills 폴더에 넣어줘. 전역에는 설치하지 마.
+[확인] 설치한 폴더, 스킬 이름, 저장소 주소, 라이선스를 알려주고, SKILL.md를 열어서 어떤 규칙이 들어 있는지 세 줄로 요약해줘.

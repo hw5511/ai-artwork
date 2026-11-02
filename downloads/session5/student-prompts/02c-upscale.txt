@@ -1,0 +1,5 @@
+[목표] 편집 순서가 정해졌으니 클립 3개를 SeedVR2로 2배 키울 준비를 하는 것. 아직 제출하지 마.
+[작업]
+1) Comfy 스킬을 읽고 Comfy CLI 갤러리 utility_seedvr2_3b_int8_upscale_video로 API 파일을 session5/cloud/upscale1.api.json~upscale3.api.json에 만들어줘. 2배 확대, split_latent 켜기.
+2) SeedVR2는 앞뒤 프레임을 묶어 처리해서 하드컷 직후 프레임에 앞 장면이 비쳐. 이걸 막으려고 session5/edit/shots.md의 컷마다 앞 샷의 마지막 프레임 8장과 뒤 샷의 첫 프레임 8장을 덧댄 입력 영상을 session5/upscale/clip1-pad.mp4~clip3-pad.mp4로 만들어줘. 화질이 떨어지지 않게 CRF 10으로 저장하고, 덧댄 프레임 위치를 session5/upscale/pad.json에 적어줘.
+[규칙] 스키마 검증과 --where cloud --print-prompt까지만 해. 로그인·계정 조회·업로드·제출·크레딧 사용은 하지 마. GPU 초×약 0.2732크레딧의 추가 비용과 총액 미확정을 표시해줘.

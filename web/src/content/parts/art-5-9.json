@@ -1,0 +1,279 @@
+{
+  "id": "art-5-9",
+  "title": "Remotion 편집과 완성",
+  "summary": "19:40~20:00 · Remotion 편집 · 음량 −14 LUFS · 최종 확인 · AI 표시와 크레딧 · 업로드 월",
+  "slides": [
+    {
+      "id": "art-5-9-1",
+      "title": "완성본",
+      "template": "screen",
+      "screen": {
+        "kind": "video",
+        "src": "/downloads/session5/demo/my-short.mp4",
+        "poster": "/lectures/images/session5/final-poster.jpg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "완성본 사양",
+          "body": "1080×1920 · 30초 · 24fps · H.264 · AAC 48kHz"
+        },
+        {
+          "n": 2,
+          "head": "구성",
+          "body": "샷 9개 · 시각 자료 이미지 2장(S02·S09) · 배경음악 · 효과음 3곳 · 원본 소리"
+        },
+        {
+          "n": 3,
+          "head": "크레딧",
+          "body": "음악 크레딧을 영상 마지막 6초에 표기 · 설명 글에도 같은 문구"
+        },
+        {
+          "n": 4,
+          "head": "Codex 실측",
+          "body": "8.4분 · 첫 실행 14.2분"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] Remotion으로 영상 편집 전체를 해서 session5/final/my-short.mp4를 만들어줘. 세로 9:16, 1080×1920, 30초, 소리 포함이야.\n[입력] session5/remotion(shots.json, public의 영상 소스, assets 이미지, sound의 음악과 효과음과 credits.md), session5/edit/edit.json\n[규칙]\n- remotion-best-practices 스킬을 읽고 그대로 따라줘.\n- 샷 순서와 길이는 edit.json과 같게 하고, 샷마다 shots.json의 핵심이 화면 가운데 오게 해줘.\n- session5/remotion/public/assets의 시각 자료 이미지는 asset-manifest.json의 권장 위치에 모두 써줘. 영상 속 인물이 하지 않은 말이나 없는 제품 성능을 글자로 넣지 마.\n- 배경음악과 효과음은 화면의 동작에 맞춰 넣고, 원본 클립의 소리도 낮게 살려줘. 음악이 소리보다 크지 않게 해줘.\n- 음악 크레딧은 영상의 마지막 부분에 작은 글자로 넣어줘. credits.md의 문구 그대로.\n[마무리] 끝나면 Remotion Studio 같은 서버는 꺼줘.\n[확인] 렌더하고 ffprobe로 길이, 해상도, fps, 소리가 있는지 재줘. 2초 간격 격자를 session5/final/review에 저장해서 직접 열어 보고, 잘린 핵심이나 겹친 글자가 있으면 고쳐서 다시 렌더해줘.\n[출력] 측정값과 샷별로 쓴 소스와 소리 표를 보여줘.",
+            "desc": "Remotion 편집"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session5/demo/my-short.mp4",
+            "text": "리허설 완성본"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-5-9-2",
+      "title": "첫 시도에서 고친 것",
+      "template": "table",
+      "columns": [
+        "증상",
+        "확인한 방법",
+        "프롬프트에 넣은 말"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "시각 자료 2장을 영상에 안 씀",
+            "격자와 렌더 코드 확인",
+            "권장 위치에 모두 써줘"
+          ]
+        },
+        {
+          "cells": [
+            "전체 음량 약 −29 LUFS",
+            "최종 확인 단계 측정",
+            "약 −14 LUFS · −1.5 dBTP 이하"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "첫 실행",
+          "body": "이미지를 만들었지만 편집이 쓰지 않음 · 소리는 −29.09 LUFS"
+        },
+        {
+          "n": 2,
+          "head": "고친 뒤",
+          "body": "이미지 2장 사용 · −14.04 LUFS · 트루피크 −2.08 dBTP"
+        },
+        {
+          "n": 3,
+          "head": "같은 방식",
+          "body": "결함을 찾으면 프롬프트에 규칙 추가 · 같은 단계를 다시 실행"
+        },
+        {
+          "n": 4,
+          "head": "귀로 확인",
+          "body": "리허설 소리는 측정값만 확인 · 사람이 들어 본 확인 아님"
+        }
+      ]
+    },
+    {
+      "id": "art-5-9-3",
+      "title": "2초 간격 격자",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session5/final-grid.jpg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "격자",
+          "body": "2초 간격 15장 · 크레딧 글자와 제품이 겹치는 곳 없는지 확인"
+        },
+        {
+          "n": 2,
+          "head": "이미지 사용",
+          "body": "S02 2.83~3.83초 정면 컷 · S09 28.50~30.00초 사선 컷"
+        },
+        {
+          "n": 3,
+          "head": "원본 한계",
+          "body": "S03 머리 윗부분 잘림 · 업스케일 얼굴은 480 원본과 입 모양이 조금 다름"
+        },
+        {
+          "n": 4,
+          "head": "작은 제품",
+          "body": "와이드 샷 탁자 위 선글라스 모양이 바뀔 수 있음 · 원본과 대조"
+        }
+      ]
+    },
+    {
+      "id": "art-5-9-4",
+      "title": "최종 확인",
+      "template": "table",
+      "columns": [
+        "항목",
+        "리허설 결과"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "길이",
+            "30.000초"
+          ]
+        },
+        {
+          "cells": [
+            "크기",
+            "1080×1920 · 24fps"
+          ]
+        },
+        {
+          "cells": [
+            "코덱",
+            "H.264 · AAC 48kHz 스테레오"
+          ]
+        },
+        {
+          "cells": [
+            "음량",
+            "−14.04 LUFS · −2.08 dBTP"
+          ]
+        },
+        {
+          "cells": [
+            "효과음 타이밍",
+            "3곳 모두 화면 동작과 1프레임 이내"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "earshot 확인",
+          "body": "타임라인으로 효과음과 화면 큐 대조 · 음악 박자 맞춤은 근거 약함"
+        },
+        {
+          "n": 2,
+          "head": "영상 설명",
+          "body": "description.txt · AI 영상 표시 · 음악과 효과음 크레딧 원문"
+        },
+        {
+          "n": 3,
+          "head": "원본 보존",
+          "body": "session4 파일 4개 해시 변경 없음"
+        },
+        {
+          "n": 4,
+          "head": "Codex 실측",
+          "body": "3.1분"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] session5/final/my-short.mp4를 올리기 전에 마지막으로 확인하는 것.\n[확인]\n1) 길이, 해상도, fps, 코덱, 전체 LUFS와 트루피크를 재줘.\n2) earshot으로 소리를 분석하고(타임라인과 요약), 음악과 효과음이 화면 컷과 맞는지 알려줘.\n3) 2초 간격 격자를 session5/final/review에 저장하고 직접 열어 봐줘.\n4) 작업 중 만든 원본이 그대로인지 확인해줘(session4 파일 변경 없음).\n[작성] 영상 설명에 넣을 글을 session5/final/description.txt로 저장해줘. 제목 후보 하나, session5/remotion/public/sound/credits.md의 크레딧 문구 그대로, 영상도 AI로 만들었다는 표시를 넣어줘.\n[출력] 측정값 표와 description.txt 내용을 보여줘.",
+            "desc": "최종 확인"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session5/example/description.txt",
+            "text": "실제 description.txt"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-5-9-5",
+      "title": "6회차로 가져갈 것",
+      "template": "table",
+      "columns": [
+        "파일",
+        "다음 쓰임"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "session5/remotion",
+            "같은 편집 프로젝트 재사용"
+          ]
+        },
+        {
+          "cells": [
+            "src/shots.json",
+            "세로 구도 형식 유지"
+          ]
+        },
+        {
+          "cells": [
+            ".agents/skills",
+            "Remotion · earshot 스킬 재사용"
+          ]
+        },
+        {
+          "cells": [
+            "session5/.venv-earshot",
+            "모델 1.126GB 다시 받지 않기"
+          ]
+        },
+        {
+          "cells": [
+            "public/sound/credits.md",
+            "크레딧 문구 형식"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "작업 폴더 유지",
+          "body": "session5 폴더 삭제 금지"
+        },
+        {
+          "n": 2,
+          "head": "Studio 서버",
+          "body": "편집 중 켠 서버는 끝나면 종료 · 켜 둔 채로 두면 Codex 창이 끝나지 않을 수 있음"
+        },
+        {
+          "n": 3,
+          "head": "업로드 월",
+          "body": "19:55~20:00 · 작품 제목 · 한 줄 소개"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://wall.woohee.me",
+            "text": "수업 업로드 월"
+          }
+        ]
+      }
+    }
+  ]
+}

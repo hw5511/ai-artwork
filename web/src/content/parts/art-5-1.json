@@ -1,7 +1,7 @@
 {
   "id": "art-5-1",
   "title": "오늘 만들 것",
-  "summary": "18:00~18:05 · 클립 3개 → 소리와 자막이 있는 세로 30초",
+  "summary": "18:00~18:05 · 클립 3개 → 소리가 있는 세로 30초",
   "slides": [
     {
       "id": "art-5-1-1",
@@ -16,22 +16,22 @@
         {
           "n": 1,
           "head": "완성본 사양",
-          "body": "1080×1920 · 30초 · 나레이션·효과음·배경음·자막"
+          "body": "1080×1920 · 30초 · 배경음악·효과음·원본 소리 · 음악 크레딧 표기"
         },
         {
           "n": 2,
           "head": "편집 프로그램 없음",
-          "body": "Codex 대화 + ffmpeg"
+          "body": "Codex가 Remotion으로 편집 · 업스케일은 SeedVR2"
         },
         {
           "n": 3,
           "head": "입력",
-          "body": "4회차 클립 3개"
+          "body": "4회차 수업 클립 3개 · 선글라스 광고 · 864×480"
         },
         {
           "n": 4,
           "head": "음악 표기",
-          "body": "Clear Air · Kevin MacLeod · CC BY 4.0"
+          "body": "AcidJazz · Kevin MacLeod · CC BY 3.0"
         }
       ],
       "action": {
@@ -63,7 +63,7 @@
         {
           "cells": [
             "18:05",
-            "재료 확인·설치",
+            "재료 확인",
             "session5/clips.json"
           ]
         },
@@ -76,37 +76,51 @@
         },
         {
           "cells": [
-            "18:40",
-            "세로 9:16",
-            "vertical/vertical.mp4"
+            "18:35",
+            "업스케일",
+            "upscaled/clip1~3.mp4"
+          ]
+        },
+        {
+          "cells": [
+            "18:55",
+            "Remotion 스킬 설치",
+            ".agents/skills/remotion-best-practices"
           ]
         },
         {
           "cells": [
             "19:00",
-            "나레이션",
-            "narration/narration.wav"
+            "영상 소스 가공",
+            "remotion/public/media · src/shots.json"
           ]
         },
         {
           "cells": [
-            "19:20",
-            "효과음·배경음",
-            "sound/with-sound.mp4"
+            "19:15",
+            "시각 자료",
+            "remotion/public/assets"
+          ]
+        },
+        {
+          "cells": [
+            "19:25",
+            "earshot 소리",
+            "remotion/public/sound"
           ]
         },
         {
           "cells": [
             "19:40",
-            "자막·최종 확인",
+            "Remotion 편집",
             "final/my-short.mp4"
           ]
         },
         {
           "cells": [
             "19:55",
-            "업로드 월",
-            "작품 제목·한 줄 소개"
+            "최종 확인 · 업로드 월",
+            "작품 제목 · 한 줄 소개"
           ]
         }
       ],
@@ -119,17 +133,17 @@
         {
           "n": 2,
           "head": "Codex 실측",
-          "body": "Codex 실행 합계 약 56분"
+          "body": "Codex 실행 합계 약 66분 · 업스케일 실행 시간 제외"
         },
         {
           "n": 3,
           "head": "비용",
-          "body": "오늘 유료 호출 없음 · Codex 구독만"
+          "body": "Comfy Cloud 업스케일만 GPU 시간 과금 · 나머지 Codex 구독"
         },
         {
           "n": 4,
-          "head": "편집 파일",
-          "body": "edit.json·crop.json·mix.json이 프로젝트 파일 · 수정 시 해당 파일만 변경"
+          "head": "Codex가 직접",
+          "body": "스킬 설치 · 소스 가공 · 이미지 생성 · 소리 고르기 · 편집"
         }
       ]
     }

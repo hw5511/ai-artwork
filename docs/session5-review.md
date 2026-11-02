@@ -1,75 +1,69 @@
 # 5회차 제작·검증 기록
 
-목적: 4회차 클립 3개를 가진 수강생이 강의장에서 프롬프트를 복사해, 편집 프로그램 없이 소리와 자막이 있는 세로 30초 영상을 완성하는 실습
+목적: 4회차 수업 클립 3개(선글라스 광고)를 가진 수강생이 강의장에서 짧은 프롬프트를 복사해, Codex가 Remotion으로 편집한 소리 있는 세로 30초 영상을 완성하는 실습
 
-일시: 2026-11-03 화 18:00–20:00 KST · 리허설: 2026-11-02
+일시: 2026-11-03 화 18:00-20:00 KST · 리허설: 2026-11-02 밤 ~ 11-03 새벽
 
-CEO 원문: 「나레이션 효과음 자막 배경음 비율조정 화면 컷편집」
+흐름(CEO 2026-11-02 확정): 1) 영상 업스케일 2) Codex가 Remotion best-practices 스킬을 직접 찾아 설치 3) Codex가 필요한 영상 소스를 직접 가공 4) Codex가 이미지 도구로 시각 자료를 만들고 GitHub 스킬 earshot을 직접 설치해 배경음악과 효과음을 고름 5) Codex가 Remotion으로 전체 편집
 
-| 파트 | 시간 | 실습 | Codex 실측 |
+| 파트 | 시간 | 실습 | Codex 실측(분) |
 | --- | --- | --- | --- |
-| 오늘 만들 것 | 18:00–18:05 | 완성 영상·순서 | |
-| 재료 확인 | 18:05–18:15 | 클립·ffmpeg 확인, Supertonic 설치 | 1.9분, 2.8분 |
-| 컷 편집 | 18:15–18:40 | 실제 컷 찾기, 30초 편집본 | 4.1분, 7.9분 |
-| 세로 9:16 | 18:40–19:00 | 샷별 크롭 | 10.5분 |
-| 나레이션 | 19:00–19:20 | 대본, 목소리 샘플, 시간 맞춤 | 1.4분, 1.3분, 4.9분 |
-| 효과음·배경음 | 19:20–19:40 | 소리 찾기, 믹스, 음악 음량 수정 | 5.2분, 6.7분, 1.8분 |
-| 자막 | 19:40–19:50 | 자막 입히기, 소리 수정 후 다시 입히기 | 4.7분, 1.5분 |
-| 완성 확인과 업로드 | 19:50–20:00 | 최종 측정, 설명문, 업로드 월 | 0.9~2.7분 |
+| 오늘 만들 것 | 18:00-18:05 | 완성 영상·순서 | |
+| 재료 확인 | 18:05-18:15 | 클립·ffmpeg 확인 | 2.2 |
+| 컷 편집 | 18:15-18:35 | 실제 컷 찾기, 30초 편집본 | 5.5, 6.9 |
+| 업스케일 | 18:35-18:55 | 준비, 마무리 | 3.3, 4.3 (SeedVR2 실행은 강사 PC 로컬, 클립당 약 9분) |
+| Remotion 스킬 | 18:55-19:00 | 찾아서 설치 | 1.1 |
+| 영상 소스 가공 | 19:00-19:15 | 프로젝트, 샷별 소스, 세로 구도 | 12.0 (첫 시도 9.1) |
+| 시각 자료 | 19:15-19:25 | 이미지 도구로 보강 컷 | 5.1 |
+| earshot 소리 | 19:25-19:40 | 설치, 소리 고르기 | 5.2, 9.2 |
+| Remotion 편집 | 19:40-19:55 | 전체 편집, 최종 확인 | 8.4 (첫 실행 14.2), 3.1 |
+| 업로드 | 19:55-20:00 | 업로드 월 | |
 
-최종 프롬프트를 수강생 순서대로 실행한 Codex 시간 합계 약 56분(3,341초). 첫 시도와 재실행 시간 제외
+Codex 실행 합계 약 66분(3,980초). 업스케일 로컬 실행 약 27분과 재실행 시간은 제외. 시간은 `%TEMP%/artwork-s5/rehearsal-class/logs/timings.jsonl`
 
 ## 실제 리허설
 
-- Codex CLI 0.160.0, `gpt-6.1-sol`, reasoning high, 모든 권한. 계정 gangnam의 CODEX_HOME을 그대로 사용. 전역 AGENTS.md 없음, 소유자 설정 변경 없음
-- 빈 폴더에 4회차 리허설 클립 3개, shots.json, script.md, rules.md만 넣고 시작
-- 프롬프트마다 새 `codex exec` 실행. 앞 대화 문맥 없이 파일만 읽고 동작 확인
-- 증거 위치: `%TEMP%/artwork-s5/rehearsal/`의 `prompts/`, `logs/`, `work/`, `history/`. 수정 프롬프트는 `side-fixes/`, `side-subs/`, 설치 시험은 `side-install/`
-- 입력 클립: 허브 #2492 / #2437 / #2438. 각 10.833초, 1280×720, 24fps, AAC 32kHz 스테레오
+- Codex CLI, `gpt-6.1-sol`, reasoning high, 모든 권한. 계정 gangnam. 프롬프트마다 새 `codex exec`, 앞 대화 없이 파일만 읽고 동작
+- 증거 위치: `%TEMP%/artwork-s5/rehearsal-class/`의 `prompts/`, `logs/`, `work/`, `history/`. 첫 시도는 `history/04-sources-first-try/`, `history/08-edit-first-try/`, `history/08-edit-second-try/`
 - 수강생 프롬프트 원문: `downloads/session5/student-prompts/`
+- 입력 클립: 4회차 수업 클립 3개, 864×480, 24fps, 243프레임
+- 02d(Comfy Cloud 업스케일 제출)는 돌리지 않았다. 미리허설이다. Cloud 시간과 비용은 측정하지 않았다
+- 업스케일은 render-hub #5498, #5500, #5501 (SeedVR2 2배, 컷마다 앞뒤 프레임 8장 덧댐). 컷 뒤 프레임 잔상 없음을 원본 크기로 확인
 
 ## 리허설에서 고친 것
 
-- 세로 첫 시도: 6샷 중 5샷이 흐린 배경 + 중앙 띠로 나옴. 원인은 프롬프트의 「주인공이 다 들어가게」와 흐린 배경 허용. 「핵심 하나만, 흐린 배경 금지」로 고쳐 6샷 모두 크롭. 첫 시도는 `history/vertical-blur-first-try/`에 보존하고 슬라이드에 비교로 수록
-- 믹스 첫 시도: 측정 결과 새소리가 음악보다 10~13dB, 바람이 약 15dB 낮아 효과음이 묻힘. 프롬프트에 효과음 조건을 넣고 음악을 낮춤
-- 믹스 둘째 시도: 음악이 문장 사이 −41.7dBFS로 거의 안 들림. mix.json 음악 +10dB로 −31.5dBFS. 측정값이 통과해도 귀로 판단해야 한다는 사례로 수록
-- 자막 첫 시도: 6샷 중 4샷에서 위치가 이동해 시선이 튐. 한 곳 고정, 64px → 72px로 수정
-- 수정 프롬프트 f5(글자 키우고 100px 위로)는 첫 판의 위쪽 자막에서는 잘림 때문에 멈춰서 질문. 고정 위치 판에서 다시 실행해 통과. 위로 올린 판은 핵심에 더 가까워 최종본으로 채택하지 않음
+- 영상 소스 가공 첫 시도: 제품 샷 S02·S06·S09가 위아래 단색 띠로 나옴. 프롬프트에 「가까이 잡아 한쪽 끝에서 다른 쪽 끝으로 훑어줘」 추가 후 재실행. 첫 판은 `history/04-sources-first-try/`
+- 편집 첫 시도: 시각 자료 2장을 영상에 쓰지 않았다. 프롬프트에 「asset-manifest.json의 권장 위치에 모두 써줘」 추가
+- 편집 둘째 시도: 전체 음량 −29.09 LUFS(최종 확인 단계에서 측정). 프롬프트에 「약 −14 LUFS, 트루피크 −1.5 dBTP 이하」 추가 후 −14.04 LUFS, −2.08 dBTP
+- Remotion Studio를 켜 둔 채 Codex가 끝나 프로세스가 남는 일이 두 번 있었다. 프롬프트에 서버 종료 문장을 넣었고 슬라이드에 표시
 
-## 소리 소스 판단
+## 스킬 확인
 
-TTS (같은 세 문장, CPU, faster-whisper small 받아쓰기 기준 오류율)
+- Remotion best-practices: 저장소 remotion-dev/skills, 스킬 버전 4.0.540, 파일 147개 일치. 스킬 저장소에 LICENSE 파일 없음. Remotion 본체 라이선스(github.com/remotion-dev/remotion LICENSE.md): 개인, 직원 3명 이하 영리 조직, 비영리, 평가용은 무료이고 그 이상의 영리 조직은 회사 라이선스
+- earshot: Leonxlnx/earshot, 작성자 Leon Lin, 코드 MIT, 버전 0.4.0 커밋 591fa3e. 모델 CLAP Apache-2.0, AST BSD-3-Clause(Codex가 모델 페이지에서 확인). 모델 1.126GB, 다운로드 75.2초. CPU만 사용
 
-- Supertonic 3 채택: 1.7%, 무료, 로컬 ONNX, 모델 403.5MB, 첫 설치 때만 인터넷. 코드 MIT, 모델 OpenRAIL-M. 「Licensor claims no rights in the Output」, 기계 생성 표시 조건. 음성 AI 표시를 description.txt에 넣음
-- edge-tts: 0~3.3%, 무료, 온라인. Microsoft의 공식 사용권 문서 없음. 수업 시연 대체 경로로만 기재
-- gTTS 3.3%, Windows Heami 5%, Piper 한국어 28%(비상업 라이선스). MeloTTS는 Windows 스마트 앱 컨트롤이 torch DLL을 막아 실행 불가
-- Typecast: 공개 가격표만 확인. 호출 없음
-- agy 청취(모델 의견, 블라인드 2회, 20점 만점): Supertonic M1 19/19, edge-tts InJoon 17/18, Supertonic F1 17/17, SunHi 17/17, gTTS 10/16, Heami 12/12
+## 소리 소스와 상업 이용
 
-효과음·음악
-
-- Mixkit 효과음: 로그인 없이 WAV 다운로드, 표기 불필요. 파일 재배포 금지라 이 레포에 WAV를 넣지 않음
-- Incompetech(Kevin MacLeod) 음악: CC BY 4.0, 크레딧 필수. 최종곡 Clear Air
-- 대체: Openverse CC0(미리듣기 음질), Mixkit 음악. 제외: Pixabay(스크립트 차단), YouTube 오디오 보관함(로그인), BBC(상업 금지), Suno·Udio 무료(비상업)
-- 라이선스 인용과 URL: `%TEMP%/artwork-s5/tts-test/results.json`, `sfx-music-test/results.json`
-
-H3 원본 소리: 클립마다 AAC 소리 있음. 평균 −46.8 / −48.7 / −27.4dB. 받아쓰기·VAD에서 음성 없음. clip3의 걷는 발소리로 20초에서 약 16.5dB 점프. 현장음을 샷별로 맞춰 낮게 까는 방식으로 처리
-
-## Comfy Cloud
-
-오프라인 확인만 수행. 사용 크레딧 0. Chatterbox Multilingual의 언어 목록에 Korean(ko), Qwen3-TTS에 Korean 확인. 그래프 9개 오프라인 검증. 유료 시험 예상 비용은 ElevenLabs v4 turbo 나레이션 2.4크레딧, ACE-Step 30초 음악 2.7~24.6크레딧(GPU 시간 추정), ElevenLabs 효과음 2초 1.0크레딧, 합계 6.1~28.0크레딧(40~185원). 오픈 모델 GPU 시간은 실측 없음
+- earshot은 소리를 듣고 판단하는 도구다. 내장 효과음 252개는 코드로 만든 것이고 저장소 README에 산출물 사용 조건 별도 표기는 없다. 이번 영상에는 쓰지 않았다
+- earshot의 real-sound 스킬 허용 목록: CC0, 퍼블릭 도메인, CC BY 2.0-4.0, Mixkit 무료 라이선스, Pixabay. 금지: NC, ND, SA, 개인용, 맞춤 약관, 확인 안 된 것
+- 이번 영상에 쓴 소리와 각 출처 페이지에서 Codex가 확인한 조건
+  - AcidJazz, Kevin MacLeod, Free Music Archive: CC BY 3.0. 상업 이용 가능, 크레딧 필수
+  - 안경 접촉음, SpliceSound, Freesound: CC0. 크레딧 불필요
+  - 옷 마찰음, trettfilms, Freesound: CC0. 크레딧 불필요
+- 효과음 2개는 Freesound HQ MP3 미리듣기에서 추출했다. 원본 무손실이 아니다
+- 크레딧: 영상 마지막 6초와 `final/description.txt`에 같은 원문
 
 ## 최종 데모
 
-`downloads/session5/demo/my-short.mp4`: 30.000초, 1080×1920, 24fps, 720프레임, H.264, AAC 48kHz 스테레오, 30.7MB. 전체 음량 loudnorm −14.00 LUFS, ebur128 −13.7 LUFS, 트루피크 −1.4 dBTP
-
-음성 받아쓰기(믹스 첫 판 기준): 여섯 문장 모두 공백 제외 오류 0%. 음악을 낮춘 뒤 다시 올린 최종 판의 받아쓰기는 재실행하지 않음
+`downloads/session5/demo/my-short.mp4`: 30.000초, 1080×1920, 24fps, 720프레임, H.264, AAC 48kHz 스테레오, 27.8MB. ffmpeg 측정 −14.04 LUFS(ebur128 재측정 −13.8), 트루피크 −2.1 dBTP. 효과음 3곳은 화면 동작 큐와 1프레임 이내(earshot 타임라인). 2초 간격 격자를 원본 크기로 직접 확인
 
 ## 아직 확인하지 못한 것
 
-- 사람이 들어 본 적 없음. 목소리 자연스러움, 음악 크기, 효과음 크기, 0.36초의 현장음 짧은 소리는 사람 귀 확인 필요
-- 480p 클립의 세로 화질은 시험하지 않음. 720p 기준 2.727배 확대
-- C1-S1 3.13~3.36초에 자막이 입에 닿음. 타이트한 샷의 한계로 두고 슬라이드에 표시
-- 수강생 PC 여러 대의 동시 모델 다운로드, 강의장 네트워크 미시험
-- Codex 데스크톱 앱 화면 캡처 없음. 슬라이드의 화면은 실제 결과물이고 CLI로 실행함
-- Windows SAPI 약관 미확인, Typecast 음질 미측정
+- 사람이 들어 본 적 없음. 음악 크기, 효과음 크기, 음악과 영상의 어울림은 측정값과 earshot 분석만 있다
+- 음악 AcidJazz는 Codex가 earshot 분석으로 고른 곡이고, 영상 분위기와의 어울림은 사람 판단 전이다
+- 업스케일 얼굴은 480 원본과 입 모양이 조금 다르고, S01·S07 확대 샷은 흐릿하다. S03 머리 윗부분은 원본부터 잘림
+- 와이드 샷 탁자 위 작은 선글라스(S08)는 모양이 하트처럼 바뀔 수 있다
+- 수강생 PC 여러 대의 동시 모델 다운로드(earshot 1.126GB), 강의장 네트워크 미시험
+- Codex 데스크톱 앱 화면 캡처 없음. 리허설은 CLI로 실행
+- 02d Comfy Cloud 업스케일 미실행, Cloud 시간·비용 미측정
+- 한국어 슬라이드 문구의 korean-natural-prose 전체 검사는 돌리지 않았다

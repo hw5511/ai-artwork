@@ -1,0 +1,11 @@
+[목표] Remotion으로 영상 편집 전체를 해서 session5/final/my-short.mp4를 만들어줘. 세로 9:16, 1080×1920, 30초, 소리 포함이야.
+[입력] session5/remotion(shots.json, public의 영상 소스, assets 이미지, sound의 음악과 효과음과 credits.md), session5/edit/edit.json
+[규칙]
+- remotion-best-practices 스킬을 읽고 그대로 따라줘.
+- 샷 순서와 길이는 edit.json과 같게 하고, 샷마다 shots.json의 핵심이 화면 가운데 오게 해줘.
+- session5/remotion/public/assets의 시각 자료 이미지는 asset-manifest.json의 권장 위치에 모두 써줘. 영상 속 인물이 하지 않은 말이나 없는 제품 성능을 글자로 넣지 마.
+- 배경음악과 효과음은 화면의 동작에 맞춰 넣고, 원본 클립의 소리도 낮게 살려줘. 음악이 소리보다 크지 않게 해줘.
+- 음악 크레딧은 영상의 마지막 부분에 작은 글자로 넣어줘. credits.md의 문구 그대로.
+[마무리] 끝나면 Remotion Studio 같은 서버는 꺼줘.
+[확인] 렌더하고 ffprobe로 길이, 해상도, fps, 소리가 있는지 재줘. 2초 간격 격자를 session5/final/review에 저장해서 직접 열어 보고, 잘린 핵심이나 겹친 글자가 있으면 고쳐서 다시 렌더해줘.
+[출력] 측정값과 샷별로 쓴 소스와 소리 표를 보여줘.

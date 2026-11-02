@@ -1,140 +1,46 @@
 {
   "id": "art-5-6",
-  "title": "효과음·배경음",
-  "summary": "19:20~19:40 · 원본 소리 판단 · 소스와 라이선스 · 음량 맞추기",
+  "title": "영상 소스 가공",
+  "summary": "19:00~19:15 · Remotion 프로젝트 · 샷별 소스 · 세로 구도",
   "slides": [
     {
       "id": "art-5-6-1",
-      "title": "H3 클립의 원본 소리",
-      "template": "table",
-      "columns": [
-        "클립",
-        "평균 음량",
-        "들리는 소리",
-        "처리"
-      ],
-      "rows": [
-        {
-          "cells": [
-            "clip1",
-            "−46.8dB",
-            "바닥 소리·발 끌림",
-            "작게 유지"
-          ]
-        },
-        {
-          "cells": [
-            "clip2",
-            "−48.7dB",
-            "새소리·물기 소리",
-            "작게 유지"
-          ]
-        },
-        {
-          "cells": [
-            "clip3",
-            "−27.4dB",
-            "걷는 발소리 18회",
-            "크게 낮춤"
-          ]
+      "title": "첫 시도와 고친 프롬프트",
+      "template": "compare",
+      "left": {
+        "label": "첫 시도",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session5/vertical-first-try.jpg"
         }
-      ],
+      },
+      "right": {
+        "label": "고친 뒤",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session5/vertical-grid.jpg"
+        }
+      },
       "notes": [
         {
           "n": 1,
-          "head": "원본 소리 측정",
-          "body": "사람 목소리·개 짖음 없음 · 받아쓰기 음성 없음"
+          "head": "첫 시도",
+          "body": "제품 샷 S02·S06·S09가 위아래 단색 띠로 나옴"
         },
         {
           "n": 2,
-          "head": "20초의 음량 점프",
-          "body": "20초 컷에서 1초 평균 약 16.5dB 상승"
+          "head": "원인",
+          "body": "“흐린 배경으로 채우지 마”만 있고 색 띠는 막지 않음"
         },
         {
           "n": 3,
-          "head": "유지 또는 교체",
-          "body": "현장음으로 낮게 깔기 · 제거 시 나레이션과 새 소리만"
-        },
-        {
-          "n": 4,
-          "head": "판단 기준",
-          "body": "클립마다 다름 · 직접 듣고 결정"
-        }
-      ]
-    },
-    {
-      "id": "art-5-6-2",
-      "title": "소리 소스와 라이선스",
-      "template": "table",
-      "columns": [
-        "소스",
-        "용도",
-        "조건"
-      ],
-      "rows": [
-        {
-          "cells": [
-            "Mixkit 효과음",
-            "효과음",
-            "무료 · 표기 불필요 · 파일 재배포 금지"
-          ]
-        },
-        {
-          "cells": [
-            "Incompetech",
-            "배경음악",
-            "CC BY 4.0 · 크레딧 필수"
-          ]
-        },
-        {
-          "cells": [
-            "Openverse CC0",
-            "효과음 대체",
-            "표기 불필요 · 미리듣기 음질"
-          ]
-        },
-        {
-          "cells": [
-            "Mixkit 음악",
-            "음악 대체",
-            "무료 · 표기 불필요"
-          ]
-        },
-        {
-          "cells": [
-            "Suno·Udio 무료",
-            "제외",
-            "비상업 전용"
-          ]
-        },
-        {
-          "cells": [
-            "YouTube 오디오 보관함",
-            "제외",
-            "로그인 필요"
-          ]
-        }
-      ],
-      "notes": [
-        {
-          "n": 1,
-          "head": "Codex로 받는 조건",
-          "body": "로그인 없음 · curl 다운로드 가능"
-        },
-        {
-          "n": 2,
-          "head": "음악 크레딧",
-          "body": "영상 설명에 표기 문구 그대로"
-        },
-        {
-          "n": 3,
-          "head": "credits.md",
-          "body": "파일별 제목·주소·라이선스 기록"
+          "head": "바꾼 말",
+          "body": "“제품이 세로 창보다 넓은 샷은 가까이 잡아 한쪽 끝에서 다른 쪽 끝으로 훑어줘”"
         },
         {
           "n": 4,
           "head": "Codex 실측",
-          "body": "5.2분 · 효과음 3개 · 음악 후보 3곡"
+          "body": "고친 판 12.0분 · 첫 판 9.1분"
         }
       ],
       "action": {
@@ -142,206 +48,108 @@
         "items": [
           {
             "kind": "copy",
-            "value": "[역할] 너는 숏폼 사운드 디자이너야.\n[목표] 화면에 맞는 효과음과 배경음악 후보를 찾아 내려받는 것. 아직 영상에 넣지 마.\n[입력] session5/edit/edit.json, session5/narration/lines-final.json\n[규칙]\n- 샷별로 어떤 소리가 필요한지 먼저 표로 정해줘. 효과음은 모두 합쳐 4개까지만. 샷을 바꾸는 전환음 하나는 넣어도 돼.\n- 효과음은 Mixkit의 Sound Effects Free License 파일만 써줘. 목록은 https://mixkit.co/free-sound-effects/ 이고 파일 주소는 https://assets.mixkit.co/active_storage/sfx/번호/번호.wav 형식이야.\n- 배경음악은 가사 없는 곡으로 Incompetech의 Kevin MacLeod 곡만 써줘. 곡 목록은 https://incompetech.com/music/royalty-free/pieces.json 이야. 분위기에 맞는 후보 3곡을 내려받아줘.\n- 다른 사이트는 쓰지 마. 로그인이 필요하면 멈춰줘.\n- 파일은 session5/sound/files에 저장하고, 파일마다 제목, 작성자, 주소, 라이선스를 session5/sound/credits.md에 적어줘. 음악은 Incompetech FAQ의 표기 형식 그대로 크레딧 문구도 적어줘.\n[출력] 시각, 소리, 파일, 고른 이유 표를 보여주고 멈춰. 내가 들어 보고 음악을 고를 거야.",
-            "desc": "소리 찾기"
-          },
-          {
-            "kind": "link",
-            "href": "https://mixkit.co/license/#sfxFree",
-            "text": "Mixkit 라이선스"
-          },
-          {
-            "kind": "link",
-            "href": "https://incompetech.com/music/royalty-free/faq.html",
-            "text": "Incompetech FAQ"
+            "value": "[목표] Remotion으로 편집할 수 있게 영상 소스를 준비하는 것. 최종은 세로 9:16, 1080×1920, 30초 영상이야.\n[입력] session5/upscaled/clip1.mp4~clip3.mp4(업스케일한 클립), session5/edit/edit.json과 shots.md(샷 9개와 순서)\n[작업]\n1) remotion-best-practices 스킬을 먼저 읽고, session5/remotion 폴더에 Remotion 프로젝트를 만들어줘. 렌더가 되는지 한 프레임으로 먼저 확인해줘.\n2) Remotion에서 바로 쓸 수 있게 클립을 가공해줘. 샷 경계가 프레임 단위로 정확해야 하고, 원본 소리는 샷마다 따로 쓸 수 있어야 해.\n3) 세로로 바꿀 때 샷마다 보여줄 핵심 하나(얼굴, 제품, 손)와 위치를 정해서 session5/remotion/src/shots.json에 저장해줘. 인물이 둘이면 두 사람이 각각 한 번 이상 나오게 해줘. 핵심이 작은 와이드 샷은 더 가까이 잡아줘. 제품이 세로 창보다 넓은 샷은 위아래를 색 띠나 흐린 배경으로 채우지 말고, 가까이 잡아서 한쪽 끝에서 다른 쪽 끝으로 천천히 훑어줘.\n[확인] 샷마다 세로로 자른 대표 프레임을 한 장의 격자로 저장하고 직접 열어서 핵심이 잘렸는지 봐줘. 잘렸으면 shots.json만 고쳐줘.\n[마무리] 끝나면 Remotion Studio 같은 서버는 꺼줘.\n[출력] 만든 파일과 샷별 핵심 표를 보여줘.",
+            "desc": "영상 소스 가공"
           }
         ]
       }
     },
     {
-      "id": "art-5-6-3",
-      "title": "소리 배치",
+      "id": "art-5-6-2",
+      "title": "샷별 핵심과 구도",
       "template": "table",
       "columns": [
-        "구간",
-        "소리",
-        "파일"
+        "샷",
+        "핵심",
+        "세로 구도"
       ],
       "rows": [
         {
           "cells": [
-            "0~9.8초",
-            "작은 새소리",
-            "Little birds singing"
+            "S01",
+            "검은 옷 인물 얼굴",
+            "왼쪽 확대 · 추적"
           ]
         },
         {
           "cells": [
-            "9.8~19.4초",
-            "나뭇잎 바람",
-            "Breeze through the trees"
+            "S02",
+            "제품",
+            "왼쪽 끝 → 오른쪽 끝 팬"
           ]
         },
         {
           "cells": [
-            "19.4~25초",
-            "작은 새소리",
-            "같은 파일 재사용"
+            "S03",
+            "흰 셔츠 인물 얼굴",
+            "정면 고정"
           ]
         },
         {
           "cells": [
-            "25~30초",
-            "돌길 발걸음",
-            "Mixkit 1269"
+            "S04",
+            "착용하는 손",
+            "집기 → 착용 추적 · 확대"
           ]
         },
         {
           "cells": [
-            "전체",
-            "배경음악",
-            "Clear Air"
+            "S05",
+            "흰 셔츠 인물 얼굴",
+            "수평 추적"
+          ]
+        },
+        {
+          "cells": [
+            "S06",
+            "착용 제품",
+            "왼쪽 렌즈 → 오른쪽 힌지 팬"
+          ]
+        },
+        {
+          "cells": [
+            "S07",
+            "검은 옷 인물 얼굴",
+            "기립 · 보행 추적 · 확대"
+          ]
+        },
+        {
+          "cells": [
+            "S08",
+            "테이블의 작은 제품",
+            "중앙 확대"
+          ]
+        },
+        {
+          "cells": [
+            "S09",
+            "엔딩 제품",
+            "왼쪽 끝 → 오른쪽 끝 팬"
           ]
         }
       ],
       "notes": [
         {
           "n": 1,
-          "head": "효과음 수",
-          "body": "3개 · 재사용"
+          "head": "가공 결과",
+          "body": "샷 영상 9개 · 샷 원본 소리 9개 · 전환용 소리 9개 · remotion/public/media"
         },
         {
           "n": 2,
-          "head": "음악 고르기",
-          "body": "후보 3곡을 직접 듣고 선택"
+          "head": "구도 파일",
+          "body": "src/shots.json · 구도를 바꿀 때 이 파일만 수정"
         },
         {
           "n": 3,
-          "head": "전환음",
-          "body": "없어도 진행 가능"
+          "head": "두 인물",
+          "body": "검은 옷 S01·S07 · 흰 셔츠 S03·S05"
         },
         {
           "n": 4,
-          "head": "겹침 확인",
-          "body": "효과음과 원본 발소리 함께 듣기"
+          "head": "원본 한계",
+          "body": "S03 머리 윗부분은 원본부터 잘림 · 고치지 않음"
         }
       ]
-    },
-    {
-      "id": "art-5-6-4",
-      "title": "소리 넣기 전후",
-      "template": "compare",
-      "left": {
-        "label": "편집본 소리",
-        "screen": {
-          "kind": "shot",
-          "src": "/lectures/images/session5/waveform-before.png"
-        }
-      },
-      "right": {
-        "label": "완성본 소리",
-        "screen": {
-          "kind": "shot",
-          "src": "/lectures/images/session5/waveform-after.png"
-        }
-      },
-      "notes": [
-        {
-          "n": 1,
-          "head": "전",
-          "body": "20초 이후에만 소리가 큼 · 앞부분 거의 무음"
-        },
-        {
-          "n": 2,
-          "head": "후",
-          "body": "나레이션 구간마다 파형이 고름"
-        },
-        {
-          "n": 3,
-          "head": "최종 음량",
-          "body": "약 −14 LUFS · 트루피크 −1.4 dBTP"
-        },
-        {
-          "n": 4,
-          "head": "음악 낮추기(덕킹)",
-          "body": "문장 동안 음악 −8dB · 간격 1.5초 미만은 낮은 채 유지"
-        }
-      ],
-      "action": {
-        "label": "실습",
-        "items": [
-          {
-            "kind": "copy",
-            "value": "[역할] 너는 숏폼 사운드 믹서야.\n[목표] 현장음, 나레이션, 효과음, 배경음악을 합쳐 세로 영상의 소리를 완성하는 것.\n[조건] 배경음악은 session5/sound/credits.md의 후보 1번.\n[입력] session5/vertical/vertical.mp4, session5/narration/narration.wav, session5/narration/lines-final.json, session5/sound/files, session5/edit/edit.json\n[규칙]\n- 현장음은 vertical.mp4의 소리야. 샷마다 음량 차이가 크면 샷별로 맞춰서 조용한 바닥소리로 깔아줘. 튀는 소리는 눌러주고, 사람 목소리처럼 들리면 알려줘.\n- 나레이션이 가장 잘 들려야 해. 배경음악은 평소에도 나레이션보다 16dB 이상 낮게 두고, 문장이 나오는 동안 8dB 더 내렸다가 문장 사이에서 부드럽게 돌아오게 해줘. 문장 사이가 1.5초보다 짧으면 음악을 올리지 말고 낮은 채로 이어줘.\n- 효과음은 문장 사이에서 들려야 해. 새소리와 바람이 배경음악에 묻히지 않을 만큼 음량을 정해줘.\n- 배경음악은 처음 1초 페이드 인, 마지막 2초 페이드 아웃.\n- 완성 음량은 -14 LUFS, 트루피크 -1 dB 이하.\n- 층별 음량과 시각을 session5/sound/mix.json에 저장하고, 이 파일을 읽는 session5/sound/build_mix.py를 만들어 실행해줘. 나중에 음량을 바꿀 때 이 파일만 고칠 거야.\n- 영상은 다시 인코딩하지 말고 소리만 교체해서 session5/sound/with-sound.mp4로 저장해줘.\n[확인] 샷별 음량 전후 표, 전체 LUFS와 트루피크, 문장 구간과 문장 사이에서 나레이션·음악·효과음이 각각 몇 dB인지 재서 보여줘.",
-            "desc": "소리 합치기"
-          },
-          {
-            "kind": "download",
-            "href": "/downloads/session5/example/mix.json",
-            "text": "실제 mix.json"
-          }
-        ]
-      }
-    },
-    {
-      "id": "art-5-6-fix",
-      "title": "소리 고치기",
-      "template": "table",
-      "columns": [
-        "리허설 결과",
-        "고친 내용"
-      ],
-      "rows": [
-        {
-          "cells": [
-            "첫 믹스: 효과음이 음악에 묻힘",
-            "프롬프트에 효과음 조건 추가"
-          ]
-        },
-        {
-          "cells": [
-            "둘째 믹스: 음악이 거의 안 들림",
-            "mix.json 음악 +10dB"
-          ]
-        }
-      ],
-      "notes": [
-        {
-          "n": 1,
-          "head": "귀로 최종 확인",
-          "body": "측정값 통과 후에도 직접 듣고 판단"
-        },
-        {
-          "n": 2,
-          "head": "실제 재실행",
-          "body": "음악 +10dB · 1.8분 · 문장 사이 음악 −41.7 → −31.5dBFS · 전체 음량 유지"
-        },
-        {
-          "n": 3,
-          "head": "영상 재인코딩 없음",
-          "body": "소리만 교체"
-        },
-        {
-          "n": 4,
-          "head": "소리를 고친 뒤",
-          "body": "완성본에 반영하려면 자막 다시 입히기"
-        }
-      ],
-      "action": {
-        "label": "실습",
-        "items": [
-          {
-            "kind": "copy",
-            "value": "배경음악이 거의 안 들려. session5/sound/mix.json에서 배경음악만 10dB 올리고 build_mix.py로 다시 만들어줘. 영상은 다시 인코딩하지 마. 바뀌기 전과 후의 전체 LUFS와 문장 사이의 음악 음량을 보여줘.",
-            "desc": "음악 음량 수정"
-          },
-          {
-            "kind": "copy",
-            "value": "소리가 바뀌었어. session5/subtitles/subs.ass는 그대로 두고 session5/sound/with-sound.mp4에 자막을 다시 입혀서 session5/final/my-short.mp4를 만들어줘. 소리는 복사하고, 길이와 음량을 재서 보여줘.",
-            "desc": "자막 다시 입히기"
-          }
-        ]
-      }
     }
   ]
 }

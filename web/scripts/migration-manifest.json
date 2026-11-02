@@ -1,5 +1,96 @@
 [
   {
+    "source": "session5/rehearsed-student-prompts",
+    "part": "art-5-1",
+    "copyHashes": [],
+    "hrefs": [
+      "https://wall.woohee.me",
+      "/downloads/session5/example.zip"
+    ]
+  },
+  {
+    "source": "session5/rehearsed-student-prompts",
+    "part": "art-5-2",
+    "copyHashes": [
+      "0bacff34580f1997cf4160ac3b98822dd02f537519d2d73934f7dcffb8b791e2"
+    ],
+    "hrefs": []
+  },
+  {
+    "source": "session5/rehearsed-student-prompts",
+    "part": "art-5-3",
+    "copyHashes": [
+      "f19e4e75c1954bf8c03e9ba1fbbe6ce1466da05be8d4b6793be58bd88ad72bdc",
+      "1e72fa42ab456f6d3ed6cab06f0a56e2af59f674896749b78efdd2ab8867ec9d",
+      "d69ffcd5bee1192f06c992224e14f01c5e9c5e9ad0882229ca3c57957c8c022d"
+    ],
+    "hrefs": [
+      "/downloads/session5/example/edit.json"
+    ]
+  },
+  {
+    "source": "session5/rehearsed-student-prompts",
+    "part": "art-5-4",
+    "copyHashes": [
+      "958728e6d739c411d41b228a1cca4e9cb78d8715197c535da51e980511185bef",
+      "f867172199c994810adb3d291709c881af6d4fc59ed5b90f5a7fed6ac376b7ad",
+      "bad6c4151cd875924e874b7aa5d15ec89c949f39fe1787d1126ffde6d68bcdcb"
+    ],
+    "hrefs": [
+      "https://comfy.org/pricing"
+    ]
+  },
+  {
+    "source": "session5/rehearsed-student-prompts",
+    "part": "art-5-5",
+    "copyHashes": [
+      "a26fcc22b18641fc7bde53b07d087b0d075697d3065642d418f9cf9d0e6d436f"
+    ],
+    "hrefs": [
+      "https://github.com/remotion-dev/remotion/blob/main/LICENSE.md"
+    ]
+  },
+  {
+    "source": "session5/rehearsed-student-prompts",
+    "part": "art-5-6",
+    "copyHashes": [
+      "5bac8a937a40ca3d0ed6ce9491b70acc53c2f0557c6b2abdb6eb8fb9c6c9d10b"
+    ],
+    "hrefs": []
+  },
+  {
+    "source": "session5/rehearsed-student-prompts",
+    "part": "art-5-7",
+    "copyHashes": [
+      "ba7767425dec1ec02619adcd64cb353ecd2658f13ca65affcac974fa477b5769"
+    ],
+    "hrefs": []
+  },
+  {
+    "source": "session5/rehearsed-student-prompts",
+    "part": "art-5-8",
+    "copyHashes": [
+      "44e2b8f0cb7563a9074706b481158ad4a2aa630335461192f0f2273a3756593e",
+      "af82e8f332fb8a936b63c719127f3e3fdf5afc53ea2d99c0db39bd1a0bed6917"
+    ],
+    "hrefs": [
+      "https://github.com/Leonxlnx/earshot"
+    ]
+  },
+  {
+    "source": "session5/rehearsed-student-prompts",
+    "part": "art-5-9",
+    "copyHashes": [
+      "2b77f9703f6c96179fd58edafd5fa7692236773384a96dbb8650fdc0beb2445f",
+      "863fe669bee3e36b30c5366ebc1592ba2731f6df46fa584b7382c03d6d38cbef"
+    ],
+    "hrefs": [
+      "/downloads/session5/demo/my-short.mp4",
+      "/downloads/session5/example/description.txt",
+      "https://wall.woohee.me"
+    ]
+  },
+  {
     "source": "session1/step1-signup.md",
     "part": "art-1-1",
     "copyHashes": [],
@@ -290,13 +381,5 @@
       "/downloads/session4/own-story/workflow-kit.zip",
       "https://wall.woohee.me"
     ]
-  },
-  {"source": "session5/rehearsed-student-prompts", "part": "art-5-1", "copyHashes": [], "hrefs": ["https://wall.woohee.me", "/downloads/session5/example.zip"]},
-  {"source": "session5/rehearsed-student-prompts", "part": "art-5-2", "copyHashes": ["4637cefc85ac25c0e8a93f56a08ff1e1e8cf94b153cf72bf949f018037361eb2", "d3313a51c9bab593ffbea217823630f50d953c84c63bd258d6d31456bdf5f030"], "hrefs": []},
-  {"source": "session5/rehearsed-student-prompts", "part": "art-5-3", "copyHashes": ["e97d2e99590b392a0ffe22195ae8f86c5df37b53cdec3bba9d25f4cc74badcdb", "e4ee2d9fbf3c916a3c96ece8edf330552ae57f11aeffec9b5c1ff40344f028cd", "17b259777ba2f859914bdf6892f6a78a4ec1e433f156a593f61618d02cecbc59"], "hrefs": ["/downloads/session5/example/edit.json"]},
-  {"source": "session5/rehearsed-student-prompts", "part": "art-5-4", "copyHashes": ["75d849dfcaa04717fc615899f26de2391d7345dc24244aebd2211e20a6e1c5b7", "4ede54ff10a1f3672d6ce06c55e6b5cae45653f108d4fd5f6183705fb72777c0"], "hrefs": ["/downloads/session5/example/crop.json"]},
-  {"source": "session5/rehearsed-student-prompts", "part": "art-5-5", "copyHashes": ["57def899980745493e3948fbe09d4c48eaace2d544fcac973d20b25b7a71872f", "2f00a9842bd7efab80d14ba2c10bc827595194fba4ad9cfb009a5407a5a6bd10", "18ebb0685c5684b212a73734873ba86a88e02716a7dd951b0d0b111f6c24c44a", "425b822c0c9bde8f0d4846172793a86a53b25e079d25307ffae245e893babfd2"], "hrefs": ["https://huggingface.co/Supertone/supertonic-3/blob/main/LICENSE", "/downloads/session5/voices/M1.wav", "/downloads/session5/voices/M2.wav", "/downloads/session5/voices/F1.wav", "/downloads/session5/voices/F2.wav", "/downloads/session5/example/lines-final.json"]},
-  {"source": "session5/rehearsed-student-prompts", "part": "art-5-6", "copyHashes": ["2959ca9aac2f6f0e1ca266a2f2b4604538fb5af77fde4811697cfe1cfe155a8c", "06c8454cca4c5753d81ad63c46f3bc068c52717b476269644a920fd44caa90f3", "42dd04250e6b97edc0f7f8e207e6ad9b29810ef29bd9f0cc3fd1e3004f7dd478", "fe5d838e6cc53877c49340b169f9cb826ee7391655db5cccfc8eeae8312f36c2"], "hrefs": ["https://mixkit.co/license/#sfxFree", "https://incompetech.com/music/royalty-free/faq.html", "/downloads/session5/example/mix.json"]},
-  {"source": "session5/rehearsed-student-prompts", "part": "art-5-7", "copyHashes": ["ff83f3e2838fda913527857b6064bc046d47729355ac434fa17b931fff20809f", "80ecfcc88e6ab4d533cb51ef4e0ee032a585987109424bfb6eae39d8ed7fa434"], "hrefs": ["/downloads/session5/example/subs.srt"]},
-  {"source": "session5/rehearsed-student-prompts", "part": "art-5-8", "copyHashes": ["92cbfe8b6a8e821a6b1eefbda9054fb5656ce17a9669db72f6173c6c6013ad14"], "hrefs": ["https://wall.woohee.me"]}
+  }
 ]
