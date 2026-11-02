@@ -16,7 +16,7 @@ export interface CompareSlide extends SlideBase {
   template: "compare"; left: {label: string; screen: Screen}; right: {label: string; screen: Screen}; ratio?: [number, number]
 }
 export interface TableSlide extends SlideBase {
-  template: "table"; columns: string[]; rows: {cells: string[]; highlight?: boolean}[]; split?: boolean
+  template: "table"; columns: string[]; rows: {cells: string[]; highlight?: boolean}[]; split?: boolean; verbatim?: boolean
 }
 export interface IllustrationSlide extends SlideBase { template: "illustration"; illustration: string }
 // Covers are derived by flatSlides(), never maintained as duplicate JSON content.

@@ -1,9 +1,18 @@
 {
   "step": 5,
-  "title": "5회차",
+  "title": "5회차 30초 영상 완성하기",
   "hours": "2시간",
   "goal": "",
   "topics": [],
   "practice": "",
-  "parts": []
+  "parts": [
+    "art-5-1",
+    "art-5-2",
+    "art-5-3",
+    "art-5-4",
+    "art-5-5",
+    "art-5-6",
+    "art-5-7",
+    "art-5-8"
+  ]
 }

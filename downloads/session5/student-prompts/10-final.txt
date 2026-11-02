@@ -1,0 +1,7 @@
+[목표] session5/final/my-short.mp4를 올리기 전에 마지막으로 확인하는 것.
+[확인]
+1) 길이, 해상도, fps, 코덱, 전체 LUFS와 트루피크를 재줘.
+2) 2초 간격 격자를 session5/final/review에 저장하고 직접 열어 봐줘.
+3) 작업 중 만든 원본이 그대로인지 확인해줘(session4 파일 변경 없음).
+[작성] 영상 설명에 넣을 글을 session5/final/description.txt로 저장해줘. 제목 후보 하나, 음악 크레딧 문구 그대로, 음성이 AI로 만든 것이라는 표시, 영상도 AI로 만들었다는 표시를 넣어줘.
+[출력] 측정값 표와 description.txt 내용을 보여줘.

@@ -1,0 +1,137 @@
+{
+  "id": "art-5-1",
+  "title": "오늘 만들 것",
+  "summary": "18:00~18:05 · 클립 3개 → 소리와 자막이 있는 세로 30초",
+  "slides": [
+    {
+      "id": "art-5-1-1",
+      "title": "오늘의 결과",
+      "template": "screen",
+      "screen": {
+        "kind": "video",
+        "src": "/downloads/session5/demo/my-short.mp4",
+        "poster": "/lectures/images/session5/final-poster.jpg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "완성본 사양",
+          "body": "1080×1920 · 30초 · 나레이션·효과음·배경음·자막"
+        },
+        {
+          "n": 2,
+          "head": "편집 프로그램 없음",
+          "body": "Codex 대화 + ffmpeg"
+        },
+        {
+          "n": 3,
+          "head": "입력",
+          "body": "4회차 클립 3개"
+        },
+        {
+          "n": 4,
+          "head": "음악 표기",
+          "body": "Clear Air · Kevin MacLeod · CC BY 4.0"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://wall.woohee.me",
+            "text": "수업 업로드 월"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session5/example.zip",
+            "text": "리허설 결과 파일 묶음"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-5-1-2",
+      "title": "오늘 순서",
+      "template": "table",
+      "columns": [
+        "시각",
+        "단계",
+        "결과 파일"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "18:05",
+            "재료 확인·설치",
+            "session5/clips.json"
+          ]
+        },
+        {
+          "cells": [
+            "18:15",
+            "컷 편집",
+            "edit/cut-16x9.mp4"
+          ]
+        },
+        {
+          "cells": [
+            "18:40",
+            "세로 9:16",
+            "vertical/vertical.mp4"
+          ]
+        },
+        {
+          "cells": [
+            "19:00",
+            "나레이션",
+            "narration/narration.wav"
+          ]
+        },
+        {
+          "cells": [
+            "19:20",
+            "효과음·배경음",
+            "sound/with-sound.mp4"
+          ]
+        },
+        {
+          "cells": [
+            "19:40",
+            "자막·최종 확인",
+            "final/my-short.mp4"
+          ]
+        },
+        {
+          "cells": [
+            "19:55",
+            "업로드 월",
+            "작품 제목·한 줄 소개"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "진행 방식",
+          "body": "단계마다 프롬프트 복사 · 결과 확인 · 고치기"
+        },
+        {
+          "n": 2,
+          "head": "Codex 실측",
+          "body": "Codex 실행 합계 약 56분"
+        },
+        {
+          "n": 3,
+          "head": "비용",
+          "body": "오늘 유료 호출 없음 · Codex 구독만"
+        },
+        {
+          "n": 4,
+          "head": "편집 파일",
+          "body": "edit.json·crop.json·mix.json이 프로젝트 파일 · 수정 시 해당 파일만 변경"
+        }
+      ]
+    }
+  ]
+}

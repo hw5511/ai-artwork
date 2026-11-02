@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "path_base": "project_root",
+  "fps": 24,
+  "target_frames": 720,
+  "output": "session5/edit/cut-16x9.mp4",
+  "video": {"codec": "libx264", "crf": 18, "preset": "medium", "pixel_format": "yuv420p", "resolution": "source"},
+  "audio": {"codec": "aac", "bitrate": "192k", "sample_rate": 48000, "crossfade_ms": 20, "edge_fade_ms": 5},
+  "notes": [
+    "Array order is the edit order. Source frame ranges are [in_frame, out_frame); timeline positions are derived by build_cut.py, never maintained separately.",
+    "Same six shots and order as shots.md. Restore 12 original frames at the head of C1-S1 (in 20 -> 8), compensating exactly for the 12-frame dissolve overlap. No repeated frames, speed change, or end padding.",
+    "One classic opacity dissolve from sniffing to looking up suggests a brief passage of time and softens the source framing change. Other video boundaries are hard cuts.",
+    "20 ms linear audio crossfades use 10 ms source handles around each boundary, without shortening the timeline or shifting sync. At the dissolve, the audio switch is at its midpoint. No music or effects added.",
+    "Keep source raster and framing. Existing source bottom strip and tight framing are not retouched."
+  ],
+  "shots": [
+    {"id": "C1-S1", "source": "session4/clips/clip1.mp4", "in_frame": 8, "out_frame": 157, "transition_in": {"type": "start", "frames": 0}},
+    {"id": "C1-S2", "source": "session4/clips/clip1.mp4", "in_frame": 157, "out_frame": 244, "transition_in": {"type": "cut", "frames": 0}},
+    {"id": "C2-S1", "source": "session4/clips/clip2.mp4", "in_frame": 12, "out_frame": 118, "transition_in": {"type": "cut", "frames": 0}},
+    {"id": "C2-S2", "source": "session4/clips/clip2.mp4", "in_frame": 118, "out_frame": 254, "transition_in": {"type": "dissolve", "frames": 12, "reason": "Brief passage of time between sniffing and looking up; softens the source camera/framing jump."}},
+    {"id": "C3-S1", "source": "session4/clips/clip3.mp4", "in_frame": 6, "out_frame": 139, "transition_in": {"type": "cut", "frames": 0}},
+    {"id": "C3-S2", "source": "session4/clips/clip3.mp4", "in_frame": 139, "out_frame": 260, "transition_in": {"type": "cut", "frames": 0}}
+  ]
+}

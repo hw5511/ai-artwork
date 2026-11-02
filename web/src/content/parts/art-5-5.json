@@ -1,0 +1,428 @@
+{
+  "id": "art-5-5",
+  "title": "나레이션",
+  "summary": "19:00~19:20 · 대본 · 목소리 고르기 · 시간에 맞추기",
+  "slides": [
+    {
+      "id": "art-5-5-1",
+      "title": "TTS 비교 실측",
+      "template": "table",
+      "columns": [
+        "도구",
+        "비용",
+        "한국어 오류율",
+        "영상 사용"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "Supertonic 3",
+            "무료 · 로컬 CPU",
+            "1.7%",
+            "AI 음성 표시 조건"
+          ]
+        },
+        {
+          "cells": [
+            "edge-tts",
+            "무료 · 온라인",
+            "0~3.3%",
+            "공식 사용권 없음"
+          ]
+        },
+        {
+          "cells": [
+            "gTTS",
+            "무료 · 온라인",
+            "3.3%",
+            "공식 사용권 없음"
+          ]
+        },
+        {
+          "cells": [
+            "Windows Heami",
+            "무료 · 로컬",
+            "5%",
+            "약관 미확인"
+          ]
+        },
+        {
+          "cells": [
+            "Typecast Basic",
+            "월 $5",
+            "미측정",
+            "상업 사용 포함"
+          ]
+        },
+        {
+          "cells": [
+            "Comfy Cloud TTS",
+            "크레딧",
+            "미측정",
+            "오늘 미실행"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "오늘 선택",
+          "body": "Supertonic 3 · 무료 · 인터넷은 첫 설치 때만"
+        },
+        {
+          "n": 2,
+          "head": "대체 경로",
+          "body": "edge-tts ko-KR-InJoonNeural · 수업 시연용 · 유료 게시물에는 제외"
+        },
+        {
+          "n": 3,
+          "head": "오류율 측정",
+          "body": "같은 세 문장 · faster-whisper small · 받아쓰기 기준"
+        },
+        {
+          "n": 4,
+          "head": "Comfy Cloud",
+          "body": "Chatterbox·Qwen3-TTS 한국어 옵션 확인 · 수업에서 미실행"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://huggingface.co/Supertone/supertonic-3/blob/main/LICENSE",
+            "text": "Supertonic 3 모델 라이선스"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-5-5-2",
+      "title": "나레이션 대본",
+      "template": "table",
+      "columns": [
+        "구간",
+        "문장",
+        "음절"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "0.5~4.5초",
+            "산책에는 정해 둔 속도가 없다.",
+            "12"
+          ]
+        },
+        {
+          "cells": [
+            "6.5~9.5초",
+            "기다림도 함께 가는 일이다.",
+            "11"
+          ]
+        },
+        {
+          "cells": [
+            "10.2~13.2초",
+            "같은 길도 날마다 새롭다.",
+            "10"
+          ]
+        },
+        {
+          "cells": [
+            "14.5~18.7초",
+            "말이 없어도 서로의 때를 알아간다.",
+            "14"
+          ]
+        },
+        {
+          "cells": [
+            "19.8~24.0초",
+            "그 짧은 여유가 사람에게도 남는다.",
+            "14"
+          ]
+        },
+        {
+          "cells": [
+            "25.0~28.8초",
+            "이 길에서는 서로가 기준이 된다.",
+            "13"
+          ]
+        }
+      ],
+      "verbatim": true,
+      "notes": [
+        {
+          "n": 1,
+          "head": "음절 한도",
+          "body": "초당 4음절 이하 · Supertonic 측정값 4.45음절"
+        },
+        {
+          "n": 2,
+          "head": "샷 경계",
+          "body": "한 샷에 문장 하나"
+        },
+        {
+          "n": 3,
+          "head": "숫자·영어",
+          "body": "읽는 소리대로 한글 표기"
+        },
+        {
+          "n": 4,
+          "head": "대본 먼저",
+          "body": "음성 전에 문장 확정 · Codex 실측 1.4분"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[역할] 너는 30초 세로 영상의 나레이션 작가야.\n[목표] 편집본 화면에 맞는 한국어 나레이션 대본을 쓰는 것. 음성은 아직 만들지 마.\n[입력] session5/edit/edit.json, session4/script.md, session5/vertical/review의 프레임\n[규칙]\n- 말투는 담담한 다큐멘터리. 화면에 보이는 것을 그대로 읽지 말고, 화면만으로는 모르는 생각을 한 줄씩 보태줘. 화면과 어긋나는 사실은 쓰지 마.\n- 문장마다 시작·끝 시각을 정해줘. 한 샷에 문장 하나, 샷 경계를 넘지 않게.\n- 초당 4음절 이하로 써줘. 문장 사이는 0.4초 이상 비우고, 첫 문장은 0.5초 뒤에 시작, 마지막 문장은 29.0초 전에 끝내줘.\n- 숫자와 영어는 읽는 소리대로 한글로 적어줘.\n[출력] session5/narration/lines.json에 id, start, end, text, 음절 수를 저장하고 표로 보여준 뒤 멈춰.",
+            "desc": "나레이션 대본"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-5-5-3",
+      "title": "목소리 고르기",
+      "template": "table",
+      "columns": [
+        "목소리",
+        "첫 문장 길이",
+        "샘플"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "M1 남성",
+            "2.72초",
+            "voices/M1.wav"
+          ]
+        },
+        {
+          "cells": [
+            "M2 남성",
+            "2.65초",
+            "voices/M2.wav"
+          ]
+        },
+        {
+          "cells": [
+            "F1 여성",
+            "2.72초",
+            "voices/F1.wav"
+          ]
+        },
+        {
+          "cells": [
+            "F2 여성",
+            "2.51초",
+            "voices/F2.wav"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "직접 듣기",
+          "body": "Codex는 소리를 듣지 못함 · 목소리는 수강생이 직접 선택"
+        },
+        {
+          "n": 2,
+          "head": "같은 문장 비교",
+          "body": "첫 문장 샘플 듣기"
+        },
+        {
+          "n": 3,
+          "head": "Codex 실측",
+          "body": "1.3분"
+        },
+        {
+          "n": 4,
+          "head": "리허설 선택",
+          "body": "M1"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] 나레이션에 쓸 목소리를 고르는 샘플을 만드는 것.\n[작업]\n1) session5/.venv에 supertonic이 설치돼 있는지 확인하고, 없으면 가상환경을 만들어 설치해줘. 전역에는 설치하지 마.\n2) supertonic list-voices로 목소리 목록을 확인해줘.\n3) session5/narration/lines.json의 첫 문장으로 남성 2개, 여성 2개 샘플을 --lang ko로 만들어 session5/narration/samples에 저장해줘.\n[출력] 파일 경로와 길이를 표로 보여주고 멈춰. 내가 들어 보고 고를 거야.",
+            "desc": "목소리 샘플"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session5/voices/M1.wav",
+            "text": "M1 샘플"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session5/voices/M2.wav",
+            "text": "M2 샘플"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session5/voices/F1.wav",
+            "text": "F1 샘플"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session5/voices/F2.wav",
+            "text": "F2 샘플"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-5-5-4",
+      "title": "시간에 맞춘 음성",
+      "template": "table",
+      "columns": [
+        "문장",
+        "실제 시작",
+        "실제 끝",
+        "길이"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "C1-S1",
+            "0.500",
+            "3.356",
+            "2.86초"
+          ]
+        },
+        {
+          "cells": [
+            "C1-S2",
+            "6.500",
+            "9.077",
+            "2.58초"
+          ]
+        },
+        {
+          "cells": [
+            "C2-S1",
+            "10.200",
+            "12.568",
+            "2.37초"
+          ]
+        },
+        {
+          "cells": [
+            "C2-S2",
+            "14.500",
+            "17.565",
+            "3.07초"
+          ]
+        },
+        {
+          "cells": [
+            "C3-S1",
+            "19.800",
+            "22.935",
+            "3.13초"
+          ]
+        },
+        {
+          "cells": [
+            "C3-S2",
+            "25.000",
+            "27.786",
+            "2.79초"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "길이 맞추기",
+          "body": "속도 1.25까지 · 초과 시 문장 수정 · 소리 자르기 금지"
+        },
+        {
+          "n": 2,
+          "head": "Codex 실측",
+          "body": "6문장 전부 속도 1.00 · 수정 없음"
+        },
+        {
+          "n": 3,
+          "head": "음량",
+          "body": "문장별 −20.4 LUFS · 편차 0.03 LU · Supertonic 원본은 작음"
+        },
+        {
+          "n": 4,
+          "head": "lines-final.json",
+          "body": "자막 단계가 읽는 파일 · Codex 실측 4.9분"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] session5/narration/lines.json을 Supertonic 음성으로 만들어 시간에 맞춘 트랙 하나로 합치는 것.\n[조건] 목소리는 M1, 언어는 ko.\n[작업]\n1) 문장마다 wav를 session5/narration/lines에 만들고 ffprobe로 길이를 재줘.\n2) 정해진 구간보다 길면 --speed를 올려 다시 만들어줘. 1.25까지만 올리고, 그래도 넘치면 그 문장을 짧게 고쳐 lines.json에 저장한 뒤 다시 만들어줘. 소리를 잘라서 맞추지 마.\n3) 문장끼리 음량을 맞춘 다음 각 문장의 시작 시각에 놓아 정확히 30.000초인 session5/narration/narration.wav를 만들어줘. 스크립트는 session5/narration/build_narration.py로 남겨줘.\n4) 실제 시작·끝 시각, 속도, 음절 수를 session5/narration/lines-final.json에 저장해줘.\n[확인] 문장끼리 겹치지 않는지, 샷 경계를 넘지 않는지 표로 보여줘. 음량 측정값도 알려줘.",
+            "desc": "음성 만들기"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session5/example/lines-final.json",
+            "text": "실제 lines-final.json"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-5-5-fix",
+      "title": "나레이션 고치기",
+      "template": "table",
+      "columns": [
+        "증상",
+        "요청"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "목소리 변경",
+            "목소리·속도 지정 후 재생성"
+          ]
+        },
+        {
+          "cells": [
+            "발음이 이상함",
+            "읽는 소리대로 한글 표기"
+          ]
+        },
+        {
+          "cells": [
+            "긴 문장",
+            "문장 줄이기 · 속도 1.25 이하"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "실제 재실행",
+          "body": "F1 · 속도 0.90 · 3.0분 · 모든 문장이 배정 구간 안"
+        },
+        {
+          "n": 2,
+          "head": "숫자 읽기",
+          "body": "3초 → 삼 초로 읽힘 · 세 초를 원하면 글자로 표기"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "목소리를 F1로 바꾸고 말을 조금 천천히 해줘. 문장이 정해진 구간을 넘지 않는 선에서 --speed를 정하고 build_narration.py로 narration.wav를 다시 만들어줘. lines-final.json도 갱신하고 문장별 길이를 표로 보여줘.",
+            "desc": "목소리·속도 변경 예시"
+          }
+        ]
+      }
+    }
+  ]
+}

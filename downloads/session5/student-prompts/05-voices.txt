@@ -1,0 +1,6 @@
+[목표] 나레이션에 쓸 목소리를 고르는 샘플을 만드는 것.
+[작업]
+1) session5/.venv에 supertonic이 설치돼 있는지 확인하고, 없으면 가상환경을 만들어 설치해줘. 전역에는 설치하지 마.
+2) supertonic list-voices로 목소리 목록을 확인해줘.
+3) session5/narration/lines.json의 첫 문장으로 남성 2개, 여성 2개 샘플을 --lang ko로 만들어 session5/narration/samples에 저장해줘.
+[출력] 파일 경로와 길이를 표로 보여주고 멈춰. 내가 들어 보고 고를 거야.

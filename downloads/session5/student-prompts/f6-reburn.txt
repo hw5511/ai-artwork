@@ -1,0 +1,1 @@
+소리가 바뀌었어. session5/subtitles/subs.ass는 그대로 두고 session5/sound/with-sound.mp4에 자막을 다시 입혀서 session5/final/my-short.mp4를 만들어줘. 소리는 복사하고, 길이와 음량을 재서 보여줘.

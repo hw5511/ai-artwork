@@ -1,0 +1,145 @@
+{
+  "id": "art-5-7",
+  "title": "자막",
+  "summary": "19:40~19:50 · 나레이션 시각 · 고정 위치 · 영상에 입히기",
+  "slides": [
+    {
+      "id": "art-5-7-1",
+      "title": "첫 시도와 고친 프롬프트",
+      "template": "compare",
+      "left": {
+        "label": "샷마다 이동",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session5/subs-moving.jpg"
+        }
+      },
+      "right": {
+        "label": "한 곳 고정",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session5/subs-fixed.jpg"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "첫 시도",
+          "body": "6샷 중 4샷 위치 이동 · 시선이 튐"
+        },
+        {
+          "n": 2,
+          "head": "고친 뒤",
+          "body": "아래 여백 400px 고정"
+        },
+        {
+          "n": 3,
+          "head": "바꾼 말",
+          "body": "샷마다 위치 이동 금지"
+        },
+        {
+          "n": 4,
+          "head": "글자 크기",
+          "body": "64px → 72px"
+        }
+      ]
+    },
+    {
+      "id": "art-5-7-2",
+      "title": "자막 프레임 확인",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session5/subs-grid.jpg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "시각 기준",
+          "body": "lines-final.json의 실제 시작·끝"
+        },
+        {
+          "n": 2,
+          "head": "나누기",
+          "body": "자막 11조각 · 14자 이내 · 글자 수 비율로 시간 배분"
+        },
+        {
+          "n": 3,
+          "head": "글꼴",
+          "body": "Pretendard Bold · 작업 폴더에 저장"
+        },
+        {
+          "n": 4,
+          "head": "Codex 실측",
+          "body": "4.7분"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[역할] 너는 세로 영상 자막 디자이너야.\n[목표] 나레이션 시각에 맞춘 한국어 자막을 영상에 입히는 것.\n[입력] session5/narration/lines-final.json, session5/sound/with-sound.mp4\n[규칙]\n- 문장의 실제 시작·끝 시각을 기준으로 해줘. 화면에는 한 번에 한 줄만, 14자 이내. 길면 뜻이 끊기는 곳에서 나누고 글자 수 비율로 시간을 나눠줘.\n- 글꼴은 Pretendard Bold를 https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-Bold.otf 에서 받아 session5/subtitles/fonts에 넣어줘.\n- 흰 글자에 검은 외곽선, 글자 크기 72px, 그 밖의 장식은 넣지 마.\n- 자막 위치는 영상 전체에서 한 곳으로 고정해줘. 쇼츠 화면의 아래쪽 버튼에 가리지 않게 아래 여백을 400px 두고, 샷마다 옮기지 마. 눈이나 입을 가리는 샷이 있으면 옮기지 말고 어느 샷인지 알려줘.\n- session5/subtitles/subs.srt와 subs.ass를 저장하고 ffmpeg로 입혀줘. 소리는 그대로 복사하고, 결과는 session5/final/my-short.mp4.\n[확인] 자막 조각마다 가운데 프레임을 뽑아 격자로 만들어 직접 열어 봐줘. 글자 깨짐, 화면 밖 잘림이 있으면 고쳐서 다시 만들어줘.\n[출력] 자막 표(시작, 끝, 글자 수)와 최종 파일 측정값을 보여줘.",
+            "desc": "자막 입히기"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session5/example/subs.srt",
+            "text": "실제 subs.srt"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-5-7-fix",
+      "title": "자막 고치기",
+      "template": "table",
+      "columns": [
+        "증상",
+        "고치는 곳"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "글자가 작음",
+            "subs.ass 글자 크기"
+          ]
+        },
+        {
+          "cells": [
+            "얼굴을 가림",
+            "고정 위치 또는 크롭"
+          ]
+        },
+        {
+          "cells": [
+            "너무 빨리 지나감",
+            "문장 나누기·문장 줄이기"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "실제 재실행",
+          "body": "글자 72px · 100px 위 · 2.8분 · 긴 문장 두 줄"
+        },
+        {
+          "n": 2,
+          "head": "입 가림",
+          "body": "C1-S1 3.13~3.36초 자막이 입에 닿음 · 타이트한 샷의 한계"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "자막 글자를 72px로 키우고 지금보다 100px 위로 올려줘. 자막 내용과 시각은 그대로 두고 session5/final/my-short.mp4를 다시 만들어줘. 소리는 복사하고, 자막이 두 줄인 프레임 하나를 뽑아 잘림이 없는지 봐줘.",
+            "desc": "자막 크기·위치 수정 예시"
+          }
+        ]
+      }
+    }
+  ]
+}

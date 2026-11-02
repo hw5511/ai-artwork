@@ -1,0 +1,11 @@
+[역할] 너는 세로 영상 자막 디자이너야.
+[목표] 나레이션 시각에 맞춘 한국어 자막을 영상에 입히는 것.
+[입력] session5/narration/lines-final.json, session5/sound/with-sound.mp4
+[규칙]
+- 문장의 실제 시작·끝 시각을 기준으로 해줘. 화면에는 한 번에 한 줄만, 14자 이내. 길면 뜻이 끊기는 곳에서 나누고 글자 수 비율로 시간을 나눠줘.
+- 글꼴은 Pretendard Bold를 https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/public/static/Pretendard-Bold.otf 에서 받아 session5/subtitles/fonts에 넣어줘.
+- 흰 글자에 검은 외곽선, 글자 크기 72px, 그 밖의 장식은 넣지 마.
+- 자막 위치는 영상 전체에서 한 곳으로 고정해줘. 쇼츠 화면의 아래쪽 버튼에 가리지 않게 아래 여백을 400px 두고, 샷마다 옮기지 마. 눈이나 입을 가리는 샷이 있으면 옮기지 말고 어느 샷인지 알려줘.
+- session5/subtitles/subs.srt와 subs.ass를 저장하고 ffmpeg로 입혀줘. 소리는 그대로 복사하고, 결과는 session5/final/my-short.mp4.
+[확인] 자막 조각마다 가운데 프레임을 뽑아 격자로 만들어 직접 열어 봐줘. 글자 깨짐, 화면 밖 잘림이 있으면 고쳐서 다시 만들어줘.
+[출력] 자막 표(시작, 끝, 글자 수)와 최종 파일 측정값을 보여줘.

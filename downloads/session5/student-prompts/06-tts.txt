@@ -1,0 +1,8 @@
+[목표] session5/narration/lines.json을 Supertonic 음성으로 만들어 시간에 맞춘 트랙 하나로 합치는 것.
+[조건] 목소리는 M1, 언어는 ko.
+[작업]
+1) 문장마다 wav를 session5/narration/lines에 만들고 ffprobe로 길이를 재줘.
+2) 정해진 구간보다 길면 --speed를 올려 다시 만들어줘. 1.25까지만 올리고, 그래도 넘치면 그 문장을 짧게 고쳐 lines.json에 저장한 뒤 다시 만들어줘. 소리를 잘라서 맞추지 마.
+3) 문장끼리 음량을 맞춘 다음 각 문장의 시작 시각에 놓아 정확히 30.000초인 session5/narration/narration.wav를 만들어줘. 스크립트는 session5/narration/build_narration.py로 남겨줘.
+4) 실제 시작·끝 시각, 속도, 음절 수를 session5/narration/lines-final.json에 저장해줘.
+[확인] 문장끼리 겹치지 않는지, 샷 경계를 넘지 않는지 표로 보여줘. 음량 측정값도 알려줘.

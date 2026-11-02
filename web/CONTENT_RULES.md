@@ -8,7 +8,7 @@ spacing, white surfaces and #1273c4 accent. The artwork port uses native JSON on
 `src/content/sessions/artwork/stepNN.json` lists ordered part IDs.
 `src/content/parts/<id>.json` holds each part and its slides. One original md step is one part.
 The viewer derives the part covers, sidebar and counters from this data.
-No 정리 or 마무리 parts. Sessions 5-8 have empty part lists and display 준비 중.
+No 정리 or 마무리 parts. Sessions 6-8 have empty part lists and display 준비 중.
 
 ## Slides and explanations
 
@@ -16,6 +16,7 @@ The slide area contains a short keyword title and a visual: a real screenshot or
 a video, a comparison, a genuinely tabular set of facts, or a static vector illustration.
 Explanations go in `notes` in the right-hand 설명 panel. No paragraphs or explanatory
 bullets on slides. Titles and table cells use keywords, never Korean sentence endings.
+A table marked `verbatim: true` quotes real rehearsal text such as narration lines, so its cells keep their sentence endings.
 A visual badge number always matches the same note number. At most four notes per slide.
 Note heads are short keyword phrases; artwork notes also use concise keyword bodies.
 No dash chains, filler, jargon for its own sake, invented metaphors, or AI phrasing.

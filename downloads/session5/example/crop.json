@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "path_base": "project_root",
+  "edit": "session5/edit/edit.json",
+  "output": "session5/vertical/vertical.mp4",
+  "output_size": [1080, 1920],
+  "crop_size": [396, 704],
+  "y": 0,
+  "coordinate_system": "Original 1280x720 source pixels; x is the LEFT edge, not the centre. Right/bottom edges are exclusive.",
+  "interpolation": "smoothstep; fixed outside pan_start_frame..pan_end_frame; frames are local to the trimmed shot",
+  "bottom_strip": {"excluded_rows": [704, 720], "removed_pixels": 16, "method": "Visual inspection of original start/middle/end frames; conservative guard above the feathered bottom strip."},
+  "audio": "Stream-copy the existing edited soundtrack, with original packet timestamps and AAC priming; do not reconstruct or re-encode audio.",
+  "review_note": "Focus means the named small feature, not hair, ears, full hand, body or background. C2-S2 starts with a muzzle already outside the source raster. Boxes are manual annotations on sampled original frames, not an automatic full-frame detector.",
+  "shots": [
+    {
+      "id": "C1-S1", "focus": "인물 얼굴의 눈·코·입", "x_start": 240, "x_end": 340,
+      "pan_start_frame": 0, "pan_end_frame": 148,
+      "reason": "고개를 숙일 때 얼굴 중심이 오른쪽으로 이동하므로 천천히 추적한다.",
+      "source_preexisting_clipping": "일부 정수리는 원본 상단 밖에 있으나 핵심인 눈·코·입은 보인다.",
+      "focus_checks": [
+        {"local_frame": 0, "bbox": [310, 200, 610, 585]},
+        {"local_frame": 25, "bbox": [280, 210, 615, 600]},
+        {"local_frame": 49, "bbox": [270, 250, 600, 620]},
+        {"local_frame": 74, "bbox": [320, 300, 650, 660]},
+        {"local_frame": 99, "bbox": [360, 360, 690, 685]},
+        {"local_frame": 123, "bbox": [360, 370, 690, 690]},
+        {"local_frame": 148, "bbox": [400, 380, 730, 680]}
+      ]
+    },
+    {
+      "id": "C1-S2", "focus": "빨간 리드줄 고리와 쥔 손가락", "x_start": 390, "x_end": 390,
+      "reason": "고리와 그립을 고정 창 안에 유지한다. 손등 바깥과 팔은 핵심에 포함하지 않는다.",
+      "focus_checks": [
+        {"local_frame": 0, "bbox": [438, 240, 750, 470]},
+        {"local_frame": 14, "bbox": [475, 315, 770, 530]},
+        {"local_frame": 29, "bbox": [395, 330, 720, 535]},
+        {"local_frame": 43, "bbox": [415, 300, 745, 525]},
+        {"local_frame": 57, "bbox": [460, 310, 780, 540]},
+        {"local_frame": 72, "bbox": [455, 315, 775, 530]},
+        {"local_frame": 86, "bbox": [455, 310, 780, 535]}
+      ]
+    },
+    {
+      "id": "C2-S1", "focus": "냄새 맡는 개의 얼굴(눈·코·입)", "x_start": 560, "x_end": 560,
+      "reason": "얼굴의 작은 좌우 흔들림은 고정 창 안에서 수용한다. 등과 다리는 잘라도 된다.",
+      "focus_checks": [
+        {"local_frame": 0, "bbox": [685, 435, 915, 695]},
+        {"local_frame": 18, "bbox": [680, 425, 920, 685]},
+        {"local_frame": 35, "bbox": [665, 445, 890, 695]},
+        {"local_frame": 52, "bbox": [660, 440, 890, 690]},
+        {"local_frame": 70, "bbox": [680, 440, 900, 680]},
+        {"local_frame": 88, "bbox": [685, 430, 910, 680]},
+        {"local_frame": 105, "bbox": [685, 430, 910, 680]}
+      ]
+    },
+    {
+      "id": "C2-S2", "focus": "고개 드는 개의 얼굴(눈·코·입)", "x_start": 490, "x_end": 260,
+      "pan_start_frame": 0, "pan_end_frame": 45,
+      "reason": "고개를 드는 첫 1.875초 동안 왼쪽으로 따라간 뒤 고정한다. 큰 귀와 뒷머리는 핵심에서 제외한다.",
+      "source_preexisting_clipping": "시작 시 주둥이가 원본 아래로 나가 있다. 원본에 보이는 눈과 얼굴을 보존하며 없는 부분은 복원하지 않는다.",
+      "focus_checks": [
+        {"local_frame": 0, "bbox": [600, 600, 820, 695], "note": "visible eyes; muzzle already outside original image"},
+        {"local_frame": 22, "bbox": [445, 190, 670, 500]},
+        {"local_frame": 45, "bbox": [275, 40, 570, 330]},
+        {"local_frame": 68, "bbox": [350, 190, 600, 400]},
+        {"local_frame": 90, "bbox": [390, 160, 630, 450]},
+        {"local_frame": 112, "bbox": [400, 150, 650, 450]},
+        {"local_frame": 135, "bbox": [405, 165, 650, 470]}
+      ]
+    },
+    {
+      "id": "C3-S1", "focus": "웃는 인물의 얼굴", "x_start": 190, "x_end": 190,
+      "reason": "얼굴이 고정 창 안에 머물므로 불필요한 추적을 하지 않는다.",
+      "focus_checks": [
+        {"local_frame": 0, "bbox": [315, 125, 510, 355]},
+        {"local_frame": 22, "bbox": [330, 100, 535, 345]},
+        {"local_frame": 44, "bbox": [315, 175, 510, 390]},
+        {"local_frame": 66, "bbox": [265, 150, 450, 350]},
+        {"local_frame": 88, "bbox": [240, 115, 425, 350]},
+        {"local_frame": 110, "bbox": [270, 90, 455, 320]},
+        {"local_frame": 132, "bbox": [330, 110, 515, 330]}
+      ]
+    },
+    {
+      "id": "C3-S2", "focus": "리드줄 고리와 이를 쥔 손", "x_start": 450, "x_end": 450,
+      "reason": "손과 고리를 같은 고정 창에 둔다. 인물 전신과 길게 뻗은 줄은 잘라도 된다.",
+      "focus_checks": [
+        {"local_frame": 0, "bbox": [545, 280, 710, 495]},
+        {"local_frame": 20, "bbox": [565, 330, 710, 555]},
+        {"local_frame": 40, "bbox": [530, 350, 680, 575]},
+        {"local_frame": 60, "bbox": [565, 380, 710, 610]},
+        {"local_frame": 80, "bbox": [515, 340, 670, 550]},
+        {"local_frame": 100, "bbox": [570, 325, 710, 545]},
+        {"local_frame": 120, "bbox": [535, 300, 680, 500]}
+      ]
+    }
+  ]
+}
