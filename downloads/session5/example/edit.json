@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "path_base": "edit_json_directory",
+  "fps": 24,
+  "total_frames": 720,
+  "output": "cut-16x9.mp4",
+  "display_aspect_ratio": "16:9",
+  "preserve_input_resolution": true,
+  "video": {
+    "codec": "libx264",
+    "crf": 17,
+    "preset": "medium"
+  },
+  "audio": {
+    "codec": "aac",
+    "bitrate": "192k",
+    "sample_rate": 48000,
+    "channels": 2,
+    "crossfade_ms": 20,
+    "curve": "linear",
+    "dissolve_audio_switch": "midpoint"
+  },
+  "sources": {
+    "clip01": {
+      "path": "../upscaled/clip1.mp4",
+      "sha256": "4c7fbeb53774f3aacb5ca1699f76da9ad23aa1940083e4fa77c2b9117c303313"
+    },
+    "clip02": {
+      "path": "../upscaled/clip2.mp4",
+      "sha256": "8a1587ac4853c0e245d468f7a8ebe61380ad06009d65e92ebc936840e64fd848"
+    },
+    "clip03": {
+      "path": "../upscaled/clip3.mp4",
+      "sha256": "68b30de737df2a3335ed58e54a73604913e87b216eaae28c6c19fdf23079eb49"
+    }
+  },
+  "notes": [
+    "샷 배열 순서가 재생 순서다. 원본 구간은 0부터 세는 프레임 [IN, OUT), OUT은 배타적이다. 타임라인은 빌드 때 자동 계산한다.",
+    "transition_in은 이 샷으로 들어오는 전환이다. dissolve는 두 샷을 지정 프레임만큼 겹친다.",
+    "shots.md의 S03 끝 6프레임을 복원: 726 원본 사용 프레임 - 6 디졸브 중첩 프레임 = 720프레임. S08 끝 3프레임 삭제는 유지.",
+    "S06→S07 20.000–20.250초 디졸브는 착용 디테일에서 퇴장 단계로의 시간 경과를 표현한다. 원본의 좌우 위치/제품 수 차이를 수정한 것은 아니다.",
+    "1728×960 픽셀은 유지하고 SAR 80:81로 DAR 16:9를 지정한다. 스케일/크롭하지 않는다.",
+    "오디오는 원본 디코딩 후 컷 중심 20ms 선형 크로스페이드만 적용한다. 디졸브에서는 중점에 20ms 적용. 원본 가장자리의 부족한 최대 10ms 핸들은 끝 샘플 유지로 연장하며 전체 음성 싱크/길이는 유지한다."
+  ],
+  "shots": [
+    {
+      "shot": "S01",
+      "source": "clip01",
+      "source_in_frame": 0,
+      "source_out_frame_exclusive": 68,
+      "transition_in": {
+        "type": "none",
+        "frames": 0
+      }
+    },
+    {
+      "shot": "S02",
+      "source": "clip01",
+      "source_in_frame": 68,
+      "source_out_frame_exclusive": 145,
+      "transition_in": {
+        "type": "cut",
+        "frames": 0
+      }
+    },
+    {
+      "shot": "S03",
+      "source": "clip01",
+      "source_in_frame": 145,
+      "source_out_frame_exclusive": 243,
+      "transition_in": {
+        "type": "cut",
+        "frames": 0
+      },
+      "reason": "디졸브 중첩에 필요한 6프레임을 기존 반응 샷 꼬리에서 복원"
+    },
+    {
+      "shot": "S04",
+      "source": "clip02",
+      "source_in_frame": 0,
+      "source_out_frame_exclusive": 121,
+      "transition_in": {
+        "type": "cut",
+        "frames": 0
+      }
+    },
+    {
+      "shot": "S05",
+      "source": "clip02",
+      "source_in_frame": 121,
+      "source_out_frame_exclusive": 177,
+      "transition_in": {
+        "type": "cut",
+        "frames": 0
+      }
+    },
+    {
+      "shot": "S06",
+      "source": "clip02",
+      "source_in_frame": 177,
+      "source_out_frame_exclusive": 243,
+      "transition_in": {
+        "type": "cut",
+        "frames": 0
+      }
+    },
+    {
+      "shot": "S07",
+      "source": "clip03",
+      "source_in_frame": 0,
+      "source_out_frame_exclusive": 113,
+      "transition_in": {
+        "type": "dissolve",
+        "frames": 6,
+        "reason": "착용 디테일에서 일어나 퇴장하는 단계로 시간 경과를 표현"
+      }
+    },
+    {
+      "shot": "S08",
+      "source": "clip03",
+      "source_in_frame": 113,
+      "source_out_frame_exclusive": 177,
+      "transition_in": {
+        "type": "cut",
+        "frames": 0
+      }
+    },
+    {
+      "shot": "S09",
+      "source": "clip03",
+      "source_in_frame": 180,
+      "source_out_frame_exclusive": 243,
+      "transition_in": {
+        "type": "cut",
+        "frames": 0
+      }
+    }
+  ]
+}

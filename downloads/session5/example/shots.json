@@ -1,0 +1,270 @@
+{
+  "version": 1,
+  "coordinate_system": "Original 1728x960 pixel coordinates; cropHeight defines a 9:16 window with SAR 80:81 accounted for. Keyframes use local zero-based shot frames, linear interpolation, clamped to image bounds.",
+  "shots": [
+    {
+      "id": "S01",
+      "focus": "얼굴",
+      "subject": "검은 옷 인물",
+      "motion": "얼굴 중심 추적 확대",
+      "representative_frame": 33,
+      "keyframes": [
+        {
+          "frame": 0,
+          "centerX": 400,
+          "centerY": 493,
+          "cropHeight": 360
+        },
+        {
+          "frame": 33,
+          "centerX": 400,
+          "centerY": 493,
+          "cropHeight": 360
+        },
+        {
+          "frame": 67,
+          "centerX": 365,
+          "centerY": 493,
+          "cropHeight": 360
+        }
+      ],
+      "notes": "작은 와이드를 확대해 검은 옷 인물의 얼굴과 전달하는 손을 읽는다. 최종 세로 검수에서 핵심 얼굴/손을 화면 중앙으로 재배치."
+    },
+    {
+      "id": "S02",
+      "focus": "제품",
+      "subject": "선글라스 왼쪽 끝 → 브리지 → 오른쪽 끝",
+      "motion": "느린 좌→우 팬",
+      "representative_frame": 38,
+      "keyframes": [
+        {
+          "frame": 0,
+          "centerX": 430,
+          "centerY": 480,
+          "cropHeight": 960
+        },
+        {
+          "frame": 76,
+          "centerX": 1100,
+          "centerY": 480,
+          "cropHeight": 960
+        }
+      ],
+      "notes": "제품 전체를 축소하지 않고 원래 배경으로 화면을 채운다. 양 끝은 팬 시작/끝에서 각각 보인다."
+    },
+    {
+      "id": "S03",
+      "focus": "얼굴",
+      "subject": "흰 셔츠 인물의 정면 반응",
+      "motion": "고정",
+      "representative_frame": 48,
+      "keyframes": [
+        {
+          "frame": 0,
+          "centerX": 895,
+          "centerY": 245,
+          "cropHeight": 490
+        },
+        {
+          "frame": 97,
+          "centerX": 895,
+          "centerY": 245,
+          "cropHeight": 490
+        }
+      ],
+      "notes": "원본 상단에서 이미 잘린 머리카락은 복원하지 않으며 눈·코·입을 보존한다. 최종 세로 검수에서 핵심 얼굴/손을 화면 중앙으로 재배치."
+    },
+    {
+      "id": "S04",
+      "focus": "손",
+      "subject": "흰 셔츠 인물이 제품을 집어 착용하는 손",
+      "motion": "착용하는 손 추적 확대",
+      "representative_frame": 60,
+      "keyframes": [
+        {
+          "frame": 0,
+          "centerX": 1385,
+          "centerY": 565,
+          "cropHeight": 460
+        },
+        {
+          "frame": 24,
+          "centerX": 1380,
+          "centerY": 525,
+          "cropHeight": 440
+        },
+        {
+          "frame": 48,
+          "centerX": 1395,
+          "centerY": 480,
+          "cropHeight": 420
+        },
+        {
+          "frame": 72,
+          "centerX": 1415,
+          "centerY": 440,
+          "cropHeight": 420
+        },
+        {
+          "frame": 96,
+          "centerX": 1420,
+          "centerY": 450,
+          "cropHeight": 420
+        },
+        {
+          "frame": 120,
+          "centerX": 1435,
+          "centerY": 555,
+          "cropHeight": 460
+        }
+      ],
+      "notes": "와이드를 확대해 테이블의 제품부터 얼굴까지 이어지는 두 손의 동작을 담는다. 최종 세로 검수에서 핵심 얼굴/손을 화면 중앙으로 재배치."
+    },
+    {
+      "id": "S05",
+      "focus": "얼굴",
+      "subject": "흰 셔츠 인물의 착용 얼굴",
+      "motion": "카메라 이동에 맞춘 얼굴 추적",
+      "representative_frame": 27,
+      "keyframes": [
+        {
+          "frame": 0,
+          "centerX": 720,
+          "centerY": 385,
+          "cropHeight": 650
+        },
+        {
+          "frame": 27,
+          "centerX": 790,
+          "centerY": 385,
+          "cropHeight": 650
+        },
+        {
+          "frame": 55,
+          "centerX": 815,
+          "centerY": 385,
+          "cropHeight": 650
+        }
+      ],
+      "notes": "오른쪽 전경 인물 대신 착용자의 얼굴을 핵심으로 선택한다. 최종 세로 검수에서 핵심 얼굴/손을 화면 중앙으로 재배치."
+    },
+    {
+      "id": "S06",
+      "focus": "제품",
+      "subject": "착용 제품 왼쪽 렌즈 → 브리지 → 오른쪽 힌지",
+      "motion": "느린 좌→우 디테일 팬",
+      "representative_frame": 32,
+      "keyframes": [
+        {
+          "frame": 0,
+          "centerX": 580,
+          "centerY": 480,
+          "cropHeight": 960
+        },
+        {
+          "frame": 32,
+          "centerX": 920,
+          "centerY": 480,
+          "cropHeight": 960
+        },
+        {
+          "frame": 59,
+          "centerX": 1330,
+          "centerY": 480,
+          "cropHeight": 960
+        },
+        {
+          "frame": 65,
+          "centerX": 1330,
+          "centerY": 480,
+          "cropHeight": 960
+        }
+      ],
+      "notes": "원본의 과도한 얼굴 확대는 유지되지만 선택한 렌즈/힌지 디테일을 창 안에서 훑는다. 오른쪽 끝은 디졸브 시작 직전 f59에 도달한다."
+    },
+    {
+      "id": "S07",
+      "focus": "얼굴",
+      "subject": "검은 옷 인물이 일어서는 얼굴",
+      "motion": "일어서는 인물 추적 확대",
+      "representative_frame": 56,
+      "keyframes": [
+        {
+          "frame": 0,
+          "centerX": 1540,
+          "centerY": 535,
+          "cropHeight": 440
+        },
+        {
+          "frame": 28,
+          "centerX": 1515,
+          "centerY": 525,
+          "cropHeight": 440
+        },
+        {
+          "frame": 56,
+          "centerX": 1410,
+          "centerY": 440,
+          "cropHeight": 460
+        },
+        {
+          "frame": 84,
+          "centerX": 1350,
+          "centerY": 395,
+          "cropHeight": 480
+        },
+        {
+          "frame": 112,
+          "centerX": 1305,
+          "centerY": 370,
+          "cropHeight": 500
+        }
+      ],
+      "notes": "둘 중 검은 옷 인물을 선택하고 기립·이동을 따라간다. 최종 세로 검수에서 핵심 얼굴/손을 화면 중앙으로 재배치."
+    },
+    {
+      "id": "S08",
+      "focus": "제품",
+      "subject": "퇴장 후 테이블 중앙에 남은 선글라스",
+      "motion": "작은 제품 고정 확대",
+      "representative_frame": 32,
+      "keyframes": [
+        {
+          "frame": 0,
+          "centerX": 855,
+          "centerY": 825,
+          "cropHeight": 250
+        },
+        {
+          "frame": 63,
+          "centerX": 855,
+          "centerY": 825,
+          "cropHeight": 250
+        }
+      ],
+      "notes": "양쪽 퇴장 인물 대신 중앙의 작은 제품 하나를 선택한다. 원래 벽·테이블로 화면을 채운다."
+    },
+    {
+      "id": "S09",
+      "focus": "제품",
+      "subject": "엔딩 제품 왼쪽 끝 → 오른쪽 끝",
+      "motion": "느린 좌→우 팬",
+      "representative_frame": 31,
+      "keyframes": [
+        {
+          "frame": 0,
+          "centerX": 425,
+          "centerY": 480,
+          "cropHeight": 960
+        },
+        {
+          "frame": 62,
+          "centerX": 1250,
+          "centerY": 480,
+          "cropHeight": 960
+        }
+      ],
+      "notes": "색 띠·복제·흐림 배경 없이 제품 표면과 원래 반사를 가까이 훑는다."
+    }
+  ]
+}

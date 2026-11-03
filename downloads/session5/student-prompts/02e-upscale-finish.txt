@@ -1,0 +1,6 @@
+[목표] 업스케일 결과에서 덧댄 프레임을 빼고 16:9 편집본을 큰 화면으로 다시 만드는 것.
+[입력] session5/upscale/raw/clip1.mp4~clip3.mp4, session5/upscale/pad.json, session5/clips.json, session5/edit/edit.json
+[작업]
+1) pad.json대로 덧댄 프레임을 빼서 원본과 프레임 수가 같은 session5/upscaled/clip1.mp4~clip3.mp4를 CRF 14로 만들어줘. 소리는 원본 클립에서 그대로 가져와줘.
+2) session5/clips.json과 edit.json의 sources를 이 파일로 바꾸고 build_cut.py를 다시 실행해서 session5/edit/cut-16x9.mp4를 새로 만들어줘. 샷 순서와 전환은 고치지 마.
+[확인] 클립마다 원본과 프레임 수가 같은지, 편집본이 720프레임 30.000초인지 ffprobe로 재줘. 샷이 바뀌는 곳의 앞뒤 프레임을 session5/edit/review에 저장해서 직접 열어 보고, 두 장면이 겹쳐 보이는 프레임이 있으면 알려줘.
