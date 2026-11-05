@@ -1,60 +1,78 @@
-# session6 사운드 출처와 크레딧
+# session6 쇼츠 음원 크레딧
 
-확인일: 2026-11-05. 음악 1곡과 효과음 4종(발걸음 2테이크)을 선택·다운로드·구간 추출했다. 영상에는 삽입하지 않았다.
+확인일: 2026-11-05. 배경음악 1곡과 효과음 2개를 선정·저장했다. 영상이나 Remotion 코드에는 연결하지 않았다. 배치 계획과 청취 근거는 [selection.md](selection.md), 전체 earshot 결과는 [earshot-analysis.json](earshot-analysis.json)에 있다.
 
-음악은 CC BY 4.0에 따라 상업 광고·수익화·편집이 가능하며 작성자·출처·라이선스 링크·수정 사항 표기가 필요하다. 저작자 보증을 암시하거나 허용된 권리를 추가로 제한하면 안 된다. 출처 페이지의 Attribution Code, 공식 FAQ, CC BY 4.0 원문을 확인했다.
+## 배경음악
 
-효과음 4종은 각 출처 페이지의 Creative Commons 0 표시와 CC0 원문을 대조했다. 상업 사용·수정·배포 가능, 법적 크레딧 의무 없음. 아래 효과음 문구는 선택적 출처 표기다. 작성자를 자신으로 표기하거나 저작자의 보증을 암시하지 않는다.
+- 제목: Floating Cities
+- 작성자·작곡가: Kevin MacLeod (incompetech.com)
+- 파일: `bgm_floating_cities_45s.wav`
+- 곡 페이지: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600018
+- 공식 곡 정보: https://incompetech.com/music/royalty-free/pieces.json (ISRC USUAN1600018)
+- 다운로드: https://incompetech.com/music/royalty-free/mp3-royaltyfree/Floating%20Cities.mp3
+- 라이선스: Creative Commons Attribution 4.0 International (CC BY 4.0)
+- 라이선스 주소: https://creativecommons.org/licenses/by/4.0/
+- 권리자 확인 페이지: https://incompetech.com/agent-section/ — 전체 카탈로그의 저작권자 Kevin MacLeod와 공통 CC BY 4.0 조건을 명시한다.
+- 사용·표시 조건: https://incompetech.com/music/royalty-free/faq.html — 수익화 영상에 사용할 수 있으며 저작자 표시가 필요하다. 영상 설명란 또는 영상 내에서 찾기 쉽게 표시한다. CC BY 4.0은 상업적 복제·공유·변경을 허용하며 저작자·원출처·라이선스 링크·변경 사실 표시를 요구한다. 허락된 이용을 막는 추가 법적·기술적 제한을 걸지 않는다.
+- 크레딧 필요 여부: **필수**. 이 파일에 보관하는 것과 별도로, 향후 영상을 공개할 때 아래 문구를 영상 설명란 등에 넣어야 한다.
+- 가공: 원곡 0.000–45.000초 발췌, −18 dB, 시작 0.25초·끝 1.5초 페이드, 48 kHz/24 bit PCM WAV 변환. 원곡은 변경하지 않고 별도 분석 폴더에 보관했다.
 
-이 로컬 credits.md는 출처 기록이다. 나중에 음악을 넣어 공개할 때에는 아래 필수 문구를 영상 안 또는 시청자가 찾기 쉬운 게시 설명에 실제로 표시해야 한다. 광고에 설명란이 없다면 영상 안 표기가 필요하다. 현재는 게시·합성·크레딧 자막을 실행하지 않았다.
-
-라이선스 원문: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode.en), [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en).
-
-표기 위치 안내: https://incompetech.com/music/royalty-free/faq.html
-
-## 필수 음악 크레딧
+게시용 문구:
 
 ```text
-"Dream Culture" Kevin MacLeod (incompetech.com)
-Source: https://incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1300046
+"Floating Cities" Kevin MacLeod (incompetech.com)
+Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600018
 Licensed under Creative Commons: By Attribution 4.0 License
 https://creativecommons.org/licenses/by/4.0/
-Changes: excerpted from 00:00–00:30, faded in/out, gain reduced by 6 dB, converted to 48 kHz / 24-bit WAV.
+편집: 원곡 첫 45초 발췌, 음량 조정 및 페이드.
 ```
 
-## 선택 파일별 기록
+## 효과음 1 — 부재 이동
 
-| 파일 | 제목 | 작성자 | 출처 | 라이선스 | 크레딧 의무 |
-| --- | --- | --- | --- | --- | --- |
-| bgm-dream-culture-30s.wav | Dream Culture | Kevin MacLeod | [출처](https://incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1300046) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 필수 |
-| sfx-oven-open.wav | Oven door | edhutschek | [출처](https://freesound.org/people/edhutschek/sounds/214355/) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | 없음 |
-| sfx-tray-slide.wav | Bakery plate in oven.wav | ingeverschatse | [출처](https://freesound.org/people/ingeverschatse/sounds/513031/) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | 없음 |
-| sfx-tray-set-down.wav | Placing tray on the table | MilanKovanda | [출처](https://freesound.org/people/MilanKovanda/sounds/377051/) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | 없음 |
-| sfx-footstep-a.wav, sfx-footstep-b.wav | Footsteps, Tile, Male Sneakers, Slow Pace.wav | SpliceSound | [출처](https://freesound.org/people/SpliceSound/sounds/170506/) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | 없음 |
+- 제목: Metal Slide 8
+- 작성자: LordForklift
+- 파일: `sfx_deck_slide.wav` (0.941초)
+- 출처 페이지: https://freesound.org/people/LordForklift/sounds/448407/
+- 다운로드: https://cdn.freesound.org/previews/448/448407_2294740-hq.mp3
+- 라이선스: Creative Commons Zero 1.0 Universal (CC0 1.0)
+- 라이선스 주소: https://creativecommons.org/publicdomain/zero/1.0/
+- 확인: 출처 페이지의 Creative Commons 0 표시와 상업적 복제·수정·배포·공연 허용 안내를 확인했다.
+- 크레딧 필요 여부: **불필요**. 아래는 선택적으로 사용할 수 있는 출처 표기다. 별도 허락이나 동일조건변경허락 의무는 없다.
+- 가공: 공개 HQ MP3 미리듣기의 0.137–1.078초 발췌, −18.5 dB, 앞 0.01초·뒤 0.02초 페이드, 48 kHz/24 bit PCM WAV 변환. 무손실 원본 다운로드는 아니다.
+- 용도: S05의 부재 이동을 설명하는 작은 금속 마찰 폴리. 실제 교량의 열팽창 소리를 녹음한 자료가 아니다.
 
-## 다운로드 URL과 효과음 크레딧 문구
+선택적 크레딧 문구:
 
-- **Dream Culture** — 다운로드: https://incompetech.com/music/royalty-free/mp3-royaltyfree/Dream%20Culture.mp3
-- **Oven door** — 다운로드: https://cdn.freesound.org/previews/214/214355_2444153-hq.mp3
-  - 선택적 문구: “Oven door” by edhutschek — https://freesound.org/people/edhutschek/sounds/214355/ — CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/); excerpted, faded and level adjusted.
-- **Bakery plate in oven.wav** — 다운로드: https://cdn.freesound.org/previews/513/513031_8353987-hq.mp3
-  - 선택적 문구: “Bakery plate in oven.wav” by ingeverschatse — https://freesound.org/people/ingeverschatse/sounds/513031/ — CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/); excerpted, faded and level adjusted.
-- **Placing tray on the table** — 다운로드: https://cdn.freesound.org/previews/377/377051_6886013-hq.mp3
-  - 선택적 문구: “Placing tray on the table” by MilanKovanda — https://freesound.org/people/MilanKovanda/sounds/377051/ — CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/); excerpted, faded and level adjusted.
-- **Footsteps, Tile, Male Sneakers, Slow Pace.wav** — 다운로드: https://cdn.freesound.org/previews/170/170506_1480854-hq.mp3
-  - 선택적 문구: “Footsteps, Tile, Male Sneakers, Slow Pace.wav” by SpliceSound — https://freesound.org/people/SpliceSound/sounds/170506/ — CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/); excerpted, faded and level adjusted.
+```text
+"Metal Slide 8" — LordForklift / Freesound
+https://freesound.org/people/LordForklift/sounds/448407/
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
+편집: 짧은 구간 발췌, 음량 조정 및 페이드.
+```
 
-## 구간·가공 내역
+## 효과음 2 — 고무 씰 변형
 
-| 파일 | 원본 IN–OUT(초) | 길이(초) | 페이드 IN/OUT(초) | 적용 게인(dB) |
-| --- | --- | --- | --- | --- |
-| bgm-dream-culture-30s.wav | 0.000–30.000 | 30.000 | 0.500/2.500 | -6.00 |
-| sfx-oven-open.wav | 0.209–1.465 | 1.256 | 0.005/0.040 | +7.97 |
-| sfx-tray-slide.wav | 15.292–16.450 | 1.158 | 0.005/0.030 | +5.08 |
-| sfx-tray-set-down.wav | 0.990–1.890 | 0.900 | 0.005/0.040 | -11.55 |
-| sfx-footstep-a.wav | 19.196–20.105 | 0.909 | 0.003/0.025 | +12.42 |
-| sfx-footstep-b.wav | 21.877–22.335 | 0.458 | 0.003/0.025 | +16.27 |
+- 제목: stretching rubber glove
+- 작성자: mistakenforathing
+- 파일: `sfx_rubber_flex.wav` (1.200초)
+- 출처 페이지: https://freesound.org/people/mistakenforathing/sounds/827006/
+- 다운로드: https://cdn.freesound.org/previews/827/827006_13510038-hq.mp3
+- 라이선스: Creative Commons Zero 1.0 Universal (CC0 1.0)
+- 라이선스 주소: https://creativecommons.org/publicdomain/zero/1.0/
+- 확인: 출처 페이지의 Creative Commons 0 표시와 상업적 복제·수정·배포·공연 허용 안내를 확인했다.
+- 크레딧 필요 여부: **불필요**. 아래는 선택적으로 사용할 수 있는 출처 표기다. 별도 허락이나 동일조건변경허락 의무는 없다.
+- 가공: 공개 HQ MP3 미리듣기의 21.600–22.800초 발췌, 앞 0.04초·뒤 0.12초 페이드, 48 kHz/24 bit PCM WAV 변환. 무손실 원본 다운로드는 아니다.
+- 용도: S08에서 실제로 접히고 펴지는 고무 씰을 설명하는 작은 폴리. 원녹음은 고무장갑이며 실제 교량 씰의 현장 녹음이 아니다.
 
-효과음은 Freesound가 출처 페이지에 공개한 HQ MP3 미리보기를 내려받아 추출했다. 업로더의 원본 WAV 다운로드와 구분한다. WAV 변환은 손실 압축을 복원하지 않는다. 다운로드한 전체 파일과 출처 HTML·공식 라이선스 HTML은 session6/sound-review/sources/에 보존했다.
+선택적 크레딧 문구:
 
-선택하지 않은 Laid Back Guitars와 ChloePieterse의 Footsteps on tile은 비교 기록에만 있으며 public/sound에 포함하지 않았다. 클립 내 생성 오디오도 이 선택에 포함하지 않았다.
+```text
+"stretching rubber glove" — mistakenforathing / Freesound
+https://freesound.org/people/mistakenforathing/sounds/827006/
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
+편집: 짧은 구간 발췌 및 페이드.
+```
+
+## 확인 기록
+
+라이선스는 earshot 판정이 아니라 위 권리자·업로더 페이지와 Creative Commons 조건에서 확인했다. 원문 HTML, 다운로드한 원본 미리듣기, 후보 비교 및 제외 기록은 `session6/.analysis-work/sound/`에 보관했다. 파일별 출처와 SHA-256은 [sources.json](sources.json)에 있다. 채택하지 않은 소리는 게시용 크레딧에 포함하지 않았다.

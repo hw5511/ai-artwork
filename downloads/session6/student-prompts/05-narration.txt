@@ -1,0 +1,10 @@
+[목표] Typecast로 session6/short/script.md의 대사를 낭독 음성으로 만들어 session6/short/narration/narration.wav 한 트랙으로 합치고, 문장별 실제 시작·끝 시각을 timing.json에 저장해줘.
+[입력] session6/short/script.md, session6/short/shots.json, session6/.env(TYPECAST_API_KEY)
+[규칙]
+- 키는 .env에서 읽어 쓰고 화면이나 로그에 출력하지 마. API 사용법은 Typecast 공식 문서(docs.typecast.ai)에서 확인해줘.
+- 한국어 목소리 후보 3개로 첫 문장만 만들어 session6/short/narration/samples에 저장하고, 레시피의 말투(속도, 어조)에 가장 맞는 것을 하나 골라 이유를 적어줘. 사람이 마지막에 들어 보고 바꿀 수 있게 목소리 이름은 설정 파일 한 곳에 둬.
+- 문장마다 wav를 따로 만들고 ffprobe로 길이를 재줘. 샷의 정해진 구간보다 길면 속도 옵션을 올리고(최대 1.2배), 그래도 넘치면 대사를 짧게 고쳐 script.md와 shots.json에도 같이 반영해줘. 소리를 자르지 마.
+- 문장끼리 음량을 맞추고, 각 문장을 샷 시작 시각에 놓아 전체 길이가 script.md의 총 길이와 같은 narration.wav로 합쳐줘. 스크립트는 build_narration.py로 남겨줘.
+- 사용한 크레딧(글자 수)을 기록해줘.
+[확인] 문장끼리 겹치지 않는지, 샷 경계를 넘지 않는지 표로 보여줘. 음량 측정값도 알려줘.
+[출력] 고른 목소리와 이유, 문장별 시작·끝·길이 표, 사용 글자 수.

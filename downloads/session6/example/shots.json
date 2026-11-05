@@ -1,491 +1,388 @@
-{
-  "schema_version": "1.0",
-  "title": "새벽 5시의 식빵",
-  "status": "references_ready",
-  "scope": "reference_sheets_and_original_pixel_crops",
-  "generation_executed": {
-    "images": true,
-    "videos": false,
-    "audio": false
+[
+  {
+    "id": "S01",
+    "start_seconds": 0.0,
+    "end_seconds": 2.605,
+    "stage": "대상·과제",
+    "dialogue": "여기 다리 이음매에 긴 틈이 벌어져 있습니다.",
+    "screen_description": "동일한 현대 도로교를 낮은 사선으로 내려다본다. 도로 폭을 가로지르는 신축이음과 주변 난간을 첫 프레임에서 함께 식별한다. 회색 콘크리트, 금속 테두리, 검은 고무 씰을 구별한다.",
+    "screen_type": "대상 전체를 식별하는 전경",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Low oblique establishing view of the bridge roadway and guardrails, a clearly visible transverse strip-seal expansion joint crossing the roadway in the foreground, intact engineered joint rather than a random crack.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "정지 이미지 위에서 느린 전진 줌. 대상·구조물·빛은 움직이지 않는다.",
+    "sentence_count": 1,
+    "dialogue_characters": 19,
+    "estimated_read_seconds": 2.605,
+    "subtitle_cues": [
+      {
+        "start_seconds": 0.0,
+        "end_seconds": 1.097,
+        "text": "여기 다리 이음매에"
+      },
+      {
+        "start_seconds": 1.097,
+        "end_seconds": 2.605,
+        "text": "긴 틈이 벌어져 있습니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F1"
+    ]
   },
-  "format": {
-    "aspect_ratio": "9:16",
-    "duration_seconds": 30,
-    "fps": 24,
-    "total_frames": 720,
-    "clip_count": 3,
-    "shots_per_clip": 2,
-    "transition": "hard_cut",
-    "interval_convention": "start_inclusive_end_exclusive"
+  {
+    "id": "S02",
+    "start_seconds": 2.605,
+    "end_seconds": 7.885,
+    "stage": "기존 접근·배경",
+    "dialogue": "도로는 끊김 없이 이어야 더 튼튼해 보이죠. 그런데 다리는 온도에 따라 길이가 달라집니다.",
+    "screen_description": "가상의 빈틈 없는 접합 상태와 틈을 둔 상태를 좌우에 고정한 입체 형상 비교. 같은 교량 부재의 관계만 비교하며 실제 시공의 역사적 순서로 제시하지 않는다.",
+    "screen_type": "부재·재료의 관계를 드러내는 입체 설명 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Static side-by-side isometric comparison of two identical bridge deck end assemblies, a hypothetical rigid continuous connection on the left and an intentional expansion gap on the right, same scale and material textures, conceptual engineering model.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "좌측 비교 상태에서 우측 상태로 카메라만 수평 패닝한다.",
+    "sentence_count": 2,
+    "dialogue_characters": 38,
+    "estimated_read_seconds": 5.28,
+    "subtitle_cues": [
+      {
+        "start_seconds": 2.605,
+        "end_seconds": 3.994,
+        "text": "도로는 끊김 없이 이어야"
+      },
+      {
+        "start_seconds": 3.994,
+        "end_seconds": 5.106,
+        "text": "더 튼튼해 보이죠."
+      },
+      {
+        "start_seconds": 5.106,
+        "end_seconds": 6.634,
+        "text": "그런데 다리는 온도에 따라"
+      },
+      {
+        "start_seconds": 6.634,
+        "end_seconds": 7.885,
+        "text": "길이가 달라집니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F1"
+    ]
   },
-  "constraints": {
-    "unique_people": 1,
-    "unique_products": 1,
-    "unique_locations": 1,
-    "spoken_dialogue": false,
-    "voiceover": false,
-    "music": false,
-    "reference_images_per_clip": 3,
-    "invented_brands_or_performance_claims": false
+  {
+    "id": "S03",
+    "start_seconds": 7.885,
+    "end_seconds": 13.758,
+    "stage": "원리·한계·보완",
+    "dialogue": "다리도 더워지면 늘어나고 추워지면 줄어들거든요. 이 움직임을 억지로 막으면 부재에 힘이 쌓입니다.",
+    "screen_description": "같은 콘크리트 바닥판의 따뜻한 상태와 차가운 상태를 나란히 둔 정지 입체 비교. 미세한 길이 차이는 이해용으로 과장한다. 아래에는 움직임이 구속된 접촉부의 압축을 색 띠로 표시한다. 파괴·붕괴는 묘사하지 않는다.",
+    "screen_type": "부재·재료의 관계를 드러내는 입체 설명 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Static three-dimensional cutaway comparison of the same concrete bridge deck under warmer and cooler conditions, warm and cool ambient light, slightly exaggerated length difference, separate constrained contact detail with a subtle colored compression band, no collapse.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "두 온도 상태와 구속 접촉부를 카메라 크롭 이동으로 차례로 짚는다.",
+    "sentence_count": 2,
+    "dialogue_characters": 43,
+    "estimated_read_seconds": 5.873,
+    "subtitle_cues": [
+      {
+        "start_seconds": 7.885,
+        "end_seconds": 9.387,
+        "text": "다리도 더워지면 늘어나고"
+      },
+      {
+        "start_seconds": 9.387,
+        "end_seconds": 10.89,
+        "text": "추워지면 줄어들거든요."
+      },
+      {
+        "start_seconds": 10.89,
+        "end_seconds": 12.392,
+        "text": "이 움직임을 억지로 막으면"
+      },
+      {
+        "start_seconds": 12.392,
+        "end_seconds": 13.758,
+        "text": "부재에 힘이 쌓입니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F1",
+      "F2"
+    ]
   },
-  "assets": [
-    {
-      "id": "CHAR-01",
-      "role": "person",
-      "description": "40대 성인 제빵사 한 명",
-      "appearance": "40대 성인 제빵사, 짧은 짙은 갈색 머리, 아이보리 셔츠, 짙은 갈색 앞치마, 회색 장갑 한 쌍",
-      "planned_path": "session6/views/CHAR-01.png",
-      "actual_path": "session6/views/CHAR-01.png",
-      "file_exists": true,
-      "readiness": "ready",
-      "sheet_path": "session6/sheets/CHAR-01.png",
-      "review_status": "passed",
-      "dimensions": [
-        623,
-        623
-      ],
-      "sheet_dimensions": [
-        1254,
-        1254
-      ]
-    },
-    {
-      "id": "BREAD-01",
-      "role": "product",
-      "description": "봉우리 3개와 직사각 바닥의 황금빛 갈색 통식빵 한 덩이, 같은 무광 은색 트레이 포함",
-      "planned_path": "session6/views/BREAD-01.png",
-      "actual_path": "session6/views/BREAD-01.png",
-      "file_exists": true,
-      "readiness": "ready",
-      "sheet_path": "session6/sheets/BREAD-01.png",
-      "review_status": "passed",
-      "dimensions": [
-        623,
-        623
-      ],
-      "sheet_dimensions": [
-        1254,
-        1254
-      ]
-    },
-    {
-      "id": "PLACE-01",
-      "role": "location",
-      "description": "동일한 빵집 작업실. 왼쪽 뒤 오븐, 오른쪽 앞 목재 작업대, 오른쪽 뒤 푸른 새벽 창",
-      "planned_path": "session6/views/PLACE-01.png",
-      "actual_path": "session6/views/PLACE-01.png",
-      "file_exists": true,
-      "readiness": "ready",
-      "reuse_same_view_for_all_clips": true,
-      "sheet_path": "session6/sheets/PLACE-01.png",
-      "review_status": "passed",
-      "dimensions": [
-        623,
-        623
-      ],
-      "sheet_dimensions": [
-        1254,
-        1254
-      ]
-    }
-  ],
-  "clips": [
-    {
-      "id": "C01",
-      "global_start_seconds": 0,
-      "global_end_seconds": 10,
-      "duration_seconds": 10,
-      "global_start_frame": 0,
-      "global_end_frame": 240,
-      "shot_ids": [
-        "S01",
-        "S02"
-      ],
-      "local_shot_start_seconds": [
-        0,
-        5
-      ],
-      "ordered_reference_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "ordered_reference_planned_paths": [
-        "session6/views/CHAR-01.png",
-        "session6/views/BREAD-01.png",
-        "session6/views/PLACE-01.png"
-      ],
-      "reference_readiness": "ready",
-      "planning_status": "complete",
-      "planned_video_path": "session6/clips/clip1.mp4",
-      "actual_video_path": null,
-      "video_file_exists": false,
-      "video_status": "not_generated",
-      "ordered_reference_actual_paths": [
-        "session6/views/CHAR-01.png",
-        "session6/views/BREAD-01.png",
-        "session6/views/PLACE-01.png"
-      ]
-    },
-    {
-      "id": "C02",
-      "global_start_seconds": 10,
-      "global_end_seconds": 20,
-      "duration_seconds": 10,
-      "global_start_frame": 240,
-      "global_end_frame": 480,
-      "shot_ids": [
-        "S03",
-        "S04"
-      ],
-      "local_shot_start_seconds": [
-        0,
-        5
-      ],
-      "ordered_reference_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "ordered_reference_planned_paths": [
-        "session6/views/CHAR-01.png",
-        "session6/views/BREAD-01.png",
-        "session6/views/PLACE-01.png"
-      ],
-      "reference_readiness": "ready",
-      "planning_status": "complete",
-      "planned_video_path": "session6/clips/clip2.mp4",
-      "actual_video_path": null,
-      "video_file_exists": false,
-      "video_status": "not_generated",
-      "ordered_reference_actual_paths": [
-        "session6/views/CHAR-01.png",
-        "session6/views/BREAD-01.png",
-        "session6/views/PLACE-01.png"
-      ]
-    },
-    {
-      "id": "C03",
-      "global_start_seconds": 20,
-      "global_end_seconds": 30,
-      "duration_seconds": 10,
-      "global_start_frame": 480,
-      "global_end_frame": 720,
-      "shot_ids": [
-        "S05",
-        "S06"
-      ],
-      "local_shot_start_seconds": [
-        0,
-        5
-      ],
-      "ordered_reference_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "ordered_reference_planned_paths": [
-        "session6/views/CHAR-01.png",
-        "session6/views/BREAD-01.png",
-        "session6/views/PLACE-01.png"
-      ],
-      "reference_readiness": "ready",
-      "planning_status": "complete",
-      "planned_video_path": "session6/clips/clip3.mp4",
-      "actual_video_path": null,
-      "video_file_exists": false,
-      "video_status": "not_generated",
-      "ordered_reference_actual_paths": [
-        "session6/views/CHAR-01.png",
-        "session6/views/BREAD-01.png",
-        "session6/views/PLACE-01.png"
-      ]
-    }
-  ],
-  "shots": [
-    {
-      "id": "S01",
-      "clip_id": "C01",
-      "planning_status": "complete",
-      "global_start_seconds": 0,
-      "global_end_seconds": 5,
-      "local_start_seconds": 0,
-      "local_end_seconds": 5,
-      "duration_seconds": 5,
-      "global_start_frame": 0,
-      "global_end_frame": 120,
-      "local_start_frame": 0,
-      "local_end_frame": 120,
-      "framing": "9:16 상반신 미디엄. 왼쪽 오븐과 인물, 열린 문 안 식빵이 세로 중앙에 읽히게 구성",
-      "visible_subject_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "action": "제빵사가 오른손으로 오븐 문을 아래로 완전히 열고 안쪽 식빵을 바라본다",
-      "camera": "눈높이 고정, 동선 앞쪽 축 유지",
-      "props": "양손 회색 장갑 착용. 오른손은 문 손잡이, 왼손은 몸 가까이. 빵과 트레이는 오븐 선반에 정지",
-      "sound_plan": [
-        "오븐 문 열림",
-        "낮은 실내 환경음"
-      ],
-      "overlay_ids": [
-        "TEXT-01"
-      ],
-      "reference_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "continuity_out": "오븐 문 완전 열림, 오른손이 손잡이를 놓고 양손을 트레이로 향한다",
-      "reference_readiness": "ready",
-      "reference_actual_paths": [
-        "session6/views/CHAR-01.png",
-        "session6/views/BREAD-01.png",
-        "session6/views/PLACE-01.png"
-      ]
-    },
-    {
-      "id": "S02",
-      "clip_id": "C01",
-      "planning_status": "complete",
-      "global_start_seconds": 5,
-      "global_end_seconds": 10,
-      "local_start_seconds": 5,
-      "local_end_seconds": 10,
-      "duration_seconds": 5,
-      "global_start_frame": 120,
-      "global_end_frame": 240,
-      "local_start_frame": 120,
-      "local_end_frame": 240,
-      "framing": "9:16 트레이 높이 제품 클로즈업. 같은 인물의 양손과 소매, 얼굴은 프레임 위",
-      "visible_subject_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "action": "양손으로 트레이 좌우 테두리를 잡아 수평으로 꺼내 허리 높이에서 지지",
-      "camera": "제품을 따라 짧게 후진, 같은 앞면과 화면 축 유지",
-      "props": "트레이는 오븐 선반에서 완전히 나온다. 식빵은 트레이 중앙 고정, 문은 열린 상태",
-      "sound_plan": [
-        "트레이가 선반을 스치는 소리",
-        "낮은 실내 환경음"
-      ],
-      "overlay_ids": [],
-      "reference_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "continuity_in": "S01의 열린 문과 트레이 위치 유지",
-      "continuity_out": "오븐 밖 허리 높이의 트레이를 양손으로 수평 지지",
-      "reference_readiness": "ready",
-      "reference_actual_paths": [
-        "session6/views/CHAR-01.png",
-        "session6/views/BREAD-01.png",
-        "session6/views/PLACE-01.png"
-      ]
-    },
-    {
-      "id": "S03",
-      "clip_id": "C02",
-      "planning_status": "complete",
-      "global_start_seconds": 10,
-      "global_end_seconds": 15,
-      "local_start_seconds": 0,
-      "local_end_seconds": 5,
-      "duration_seconds": 5,
-      "global_start_frame": 240,
-      "global_end_frame": 360,
-      "local_start_frame": 0,
-      "local_end_frame": 120,
-      "framing": "9:16 몸통과 트레이 중심 미디엄, 오른쪽 작업대까지 보이는 동선",
-      "visible_subject_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "action": "양손으로 트레이를 든 제빵사가 왼쪽에서 오른쪽으로 두 걸음 이동해 작업대 바로 위에서 멈춘다",
-      "camera": "같은 축에서 느린 오른쪽 팬",
-      "props": "식빵은 같은 트레이 중앙, 트레이는 수평, 양손 테두리 지지, 오븐 문 열림 유지",
-      "sound_plan": [
-        "두 번의 짧은 발걸음",
-        "낮은 실내 환경음"
-      ],
-      "overlay_ids": [],
-      "reference_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "continuity_in": "S02의 허리 높이와 손 위치에서 시작",
-      "continuity_out": "트레이가 작업대 중앙 바로 위에 떠 있고 양손이 지지",
-      "reference_readiness": "ready",
-      "reference_actual_paths": [
-        "session6/views/CHAR-01.png",
-        "session6/views/BREAD-01.png",
-        "session6/views/PLACE-01.png"
-      ]
-    },
-    {
-      "id": "S04",
-      "clip_id": "C02",
-      "planning_status": "complete",
-      "global_start_seconds": 15,
-      "global_end_seconds": 20,
-      "local_start_seconds": 5,
-      "local_end_seconds": 10,
-      "duration_seconds": 5,
-      "global_start_frame": 360,
-      "global_end_frame": 480,
-      "local_start_frame": 120,
-      "local_end_frame": 240,
-      "framing": "9:16 작업대 높이 제품과 양손 클로즈업, 트레이 접촉면이 보임",
-      "visible_subject_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "action": "트레이를 수직으로 내려놓고 잠시 지지한 뒤 양손을 떼어 프레임 위로 물린다",
-      "camera": "같은 앞면 방향에서 고정",
-      "props": "17초 전후 트레이가 목재 상판 중앙에 닿음. 빵과 트레이는 회전 없이 정지. 장갑은 착용 유지",
-      "sound_plan": [
-        "17초 전후 트레이가 작업대에 닿는 소리",
-        "낮은 실내 환경음"
-      ],
-      "overlay_ids": [],
-      "reference_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "continuity_in": "S03 끝의 작업대 위 높이와 양손 위치에서 시작",
-      "continuity_out": "제품과 트레이는 작업대 중앙 정지, 양손은 제품에서 떨어짐",
-      "reference_readiness": "ready",
-      "reference_actual_paths": [
-        "session6/views/CHAR-01.png",
-        "session6/views/BREAD-01.png",
-        "session6/views/PLACE-01.png"
-      ]
-    },
-    {
-      "id": "S05",
-      "clip_id": "C03",
-      "planning_status": "complete",
-      "global_start_seconds": 20,
-      "global_end_seconds": 25,
-      "local_start_seconds": 0,
-      "local_end_seconds": 5,
-      "duration_seconds": 5,
-      "global_start_frame": 480,
-      "global_end_frame": 600,
-      "local_start_frame": 0,
-      "local_end_frame": 120,
-      "framing": "9:16 3/4 제품 클로즈업. 윗면 봉우리 3개와 앞면 껍질이 보임",
-      "visible_subject_ids": [
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "offscreen_subject_ids": [
-        "CHAR-01"
-      ],
-      "action": "제품은 움직이지 않는다. 제빵사는 작업대 뒤 프레임 밖에 머문다",
-      "camera": "같은 앞면을 보는 아주 느린 전진, 동선 축을 넘지 않음",
-      "props": "동일 트레이의 같은 위치·각도, 손 접촉과 제품 변형 없음",
-      "sound_plan": [
-        "낮은 실내 환경음"
-      ],
-      "overlay_ids": [],
-      "reference_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "continuity_in": "S04의 작업대 중앙 위치 유지",
-      "continuity_out": "작업대와 제품 정지, 제빵사는 뒤쪽에 서 있음",
-      "reference_readiness": "ready",
-      "reference_actual_paths": [
-        "session6/views/CHAR-01.png",
-        "session6/views/BREAD-01.png",
-        "session6/views/PLACE-01.png"
-      ]
-    },
-    {
-      "id": "S06",
-      "clip_id": "C03",
-      "planning_status": "complete",
-      "global_start_seconds": 25,
-      "global_end_seconds": 30,
-      "local_start_seconds": 5,
-      "local_end_seconds": 10,
-      "duration_seconds": 5,
-      "global_start_frame": 600,
-      "global_end_frame": 720,
-      "local_start_frame": 120,
-      "local_end_frame": 240,
-      "framing": "9:16 미디엄 히어로. 제품과 트레이 전체는 중앙 아래, 제빵사 상반신은 뒤쪽 상단, 글자 공간은 위쪽 빈 벽",
-      "visible_subject_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "action": "제빵사가 장갑을 착용한 양손을 몸 옆으로 내린 채 식빵을 바라본다. 제품은 정지",
-      "camera": "같은 축의 고정 구도, 제품 앞면과 긴 축 유지",
-      "props": "동일 트레이가 같은 작업대 중앙에 정지, 오븐 문은 열려 있음",
-      "sound_plan": [
-        "낮은 실내 환경음",
-        "29.5–30초 환경음 페이드아웃"
-      ],
-      "overlay_ids": [
-        "TEXT-02"
-      ],
-      "reference_ids": [
-        "CHAR-01",
-        "BREAD-01",
-        "PLACE-01"
-      ],
-      "continuity_in": "S05의 제품 위치 유지, 넓어진 프레임에서 같은 제빵사 확인",
-      "continuity_out": "30초에 종료, 추가 엔딩 없음",
-      "reference_readiness": "ready",
-      "reference_actual_paths": [
-        "session6/views/CHAR-01.png",
-        "session6/views/BREAD-01.png",
-        "session6/views/PLACE-01.png"
-      ]
-    }
-  ],
-  "overlays": [
-    {
-      "id": "TEXT-01",
-      "text": "새벽 5시",
-      "global_start_seconds": 0,
-      "global_end_seconds": 3,
-      "global_start_frame": 0,
-      "global_end_frame": 72,
-      "placement": "상단 15–25% 빈 벽, 손과 얼굴을 피함",
-      "method": "planned_postproduction_text",
-      "actual_path": null
-    },
-    {
-      "id": "TEXT-02",
-      "text": "갓 구운 식빵 한 덩이.",
-      "global_start_seconds": 26,
-      "global_end_seconds": 30,
-      "global_start_frame": 624,
-      "global_end_frame": 720,
-      "placement": "상단 15–25% 빈 벽, 제품과 얼굴을 피함",
-      "method": "planned_postproduction_text",
-      "actual_path": null
-    }
-  ],
-  "reference_path_resolution": "reference_ids는 assets.actual_path로 해석. 확정 단독 컷 3장만 같은 순서로 전 클립에서 재사용. 시트·이전 장소 버전·얼굴 보조 크롭은 클립 참조에 포함하지 않음.",
-  "audio_status": "planning_only_no_files_selected_or_generated",
-  "actual_media_measurements": null,
-  "related_documents": [
-    "session6/brief.md",
-    "session6/script.md",
-    "session6/rules.md"
-  ],
-  "asset_manifest_path": "session6/asset-manifest.json",
-  "reference_review_path": "session6/review/references.md"
-}
+  {
+    "id": "S04",
+    "start_seconds": 13.758,
+    "end_seconds": 16.353,
+    "stage": "원리·한계·보완",
+    "dialogue": "그래서 이음부에 움직일 여유를 남겨 둡니다.",
+    "screen_description": "같은 바닥판 끝과 반대편 부재 사이에 확보한 틈의 근접 구도. 금속 테두리와 빈 공간의 경계를 선명하게 보여 준다. 개방 틈은 원리 설명용이며 완성된 모든 이음 형식을 뜻하지 않는다.",
+    "screen_type": "문제 부분의 근접 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Macro oblique view of two concrete deck ends separated by a deliberate narrow expansion gap, clear steel edge profiles, exposed empty clearance for a conceptual explanation, realistic small gap relative to roadway width.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "정지 이미지의 이음부 틈으로 카메라만 가까워진다.",
+    "sentence_count": 1,
+    "dialogue_characters": 19,
+    "estimated_read_seconds": 2.595,
+    "subtitle_cues": [
+      {
+        "start_seconds": 13.758,
+        "end_seconds": 14.714,
+        "text": "그래서 이음부에"
+      },
+      {
+        "start_seconds": 14.714,
+        "end_seconds": 16.353,
+        "text": "움직일 여유를 남겨 둡니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F2",
+      "F3"
+    ]
+  },
+  {
+    "id": "S05",
+    "start_seconds": 16.353,
+    "end_seconds": 21.544,
+    "stage": "원리·한계·보완",
+    "dialogue": "다리가 늘어나면 양쪽 사이 틈이 좁아지고요. 줄어들면 틈이 다시 넓어지는 겁니다.",
+    "screen_description": "핵심 클립 1. 단순화한 교량 단면에서 바깥쪽 지지 위치는 고정하고 양쪽 바닥판 끝이 온도 상승 시 틈 쪽으로 접근해 간격이 줄어든다. 온도 하강 시 후퇴해 간격이 커진다. 틈의 가로 폭 변화만 과장하고 수직 낙차나 파손은 만들지 않는다.",
+    "screen_type": "부재·재료의 관계를 드러내는 입체 설명 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Reference keyframe for an engineering animation: symmetric cutaway of two concrete deck ends with fixed remote supports, a small horizontal gap between the free inner ends, clearly legible geometry allowing the gap to narrow when decks elongate and widen when decks shorten, exaggerated displacement for clarity, no vertical displacement.",
+    "movement": "영상 클립",
+    "movement_detail": "카메라는 고정하고 부재 끝의 접근·후퇴를 영상으로 보여 준다.",
+    "sentence_count": 2,
+    "dialogue_characters": 35,
+    "estimated_read_seconds": 5.191,
+    "subtitle_cues": [
+      {
+        "start_seconds": 16.353,
+        "end_seconds": 17.309,
+        "text": "다리가 늘어나면"
+      },
+      {
+        "start_seconds": 17.309,
+        "end_seconds": 18.949,
+        "text": "양쪽 사이 틈이 좁아지고요."
+      },
+      {
+        "start_seconds": 18.949,
+        "end_seconds": 20.178,
+        "text": "줄어들면 틈이"
+      },
+      {
+        "start_seconds": 20.178,
+        "end_seconds": 21.544,
+        "text": "다시 넓어지는 겁니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F1",
+      "F3"
+    ]
+  },
+  {
+    "id": "S06",
+    "start_seconds": 21.544,
+    "end_seconds": 25.915,
+    "stage": "원리·한계·보완",
+    "dialogue": "틈이 달라져도 이 장치는 움직임을 받아 줍니다. 이게 바로 신축이음입니다.",
+    "screen_description": "동일 신축이음을 비스듬히 가까이 본다. 금속 테두리 안쪽에 정상 고무 스트립 씰이 결합된 완성 상태. 앞에서 본 틈과 장치가 같은 위치임을 난간과 포장 질감으로 연결한다.",
+    "screen_type": "문제 부분의 근접 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Macro view of an intact strip-seal bridge expansion joint, flexible black folded elastomer gland mechanically retained by two steel edge rails embedded in concrete, matching roadway and guardrail from the opening shot.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "정상 고무 씰과 금속 테두리를 따라 카메라만 짧게 이동한다.",
+    "sentence_count": 2,
+    "dialogue_characters": 32,
+    "estimated_read_seconds": 4.371,
+    "subtitle_cues": [
+      {
+        "start_seconds": 21.544,
+        "end_seconds": 22.91,
+        "text": "틈이 달라져도 이 장치는"
+      },
+      {
+        "start_seconds": 22.91,
+        "end_seconds": 24.276,
+        "text": "움직임을 받아 줍니다."
+      },
+      {
+        "start_seconds": 24.276,
+        "end_seconds": 25.915,
+        "text": "이게 바로 신축이음입니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F3",
+      "F5"
+    ]
+  },
+  {
+    "id": "S07",
+    "start_seconds": 25.915,
+    "end_seconds": 28.646,
+    "stage": "원리·한계·보완",
+    "dialogue": "그런데 틈만 두면 빗물과 이물질이 들어갑니다.",
+    "screen_description": "씰이 없는 비교용 개방 틈의 입체 단면. 윗면의 빗물, 모래와 작은 이물질, 아래쪽으로 이어지는 경로를 한 장의 정지 설명 이미지에 보여 준다. 물방울도 정지 상태로 유지한다.",
+    "screen_type": "부재·재료의 관계를 드러내는 입체 설명 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Static cutaway of an unsealed bridge expansion gap, frozen small raindrops and fine grit visible above and within the opening with the lower supporting region visible beneath, illustrative comparison condition, sharply differentiated concrete and steel.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "정지 이미지 위쪽 물·이물질에서 아래쪽 빈 경로로 카메라만 내려간다.",
+    "sentence_count": 1,
+    "dialogue_characters": 20,
+    "estimated_read_seconds": 2.731,
+    "subtitle_cues": [
+      {
+        "start_seconds": 25.915,
+        "end_seconds": 26.871,
+        "text": "그런데 틈만 두면"
+      },
+      {
+        "start_seconds": 26.871,
+        "end_seconds": 28.646,
+        "text": "빗물과 이물질이 들어갑니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F4"
+    ]
+  },
+  {
+    "id": "S08",
+    "start_seconds": 28.646,
+    "end_seconds": 36.022,
+    "stage": "원리·한계·보완",
+    "dialogue": "그래서 고무 씰로 틈을 막는 방식도 씁니다. 고무는 변형되면서 이음부 움직임을 따라가죠. 물과 이물질의 유입을 줄이는 겁니다.",
+    "screen_description": "핵심 클립 2. 같은 단면의 금속 테두리 사이에 고무 스트립 씰이 끼워진 상태로 시작한다. 양 끝이 접근하면 고무의 접힘이 깊어지고, 벌어지면 접힘이 펴진다. 고무를 단단한 충전재처럼 그리지 않는다. 윗면 물과 이물질이 씰 아래로 통과하지 않는 정상 작동 예를 보여 준다.",
+    "screen_type": "부재·재료의 관계를 드러내는 입체 설명 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Reference keyframe for an engineering animation: accurate cutaway of a flexible folded black elastomer strip seal securely retained in steel edge rails on two concrete deck ends, folds able to deepen and unfold as the gap varies, a few water beads and grit above the seal, dry lower region, intact flexible membrane rather than solid filler.",
+    "movement": "영상 클립",
+    "movement_detail": "고정 단면 카메라에서 양쪽 간격과 고무 접힘을 영상으로 변화시킨다.",
+    "sentence_count": 3,
+    "dialogue_characters": 54,
+    "estimated_read_seconds": 7.376,
+    "subtitle_cues": [
+      {
+        "start_seconds": 28.646,
+        "end_seconds": 29.602,
+        "text": "그래서 고무 씰로"
+      },
+      {
+        "start_seconds": 29.602,
+        "end_seconds": 31.105,
+        "text": "틈을 막는 방식도 씁니다."
+      },
+      {
+        "start_seconds": 31.105,
+        "end_seconds": 32.197,
+        "text": "고무는 변형되면서"
+      },
+      {
+        "start_seconds": 32.197,
+        "end_seconds": 33.837,
+        "text": "이음부 움직임을 따라가죠."
+      },
+      {
+        "start_seconds": 33.837,
+        "end_seconds": 35.066,
+        "text": "물과 이물질의 유입을"
+      },
+      {
+        "start_seconds": 35.066,
+        "end_seconds": 36.022,
+        "text": "줄이는 겁니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F4",
+      "F5"
+    ]
+  },
+  {
+    "id": "S09",
+    "start_seconds": 36.022,
+    "end_seconds": 41.076,
+    "stage": "원리·한계·보완",
+    "dialogue": "하지만 씰이 손상되면 아래로 물이 샙니다. 그래서 이음부는 점검과 보수가 필요합니다.",
+    "screen_description": "같은 이음부의 손상된 고무 씰과 그 아래 누수 흔적을 근접 정지 화면으로 보여 준다. 화면 가장자리에는 씰을 살피는 점검자의 장갑 낀 손과 교체용 씰 일부를 둔다. 손상 자체를 열팽창의 정상 결과로 묘사하지 않는다.",
+    "screen_type": "문제 부분의 근접 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Static close-up cutaway of a damaged bridge joint elastomer seal with a small tear and visible damp leakage staining beneath it, gloved inspection hand at the edge of frame and a small clean replacement seal segment nearby, realistic local maintenance issue without catastrophic damage.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "손상부에서 아래 누수 흔적으로 카메라만 내려간 뒤 점검 손까지 크롭을 넓힌다.",
+    "sentence_count": 2,
+    "dialogue_characters": 37,
+    "estimated_read_seconds": 5.054,
+    "subtitle_cues": [
+      {
+        "start_seconds": 36.022,
+        "end_seconds": 37.251,
+        "text": "하지만 씰이 손상되면"
+      },
+      {
+        "start_seconds": 37.251,
+        "end_seconds": 38.481,
+        "text": "아래로 물이 샙니다."
+      },
+      {
+        "start_seconds": 38.481,
+        "end_seconds": 39.437,
+        "text": "그래서 이음부는"
+      },
+      {
+        "start_seconds": 39.437,
+        "end_seconds": 41.076,
+        "text": "점검과 보수가 필요합니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F6"
+    ]
+  },
+  {
+    "id": "S10",
+    "start_seconds": 41.076,
+    "end_seconds": 45.0,
+    "stage": "결과 회수",
+    "dialogue": "처음 보인 이 틈은 다리가 온도에 맞춰 자유롭게 움직일 여유인 겁니다.",
+    "screen_description": "첫 샷과 같은 현대 도로교, 같은 이음부로 돌아간다. 정상 작동 상태의 고무 씰과 금속 테두리가 있는 틈을 전경 속에서 재확인하고 카메라만 천천히 멀어진다. 멀어져도 이음부가 보이게 구도를 유지한다.",
+    "screen_type": "대상 전체를 식별하는 전경",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Return to the exact bridge and expansion joint from the opening shot, slightly wider oblique establishing composition, intact steel edge rails and black folded elastomer seal clearly visible across the road, calm daylight, room for a gentle camera pullback.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "첫 구도에서 카메라만 천천히 뒤로 빠진다.",
+    "sentence_count": 1,
+    "dialogue_characters": 29,
+    "estimated_read_seconds": 3.924,
+    "subtitle_cues": [
+      {
+        "start_seconds": 41.076,
+        "end_seconds": 42.023,
+        "text": "처음 보인 이 틈은"
+      },
+      {
+        "start_seconds": 42.023,
+        "end_seconds": 43.106,
+        "text": "다리가 온도에 맞춰"
+      },
+      {
+        "start_seconds": 43.106,
+        "end_seconds": 45.0,
+        "text": "자유롭게 움직일 여유인 겁니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F1",
+      "F3"
+    ]
+  }
+]
