@@ -1,0 +1,491 @@
+{
+  "schema_version": "1.0",
+  "title": "새벽 5시의 식빵",
+  "status": "references_ready",
+  "scope": "reference_sheets_and_original_pixel_crops",
+  "generation_executed": {
+    "images": true,
+    "videos": false,
+    "audio": false
+  },
+  "format": {
+    "aspect_ratio": "9:16",
+    "duration_seconds": 30,
+    "fps": 24,
+    "total_frames": 720,
+    "clip_count": 3,
+    "shots_per_clip": 2,
+    "transition": "hard_cut",
+    "interval_convention": "start_inclusive_end_exclusive"
+  },
+  "constraints": {
+    "unique_people": 1,
+    "unique_products": 1,
+    "unique_locations": 1,
+    "spoken_dialogue": false,
+    "voiceover": false,
+    "music": false,
+    "reference_images_per_clip": 3,
+    "invented_brands_or_performance_claims": false
+  },
+  "assets": [
+    {
+      "id": "CHAR-01",
+      "role": "person",
+      "description": "40대 성인 제빵사 한 명",
+      "appearance": "40대 성인 제빵사, 짧은 짙은 갈색 머리, 아이보리 셔츠, 짙은 갈색 앞치마, 회색 장갑 한 쌍",
+      "planned_path": "session6/views/CHAR-01.png",
+      "actual_path": "session6/views/CHAR-01.png",
+      "file_exists": true,
+      "readiness": "ready",
+      "sheet_path": "session6/sheets/CHAR-01.png",
+      "review_status": "passed",
+      "dimensions": [
+        623,
+        623
+      ],
+      "sheet_dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "BREAD-01",
+      "role": "product",
+      "description": "봉우리 3개와 직사각 바닥의 황금빛 갈색 통식빵 한 덩이, 같은 무광 은색 트레이 포함",
+      "planned_path": "session6/views/BREAD-01.png",
+      "actual_path": "session6/views/BREAD-01.png",
+      "file_exists": true,
+      "readiness": "ready",
+      "sheet_path": "session6/sheets/BREAD-01.png",
+      "review_status": "passed",
+      "dimensions": [
+        623,
+        623
+      ],
+      "sheet_dimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "id": "PLACE-01",
+      "role": "location",
+      "description": "동일한 빵집 작업실. 왼쪽 뒤 오븐, 오른쪽 앞 목재 작업대, 오른쪽 뒤 푸른 새벽 창",
+      "planned_path": "session6/views/PLACE-01.png",
+      "actual_path": "session6/views/PLACE-01.png",
+      "file_exists": true,
+      "readiness": "ready",
+      "reuse_same_view_for_all_clips": true,
+      "sheet_path": "session6/sheets/PLACE-01.png",
+      "review_status": "passed",
+      "dimensions": [
+        623,
+        623
+      ],
+      "sheet_dimensions": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "id": "C01",
+      "global_start_seconds": 0,
+      "global_end_seconds": 10,
+      "duration_seconds": 10,
+      "global_start_frame": 0,
+      "global_end_frame": 240,
+      "shot_ids": [
+        "S01",
+        "S02"
+      ],
+      "local_shot_start_seconds": [
+        0,
+        5
+      ],
+      "ordered_reference_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "ordered_reference_planned_paths": [
+        "session6/views/CHAR-01.png",
+        "session6/views/BREAD-01.png",
+        "session6/views/PLACE-01.png"
+      ],
+      "reference_readiness": "ready",
+      "planning_status": "complete",
+      "planned_video_path": "session6/clips/clip1.mp4",
+      "actual_video_path": null,
+      "video_file_exists": false,
+      "video_status": "not_generated",
+      "ordered_reference_actual_paths": [
+        "session6/views/CHAR-01.png",
+        "session6/views/BREAD-01.png",
+        "session6/views/PLACE-01.png"
+      ]
+    },
+    {
+      "id": "C02",
+      "global_start_seconds": 10,
+      "global_end_seconds": 20,
+      "duration_seconds": 10,
+      "global_start_frame": 240,
+      "global_end_frame": 480,
+      "shot_ids": [
+        "S03",
+        "S04"
+      ],
+      "local_shot_start_seconds": [
+        0,
+        5
+      ],
+      "ordered_reference_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "ordered_reference_planned_paths": [
+        "session6/views/CHAR-01.png",
+        "session6/views/BREAD-01.png",
+        "session6/views/PLACE-01.png"
+      ],
+      "reference_readiness": "ready",
+      "planning_status": "complete",
+      "planned_video_path": "session6/clips/clip2.mp4",
+      "actual_video_path": null,
+      "video_file_exists": false,
+      "video_status": "not_generated",
+      "ordered_reference_actual_paths": [
+        "session6/views/CHAR-01.png",
+        "session6/views/BREAD-01.png",
+        "session6/views/PLACE-01.png"
+      ]
+    },
+    {
+      "id": "C03",
+      "global_start_seconds": 20,
+      "global_end_seconds": 30,
+      "duration_seconds": 10,
+      "global_start_frame": 480,
+      "global_end_frame": 720,
+      "shot_ids": [
+        "S05",
+        "S06"
+      ],
+      "local_shot_start_seconds": [
+        0,
+        5
+      ],
+      "ordered_reference_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "ordered_reference_planned_paths": [
+        "session6/views/CHAR-01.png",
+        "session6/views/BREAD-01.png",
+        "session6/views/PLACE-01.png"
+      ],
+      "reference_readiness": "ready",
+      "planning_status": "complete",
+      "planned_video_path": "session6/clips/clip3.mp4",
+      "actual_video_path": null,
+      "video_file_exists": false,
+      "video_status": "not_generated",
+      "ordered_reference_actual_paths": [
+        "session6/views/CHAR-01.png",
+        "session6/views/BREAD-01.png",
+        "session6/views/PLACE-01.png"
+      ]
+    }
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "clip_id": "C01",
+      "planning_status": "complete",
+      "global_start_seconds": 0,
+      "global_end_seconds": 5,
+      "local_start_seconds": 0,
+      "local_end_seconds": 5,
+      "duration_seconds": 5,
+      "global_start_frame": 0,
+      "global_end_frame": 120,
+      "local_start_frame": 0,
+      "local_end_frame": 120,
+      "framing": "9:16 상반신 미디엄. 왼쪽 오븐과 인물, 열린 문 안 식빵이 세로 중앙에 읽히게 구성",
+      "visible_subject_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "action": "제빵사가 오른손으로 오븐 문을 아래로 완전히 열고 안쪽 식빵을 바라본다",
+      "camera": "눈높이 고정, 동선 앞쪽 축 유지",
+      "props": "양손 회색 장갑 착용. 오른손은 문 손잡이, 왼손은 몸 가까이. 빵과 트레이는 오븐 선반에 정지",
+      "sound_plan": [
+        "오븐 문 열림",
+        "낮은 실내 환경음"
+      ],
+      "overlay_ids": [
+        "TEXT-01"
+      ],
+      "reference_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "continuity_out": "오븐 문 완전 열림, 오른손이 손잡이를 놓고 양손을 트레이로 향한다",
+      "reference_readiness": "ready",
+      "reference_actual_paths": [
+        "session6/views/CHAR-01.png",
+        "session6/views/BREAD-01.png",
+        "session6/views/PLACE-01.png"
+      ]
+    },
+    {
+      "id": "S02",
+      "clip_id": "C01",
+      "planning_status": "complete",
+      "global_start_seconds": 5,
+      "global_end_seconds": 10,
+      "local_start_seconds": 5,
+      "local_end_seconds": 10,
+      "duration_seconds": 5,
+      "global_start_frame": 120,
+      "global_end_frame": 240,
+      "local_start_frame": 120,
+      "local_end_frame": 240,
+      "framing": "9:16 트레이 높이 제품 클로즈업. 같은 인물의 양손과 소매, 얼굴은 프레임 위",
+      "visible_subject_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "action": "양손으로 트레이 좌우 테두리를 잡아 수평으로 꺼내 허리 높이에서 지지",
+      "camera": "제품을 따라 짧게 후진, 같은 앞면과 화면 축 유지",
+      "props": "트레이는 오븐 선반에서 완전히 나온다. 식빵은 트레이 중앙 고정, 문은 열린 상태",
+      "sound_plan": [
+        "트레이가 선반을 스치는 소리",
+        "낮은 실내 환경음"
+      ],
+      "overlay_ids": [],
+      "reference_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "continuity_in": "S01의 열린 문과 트레이 위치 유지",
+      "continuity_out": "오븐 밖 허리 높이의 트레이를 양손으로 수평 지지",
+      "reference_readiness": "ready",
+      "reference_actual_paths": [
+        "session6/views/CHAR-01.png",
+        "session6/views/BREAD-01.png",
+        "session6/views/PLACE-01.png"
+      ]
+    },
+    {
+      "id": "S03",
+      "clip_id": "C02",
+      "planning_status": "complete",
+      "global_start_seconds": 10,
+      "global_end_seconds": 15,
+      "local_start_seconds": 0,
+      "local_end_seconds": 5,
+      "duration_seconds": 5,
+      "global_start_frame": 240,
+      "global_end_frame": 360,
+      "local_start_frame": 0,
+      "local_end_frame": 120,
+      "framing": "9:16 몸통과 트레이 중심 미디엄, 오른쪽 작업대까지 보이는 동선",
+      "visible_subject_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "action": "양손으로 트레이를 든 제빵사가 왼쪽에서 오른쪽으로 두 걸음 이동해 작업대 바로 위에서 멈춘다",
+      "camera": "같은 축에서 느린 오른쪽 팬",
+      "props": "식빵은 같은 트레이 중앙, 트레이는 수평, 양손 테두리 지지, 오븐 문 열림 유지",
+      "sound_plan": [
+        "두 번의 짧은 발걸음",
+        "낮은 실내 환경음"
+      ],
+      "overlay_ids": [],
+      "reference_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "continuity_in": "S02의 허리 높이와 손 위치에서 시작",
+      "continuity_out": "트레이가 작업대 중앙 바로 위에 떠 있고 양손이 지지",
+      "reference_readiness": "ready",
+      "reference_actual_paths": [
+        "session6/views/CHAR-01.png",
+        "session6/views/BREAD-01.png",
+        "session6/views/PLACE-01.png"
+      ]
+    },
+    {
+      "id": "S04",
+      "clip_id": "C02",
+      "planning_status": "complete",
+      "global_start_seconds": 15,
+      "global_end_seconds": 20,
+      "local_start_seconds": 5,
+      "local_end_seconds": 10,
+      "duration_seconds": 5,
+      "global_start_frame": 360,
+      "global_end_frame": 480,
+      "local_start_frame": 120,
+      "local_end_frame": 240,
+      "framing": "9:16 작업대 높이 제품과 양손 클로즈업, 트레이 접촉면이 보임",
+      "visible_subject_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "action": "트레이를 수직으로 내려놓고 잠시 지지한 뒤 양손을 떼어 프레임 위로 물린다",
+      "camera": "같은 앞면 방향에서 고정",
+      "props": "17초 전후 트레이가 목재 상판 중앙에 닿음. 빵과 트레이는 회전 없이 정지. 장갑은 착용 유지",
+      "sound_plan": [
+        "17초 전후 트레이가 작업대에 닿는 소리",
+        "낮은 실내 환경음"
+      ],
+      "overlay_ids": [],
+      "reference_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "continuity_in": "S03 끝의 작업대 위 높이와 양손 위치에서 시작",
+      "continuity_out": "제품과 트레이는 작업대 중앙 정지, 양손은 제품에서 떨어짐",
+      "reference_readiness": "ready",
+      "reference_actual_paths": [
+        "session6/views/CHAR-01.png",
+        "session6/views/BREAD-01.png",
+        "session6/views/PLACE-01.png"
+      ]
+    },
+    {
+      "id": "S05",
+      "clip_id": "C03",
+      "planning_status": "complete",
+      "global_start_seconds": 20,
+      "global_end_seconds": 25,
+      "local_start_seconds": 0,
+      "local_end_seconds": 5,
+      "duration_seconds": 5,
+      "global_start_frame": 480,
+      "global_end_frame": 600,
+      "local_start_frame": 0,
+      "local_end_frame": 120,
+      "framing": "9:16 3/4 제품 클로즈업. 윗면 봉우리 3개와 앞면 껍질이 보임",
+      "visible_subject_ids": [
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "offscreen_subject_ids": [
+        "CHAR-01"
+      ],
+      "action": "제품은 움직이지 않는다. 제빵사는 작업대 뒤 프레임 밖에 머문다",
+      "camera": "같은 앞면을 보는 아주 느린 전진, 동선 축을 넘지 않음",
+      "props": "동일 트레이의 같은 위치·각도, 손 접촉과 제품 변형 없음",
+      "sound_plan": [
+        "낮은 실내 환경음"
+      ],
+      "overlay_ids": [],
+      "reference_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "continuity_in": "S04의 작업대 중앙 위치 유지",
+      "continuity_out": "작업대와 제품 정지, 제빵사는 뒤쪽에 서 있음",
+      "reference_readiness": "ready",
+      "reference_actual_paths": [
+        "session6/views/CHAR-01.png",
+        "session6/views/BREAD-01.png",
+        "session6/views/PLACE-01.png"
+      ]
+    },
+    {
+      "id": "S06",
+      "clip_id": "C03",
+      "planning_status": "complete",
+      "global_start_seconds": 25,
+      "global_end_seconds": 30,
+      "local_start_seconds": 5,
+      "local_end_seconds": 10,
+      "duration_seconds": 5,
+      "global_start_frame": 600,
+      "global_end_frame": 720,
+      "local_start_frame": 120,
+      "local_end_frame": 240,
+      "framing": "9:16 미디엄 히어로. 제품과 트레이 전체는 중앙 아래, 제빵사 상반신은 뒤쪽 상단, 글자 공간은 위쪽 빈 벽",
+      "visible_subject_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "action": "제빵사가 장갑을 착용한 양손을 몸 옆으로 내린 채 식빵을 바라본다. 제품은 정지",
+      "camera": "같은 축의 고정 구도, 제품 앞면과 긴 축 유지",
+      "props": "동일 트레이가 같은 작업대 중앙에 정지, 오븐 문은 열려 있음",
+      "sound_plan": [
+        "낮은 실내 환경음",
+        "29.5–30초 환경음 페이드아웃"
+      ],
+      "overlay_ids": [
+        "TEXT-02"
+      ],
+      "reference_ids": [
+        "CHAR-01",
+        "BREAD-01",
+        "PLACE-01"
+      ],
+      "continuity_in": "S05의 제품 위치 유지, 넓어진 프레임에서 같은 제빵사 확인",
+      "continuity_out": "30초에 종료, 추가 엔딩 없음",
+      "reference_readiness": "ready",
+      "reference_actual_paths": [
+        "session6/views/CHAR-01.png",
+        "session6/views/BREAD-01.png",
+        "session6/views/PLACE-01.png"
+      ]
+    }
+  ],
+  "overlays": [
+    {
+      "id": "TEXT-01",
+      "text": "새벽 5시",
+      "global_start_seconds": 0,
+      "global_end_seconds": 3,
+      "global_start_frame": 0,
+      "global_end_frame": 72,
+      "placement": "상단 15–25% 빈 벽, 손과 얼굴을 피함",
+      "method": "planned_postproduction_text",
+      "actual_path": null
+    },
+    {
+      "id": "TEXT-02",
+      "text": "갓 구운 식빵 한 덩이.",
+      "global_start_seconds": 26,
+      "global_end_seconds": 30,
+      "global_start_frame": 624,
+      "global_end_frame": 720,
+      "placement": "상단 15–25% 빈 벽, 제품과 얼굴을 피함",
+      "method": "planned_postproduction_text",
+      "actual_path": null
+    }
+  ],
+  "reference_path_resolution": "reference_ids는 assets.actual_path로 해석. 확정 단독 컷 3장만 같은 순서로 전 클립에서 재사용. 시트·이전 장소 버전·얼굴 보조 크롭은 클립 참조에 포함하지 않음.",
+  "audio_status": "planning_only_no_files_selected_or_generated",
+  "actual_media_measurements": null,
+  "related_documents": [
+    "session6/brief.md",
+    "session6/script.md",
+    "session6/rules.md"
+  ],
+  "asset_manifest_path": "session6/asset-manifest.json",
+  "reference_review_path": "session6/review/references.md"
+}
