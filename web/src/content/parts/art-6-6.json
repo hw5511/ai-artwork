@@ -1,0 +1,268 @@
+{
+  "id": "art-6-6",
+  "title": "소리 선택",
+  "summary": "19:20~19:35 · earshot로 음악 1곡과 효과음",
+  "slides": [
+    {
+      "id": "art-6-6-1",
+      "title": "고른 소리",
+      "template": "table",
+      "columns": [
+        "시각",
+        "소리",
+        "파일",
+        "라이선스",
+        "근거"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "전체 30초",
+            "Dream Culture · Kevin MacLeod",
+            "bgm-dream-culture-30s.wav",
+            "CC BY 4.0 · 크레딧 필수",
+            "z 3.79 · −23.4 LUFS"
+          ]
+        },
+        {
+          "cells": [
+            "C01 0.7~2.0초",
+            "오븐 문 열림 · edhutschek",
+            "sfx-oven-open.wav",
+            "CC0",
+            "z 3.28"
+          ]
+        },
+        {
+          "cells": [
+            "C01 4.0~5.8초",
+            "트레이 인출 마찰 · ingeverschatse",
+            "sfx-tray-slide.wav",
+            "CC0",
+            "z 5.06"
+          ]
+        },
+        {
+          "cells": [
+            "C02 0.7~3.3초",
+            "발걸음 2테이크 · SpliceSound",
+            "sfx-footstep-a.wav · sfx-footstep-b.wav",
+            "CC0",
+            "z 4.59 · 4.23"
+          ]
+        },
+        {
+          "cells": [
+            "C02 약 4.1초",
+            "트레이 놓는 소리 · MilanKovanda",
+            "sfx-tray-set-down.wav",
+            "CC0",
+            "z 2.30 · 약한 일치"
+          ]
+        },
+        {
+          "cells": [
+            "C02 7.4~7.7초",
+            "트레이 놓는 소리 · MilanKovanda",
+            "sfx-tray-set-down.wav",
+            "CC0",
+            "위와 같음"
+          ]
+        },
+        {
+          "cells": [
+            "C03 5.7~6.1초",
+            "트레이 놓는 소리 · MilanKovanda",
+            "sfx-tray-set-down.wav",
+            "CC0",
+            "위와 같음"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "시각 기준",
+          "body": "각 클립 안의 초 · 클립 10.125초 · 실제 컷 C01 6.208초, C02 5.292초, C03 5.083초 · 대본의 5초 간격과 다름"
+        },
+        {
+          "n": 2,
+          "head": "음악 크레딧",
+          "body": "CC BY 4.0 · 작성자·출처·라이선스 링크·수정 내용 표기 필수 · 공개할 때 영상 또는 설명에 표시"
+        },
+        {
+          "n": 3,
+          "head": "효과음 출처",
+          "body": "Freesound HQ MP3 미리보기를 WAV로 변환 · 손실 압축 그대로 · CC0 표기는 선택"
+        },
+        {
+          "n": 4,
+          "head": "음악만 나오는 구간",
+          "body": "C01 6.208~10.125초 · C03 0~5.083초 · 영상에는 아직 넣지 않음"
+        }
+      ]
+    },
+    {
+      "id": "art-6-6-2",
+      "title": "소리 고르기 프롬프트",
+      "template": "table",
+      "columns": [
+        "항목",
+        "리허설 결과"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "입력",
+            "script.md · shots.json · clips"
+          ]
+        },
+        {
+          "cells": [
+            "도구",
+            "5회차 earshot · 새 설치 없음"
+          ]
+        },
+        {
+          "cells": [
+            "저장 위치",
+            "remotion/public/sound · credits.md"
+          ]
+        },
+        {
+          "cells": [
+            "Codex 실측",
+            "11.3분 (675.0초)"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "earshot 재사용",
+          "body": "5회차에 설치한 환경 그대로 · 새 설치와 모델 다운로드 없음"
+        },
+        {
+          "n": 2,
+          "head": "사용 조건",
+          "body": "CC0 가능 · CC BY는 크레딧 필수 · 출처 페이지에서 확인 못 한 소리는 쓰지 않음 · 제목·작성자·주소·라이선스는 credits.md에 기록"
+        },
+        {
+          "n": 3,
+          "head": "점검 항목 약한 일치",
+          "body": "트레이 놓는 소리 z 2.30 · 약한 일치 · 실제 작업대 소리인지 들어서 확인"
+        },
+        {
+          "n": 4,
+          "head": "점검 항목 실행 환경",
+          "body": "첫 시도 336.1초는 earshot이 PyTorch를 못 불러 듣지 못함 · 리허설 PC의 WinError 4551 · 수강생 PC에서도 날 수 있음 · 수업용 PC는 미검증 · 11.3분은 재실행한 두 번째 시도 · 사람이 들어 본 확인 아님"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] ad-30s 스킬과 earshot으로 session6 영상에 맞는 배경음악 1곡과 효과음을 직접 골라줘. 아직 영상에 넣지는 마.\r\n[입력] session6/script.md, session6/shots.json, session6/clips\r\n[규칙]\r\n- 영상 분위기를 한 줄로 정하고, 샷마다 필요한 소리를 표로 정해줘. 화면과 상관없는 소리는 넣지 마.\r\n- 상업 영상에 써도 되는 라이선스만 써줘. 사용 조건과 크레딧 필요 여부는 출처 페이지에서 확인해 적고, 확인 못 한 소리는 쓰지 마.\r\n- earshot은 5회차에 설치한 것(session5/.venv-earshot, session5/earshot)을 그대로 써. 새로 설치하거나 모델을 다시 받지 마.\r\n- 고른 소리는 earshot으로 직접 들어 보고 분석한 결과를 근거로 해줘.\r\n- 파일은 session6/remotion/public/sound, 제목·작성자·주소·라이선스·크레딧 문구는 같은 폴더 credits.md에 적어줘.\r\n[출력] 시각, 소리, 파일, 라이선스, 고른 이유 표를 보여줘.\r\n",
+            "desc": "소리 고르기"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session6/student-prompts/05-sound.txt",
+            "text": "05-sound 프롬프트 원문"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-6-6-3",
+      "title": "소리 파일 실측",
+      "template": "table",
+      "columns": [
+        "파일",
+        "길이",
+        "LUFS",
+        "True peak",
+        "진짜 녹음 확률"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "bgm-dream-culture-30s.wav",
+            "30.000초",
+            "−23.4",
+            "−8.6 dBTP",
+            "0.815"
+          ]
+        },
+        {
+          "cells": [
+            "sfx-oven-open.wav",
+            "1.256초",
+            "−29.9",
+            "−11.1 dBTP",
+            "0.989"
+          ]
+        },
+        {
+          "cells": [
+            "sfx-tray-slide.wav",
+            "1.158초",
+            "−19.1",
+            "−9.0 dBTP",
+            "0.993"
+          ]
+        },
+        {
+          "cells": [
+            "sfx-tray-set-down.wav",
+            "0.900초",
+            "−38.7",
+            "−11.9 dBTP",
+            "0.793"
+          ]
+        },
+        {
+          "cells": [
+            "sfx-footstep-a.wav",
+            "0.909초",
+            "−37.6",
+            "−9.0 dBTP",
+            "0.967"
+          ]
+        },
+        {
+          "cells": [
+            "sfx-footstep-b.wav",
+            "0.458초",
+            "−32.4",
+            "−9.0 dBTP",
+            "0.933"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "측정 대상",
+          "body": "잘라 내고 음량을 조정한 준비 파일 · 48kHz 24비트 · 완성 믹스 값 아님"
+        },
+        {
+          "n": 2,
+          "head": "음악 음량",
+          "body": "원곡 첫 30초를 −6dB 낮춘 뒤의 값"
+        },
+        {
+          "n": 3,
+          "head": "짧은 효과음의 LUFS",
+          "body": "길이와 게이팅 영향을 받음 · 서로의 체감 음량이 아님"
+        },
+        {
+          "n": 4,
+          "head": "진짜 녹음 확률",
+          "body": "전부 real or pro-produced 판정 · 가장 낮은 것은 트레이 놓는 소리 0.793"
+        }
+      ]
+    }
+  ]
+}

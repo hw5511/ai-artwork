@@ -1,0 +1,269 @@
+{
+  "id": "art-6-7",
+  "title": "Remotion 편집",
+  "summary": "19:35~20:00 · 편집·소리 합성·업로드 월",
+  "slides": [
+    {
+      "id": "art-6-7-1",
+      "title": "편집 프롬프트",
+      "template": "table",
+      "columns": [
+        "항목",
+        "리허설 결과"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "입력",
+            "clips · shots.json · public/sound"
+          ]
+        },
+        {
+          "cells": [
+            "도구",
+            "ad-30s 스킬 · remotion-best-practices"
+          ]
+        },
+        {
+          "cells": [
+            "저장 위치",
+            "session6/final/my-ad.mp4"
+          ]
+        },
+        {
+          "cells": [
+            "Codex 실측",
+            "21.1분 (1264.5초)"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "스킬 읽기",
+          "body": "remotion-best-practices 스킬을 읽고 따라 편집"
+        },
+        {
+          "n": 2,
+          "head": "음량",
+          "body": "전체 약 −14 LUFS · 트루피크 −1.5 dBTP 이하"
+        },
+        {
+          "n": 3,
+          "head": "크레딧",
+          "body": "마지막 6초 · 화면 아래 작은 한 줄 · 어두운 상자 없음"
+        },
+        {
+          "n": 4,
+          "head": "서버 종료",
+          "body": "끝나면 Remotion Studio 같은 서버 종료"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] ad-30s 스킬로 Remotion 편집 전체를 해서 session6/final/my-ad.mp4를 만들어줘. 세로 9:16, 1080×1920, 30초, 소리 포함이야.\n[입력] session6/clips, shots.json, remotion/public/sound(음악, 효과음, credits.md)\n[규칙]\n- remotion-best-practices 스킬을 읽고 따라줘. 샷 순서와 길이는 shots.json과 같게, 핵심이 화면 가운데 오게 해줘.\n- 영상 속 인물이 하지 않은 말이나 없는 제품 성능을 글자로 넣지 마.\n- 음악은 효과음과 원본 소리보다 크지 않게. 전체 음량은 약 −14 LUFS, 트루피크 −1.5 dBTP 이하.\n- 음악 크레딧은 마지막 6초 동안 화면 아래쪽에 작은 글자 한 줄(곡 제목, 작성자, 라이선스 이름)만. 어두운 상자는 쓰지 마.\n[마무리] 끝나면 Remotion Studio 같은 서버는 꺼줘.\n[확인] 렌더하고 ffprobe로 길이, 해상도, fps, 소리를 재줘. 2초 간격 격자를 session6/final/review에 저장해서 직접 열어 보고, 잘린 핵심이나 겹친 글자가 있으면 고쳐 다시 렌더해줘.\n[출력] 측정값과 샷별 소스·소리 표를 보여줘.\n",
+            "desc": "Remotion 편집"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-6-7-2",
+      "title": "최종 확인",
+      "template": "table",
+      "columns": [
+        "항목",
+        "리허설 결과"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "길이",
+            "30.000초"
+          ]
+        },
+        {
+          "cells": [
+            "해상도 · fps",
+            "1080×1920 · 24fps · 720프레임"
+          ]
+        },
+        {
+          "cells": [
+            "코덱",
+            "H.264 · AAC 48kHz 스테레오"
+          ]
+        },
+        {
+          "cells": [
+            "음량",
+            "−14.11 LUFS (earshot −14.0)"
+          ]
+        },
+        {
+          "cells": [
+            "트루피크",
+            "−2.26 dBTP (earshot −2.3)"
+          ]
+        },
+        {
+          "cells": [
+            "크레딧 위치",
+            "24.000~30.000초 (마지막 6초)"
+          ]
+        },
+        {
+          "cells": [
+            "디코딩 오류",
+            "0"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "측정 도구",
+          "body": "ffprobe · FFmpeg BS.1770 · earshot 독립 측정"
+        },
+        {
+          "n": 2,
+          "head": "원본 보존",
+          "body": "원본 영상 SHA-256 재대조 모두 일치"
+        },
+        {
+          "n": 3,
+          "head": "샷 구성",
+          "body": "6샷 × 5초 · 클립 3개 · 효과음 파일 5개 · 원본 소리"
+        },
+        {
+          "n": 4,
+          "head": "Codex 실측",
+          "body": "21.1분"
+        }
+      ]
+    },
+    {
+      "id": "art-6-7-3",
+      "title": "완성본",
+      "template": "screen",
+      "screen": {
+        "kind": "video",
+        "src": "/downloads/session6/demo/my-ad.mp4",
+        "poster": "/lectures/images/session6/final-poster.jpg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "완성본 사양",
+          "body": "1080×1920 · 30초 · 24fps · H.264 · AAC 48kHz"
+        },
+        {
+          "n": 2,
+          "head": "자막",
+          "body": "새벽 5시 (처음 3초) · 갓 구운 식빵 한 덩이."
+        },
+        {
+          "n": 3,
+          "head": "크레딧",
+          "body": "마지막 6초 · Dream Culture · Kevin MacLeod · CC BY 4.0"
+        },
+        {
+          "n": 4,
+          "head": "소리 확인",
+          "body": "측정값만 확인 · 사람이 들어 본 확인 아님"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "download",
+            "href": "/downloads/session6/demo/my-ad.mp4",
+            "text": "리허설 완성본"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-6-7-4",
+      "title": "점검 항목",
+      "template": "table",
+      "columns": [
+        "항목",
+        "확인한 것"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "청취",
+            "사람 청취 전"
+          ]
+        },
+        {
+          "cells": [
+            "화질",
+            "480×864 소스를 1080×1920으로 확대 · 디테일 복원 없음"
+          ]
+        },
+        {
+          "cells": [
+            "clip2 시작 장면",
+            "대본과 다름 · 원본은 오븐 앞 옆모습으로 시작"
+          ]
+        },
+        {
+          "cells": [
+            "자막 위치",
+            "대본은 상단 안전 영역 · 두 번째 자막은 하단"
+          ]
+        },
+        {
+          "cells": [
+            "크레딧 대비",
+            "흰 글자가 밝은 작업대 위에서 약함"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "clip2",
+          "body": "완성본은 원본 1.333초부터 사용"
+        },
+        {
+          "n": 2,
+          "head": "자막",
+          "body": "새벽 5시는 상단 · 갓 구운 식빵 한 덩이.는 하단"
+        },
+        {
+          "n": 3,
+          "head": "업로드",
+          "body": "작품 제목 · 설명에 description.txt의 크레딧"
+        },
+        {
+          "n": 4,
+          "head": "설명 글",
+          "body": "AI 영상 표시 · 음악과 효과음 크레딧 원문"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "download",
+            "href": "/downloads/session6/example/description.txt",
+            "text": "실제 description.txt"
+          },
+          {
+            "kind": "link",
+            "href": "https://wall.woohee.me",
+            "text": "수업 업로드 월"
+          }
+        ]
+      }
+    }
+  ]
+}

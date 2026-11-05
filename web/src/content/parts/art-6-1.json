@@ -1,0 +1,137 @@
+{
+  "id": "art-6-1",
+  "title": "오늘 만들 것",
+  "summary": "18:00~18:05 · 한 줄 주제로 30초 광고",
+  "slides": [
+    {
+      "id": "art-6-1-1",
+      "title": "완성본",
+      "template": "screen",
+      "screen": {
+        "kind": "video",
+        "src": "/downloads/session6/demo/my-ad.mp4",
+        "poster": "/lectures/images/session6/final-poster.jpg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "완성본 사양",
+          "body": "1080×1920 · 30초 · 소리 포함"
+        },
+        {
+          "n": 2,
+          "head": "입력",
+          "body": "내 주제 한 줄"
+        },
+        {
+          "n": 3,
+          "head": "스킬 하나",
+          "body": "ad-30s 스킬 하나로 대본부터 소리까지"
+        },
+        {
+          "n": 4,
+          "head": "음악 표기",
+          "body": "Dream Culture · Kevin MacLeod · CC BY 4.0"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "link",
+            "href": "https://wall.woohee.me",
+            "text": "수업 업로드 월"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session6/example.zip",
+            "text": "리허설 결과 파일 묶음"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-6-1-2",
+      "title": "오늘 순서",
+      "template": "table",
+      "columns": [
+        "시각",
+        "단계",
+        "결과 파일"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "18:00",
+            "오늘 만들 것",
+            "없음"
+          ]
+        },
+        {
+          "cells": [
+            "18:05",
+            "스킬 만들기",
+            ".agents/skills/ad-30s/SKILL.md"
+          ]
+        },
+        {
+          "cells": [
+            "18:20",
+            "내 주제 한 줄",
+            "script.md · shots.json · rules.md"
+          ]
+        },
+        {
+          "cells": [
+            "18:30",
+            "시트·단독 컷",
+            "session6/sheets · views"
+          ]
+        },
+        {
+          "cells": [
+            "18:45",
+            "H3 클립",
+            "session6/prompts · clips"
+          ]
+        },
+        {
+          "cells": [
+            "19:20",
+            "소리 선택",
+            "session6/remotion/public/sound"
+          ]
+        },
+        {
+          "cells": [
+            "19:35",
+            "Remotion 편집",
+            "session6/final/my-ad.mp4"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "Codex 실측",
+          "body": "합계 56.8분 · 단계별 실행 시간 합"
+        },
+        {
+          "n": 2,
+          "head": "비용",
+          "body": "Comfy Cloud 클립 생성만 크레딧 · 나머지 Codex 구독 · 견적 확인 뒤 승인"
+        },
+        {
+          "n": 3,
+          "head": "작업 폴더",
+          "body": "4~5회차 작업 폴더 필요"
+        },
+        {
+          "n": 4,
+          "head": "예시 주제",
+          "body": "새벽 5시 빵집 · 수업에서는 내 주제로 바꾸기"
+        }
+      ]
+    }
+  ]
+}

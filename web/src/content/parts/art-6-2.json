@@ -1,0 +1,154 @@
+{
+  "id": "art-6-2",
+  "title": "스킬 만들기",
+  "summary": "18:05~18:20 · Codex가 4~5회차 폴더를 읽고 광고 제작 스킬 ad-30s 작성",
+  "slides": [
+    {
+      "id": "art-6-2-1",
+      "title": "ad-30s 스킬 구조",
+      "template": "table",
+      "columns": [
+        "단계",
+        "입력",
+        "출력",
+        "확인"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "1 대본·샷 목록",
+            "한 줄 주제",
+            "brief.md script.md rules.md shots.json",
+            "30초 합계 · 대본과 JSON 대조"
+          ]
+        },
+        {
+          "cells": [
+            "2 시트·단독 컷",
+            "script · rules · shots",
+            "sheets/ views/ asset-manifest.json",
+            "시트와 컷을 열어 외형 대조"
+          ]
+        },
+        {
+          "cells": [
+            "3 H3 클립",
+            "views/ 단독 컷",
+            "prompts/ clips/clip1.mp4",
+            "견적 승인 · ffprobe 측정"
+          ]
+        },
+        {
+          "cells": [
+            "4 Remotion 편집",
+            "clips/ 실제 영상",
+            "edit.json remotion/",
+            "컷 앞뒤 · 2초 간격 격자"
+          ]
+        },
+        {
+          "cells": [
+            "5 earshot 소리",
+            "edit.json · 영상",
+            "final/ad-30s.mp4",
+            "약 −14 LUFS · 30.000초"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "원래 스킬 호출",
+          "body": "3단계 comfy-cli · 4단계 remotion-best-practices · 5단계 earshot"
+        },
+        {
+          "n": 2,
+          "head": "작업 범위",
+          "body": "session6/ 폴더 안에서만 작업 · 기존 자료는 읽기만"
+        },
+        {
+          "n": 3,
+          "head": "크레딧 승인",
+          "body": "영상 생성 전 견적 제시 · 승인 후에만 실행"
+        },
+        {
+          "n": 4,
+          "head": "기본값",
+          "body": "세로 9:16 · 480p 먼저 · 10초 클립 3개 · 최종 1080×1920 24fps"
+        }
+      ]
+    },
+    {
+      "id": "art-6-2-2",
+      "title": "스킬 만들기 프롬프트",
+      "template": "table",
+      "columns": [
+        "항목",
+        "리허설 결과"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "입력 폴더",
+            "session4 · session5 · .agents/skills"
+          ]
+        },
+        {
+          "cells": [
+            "만든 파일",
+            ".agents/skills/ad-30s/SKILL.md"
+          ]
+        },
+        {
+          "cells": [
+            "순서",
+            "대본·샷 → 시트·컷 → H3 → Remotion → earshot"
+          ]
+        },
+        {
+          "cells": [
+            "Codex 실측",
+            "9.7분 (581.1초)"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "읽는 자료",
+          "body": "4회차 대본·시트·클립 폴더 · 5회차 프롬프트·편집 파일 · 기존 스킬 3개"
+        },
+        {
+          "n": 2,
+          "head": "일반화",
+          "body": "공원·남성·반려견 같은 한 작품 내용은 제외 · 어떤 주제에도 적용"
+        },
+        {
+          "n": 3,
+          "head": "확인 항목",
+          "body": "name · description 형식 · 원래 스킬을 부르는 위치"
+        },
+        {
+          "n": 4,
+          "head": "Codex 실측",
+          "body": "9.7분 · 새 codex exec 한 번"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] 4회차와 5회차에 내가 손으로 한 30초 광고 제작을 Codex 스킬 하나로 묶어줘. 이름은 ad-30s.\n[입력] session4/(script.md, rules.md, shots.json, prompts, cloud, sheets, views), session5/(student-prompts, example, edit), .agents/skills 안의 comfy-cli, remotion-best-practices, earshot\n[작업]\n1) 위 폴더와 프롬프트를 읽고 내가 어떤 순서로 무엇을 했는지 파악해줘.\n2) .agents/skills/ad-30s/SKILL.md를 만들어줘. 순서는 대본·샷 목록 → 인물·제품·장소 시트와 단독 컷 → H3 클립 → Remotion 편집 → earshot 소리야.\n3) 단계마다 입력, 출력 경로, 확인 방법, 하지 말 것을 적어줘. 4회차의 공원·남성·반려견처럼 한 작품에만 맞는 내용은 빼고 어떤 주제에도 쓰이게 일반화해줘.\n4) 한 줄 주제를 받으면 session6/ 폴더 안에서만 일하게 해줘. 클립은 세로 9:16, 480p로 먼저 만들고, 영상 생성은 크레딧 견적을 보여주고 내 승인을 받은 뒤에만 하게 해줘. 작업이 끝나면 Remotion Studio 같은 서버는 끄게 해줘.\n[확인] SKILL.md 앞부분의 name과 description이 Codex 스킬 형식인지 확인하고, 원래 스킬(comfy-cli, remotion-best-practices, earshot)을 어디서 부르는지 적었는지 봐줘. 새 파일은 .agents/skills/ad-30s 안에만 만들어.\n[출력] 만든 파일과 단계 요약을 보여줘.",
+            "desc": "ad-30s 스킬 만들기"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session6/student-prompts/01-skill.txt",
+            "text": "01-skill 프롬프트 원문"
+          }
+        ]
+      }
+    }
+  ]
+}

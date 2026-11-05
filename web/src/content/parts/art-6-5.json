@@ -1,0 +1,371 @@
+{
+  "id": "art-6-5",
+  "title": "H3 클립",
+  "summary": "18:45~19:20 · 클립 3개, 세로 9:16, 클립당 10초",
+  "slides": [
+    {
+      "id": "art-6-5-1",
+      "title": "H3 프롬프트·참조",
+      "template": "table",
+      "columns": [
+        "항목",
+        "리허설 결과"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "프롬프트",
+            "clip1.txt · clip2.txt · clip3.txt · 영어"
+          ]
+        },
+        {
+          "cells": [
+            "참조 목록",
+            "references.json · 클립별 배열"
+          ]
+        },
+        {
+          "cells": [
+            "참조 순서",
+            "1 CHAR-01 · 2 BREAD-01 · 3 PLACE-01"
+          ]
+        },
+        {
+          "cells": [
+            "샷 시작",
+            "0초 · 5초 · 클립 10초"
+          ]
+        },
+        {
+          "cells": [
+            "Codex 실측",
+            "2.9분 (171.0초)"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "프롬프트 3개",
+          "body": "subject_definitions부터 non_diegetic_music까지 · 클립 1 = S01+S02, 클립 2 = S03+S04, 클립 3 = S05+S06"
+        },
+        {
+          "n": 2,
+          "head": "참조 순서",
+          "body": "세 클립 모두 같은 순서 · 단독 컷 3장만 사용 · 시트는 쓰지 않음"
+        },
+        {
+          "n": 3,
+          "head": "만들지 않는 것",
+          "body": "글자·자막·상호·로고·대사 · 클라우드 로그인·업로드·제출·크레딧"
+        },
+        {
+          "n": 4,
+          "head": "Codex 실측",
+          "body": "2.9분 (171.0초) · 재실행 없음"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] ad-30s 스킬 3번 항목의 \"프롬프트\" 부분만 해줘. session6 클립 3개를 MiniMax H3로 만들 영어 프롬프트와 참조 목록을 써줘.\n[입력] session6/script.md, shots.json, rules.md, asset-manifest.json, session6/views/ 의 단독 컷 3장 (CHAR-01.png, BREAD-01.png, PLACE-01.png)\n[규칙]\n- session6/prompts/clip1.txt, clip2.txt, clip3.txt 를 영어로 써줘. 스킬의 구조(subject_definitions, summary, retention_analysis, detailed_description, overall_soundscape, non_diegetic_music)를 따르고, 클립마다 샷 2개, 두 번째 샷은 `[Shot 2] At 00:05.000,` 로 시작해.\n- 클립 1은 S01+S02, 클립 2는 S03+S04, 클립 3은 S05+S06. 행동, 구도, 카메라, 연결(continuity)은 shots.json 과 script.md 그대로. 샷 시간은 0초와 5초. 클립 길이 10초.\n- 참조 순서는 모든 클립에서 <Picture 1>=CHAR-01, <Picture 2>=BREAD-01, <Picture 3>=PLACE-01. 해당 views/ 단독 컷만 쓰고 시트나 얼굴 보조 컷은 쓰지 마. 외형은 rules.md 대로 정의해.\n- session6/prompts/references.json 에 클립별 참조 배열(순서, 역할, 실제 경로, 클립 길이, 샷 시작 시각)을 저장해줘. 세로 9:16, 480p, 클립당 10초.\n- 글자, 자막, 상호, 로고, 대사를 지어내지 마. 자막은 나중에 편집에서 얹으니 영상에는 글자가 없어야 해.\n- Comfy Cloud 워크플로, 로그인, 업로드, 영상 제출, 크레딧 사용은 하지 마. 프롬프트 파일과 references.json 만 만들어.\n[출력] 만든 파일 목록과 클립별 한 줄 요약을 보여줘.",
+            "desc": "H3 프롬프트·참조 목록 만들기"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session6/student-prompts/04-h3-prompts.txt",
+            "text": "04-h3-prompts 프롬프트 원문"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-6-5-2",
+      "title": "리허설 클립 생성",
+      "template": "table",
+      "columns": [
+        "클립",
+        "허브 작업",
+        "실행 시간"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "clip1",
+            "#9635",
+            "487초 (8분 7초)"
+          ]
+        },
+        {
+          "cells": [
+            "clip2",
+            "#9636",
+            "486초 (8분 6초)"
+          ]
+        },
+        {
+          "cells": [
+            "clip3",
+            "#9637",
+            "484초 (8분 4초)"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "리허설 경로",
+          "body": "강사 PC 로컬 ComfyUI · render-hub · RTX 5070 Ti · 클립당 약 8분"
+        },
+        {
+          "n": 2,
+          "head": "공통 규격",
+          "body": "MiniMax H3 참조 영상 · turbo 8스텝 · 480×864 · 243프레임 · 24fps · 10.125초 · 소리 포함"
+        },
+        {
+          "n": 3,
+          "head": "수강생 경로",
+          "body": "Comfy Cloud · 시간·비용 미측정 · 마지막 슬라이드의 가격표"
+        },
+        {
+          "n": 4,
+          "head": "대기 시간",
+          "body": "실행 시간만 기록 · 대기열 대기는 제외"
+        }
+      ]
+    },
+    {
+      "id": "art-6-5-3",
+      "title": "클립 1",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session6/clip1-sheet.jpg",
+        "badges": [
+          {
+            "n": 1,
+            "x": 14,
+            "y": 10
+          },
+          {
+            "n": 2,
+            "x": 31,
+            "y": 50
+          },
+          {
+            "n": 3,
+            "x": 50,
+            "y": 52
+          },
+          {
+            "n": 4,
+            "x": 91,
+            "y": 40
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "점검 항목 첫 프레임",
+          "body": "0초 측면 자세 · 머리카락이 검정에 가깝게 보임"
+        },
+        {
+          "n": 2,
+          "head": "2.5초",
+          "body": "오븐 문이 아래로 열리고 안쪽에 식빵"
+        },
+        {
+          "n": 3,
+          "head": "5초",
+          "body": "장갑 낀 손으로 트레이를 당겨 꺼냄"
+        },
+        {
+          "n": 4,
+          "head": "7.5초 · 9.95초",
+          "body": "양손으로 트레이 가장자리를 잡고 식빵을 들어 보임"
+        }
+      ]
+    },
+    {
+      "id": "art-6-5-4",
+      "title": "클립 2",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session6/clip2-sheet.jpg",
+        "badges": [
+          {
+            "n": 1,
+            "x": 16,
+            "y": 30
+          },
+          {
+            "n": 2,
+            "x": 30,
+            "y": 45
+          },
+          {
+            "n": 3,
+            "x": 50,
+            "y": 57
+          },
+          {
+            "n": 4,
+            "x": 82,
+            "y": 43
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "점검 항목 시작",
+          "body": "0초 오븐 앞에서 측면으로 서 있음 · 대본은 트레이를 이미 든 상태"
+        },
+        {
+          "n": 2,
+          "head": "2.5초",
+          "body": "정면에서 트레이를 들고 이동"
+        },
+        {
+          "n": 3,
+          "head": "점검 항목 내려놓는 때",
+          "body": "5초에 트레이가 작업대에 닿아 있음 · 대본은 7초 근처"
+        },
+        {
+          "n": 4,
+          "head": "점검 항목 끝",
+          "body": "9.95초 장갑이 트레이 옆에 남음 · 위로 빼지 않음"
+        }
+      ]
+    },
+    {
+      "id": "art-6-5-5",
+      "title": "클립 3",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session6/clip3-sheet.jpg",
+        "badges": [
+          {
+            "n": 1,
+            "x": 11,
+            "y": 66
+          },
+          {
+            "n": 2,
+            "x": 70,
+            "y": 22
+          },
+          {
+            "n": 3,
+            "x": 31,
+            "y": 56
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "샷 1",
+          "body": "0~5초 식빵 클로즈업 · 느린 전진 · 봉우리 3개 · 트레이 정지"
+        },
+        {
+          "n": 2,
+          "head": "샷 2",
+          "body": "7.5초부터 인물이 작업대 뒤에서 식빵을 내려다봄 · 창과 오븐 보임"
+        },
+        {
+          "n": 3,
+          "head": "점검 항목 식빵 색",
+          "body": "제품 시트보다 어둡고 갈색이 짙음"
+        }
+      ]
+    },
+    {
+      "id": "art-6-5-6",
+      "title": "크레딧 견적",
+      "template": "table",
+      "columns": [
+        "모델",
+        "해상도",
+        "크레딧/초",
+        "30초 합계"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "MiniMax H3",
+            "768P",
+            "27.16",
+            "814.8"
+          ]
+        },
+        {
+          "cells": [
+            "MiniMax H3",
+            "2K",
+            "39.22",
+            "1176.6"
+          ]
+        },
+        {
+          "cells": [
+            "MiniMax H3 Max",
+            "480P",
+            "15.09",
+            "452.7"
+          ]
+        },
+        {
+          "cells": [
+            "MiniMax H3 Max",
+            "768P",
+            "24.14",
+            "724.2"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "가격표 조회",
+          "body": "2026-11-05 Comfy 공식 가격표 조회 · 확인 전 · 강사 재확인 필요"
+        },
+        {
+          "n": 2,
+          "head": "합계 계산",
+          "body": "30초 = 클립 3개 × 10초 · 768P 814.8크레딧 · 4회차 노트와 같은 숫자"
+        },
+        {
+          "n": 3,
+          "head": "480P",
+          "body": "표준 H3에는 480P 없음 · Max에만 있음"
+        },
+        {
+          "n": 4,
+          "head": "결정 필요",
+          "body": "4회차 규칙은 H3 Max로 바꾸지 않음 · 480p 클라우드 선택은 수업 전 강사 결정"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] ad-30s 스킬로 session6 클립 3개를 Comfy Cloud MiniMax H3로 만들 준비를 해줘. 지금은 견적까지만.\r\n[규칙]\r\n- 세로 9:16, 클립당 10초, 참조 3장. 해상도는 H3에서 고를 수 있는 가장 낮은 옵션으로 하고, 480p가 H3에 없으면 그 사실과 가격표의 해당 옵션을 알려줘. 프롬프트와 참조 순서는 session6/shots.json 그대로.\r\n- 공식 템플릿으로 API 워크플로 3개를 session6/cloud에 저장하고, 공식 가격표로 클립당·총 예상 크레딧을 보여줘.\r\n- 로그인·업로드·영상 제출·크레딧 사용은 하지 마. 내가 생성 승인을 하면 그때 진행해.\r\n[출력] 견적 표와 제출 계획을 보여줘.\r",
+            "desc": "클라우드 견적 준비 · 미리허설"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session6/student-prompts/04b-cloud-estimate.txt",
+            "text": "04b-cloud-estimate 프롬프트 원문 (미리허설)"
+          }
+        ]
+      }
+    }
+  ]
+}

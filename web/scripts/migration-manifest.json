@@ -91,6 +91,79 @@
     ]
   },
   {
+    "source": "session6/rehearsed-student-prompts",
+    "part": "art-6-1",
+    "copyHashes": [],
+    "hrefs": [
+      "https://wall.woohee.me",
+      "/downloads/session6/example.zip"
+    ]
+  },
+  {
+    "source": "session6/rehearsed-student-prompts",
+    "part": "art-6-2",
+    "copyHashes": [
+      "d5fddfb869172ca0c04e935885f08d4f67cfe55a8ee4be9466b31cbbb70a9a89"
+    ],
+    "hrefs": [
+      "/downloads/session6/student-prompts/01-skill.txt"
+    ]
+  },
+  {
+    "source": "session6/rehearsed-student-prompts",
+    "part": "art-6-3",
+    "copyHashes": [
+      "231b8cd911279f356def842192cd222205affe85af64e72ca74544d4e70b9c97"
+    ],
+    "hrefs": [
+      "/downloads/session6/student-prompts/02-script.txt"
+    ]
+  },
+  {
+    "source": "session6/rehearsed-student-prompts",
+    "part": "art-6-4",
+    "copyHashes": [
+      "c35823ca386eb9db8738a4033b757a438df9b0dad721085557e21cc3ad67af63"
+    ],
+    "hrefs": [
+      "/downloads/session6/student-prompts/03-sheets.txt"
+    ]
+  },
+  {
+    "source": "session6/rehearsed-student-prompts",
+    "part": "art-6-5",
+    "copyHashes": [
+      "af5cd28f4e0cf06e9bba0263a81a1be3ed995b110bc04acc477d7d61b587418b",
+      "2a0e8b51dbd561fec8f0117e4d4c10102b482ae71e74d4cc2d57314fe18bd44e"
+    ],
+    "hrefs": [
+      "/downloads/session6/student-prompts/04-h3-prompts.txt",
+      "/downloads/session6/student-prompts/04b-cloud-estimate.txt"
+    ]
+  },
+  {
+    "source": "session6/rehearsed-student-prompts",
+    "part": "art-6-6",
+    "copyHashes": [
+      "9e11289b3eb5690c26ceba662d9dc90ca2e80be9c7547922b68e679584bf88bc"
+    ],
+    "hrefs": [
+      "/downloads/session6/student-prompts/05-sound.txt"
+    ]
+  },
+  {
+    "source": "session6/rehearsed-student-prompts",
+    "part": "art-6-7",
+    "copyHashes": [
+      "c1e6fefe4647d92d4e95391cc26a1e01d848fb934a1d23755dfe7810f699cfed"
+    ],
+    "hrefs": [
+      "/downloads/session6/demo/my-ad.mp4",
+      "/downloads/session6/example/description.txt",
+      "https://wall.woohee.me"
+    ]
+  },
+  {
     "source": "session1/step1-signup.md",
     "part": "art-1-1",
     "copyHashes": [],

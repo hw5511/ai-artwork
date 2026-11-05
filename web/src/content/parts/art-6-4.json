@@ -1,0 +1,173 @@
+{
+  "id": "art-6-4",
+  "title": "시트·단독 컷",
+  "summary": "18:30~18:45 · Codex 내장 이미지 생성으로 시트 3장 · 단독 컷 3장",
+  "slides": [
+    {
+      "id": "art-6-4-1",
+      "title": "인물·제품 시트",
+      "template": "compare",
+      "left": {
+        "label": "인물 시트 CHAR-01",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session6/sheet-char.jpg"
+        }
+      },
+      "right": {
+        "label": "제품 시트 BREAD-01",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session6/sheet-bread.jpg"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "인물 시트",
+          "body": "2행 2열 · 전신 정면 · 3/4 · 측면 · 얼굴 근접"
+        },
+        {
+          "n": 2,
+          "head": "제품 시트",
+          "body": "식빵 한 덩이와 은색 트레이 · 네 시점 · 봉우리 3개"
+        },
+        {
+          "n": 3,
+          "head": "단독 컷",
+          "body": "시트 왼쪽 위 칸을 원본 픽셀로 잘라 623×623"
+        },
+        {
+          "n": 4,
+          "head": "점검 항목",
+          "body": "제품 시트 4번째 칸은 트레이가 가장자리에서 잘림"
+        }
+      ]
+    },
+    {
+      "id": "art-6-4-2",
+      "title": "장소 시트",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session6/sheet-place.jpg",
+        "badges": [
+          {
+            "n": 1,
+            "x": 13,
+            "y": 22
+          },
+          {
+            "n": 2,
+            "x": 39,
+            "y": 15
+          },
+          {
+            "n": 3,
+            "x": 45,
+            "y": 36
+          },
+          {
+            "n": 4,
+            "x": 22,
+            "y": 9
+          }
+        ]
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "오븐",
+          "body": "화면 왼쪽 뒤 · 문이 아래로 열림 · 안쪽 따뜻한 빛"
+        },
+        {
+          "n": 2,
+          "head": "창",
+          "body": "오른쪽 뒤 · 어두운 푸른 새벽빛"
+        },
+        {
+          "n": 3,
+          "head": "작업대",
+          "body": "오른쪽 앞 · 밝은 갈색 목재"
+        },
+        {
+          "n": 4,
+          "head": "점검 항목",
+          "body": "벽이 중립 흰색에 가까움 · rules.md는 따뜻한 미색"
+        }
+      ]
+    },
+    {
+      "id": "art-6-4-3",
+      "title": "시트 프롬프트",
+      "template": "table",
+      "columns": [
+        "항목",
+        "리허설 결과"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "시트",
+            "3장 · 1254×1254 · 2행 2열"
+          ]
+        },
+        {
+          "cells": [
+            "단독 컷",
+            "3장 · 623×623 · 원본 픽셀 크롭"
+          ]
+        },
+        {
+          "cells": [
+            "이미지 도구",
+            "Codex 내장 이미지 생성"
+          ]
+        },
+        {
+          "cells": [
+            "Codex 실측",
+            "7.7분 (464.4초)"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "이미지 도구",
+          "body": "Codex 내장 이미지 생성만 · Comfy 크레딧 사용 안 함"
+        },
+        {
+          "n": 2,
+          "head": "저장 위치",
+          "body": "session6/sheets 시트 · session6/views 단독 컷"
+        },
+        {
+          "n": 3,
+          "head": "점검 항목",
+          "body": "외형을 rules.md와 대조 · PLACE 벽 색 · BREAD 4번째 칸 트레이"
+        },
+        {
+          "n": 4,
+          "head": "Codex 실측",
+          "body": "7.7분 · 장소 시트는 1차 후보를 한 번 수정"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] ad-30s 스킬로 session6의 인물·제품·장소 시트와 단독 컷을 만들어줘.\n[입력] session6/script.md, shots.json, rules.md\n[규칙]\n- Codex 내장 이미지 생성만 써. Comfy나 유료 이미지 API는 쓰지 마.\n- 시트는 session6/sheets, 영상에 넣을 단독 컷은 session6/views에 저장해줘. 시트마다 한 대상만, 2행 2열 네 컷. 글자와 로고는 넣지 마.\n- 단독 컷은 시트를 재생성하지 말고 원본 픽셀을 잘라서 만들어줘.\n[확인] 만든 이미지를 직접 열어 외형이 rules.md와 같은지 보고, 다르면 고쳐 다시 만들어줘.\n[출력] 파일 목록과 확인 결과를 보여줘.",
+            "desc": "시트·단독 컷 만들기"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session6/student-prompts/03-sheets.txt",
+            "text": "03-sheets 프롬프트 원문"
+          }
+        ]
+      }
+    }
+  ]
+}
