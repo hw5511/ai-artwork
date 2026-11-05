@@ -1,0 +1,337 @@
+{
+  "id": "art-6-7",
+  "title": "소리와 편집",
+  "summary": "19:40~20:00 · earshot 소리 · Remotion 편집 · 최종 확인",
+  "slides": [
+    {
+      "id": "art-6-7-1",
+      "title": "고른 소리",
+      "template": "table",
+      "columns": [
+        "시각",
+        "소리",
+        "파일",
+        "라이선스"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "0~45초",
+            "Floating Cities · Kevin MacLeod",
+            "bgm_floating_cities_45s.wav",
+            "CC BY 4.0 · 크레딧 필수"
+          ]
+        },
+        {
+          "cells": [
+            "S05 16~22초",
+            "Metal Slide 8 · LordForklift",
+            "sfx_deck_slide.wav",
+            "CC0"
+          ]
+        },
+        {
+          "cells": [
+            "S08 29~36초",
+            "stretching rubber glove",
+            "sfx_rubber_flex.wav",
+            "CC0"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "배경음악",
+          "body": "대사 뒤에서 음량 변화가 작은 곡 · 45초 발췌 · 대사보다 16 LU 이상 낮게"
+        },
+        {
+          "n": 2,
+          "head": "효과음 2개",
+          "body": "움직이는 샷 S05 · S08에만 · 나머지 샷은 소리 없음"
+        },
+        {
+          "n": 3,
+          "head": "확인",
+          "body": "earshot 분석으로 고른 근거 · 사람이 직접 들은 확인은 아직 없음"
+        },
+        {
+          "n": 4,
+          "head": "5회차와 같은 방식",
+          "body": "session5/earshot.ps1 그대로 · 새로 설치하지 않는다"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] earshot으로 session6 쇼츠에 맞는 배경음악 1곡과 효과음 2~4개를 직접 골라줘. 아직 영상에 넣지는 마.\n[입력] session6/short/script.md, shots.json, narration/timing.json, session6/recipe.md\n[규칙]\n- 영상 분위기를 한 줄로 정하고, 샷마다 필요한 효과음을 표로 정해줘. 화면과 상관없는 소리는 넣지 마. 나레이션이 들리는 구간에서 음악이 대사를 가리지 않아야 해.\n- 상업 영상에 써도 되는 라이선스만 써줘. 사용 조건과 크레딧 필요 여부는 출처 페이지에서 확인해 적고, 확인 못 한 소리는 쓰지 마.\n- earshot은 5회차에 설치한 것(session5/earshot.ps1)을 그대로 써. 새로 설치하거나 모델을 다시 받지 마.\n- 고른 소리는 earshot으로 직접 들어 보고 분석한 결과를 근거로 해줘.\n- 파일은 session6/remotion/public/sound, 제목·작성자·주소·라이선스·크레딧 문구는 같은 폴더 credits.md에 적어줘.\n[출력] 시각, 소리, 파일, 라이선스, 고른 이유 표를 보여줘.",
+            "desc": "소리 고르기"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session6/example/credits.md",
+            "text": "출처와 라이선스 credits.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-6-7-2",
+      "title": "편집 요청 결과",
+      "template": "table",
+      "columns": [
+        "샷",
+        "소스",
+        "움직임",
+        "소리"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "S01",
+            "이미지",
+            "전진 줌",
+            "나레이션"
+          ]
+        },
+        {
+          "cells": [
+            "S02",
+            "이미지",
+            "좌→우 이동",
+            "나레이션"
+          ]
+        },
+        {
+          "cells": [
+            "S03",
+            "이미지",
+            "크롭 이동",
+            "나레이션"
+          ]
+        },
+        {
+          "cells": [
+            "S04",
+            "이미지",
+            "틈으로 확대",
+            "나레이션"
+          ]
+        },
+        {
+          "cells": [
+            "S05",
+            "클립",
+            "속도 조정",
+            "금속음 2회"
+          ]
+        },
+        {
+          "cells": [
+            "S06",
+            "이미지",
+            "씰 따라 이동",
+            "나레이션"
+          ]
+        },
+        {
+          "cells": [
+            "S07",
+            "이미지",
+            "아래로 이동",
+            "나레이션"
+          ]
+        },
+        {
+          "cells": [
+            "S08",
+            "이미지",
+            "느린 확대",
+            "클립 교체"
+          ]
+        },
+        {
+          "cells": [
+            "S09",
+            "이미지",
+            "이동 후 확장",
+            "나레이션"
+          ]
+        },
+        {
+          "cells": [
+            "S10",
+            "이미지",
+            "후진 줌",
+            "나레이션"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "구성",
+          "body": "샷 10개 · 클립 1개 · 이미지 9장 · 배경음악은 발화 중 9dB 낮춤"
+        },
+        {
+          "n": 2,
+          "head": "자막",
+          "body": "34조각 · 굵은 흰 글자 · 검정 테두리 · 가운데 아래 · 하단 350px 비움"
+        },
+        {
+          "n": 3,
+          "head": "크레딧",
+          "body": "마지막 6초 한 줄 · 상자 없음 · 24px"
+        },
+        {
+          "n": 4,
+          "head": "Codex 실측",
+          "body": "11.8분 · 소리 단계는 앞에서 따로 11.9분"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] Remotion으로 편집 전체를 해서 session6/final/my-short.mp4를 만들어줘. 세로 9:16, 1080×1920, 소리 포함이야.\n[입력] session6/short(script.md, shots.json, images, clips, narration/narration.wav, narration/timing.json), session6/remotion/public/sound(음악, 효과음, credits.md), session6/recipe.md\n[규칙]\n- session5/remotion 프로젝트를 session6/remotion으로 복사해서 써줘(node_modules는 복사하지 말고 연결하거나 다시 설치).\n- remotion-best-practices 스킬을 읽고 그대로 따라줘.\n- 샷 순서와 길이는 shots.json과 narration/timing.json에 맞춰줘. 정지 이미지 샷은 레시피의 카메라 움직임을 따라 천천히 확대나 이동을 넣고, 영상 클립 샷은 클립을 써줘.\n- 영상 클립은 쓰기 전에 프레임을 직접 열어 보고, 대사와 화면 설명에 어긋나는 클립(예: 물이 씰을 통과해 떨어지는 장면)은 그 샷만 정지 이미지로 바꾸고 이유를 알려줘.\n- 자막은 narration/timing.json의 문장 시간에 맞춰 넣어줘. 모양과 위치는 레시피의 화면 요소 항목을 따르고, 하단 플랫폼 UI와 겹치지 않는 안전 영역 안에 둬줘.\n- 나레이션이 가장 크고, 음악은 나레이션 구간에서 눈에 띄게 낮추고, 효과음은 화면 동작에 맞춰줘. 완성본 전체 음량은 약 −14 LUFS, 트루피크 −1.5 dBTP 이하.\n- 음악 크레딧은 마지막 6초 동안 화면 아래쪽에 작은 글자 한 줄(곡 제목, 작성자, 라이선스 이름)만. 어두운 상자는 쓰지 마.\n[마무리] 끝나면 Remotion Studio 같은 서버는 꺼줘.\n[확인] 렌더하고 ffprobe로 길이, 해상도, fps, 소리를 재줘. 2초 간격 격자를 session6/final/review에 저장해서 직접 열어 보고, 잘린 핵심이나 겹친 글자가 있으면 고쳐 다시 렌더해줘.\n[출력] 측정값과 샷별 소스·소리 표를 보여줘.",
+            "desc": "Remotion 편집"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session6/example/edit-report.md",
+            "text": "편집 보고서 report.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-6-7-3",
+      "title": "클립 확인과 교체",
+      "template": "table",
+      "columns": [
+        "샷",
+        "확인",
+        "처리"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "S05",
+            "벌어지는 방향만 보임",
+            "초반 0.5초와 이후를 속도 조정"
+          ]
+        },
+        {
+          "cells": [
+            "S08",
+            "물이 씰을 통과해 떨어짐",
+            "정지 이미지로 교체"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "규칙",
+          "body": "편집 프롬프트가 클립 프레임을 열어 보고 대사와 어긋나면 교체"
+        },
+        {
+          "n": 2,
+          "head": "S08",
+          "body": "정상 씰이 물을 막는다는 대사와 모순 · 고무 효과음도 뺀다"
+        },
+        {
+          "n": 3,
+          "head": "S05",
+          "body": "대사의 좁아지는 구간은 클립 초반 0.5초만 대응"
+        },
+        {
+          "n": 4,
+          "head": "남은 일",
+          "body": "클립을 고쳐 다시 생성하면 정지 이미지를 클립으로 바꿀 수 있다"
+        }
+      ]
+    },
+    {
+      "id": "art-6-7-4",
+      "title": "완성본",
+      "template": "screen",
+      "screen": {
+        "kind": "video",
+        "src": "/downloads/session6/demo/my-short.mp4",
+        "poster": "/lectures/images/session6/final-poster.jpg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "사양",
+          "body": "1080×1920 · 45초 · 24fps · 1080프레임 · 소리 포함"
+        },
+        {
+          "n": 2,
+          "head": "음량",
+          "body": "−14.04 LUFS · 트루피크 −1.90 dBTP · earshot이 아닌 FFmpeg 측정"
+        },
+        {
+          "n": 3,
+          "head": "확인 못 한 것",
+          "body": "사람이 소리를 들어 본 적 없음 · 음악과 효과음 위치는 측정값만"
+        },
+        {
+          "n": 4,
+          "head": "크레딧",
+          "body": "Floating Cities · Kevin MacLeod · CC BY 4.0 · 전체 문구는 영상 설명"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "download",
+            "href": "/downloads/session6/demo/my-short.mp4",
+            "text": "리허설 완성본"
+          },
+          {
+            "kind": "link",
+            "href": "https://wall.woohee.me",
+            "text": "수업 업로드 월"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-6-7-5",
+      "title": "2초 간격 확인",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session6/final-grid.jpg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "격자",
+          "body": "0~44초 23장 · 6열 · 초 표시"
+        },
+        {
+          "n": 2,
+          "head": "자막",
+          "body": "대사 조각이 문장 시간에 맞게 바뀐다 · 구조물을 가리지 않는다"
+        },
+        {
+          "n": 3,
+          "head": "36~40초",
+          "body": "손상된 씰 샷 · 손과 누수 흔적 · 정지 이미지 이동"
+        },
+        {
+          "n": 4,
+          "head": "마지막",
+          "body": "첫 전경으로 돌아간다 · 크레딧 한 줄"
+        }
+      ]
+    }
+  ]
+}

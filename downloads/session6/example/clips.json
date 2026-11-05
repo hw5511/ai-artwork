@@ -1,0 +1,38 @@
+{
+  "model": "MiniMax H3",
+  "path_base": "workspace_root",
+  "clips": [
+    {
+      "shot_id": "S05",
+      "reference_image": "session6/short/images/S05.png",
+      "reference_role": "first_frame",
+      "reference_token": "<Picture 1>",
+      "prompt_file": "session6/short/clips/clip-S05.txt",
+      "aspect_ratio": "9:16",
+      "resolution": "480p",
+      "fps": 24,
+      "frames": 141,
+      "duration_seconds": 5.875,
+      "shot_duration_seconds": 5.191,
+      "camera": "locked_off",
+      "scene_motion": "One synchronized horizontal deck expansion-and-contraction cycle, narrowing then reopening the joint gap.",
+      "summary_ko": "고정 카메라에서 양쪽 바닥판 끝이 접근했다가 후퇴하며 이음부 틈이 좁아지고 다시 넓어진다."
+    },
+    {
+      "shot_id": "S08",
+      "reference_image": "session6/short/images/S08.png",
+      "reference_role": "first_frame",
+      "reference_token": "<Picture 1>",
+      "prompt_file": "session6/short/clips/clip-S08.txt",
+      "aspect_ratio": "9:16",
+      "resolution": "480p",
+      "fps": 24,
+      "frames": 192,
+      "duration_seconds": 8.0,
+      "shot_duration_seconds": 7.376,
+      "camera": "locked_off",
+      "scene_motion": "One coupled joint compression-and-release cycle, deepening then relaxing the retained elastomer fold.",
+      "summary_ko": "고정 카메라에서 이음부 간격 변화에 맞춰 고무 씰의 접힘이 깊어졌다가 펴지며 물과 이물질은 위에 남는다."
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+[
+  {
+    "id": "S01",
+    "start_seconds": 0.0,
+    "end_seconds": 2.605,
+    "stage": "대상·과제",
+    "dialogue": "여기 다리 이음매에 긴 틈이 벌어져 있습니다.",
+    "screen_description": "동일한 현대 도로교를 낮은 사선으로 내려다본다. 도로 폭을 가로지르는 신축이음과 주변 난간을 첫 프레임에서 함께 식별한다. 회색 콘크리트, 금속 테두리, 검은 고무 씰을 구별한다.",
+    "screen_type": "대상 전체를 식별하는 전경",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Low oblique establishing view of the bridge roadway and guardrails, a clearly visible transverse strip-seal expansion joint crossing the roadway in the foreground, intact engineered joint rather than a random crack.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "정지 이미지 위에서 느린 전진 줌. 대상·구조물·빛은 움직이지 않는다.",
+    "sentence_count": 1,
+    "dialogue_characters": 19,
+    "estimated_read_seconds": 2.605,
+    "subtitle_cues": [
+      {
+        "start_seconds": 0.0,
+        "end_seconds": 1.097,
+        "text": "여기 다리 이음매에"
+      },
+      {
+        "start_seconds": 1.097,
+        "end_seconds": 2.605,
+        "text": "긴 틈이 벌어져 있습니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F1"
+    ]
+  },
+  {
+    "id": "S02",
+    "start_seconds": 2.605,
+    "end_seconds": 7.885,
+    "stage": "기존 접근·배경",
+    "dialogue": "도로는 끊김 없이 이어야 더 튼튼해 보이죠. 그런데 다리는 온도에 따라 길이가 달라집니다.",
+    "screen_description": "가상의 빈틈 없는 접합 상태와 틈을 둔 상태를 좌우에 고정한 입체 형상 비교. 같은 교량 부재의 관계만 비교하며 실제 시공의 역사적 순서로 제시하지 않는다.",
+    "screen_type": "부재·재료의 관계를 드러내는 입체 설명 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Static side-by-side isometric comparison of two identical bridge deck end assemblies, a hypothetical rigid continuous connection on the left and an intentional expansion gap on the right, same scale and material textures, conceptual engineering model.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "좌측 비교 상태에서 우측 상태로 카메라만 수평 패닝한다.",
+    "sentence_count": 2,
+    "dialogue_characters": 38,
+    "estimated_read_seconds": 5.28,
+    "subtitle_cues": [
+      {
+        "start_seconds": 2.605,
+        "end_seconds": 3.994,
+        "text": "도로는 끊김 없이 이어야"
+      },
+      {
+        "start_seconds": 3.994,
+        "end_seconds": 5.106,
+        "text": "더 튼튼해 보이죠."
+      },
+      {
+        "start_seconds": 5.106,
+        "end_seconds": 6.634,
+        "text": "그런데 다리는 온도에 따라"
+      },
+      {
+        "start_seconds": 6.634,
+        "end_seconds": 7.885,
+        "text": "길이가 달라집니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F1"
+    ]
+  },
+  {
+    "id": "S03",
+    "start_seconds": 7.885,
+    "end_seconds": 13.758,
+    "stage": "원리·한계·보완",
+    "dialogue": "다리도 더워지면 늘어나고 추워지면 줄어들거든요. 이 움직임을 억지로 막으면 부재에 힘이 쌓입니다.",
+    "screen_description": "같은 콘크리트 바닥판의 따뜻한 상태와 차가운 상태를 나란히 둔 정지 입체 비교. 미세한 길이 차이는 이해용으로 과장한다. 아래에는 움직임이 구속된 접촉부의 압축을 색 띠로 표시한다. 파괴·붕괴는 묘사하지 않는다.",
+    "screen_type": "부재·재료의 관계를 드러내는 입체 설명 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Static three-dimensional cutaway comparison of the same concrete bridge deck under warmer and cooler conditions, warm and cool ambient light, slightly exaggerated length difference, separate constrained contact detail with a subtle colored compression band, no collapse.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "두 온도 상태와 구속 접촉부를 카메라 크롭 이동으로 차례로 짚는다.",
+    "sentence_count": 2,
+    "dialogue_characters": 43,
+    "estimated_read_seconds": 5.873,
+    "subtitle_cues": [
+      {
+        "start_seconds": 7.885,
+        "end_seconds": 9.387,
+        "text": "다리도 더워지면 늘어나고"
+      },
+      {
+        "start_seconds": 9.387,
+        "end_seconds": 10.89,
+        "text": "추워지면 줄어들거든요."
+      },
+      {
+        "start_seconds": 10.89,
+        "end_seconds": 12.392,
+        "text": "이 움직임을 억지로 막으면"
+      },
+      {
+        "start_seconds": 12.392,
+        "end_seconds": 13.758,
+        "text": "부재에 힘이 쌓입니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F1",
+      "F2"
+    ]
+  },
+  {
+    "id": "S04",
+    "start_seconds": 13.758,
+    "end_seconds": 16.353,
+    "stage": "원리·한계·보완",
+    "dialogue": "그래서 이음부에 움직일 여유를 남겨 둡니다.",
+    "screen_description": "같은 바닥판 끝과 반대편 부재 사이에 확보한 틈의 근접 구도. 금속 테두리와 빈 공간의 경계를 선명하게 보여 준다. 개방 틈은 원리 설명용이며 완성된 모든 이음 형식을 뜻하지 않는다.",
+    "screen_type": "문제 부분의 근접 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Macro oblique view of two concrete deck ends separated by a deliberate narrow expansion gap, clear steel edge profiles, exposed empty clearance for a conceptual explanation, realistic small gap relative to roadway width.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "정지 이미지의 이음부 틈으로 카메라만 가까워진다.",
+    "sentence_count": 1,
+    "dialogue_characters": 19,
+    "estimated_read_seconds": 2.595,
+    "subtitle_cues": [
+      {
+        "start_seconds": 13.758,
+        "end_seconds": 14.714,
+        "text": "그래서 이음부에"
+      },
+      {
+        "start_seconds": 14.714,
+        "end_seconds": 16.353,
+        "text": "움직일 여유를 남겨 둡니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F2",
+      "F3"
+    ]
+  },
+  {
+    "id": "S05",
+    "start_seconds": 16.353,
+    "end_seconds": 21.544,
+    "stage": "원리·한계·보완",
+    "dialogue": "다리가 늘어나면 양쪽 사이 틈이 좁아지고요. 줄어들면 틈이 다시 넓어지는 겁니다.",
+    "screen_description": "핵심 클립 1. 단순화한 교량 단면에서 바깥쪽 지지 위치는 고정하고 양쪽 바닥판 끝이 온도 상승 시 틈 쪽으로 접근해 간격이 줄어든다. 온도 하강 시 후퇴해 간격이 커진다. 틈의 가로 폭 변화만 과장하고 수직 낙차나 파손은 만들지 않는다.",
+    "screen_type": "부재·재료의 관계를 드러내는 입체 설명 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Reference keyframe for an engineering animation: symmetric cutaway of two concrete deck ends with fixed remote supports, a small horizontal gap between the free inner ends, clearly legible geometry allowing the gap to narrow when decks elongate and widen when decks shorten, exaggerated displacement for clarity, no vertical displacement.",
+    "movement": "영상 클립",
+    "movement_detail": "카메라는 고정하고 부재 끝의 접근·후퇴를 영상으로 보여 준다.",
+    "sentence_count": 2,
+    "dialogue_characters": 35,
+    "estimated_read_seconds": 5.191,
+    "subtitle_cues": [
+      {
+        "start_seconds": 16.353,
+        "end_seconds": 17.309,
+        "text": "다리가 늘어나면"
+      },
+      {
+        "start_seconds": 17.309,
+        "end_seconds": 18.949,
+        "text": "양쪽 사이 틈이 좁아지고요."
+      },
+      {
+        "start_seconds": 18.949,
+        "end_seconds": 20.178,
+        "text": "줄어들면 틈이"
+      },
+      {
+        "start_seconds": 20.178,
+        "end_seconds": 21.544,
+        "text": "다시 넓어지는 겁니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F1",
+      "F3"
+    ]
+  },
+  {
+    "id": "S06",
+    "start_seconds": 21.544,
+    "end_seconds": 25.915,
+    "stage": "원리·한계·보완",
+    "dialogue": "틈이 달라져도 이 장치는 움직임을 받아 줍니다. 이게 바로 신축이음입니다.",
+    "screen_description": "동일 신축이음을 비스듬히 가까이 본다. 금속 테두리 안쪽에 정상 고무 스트립 씰이 결합된 완성 상태. 앞에서 본 틈과 장치가 같은 위치임을 난간과 포장 질감으로 연결한다.",
+    "screen_type": "문제 부분의 근접 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Macro view of an intact strip-seal bridge expansion joint, flexible black folded elastomer gland mechanically retained by two steel edge rails embedded in concrete, matching roadway and guardrail from the opening shot.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "정상 고무 씰과 금속 테두리를 따라 카메라만 짧게 이동한다.",
+    "sentence_count": 2,
+    "dialogue_characters": 32,
+    "estimated_read_seconds": 4.371,
+    "subtitle_cues": [
+      {
+        "start_seconds": 21.544,
+        "end_seconds": 22.91,
+        "text": "틈이 달라져도 이 장치는"
+      },
+      {
+        "start_seconds": 22.91,
+        "end_seconds": 24.276,
+        "text": "움직임을 받아 줍니다."
+      },
+      {
+        "start_seconds": 24.276,
+        "end_seconds": 25.915,
+        "text": "이게 바로 신축이음입니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F3",
+      "F5"
+    ]
+  },
+  {
+    "id": "S07",
+    "start_seconds": 25.915,
+    "end_seconds": 28.646,
+    "stage": "원리·한계·보완",
+    "dialogue": "그런데 틈만 두면 빗물과 이물질이 들어갑니다.",
+    "screen_description": "씰이 없는 비교용 개방 틈의 입체 단면. 윗면의 빗물, 모래와 작은 이물질, 아래쪽으로 이어지는 경로를 한 장의 정지 설명 이미지에 보여 준다. 물방울도 정지 상태로 유지한다.",
+    "screen_type": "부재·재료의 관계를 드러내는 입체 설명 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Static cutaway of an unsealed bridge expansion gap, frozen small raindrops and fine grit visible above and within the opening with the lower supporting region visible beneath, illustrative comparison condition, sharply differentiated concrete and steel.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "정지 이미지 위쪽 물·이물질에서 아래쪽 빈 경로로 카메라만 내려간다.",
+    "sentence_count": 1,
+    "dialogue_characters": 20,
+    "estimated_read_seconds": 2.731,
+    "subtitle_cues": [
+      {
+        "start_seconds": 25.915,
+        "end_seconds": 26.871,
+        "text": "그런데 틈만 두면"
+      },
+      {
+        "start_seconds": 26.871,
+        "end_seconds": 28.646,
+        "text": "빗물과 이물질이 들어갑니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F4"
+    ]
+  },
+  {
+    "id": "S08",
+    "start_seconds": 28.646,
+    "end_seconds": 36.022,
+    "stage": "원리·한계·보완",
+    "dialogue": "그래서 고무 씰로 틈을 막는 방식도 씁니다. 고무는 변형되면서 이음부 움직임을 따라가죠. 물과 이물질의 유입을 줄이는 겁니다.",
+    "screen_description": "핵심 클립 2. 같은 단면의 금속 테두리 사이에 고무 스트립 씰이 끼워진 상태로 시작한다. 양 끝이 접근하면 고무의 접힘이 깊어지고, 벌어지면 접힘이 펴진다. 고무를 단단한 충전재처럼 그리지 않는다. 윗면 물과 이물질이 씰 아래로 통과하지 않는 정상 작동 예를 보여 준다.",
+    "screen_type": "부재·재료의 관계를 드러내는 입체 설명 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Reference keyframe for an engineering animation: accurate cutaway of a flexible folded black elastomer strip seal securely retained in steel edge rails on two concrete deck ends, folds able to deepen and unfold as the gap varies, a few water beads and grit above the seal, dry lower region, intact flexible membrane rather than solid filler.",
+    "movement": "영상 클립",
+    "movement_detail": "고정 단면 카메라에서 양쪽 간격과 고무 접힘을 영상으로 변화시킨다.",
+    "sentence_count": 3,
+    "dialogue_characters": 54,
+    "estimated_read_seconds": 7.376,
+    "subtitle_cues": [
+      {
+        "start_seconds": 28.646,
+        "end_seconds": 29.602,
+        "text": "그래서 고무 씰로"
+      },
+      {
+        "start_seconds": 29.602,
+        "end_seconds": 31.105,
+        "text": "틈을 막는 방식도 씁니다."
+      },
+      {
+        "start_seconds": 31.105,
+        "end_seconds": 32.197,
+        "text": "고무는 변형되면서"
+      },
+      {
+        "start_seconds": 32.197,
+        "end_seconds": 33.837,
+        "text": "이음부 움직임을 따라가죠."
+      },
+      {
+        "start_seconds": 33.837,
+        "end_seconds": 35.066,
+        "text": "물과 이물질의 유입을"
+      },
+      {
+        "start_seconds": 35.066,
+        "end_seconds": 36.022,
+        "text": "줄이는 겁니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F4",
+      "F5"
+    ]
+  },
+  {
+    "id": "S09",
+    "start_seconds": 36.022,
+    "end_seconds": 41.076,
+    "stage": "원리·한계·보완",
+    "dialogue": "하지만 씰이 손상되면 아래로 물이 샙니다. 그래서 이음부는 점검과 보수가 필요합니다.",
+    "screen_description": "같은 이음부의 손상된 고무 씰과 그 아래 누수 흔적을 근접 정지 화면으로 보여 준다. 화면 가장자리에는 씰을 살피는 점검자의 장갑 낀 손과 교체용 씰 일부를 둔다. 손상 자체를 열팽창의 정상 결과로 묘사하지 않는다.",
+    "screen_type": "문제 부분의 근접 화면",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Static close-up cutaway of a damaged bridge joint elastomer seal with a small tear and visible damp leakage staining beneath it, gloved inspection hand at the edge of frame and a small clean replacement seal segment nearby, realistic local maintenance issue without catastrophic damage.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "손상부에서 아래 누수 흔적으로 카메라만 내려간 뒤 점검 손까지 크롭을 넓힌다.",
+    "sentence_count": 2,
+    "dialogue_characters": 37,
+    "estimated_read_seconds": 5.054,
+    "subtitle_cues": [
+      {
+        "start_seconds": 36.022,
+        "end_seconds": 37.251,
+        "text": "하지만 씰이 손상되면"
+      },
+      {
+        "start_seconds": 37.251,
+        "end_seconds": 38.481,
+        "text": "아래로 물이 샙니다."
+      },
+      {
+        "start_seconds": 38.481,
+        "end_seconds": 39.437,
+        "text": "그래서 이음부는"
+      },
+      {
+        "start_seconds": 39.437,
+        "end_seconds": 41.076,
+        "text": "점검과 보수가 필요합니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F6"
+    ]
+  },
+  {
+    "id": "S10",
+    "start_seconds": 41.076,
+    "end_seconds": 45.0,
+    "stage": "결과 회수",
+    "dialogue": "처음 보인 이 틈은 다리가 온도에 맞춰 자유롭게 움직일 여유인 겁니다.",
+    "screen_description": "첫 샷과 같은 현대 도로교, 같은 이음부로 돌아간다. 정상 작동 상태의 고무 씰과 금속 테두리가 있는 틈을 전경 속에서 재확인하고 카메라만 천천히 멀어진다. 멀어져도 이음부가 보이게 구도를 유지한다.",
+    "screen_type": "대상 전체를 식별하는 전경",
+    "image_prompt_en": "Vertical 9:16 educational 3D engineering visualization of the same modern concrete road bridge, consistent gray concrete, brushed steel edge rails and black elastomer materials, clear depth and soft directional lighting, clean lower-center space for later subtitle compositing. No text, no letters, no numbers, no labels, no logos, no watermarks. Return to the exact bridge and expansion joint from the opening shot, slightly wider oblique establishing composition, intact steel edge rails and black folded elastomer seal clearly visible across the road, calm daylight, room for a gentle camera pullback.",
+    "movement": "정지 이미지에 카메라만 움직임",
+    "movement_detail": "첫 구도에서 카메라만 천천히 뒤로 빠진다.",
+    "sentence_count": 1,
+    "dialogue_characters": 29,
+    "estimated_read_seconds": 3.924,
+    "subtitle_cues": [
+      {
+        "start_seconds": 41.076,
+        "end_seconds": 42.023,
+        "text": "처음 보인 이 틈은"
+      },
+      {
+        "start_seconds": 42.023,
+        "end_seconds": 43.106,
+        "text": "다리가 온도에 맞춰"
+      },
+      {
+        "start_seconds": 43.106,
+        "end_seconds": 45.0,
+        "text": "자유롭게 움직일 여유인 겁니다."
+      }
+    ],
+    "subtitle_style": "굵은 흰 글자, 검정 테두리, 가로 중앙 정렬, 화면 중앙 아래쪽. 한 번에 한 조각만 후편집 합성.",
+    "fact_ids": [
+      "F1",
+      "F3"
+    ]
+  }
+]

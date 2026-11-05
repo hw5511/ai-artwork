@@ -1,0 +1,14 @@
+[목표] 유튜브 채널 「신비한 건축사전」의 쇼츠 4편을 내려받아서, 장면이 바뀔 때마다 프레임을 뽑고 대사(자막)까지 session6/ref 폴더에 정리해줘.
+[입력]
+- https://www.youtube.com/shorts/ootPmx3m764
+- https://www.youtube.com/shorts/HGhlzqMFrUg
+- https://www.youtube.com/shorts/wX7RP0WJesk
+- https://www.youtube.com/shorts/1Ev276K--qE
+[규칙]
+- 영상은 yt-dlp로 받아줘(세로 영상, 720p 이하). 영상마다 폴더를 session6/ref/v1, v2, v3, v4로 만들고 위 주소 순서대로 번호를 붙여줘. 파일 이름에 제목이나 해시 ID를 쓰지 마.
+- 대사는 yt-dlp로 한국어 자동 자막(ko-orig)을 받아서 시작·끝 시각이 있는 transcript.json으로 만들어줘. 자막이 없는 영상은 faster-whisper로 받아쓰기해서 같은 형식으로 만들어줘.
+- 장면 전환 프레임: ffmpeg scene 필터로 장면이 바뀐 시각의 프레임을 frames 폴더에 jpg로 저장하고, 번호·시각(초)을 frames.json에 적어줘. 첫 프레임과 마지막 프레임도 넣어줘. 프레임이 8장보다 적거나 40장보다 많으면 임계값을 바꿔서 다시 뽑아줘.
+- 영상마다 프레임을 번호와 시각이 보이게 한 장으로 묶은 contact-sheet.jpg도 만들어줘.
+- session6/ref/sources.json에 영상 번호, 주소, 채널 이름, 길이, 업로드일을 적어줘.
+[확인] ffprobe로 영상마다 길이·해상도·fps를 재고, 프레임 수와 자막 줄 수를 세어서 표로 보여줘. 첫 영상의 contact-sheet.jpg를 직접 열어서 장면이 제대로 나뉘었는지 봐줘.
+[출력] 영상별 길이, 해상도, 프레임 수, 자막 줄 수 표.

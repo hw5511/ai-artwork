@@ -1,0 +1,9 @@
+[목표] shots.json에서 영상 클립으로 표시된 샷마다 MiniMax H3 프롬프트를 영어로 써줘. 지금은 프롬프트 파일까지만 만들어.
+[입력] session6/short/shots.json, session6/short/images, session6/short/style.md
+[규칙]
+- comfy-cli 스킬의 H3 프롬프트 작성 규칙을 읽고 따라줘. 클립마다 이미지 1장이 참조(첫 화면)야.
+- session6/short/clips/clip-<샷 id>.txt 로 저장해줘. 클립 길이는 샷 길이와 같거나 조금 길게 해줘(프레임 수는 17의 배수에 5를 더한 값, 24fps). 카메라 움직임 한 가지와 화면 속 움직임 한 가지만 써줘.
+- 글자, 자막, 로고, 대사를 지어내지 마. 영상에 글자가 없어야 해.
+- session6/short/clips/clips.json에 클립별 참조 이미지 경로, 프롬프트 파일, 세로 9:16, 480p, 프레임 수와 길이(초)를 저장해줘.
+- Comfy 워크플로 제출, 로그인, 크레딧 사용은 하지 마.
+[출력] 만든 파일 목록과 클립별 한 줄 요약을 보여줘.

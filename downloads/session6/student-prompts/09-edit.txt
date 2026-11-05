@@ -1,0 +1,13 @@
+[목표] Remotion으로 편집 전체를 해서 session6/final/my-short.mp4를 만들어줘. 세로 9:16, 1080×1920, 소리 포함이야.
+[입력] session6/short(script.md, shots.json, images, clips, narration/narration.wav, narration/timing.json), session6/remotion/public/sound(음악, 효과음, credits.md), session6/recipe.md
+[규칙]
+- session5/remotion 프로젝트를 session6/remotion으로 복사해서 써줘(node_modules는 복사하지 말고 연결하거나 다시 설치).
+- remotion-best-practices 스킬을 읽고 그대로 따라줘.
+- 샷 순서와 길이는 shots.json과 narration/timing.json에 맞춰줘. 정지 이미지 샷은 레시피의 카메라 움직임을 따라 천천히 확대나 이동을 넣고, 영상 클립 샷은 클립을 써줘.
+- 영상 클립은 쓰기 전에 프레임을 직접 열어 보고, 대사와 화면 설명에 어긋나는 클립(예: 물이 씰을 통과해 떨어지는 장면)은 그 샷만 정지 이미지로 바꾸고 이유를 알려줘.
+- 자막은 narration/timing.json의 문장 시간에 맞춰 넣어줘. 모양과 위치는 레시피의 화면 요소 항목을 따르고, 하단 플랫폼 UI와 겹치지 않는 안전 영역 안에 둬줘.
+- 나레이션이 가장 크고, 음악은 나레이션 구간에서 눈에 띄게 낮추고, 효과음은 화면 동작에 맞춰줘. 완성본 전체 음량은 약 −14 LUFS, 트루피크 −1.5 dBTP 이하.
+- 음악 크레딧은 마지막 6초 동안 화면 아래쪽에 작은 글자 한 줄(곡 제목, 작성자, 라이선스 이름)만. 어두운 상자는 쓰지 마.
+[마무리] 끝나면 Remotion Studio 같은 서버는 꺼줘.
+[확인] 렌더하고 ffprobe로 길이, 해상도, fps, 소리를 재줘. 2초 간격 격자를 session6/final/review에 저장해서 직접 열어 보고, 잘린 핵심이나 겹친 글자가 있으면 고쳐 다시 렌더해줘.
+[출력] 측정값과 샷별 소스·소리 표를 보여줘.

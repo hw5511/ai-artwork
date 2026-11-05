@@ -1,0 +1,5 @@
+[목표] Typecast가 403(UNUSUAL_ACTIVITY_DETECTED)으로 막혔어. 이전에 배운 Comfy의 ElevenLabs 노드로 session6/short/script.md의 대사를 문장별 낭독 음성으로 만들고, 05-narration과 같은 방식으로 session6/short/narration/narration.wav와 timing.json으로 합쳐줘.
+[규칙]
+- 한국어를 읽는 목소리와 다국어 모델을 골라줘. 첫 문장 샘플부터 만들고, 크레딧을 쓰기 전에 견적을 보여 준 다음 내 승인을 기다려줘.
+- 문장마다 길이를 재서 샷의 정해진 구간보다 길면 대사를 짧게 고쳐 script.md와 shots.json에도 반영해줘. 소리를 자르지 마.
+[출력] 고른 목소리, 견적, 문장별 시작·끝 시각 표.

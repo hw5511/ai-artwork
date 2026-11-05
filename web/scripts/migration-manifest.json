@@ -381,5 +381,89 @@
       "/downloads/session4/own-story/workflow-kit.zip",
       "https://wall.woohee.me"
     ]
+  },
+  {
+    "source": "session6-ref/rehearsed-student-prompts",
+    "part": "art-6-1",
+    "copyHashes": [],
+    "hrefs": [
+      "https://wall.woohee.me",
+      "/downloads/session6/example.zip",
+      "/downloads/session6/demo/my-short.mp4"
+    ]
+  },
+  {
+    "source": "session6-ref/rehearsed-student-prompts",
+    "part": "art-6-2",
+    "copyHashes": [
+      "af5ba45c04dad87cccbd9f0ab1ae5969a0b64caf23b037c65c0a95418360a048"
+    ],
+    "hrefs": [
+      "https://www.youtube.com/channel/UCeEM8XgdgUyaWE1Z6_5sHbQ/shorts",
+      "/downloads/session6/example/ref-verification.csv"
+    ]
+  },
+  {
+    "source": "session6-ref/rehearsed-student-prompts",
+    "part": "art-6-3",
+    "copyHashes": [
+      "61ae96117001a4af27037016429d39c60024f34e844506211e83a2e889585f24"
+    ],
+    "hrefs": [
+      "/downloads/session6/example/analysis.md",
+      "/downloads/session6/example/recipe.md",
+      "/downloads/session6/example/recipe.md"
+    ]
+  },
+  {
+    "source": "session6-ref/rehearsed-student-prompts",
+    "part": "art-6-4",
+    "copyHashes": [
+      "9773510836d43353c4ee1100f5ae1658625e258f8b394ea8555c20473f420328"
+    ],
+    "hrefs": [
+      "/downloads/session6/example/script.md",
+      "/downloads/session6/example/shots.json",
+      "/downloads/session6/example/facts.md"
+    ]
+  },
+  {
+    "source": "session6-ref/rehearsed-student-prompts",
+    "part": "art-6-5",
+    "copyHashes": [
+      "58c558210fb6717fd8ee5ba42ef887633fa3ecbb250fa616d4a57ec1bf52b52c",
+      "38f2c0c6f68803e0d6644fbd71674879d26ed2973d2a35f3a9ddcb601508ea57",
+      "cf81582f4a0b2aa47539923881d61ea59755195b45ebf60e84c6d61b3bc43465"
+    ],
+    "hrefs": [
+      "https://typecast.ai/docs/api-reference/text-to-speech/text-to-speech",
+      "/downloads/session6/example/timing.json"
+    ]
+  },
+  {
+    "source": "session6-ref/rehearsed-student-prompts",
+    "part": "art-6-6",
+    "copyHashes": [
+      "92692262eb3b6a3c9ff7cc0960688075c922ed6273b42d5b98c1dd884fc8c0a8",
+      "38aa65b4af9f9e6551e583196865e22d3716321fdf2759c95891f1c05b2efb6b"
+    ],
+    "hrefs": [
+      "/downloads/session6/example/style.md",
+      "/downloads/session6/example/clips.json"
+    ]
+  },
+  {
+    "source": "session6-ref/rehearsed-student-prompts",
+    "part": "art-6-7",
+    "copyHashes": [
+      "030eb63ae127ef49cc9c2205f5ab479269ca463af04b3fd9d0fd34ba4e7488d0",
+      "ae64baa0aa4a7f2b6878d94313db4c0081958108ca736e73f7c13fdb4e4cc416"
+    ],
+    "hrefs": [
+      "/downloads/session6/example/credits.md",
+      "/downloads/session6/example/edit-report.md",
+      "/downloads/session6/demo/my-short.mp4",
+      "https://wall.woohee.me"
+    ]
   }
 ]

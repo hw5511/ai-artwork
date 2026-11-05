@@ -1,9 +1,17 @@
 {
   "step": 6,
-  "title": "6회차",
+  "title": "6회차 레퍼런스 영상을 분석해 공학 쇼츠 따라 만들기",
   "hours": "2시간",
   "goal": "",
   "topics": [],
   "practice": "",
-  "parts": []
+  "parts": [
+    "art-6-1",
+    "art-6-2",
+    "art-6-3",
+    "art-6-4",
+    "art-6-5",
+    "art-6-6",
+    "art-6-7"
+  ]
 }

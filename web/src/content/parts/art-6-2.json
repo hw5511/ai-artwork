@@ -1,0 +1,197 @@
+{
+  "id": "art-6-2",
+  "title": "레퍼런스 수집",
+  "summary": "18:05~18:20 · 쇼츠 4편 · 자막 · 장면 전환 프레임",
+  "slides": [
+    {
+      "id": "art-6-2-1",
+      "title": "수집할 쇼츠 4편",
+      "template": "table",
+      "columns": [
+        "번호",
+        "주제",
+        "길이",
+        "업로드일"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "v1",
+            "대문 빗장",
+            "179.1초",
+            "2026-11-02"
+          ]
+        },
+        {
+          "cells": [
+            "v2",
+            "한옥 지붕 무게",
+            "179.0초",
+            "2026-11-01"
+          ]
+        },
+        {
+          "cells": [
+            "v3",
+            "돌다리",
+            "179.0초",
+            "2026-11-02"
+          ]
+        },
+        {
+          "cells": [
+            "v4",
+            "바닥 층간소음",
+            "164.2초",
+            "2026-10-31"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "대상",
+          "body": "「신비한 건축사전」 쇼츠 · 인기 영상 4편 · 길이 약 3분"
+        },
+        {
+          "n": 2,
+          "head": "받는 것",
+          "body": "영상 · 한국어 자동 자막 · 장면 전환 프레임"
+        },
+        {
+          "n": 3,
+          "head": "폴더",
+          "body": "영상마다 v1~v4 · 파일 이름에 제목·해시 없음"
+        },
+        {
+          "n": 4,
+          "head": "선택 기준",
+          "body": "채널의 인기 쇼츠 중 주제가 서로 다른 4편"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "[목표] 유튜브 채널 「신비한 건축사전」의 쇼츠 4편을 내려받아서, 장면이 바뀔 때마다 프레임을 뽑고 대사(자막)까지 session6/ref 폴더에 정리해줘.\n[입력]\n- https://www.youtube.com/shorts/ootPmx3m764\n- https://www.youtube.com/shorts/HGhlzqMFrUg\n- https://www.youtube.com/shorts/wX7RP0WJesk\n- https://www.youtube.com/shorts/1Ev276K--qE\n[규칙]\n- 영상은 yt-dlp로 받아줘(세로 영상, 720p 이하). 영상마다 폴더를 session6/ref/v1, v2, v3, v4로 만들고 위 주소 순서대로 번호를 붙여줘. 파일 이름에 제목이나 해시 ID를 쓰지 마.\n- 대사는 yt-dlp로 한국어 자동 자막(ko-orig)을 받아서 시작·끝 시각이 있는 transcript.json으로 만들어줘. 자막이 없는 영상은 faster-whisper로 받아쓰기해서 같은 형식으로 만들어줘.\n- 장면 전환 프레임: ffmpeg scene 필터로 장면이 바뀐 시각의 프레임을 frames 폴더에 jpg로 저장하고, 번호·시각(초)을 frames.json에 적어줘. 첫 프레임과 마지막 프레임도 넣어줘. 프레임이 8장보다 적거나 40장보다 많으면 임계값을 바꿔서 다시 뽑아줘.\n- 영상마다 프레임을 번호와 시각이 보이게 한 장으로 묶은 contact-sheet.jpg도 만들어줘.\n- session6/ref/sources.json에 영상 번호, 주소, 채널 이름, 길이, 업로드일을 적어줘.\n[확인] ffprobe로 영상마다 길이·해상도·fps를 재고, 프레임 수와 자막 줄 수를 세어서 표로 보여줘. 첫 영상의 contact-sheet.jpg를 직접 열어서 장면이 제대로 나뉘었는지 봐줘.\n[출력] 영상별 길이, 해상도, 프레임 수, 자막 줄 수 표.",
+            "desc": "레퍼런스 수집"
+          },
+          {
+            "kind": "link",
+            "href": "https://www.youtube.com/channel/UCeEM8XgdgUyaWE1Z6_5sHbQ/shorts",
+            "text": "신비한 건축사전 쇼츠"
+          }
+        ]
+      }
+    },
+    {
+      "id": "art-6-2-2",
+      "title": "장면 전환 프레임",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session6/ref-v3-sheet.jpg"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "v3 돌다리",
+          "body": "프레임 12장 · 번호와 시각이 붙은 한 장"
+        },
+        {
+          "n": 2,
+          "head": "장면 전환",
+          "body": "ffmpeg scene 필터 · 임계값 0.30 · 첫·마지막 프레임 포함"
+        },
+        {
+          "n": 3,
+          "head": "가로 간격",
+          "body": "6.8초 → 45.2초 → 50.2초 · 한 장면이 길게 이어진다"
+        },
+        {
+          "n": 4,
+          "head": "자막 위치",
+          "body": "화면 가운데 · 두세 단어씩 바뀐다"
+        }
+      ]
+    },
+    {
+      "id": "art-6-2-3",
+      "title": "수집 측정값",
+      "template": "table",
+      "columns": [
+        "영상",
+        "해상도",
+        "프레임",
+        "자막 줄"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "v1",
+            "360×640 30.0fps",
+            "32장",
+            "90줄"
+          ]
+        },
+        {
+          "cells": [
+            "v2",
+            "360×640 30.0fps",
+            "14장",
+            "91줄"
+          ]
+        },
+        {
+          "cells": [
+            "v3",
+            "360×640 30.0fps",
+            "12장",
+            "93줄"
+          ]
+        },
+        {
+          "cells": [
+            "v4",
+            "360×640 30.0fps",
+            "12장",
+            "88줄"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "해상도",
+          "body": "세로 360×640 · yt-dlp가 고른 720 이하 최고 화질"
+        },
+        {
+          "n": 2,
+          "head": "프레임 수",
+          "body": "8~40장 범위 · 장면이 적으면 임계값을 올려 다시 추출"
+        },
+        {
+          "n": 3,
+          "head": "자막",
+          "body": "yt-dlp 한국어 자동 자막(ko-orig) · 4편 모두 제공"
+        },
+        {
+          "n": 4,
+          "head": "자막 오류",
+          "body": "자동 자막은 받아쓰기 오류가 있다 · 그대로 둔다"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "download",
+            "href": "/downloads/session6/example/ref-verification.csv",
+            "text": "수집 결과 요약"
+          }
+        ]
+      }
+    }
+  ]
+}
