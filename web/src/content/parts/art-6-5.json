@@ -248,15 +248,22 @@
         {
           "cells": [
             "403 UNUSUAL_ACTIVITY",
-            "무료 플랜 키 · TTS 호출만 거절",
-            "Comfy ElevenLabs 노드"
+            "같은 IP에서 여러 계정 · TTS 호출만 거절",
+            "WARP 프록시로 TTS만 우회"
           ]
         },
         {
           "cells": [
             "구독 조회 200",
             "키 자체는 유효",
-            "TTS는 별도로 거절"
+            "키 재발급 불필요"
+          ]
+        },
+        {
+          "cells": [
+            "WARP로도 막힘",
+            "계정 자체 제한",
+            "Comfy ElevenLabs 노드"
           ]
         },
         {
@@ -271,22 +278,22 @@
         {
           "n": 1,
           "head": "리허설에서 본 것",
-          "body": "무료 플랜 키 2개가 /v1/text-to-speech에서 403 UNUSUAL_ACTIVITY_DETECTED"
+          "body": "무료 플랜 키가 본부 IP에서 /v1/text-to-speech 403 UNUSUAL_ACTIVITY_DETECTED"
         },
         {
           "n": 2,
-          "head": "같은 키",
-          "body": "구독 조회 API는 200 · 키가 틀린 것은 아니다"
+          "head": "WARP로 해결",
+          "body": "Cloudflare WARP 프록시 모드(127.0.0.1:40000)로 TTS 요청만 보내니 같은 무료 키로 성공 · 11-05 실측"
         },
         {
           "n": 3,
-          "head": "대체",
-          "body": "이전 회차에서 쓴 Comfy의 ElevenLabs 노드 · 견적 후 승인"
+          "head": "TTS만",
+          "body": "PC 전체가 아니라 Typecast 호출에만 프록시 · 끝나면 WARP 끊기"
         },
         {
           "n": 4,
-          "head": "미리허설",
-          "body": "대체 프롬프트는 실행하지 않았다 · Comfy 크레딧 사용량 미측정"
+          "head": "그래도 막히면",
+          "body": "이전 회차 Comfy ElevenLabs 노드 · 견적 후 승인 · 미리허설"
         }
       ],
       "action": {
@@ -294,8 +301,13 @@
         "items": [
           {
             "kind": "copy",
-            "value": "[목표] Typecast가 403(UNUSUAL_ACTIVITY_DETECTED)으로 막혔어. 이전에 배운 Comfy의 ElevenLabs 노드로 session6/short/script.md의 대사를 문장별 낭독 음성으로 만들고, 05-narration과 같은 방식으로 session6/short/narration/narration.wav와 timing.json으로 합쳐줘.\n[규칙]\n- 한국어를 읽는 목소리와 다국어 모델을 골라줘. 첫 문장 샘플부터 만들고, 크레딧을 쓰기 전에 견적을 보여 준 다음 내 승인을 기다려줘.\n- 문장마다 길이를 재서 샷의 정해진 구간보다 길면 대사를 짧게 고쳐 script.md와 shots.json에도 반영해줘. 소리를 자르지 마.\n[출력] 고른 목소리, 견적, 문장별 시작·끝 시각 표.",
-            "desc": "ElevenLabs 대체"
+            "desc": "WARP로 우회",
+            "value": "[목표] Typecast TTS가 403(UNUSUAL_ACTIVITY_DETECTED)으로 막혔어. Cloudflare WARP를 프록시 모드로 써서 Typecast 요청만 WARP로 보내고 05-narration을 다시 실행해줘.\n[규칙]\n- WARP가 없으면 설치를 안내하고, warp-cli로 모드를 proxy(포트 40000)로 바꾼 뒤 connect 해줘. PC 전체 인터넷은 바꾸지 마.\n- Typecast 호출에만 HTTPS_PROXY=socks5://127.0.0.1:40000 을 붙여줘. 키는 .env 그대로, 화면에 출력하지 마.\n- 끝나면 warp-cli disconnect 로 끊고, 첫 문장 샘플이 만들어졌는지 길이로 확인해줘.\n[출력] WARP 상태, 성공한 문장 수, narration.wav 길이."
+          },
+          {
+            "kind": "copy",
+            "desc": "ElevenLabs 대체",
+            "value": "[목표] Typecast가 403(UNUSUAL_ACTIVITY_DETECTED)으로 막혔어. 이전에 배운 Comfy의 ElevenLabs 노드로 session6/short/script.md의 대사를 문장별 낭독 음성으로 만들고, 05-narration과 같은 방식으로 session6/short/narration/narration.wav와 timing.json으로 합쳐줘.\n[규칙]\n- 한국어를 읽는 목소리와 다국어 모델을 골라줘. 첫 문장 샘플부터 만들고, 크레딧을 쓰기 전에 견적을 보여 준 다음 내 승인을 기다려줘.\n- 문장마다 길이를 재서 샷의 정해진 구간보다 길면 대사를 짧게 고쳐 script.md와 shots.json에도 반영해줘. 소리를 자르지 마.\n[출력] 고른 목소리, 견적, 문장별 시작·끝 시각 표."
           }
         ]
       }
