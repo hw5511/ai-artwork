@@ -1,142 +1,126 @@
 {
-  "id": "art-6-1",
-  "title": "오늘 만들 것",
-  "summary": "18:00~18:05 · 레퍼런스 분석 → 따라 만든 공학 쇼츠",
-  "slides": [
+ "id": "art-6-1",
+ "title": "오늘 만들 것",
+ "summary": "프롬프트 세 번 · 분석 → 기다리는 동안 Typecast → 한 번에 제작",
+ "slides": [
+  {
+   "id": "art-6-1-1",
+   "title": "오늘 순서",
+   "template": "table",
+   "columns": [
+    "순서",
+    "시키는 것",
+    "걸리는 시간",
+    "그동안 사람"
+   ],
+   "rows": [
     {
-      "id": "art-6-1-1",
-      "title": "오늘의 결과",
-      "template": "screen",
-      "screen": {
-        "kind": "video",
-        "src": "/downloads/session6/demo/my-short.mp4",
-        "poster": "/lectures/images/session6/final-poster.jpg"
-      },
-      "notes": [
-        {
-          "n": 1,
-          "head": "완성본 사양",
-          "body": "1080×1920 · 45초 · 24fps · H.264 · AAC 48kHz · −14.04 LUFS · 트루피크 −1.90 dBTP"
-        },
-        {
-          "n": 2,
-          "head": "주제",
-          "body": "다리 이음매에는 왜 틈이 있을까 · 수강생은 각자 공학 주제 한 줄"
-        },
-        {
-          "n": 3,
-          "head": "재료",
-          "body": "레퍼런스 분석 레시피 · Typecast 낭독 · 이미지 9장 · H3 클립 1개 · 클립 1개는 교체"
-        },
-        {
-          "n": 4,
-          "head": "음악 표기",
-          "body": "Floating Cities · Kevin MacLeod · CC BY 4.0"
-        }
-      ],
-      "action": {
-        "label": "실습",
-        "items": [
-          {
-            "kind": "link",
-            "href": "https://wall.woohee.me",
-            "text": "수업 업로드 월"
-          },
-          {
-            "kind": "download",
-            "href": "/downloads/session6/example.zip",
-            "text": "리허설 결과 파일 묶음"
-          },
-          {
-            "kind": "download",
-            "href": "/downloads/session6/demo/my-short.mp4",
-            "text": "리허설 완성본"
-          }
-        ]
-      }
+     "cells": [
+      "①",
+      "레퍼런스 채널 분석",
+      "약 40분",
+      "Typecast 키 복사"
+     ]
     },
     {
-      "id": "art-6-1-2",
-      "title": "오늘 순서",
-      "template": "table",
-      "columns": [
-        "시각",
-        "단계",
-        "결과 파일"
-      ],
-      "rows": [
-        {
-          "cells": [
-            "18:05",
-            "레퍼런스 수집",
-            "ref/v1~v4"
-          ]
-        },
-        {
-          "cells": [
-            "18:20",
-            "분석과 레시피",
-            "recipe.md"
-          ]
-        },
-        {
-          "cells": [
-            "18:45",
-            "내 주제 대본",
-            "short/script.md · shots.json"
-          ]
-        },
-        {
-          "cells": [
-            "19:00",
-            "Typecast 나레이션",
-            "narration/narration.wav"
-          ]
-        },
-        {
-          "cells": [
-            "19:15",
-            "시각 자료",
-            "short/images · clips"
-          ]
-        },
-        {
-          "cells": [
-            "19:40",
-            "소리와 편집",
-            "final/my-short.mp4"
-          ]
-        },
-        {
-          "cells": [
-            "19:55",
-            "업로드 월",
-            "작품 제목 · 한 줄 소개"
-          ]
-        }
-      ],
-      "notes": [
-        {
-          "n": 1,
-          "head": "5회차에서 이어서",
-          "body": "프레임 추출 · earshot · Remotion 편집은 그때 만든 환경 그대로 쓴다"
-        },
-        {
-          "n": 2,
-          "head": "Codex 실측",
-          "body": "Codex 실행 합계 약 80분 · H3 클립 생성 약 13분은 별도"
-        },
-        {
-          "n": 3,
-          "head": "동시 실행",
-          "body": "이미지 생성과 소리 고르기는 창을 나눠 같이 돌린다 · 이번 리허설은 한 단계씩 따로 쟀다"
-        },
-        {
-          "n": 4,
-          "head": "도구",
-          "body": "Codex · Comfy CLI · Typecast · earshot · Remotion"
-        }
-      ]
+     "cells": [
+      "②",
+      "Typecast CLI 스킬",
+      "① 도는 중에",
+      "키 붙여넣기"
+     ]
+    },
+    {
+     "cells": [
+      "③",
+      "비슷한 쇼츠 한 번에",
+      "이미지 · 영상 · 음성 · 편집",
+      "중간 결과 확인"
+     ]
+    },
+    {
+     "cells": [
+      "④",
+      "결과 확인 · 다시 시키기",
+      "몇 분",
+      "2초 격자 보기"
+     ]
     }
-  ]
+   ],
+   "notes": [
+    {
+     "n": 1,
+     "head": "프롬프트 세 번",
+     "body": "분석 · Typecast 스킬 · 제작 · 단계마다 따로 지시하지 않는다"
+    },
+    {
+     "n": 2,
+     "head": "겹쳐 돌리기",
+     "body": "분석이 도는 40분 동안 Typecast 준비를 끝낸다"
+    },
+    {
+     "n": 3,
+     "head": "5회차에서 이어서",
+     "body": "earshot · Remotion 스킬 · 프레임 시트 분석 스킬 그대로"
+    },
+    {
+     "n": 4,
+     "head": "도구",
+     "body": "Codex · Comfy CLI(LTX) · Typecast CLI(필재) · Remotion"
+    }
+   ]
+  },
+  {
+   "id": "art-6-1-2",
+   "title": "결과 예시",
+   "template": "screen",
+   "screen": {
+    "kind": "video",
+    "src": "/downloads/session6/demo/my-short.mp4",
+    "poster": "/lectures/images/session6/final-poster.jpg"
+   },
+   "notes": [
+    {
+     "n": 1,
+     "head": "리허설판",
+     "body": "11-05 리허설 · H3 클립 · 현우 목소리 · 45초"
+    },
+    {
+     "n": 2,
+     "head": "수업판",
+     "body": "LTX 영상 · 필재 목소리 · 약 60초 · 주제는 Codex가 정한다"
+    },
+    {
+     "n": 3,
+     "head": "주제 예",
+     "body": "다리 이음매에는 왜 틈이 있을까"
+    },
+    {
+     "n": 4,
+     "head": "음악 표기",
+     "body": "Floating Cities · Kevin MacLeod · CC BY 4.0"
+    }
+   ],
+   "action": {
+    "label": "실습",
+    "items": [
+     {
+      "kind": "link",
+      "href": "https://wall.woohee.me",
+      "text": "수업 업로드 월"
+     },
+     {
+      "kind": "download",
+      "href": "/downloads/session6/example.zip",
+      "text": "리허설 결과 파일 묶음"
+     },
+     {
+      "kind": "download",
+      "href": "/downloads/session6/demo/my-short.mp4",
+      "text": "리허설 완성본"
+     }
+    ]
+   }
+  }
+ ]
 }
