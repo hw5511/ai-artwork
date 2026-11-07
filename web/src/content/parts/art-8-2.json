@@ -1,0 +1,199 @@
+{
+  "id": "art-8-2",
+  "title": "Qwen·Z-Image 로컬 이미지",
+  "summary": "모델 받기는 시작 때 · Qwen·Z-Image 실행은 목소리 학습 후 · 첫 실행과 재실행 비교",
+  "slides": [
+    {
+      "title": "로컬 이미지 준비",
+      "template": "table",
+      "columns": [
+        "모델",
+        "측정 설정",
+        "출력"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "Qwen-Image 2.1 turbo",
+            "int8 · 8스텝",
+            "768×1376 PNG"
+          ]
+        },
+        {
+          "cells": [
+            "Qwen-Image 2.1 일반판",
+            "int8 · 25스텝",
+            "768×1376 PNG"
+          ]
+        },
+        {
+          "cells": [
+            "Z-Image Turbo",
+            "bf16 · 8스텝",
+            "832×1216 PNG"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "리허설 자리",
+          "body": "리허설 필요 · 캡처 자리 · Codex·ComfyUI 로컬 모델 준비·실행"
+        },
+        {
+          "n": 2,
+          "head": "설정",
+          "body": "Qwen cfg 1.0·euler · Z-Image cfg 1.0·res_multistep · 본부 측정과 같은 설정"
+        },
+        {
+          "n": 3,
+          "head": "시작 때 다운로드",
+          "body": "설치·모델 준비를 먼저 요청 · 준비 시간과 수강생 회선 속도는 리허설에서 잰다"
+        },
+        {
+          "n": 4,
+          "head": "리허설 전 초안",
+          "body": "아래 추가 복사 문장은 리허설 전 초안 · 실행·결과·소요 시간은 리허설에서 잰다"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "내 PC의 RTX 5070 Ti 16GB에서 Qwen-Image 2.1과 Z-Image Turbo로 이미지를 만들 준비를 해줘. 모델 받기는 지금 시작하고, 목소리 학습이 끝난 뒤 GPU 작업을 차례로 실행해줘.",
+            "desc": "리허설 전 초안"
+          }
+        ]
+      },
+      "id": "art-8-2-1"
+    },
+    {
+      "title": "Qwen·Turbo와 일반판",
+      "template": "compare",
+      "left": {
+        "label": "Turbo · 8스텝",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session8/qwen_turbo_00002.png"
+        }
+      },
+      "right": {
+        "label": "일반판 · 25스텝",
+        "screen": {
+          "kind": "shot",
+          "src": "/lectures/images/session8/qwen_full_00002.png"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "Turbo",
+          "body": "본부 5070 Ti 시간 측정 결과물 · 11-07 · Qwen-Image 2.1 turbo int8 · 768×1376 · 두 번째 실행 결과"
+        },
+        {
+          "n": 2,
+          "head": "일반판",
+          "body": "본부 5070 Ti 시간 측정 결과물 · 11-07 · Qwen-Image 2.1 일반판 int8 · 768×1376 · 두 번째 실행 결과"
+        },
+        {
+          "n": 3,
+          "head": "비교 범위",
+          "body": "구도·책·손·얼굴 확인 · 스텝 수와 모델별 결과 예시 · 엄밀한 품질 순위 비교 전 리허설 필요"
+        }
+      ],
+      "id": "art-8-2-2"
+    },
+    {
+      "title": "Z-Image Turbo 결과",
+      "template": "screen",
+      "screen": {
+        "kind": "shot",
+        "src": "/lectures/images/session8/zimage_00002_.png"
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "출처",
+          "body": "본부 5070 Ti 시간 측정 결과물 · 11-07 · Z-Image Turbo bf16 · 두 번째 실행 결과"
+        },
+        {
+          "n": 2,
+          "head": "설정",
+          "body": "832×1216 PNG · 8스텝·cfg 1.0·res_multistep"
+        },
+        {
+          "n": 3,
+          "head": "다음 실습",
+          "body": "로컬 이미지에서 LTX 영상으로 연결 · 아래 복사 문장은 리허설 전 초안"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "창가 카페에서 책 읽는 장면을 Qwen-Image 2.1 turbo와 Z-Image Turbo로 각각 만들어줘. 측정표와 같은 설정으로 첫 실행과 바로 다음 실행 시간을 기록해줘.",
+            "desc": "리허설 전 초안"
+          }
+        ]
+      },
+      "id": "art-8-2-3"
+    },
+    {
+      "title": "이미지·첫 실행과 재실행",
+      "template": "table",
+      "columns": [
+        "모델",
+        "처음",
+        "두 번째"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "Qwen turbo · 8스텝",
+            "2분 7초",
+            "8초"
+          ]
+        },
+        {
+          "cells": [
+            "Qwen 일반판 · 25스텝",
+            "1분 10초",
+            "14초"
+          ]
+        },
+        {
+          "cells": [
+            "Z-Image Turbo · 8스텝",
+            "1분 33초",
+            "10초"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "측정 출처",
+          "body": "본부 RESULTS.md · 5070 Ti 16GB · 위 설정 그대로 · 실행 시간만"
+        },
+        {
+          "n": 2,
+          "head": "처음·두 번째",
+          "body": "처음에는 모델 로드 포함 · 같은 설정 재실행 시간과 구분"
+        },
+        {
+          "n": 3,
+          "head": "Qwen 순서 효과",
+          "body": "일반판 전에 turbo 실행 · 텍스트 인코더·VAE가 이미 로드된 상태 · 일반판이 더 빠르다는 뜻으로 해석 금지"
+        },
+        {
+          "n": 4,
+          "head": "다운로드 별도",
+          "body": "Z-Image 확산 모델 13분 29초·텍스트 인코더 9분 21초 · 본부 회선 기준"
+        }
+      ],
+      "id": "art-8-2-4"
+    }
+  ]
+}

@@ -137,8 +137,7 @@ for (let step = 1; step <= 8; step++) {
   if (!existsSync(file)) { err(sf, 'missing session'); continue }
   const s = read(file)
   if (s.step !== step || !s.title || !Array.isArray(s.parts)) err(sf, 'invalid session metadata')
-  if (step <= 6 && !s.parts.length) err(sf, 'teaching session needs real slides')
-  if (step >= 7 && step !== 7 && s.parts.length) err(sf, 'sessions 7-8 must remain pending')
+  if (!s.parts.length) err(sf, 'teaching session needs real slides')
   for (const id of s.parts) {
     if (!parts.has(id)) err(sf, `missing part ${id}`)
     if (used.has(id)) err(sf, `part reused ${id}`)

@@ -1,0 +1,98 @@
+{
+  "label": "본부 5070 Ti 시간 측정 결과물 · 11-07",
+  "measurement_source": "C:/Users/yangh/renders/artwork-s8-bench/RESULTS.md",
+  "measurement_period": "2026-11-07 ~ 2026-11-08",
+  "rehearsal_status": "8회차 초안 · 앱 캡처·학생 실습·씨댄스 완성작 리허설 필요",
+  "voice_limitation": "합성 목소리로 측정 · 3문장 모두 cut_off 판정 · 수강생 녹음 시간 미측정",
+  "assets": [
+    {
+      "source": "z2/s8bench/zimage_00002_.png",
+      "path": "/lectures/images/session8/zimage_00002_.png",
+      "sha256": "514861e715f119680bc641a6eaa667b1652d1fc124cf59cae59bf55d5e1ff00f"
+    },
+    {
+      "source": "qt2/s8bench/qwen_turbo_00002.png",
+      "path": "/lectures/images/session8/qwen_turbo_00002.png",
+      "sha256": "3461b666c5cfec95e160ac6a1c6565fce7097b9032bd96438f9a60ddeb0d4ea7"
+    },
+    {
+      "source": "qf2/s8bench/qwen_full_00002.png",
+      "path": "/lectures/images/session8/qwen_full_00002.png",
+      "sha256": "b3c0974d9e5dadafd873ee42ea5614a2382206ebd3544f313888ca4dfbf9382d"
+    },
+    {
+      "source": "l480a/s8bench/480p_00001_.mp4",
+      "path": "/downloads/session8/480p_00001_.mp4",
+      "sha256": "3425dacb553fa1fe6e58224d1b1565f3aae1128795d1e7c232a776541297446a"
+    },
+    {
+      "source": "l720a/s8bench/720p_00001_.mp4",
+      "path": "/downloads/session8/720p_00001_.mp4",
+      "sha256": "c1b9817e9523dfeee190728af1950ee5cbdbd4b90190351581393b25c3fcd38e"
+    },
+    {
+      "source": "voice/say/saye4_01.wav",
+      "path": "/downloads/session8/saye4_01.wav",
+      "sha256": "77f67e89dfb18b49cc76482c82d64cf8df68efa7edd4d5c786649e0e501cf4a3"
+    },
+    {
+      "source": "voice/say/saye4_02.wav",
+      "path": "/downloads/session8/saye4_02.wav",
+      "sha256": "e9f60b8643a7ebf5011f3e2fba952ac886b08b94485f40c933f4f31d224ef9d3"
+    },
+    {
+      "source": "voice/say/saye4_03.wav",
+      "path": "/downloads/session8/saye4_03.wav",
+      "sha256": "e269694867fb794a88b7e2ace5a5f8a2aff41bc09f20a37a3c5a726790cbffcd"
+    },
+    {
+      "source": "RESULTS.md",
+      "path": "/downloads/session8/RESULTS.md",
+      "sha256": "3e96e0cf899b57fabc5093f3f93adaadc2bb081f0853055d13f7e3b30b8809da"
+    }
+  ],
+  "derived_posters": [
+    {
+      "path": "/lectures/images/session8/480p_00001_-poster.jpg",
+      "source": "/downloads/session8/480p_00001_.mp4",
+      "transform": "ffmpeg first frame"
+    },
+    {
+      "path": "/lectures/images/session8/720p_00001_-poster.jpg",
+      "source": "/downloads/session8/720p_00001_.mp4",
+      "transform": "ffmpeg first frame"
+    }
+  ],
+  "official_checked": "2026-11-08",
+  "official_sources": [
+    {
+      "url": "https://cloud.vast.ai/cli/",
+      "use": "CLI 설치·검색·인스턴스 접속"
+    },
+    {
+      "url": "https://github.com/vast-ai/vast-cli/blob/master/vast.py",
+      "use": "inet_down_cost·inet_up_cost·gpu_ram 검색 필드"
+    },
+    {
+      "url": "https://github.com/vast-ai/docs/blob/main/guides/reference/billing.mdx",
+      "use": "GPU·저장·대역폭 별도 과금 · Stop 뒤 저장 과금"
+    },
+    {
+      "url": "https://docs.byteplus.com/en/docs/modelark/create-video-generation-task-api",
+      "use": "작업 생성·모델별 입력·현재 개통 조건"
+    },
+    {
+      "url": "https://docs.byteplus.com/en/docs/modelark/get-video-generation-task-api",
+      "use": "작업 조회·결과 URL"
+    },
+    {
+      "url": "https://docs.byteplus.com/en/docs/modelark/model-pricing",
+      "use": "토큰 요금 · 본부 720p 근사값 대조"
+    }
+  ],
+  "rehearsal_differences": [
+    "본부 5달러 충전 실측과 공식 신규 모델 개통 조건 차이 · 신규 계정 리허설 · 상한 초과 추가 충전 금지",
+    "본부 참조 이미지 최대 9장 실측 · 공식 Seedance 2.5 한도 확대 · 수업은 9장 이내",
+    "9월 GPU 대여 가격·원가 비교 미전재 · Vast 실시간 매물에서 요금 재확인"
+  ]
+}

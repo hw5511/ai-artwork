@@ -12,5 +12,7 @@ for (const [source, relative] of [['../lectures/images', 'lectures/images'], ['.
     rmSync(target, { recursive: true })
   }
   mkdirSync(dirname(target), { recursive: true })
-  cpSync(join(root, source), target, { recursive: true })
+  // Use the JS walker on Windows; native cpSync exits on this workspace's Unicode path.
+  const options = process.platform === 'win32' ? { recursive: true, filter: () => true } : { recursive: true }
+  cpSync(join(root, source), target, options)
 }

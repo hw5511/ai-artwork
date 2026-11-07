@@ -1,9 +1,24 @@
 {
   "step": 8,
-  "title": "8회차",
+  "title": "8회차 내 PC GPU·클라우드 GPU·유료 API로 영상까지",
   "hours": "2시간",
-  "goal": "",
-  "topics": [],
-  "practice": "",
-  "parts": []
+  "goal": "로컬 이미지·LTX·내 목소리 학습·Vast 대체 실습·씨댄스 숏드라마",
+  "topics": [
+    "RTX 5070 Ti 16GB",
+    "Qwen·Z-Image·LTX",
+    "Qwen TTS 목소리 학습",
+    "Vast CLI·대역폭 무료",
+    "BytePlus·씨댄스 API 스킬·숏드라마"
+  ],
+  "practice": "로컬 생성·클라우드 대체 실습·5달러 예산 씨댄스 숏드라마",
+  "parts": [
+    "art-8-1",
+    "art-8-2",
+    "art-8-3",
+    "art-8-4",
+    "art-8-5",
+    "art-8-6",
+    "art-8-7",
+    "art-8-8"
+  ]
 }

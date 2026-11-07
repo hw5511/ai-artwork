@@ -1,0 +1,123 @@
+{
+  "id": "art-8-3",
+  "title": "LTX 로컬 영상",
+  "summary": "이미지 실습 다음 · LTX 2.5 이미지→영상 · 480p·720p 비교",
+  "slides": [
+    {
+      "title": "LTX·480p와 720p",
+      "template": "compare",
+      "left": {
+        "label": "480p · 5.04초",
+        "screen": {
+          "kind": "video",
+          "src": "/downloads/session8/480p_00001_.mp4",
+          "poster": "/lectures/images/session8/480p_00001_-poster.jpg"
+        }
+      },
+      "right": {
+        "label": "720p · 5.04초",
+        "screen": {
+          "kind": "video",
+          "src": "/downloads/session8/720p_00001_.mp4",
+          "poster": "/lectures/images/session8/720p_00001_-poster.jpg"
+        }
+      },
+      "notes": [
+        {
+          "n": 1,
+          "head": "480p",
+          "body": "본부 5070 Ti 시간 측정 결과물 · 11-07 · LTX 2.5 · 480×832·24fps·121프레임 · 첫 실행 결과"
+        },
+        {
+          "n": 2,
+          "head": "720p",
+          "body": "본부 5070 Ti 시간 측정 결과물 · 11-07 · LTX 2.5 · 704×1280·24fps·121프레임 · 첫 실행 결과"
+        },
+        {
+          "n": 3,
+          "head": "리허설 자리",
+          "body": "리허설 필요 · 캡처 자리 · 이미지 입력·LTX 실행 화면 · 재생 버튼으로 동작·얼굴·책 확인"
+        },
+        {
+          "n": 4,
+          "head": "측정 모델",
+          "body": "22B distilled int8 · 해상도 외 설정은 RESULTS.md 기준 · 추가 설정은 리허설에서 확인"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "download",
+            "href": "/downloads/session8/480p_00001_.mp4",
+            "text": "본부 LTX 480p 결과"
+          },
+          {
+            "kind": "download",
+            "href": "/downloads/session8/720p_00001_.mp4",
+            "text": "본부 LTX 720p 결과"
+          }
+        ]
+      },
+      "id": "art-8-3-1"
+    },
+    {
+      "title": "LTX·생성 시간",
+      "template": "table",
+      "columns": [
+        "출력",
+        "처음",
+        "두 번째"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "480p · 480×832",
+            "49초",
+            "35초"
+          ]
+        },
+        {
+          "cells": [
+            "720p · 704×1280",
+            "1분 5초",
+            "1분 7초"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "n": 1,
+          "head": "같은 길이",
+          "body": "24fps·121프레임·5.04초 · RESULTS.md · 대기 제외"
+        },
+        {
+          "n": 2,
+          "head": "재실행 편차",
+          "body": "720p 두 번째가 처음보다 긴 측정값 그대로 표기"
+        },
+        {
+          "n": 3,
+          "head": "실습",
+          "body": "로컬 이미지 한 장 선택 · LTX 생성 뒤 다운로드 파일까지 재생 확인"
+        },
+        {
+          "n": 4,
+          "head": "리허설 전 초안",
+          "body": "아래 추가 복사 문장은 리허설 전 초안 · 실행·결과·소요 시간은 리허설에서 잰다"
+        }
+      ],
+      "action": {
+        "label": "실습",
+        "items": [
+          {
+            "kind": "copy",
+            "value": "방금 만든 이미지 한 장으로 LTX 2.5 영상을 만들어줘. 본부 측정과 같은 480×832, 24fps, 121프레임으로 먼저 실행하고, 704×1280 결과도 비교해줘. 생성 시간을 기록하고 파일을 저장해줘.",
+            "desc": "리허설 전 초안"
+          }
+        ]
+      },
+      "id": "art-8-3-2"
+    }
+  ]
+}
