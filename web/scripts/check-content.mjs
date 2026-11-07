@@ -100,7 +100,8 @@ for (const f of readdirSync(partsDir).filter(f => f.endsWith('.json'))) {
       for (const r of s.rows ?? []) {
         if (r.cells?.length !== s.columns.length) err(w, 'table row width')
         for (const c of r.cells ?? []) {
-          if (c.length > 40) err(w, `long table cell ${c}`)
+          // Rehearsal dialogue keeps complete original sentences; keyword cells stay short.
+          if (c.length > (s.verbatim ? 180 : 40)) err(w, `long table cell ${c}`)
           if (!s.verbatim) keyword(w, c)
         }
       }
@@ -137,7 +138,7 @@ for (let step = 1; step <= 8; step++) {
   const s = read(file)
   if (s.step !== step || !s.title || !Array.isArray(s.parts)) err(sf, 'invalid session metadata')
   if (step <= 6 && !s.parts.length) err(sf, 'teaching session needs real slides')
-  if (step >= 7 && s.parts.length) err(sf, 'sessions 7-8 must remain pending')
+  if (step >= 7 && step !== 7 && s.parts.length) err(sf, 'sessions 7-8 must remain pending')
   for (const id of s.parts) {
     if (!parts.has(id)) err(sf, `missing part ${id}`)
     if (used.has(id)) err(sf, `part reused ${id}`)

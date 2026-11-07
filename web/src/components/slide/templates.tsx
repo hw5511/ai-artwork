@@ -111,6 +111,7 @@ function TableT({ s }: { s: TableSlide }) {
                       key={ci}
                       className={cn(
                         "relative align-middle pl-8 break-keep font-bold",
+                        s.verbatim && "whitespace-pre-line",
                         term ? "font-term" : "font-display",
                         accent ? "text-slide-accent" : "text-[#101113]",
                         ci === 2 ? "border-l border-[#e3e5e8]" : undefined,
@@ -128,7 +129,7 @@ function TableT({ s }: { s: TableSlide }) {
                 return (
                   <td
                     key={ci}
-                    className={cn("align-middle px-6 text-left break-keep", positive ? "font-semibold text-[#101113]" : negative ? "text-[#a3a8ad]" : "text-[#43474b]", cellPy)}
+                    className={cn("align-middle px-6 text-left break-keep", s.verbatim && "whitespace-pre-line", positive ? "font-semibold text-[#101113]" : negative ? "text-[#a3a8ad]" : "text-[#43474b]", cellPy)}
                     style={{ fontSize: valueSize }}
                   >
                     {positive ? <span className="mr-[14px] inline-block size-[12px] shrink-0 rounded-full bg-slide-accent align-middle" /> : null}
