@@ -35,7 +35,7 @@
         },
         {
           "n": 2,
-          "head": "CEO 지시",
+          "head": "강사 문장",
           "body": "접속 지시 뒤 사람이 로그인 · 11-07 시연 대화에는 없는 단계"
         },
         {
@@ -50,7 +50,7 @@
           {
             "kind": "copy",
             "value": "zernio 사이트 브라우저 도구로 들어가줘",
-            "desc": "CEO 지시문"
+            "desc": "Codex에게 보낼 문장"
           },
           {
             "kind": "link",
@@ -88,7 +88,7 @@
       "notes": [
         {
           "n": 1,
-          "head": "CEO 지시",
+          "head": "강사 문장",
           "body": "아래 문장으로 키 발급·CLI 스킬 요청 · 로그인·추가 인증은 사람이 처리"
         },
         {
@@ -108,7 +108,7 @@
           {
             "kind": "copy",
             "value": "api 키를 발급한다음 zernio cli스킬을 만들어줘",
-            "desc": "CEO 지시문"
+            "desc": "Codex에게 보낼 문장"
           }
         ]
       },
@@ -166,7 +166,7 @@
           {
             "kind": "copy",
             "value": "브라우저 도구로 zernio 에 연동해줘",
-            "desc": "CEO 지시문"
+            "desc": "Codex에게 보낼 문장"
           }
         ]
       },
