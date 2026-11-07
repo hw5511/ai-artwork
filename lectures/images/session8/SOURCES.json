@@ -6,18 +6,18 @@
   "voice_limitation": "합성 목소리로 측정 · 3문장 모두 cut_off 판정 · 수강생 녹음 시간 미측정",
   "assets": [
     {
-      "source": "z2/s8bench/zimage_00002_.png",
-      "path": "/lectures/images/session8/zimage_00002_.png",
+      "source": "z2/s8bench/zimage_00002_.jpg",
+      "path": "/lectures/images/session8/zimage_00002_.jpg",
       "sha256": "514861e715f119680bc641a6eaa667b1652d1fc124cf59cae59bf55d5e1ff00f"
     },
     {
-      "source": "qt2/s8bench/qwen_turbo_00002.png",
-      "path": "/lectures/images/session8/qwen_turbo_00002.png",
+      "source": "qt2/s8bench/qwen_turbo_00002.jpg",
+      "path": "/lectures/images/session8/qwen_turbo_00002.jpg",
       "sha256": "3461b666c5cfec95e160ac6a1c6565fce7097b9032bd96438f9a60ddeb0d4ea7"
     },
     {
-      "source": "qf2/s8bench/qwen_full_00002.png",
-      "path": "/lectures/images/session8/qwen_full_00002.png",
+      "source": "qf2/s8bench/qwen_full_00002.jpg",
+      "path": "/lectures/images/session8/qwen_full_00002.jpg",
       "sha256": "b3c0974d9e5dadafd873ee42ea5614a2382206ebd3544f313888ca4dfbf9382d"
     },
     {

@@ -75,14 +75,14 @@
         "label": "Turbo · 8스텝",
         "screen": {
           "kind": "shot",
-          "src": "/lectures/images/session8/qwen_turbo_00002.png"
+          "src": "/lectures/images/session8/qwen_turbo_00002.jpg"
         }
       },
       "right": {
         "label": "일반판 · 25스텝",
         "screen": {
           "kind": "shot",
-          "src": "/lectures/images/session8/qwen_full_00002.png"
+          "src": "/lectures/images/session8/qwen_full_00002.jpg"
         }
       },
       "notes": [
@@ -109,7 +109,7 @@
       "template": "screen",
       "screen": {
         "kind": "shot",
-        "src": "/lectures/images/session8/zimage_00002_.png"
+        "src": "/lectures/images/session8/zimage_00002_.jpg"
       },
       "notes": [
         {
