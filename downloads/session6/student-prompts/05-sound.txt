@@ -1,9 +1,0 @@
-[목표] ad-30s 스킬과 earshot으로 session6 영상에 맞는 배경음악 1곡과 효과음을 직접 골라줘. 아직 영상에 넣지는 마.
-[입력] session6/script.md, session6/shots.json, session6/clips
-[규칙]
-- 영상 분위기를 한 줄로 정하고, 샷마다 필요한 소리를 표로 정해줘. 화면과 상관없는 소리는 넣지 마.
-- 상업 영상에 써도 되는 라이선스만 써줘. 사용 조건과 크레딧 필요 여부는 출처 페이지에서 확인해 적고, 확인 못 한 소리는 쓰지 마.
-- earshot은 5회차에 설치한 것(session5/.venv-earshot, session5/earshot)을 그대로 써. 새로 설치하거나 모델을 다시 받지 마.
-- 고른 소리는 earshot으로 직접 들어 보고 분석한 결과를 근거로 해줘.
-- 파일은 session6/remotion/public/sound, 제목·작성자·주소·라이선스·크레딧 문구는 같은 폴더 credits.md에 적어줘.
-[출력] 시각, 소리, 파일, 라이선스, 고른 이유 표를 보여줘.

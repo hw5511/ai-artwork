@@ -1,9 +1,0 @@
-[목표] 4회차와 5회차에 내가 손으로 한 30초 광고 제작을 Codex 스킬 하나로 묶어줘. 이름은 ad-30s.
-[입력] session4/(script.md, rules.md, shots.json, prompts, cloud, sheets, views), session5/(student-prompts, example, edit), .agents/skills 안의 comfy-cli, remotion-best-practices, earshot
-[작업]
-1) 위 폴더와 프롬프트를 읽고 내가 어떤 순서로 무엇을 했는지 파악해줘.
-2) .agents/skills/ad-30s/SKILL.md를 만들어줘. 순서는 대본·샷 목록 → 인물·제품·장소 시트와 단독 컷 → H3 클립 → Remotion 편집 → earshot 소리야.
-3) 단계마다 입력, 출력 경로, 확인 방법, 하지 말 것을 적어줘. 4회차의 공원·남성·반려견처럼 한 작품에만 맞는 내용은 빼고 어떤 주제에도 쓰이게 일반화해줘.
-4) 한 줄 주제를 받으면 session6/ 폴더 안에서만 일하게 해줘. 클립은 세로 9:16, 480p로 먼저 만들고, 영상 생성은 크레딧 견적을 보여주고 내 승인을 받은 뒤에만 하게 해줘. 작업이 끝나면 Remotion Studio 같은 서버는 끄게 해줘.
-[확인] SKILL.md 앞부분의 name과 description이 Codex 스킬 형식인지 확인하고, 원래 스킬(comfy-cli, remotion-best-practices, earshot)을 어디서 부르는지 적었는지 봐줘. 새 파일은 .agents/skills/ad-30s 안에만 만들어.
-[출력] 만든 파일과 단계 요약을 보여줘.
